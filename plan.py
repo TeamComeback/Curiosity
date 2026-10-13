@@ -36,7 +36,7 @@ def pick_session(now):
 
 
 # ---------- closing-data scans (what the scout brings to the meeting) ----------
-def scan(aid, bars, params):
+def scan(aid, bars, params, b=None):
     p = params.get(aid, {})
     out = []
     if aid in ("trend", "meanrev"):
@@ -81,6 +81,20 @@ def scan(aid, bars, params):
             last = h.iloc[-1]
             rv = realized_vol(h["close"], 20)
             ivs = [r["iv"] for r in ivh.get(und, [])]
+            if b is not None:                       # fresh at-the-money implied vol from the options chain
+                try:
+                    import volsell as vs
+                    now = store.now_et().date()
+                    lo = (now + timedelta(days=params["volsell"].get("min_dte", 21))).isoformat()
+                    hi = (now + timedelta(days=params["volsell"].get("max_dte", 45))).isoformat()
+                    px = float(last["close"])
+                    chain = b.option_chain(und, "put", lo, hi, round(px * .97, 2), round(px * 1.03, 2))
+                    near = sorted([(abs(vs.parse_occ(k)["strike"] - px), v.get("impliedVolatility")) for k, v in chain.items()
+                                   if vs.parse_occ(k) and v.get("impliedVolatility")])[:4]
+                    if near:
+                        ivs = vs.record_iv(und, sum(x[1] for x in near) / len(near))
+                except Exception as e:  # noqa: BLE001
+                    print(f"[plan:volsell] IV lookup failed for {und}: {type(e).__name__}")
             side = "bull put spreads" if last["close"] > last["sma50"] else (
                 "bear call spreads" if last["close"] < last["sma200"] else "stand aside (no clear trend)")
             out.append({"symbol": und, "trend_side": side, "realized_vol20": round(rv, 3),
@@ -211,7 +225,7 @@ def main(session=None, force=False):
         if not force and cur.get("for_day") == for_day and any(r["session"] == SESSIONS[session] for r in cur.get("revisions", [])):
             print(f"[plan:{aid}] {SESSIONS[session]} already done for {for_day}")
             continue
-        rows = scan(aid, bars, params)
+        rows = scan(aid, bars, params, b)
         watch = [r["symbol"] for r in rows][:12] + [w["symbol"] for w in cur.get("watchlist", [])] + \
                 [p.get("underlying", p["symbol"]) for p in agent["positions"].values()]
         try:
