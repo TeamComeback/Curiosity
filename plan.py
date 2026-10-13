@@ -147,6 +147,7 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
         "current_plan": {k: current.get(k) for k in ("summary", "watchlist", "position_plans", "avoid", "made_at", "session")} if current else None,
         "strategy_params": store.load_params().get(aid, {}),
         "my_notes": agent.get("notes", [])[-6:],
+        "my_plan_scorecard": scorecard_summary(agent),
     }
     if not config.ANTHROPIC_API_KEY:
         d = {"decision": "new" if not current else "keep", "why": "Rules-only mode: plan is the top scan results.",
@@ -176,7 +177,8 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
     revisions = list(current.get("revisions", [])) if current.get("for_day") == next_trading_day(store.now_et()) else []
     revisions.append({"at": store.now_et().isoformat(timespec="minutes"), "session": SESSIONS[session],
                       "decision": d.get("decision", "revise"), "why": str(d.get("why", ""))[:400],
-                      "watchlist": [w["symbol"] for w in d["watchlist"]]})
+                      "watch": [{"symbol": w["symbol"], "instrument": w.get("instrument", "stock"), "setup": str(w.get("setup", ""))[:80]}
+                                for w in d["watchlist"]]})
     plan = {"for_day": next_trading_day(store.now_et()), "made_at": store.now_et().isoformat(timespec="minutes"),
             "session": SESSIONS[session], "decision": d.get("decision", "revise"), "why": str(d.get("why", ""))[:400],
             "summary": str(d.get("summary", ""))[:600], "watchlist": d["watchlist"],
@@ -185,23 +187,124 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
     return plan
 
 
+CAL = []   # trading calendar loaded from Alpaca: [{"date", "open", "close"}]
+
+
+def _hours(hhmm):
+    h, m = hhmm.split(":")[:2]
+    return int(h) + int(m) / 60
+
+
 def next_trading_day(now):
+    days = {c["date"]: c for c in CAL}
+    today = now.date().isoformat()
+    if days:
+        if today in days and now.hour + now.minute / 60 < _hours(days[today]["close"]):
+            return today
+        later = sorted(d for d in days if d > today)
+        if later:
+            return later[0]
     d = now.date() if now.hour < 16 else now.date() + timedelta(days=1)
     while d.weekday() >= 5:
         d += timedelta(days=1)
     return d.isoformat()
 
 
+def pick_session_cal(now):
+    """Holiday- and early-close-aware version of pick_session."""
+    if not CAL:
+        return pick_session(now)
+    days = {c["date"]: c for c in CAL}
+    today, h = now.date().isoformat(), now.hour + now.minute / 60
+    tomorrow = (now.date() + timedelta(days=1)).isoformat()
+    if today in days and _hours(days[today]["close"]) <= h < 18.5:
+        return "close"
+    if 18.5 <= h < 23.9 and tomorrow in days:
+        return "evening"
+    if 6 <= h < 9.4 and today in days:
+        return "premarket"
+    return None
+
+
+def grade(aid, agent, bars):
+    """After the close: score the plan made for today. Did the picks move the planned way,
+    did the firm act on them, and did changing its mind overnight help?"""
+    plan = agent.get("plan") or {}
+    today = store.today()
+    if plan.get("for_day") != today or any(s.get("day") == today for s in agent.get("scorecard", [])):
+        return None
+
+    def move(sym, inst, setup=""):
+        df = bars.get(sym)
+        if df is None or len(df) < 2:
+            return None
+        if inst == "spread":   # bull put spreads want the underlying up, bear call spreads want it down
+            inst = "put" if "call" in str(setup).lower() else "stock"
+        last_day = str(df.index[-1].tz_convert("America/New_York").date()) if df.index.tz is not None else str(df.index[-1].date())
+        if last_day != today:
+            return None
+        r = float(df["close"].iloc[-1] / df["close"].iloc[-2] - 1) * 100
+        return round(-r if inst == "put" else r, 2)
+
+    picks = [{"symbol": w["symbol"], "instrument": w.get("instrument", "stock"),
+              "move_pct": move(w["symbol"], w.get("instrument", "stock"), w.get("setup", ""))}
+             for w in plan.get("watchlist", [])]
+    revs = plan.get("revisions", [])
+    first = revs[0].get("watch", []) if revs else []
+    final_syms = {p["symbol"] for p in picks}
+    dropped = [{"symbol": w["symbol"], "move_pct": move(w["symbol"], w.get("instrument", "stock"), w.get("setup", ""))}
+               for w in first if isinstance(w, dict) and w["symbol"] not in final_syms]
+    opened = {j.get("symbol") for j in store.load("journal.json", [])
+              if j.get("agent") == aid and j.get("type") == "open" and j.get("time", "").startswith(today)}
+    held = {p.get("underlying", p["symbol"]) for p in agent["positions"].values()}
+    acted = [p["symbol"] for p in picks if p["symbol"] in opened or p["symbol"] in held]
+    scored = [p["move_pct"] for p in picks if p["move_pct"] is not None]
+    dscored = [d["move_pct"] for d in dropped if d["move_pct"] is not None]
+    avg = round(sum(scored) / len(scored), 2) if scored else None
+    davg = round(sum(dscored) / len(dscored), 2) if dscored else None
+    entry = {"day": today, "picks": picks, "acted": acted, "avg_move_pct": avg,
+             "right_way": sum(1 for m in scored if m > 0), "scored": len(scored),
+             "dropped": dropped, "dropped_avg_move_pct": davg,
+             "mind_change_value": round(avg - davg, 2) if avg is not None and davg is not None else None,
+             "changed_mind": any(r.get("decision") in ("revise", "scrap") for r in revs[1:])}
+    agent["scorecard"] = (agent.get("scorecard", []) + [entry])[-30:]
+    return entry
+
+
+def scorecard_summary(agent):
+    sc = agent.get("scorecard", [])
+    if not sc:
+        return None
+    picks = sum(s["scored"] for s in sc)
+    right = sum(s["right_way"] for s in sc)
+    moves = [s["avg_move_pct"] for s in sc if s["avg_move_pct"] is not None]
+    mind = [s["mind_change_value"] for s in sc if s.get("mind_change_value") is not None]
+    planned = sum(len(s["picks"]) for s in sc)
+    return {"days": len(sc), "picks_scored": picks, "right_way": right,
+            "hit_rate_pct": round(100 * right / picks) if picks else None,
+            "avg_pick_move_pct": round(sum(moves) / len(moves), 2) if moves else None,
+            "acted_on_pct": round(100 * sum(len(s["acted"]) for s in sc) / planned) if planned else None,
+            "mind_changes_scored": len(mind), "mind_changes_helped": sum(1 for m in mind if m > 0),
+            "last": sc[-1]}
+
+
 def main(session=None, force=False, only=None):
     now = store.now_et()
-    session = session or pick_session(now)
-    if not session:
-        print("No planning session at this hour.")
-        return
     checks = health.run_checks()
     if not all(c["ok"] for c in checks if c["name"] in ("GitHub secrets", "Alpaca paper account")):
         raise SystemExit("Stopped: setup problem, see data/health.json")
     b = Broker()
+    global CAL
+    try:
+        CAL = [{"date": c["date"], "open": c["open"], "close": c["close"]}
+               for c in b.calendar((now.date() - timedelta(days=3)).isoformat(), (now.date() + timedelta(days=21)).isoformat())]
+        store.save("calendar.json", CAL)
+    except Exception as e:  # noqa: BLE001 - fall back to weekdays
+        print(f"[plan] calendar unavailable: {type(e).__name__}")
+    session = session or pick_session_cal(now)
+    if not session:
+        print("No planning session at this hour.")
+        return
     if b.clock().get("is_open") and not force:
         print("Market is open; planning sessions only run while it's closed.")
         return
@@ -231,6 +334,13 @@ def main(session=None, force=False, only=None):
         if not force and cur.get("for_day") == for_day and any(r["session"] == SESSIONS[session] for r in cur.get("revisions", [])):
             print(f"[plan:{aid}] {SESSIONS[session]} already done for {for_day}")
             continue
+        if session == "close":
+            g = grade(aid, agent, bars)
+            if g:
+                changed = True
+                store.journal({"type": "scorecard", "agent": aid,
+                               "note": f"Plan graded: {g['right_way']} of {g['scored']} picks moved the planned way"
+                                       + (f", avg {g['avg_move_pct']:+.2f}%" if g['avg_move_pct'] is not None else "")})
         rows = scan(aid, bars, params, b)
         watch = [r["symbol"] for r in rows][:12] + [w["symbol"] for w in cur.get("watchlist", [])] + \
                 [p.get("underlying", p["symbol"]) for p in agent["positions"].values()]
@@ -250,6 +360,8 @@ def main(session=None, force=False, only=None):
         dash = store.load("dashboard.json", {})
         if dash:
             dash["plans"] = {aid: a.get("plan") for aid, a in state["agents"].items() if a.get("plan")}
+            dash["scorecards"] = {aid: scorecard_summary(a) for aid, a in state["agents"].items() if a.get("scorecard")}
+            dash["calendar"] = CAL
             dash["journal"] = store.load("journal.json", [])[-60:][::-1]
             dash["plans_updated"] = store.now_et().isoformat(timespec="minutes")
             store.save("dashboard.json", dash)
@@ -259,11 +371,14 @@ def main(session=None, force=False, only=None):
 if __name__ == "__main__":
     args = sys.argv[1:]
     sess = args[args.index("--session") + 1] if "--session" in args else None
+    import alerts
     try:
         main(sess, force="--force" in args, only=args[args.index("--agent") + 1] if "--agent" in args else None)
+        alerts.flush("Agent race: game plan")
     except SystemExit as e:
         if e.code not in (None, 0):
             health.record_crash(RuntimeError(str(e.code)))
+            alerts.setup_problem(e.code)
             print(e.code)
             sys.exit(1)
     except Exception as e:

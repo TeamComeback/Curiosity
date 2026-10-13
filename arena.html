@@ -12,12 +12,12 @@
 :root{
   color-scheme:light;
   --ground:#e9ece8;--paper:#f6f7f4;--ink:#1f2a2e;--ink2:#56636a;--rule:#a9b3b4;--faint:#d5dad7;
-  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--bench:#7e8a8c;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
+  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--bench:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
 }
 @media (prefers-color-scheme:dark){:root{
   color-scheme:dark;
   --ground:#11171a;--paper:#182024;--ink:#dce3e2;--ink2:#9aa7a9;--rule:#4a575c;--faint:#26312f;
-  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--bench:#8d999b;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
+  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--bench:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
 }}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--ground);color:var(--ink);font:15px/1.45 "IBM Plex Sans Condensed",-apple-system,BlinkMacSystemFont,sans-serif}
@@ -81,12 +81,15 @@ const FIRMS = {
             staff:[["vol","Vol analyst","Compares implied vs. realized volatility"],["strat","Strategist","The AI: picks spreads and size"],
                    ["trader","Options trader","Sells defined-risk credit spreads"],["risk","Risk manager","Watches profit targets, stops and expiry"]]},
   baseline:{name:"Index Booth",       colorVar:"--bench", staff:[["index","Index buyer","Bought SPY once and holds it"]]},
+  monkey:  {name:"Monkey Business",   colorVar:"--monkey", staff:[["dart","Dart thrower","Picks a random stock, size and holding time. The control group."]]},
 };
-const ROLE_COLOR = {scout:"#4b7f95", strat:"#7357b3", trader:"#c38a1c", risk:"#b8504a", vol:"#2c8f8a", index:"#7e8a8c", comp:"#55636a"};
-const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:200}, baseline:{y:1240,h:84}};
-const H = 1340, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84, door:[30, 58]};
+const ROLE_COLOR = {scout:"#4b7f95", strat:"#7357b3", trader:"#c38a1c", risk:"#b8504a", vol:"#2c8f8a", index:"#7e8a8c", comp:"#55636a", dart:"#c0507d"};
+const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:200}, baseline:{y:1240,h:84}, monkey:{y:1344,h:84}};
+const H = 1446, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84, door:[30, 58]};
 const BOOTH = {x:2, y:EXCH.y - 2, w:30, h:22};
-const LANES = {trend:86, meanrev:168, volsell:250, baseline:332};
+const LANES = {trend:70, meanrev:140, volsell:210, baseline:282, monkey:346};
+const NB = id => id === "baseline" || id === "monkey";   // non-racing: benchmark and control
+
 // ---------- office hours (US/Eastern) ----------
 function etNow(){
   const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", {timeZone: "America/New_York", weekday: "short", hour: "numeric",
@@ -94,13 +97,27 @@ function etNow(){
   return {wd: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p.weekday), h: +p.hour + +p.minute / 60, date: `${p.year}-${p.month}-${p.day}`};
 }
 function phaseNow(){
-  const {wd, h} = etNow();
+  const {wd, h, date} = etNow();
+  const cal = (typeof data !== "undefined" && data && data.calendar) || [];
+  if (cal.length){
+    const days = Object.fromEntries(cal.map(c => [c.date, c])), hrs = t => +t.split(":")[0] + +t.split(":")[1] / 60;
+    const d = new Date(date + "T12:00"); d.setDate(d.getDate() + 1);
+    const tomorrow = d.toISOString().slice(0, 10), today = days[date];
+    if (today){
+      if (h < hrs(today.open)) return "planning";
+      if (h < hrs(today.close)) return "open";
+      if (wd === 5 && h < 18.5) return "review";
+      return days[tomorrow] ? "planning" : (h < 18.5 ? "planning" : (wd >= 1 && wd <= 4 ? "holiday" : "weekend"));
+    }
+    if (h >= 18.5 && days[tomorrow]) return "planning";
+    return wd >= 1 && wd <= 5 ? "holiday" : "weekend";
+  }
   if (wd >= 1 && wd <= 5 && h >= 9.5 && h < 16) return "open";
   if (wd === 5 && h >= 16 && h < 18.5) return "review";          // Friday: weekly self-review
   if (wd === 6 || (wd === 5 && h >= 18.5) || (wd === 0 && h < 18.5)) return "weekend";
   return "planning";                                               // weeknights: the game-plan crew stays
 }
-let phase = phaseNow();
+let phase = null;
 let GOAL = 5000, data = null, theme = {}, firmsState = {}, workers = [], ticker = [], hit = [];
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -174,14 +191,14 @@ function drawClimb(){
   text("$10 · out of the race", right, CLIMB.bottom + 22, 11, theme.bad, "right", 500);
   // roads: from offices up to the HQ door
   Object.entries(LANES).forEach(([id, x]) => {
-    const bench = id === "baseline", w = bench ? 10 : 22;
+    const bench = NB(id), w = bench ? 10 : 22;
     rect(x - w / 2, CLIMB.top - 30, w, CLIMB.bottom - CLIMB.top + 42, bench ? alpha(theme.rule, .25) : alpha(theme.rule, .35));
     if (!bench){ ctx.setLineDash([6, 8]); ctx.strokeStyle = theme.paper; ctx.lineWidth = 1.5;
       ctx.beginPath(); ctx.moveTo(x, CLIMB.top - 26); ctx.lineTo(x, CLIMB.bottom + 10); ctx.stroke(); ctx.setLineDash([]); }
   });
   // feeder roads into the HQ
   ctx.strokeStyle = alpha(theme.rule, .35); ctx.lineWidth = 6;
-  Object.entries(LANES).forEach(([id, x]) => { if (id === "baseline") return;
+  Object.entries(LANES).forEach(([id, x]) => { if (NB(id)) return;
     ctx.beginPath(); ctx.moveTo(x, CLIMB.top - 28); ctx.quadraticCurveTo(x, GOAL_Y + 70, W / 2, GOAL_Y + 50); ctx.stroke(); });
 }
 
@@ -189,7 +206,7 @@ function drawFirmMarkers(t){
   Object.entries(LANES).forEach(([id, x]) => {
     const st = firmsState[id]; if (!st) return;
     st.markerY += (yClimb(st.eq) - st.markerY) * .06;
-    const y = st.markerY, bench = id === "baseline", out = st.out;
+    const y = st.markerY, bench = NB(id), out = st.out;
     // equity history: faint trail along the road
     if (st.history.length > 1){ ctx.strokeStyle = alpha(FIRMS[id].color, .45); ctx.lineWidth = 2; ctx.beginPath();
       st.history.forEach((v, i) => { const hx = x + (bench ? 0 : 8) + Math.sin(i * .9) * 2, hy = yClimb(v); i ? ctx.lineTo(hx, hy) : ctx.moveTo(hx, hy); }); ctx.stroke(); }
@@ -197,10 +214,13 @@ function drawFirmMarkers(t){
     const w = bench ? 18 : 30, h = bench ? 14 : 20;
     rect(x - w / 2, y - h / 2, w, h, out ? theme.faint : FIRMS[id].color, theme.ink, 1.2);
     if (!out && !bench){ const blink = (Math.sin(t * 3 + x) + 1) / 2; rect(x - 3, y - h / 2 - 4, 6, 3, alpha(FIRMS[id].color, .4 + blink * .6)); }
-    const lx = x + (bench ? 13 : 19);
-    text(money(st.eq), lx, y - 6, 11, out ? theme.bad : theme.ink, "left", 600);
-    text(bench ? "SPY" : FIRMS[id].name.split(" ")[0], lx, y + 7, 10, theme.ink2, "left");
-    hit.push({id, x: x - w, y: y - h, w: w * 2.6, h: h * 2});
+    // labels sit centered under each marker so neighbouring lanes never collide
+    const ly = y + h / 2 + 9;
+    font(11, 600); const tw = ctx.measureText(money(st.eq)).width;
+    rect(x - tw / 2 - 3, ly - 7, tw + 6, 26, alpha(theme.ground, .85));
+    text(money(st.eq), x, ly, 11, out ? theme.bad : theme.ink, "center", 600);
+    text(id === "baseline" ? "SPY" : id === "monkey" ? "Monkey" : FIRMS[id].name.split(" ")[0], x, ly + 12, 10, theme.ink2, "center");
+    hit.push({id, x: x - 32, y: y - h, w: 64, h: h + 36});
   });
 }
 
@@ -231,7 +251,7 @@ function drawExchange(t){
 
 function drawOffice(id, t){
   const o = OFFICES[id], st = firmsState[id], f = FIRMS[id]; if (!st) return;
-  const x = 44, w = W - 56, y = o.y, h = o.h, out = st.out, bench = id === "baseline";
+  const x = 44, w = W - 56, y = o.y, h = o.h, out = st.out, bench = NB(id);
   rect(x, y, w, h, theme.paper);
   rect(x, y, w, h, alpha(f.color, out ? .03 : .07));
   // walls (thick plan lines) with a door gap on the street side
@@ -241,13 +261,18 @@ function drawOffice(id, t){
   // sign
   rect(x + 10, y + 8, 6, 18, f.color);
   text(f.name, x + 22, y + 13, 15, theme.ink, "left", 600);
-  text(bench ? `${money(st.eq)} · benchmark` : `${money(st.eq)} · ${(st.eq / GOAL * 100).toFixed(1)}% of the way`, x + 22, y + 29, 11, theme.ink2);
+  text(bench ? `${money(st.eq)} · ${id === "monkey" ? "control group, not racing" : "benchmark"}` : `${money(st.eq)} · ${(st.eq / GOAL * 100).toFixed(1)}% of the way`, x + 22, y + 29, 11, theme.ink2);
   // desks + station labels
   st.desks.forEach(d => {
     rect(d.x - 17, d.y - 30, 34, 14, alpha(theme.rule, .45), theme.ink2, 1);
     rect(d.x - 9, d.y - 28, 18, 3, theme.ink2);
     text(d.label, d.x, d.y + 14, 10, theme.ink2, "center");
   });
+  if (id === "monkey"){
+    const bx = x + w * .45, by = y + 14;
+    [9, 6, 3].forEach((r, i) => { ctx.beginPath(); ctx.arc(bx, by, r, 0, Math.PI * 2); ctx.fillStyle = i % 2 ? theme.paper : f.color; ctx.fill(); });
+    ctx.strokeStyle = theme.ink; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(bx, by, 9, 0, Math.PI * 2); ctx.stroke();
+  }
   // position monitors along the far wall: one per open trade, colored by P&L
   st.positions.forEach((p, i) => {
     const mx = x + w - 62, my = y + 44 + i * 30;
@@ -264,7 +289,7 @@ function drawOffice(id, t){
     }
     ctx.fillStyle = alpha("#000000", stays ? .06 : .16); ctx.fillRect(x + 1.5, y + 1.5, w - 3, h - 3);
     if (!bench){ rect(st.table.x - 26, st.table.y - 9, 52, 18, alpha(theme.rule, .6), theme.ink2, 1);
-      text(phase === "review" ? "Weekly review" : phase === "weekend" ? "Closed for the weekend" : "Game plan", st.table.x, st.table.y - 17, 10, theme.ink2, "center", 600); }
+      text(phase === "review" ? "Weekly review" : phase === "weekend" ? "Closed for the weekend" : phase === "holiday" ? "Market holiday" : "Game plan", st.table.x, st.table.y - 17, 10, theme.ink2, "center", 600); }
   }
   if (out){
     hatch(x + 2, y + 2, w - 4, h - 4, alpha(theme.ink2, .25));
@@ -315,7 +340,7 @@ function buildGrid(){
       st.desks.forEach(d => block(d.x - 17, d.y - 30, 34, 14, 4));
       st.positions.forEach((p, i) => block(x + w - 62, y + 44 + i * 30, 52, 22, 4));
       if (st.out) block(x, y, w, h, 0);
-      if (phase !== "open" && id !== "baseline") block(st.table.x - 26, st.table.y - 9, 52, 18, 3);
+      if (phase !== "open" && !NB(id)) block(st.table.x - 26, st.table.y - 9, 52, 18, 3);
     }
   });
 }
@@ -379,8 +404,8 @@ function buildWorkers(){
       const home = D[role]; let plan;
       if (phase !== "open"){
         const planner = ["scout", "vol", "strat"].includes(role);
-        const stays = (phase === "weekend") ? (role === "risk" && hasPos)
-                    : (phase === "review") ? id !== "baseline"
+        const stays = (phase === "weekend" || phase === "holiday") ? (role === "risk" && hasPos)
+                    : (phase === "review") ? !NB(id)
                     : planner || (role === "risk" && hasPos);
         if (!stays) return;
         const seat = seats[si % seats.length];
@@ -394,6 +419,10 @@ function buildWorkers(){
       else if (role === "strat") plan = busy ? [[home, 3], [near(D.trader || home, -14, 6), 1.4]] : [[home, 5], [near(home, 20, 34), 1.5]];
       else if (role === "trader") plan = busy ? [[home, 1.5], [door, 0], [ex[0], 0.8], [ex[1], 0.6], [door, 0]] : [[home, 4], [near(home, -30, 36), 2]];
       else if (role === "risk") plan = hasPos ? screens.map(s => [s, 1.6]).concat([[home, 2]]) : [[home, 5], [near(home, 24, 34), 1.5]];
+      else if (role === "dart"){
+        const board = free({x: x0 + w * .45, y: o.y + 30});
+        plan = [[board, 1.2], [near(board, 0, 6), .6], [home, 3]].concat(hasPos ? screens.map(s => [s, 1.5]) : []);
+      }
       else plan = [[home, 99]];
       workers.push({firm: id, role, plan, i: 0, x: home.x, y: home.y, wait: Math.random() * 2, facing: Math.PI, walking: false, path: null});
     });
@@ -426,15 +455,15 @@ function posPnl(p){
   return 0;
 }
 function load(d){
-  data = d; GOAL = d.race && d.race.goal || 5000;
+  data = d; GOAL = d.race && d.race.goal || 5000; phase = phaseNow();
   const today = (d.updated || "").slice(0, 10), curve = d.equity_curve || [];
   firmsState = {};
   d.agents.forEach(a => {
     const id = a.id; if (!FIRMS[id]) return;
     const o = OFFICES[id], staff = FIRMS[id].staff, x0 = 44, w = W - 56, cols = staff.length;
     const usable = w - 140, desks = staff.map(([role, label], i) => ({role, label,
-      x: x0 + 44 + (cols === 1 ? usable / 2 : i * usable / (cols - 1)),
-      y: o.y + (id === "baseline" ? 52 : o.h * .5 + (i % 2) * 34)}));
+      x: NB(id) ? x0 + w - 120 : x0 + 44 + (cols === 1 ? usable / 2 : i * usable / (cols - 1)),
+      y: o.y + (NB(id) ? 52 : o.h * .5 + (i % 2) * 34)}));
     const table = {x: x0 + w * .42, y: o.y + o.h - 30};
     firmsState[id] = {table, eq: a.equity, status: a.status, out: ["failed", "eliminated"].includes(a.status), agent: a, desks,
       markerY: yClimb(100),
@@ -456,8 +485,8 @@ function renderText(){
   const lead = comp[0];
   $("block").innerHTML = `<div><span>Leader</span><b>${esc(FIRMS[lead.id].name)}</b></div><div><span>Value</span><b>${money(lead.equity)}</b></div>
     <div><span>Goal</span><b>$${GOAL.toLocaleString()}</b></div><div><span>Updated</span><b>${new Date(data.updated).toLocaleTimeString([], {hour:"numeric", minute:"2-digit"})}</b></div>
-    <div><span>Office hours</span><b>${{open: "Market open", planning: "After hours", review: "Friday review", weekend: "Weekend"}[phase]}</b></div>
-    <div><span>Who's in</span><b>${{open: "Full staff", planning: "Game-plan crew", review: "Whole firm", weekend: "Risk desk only"}[phase]}</b></div>`;
+    <div><span>Office hours</span><b>${{open: "Market open", planning: "After hours", review: "Friday review", weekend: "Weekend", holiday: "Market holiday"}[phase]}</b></div>
+    <div><span>Who's in</span><b>${{open: "Full staff", planning: "Game-plan crew", review: "Whole firm", weekend: "Risk desk only", holiday: "Risk desk only"}[phase]}</b></div>`;
   $("staff").innerHTML = `<h2>Who works where</h2><p>Each firm only hires the roles its strategy needs. Tap a person to see what they're working on, or a firm for its books.</p>` +
     Object.entries(FIRMS).map(([id, fm]) => `<h2><span class="dot" style="background:var(${fm.colorVar})"></span>${esc(fm.name)}</h2>` +
       fm.staff.map(([r, label, job]) => `<p><span class="dot" style="background:${ROLE_COLOR[r]}"></span><b style="color:var(--ink);font-weight:500">${esc(label)}</b>: ${esc(job)}</p>`).join("")).join("") +
@@ -468,7 +497,7 @@ function showCard(id){
   const st = firmsState[id]; if (!st) return; const a = st.agent, ret = (a.equity / 100 - 1) * 100;
   $("card").innerHTML = `<div class="h"><span>${esc(FIRMS[id].name)}</span><button aria-label="Close" onclick="document.getElementById('card').style.display='none'">×</button></div>
     <div class="eq">${money(a.equity)} <span class="${ret >= 0 ? "up" : "down"}" style="font-size:15px">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div>
-    <p>${a.competing ? `${(a.equity / GOAL * 100).toFixed(1)}% of the way to $${GOAL.toLocaleString()}` : "Benchmark, not racing"}. Status: ${esc(a.status)}${a.status_reason ? `, ${esc(a.status_reason)}` : ""}.</p>
+    <p>${a.competing ? `${(a.equity / GOAL * 100).toFixed(1)}% of the way to $${GOAL.toLocaleString()}` : (id === "monkey" ? "Control group, not racing" : "Benchmark, not racing")}. Status: ${esc(a.status)}${a.status_reason ? `, ${esc(a.status_reason)}` : ""}.</p>
     <p>Cash ${money(a.available)} · ${a.open} open · ${a.closed} closed${a.win_rate != null ? ` · ${a.win_rate}% winners` : ""}</p>
     ${st.positions.map(x => `<p>${esc(x.sym)}: <span class="${x.pnl >= 0 ? "up" : "down"}">${x.pnl >= 0 ? "+" : "-"}$${Math.abs(x.pnl).toFixed(2)}</span>${x.p.thesis ? `, ${esc(x.p.thesis)}` : ""}</p>`).join("")}
     ${a.notes && a.notes.length ? `<p><i>“${esc(a.notes[0].note)}”</i></p>` : ""}`;
@@ -526,6 +555,8 @@ function roleInfo(k){
       base.lines.push("Watching: " + livePlan.watchlist.slice(0, 4).map(w => `${w.symbol} (${w.trigger || w.setup})`).join("; ") + ".");
     base.lines.push(`${livePlan.session}: ${livePlan.decision === "keep" ? "kept the plan" : livePlan.decision === "scrap" ? "scrapped the plan" : livePlan.decision === "new" ? "drew up a new plan" : "changed the plan"}. ${livePlan.why || ""}`);
     if (changes) base.lines.push(`Changed their mind ${changes} time${changes > 1 ? "s" : ""} so far.`);
+    const sc = (data.scorecards || {})[k.firm];
+    if (sc && sc.picks_scored) base.lines.push(`Track record: ${sc.right_way} of ${sc.picks_scored} planned picks moved the right way${sc.mind_changes_scored ? `; changing their mind helped ${sc.mind_changes_helped} of ${sc.mind_changes_scored} times` : ""}.`);
     if (k.role !== "strat" && livePlan.brainstorm) base.lines.push(`Idea to test: ${livePlan.brainstorm}`);
     const done = new Set(revs.map(r => r.session)).size;
     base.goal = {label: "Planning sessions done", value: `${done} of 3`, pct: pct(done, 3),
@@ -572,6 +603,15 @@ function roleInfo(k){
           base.goal = {label: `Profit target (${Math.round(tp * 100)}% of credit)`, value: `${Math.max(0, kept * 100).toFixed(0)}% kept`,
                        pct: pct(kept, tp), note: kept < 0 ? "Spread is currently losing value." : ""}; }
       }
+      break; }
+    case "dart": {
+      const lo = lastOpen ? `Last dart: ${lastOpen.symbol} for ${money(Math.abs(lastOpen.cost || 0))}.` : "Hasn't thrown a dart yet.";
+      base.lines.push(lo, "Picks a random stock with a random amount and holding time, under the same rules and stops as everyone else.",
+        "If a firm can't beat this over time, its wins were luck.");
+      const firms = data.agents.filter(x => x.competing && !["failed", "eliminated"].includes(x.status));
+      const beating = firms.filter(x => x.equity > a.equity).length;
+      base.goal = {label: "Firms beating the monkey", value: `${beating} of ${firms.length}`, pct: pct(beating, firms.length),
+                   note: "The real firms want this bar full."};
       break; }
     case "index": {
       const p = st.positions[0] && st.positions[0].p;

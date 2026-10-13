@@ -104,6 +104,10 @@ class Broker:
                      params={"symbols": ",".join(symbols), "feed": config.OPTION_FEED})
         return js.get("quotes") or {}
 
+    def calendar(self, start, end):
+        """Trading days with open/close times (handles holidays and early closes)."""
+        return self._t("GET", "/v2/calendar", params={"start": start, "end": end})
+
     def news(self, symbols, since_iso, limit=40):
         """Recent headlines (free Alpaca news feed) for the given symbols."""
         params = {"limit": min(limit, 50), "sort": "desc", "start": since_iso}

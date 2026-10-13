@@ -10,7 +10,7 @@
   color-scheme:light;
   --bg:#f5f4f1;--surface:#fcfcfb;--line:#e4e2dc;--grid:#ecebe6;--track:#ecebe6;
   --text:#0b0b0b;--text2:#52514e;--muted:#8a8984;
-  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#8a8984;
+  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#8a8984;--s5:#d55181;
   --good:#0ca30c;--bad:#d03b3b;--gold:#b07a00;
   --radius:14px;
 }
@@ -18,7 +18,7 @@
   color-scheme:dark;
   --bg:#111110;--surface:#1a1a19;--line:#2c2c2a;--grid:#262624;--track:#2c2c2a;
   --text:#f0efec;--text2:#c3c2b7;--muted:#8f8e86;
-  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#8f8e86;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#8f8e86;--s5:#e87ba4;
   --good:#3fbf3f;--bad:#e66767;--gold:#eda100;
 }}
 *{box-sizing:border-box}
@@ -77,7 +77,7 @@ ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 </style>
 </head>
 <body>
-<header><h1>Agent Race</h1><span style="display:flex;gap:10px;align-items:baseline"><a href="arena.html" style="font-size:12px;color:var(--text2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;text-decoration:none">3D arena</a><span class="sub" id="updated">Loading…</span></span></header>
+<header><h1>Agent Race</h1><span style="display:flex;gap:10px;align-items:baseline"><a href="arena.html" style="font-size:12px;color:var(--text2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;text-decoration:none">The Street</a><span class="sub" id="updated">Loading…</span></span></header>
 <div class="card banner" id="health" style="display:none;border-color:var(--bad)"></div>
 <div class="card banner" id="banner"><div class="t">Race to $5,000</div></div>
 <div class="pills" id="pills"></div>
@@ -107,7 +107,8 @@ ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 <div class="card"><ul class="rules" id="rules"></ul></div>
 
 <script>
-const COLOR = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", baseline:"var(--s4)"};
+const COLOR = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", baseline:"var(--s4)", monkey:"var(--s5)"};
+let DATA = null;
 const STATUS = {active:"Active", winner:"🏆 Winner", failed:"✕ Failed", eliminated:"✕ Eliminated"};
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -133,6 +134,7 @@ fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(render).c
 });
 
 function render(d){
+  DATA = d;
   GOAL = d.race.goal || 5000;
   $("updated").textContent = "Updated " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
   const names = Object.fromEntries(d.agents.map(a => [a.id, a.name]));
@@ -173,12 +175,22 @@ function render(d){
     `The SPY benchmark isn't racing; it shows what doing nothing would have earned`].map(t => `<li>${esc(t)}</li>`).join("");
 }
 
+function scoreLine(id){
+  const s = DATA && DATA.scorecards && DATA.scorecards[id];
+  if (id === "monkey") return `<div class="note">Picks at random under the same rules. A firm that can't beat it has no real edge.</div>`;
+  if (!s) return "";
+  const parts = [`Plan hit rate <b>${s.hit_rate_pct ?? "–"}%</b> (${s.right_way} of ${s.picks_scored} picks moved the planned way)`];
+  if (s.acted_on_pct != null) parts.push(`acted on <b>${s.acted_on_pct}%</b>`);
+  if (s.mind_changes_scored) parts.push(`changing its mind helped <b>${s.mind_changes_helped} of ${s.mind_changes_scored}</b> times`);
+  return `<div class="stats" style="margin-top:6px">${parts.join(" · ")}</div>`;
+}
+
 function agentCard(a, rank, ticks){
   const ret = (a.equity/START - 1) * 100;
   const st = a.status;
   return `<div class="card agent">
     <div class="top"><div class="name">${rank ? `<span class="rank">#${rank}</span>` : ""}<span class="sw" style="background:${COLOR[a.id]}"></span>${esc(a.name)}</div>
-      <span class="status ${st}">${a.competing ? STATUS[st] || esc(st) : "Benchmark"}</span></div>
+      <span class="status ${st}">${a.competing ? STATUS[st] || esc(st) : a.id === "monkey" ? "Control" : "Benchmark"}</span></div>
     <div class="money"><span class="eq">${money(a.equity)}</span><span class="mult ${cls(ret)}">${a.multiple}× · ${ret>=0?"+":""}${ret.toFixed(1)}%</span></div>
     ${a.competing ? `<div class="track" role="progressbar" aria-valuenow="${a.equity}" aria-valuemax="${GOAL}" aria-label="Progress to goal">
       <div class="fill" style="width:${logPct(a.equity)}%;background:${COLOR[a.id]}"></div></div><div class="ticks">${ticks}</div>` : ""}
@@ -186,6 +198,7 @@ function agentCard(a, rank, ticks){
       <span>Win rate <b>${a.win_rate==null?"–":a.win_rate+"%"}</b></span><span>Max DD <b>${a.max_dd_pct}%</b></span>
       <span title="Return divided by max drawdown">Risk-adj <b>${a.risk_adj}</b></span></div>
     ${a.status_reason && st!=="active" ? `<div class="reason ${st}">${esc(a.status_reason)}</div>` : ""}
+    ${scoreLine(a.id)}
     ${a.notes && a.notes.length ? `<div class="note">“${esc(a.notes[0].note)}”</div>` : ""}
   </div>`;
 }
@@ -218,7 +231,7 @@ function chart(d, names){
   series.forEach(s => {
     let p = "", on = false;
     s.pts.forEach((v,i) => { if (v==null) { on=false; return; } p += (on?"L":"M") + x(i).toFixed(1) + " " + y(v).toFixed(1); on = true; });
-    g += `<path d="${p}" fill="none" stroke="${COLOR[s.id]}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"${s.id==="baseline"?' stroke-dasharray="4 3"':""}/>`;
+    g += `<path d="${p}" fill="none" stroke="${COLOR[s.id]}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"${s.id==="baseline"||s.id==="monkey"?' stroke-dasharray="4 3"':""}/>`;
     const last = s.pts[s.pts.length-1];
     if (last!=null) labels.push({y:y(last), v:last});
   });

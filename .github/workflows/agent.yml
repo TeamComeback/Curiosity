@@ -48,6 +48,8 @@ jobs:
           BRAIN_MODEL: ${{ vars.BRAIN_MODEL || 'claude-haiku-5-5' }}
           REVIEW_MODEL: ${{ vars.REVIEW_MODEL || 'claude-sonnet-5-5' }}
           PLAN_MODEL: ${{ vars.PLAN_MODEL }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          DASHBOARD_URL: https://teamcomeback.github.io/Curiosity/
         run: |
           SCHED="${{ github.event.schedule }}"
           if [ "$SCHED" = "30 21 * * 5" ] || [ "${{ inputs.task }}" = "review" ]; then

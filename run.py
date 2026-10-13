@@ -9,11 +9,12 @@ import uuid
 import requests
 
 import brain, config, governor, health, store
+import plan as plan_mod
 from broker import AlpacaError, Broker
 from indicators import enrich
-import baseline, meanrev, trend, volsell
+import baseline, meanrev, monkey, trend, volsell
 
-REGISTRY = {"trend": trend, "meanrev": meanrev, "volsell": volsell, "baseline": baseline}
+REGISTRY = {"trend": trend, "meanrev": meanrev, "volsell": volsell, "baseline": baseline, "monkey": monkey}
 from common import mid, pick_option, split_today
 
 SLIP = config.RULES["slippage_half_spread"]
@@ -145,6 +146,8 @@ def open_trade(b, state, aid, cand, order, ctx):
         return store.journal({"type": "rule_block", "agent": aid, "symbol": cand["symbol"], "note": f"bad instrument {inst}"})
 
     agent["cash"] = round(agent["cash"] - pos["cost"], 2)
+    if cand.get("hold_days"):
+        pos["hold_days"] = cand["hold_days"]
     pos.update({"direction": cand.get("direction", "long"), "stop": stop, "atr": cand.get("atr", 0),
                 "opened": store.now_et().isoformat(timespec="seconds"),
                 "thesis": order.get("thesis") or cand.get("rule_thesis", ""),
@@ -222,7 +225,7 @@ def agent_view(state, aid, cands, ctx, can_open, standings):
                           "unrealized_pnl": round(val - p["cost"], 2),
                           "opened": p["opened"], "expiry": p.get("expiry"), "structure": p.get("structure"),
                           "thesis": p.get("thesis")})
-    keep = ("symbol", "direction", "price", "stop", "level", "target_hint", "structure", "short_strike",
+    keep = ("symbol", "direction", "price", "stop", "level", "target_hint", "structure", "short_strike", "size_pct",
             "long_strike", "expiry", "credit", "width", "max_loss_per", "signals", "rule_thesis")
     journal = store.load("journal.json", [])
     return {
@@ -281,6 +284,8 @@ def write_dashboard(state, regime, equities):
         "reviews": store.load("reviews.json", [])[-6:][::-1],
         "params": store.load_params(),
         "plans": {aid: a.get("plan") for aid, a in state["agents"].items() if a.get("plan")},
+        "scorecards": {aid: plan_mod.scorecard_summary(a) for aid, a in state["agents"].items() if a.get("scorecard")},
+        "calendar": store.load("calendar.json", []),
     })
 
 
@@ -333,6 +338,7 @@ def main(force=False, broker=None):
         print("Market closed; nothing to do.")
         return
     state = store.load_state() or store.init_state()
+    store.add_missing_agents(state)
     if state["race"]["status"] != "running":
         print("Race finished. Delete data/state.json to start a new race.")
         return
@@ -424,13 +430,17 @@ def main(force=False, broker=None):
 
 
 if __name__ == "__main__":
+    import alerts
     try:
         main(force="--force" in sys.argv)
+        alerts.flush("Agent race: trading update")
     except SystemExit as e:
         if e.code not in (None, 0):
             health.record_crash(RuntimeError(str(e.code)))
+            alerts.setup_problem(e.code)
             print(e.code)
             sys.exit(1)
     except Exception as e:  # save the reason where the dashboard and repo can show it
         health.record_crash(e)
+        alerts.setup_problem(f"The trading run crashed ({type(e).__name__}). Details are on the dashboard.")
         raise

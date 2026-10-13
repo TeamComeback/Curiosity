@@ -93,8 +93,10 @@ def main():
 
 if __name__ == "__main__":
     import health
+    import alerts
     try:
         main()
+        alerts.flush("Agent race: weekly review")
     except Exception as e:
         health.record_crash(e)
         raise

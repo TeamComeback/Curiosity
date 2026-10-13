@@ -56,6 +56,17 @@ def init_state():
     }
 
 
+def add_missing_agents(state):
+    """Agents added mid-race (like the monkey) join with the standard starting balance."""
+    bal = config.RACE["start_balance"]
+    for aid in config.AGENTS:
+        if aid not in state["agents"]:
+            state["agents"][aid] = {"cash": bal, "reserved": 0.0, "positions": {}, "status": "active",
+                                    "status_reason": "", "status_at": None, "closed": 0, "wins": 0,
+                                    "peak": bal, "max_dd": 0.0, "notes": [], "last_exits": {},
+                                    "joined": now_et().isoformat(timespec="seconds")}
+
+
 def load_params():
     p = load("params.json", {})
     merged = copy.deepcopy(config.DEFAULT_PARAMS)
@@ -67,9 +78,13 @@ def load_params():
     return merged
 
 
+RUN_EVENTS = []          # events from this run, for the phone alert summary
+
+
 def journal(event):
     j = load("journal.json", [])
     event = {"time": now_et().isoformat(timespec="seconds"), **event}
     j.append(event)
+    RUN_EVENTS.append(event)
     save("journal.json", j[-800:])
     print(f"[journal] {event.get('type')} {event.get('sleeve', '')} {event.get('symbol', '')} {event.get('note', '')}")

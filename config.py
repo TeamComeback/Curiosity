@@ -51,6 +51,9 @@ AGENTS = {
                          "volatility is rich versus realized, collecting premium as time passes."},
     "baseline": {"name": "SPY benchmark", "competing": False, "instruments": ["stock"],
                  "style": "Buys SPY with its $100 and holds. Not racing; it's the bar to beat."},
+    "monkey": {"name": "Random monkey", "competing": False, "instruments": ["stock"],
+               "style": "Control group. Picks random stocks with random size and holding period under the "
+                        "same rules. Not racing; if a firm can't beat it, the firm has no edge."},
 }
 VOL_UNDERLYINGS = ["SPY", "QQQ", "IWM"]
 
@@ -93,4 +96,5 @@ ENTRY_WINDOWS = {
     "meanrev": ("15:00", "15:55"),
     "volsell": ("10:30", "15:00"),
     "baseline": ("09:45", "15:55"),
+    "monkey": ("10:00", "15:30"),
 }

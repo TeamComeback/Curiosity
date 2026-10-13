@@ -65,6 +65,9 @@ def _rules_default(aid, view):
     if aid == "baseline":
         out["open"].append({"candidate_id": 0, "instrument": "stock", "dollars": round(avail * 0.99, 2),
                             "thesis": c["rule_thesis"], "confidence": 3})
+    elif aid == "monkey":
+        out["open"].append({"candidate_id": 0, "instrument": "stock",
+                            "dollars": round(avail * c.get("size_pct", 0.4), 2), "thesis": c["rule_thesis"], "confidence": 0})
     elif aid == "volsell":
         out["open"].append({"candidate_id": 0, "instrument": "spread", "contracts": 1,
                             "thesis": c["rule_thesis"], "confidence": 3})
@@ -76,7 +79,7 @@ def _rules_default(aid, view):
 
 
 def decide(aid, view):
-    if aid == "baseline" or not config.ANTHROPIC_API_KEY:
+    if aid in ("baseline", "monkey") or not config.ANTHROPIC_API_KEY:
         return _rules_default(aid, view)
     a = config.AGENTS[aid]
     system = DECIDE_SYSTEM.format(name=a["name"], goal=config.RACE["goal"], elim=config.RACE["eliminate_below"],
