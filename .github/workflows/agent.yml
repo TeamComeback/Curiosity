@@ -1,0 +1,59 @@
+name: Trading agent race
+
+on:
+  schedule:
+    - cron: "5,35 13-20 * * 1-5"
+    - cron: "30 21 * * 5"
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "run (one cycle) or review (weekly self-review)"
+        default: "run"
+      force:
+        description: "Run even if the market is closed (true/false)"
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trading-agent
+  cancel-in-progress: false
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Run agent
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SCREENER_URL: ${{ vars.SCREENER_URL }}
+          BRAIN_MODEL: ${{ vars.BRAIN_MODEL || 'claude-haiku-5-5' }}
+          REVIEW_MODEL: ${{ vars.REVIEW_MODEL || 'claude-sonnet-5-5' }}
+        run: |
+          if [ "${{ github.event.schedule }}" = "30 21 * * 5" ] || [ "${{ inputs.task }}" = "review" ]; then
+            python review.py
+          elif [ "${{ inputs.force }}" = "true" ]; then
+            python run.py --force
+          else
+            python run.py
+          fi
+
+      - name: Save results to repo
+        run: |
+          git config user.name "trading-agent"
+          git config user.email "trading-agent@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "agent: $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
