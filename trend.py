@@ -33,7 +33,7 @@ def entries(ctx):
             out.append({**base, "direction": "short", "stop": round(price + p["stop_atr"] * atr, 2),
                         "level": round(lo, 2), "score": -float(last["roc20"]) * rel_vol,
                         "rule_thesis": f"{p['breakout_lookback']}-day breakdown below {lo:.2f} on {rel_vol:.1f}x volume (puts)"})
-    return sorted(out, key=lambda x: -x["score"])[:6]
+    return sorted(out, key=lambda x: -x["score"])[:20]
 
 
 def manage(ctx, pos):

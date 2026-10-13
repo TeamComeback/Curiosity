@@ -10,6 +10,8 @@ import requests
 
 import brain, config, governor, health, store
 import plan as plan_mod
+import focus
+import universe
 from broker import AlpacaError, Broker
 from indicators import enrich
 import baseline, meanrev, monkey, trend, volsell
@@ -156,9 +158,17 @@ def open_trade(b, state, aid, cand, order, ctx):
     agent["positions"][pid] = pos
     if aid != "baseline":
         state["entries"]["counts"][aid] = governor.entries_today(state, aid) + 1
+    pos["sector"] = universe.sector_of(cand["symbol"])
     store.journal({"type": "open", "agent": aid, "symbol": pos["symbol"], "instrument": inst,
                    "qty": pos["qty"], "price": pos["entry"], "cost": pos["cost"], "stop": stop,
                    "thesis": pos["thesis"], "confidence": pos["confidence"]})
+    plan = state["agents"][aid].get("plan") or {}
+    store.ledger({"type": "trade_opened", "agent": aid, "position_id": pid, "symbol": pos["symbol"],
+                  "underlying": cand["symbol"], "sector": pos["sector"], "instrument": inst, "qty": pos["qty"],
+                  "price": pos["entry"], "cost": pos["cost"], "stop": stop, "why": pos["thesis"],
+                  "confidence": pos["confidence"], "signals": pos.get("signals", {}),
+                  "from_plan": cand["symbol"] in {w["symbol"] for w in plan.get("watchlist", [])}
+                               and plan.get("for_day") == store.today()})
 
 
 def close_trade(b, state, aid, pid, reason):
@@ -202,6 +212,12 @@ def close_trade(b, state, aid, pid, reason):
     store.journal({"type": "close", "agent": aid, "symbol": pos["symbol"], "qty": pos["qty"],
                    "entry": pos["entry"], "exit": exit_px, "pnl": pnl, "note": reason, "opened": pos["opened"],
                    "confidence": pos.get("confidence"), "thesis": pos.get("thesis")})
+    store.ledger({"type": "trade_closed", "agent": aid, "position_id": pid, "symbol": pos["symbol"],
+                  "underlying": pos.get("underlying", pos["symbol"]),
+                  "sector": pos.get("sector") or universe.sector_of(pos.get("underlying", pos["symbol"])),
+                  "instrument": pos["kind"], "entry": pos["entry"], "exit": exit_px, "pnl": pnl,
+                  "return_pct": round(pnl / abs(pos["cost"]) * 100, 1) if pos.get("cost") else None,
+                  "opened": pos["opened"], "why_entered": pos.get("thesis"), "why_exited": reason})
 
 
 def liquidate(b, state, aid, reason):
@@ -225,7 +241,7 @@ def agent_view(state, aid, cands, ctx, can_open, standings):
                           "unrealized_pnl": round(val - p["cost"], 2),
                           "opened": p["opened"], "expiry": p.get("expiry"), "structure": p.get("structure"),
                           "thesis": p.get("thesis")})
-    keep = ("symbol", "direction", "price", "stop", "level", "target_hint", "structure", "short_strike", "size_pct",
+    keep = ("symbol", "sector", "direction", "price", "stop", "level", "target_hint", "structure", "short_strike", "size_pct",
             "long_strike", "expiry", "credit", "width", "max_loss_per", "signals", "rule_thesis")
     journal = store.load("journal.json", [])
     return {
@@ -244,6 +260,8 @@ def agent_view(state, aid, cands, ctx, can_open, standings):
         "params": ctx["params"].get(aid, {}),
         "regime": ctx["regime"],
         "recent_closed_trades": [j for j in journal if j.get("type") == "close" and j.get("agent") == aid][-8:],
+        "sector_focus": focus.current(agent),
+        "my_results_by_sector": focus.sector_stats(aid),
         "my_notes": agent["notes"][-8:],
         "game_plan": ({k: (agent.get("plan") or {}).get(k) for k in ("summary", "watchlist", "position_plans", "avoid", "why", "made_at")}
                       if (agent.get("plan") or {}).get("for_day") == store.today() else None),
@@ -286,6 +304,10 @@ def write_dashboard(state, regime, equities):
         "plans": {aid: a.get("plan") for aid, a in state["agents"].items() if a.get("plan")},
         "scorecards": {aid: plan_mod.scorecard_summary(a) for aid, a in state["agents"].items() if a.get("scorecard")},
         "calendar": store.load("calendar.json", []),
+        "focus": {aid: focus.current(a) for aid, a in state["agents"].items() if focus.current(a)},
+        "sector_stats": {aid: focus.sector_stats(aid) for aid in state["agents"]},
+        "universe": {k: store.load("universe.json", {}).get(k) for k in ("built", "pool_size")} |
+                    {"core_size": len(store.load("universe.json", {}).get("core", []))},
     })
 
 
@@ -346,9 +368,7 @@ def main(force=False, broker=None):
     params = store.load_params()
 
     held = {p.get("underlying", p["symbol"]) for a in state["agents"].values() for p in a["positions"].values()}
-    plan_syms = [w["symbol"] for a in state["agents"].values() if a.get("status") == "active"
-                 for w in (a.get("plan") or {}).get("watchlist", []) if (a.get("plan") or {}).get("for_day") == store.today()]
-    cands = list(dict.fromkeys(config.UNIVERSE + screener_candidates() + plan_syms))
+    cands = universe.candidates(b, state, extra=screener_candidates())
     symbols = list(dict.fromkeys(["SPY"] + config.VOL_UNDERLYINGS + cands + sorted(held)))
     bars = {}
     for i in range(0, len(symbols), 50):
@@ -377,7 +397,7 @@ def main(force=False, broker=None):
         ok, why = governor.can_trade_today(state, aid)
         can_open = ok and in_window(aid)
         try:
-            found = REGISTRY[aid].entries(ctx) if can_open else []
+            found = focus.rank(REGISTRY[aid].entries(ctx), agent) if can_open else []
         except AlpacaError as e:
             store.journal({"type": "error", "agent": aid, "note": str(e)[:200]})
             found = []

@@ -16,6 +16,8 @@ import brain
 import config
 import health
 import store
+import focus
+import universe
 from broker import Broker
 from indicators import enrich, realized_vol, rsi
 
@@ -36,7 +38,7 @@ def pick_session(now):
 
 
 # ---------- closing-data scans (what the scout brings to the meeting) ----------
-def scan(aid, bars, params, b=None):
+def scan(aid, bars, params, b=None, agent_for_scan=None):
     p = params.get(aid, {})
     out = []
     if aid in ("trend", "meanrev"):
@@ -70,7 +72,14 @@ def scan(aid, bars, params, b=None):
                                 "pct_above_sma200": round((close / last["sma200"] - 1) * 100, 1),
                                 "atr": round(float(last["atr20"]), 2)})
         key = (lambda c: c["distance_pct"]) if aid == "trend" else (lambda c: c["rsi2"])
-        return sorted(out, key=key)[:12]
+        for r in out:
+            r["sector"] = universe.sector_of(r["symbol"])
+        f = focus.current(agent_for_scan) if agent_for_scan else None
+        ranked = sorted(out, key=key)
+        if f:   # keep the focus sectors visible in the scan, drop avoided ones
+            ranked = [r for r in ranked if r["sector"] in f.get("lean_in", [])][:8] + \
+                     [r for r in ranked if r["sector"] not in f.get("lean_in", []) + f.get("avoid", [])]
+        return ranked[:20]
     if aid == "volsell":
         ivh = store.load("iv_history.json", {})
         for und in config.VOL_UNDERLYINGS:
@@ -115,6 +124,12 @@ Think hard, then decide whether to KEEP, REVISE or SCRAP your plan. Changing you
 whenever the new information is better; never keep a plan just because you made it. If nothing is worth
 trading, say so: an empty watchlist is a valid plan.
 
+Sector focus: the scan covers roughly 500 liquid stocks, each tagged with the sector it trades like.
+You can lean into up to 3 sectors (your setups there get looked at first) and avoid others. Lean in
+only where your own results ("my_results_by_sector") or today's scan give real evidence it's working;
+back out when it stops paying. A focus expires after 10 trading days unless you renew it.
+Sector names must come from: {sectors}.
+
 Reply with ONLY a JSON object:
 {{"decision":"keep|revise|scrap|new",
  "why":"one or two sentences on what changed your mind (or why the plan still holds)",
@@ -123,7 +138,8 @@ Reply with ONLY a JSON object:
                "instrument":"stock|call|put|spread","max_dollars":<number>,"conviction":1-5}}],
  "position_plans":[{{"symbol":"...","plan":"hold / tighten stop to X / exit at open if Y"}}],
  "avoid":["symbol or situation to stay away from, with a reason"],
- "brainstorm":"one new idea or tweak to test, or empty"}}"""
+ "brainstorm":"one new idea or tweak to test, or empty",
+ "sector_focus":{{"lean_in":["sector", "..."],"avoid":["sector"],"why":"the evidence for this focus"}}}}"""
 
 
 def session_for(aid, session, state, scan_rows, news, prices, b):
@@ -148,6 +164,8 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
         "strategy_params": store.load_params().get(aid, {}),
         "my_notes": agent.get("notes", [])[-6:],
         "my_plan_scorecard": scorecard_summary(agent),
+        "my_results_by_sector": focus.sector_stats(aid),
+        "current_sector_focus": focus.current(agent),
     }
     if not config.ANTHROPIC_API_KEY:
         d = {"decision": "new" if not current else "keep", "why": "Rules-only mode: plan is the top scan results.",
@@ -157,7 +175,8 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
                            for r in scan_rows[:3]],
              "position_plans": [], "avoid": [], "brainstorm": ""}
     else:
-        system = PLAN_SYSTEM.format(name=a["name"], goal=config.RACE["goal"], start=config.RACE["start_balance"], style=a["style"],
+        system = PLAN_SYSTEM.format(name=a["name"], goal=config.RACE["goal"], start=config.RACE["start_balance"],
+                                    sectors=", ".join(universe.SECTORS), style=a["style"],
                                     instruments=", ".join(a["instruments"]), session=SESSIONS[session],
                                     max_trades=config.RULES["max_new_trades_per_day"], max_pos=config.RULES["max_open_positions"])
         d, err = None, None
@@ -183,7 +202,8 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
             "session": SESSIONS[session], "decision": d.get("decision", "revise"), "why": str(d.get("why", ""))[:400],
             "summary": str(d.get("summary", ""))[:600], "watchlist": d["watchlist"],
             "position_plans": (d.get("position_plans") or [])[:6], "avoid": (d.get("avoid") or [])[:6],
-            "brainstorm": str(d.get("brainstorm", ""))[:300], "revisions": revisions[-6:]}
+            "brainstorm": str(d.get("brainstorm", ""))[:300], "revisions": revisions[-6:],
+            "_sector_focus": d.get("sector_focus")}
     return plan
 
 
@@ -315,8 +335,12 @@ def main(session=None, force=False, only=None):
     for_day = next_trading_day(now)
     params = store.load_params()
 
-    symbols = list(dict.fromkeys(["SPY"] + config.VOL_UNDERLYINGS + config.UNIVERSE + sorted(
-        {p.get("underlying", p["symbol"]) for a in state["agents"].values() for p in a["positions"].values()})))
+    if universe.is_stale():
+        try:
+            universe.build_weekly(b)
+        except Exception as e:  # noqa: BLE001 - keep last week's list
+            print(f"[plan] universe rebuild failed: {type(e).__name__}")
+    symbols = list(dict.fromkeys(["SPY"] + config.VOL_UNDERLYINGS + universe.candidates(b, state)))
     bars = {}
     for i in range(0, len(symbols), 50):
         bars.update(b.daily_bars(symbols[i:i + 50]))
@@ -341,7 +365,7 @@ def main(session=None, force=False, only=None):
                 store.journal({"type": "scorecard", "agent": aid,
                                "note": f"Plan graded: {g['right_way']} of {g['scored']} picks moved the planned way"
                                        + (f", avg {g['avg_move_pct']:+.2f}%" if g['avg_move_pct'] is not None else "")})
-        rows = scan(aid, bars, params, b)
+        rows = scan(aid, bars, params, b, agent)
         watch = [r["symbol"] for r in rows][:12] + [w["symbol"] for w in cur.get("watchlist", [])] + \
                 [p.get("underlying", p["symbol"]) for p in agent["positions"].values()]
         try:
@@ -353,6 +377,16 @@ def main(session=None, force=False, only=None):
             continue
         agent["plan"] = plan
         changed = True
+        store.ledger({"type": "plan", "agent": aid, "session": plan["session"], "for_day": plan["for_day"],
+                      "decision": plan["decision"], "why": plan["why"], "summary": plan["summary"],
+                      "watchlist": [{k: w.get(k) for k in ("symbol", "setup", "trigger", "instrument", "conviction")}
+                                    for w in plan["watchlist"]]})
+        nf = focus.apply(aid, agent, plan.pop("_sector_focus", None), plan["why"])
+        if nf:
+            store.ledger({"type": "focus", "agent": aid, "lean_in": nf["lean_in"], "avoid": nf["avoid"],
+                          "why": nf["why"], "expires": nf["expires"]})
+            store.journal({"type": "focus", "agent": aid, "note": f"Leaning into {', '.join(nf['lean_in']) or 'no sector'}"
+                           + (f"; avoiding {', '.join(nf['avoid'])}" if nf['avoid'] else "") + f". {nf['why']}"})
         store.journal({"type": "plan", "agent": aid, "note": f"{plan['session']}: {plan['decision']}. {plan['why']}",
                        "symbol": ", ".join(w["symbol"] for w in plan["watchlist"][:4])})
     if changed:
@@ -362,6 +396,8 @@ def main(session=None, force=False, only=None):
             dash["plans"] = {aid: a.get("plan") for aid, a in state["agents"].items() if a.get("plan")}
             dash["scorecards"] = {aid: scorecard_summary(a) for aid, a in state["agents"].items() if a.get("scorecard")}
             dash["calendar"] = CAL
+            dash["focus"] = {aid: focus.current(a) for aid, a in state["agents"].items() if focus.current(a)}
+            dash["sector_stats"] = {aid: focus.sector_stats(aid) for aid in state["agents"]}
             dash["journal"] = store.load("journal.json", [])[-60:][::-1]
             dash["plans_updated"] = store.now_et().isoformat(timespec="minutes")
             store.save("dashboard.json", dash)

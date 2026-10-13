@@ -35,7 +35,7 @@ def entries(ctx):
                                 "pct_vs_sma5": round((price / s5 - 1) * 100, 1)},
                     "rule_thesis": f"RSI(2) {r2:.0f} washout above the 200-day; snap-back target ~{s5:.2f}",
                     "score": -r2})
-    return sorted(out, key=lambda x: -x["score"])[:6]
+    return sorted(out, key=lambda x: -x["score"])[:20]
 
 
 def manage(ctx, pos):

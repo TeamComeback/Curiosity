@@ -78,6 +78,13 @@ def load_params():
     return merged
 
 
+def ledger(event):
+    """Permanent record of every decision (trades, plans, focus changes). Never trimmed below 20,000 entries."""
+    lg = load("ledger.json", [])
+    lg.append({"time": now_et().isoformat(timespec="seconds"), **event})
+    save("ledger.json", lg[-20000:])
+
+
 RUN_EVENTS = []          # events from this run, for the phone alert summary
 
 

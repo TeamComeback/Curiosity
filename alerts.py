@@ -35,6 +35,8 @@ def _line(e):
         return f"🏆 Race over: {e.get('note')}"
     if t == "plan" and not str(e.get("note", "")).split(":", 1)[-1].strip().startswith("keep"):
         return f"🧠 {who} changed its plan. {str(e.get('note', ''))[:160]}"
+    if t == "focus":
+        return f"🎯 {who}: {str(e.get('note', ''))[:160]}"
     if t == "scorecard":
         return f"📋 {who}: {e.get('note')}"
     if t == "param_change":

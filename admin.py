@@ -1,6 +1,8 @@
 """Maintenance commands that change the race's books outside normal trading.
 
   python admin.py topup 400     add $400 cash to every agent (open positions untouched)
+  python admin.py universe      rebuild the stock universe now (needs Alpaca keys)
+  python admin.py backfill      seed the permanent ledger from the journal (one time)
 
 A top-up is recorded as if every agent had started with the bigger balance: past equity
 points, peaks and drawdowns are shifted by the same amount, so charts stay continuous and
@@ -48,8 +50,48 @@ def topup(amount):
     print("Top-up done:", {aid: round(e, 2) for aid, e in equities.items()})
 
 
+def backfill():
+    if store.load("ledger.json", []):
+        print("Ledger already has entries; skipping.")
+        return
+    import universe
+    rows = []
+    for j in store.load("journal.json", []):
+        t, aid = j.get("type"), j.get("agent")
+        if t == "open":
+            rows.append({"time": j["time"], "type": "trade_opened", "agent": aid, "symbol": j.get("symbol"),
+                         "sector": universe.sector_of(j.get("symbol")), "instrument": j.get("instrument"),
+                         "qty": j.get("qty"), "price": j.get("price"), "cost": j.get("cost"), "stop": j.get("stop"),
+                         "why": j.get("thesis"), "confidence": j.get("confidence")})
+        elif t == "close":
+            rows.append({"time": j["time"], "type": "trade_closed", "agent": aid, "symbol": j.get("symbol"),
+                         "sector": universe.sector_of(j.get("symbol")), "entry": j.get("entry"), "exit": j.get("exit"),
+                         "pnl": j.get("pnl"), "opened": j.get("opened"), "why_entered": j.get("thesis"),
+                         "why_exited": j.get("note")})
+        elif t == "plan":
+            note = j.get("note", "")
+            sess, _, rest = note.partition(": ")
+            rows.append({"time": j["time"], "type": "plan", "agent": aid, "session": sess,
+                         "decision": rest.split(".")[0], "why": rest.partition(". ")[2],
+                         "watchlist": [{"symbol": s.strip()} for s in (j.get("symbol") or "").split(",") if s.strip()]})
+        elif t == "topup":
+            rows.append({"time": j["time"], "type": "topup", "note": j.get("note")})
+    store.save("ledger.json", rows)
+    print(f"Ledger seeded with {len(rows)} entries.")
+
+
+def build_universe():
+    import universe
+    from broker import Broker
+    universe.build_weekly(Broker())
+
+
 if __name__ == "__main__":
     if len(sys.argv) >= 3 and sys.argv[1] == "topup":
         topup(float(sys.argv[2]))
+    elif len(sys.argv) >= 2 and sys.argv[1] == "backfill":
+        backfill()
+    elif len(sys.argv) >= 2 and sys.argv[1] == "universe":
+        build_universe()
     else:
         print(__doc__)
