@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Race Arena</title>
+<style>
+:root{--bg:#07080a;--panel:rgba(18,19,22,.86);--line:rgba(255,255,255,.12);--text:#f0efec;--text2:#b9b8b0;--muted:#86857e;
+  --s1:#3987e5;--s2:#e8703a;--s3:#22b37f;--s4:#9a9990;--gold:#f2b632;--good:#3fbf3f;--bad:#e66767}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;overflow:hidden}
+#scene{position:fixed;inset:0;touch-action:none}
+.top{position:fixed;left:0;right:0;top:0;padding:calc(env(safe-area-inset-top) + 10px) 14px 10px;display:flex;justify-content:space-between;align-items:center;
+  background:linear-gradient(var(--bg),rgba(7,8,10,0));pointer-events:none}
+.top a,.top button{pointer-events:auto}
+h1{font-size:17px;margin:0;font-weight:600}
+.sub{font-size:12px;color:var(--muted)}
+.btn{font:inherit;font-size:12px;color:var(--text2);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-decoration:none}
+.legend{position:fixed;left:14px;right:14px;bottom:calc(env(safe-area-inset-bottom) + 12px);display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--text2);
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 12px;backdrop-filter:blur(8px)}
+.legend span{display:flex;align-items:center;gap:6px}
+.sw{width:9px;height:9px;border-radius:50%;display:inline-block}
+.card{position:fixed;left:14px;right:14px;bottom:calc(env(safe-area-inset-bottom) + 12px);z-index:2;background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:12px 14px;backdrop-filter:blur(10px);display:none;max-height:42vh;overflow:auto}
+.card .h{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:15px}
+.card .eq{font-size:24px;font-weight:600;margin:4px 0 2px;font-variant-numeric:tabular-nums}
+.card .d{color:var(--text2);font-size:13px;margin-top:4px}
+.card .x{background:none;border:0;color:var(--muted);font-size:20px;line-height:1;padding:0 2px}
+.pos{color:var(--good)}.neg{color:var(--bad)}
+.hint{position:fixed;top:calc(env(safe-area-inset-top) + 52px);left:0;right:0;text-align:center;font-size:12px;color:var(--muted);pointer-events:none;transition:opacity 1s}
+#msg{position:fixed;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--text2)}
+</style>
+</head>
+<body>
+<div id="scene" role="img" aria-label="3D race arena: each agent is a glowing orb climbing its own tower toward a gold $5,000 ring; height is account value on a log scale"></div>
+<div class="top"><div><h1>Race Arena</h1><div class="sub" id="updated">Loading…</div></div><a class="btn" href="index.html">Dashboard</a></div>
+<div class="hint" id="hint">Drag to rotate · pinch to zoom · tap an orb</div>
+<div class="card" id="card"></div>
+<div class="legend" id="legend"></div>
+<div id="msg"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const COLORS = {trend:0x3987e5, meanrev:0xe8703a, volsell:0x22b37f, baseline:0x9a9990};
+const CSS = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", baseline:"var(--s4)"};
+const SLOT = {trend:[-7.5,0,0], meanrev:[-2.5,0,0], volsell:[2.5,0,0], baseline:[7.5,0,0]};
+const SHORT = {trend:"Trend", meanrev:"Mean-rev", volsell:"Vol-sell", baseline:"SPY"};
+const H = 20, FLOOR = 10, GOAL_DEFAULT = 5000;
+let GOAL = GOAL_DEFAULT;
+const yOf = v => Math.max(0, Math.min(1.08, Math.log(Math.max(v, FLOOR) / FLOOR) / Math.log(GOAL / FLOOR))) * H;
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money = n => "$" + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+const $ = id => document.getElementById(id);
+
+if (!window.THREE) { $("msg").style.display = "flex"; $("msg").textContent = "3D view couldn't load. Check your connection and reload."; }
+
+const renderer = new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+$("scene").appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+scene.fog = new THREE.Fog(0x07080a, 30, 70);
+const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 200);
+const portrait = () => innerWidth / innerHeight < 0.8;
+camera.position.set(0, portrait() ? 17 : 13, portrait() ? 48 : 30);
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 9, 0); controls.enableDamping = true; controls.dampingFactor = 0.08;
+controls.minDistance = 10; controls.maxDistance = 55; controls.maxPolarAngle = Math.PI * 0.62;
+controls.autoRotate = true; controls.autoRotateSpeed = 0.35;
+controls.addEventListener("start", () => { controls.autoRotate = false; $("hint").style.opacity = 0; });
+
+scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+const key = new THREE.DirectionalLight(0xffffff, 0.6); key.position.set(10, 30, 15); scene.add(key);
+
+function label(text, color = "#b9b8b0", size = 28){
+  const c = document.createElement("canvas"), ctx = c.getContext("2d");
+  ctx.font = `600 ${size}px -apple-system, Segoe UI, Roboto, sans-serif`;
+  const w = Math.ceil(ctx.measureText(text).width) + 16; c.width = w; c.height = size + 14;
+  ctx.font = `600 ${size}px -apple-system, Segoe UI, Roboto, sans-serif`; ctx.fillStyle = color; ctx.textBaseline = "middle";
+  ctx.fillText(text, 8, c.height / 2);
+  const tex = new THREE.CanvasTexture(c); tex.minFilter = THREE.LinearFilter;
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({map:tex, transparent:true, depthWrite:false}));
+  const k = 0.03; s.scale.set(c.width * k, c.height * k, 1); return s;
+}
+
+// floor: the market
+const floor = new THREE.Mesh(new THREE.CircleGeometry(16, 64), new THREE.MeshBasicMaterial({color:0x111215}));
+floor.rotation.x = -Math.PI / 2; scene.add(floor);
+const grid = new THREE.PolarGridHelper(16, 16, 8, 64, 0x2a2b30, 0x1c1d21); grid.position.y = 0.01; scene.add(grid);
+const failRing = new THREE.Mesh(new THREE.RingGeometry(15.6, 16, 64), new THREE.MeshBasicMaterial({color:0xe66767, transparent:true, opacity:0.5, side:THREE.DoubleSide}));
+failRing.rotation.x = -Math.PI / 2; failRing.position.y = 0.02; scene.add(failRing);
+const floorLbl = label("$10 · eliminated", "#e66767", 24); floorLbl.position.set(0, 0.6, 16.6); scene.add(floorLbl);
+
+// market particles drifting on the floor
+const PN = 500, pGeo = new THREE.BufferGeometry(), pPos = new Float32Array(PN * 3), pSeed = [];
+for (let i = 0; i < PN; i++){ const r = 2 + Math.random() * 13.5, a = Math.random() * Math.PI * 2; pSeed.push({r, a, s:(Math.random() - 0.5) * 0.15, h:Math.random()});
+  pPos.set([Math.cos(a) * r, 0.1 + Math.random() * 0.4, Math.sin(a) * r], i * 3); }
+pGeo.setAttribute("position", new THREE.BufferAttribute(pPos, 3));
+const particles = new THREE.Points(pGeo, new THREE.PointsMaterial({color:0x5a5c66, size:0.12, transparent:true, opacity:0.8}));
+scene.add(particles);
+
+// goal halo
+const goalY = H;
+const halo = new THREE.Mesh(new THREE.TorusGeometry(11, 0.09, 12, 128), new THREE.MeshBasicMaterial({color:0xf2b632}));
+halo.rotation.x = Math.PI / 2; halo.position.y = goalY; scene.add(halo);
+const haloGlow = new THREE.Mesh(new THREE.TorusGeometry(11, 0.5, 12, 128), new THREE.MeshBasicMaterial({color:0xf2b632, transparent:true, opacity:0.08}));
+haloGlow.rotation.x = Math.PI / 2; haloGlow.position.y = goalY; scene.add(haloGlow);
+
+const agentsObj = {}, pickables = [], streams = [];
+let data = null;
+
+function buildTower(id, agent, curve){
+  const [x, , z] = SLOT[id], col = COLORS[id], competing = agent.competing;
+  const g = new THREE.Group(); g.position.set(x, 0, z); scene.add(g);
+  const glass = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, H, 16, 1, true),
+    new THREE.MeshBasicMaterial({color:col, transparent:true, opacity:competing ? 0.18 : 0.08}));
+  glass.position.y = H / 2; g.add(glass);
+  [100, 500, 1000, 2500].forEach(v => {
+    const r = new THREE.Mesh(new THREE.TorusGeometry(0.55, 0.02, 6, 40), new THREE.MeshBasicMaterial({color:v === 100 ? 0xffffff : 0x55565c, transparent:true, opacity:v === 100 ? 0.5 : 0.35}));
+    r.rotation.x = Math.PI / 2; r.position.y = yOf(v); g.add(r);
+    if (id === "trend" && v !== 100) { const l = label(v >= 1000 ? `$${v / 1000}k` : `$${v}`, "#86857e", 22); l.position.set(-1.6, yOf(v), 0); g.add(l); }
+  });
+  // equity history as a helix around the tower: angle = time, height = value
+  const pts = curve.map((r, i) => r.agents && r.agents[id] != null ? {i, v:r.agents[id]} : null).filter(Boolean);
+  if (pts.length > 1){
+    const n = pts.length, turns = Math.min(2.5, 0.5 + n / 20);
+    const path = pts.map((p, k) => { const a = (k / (n - 1)) * turns * Math.PI * 2; return new THREE.Vector3(Math.cos(a) * 1.3, yOf(p.v), Math.sin(a) * 1.3); });
+    const curveObj = new THREE.CatmullRomCurve3(path);
+    const tube = new THREE.Mesh(new THREE.TubeGeometry(curveObj, Math.max(20, n * 6), 0.05, 6, false),
+      new THREE.MeshBasicMaterial({color:col, transparent:true, opacity:competing ? 0.75 : 0.45}));
+    g.add(tube);
+  }
+  const eq = agent.equity, dead = ["failed", "eliminated"].includes(agent.status), won = agent.status === "winner";
+  const orb = new THREE.Mesh(new THREE.SphereGeometry(competing ? 0.75 : 0.5, 32, 24),
+    new THREE.MeshStandardMaterial({color:dead ? 0x3a3a3e : col, emissive:dead ? 0x000000 : col, emissiveIntensity:dead ? 0 : 0.85, roughness:0.35}));
+  orb.position.y = yOf(eq); orb.userData = {id}; g.add(orb); pickables.push(orb);
+  const glow = new THREE.Mesh(new THREE.SphereGeometry(competing ? 1.5 : 1, 24, 16),
+    new THREE.MeshBasicMaterial({color:won ? 0xf2b632 : col, transparent:true, opacity:dead ? 0 : 0.12, depthWrite:false}));
+  orb.add(glow);
+  if (!dead){ const pl = new THREE.PointLight(col, 0.9, 9); orb.add(pl); }
+  // governor shield: the rulebook that wraps every agent
+  const shield = new THREE.Mesh(new THREE.TorusGeometry(competing ? 1.25 : 0.85, 0.025, 8, 60),
+    new THREE.MeshBasicMaterial({color:dead ? 0xe66767 : 0xd8d6cf, transparent:true, opacity:dead ? 0.7 : 0.35}));
+  orb.add(shield);
+  const nameL = label(SHORT[id], dead ? "#e66767" : "#f0efec", 30);
+  nameL.position.set(0, (competing ? 1.75 : 1.3), 0); orb.add(nameL);
+  const eqL = label(money(eq), dead ? "#e66767" : "#b9b8b0", 26);
+  eqL.position.set(0, (competing ? -1.6 : -1.2), 0); orb.add(eqL);
+  // open positions orbit their agent: size = dollars in the trade, color = winning/losing
+  const sats = [];
+  (data.positions || []).filter(p => p.agent === id).forEach((p, k, arr) => {
+    const cost = Math.abs(p.cost || 10), val = posPnl(p);
+    const s = new THREE.Mesh(new THREE.SphereGeometry(0.12 + Math.min(0.35, Math.sqrt(cost) / 40), 16, 12),
+      new THREE.MeshStandardMaterial({color:val >= 0 ? 0x3fbf3f : 0xe66767, emissive:val >= 0 ? 0x1e6e1e : 0x7a2525, emissiveIntensity:0.9}));
+    s.userData = {phase:(k / arr.length) * Math.PI * 2, r:1.9 + (k % 2) * 0.35, speed:0.6 + k * 0.15, tilt:0.35 * (k % 2 ? 1 : -1)};
+    const tag = label((p.underlying || p.symbol) + (p.kind === "option" ? " " + (p.opt_type || "opt") : p.kind === "spread" ? " spread" : ""), "#d8d6cf", 20);
+    tag.position.y = 0.45; s.add(tag);
+    orb.add(s); sats.push(s);
+  });
+  agentsObj[id] = {group:g, orb, glow, shield, sats, agent, targetY:yOf(eq), dead, won};
+}
+
+function posPnl(p){
+  if (p.kind === "stock" && p.last != null) return (p.last - p.entry) * p.qty;
+  if (p.kind === "option" && p.mark != null) return (p.mark - p.entry) * 100 * p.qty;
+  if (p.kind === "spread" && p.mark != null) return (p.entry - p.mark) * 100 * p.qty;
+  return 0;
+}
+
+// trade streams: today's opens shoot from the market floor up into the agent
+function addStream(id, color){
+  const a = agentsObj[id]; if (!a) return;
+  const start = new THREE.Vector3((Math.random() - 0.5) * 20, 0.2, (Math.random() - 0.5) * 20);
+  const geo = new THREE.SphereGeometry(0.12, 8, 6), mat = new THREE.MeshBasicMaterial({color});
+  for (let k = 0; k < 10; k++){ const m = new THREE.Mesh(geo, mat); scene.add(m);
+    streams.push({m, start, a, t:-k * 0.06, color}); }
+}
+
+function render(d){
+  data = d; GOAL = d.race && d.race.goal || GOAL_DEFAULT;
+  $("updated").textContent = "Updated " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
+  const goalL = label(`$${GOAL.toLocaleString()} · goal`, "#f2b632", 30); goalL.position.set(0, goalY + 1, 11); scene.add(goalL);
+  d.agents.forEach(a => buildTower(a.id, a, d.equity_curve || []));
+  const today = (d.updated || "").slice(0, 10);
+  (d.journal || []).filter(j => j.type === "open" && (j.time || "").startsWith(today)).forEach(j => addStream(j.agent, COLORS[j.agent] || 0xffffff));
+  $("legend").innerHTML = d.agents.map(a => `<span><span class="sw" style="background:${CSS[a.id]}"></span>${esc(a.name.replace(" agent",""))}</span>`).join("")
+    + `<span><span class="sw" style="background:var(--good)"></span>Winning trade</span><span><span class="sw" style="background:var(--bad)"></span>Losing trade</span>`
+    + `<span style="color:var(--muted)">Height = account value (log scale) · ring = rulebook</span>`;
+}
+
+function showCard(id){
+  const a = agentsObj[id]; if (!a) return; const ag = a.agent;
+  const ret = (ag.equity / 100 - 1) * 100;
+  const pos = (data.positions || []).filter(p => p.agent === id);
+  $("card").innerHTML = `<div class="h"><span><span class="sw" style="background:${CSS[id]};margin-right:8px"></span>${esc(ag.name)}</span><button class="x" aria-label="Close" onclick="document.getElementById('card').style.display='none'">×</button></div>
+    <div class="eq">${money(ag.equity)} <span class="${ret >= 0 ? "pos" : "neg"}" style="font-size:14px">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div>
+    <div class="d">${ag.competing ? `${(ag.progress_pct || 0).toFixed(1)}% of the way to $${GOAL.toLocaleString()} · ` : "Benchmark · "}${esc(ag.status)}${ag.status_reason ? " · " + esc(ag.status_reason) : ""}</div>
+    <div class="d">Cash ${money(ag.available)} · ${ag.open} open · ${ag.closed} closed${ag.win_rate != null ? ` · ${ag.win_rate}% wins` : ""} · max drawdown ${ag.max_dd_pct}%</div>
+    ${pos.map(p => `<div class="d">• ${esc(p.underlying || p.symbol)} ${esc(p.kind)}: ${(v => `<span class="${v >= 0 ? "pos" : "neg"}">${v >= 0 ? "+" : "-"}$${Math.abs(v).toFixed(2)}</span>`)(posPnl(p))}${p.thesis ? ` — ${esc(p.thesis)}` : ""}</div>`).join("")}
+    ${ag.notes && ag.notes.length ? `<div class="d" style="font-style:italic">“${esc(ag.notes[0].note)}”</div>` : ""}`;
+  $("card").style.display = "block";
+}
+
+const ray = new THREE.Raycaster(), ptr = new THREE.Vector2();
+let down = null;
+renderer.domElement.addEventListener("pointerdown", e => down = {x:e.clientX, y:e.clientY});
+renderer.domElement.addEventListener("pointerup", e => {
+  if (!down || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 8) return;
+  ptr.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
+  ray.setFromCamera(ptr, camera);
+  const hit = ray.intersectObjects(pickables, false)[0];
+  if (hit) { showCard(hit.object.userData.id); controls.autoRotate = false; } else $("card").style.display = "none";
+});
+
+const clock = new THREE.Clock();
+function loop(){
+  const t = clock.getElapsedTime(), dt = Math.min(clock.getDelta(), 0.05);
+  for (let i = 0; i < PN; i++){ const s = pSeed[i]; s.a += s.s * 0.01; pPos[i * 3] = Math.cos(s.a) * s.r; pPos[i * 3 + 2] = Math.sin(s.a) * s.r;
+    pPos[i * 3 + 1] = 0.15 + Math.abs(Math.sin(t * 0.8 + s.h * 6)) * 0.35; }
+  pGeo.attributes.position.needsUpdate = true;
+  halo.rotation.z = t * 0.1; haloGlow.material.opacity = 0.06 + Math.sin(t * 1.5) * 0.03;
+  Object.values(agentsObj).forEach(a => {
+    a.orb.position.y += (a.targetY - a.orb.position.y) * 0.05;
+    if (!a.dead){ a.glow.scale.setScalar(1 + Math.sin(t * 2 + a.targetY) * 0.08); a.shield.rotation.x = Math.PI / 2 + Math.sin(t * 0.7) * 0.25; a.shield.rotation.y = t * 0.6; }
+    else { a.orb.position.y = Math.max(0.8, a.orb.position.y - 0.02); }
+    a.sats.forEach(s => { const u = s.userData, ang = u.phase + t * u.speed;
+      s.position.set(Math.cos(ang) * u.r, Math.sin(ang * 1.3) * u.tilt * 2, Math.sin(ang) * u.r); });
+  });
+  for (const s of streams){ s.t += 0.006; let k = s.t % 1.6; if (k < 0) { s.m.visible = false; continue; }
+    s.m.visible = k <= 1; const end = new THREE.Vector3(); s.a.orb.getWorldPosition(end);
+    s.m.position.lerpVectors(s.start, end, Math.min(k, 1)); s.m.position.y += Math.sin(Math.min(k, 1) * Math.PI) * 3; }
+  controls.update(); renderer.render(scene, camera); requestAnimationFrame(loop);
+}
+
+addEventListener("resize", () => { camera.position.setLength(portrait() ? 51 : 33); camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
+setTimeout(() => $("hint").style.opacity = 0, 6000);
+
+fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { render(d); loop(); })
+  .catch(() => { $("msg").style.display = "flex"; $("msg").textContent = "No race data yet. It appears after the agents' first run."; loop(); });
+</script>
+</body>
+</html>
