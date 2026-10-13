@@ -1,36 +1,32 @@
 {
- "time": "2026-10-13T15:39-04:00",
- "ok": false,
+ "time": "2026-10-13T15:49-04:00",
+ "ok": true,
  "checks": [
   {
    "name": "GitHub secrets",
-   "ok": false,
-   "detail": "These secrets contain unusual characters (often from copying via a screenshot, notes app or text recognition): ANTHROPIC_API_KEY. Copy the key with the provider's Copy button and paste it directly into the GitHub secret."
+   "ok": true,
+   "detail": "All three secrets are present."
   },
   {
    "name": "Alpaca paper account",
-   "ok": false,
-   "detail": "Alpaca rejected the keys (HTTP 401). Regenerate keys on the PAPER account and update ALPACA_API_KEY (the PK... ID) and ALPACA_API_SECRET."
+   "ok": true,
+   "detail": "Paper account OK (status ACTIVE, options level 3)."
   },
   {
    "name": "Alpaca stock data",
-   "ok": false,
-   "detail": "Market data error HTTP 401: 401 Authorization Required 401 Authorization Required nginx"
+   "ok": true,
+   "detail": "Stock data OK (1 SPY bars)."
   },
   {
    "name": "Alpaca options data",
-   "ok": false,
-   "detail": "Options data error HTTP 401: 401 Authorization Required 401 Authorization Required nginx"
+   "ok": true,
+   "detail": "Options data OK (5 contracts sampled)."
   },
   {
    "name": "Anthropic API",
-   "ok": false,
-   "detail": "UnicodeEncodeError: 'latin-1' codec can't encode character '\\u0425' in position 52: ordinal not in range(256)"
+   "ok": true,
+   "detail": "Anthropic key OK."
   }
  ],
- "crash": {
-  "error": "RuntimeError: Stopped: These secrets contain unusual characters (often from copying via a screenshot, notes app or text recognition): ANTHROPIC_API_KEY. Copy the key with the provider's Copy button and paste it directly into the GitHub secret.",
-  "where": "",
-  "time": "2026-10-13T15:39-04:00"
- }
+ "crash": null
 }

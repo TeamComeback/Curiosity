@@ -1,0 +1,218 @@
+{
+ "updated": "2026-10-13T15:49-04:00",
+ "race": {
+  "status": "running",
+  "goal": 5000.0,
+  "winner": null,
+  "finished_at": null,
+  "final_standings": null
+ },
+ "regime": {
+  "spy_trend": "up",
+  "spy_vs_sma200_pct": 7.6,
+  "spy_roc20_pct": 2.3
+ },
+ "brain": "AI (claude-haiku-5-5)",
+ "rules": {
+  "no_margin": true,
+  "options_allowed": [
+   "call",
+   "put",
+   "spread"
+  ],
+  "max_new_trades_per_day": 2,
+  "max_open_positions": 4,
+  "reentry_cooldown_days": 1,
+  "min_stock_trade": 2.0,
+  "slippage_half_spread": true
+ },
+ "agents": [
+  {
+   "id": "trend",
+   "name": "Trend agent",
+   "competing": true,
+   "equity": 100.0,
+   "cash": 100.0,
+   "available": 100.0,
+   "status": "active",
+   "status_reason": "",
+   "multiple": 1.0,
+   "progress_pct": 2.0,
+   "open": 0,
+   "closed": 0,
+   "win_rate": null,
+   "max_dd_pct": 0.0,
+   "risk_adj": 0.0,
+   "notes": []
+  },
+  {
+   "id": "meanrev",
+   "name": "Mean-reversion agent",
+   "competing": true,
+   "equity": 100.02,
+   "cash": 0.07,
+   "available": 0.07,
+   "status": "active",
+   "status_reason": "",
+   "multiple": 1.0,
+   "progress_pct": 2.0,
+   "open": 1,
+   "closed": 0,
+   "win_rate": null,
+   "max_dd_pct": 0.0,
+   "risk_adj": 0.0,
+   "notes": [
+    {
+     "date": "2026-10-13",
+     "note": "Only one trade: MU's $943 price and the options minimums don't fit a $100 account, and the SMH stop is about 6% away against a roughly 2.6% target, so reward-to-risk is thin. Size the full $100 only when the stop distance is small relative to the expected bounce."
+    }
+   ]
+  },
+  {
+   "id": "volsell",
+   "name": "Vol-selling agent",
+   "competing": true,
+   "equity": 100.0,
+   "cash": 100.0,
+   "available": 100.0,
+   "status": "active",
+   "status_reason": "",
+   "multiple": 1.0,
+   "progress_pct": 2.0,
+   "open": 0,
+   "closed": 0,
+   "win_rate": null,
+   "max_dd_pct": 0.0,
+   "risk_adj": 0.0,
+   "notes": []
+  },
+  {
+   "id": "baseline",
+   "name": "SPY benchmark",
+   "competing": false,
+   "equity": 100.01,
+   "cash": 1.06,
+   "available": 1.06,
+   "status": "active",
+   "status_reason": "",
+   "multiple": 1.0,
+   "progress_pct": 2.0,
+   "open": 1,
+   "closed": 0,
+   "win_rate": null,
+   "max_dd_pct": 0.0,
+   "risk_adj": 0.0,
+   "notes": []
+  }
+ ],
+ "equity_curve": [
+  {
+   "date": "2026-10-13",
+   "agents": {
+    "trend": 100.0,
+    "meanrev": 100.02,
+    "volsell": 100.0,
+    "baseline": 100.01
+   }
+  }
+ ],
+ "positions": [
+  {
+   "agent": "meanrev",
+   "position_id": "pos-dda4f591f8",
+   "kind": "stock",
+   "symbol": "SMH",
+   "underlying": null,
+   "structure": null,
+   "opt_type": null,
+   "qty": 0.1703,
+   "entry": 586.812,
+   "last": 586.88,
+   "mark": null,
+   "stop": 552.5,
+   "expiry": null,
+   "opened": "2026-10-13T15:49:40-04:00",
+   "thesis": "SMH RSI(2) of 1.5 is a deep washout while the stock sits 15.7% above its 200-day, so the snap-back to the ~602 target should be a high-probability bounce.",
+   "confidence": 3,
+   "cost": 99.93
+  },
+  {
+   "agent": "baseline",
+   "position_id": "pos-fe0738abd6",
+   "kind": "stock",
+   "symbol": "SPY",
+   "underlying": null,
+   "structure": null,
+   "opt_type": null,
+   "qty": 0.1271,
+   "entry": 778.436,
+   "last": 778.49,
+   "mark": null,
+   "stop": 0,
+   "expiry": null,
+   "opened": "2026-10-13T15:49:40-04:00",
+   "thesis": "Benchmark: buy and hold SPY",
+   "confidence": 3,
+   "cost": 98.94
+  }
+ ],
+ "journal": [
+  {
+   "time": "2026-10-13T15:49:40-04:00",
+   "type": "open",
+   "agent": "baseline",
+   "symbol": "SPY",
+   "instrument": "stock",
+   "qty": 0.1271,
+   "price": 778.436,
+   "cost": 98.94,
+   "stop": 0,
+   "thesis": "Benchmark: buy and hold SPY",
+   "confidence": 3
+  },
+  {
+   "time": "2026-10-13T15:49:40-04:00",
+   "type": "open",
+   "agent": "meanrev",
+   "symbol": "SMH",
+   "instrument": "stock",
+   "qty": 0.1703,
+   "price": 586.812,
+   "cost": 99.93,
+   "stop": 552.5,
+   "thesis": "SMH RSI(2) of 1.5 is a deep washout while the stock sits 15.7% above its 200-day, so the snap-back to the ~602 target should be a high-probability bounce.",
+   "confidence": 3
+  }
+ ],
+ "reviews": [],
+ "params": {
+  "trend": {
+   "breakout_lookback": 55,
+   "stop_atr": 2.0,
+   "trail_atr": 3.0,
+   "min_rel_volume": 1.2,
+   "opt_min_dte": 21,
+   "opt_max_dte": 60,
+   "opt_delta": 0.5
+  },
+  "meanrev": {
+   "rsi_entry": 10,
+   "rsi_exit": 70,
+   "stop_atr": 2.5,
+   "max_hold_days": 7,
+   "opt_min_dte": 14,
+   "opt_max_dte": 45,
+   "opt_delta": 0.5
+  },
+  "volsell": {
+   "short_delta": 0.2,
+   "width": 1,
+   "min_dte": 21,
+   "max_dte": 45,
+   "take_profit": 0.5,
+   "stop_mult": 2.0,
+   "exit_dte": 10,
+   "min_iv_rv": 1.1
+  }
+ }
+}
