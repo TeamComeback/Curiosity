@@ -3,7 +3,7 @@ Rules: cash only (no margin), simple options only (long calls/puts, defined-risk
 anti-overtrading caps, and the fail / elimination rules of the race."""
 from datetime import date
 
-from . import config, store
+import config, store
 
 R = config.RULES
 

@@ -18,7 +18,7 @@ REVIEW_MODEL = os.getenv("REVIEW_MODEL", "claude-sonnet-5-5")   # weekly reviews
 
 SCREENER_URL = os.getenv("SCREENER_URL", "")
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
 UNIVERSE = [
     "AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL", "TSLA", "AVGO", "AMD", "NFLX",

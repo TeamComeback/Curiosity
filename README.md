@@ -74,7 +74,7 @@ Keys live only in GitHub Secrets. The public repo shows paper trades and agent n
 
 - **Pause:** *Actions → Trading agent race → ⋯ → Disable workflow*.
 - **New race:** delete the files in `data/` (keep `.gitkeep`) and reset the Alpaca paper account.
-- **Change the stakes:** `RACE` and `RULES` in `agent/config.py`.
+- **Change the stakes:** `RACE` and `RULES` in `config.py`.
 
 ## Things to know
 

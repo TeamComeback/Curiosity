@@ -1,18 +1,20 @@
 """One race cycle (every 30 min in market hours via GitHub Actions):
   default exits -> each agent decides (close / tighten / open) -> rulebook checks ->
   execute -> mark to market -> fail/elimination check -> finish check -> dashboard.
-Usage: python -m agent.run [--force]"""
+Usage: python run.py [--force]"""
 import math
 import sys
 import uuid
 
 import requests
 
-from . import brain, config, governor, store
-from .broker import AlpacaError, Broker
-from .indicators import enrich
-from .strategies import REGISTRY
-from .strategies.common import mid, pick_option, split_today
+import brain, config, governor, store
+from broker import AlpacaError, Broker
+from indicators import enrich
+import baseline, meanrev, trend, volsell
+
+REGISTRY = {"trend": trend, "meanrev": meanrev, "volsell": volsell, "baseline": baseline}
+from common import mid, pick_option, split_today
 
 SLIP = config.RULES["slippage_half_spread"]
 

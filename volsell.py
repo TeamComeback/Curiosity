@@ -3,9 +3,9 @@ vol is rich versus realized. Bull put spreads in uptrends, bear call spreads in
 downtrends. Default exits: profit target, loss stop, days-to-expiry cutoff."""
 from datetime import date, timedelta
 
-from .. import store
-from ..indicators import enrich, realized_vol
-from .common import mid, parse_occ, split_today
+import store
+from indicators import enrich, realized_vol
+from common import mid, parse_occ, split_today
 
 
 def record_iv(und, iv):

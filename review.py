@@ -1,9 +1,9 @@
 """Weekly self-review (Fridays after the close). Each competing agent reviews its own
 week and may retune up to 2 of its own strategy parameters, each by at most 25% of the
-allowed range. Usage: python -m agent.review"""
+allowed range. Usage: python review.py"""
 from datetime import timedelta
 
-from . import brain, config, store
+import brain, config, store
 
 MAX_STEP = 0.25
 MAX_CHANGES = 2

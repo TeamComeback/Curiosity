@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import config
+import config
 
 ET = ZoneInfo("America/New_York")
 

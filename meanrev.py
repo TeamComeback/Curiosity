@@ -3,9 +3,9 @@ from datetime import date
 
 import pandas as pd
 
-from .. import store
-from ..indicators import enrich, rsi, sma
-from .common import manage_long_option, split_today
+import store
+from indicators import enrich, rsi, sma
+from common import manage_long_option, split_today
 
 
 def _live(hist, price):

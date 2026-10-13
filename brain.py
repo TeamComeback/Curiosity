@@ -9,7 +9,7 @@ import re
 
 import requests
 
-from . import config
+import config
 
 DECIDE_SYSTEM = """You are {name}, one of three AI trading agents in a paper-trading race.
 Each agent started with $100. The first to reach ${goal:,.0f} wins. An agent that drops below

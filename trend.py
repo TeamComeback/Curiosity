@@ -1,7 +1,7 @@
 """Trend agent's scanner: breakouts to N-day highs in uptrends (long stock or calls) and
 breakdowns to N-day lows in downtrends (puts only; no shorting without margin)."""
-from ..indicators import enrich
-from .common import manage_long_option, session_fraction, split_today, today_volume
+from indicators import enrich
+from common import manage_long_option, session_fraction, split_today, today_volume
 
 
 def entries(ctx):

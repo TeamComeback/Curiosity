@@ -3,8 +3,8 @@ from datetime import date, timedelta
 
 import pandas as pd
 
-from .. import config
-from ..store import now_et
+import config
+from store import now_et
 
 OCC = re.compile(r"^([A-Z]+)(\d{6})([CP])(\d{8})$")
 
