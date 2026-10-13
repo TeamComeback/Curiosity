@@ -4,10 +4,14 @@ on:
   schedule:
     - cron: "5,35 13-20 * * 1-5"
     - cron: "30 21 * * 5"
+    # Overnight game-plan sessions (plan.py picks the right one by US/Eastern time and skips repeats):
+    - cron: "40 20,21 * * 1-5"   # after the close
+    - cron: "10 0 * * 1-5"       # evening check-in (Sun-Thu evenings ET)
+    - cron: "40 11,12 * * 1-5"   # pre-market call
   workflow_dispatch:
     inputs:
       task:
-        description: "run (one cycle) or review (weekly self-review)"
+        description: "run (one cycle), review (weekly self-review) or plan (game-plan session)"
         default: "run"
       force:
         description: "Run even if the market is closed (true/false)"
@@ -40,9 +44,15 @@ jobs:
           SCREENER_URL: ${{ vars.SCREENER_URL }}
           BRAIN_MODEL: ${{ vars.BRAIN_MODEL || 'claude-haiku-5-5' }}
           REVIEW_MODEL: ${{ vars.REVIEW_MODEL || 'claude-sonnet-5-5' }}
+          PLAN_MODEL: ${{ vars.PLAN_MODEL }}
         run: |
-          if [ "${{ github.event.schedule }}" = "30 21 * * 5" ] || [ "${{ inputs.task }}" = "review" ]; then
+          SCHED="${{ github.event.schedule }}"
+          if [ "$SCHED" = "30 21 * * 5" ] || [ "${{ inputs.task }}" = "review" ]; then
             python review.py
+          elif [ "$SCHED" = "40 20,21 * * 1-5" ] || [ "$SCHED" = "10 0 * * 1-5" ] || [ "$SCHED" = "40 11,12 * * 1-5" ]; then
+            python plan.py
+          elif [ "${{ inputs.task }}" = "plan" ]; then
+            if [ "${{ inputs.force }}" = "true" ]; then python plan.py --force; else python plan.py; fi
           elif [ "${{ inputs.force }}" = "true" ]; then
             python run.py --force
           else

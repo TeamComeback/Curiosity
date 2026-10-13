@@ -104,6 +104,15 @@ class Broker:
                      params={"symbols": ",".join(symbols), "feed": config.OPTION_FEED})
         return js.get("quotes") or {}
 
+    def news(self, symbols, since_iso, limit=40):
+        """Recent headlines (free Alpaca news feed) for the given symbols."""
+        params = {"limit": min(limit, 50), "sort": "desc", "start": since_iso}
+        if symbols:
+            params["symbols"] = ",".join(symbols[:40])
+        js = self._d("/v1beta1/news", params=params)
+        return [{"time": n.get("created_at"), "headline": n.get("headline"), "symbols": n.get("symbols", [])[:6]}
+                for n in (js.get("news") or [])]
+
     # ---------- orders ----------
     def submit_stock(self, symbol, qty, side, client_id):
         """Fractional quantities allowed (market, day)."""

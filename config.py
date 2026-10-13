@@ -15,6 +15,7 @@ OPTION_FEED = os.getenv("ALPACA_OPTION_FEED", "indicative")
 ANTHROPIC_API_KEY = "".join(os.getenv("ANTHROPIC_API_KEY", "").split())
 BRAIN_MODEL = os.getenv("BRAIN_MODEL", "claude-haiku-5-5")      # per-run agent decisions
 REVIEW_MODEL = os.getenv("REVIEW_MODEL", "claude-sonnet-5-5")   # weekly reviews + final assessment
+PLAN_MODEL = os.getenv("PLAN_MODEL", "") or BRAIN_MODEL                  # overnight game-plan sessions
 
 SCREENER_URL = os.getenv("SCREENER_URL", "")
 

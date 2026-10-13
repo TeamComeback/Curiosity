@@ -87,6 +87,20 @@ const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:2
 const H = 1340, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84, door:[30, 58]};
 const BOOTH = {x:2, y:EXCH.y - 2, w:30, h:22};
 const LANES = {trend:86, meanrev:168, volsell:250, baseline:332};
+// ---------- office hours (US/Eastern) ----------
+function etNow(){
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", {timeZone: "America/New_York", weekday: "short", hour: "numeric",
+    minute: "numeric", hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit"}).formatToParts(new Date()).map(x => [x.type, x.value]));
+  return {wd: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p.weekday), h: +p.hour + +p.minute / 60, date: `${p.year}-${p.month}-${p.day}`};
+}
+function phaseNow(){
+  const {wd, h} = etNow();
+  if (wd >= 1 && wd <= 5 && h >= 9.5 && h < 16) return "open";
+  if (wd === 5 && h >= 16 && h < 18.5) return "review";          // Friday: weekly self-review
+  if (wd === 6 || (wd === 5 && h >= 18.5) || (wd === 0 && h < 18.5)) return "weekend";
+  return "planning";                                               // weeknights: the game-plan crew stays
+}
+let phase = phaseNow();
 let GOAL = 5000, data = null, theme = {}, firmsState = {}, workers = [], ticker = [], hit = [];
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -197,14 +211,14 @@ function drawExchange(t){
   ctx.strokeStyle = theme.ink; ctx.lineWidth = 2.5; ctx.beginPath();
   ctx.moveTo(40, y + EXCH.door[0]); ctx.lineTo(40, y); ctx.lineTo(W - 20, y); ctx.lineTo(W - 20, y + h); ctx.lineTo(40, y + h); ctx.lineTo(40, y + EXCH.door[1]); ctx.stroke();
   text("Exchange", 54, y + 16, 15, theme.ink, "left", 600);
-  text("orders fill here", 54, y + 32, 11, theme.ink2);
+  text(phase === "open" ? "orders fill here" : "closed until 9:30 AM ET", 54, y + 32, 11, phase === "open" ? theme.ink2 : theme.bad);
   // trading floor counters
   for (let i = 0; i < 5; i++) rect(170 + i * 40, y + 12, 28, 10, alpha(theme.rule, .5), theme.rule);
   // ticker tape
   rect(46, y + h - 26, W - 72, 18, theme.ink);
   ctx.save(); ctx.beginPath(); ctx.rect(46, y + h - 26, W - 72, 18); ctx.clip();
   const tape = ticker.join("     "); font(11, 500); const tw = ctx.measureText(tape + "     ").width || 1;
-  const off = reduce ? 0 : (t * 28) % tw;
+  const off = reduce || phase !== "open" ? 0 : (t * 28) % tw;
   for (let k = 0; k < 3; k++) text(tape, 52 - off + k * tw, y + h - 17, 11, theme.paper);
   ctx.restore();
   // compliance booth at the exchange door: the rulebook every order passes
@@ -241,6 +255,17 @@ function drawOffice(id, t){
     rect(mx + 3, my + 3, 46, 16, p.pnl >= 0 ? alpha(theme.good, .9) : alpha(theme.bad, .9));
     text(p.sym, mx + 26, my + 11, 10, "#fff", "center", 600);
   });
+  if (phase !== "open" && !out){
+    const stays = workers.some(k => k.firm === id);
+    if (stays && !bench){
+      const g = ctx.createRadialGradient(st.table.x, st.table.y, 6, st.table.x, st.table.y, 110);
+      g.addColorStop(0, alpha(theme.gold, .16)); g.addColorStop(1, alpha(theme.gold, 0));
+      ctx.fillStyle = g; ctx.fillRect(x, y, w, h);
+    }
+    ctx.fillStyle = alpha("#000000", stays ? .06 : .16); ctx.fillRect(x + 1.5, y + 1.5, w - 3, h - 3);
+    if (!bench){ rect(st.table.x - 26, st.table.y - 9, 52, 18, alpha(theme.rule, .6), theme.ink2, 1);
+      text(phase === "review" ? "Weekly review" : phase === "weekend" ? "Closed for the weekend" : "Game plan", st.table.x, st.table.y - 17, 10, theme.ink2, "center", 600); }
+  }
   if (out){
     hatch(x + 2, y + 2, w - 4, h - 4, alpha(theme.ink2, .25));
     ctx.save(); ctx.translate(x + w / 2, y + h / 2); ctx.rotate(-.12);
@@ -290,6 +315,7 @@ function buildGrid(){
       st.desks.forEach(d => block(d.x - 17, d.y - 30, 34, 14, 4));
       st.positions.forEach((p, i) => block(x + w - 62, y + 44 + i * 30, 52, 22, 4));
       if (st.out) block(x, y, w, h, 0);
+      if (phase !== "open" && id !== "baseline") block(st.table.x - 26, st.table.y - 9, 52, 18, 3);
     }
   });
 }
@@ -348,8 +374,22 @@ function buildWorkers(){
     const screens = st.positions.map((p, i) => free({x: x0 + w - 76, y: o.y + 55 + i * 30}));
     const near = (pt, dx, dy) => free({x: pt.x + dx, y: pt.y + dy});
     const busy = st.tradedToday, hasPos = st.positions.length > 0;
-    FIRMS[id].staff.forEach(([role]) => {
+    const seats = [[-34, 0], [34, 0], [0, -18], [0, 18]].map(([dx, dy]) => free({x: st.table.x + dx, y: st.table.y + dy}));
+    FIRMS[id].staff.forEach(([role], si) => {
       const home = D[role]; let plan;
+      if (phase !== "open"){
+        const planner = ["scout", "vol", "strat"].includes(role);
+        const stays = (phase === "weekend") ? (role === "risk" && hasPos)
+                    : (phase === "review") ? id !== "baseline"
+                    : planner || (role === "risk" && hasPos);
+        if (!stays) return;
+        const seat = seats[si % seats.length];
+        if (role === "risk") plan = screens.map(s => [s, 4]).concat([[home, 6]]);
+        else if (planner) plan = [[seat, 6], [home, 3], [seat, 5], [near(seat, 0, -26), 2]];   // brainstorm, check the desk, regroup
+        else plan = [[seat, 99]];
+        workers.push({firm: id, role, plan, i: 0, x: seat.x, y: seat.y, wait: Math.random() * 3, facing: 0, walking: false, path: null});
+        return;
+      }
       if (role === "scout" || role === "vol") plan = [[home, 2.5], [near(home, 40, 30), 1.5], [near(home, -8, 44), 1.2]].concat(busy ? [[near(D.strat, 14, 6), 1.2]] : []);
       else if (role === "strat") plan = busy ? [[home, 3], [near(D.trader || home, -14, 6), 1.4]] : [[home, 5], [near(home, 20, 34), 1.5]];
       else if (role === "trader") plan = busy ? [[home, 1.5], [door, 0], [ex[0], 0.8], [ex[1], 0.6], [door, 0]] : [[home, 4], [near(home, -30, 36), 2]];
@@ -358,6 +398,7 @@ function buildWorkers(){
       workers.push({firm: id, role, plan, i: 0, x: home.x, y: home.y, wait: Math.random() * 2, facing: Math.PI, walking: false, path: null});
     });
   });
+  if (phase !== "open") return;
   // the compliance officer at the exchange gate (shared rulebook)
   const c1 = free({x: 24, y: EXCH.y + 26}), c2 = free({x: 12, y: EXCH.y + 30});
   workers.push({firm: "street", role: "comp", plan: [[c1, 3], [c2, 2]], i: 0, x: c1.x, y: c1.y, wait: 0, facing: 0, walking: false, path: null});
@@ -394,7 +435,8 @@ function load(d){
     const usable = w - 140, desks = staff.map(([role, label], i) => ({role, label,
       x: x0 + 44 + (cols === 1 ? usable / 2 : i * usable / (cols - 1)),
       y: o.y + (id === "baseline" ? 52 : o.h * .5 + (i % 2) * 34)}));
-    firmsState[id] = {eq: a.equity, status: a.status, out: ["failed", "eliminated"].includes(a.status), agent: a, desks,
+    const table = {x: x0 + w * .42, y: o.y + o.h - 30};
+    firmsState[id] = {table, eq: a.equity, status: a.status, out: ["failed", "eliminated"].includes(a.status), agent: a, desks,
       markerY: yClimb(100),
       history: curve.map(r => r.agents && r.agents[id]).filter(v => v != null),
       positions: (d.positions || []).filter(p => p.agent === id).slice(0, 4).map(p => ({sym: p.underlying || p.symbol, pnl: posPnl(p), p})),
@@ -403,6 +445,7 @@ function load(d){
   ticker = (d.positions || []).map(p => `${p.underlying || p.symbol} ${p.last != null ? Number(p.last).toFixed(2) : ""}`.trim());
   if (d.regime && d.regime.spy_trend) ticker.push(`SPY trend ${d.regime.spy_trend}`);
   if (!ticker.length) ticker = ["Waiting for the opening bell"];
+  if (phase !== "open") ticker = ["Market closed · opens 9:30 AM ET", ...ticker.slice(0, 4)];
   routeCache.clear(); buildGrid();
   buildWorkers();
   renderText();
@@ -412,7 +455,9 @@ function renderText(){
   const comp = data.agents.filter(a => a.competing).sort((a, b) => b.equity - a.equity);
   const lead = comp[0];
   $("block").innerHTML = `<div><span>Leader</span><b>${esc(FIRMS[lead.id].name)}</b></div><div><span>Value</span><b>${money(lead.equity)}</b></div>
-    <div><span>Goal</span><b>$${GOAL.toLocaleString()}</b></div><div><span>Updated</span><b>${new Date(data.updated).toLocaleTimeString([], {hour:"numeric", minute:"2-digit"})}</b></div>`;
+    <div><span>Goal</span><b>$${GOAL.toLocaleString()}</b></div><div><span>Updated</span><b>${new Date(data.updated).toLocaleTimeString([], {hour:"numeric", minute:"2-digit"})}</b></div>
+    <div><span>Office hours</span><b>${{open: "Market open", planning: "After hours", review: "Friday review", weekend: "Weekend"}[phase]}</b></div>
+    <div><span>Who's in</span><b>${{open: "Full staff", planning: "Game-plan crew", review: "Whole firm", weekend: "Risk desk only"}[phase]}</b></div>`;
   $("staff").innerHTML = `<h2>Who works where</h2><p>Each firm only hires the roles its strategy needs. Tap a person to see what they're working on, or a firm for its books.</p>` +
     Object.entries(FIRMS).map(([id, fm]) => `<h2><span class="dot" style="background:var(${fm.colorVar})"></span>${esc(fm.name)}</h2>` +
       fm.staff.map(([r, label, job]) => `<p><span class="dot" style="background:${ROLE_COLOR[r]}"></span><b style="color:var(--ink);font-weight:500">${esc(label)}</b>: ${esc(job)}</p>`).join("")).join("") +
@@ -466,6 +511,27 @@ function roleInfo(k){
   const opensToday = todayJournal(k.firm).filter(j => j.type === "open").length, maxT = (data.rules || {}).max_new_trades_per_day ?? 2;
   const lastOpen = lastOf(k.firm, ["open"]), lastClose = lastOf(k.firm, ["close"]);
   if (st.out){ base.lines.push(`The firm is ${a.status}. ${a.status_reason || ""}`.trim()); return base; }
+  const planObj = (data.plans || {})[k.firm], todayET = etNow().date;
+  const livePlan = planObj && planObj.for_day >= todayET ? planObj : null;
+  if (phase !== "open" && ["scout", "vol", "strat"].includes(k.role)){
+    if (!livePlan){
+      base.lines.push(phase === "review" ? "In the weekly review: grading this week's trades and retuning the strategy."
+        : "Starting tonight's game plan. The first session runs about 4:40 PM ET, then check-ins around 8:10 PM and before the open.");
+      base.goal = {label: "Planning sessions tonight", value: "0 of 3", pct: 0, note: ""};
+      return base;
+    }
+    const revs = (livePlan.revisions || []), changes = revs.filter(r => ["revise", "scrap"].includes(r.decision)).length;
+    base.lines.push(`Plan for ${new Date(livePlan.for_day + "T12:00").toLocaleDateString([], {weekday: "long"})}: ${livePlan.summary || "no trades planned."}`);
+    if (livePlan.watchlist && livePlan.watchlist.length)
+      base.lines.push("Watching: " + livePlan.watchlist.slice(0, 4).map(w => `${w.symbol} (${w.trigger || w.setup})`).join("; ") + ".");
+    base.lines.push(`${livePlan.session}: ${livePlan.decision === "keep" ? "kept the plan" : livePlan.decision === "scrap" ? "scrapped the plan" : livePlan.decision === "new" ? "drew up a new plan" : "changed the plan"}. ${livePlan.why || ""}`);
+    if (changes) base.lines.push(`Changed their mind ${changes} time${changes > 1 ? "s" : ""} so far.`);
+    if (k.role !== "strat" && livePlan.brainstorm) base.lines.push(`Idea to test: ${livePlan.brainstorm}`);
+    const done = new Set(revs.map(r => r.session)).size;
+    base.goal = {label: "Planning sessions done", value: `${done} of 3`, pct: pct(done, 3),
+                 note: done >= 3 ? "Final call made. The plan goes to the trading desk at the open." : "The plan can still change before the open."};
+    return base;
+  }
   switch (k.role){
     case "scout":
       base.lines.push(k.firm === "trend"
@@ -480,6 +546,7 @@ function roleInfo(k){
     case "strat": {
       const note = a.notes && a.notes[0] && a.notes[0].note;
       base.lines.push(note ? `Latest thinking: “${note}”` : lastOpen ? `Last call: ${lastOpen.thesis}` : "Reviewing today's ideas. No trade approved yet.");
+      if (livePlan && livePlan.summary) base.lines.push(`Working from this morning's plan: ${livePlan.summary}`);
       base.goal = {label: `Reach $${GOAL.toLocaleString()}`, value: `${money(a.equity)}`, pct: pct(a.equity, GOAL),
                    note: `${(a.equity / 100).toFixed(2)}× the starting $100`};
       break; }
@@ -532,6 +599,18 @@ function showPop(k){
 }
 function closePop(){ $("pop").style.display = "none"; selected = null; }
 
+// ---------- staying current ----------
+function stamp(d){ return (d.updated || "") + "|" + (d.plans_updated || ""); }
+function startRefresh(){
+  setInterval(() => {                          // new office hours: reshuffle who's in the building
+    const ph = phaseNow(); if (ph !== phase){ phase = ph; closePop(); load(data); }
+  }, 30000);
+  setInterval(() => {                          // new data from the agents: reload quietly
+    if (document.hidden) return;
+    fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { if (stamp(d) !== stamp(data)){ closePop(); load(d); } }).catch(() => {});
+  }, 180000);
+}
+
 // ---------- loop ----------
 let last = performance.now();
 function frame(now){
@@ -549,7 +628,7 @@ function frame(now){
 
 readTheme(); size();
 (document.fonts ? document.fonts.ready : Promise.resolve()).then(() =>
-  fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { load(d); requestAnimationFrame(frame); })
+  fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { load(d); requestAnimationFrame(frame); startRefresh(); })
     .catch(() => { $("block").innerHTML = "<div><b>No race data yet</b><span>The plan fills in after the agents' first run.</span></div><div></div>"; }));
 </script>
 </body>

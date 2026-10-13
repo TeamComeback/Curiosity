@@ -242,6 +242,8 @@ def agent_view(state, aid, cands, ctx, can_open, standings):
         "regime": ctx["regime"],
         "recent_closed_trades": [j for j in journal if j.get("type") == "close" and j.get("agent") == aid][-8:],
         "my_notes": agent["notes"][-8:],
+        "game_plan": ({k: (agent.get("plan") or {}).get(k) for k in ("summary", "watchlist", "position_plans", "avoid", "why", "made_at")}
+                      if (agent.get("plan") or {}).get("for_day") == store.today() else None),
     }
 
 
@@ -278,6 +280,7 @@ def write_dashboard(state, regime, equities):
         "journal": store.load("journal.json", [])[-60:][::-1],
         "reviews": store.load("reviews.json", [])[-6:][::-1],
         "params": store.load_params(),
+        "plans": {aid: a.get("plan") for aid, a in state["agents"].items() if a.get("plan")},
     })
 
 
@@ -337,7 +340,9 @@ def main(force=False, broker=None):
     params = store.load_params()
 
     held = {p.get("underlying", p["symbol"]) for a in state["agents"].values() for p in a["positions"].values()}
-    cands = list(dict.fromkeys(config.UNIVERSE + screener_candidates()))
+    plan_syms = [w["symbol"] for a in state["agents"].values() if a.get("status") == "active"
+                 for w in (a.get("plan") or {}).get("watchlist", []) if (a.get("plan") or {}).get("for_day") == store.today()]
+    cands = list(dict.fromkeys(config.UNIVERSE + screener_candidates() + plan_syms))
     symbols = list(dict.fromkeys(["SPY"] + config.VOL_UNDERLYINGS + cands + sorted(held)))
     bars = {}
     for i in range(0, len(symbols), 50):

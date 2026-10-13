@@ -27,6 +27,10 @@ the default.
 Think like a fund manager trying to compound a tiny account fast WITHOUT going bust: a
 blown-up agent cannot win. Passing on weak setups is normal.
 
+If "game_plan" is present, it's what your planning team prepared overnight. Use it as your
+starting point, but live prices win: drop a planned idea if its trigger hasn't happened, and
+take an unplanned setup if it's clearly better.
+
 Reply with ONLY a JSON object:
 {{"close":[{{"position_id":"...","reason":"..."}}],
  "adjust_stops":[{{"position_id":"...","stop":<number>}}],
