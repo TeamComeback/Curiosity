@@ -29,16 +29,16 @@
    "last_exits": {},
    "plan": {
     "for_day": "2026-10-14",
-    "made_at": "2026-10-13T18:17-04:00",
+    "made_at": "2026-10-13T18:18-04:00",
     "session": "After-close review",
-    "decision": "new",
-    "why": "No prior plan exists. With $100 cash, most scan names are unaffordable as shares, so XLE is the only one that fits a full position. Its oil/energy trend is supported by the Guyana LNG and Netanyahu-Iran headlines and the Paul Tudor Jones oil call, though the rally could fade if the Iran news reverses.",
-    "summary": "Buy 1 share of XLE only if it closes above 66.42 with relative volume at or above 1.2x. Initial stop 2 ATR below entry (about 63.86), trailing at 3 ATR. Otherwise stay in cash.",
+    "decision": "keep",
+    "why": "The XLE trigger is unchanged: the scan shows price about 1.1% below the 66.42 breakout level, so there is no confirmed close above it yet. The oil and geopolitical tailwind from the Iran-operation and Paul Tudor Jones headlines still supports the setup, and one share fits the $100 budget.",
+    "summary": "Watch XLE only. Buy 1 share at the next open only if it closes above 66.42 on relative volume of at least 1.2x. Initial stop about 63.86 (2 ATR). Otherwise stay in cash.",
     "watchlist": [
      {
       "symbol": "XLE",
       "setup": "Energy ETF breakout above 55-day high, uptrend, oil/geopolitics tailwind",
-      "trigger": "Close above 66.42 on rel volume >= 1.2x; enter next open. Stop ~63.86 (2 ATR).",
+      "trigger": "Daily close above 66.42 on rel volume >= 1.2x; enter next open. Stop ~63.86 (2 ATR); trail at 3 ATR.",
       "instrument": "stock",
       "max_dollars": 67,
       "conviction": 3
@@ -46,18 +46,27 @@
     ],
     "position_plans": [],
     "avoid": [
-     "SPY, MSFT, V, MA, AAPL, CVX, XOM, META, PLTR, SHOP: share prices exceed $100 budget, and options would cost far more than the account can afford",
-     "BA puts: roc20 is -11% but the level is 1.24% away and options premium is too costly for $100; revisit only if the account grows",
-     "Scan rows marked 'broke out today' with negative distance_pct are ambiguous (close may be below the level); confirm before acting",
-     "Rates and inflation risk: Fed commentary and 10y at 5.2% could pressure risk assets"
+     "SPY, MSFT, V, MA, AAPL, CVX, XOM, META, PLTR, SHOP: share prices exceed the $100 budget, and options premiums are too costly for this account",
+     "BA puts: roc20 is -11%, but the level is 1.24% away and premium is too expensive for $100",
+     "'Broke out today' rows with negative distance_pct (V, XOM, MA, MSFT, CVX): the close is below the level, so these are not confirmed breakouts",
+     "Rates and inflation risk: Fed commentary and a 10y yield near 5.2% could pressure risk assets broadly"
     ],
-    "brainstorm": "Once equity grows above roughly $150, test a single-share breakout in XOM or CVX on a close above the 55-day high, and track whether oil-linked breakouts follow through better than broad-market ones.",
+    "brainstorm": "If XLE does not trigger, test whether a cheap underlying under about $30 with a confirmed breakout could be bought as a stock, which would allow a multi-share position within budget.",
     "revisions": [
      {
       "at": "2026-10-13T18:17-04:00",
       "session": "After-close review",
       "decision": "new",
       "why": "No prior plan exists. With $100 cash, most scan names are unaffordable as shares, so XLE is the only one that fits a full position. Its oil/energy trend is supported by the Guyana LNG and Netanyahu-Iran headlines and the Paul Tudor Jones oil call, though the rally could fade if the Iran news reverses.",
+      "watchlist": [
+       "XLE"
+      ]
+     },
+     {
+      "at": "2026-10-13T18:18-04:00",
+      "session": "After-close review",
+      "decision": "keep",
+      "why": "The XLE trigger is unchanged: the scan shows price about 1.1% below the 66.42 breakout level, so there is no confirmed close above it yet. The oil and geopolitical tailwind from the Iran-operation and Paul Tudor Jones headlines still supports the setup, and one share fits the $100 budget.",
       "watchlist": [
        "XLE"
       ]
@@ -109,31 +118,39 @@
    "last_exits": {},
    "plan": {
     "for_day": "2026-10-14",
-    "made_at": "2026-10-13T18:17-04:00",
+    "made_at": "2026-10-13T18:19-04:00",
     "session": "After-close review",
     "decision": "keep",
-    "why": "The SMH position is still the only live thesis, and the fresh scan shows SMH at RSI(2) 1.6 with the close (588.19) still below the 5-day SMA (602.81). Cash is $0.07, so no new entries are possible, and the other washouts are either unaffordable (MU at $953) or in news-driven selloffs (JNJ).",
-    "summary": "Hold SMH with the existing stop at 552.5 and exit into the snap-back at the 5-day SMA (~603) or RSI(2) above 70, or by the 7-day time stop. Take no new trades until cash is available; the account can't fund anything else right now.",
+    "why": "The SMH position is already open with its stop at 552.5 and the thesis still holds: RSI(2) is still deeply oversold and the stock is well above its 200-day. Cash is $0.07, so the only real choice is how to manage the existing SMH position, and the plan's exit rules still apply.",
+    "summary": "Hold SMH with the stop at 552.5 and do not add. Exit at the next open if SMH closes near the 5-day SMA (~603) or RSI(2) goes above 70, or after the 7-day time stop. No new entries until cash is available.",
     "watchlist": [],
     "position_plans": [
      {
       "symbol": "SMH",
-      "plan": "Hold. Keep the stop at 552.5 (do not widen). Exit at next open if the close reaches the 5-day SMA (~603) or RSI(2) > 70. Time-stop exit after 7 trading days if still open. Reward-to-risk is thin (~2.6% target vs ~6% stop), so do not add to it."
+      "plan": "Hold. Keep the stop at 552.5 and do not widen it. Exit at the next open if the close reaches the 5-day SMA (~603) or RSI(2) > 70. Time-stop exit after 7 trading days if still open. Do not add, since reward-to-risk is thin (~2.6% to target vs ~6% to stop)."
      }
     ],
     "avoid": [
-     "MU: price ~$953 is far above the $100 account and its options minimums can't be met; the washout is also tied to a multi-day memory-chip selloff (YMTC share gains, SK Hynix below its 200-day).",
-     "JNJ: the WSJ spin-out report and the MedTech miss (stock down ~6% on the day) make this a news-driven decline, not a clean RSI washout; also unaffordable at $248 with $0.07 cash.",
-     "QQQ: the RSI(2) washout is broad-market and the account has no cash to act on it.",
+     "MU: at ~$953 it is far too large for a $100 account, and the washout reflects a multi-day memory-chip selloff (YMTC share gains, SK Hynix below its 200-day).",
+     "JNJ: the decline is news-driven (WSJ spin-out report, MedTech miss, stock down ~6%), not a clean RSI washout, and it is unaffordable at $248.",
+     "QQQ: the washout is broad-market and there is no cash to act on it.",
+     "SMH re-entry or adding while sector headlines stay negative (SK Hynix below its 200-day, the Economist's concentration warning, China memory-competition news): the sector risk is elevated.",
      "Any new entry while cash is below roughly $10: the account cannot fund a position."
     ],
-    "brainstorm": "Add a pre-entry filter: only take RSI(2) washouts where (target - entry) / (entry - stop) >= 1.0, using the 5-day SMA as the target. SMH would have failed this (about 0.4), so the test would have blocked this trade.",
+    "brainstorm": "For future entries, require the distance to the 5-day SMA target to be at least 1.5x the distance to the stop before taking an RSI(2) washout. This would have filtered out the thin SMH setup.",
     "revisions": [
      {
       "at": "2026-10-13T18:17-04:00",
       "session": "After-close review",
       "decision": "keep",
       "why": "The SMH position is still the only live thesis, and the fresh scan shows SMH at RSI(2) 1.6 with the close (588.19) still below the 5-day SMA (602.81). Cash is $0.07, so no new entries are possible, and the other washouts are either unaffordable (MU at $953) or in news-driven selloffs (JNJ).",
+      "watchlist": []
+     },
+     {
+      "at": "2026-10-13T18:19-04:00",
+      "session": "After-close review",
+      "decision": "keep",
+      "why": "The SMH position is already open with its stop at 552.5 and the thesis still holds: RSI(2) is still deeply oversold and the stock is well above its 200-day. Cash is $0.07, so the only real choice is how to manage the existing SMH position, and the plan's exit rules still apply.",
       "watchlist": []
      }
     ]
