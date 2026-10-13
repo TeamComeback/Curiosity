@@ -44,12 +44,25 @@ canvas{display:block;width:100%;touch-action:pan-y}
 .card p{margin:4px 0;color:var(--ink2);font-size:14px}
 .card button{background:none;border:0;color:var(--ink2);font:inherit;font-size:22px;line-height:1;cursor:pointer}
 .up{color:var(--good)}.down{color:var(--bad)}
+.stage{position:relative}
+.pop{position:absolute;z-index:4;width:250px;background:var(--paper);border:1.5px solid var(--ink);padding:10px 12px 11px;display:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.22);font-size:14px}
+.pop .who{display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px}
+.pop .firm{color:var(--ink2);font-size:13px;margin-bottom:6px}
+.pop p{margin:4px 0;color:var(--ink);line-height:1.4}
+.pop .goal{margin-top:9px}
+.pop .goal .lbl{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--ink2);margin-bottom:4px}
+.pop .goal .lbl b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.pop .track{height:8px;background:var(--faint);border:1px solid var(--rule)}
+.pop .fill{height:100%;background:var(--gold)}
+.pop .x{position:absolute;top:4px;right:6px;background:none;border:0;color:var(--ink2);font:inherit;font-size:20px;cursor:pointer;line-height:1}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="bar"><h1>The Street</h1><a href="index.html">Dashboard</a></div>
-  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of three trading firms racing up the road to the $5,000 headquarters. Tap a firm for details."></canvas>
+  <div class="stage"><div class="pop" id="pop" role="dialog" aria-live="polite"></div>
+  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of three trading firms racing up the road to the $5,000 headquarters. Tap a firm or a person for details."></canvas></div>
   <div class="block" id="block"></div>
   <div class="staff" id="staff"></div>
 </div>
@@ -71,7 +84,8 @@ const FIRMS = {
 };
 const ROLE_COLOR = {scout:"#4b7f95", strat:"#7357b3", trader:"#c38a1c", risk:"#b8504a", vol:"#2c8f8a", index:"#7e8a8c", comp:"#55636a"};
 const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:200}, baseline:{y:1240,h:84}};
-const H = 1340, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84};
+const H = 1340, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84, door:[30, 58]};
+const BOOTH = {x:2, y:EXCH.y - 2, w:30, h:22};
 const LANES = {trend:86, meanrev:168, volsell:250, baseline:332};
 let GOAL = 5000, data = null, theme = {}, firmsState = {}, workers = [], ticker = [], hit = [];
 const $ = id => document.getElementById(id);
@@ -179,7 +193,9 @@ function drawFirmMarkers(t){
 function drawExchange(t){
   const {y, h} = EXCH;
   rect(0, y - 10, W, h + 20, theme.ground);
-  rect(40, y, W - 60, h, theme.paper, theme.ink, 2);
+  rect(40, y, W - 60, h, theme.paper);
+  ctx.strokeStyle = theme.ink; ctx.lineWidth = 2.5; ctx.beginPath();
+  ctx.moveTo(40, y + EXCH.door[0]); ctx.lineTo(40, y); ctx.lineTo(W - 20, y); ctx.lineTo(W - 20, y + h); ctx.lineTo(40, y + h); ctx.lineTo(40, y + EXCH.door[1]); ctx.stroke();
   text("Exchange", 54, y + 16, 15, theme.ink, "left", 600);
   text("orders fill here", 54, y + 32, 11, theme.ink2);
   // trading floor counters
@@ -192,11 +208,11 @@ function drawExchange(t){
   for (let k = 0; k < 3; k++) text(tape, 52 - off + k * tw, y + h - 17, 11, theme.paper);
   ctx.restore();
   // compliance booth at the exchange door: the rulebook every order passes
-  rect(8, y + 22, 26, 34, theme.paper, theme.ink, 1.5);
-  text("Rules", 21, y + 66, 10, theme.ink2, "center");
-  // street running down the left side, past every office door
-  rect(0, y + h + 8, 34, H - y - h - 8, alpha(theme.rule, .3));
-  ctx.setLineDash([6, 8]); ctx.strokeStyle = theme.paper; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(17, y + h + 12); ctx.lineTo(17, H - 8); ctx.stroke(); ctx.setLineDash([]);
+  // street running down the left side, past the exchange door and every office door
+  rect(0, y - 4, 34, H - y + 4, alpha(theme.rule, .3));
+  ctx.setLineDash([6, 8]); ctx.strokeStyle = theme.paper; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(17, y + 64); ctx.lineTo(17, H - 8); ctx.stroke(); ctx.setLineDash([]);
+  rect(BOOTH.x, BOOTH.y, BOOTH.w, BOOTH.h, theme.paper, theme.ink, 1.5);
+  text("Rules", BOOTH.x + BOOTH.w / 2, BOOTH.y + BOOTH.h / 2, 10, theme.ink2, "center", 600);
 }
 
 function drawOffice(id, t){
@@ -245,35 +261,118 @@ function person(x, y, color, facing, walking, t){
   ctx.restore();
 }
 
+// ---------- walkable grid: people route around desks, screens and walls ----------
+const CELL = 4, GW = Math.ceil(W / CELL), GH = Math.ceil(H / CELL);
+let blocked = new Uint8Array(GW * GH);
+function block(x, y, w, h, pad = 3){
+  const c0 = Math.max(0, Math.floor((x - pad) / CELL)), c1 = Math.min(GW - 1, Math.floor((x + w + pad) / CELL));
+  const r0 = Math.max(0, Math.floor((y - pad) / CELL)), r1 = Math.min(GH - 1, Math.floor((y + h + pad) / CELL));
+  for (let r = r0; r <= r1; r++) for (let c = c0; c <= c1; c++) blocked[r * GW + c] = 1;
+}
+function buildGrid(){
+  blocked = new Uint8Array(GW * GH);
+  block(0, 0, W, EXCH.y - 6, 0);                         // the road/plaza area above the street is out of bounds
+  block(34, EXCH.y - 6, W - 34, 6, 0);
+  // exchange: walls with a door on the street side, counters and the ticker tape inside
+  const ey = EXCH.y, eh = EXCH.h;
+  block(40, ey, W - 60, 1); block(W - 20, ey, 1, eh); block(40, ey + eh, W - 60, 1);
+  block(40, ey, 1, EXCH.door[0]); block(40, ey + EXCH.door[1], 1, eh - EXCH.door[1]);
+  for (let i = 0; i < 5; i++) block(170 + i * 40, ey + 12, 28, 10);
+  block(46, ey + eh - 26, W - 72, 18);
+  block(BOOTH.x, BOOTH.y, BOOTH.w, BOOTH.h, 2);
+  block(W - 18, EXCH.y, 18, H - EXCH.y, 0);
+  Object.entries(OFFICES).forEach(([id, o]) => {
+    const x = 44, w = W - 56, y = o.y, h = o.h, dTop = y + h * .42, dBot = dTop + 26;
+    block(x, y, w, 1); block(x + w, y, 1, h); block(x, y + h, w, 1);
+    block(x, y, 1, dTop - y - 3); block(x, dBot + 3, 1, y + h - dBot - 3);
+    const st = firmsState[id];
+    if (st){
+      st.desks.forEach(d => block(d.x - 17, d.y - 30, 34, 14, 4));
+      st.positions.forEach((p, i) => block(x + w - 62, y + 44 + i * 30, 52, 22, 4));
+      if (st.out) block(x, y, w, h, 0);
+    }
+  });
+}
+const cellOf = pt => [Math.min(GW - 1, Math.max(0, Math.round(pt.x / CELL))), Math.min(GH - 1, Math.max(0, Math.round(pt.y / CELL)))];
+function free(pt){
+  const [c, r] = cellOf(pt);
+  if (!blocked[r * GW + c]) return {x: c * CELL, y: r * CELL};
+  for (let rad = 1; rad < 30; rad++) for (let dr = -rad; dr <= rad; dr++) for (let dc = -rad; dc <= rad; dc++){
+    if (Math.max(Math.abs(dr), Math.abs(dc)) !== rad) continue;
+    const rr = r + dr, cc = c + dc;
+    if (rr >= 0 && cc >= 0 && rr < GH && cc < GW && !blocked[rr * GW + cc]) return {x: cc * CELL, y: rr * CELL};
+  }
+  return pt;
+}
+const routeCache = new Map();
+function route(from, to){
+  const [sc, sr] = cellOf(free(from)), [tc, tr] = cellOf(free(to)), key = `${sc},${sr}>${tc},${tr}`;
+  if (routeCache.has(key)) return routeCache.get(key).map(p => ({...p}));
+  const start = sr * GW + sc, goal = tr * GW + tc, N = GW * GH;
+  const g = new Float32Array(N).fill(Infinity), came = new Int32Array(N).fill(-1), closed = new Uint8Array(N);
+  const open = [[0, start]]; g[start] = 0;
+  const hfun = i => Math.hypot((i % GW) - tc, Math.floor(i / GW) - tr);
+  const dirs = [[1,0,1],[-1,0,1],[0,1,1],[0,-1,1],[1,1,1.414],[1,-1,1.414],[-1,1,1.414],[-1,-1,1.414]];
+  let found = false, guard = 0;
+  while (open.length && guard++ < 60000){
+    let bi = 0; for (let i = 1; i < open.length; i++) if (open[i][0] < open[bi][0]) bi = i;
+    const [, cur] = open.splice(bi, 1)[0];
+    if (cur === goal){ found = true; break; }
+    if (closed[cur]) continue; closed[cur] = 1;
+    const cc = cur % GW, cr = Math.floor(cur / GW);
+    for (const [dc, dr, cost] of dirs){
+      const nc = cc + dc, nr = cr + dr; if (nc < 0 || nr < 0 || nc >= GW || nr >= GH) continue;
+      const ni = nr * GW + nc; if (blocked[ni] || closed[ni]) continue;
+      if (dc && dr && (blocked[cr * GW + nc] || blocked[nr * GW + cc])) continue;   // no cutting corners
+      const ng = g[cur] + cost;
+      if (ng < g[ni]){ g[ni] = ng; came[ni] = cur; open.push([ng + hfun(ni), ni]); }
+    }
+  }
+  let pts = [];
+  if (found){ for (let i = goal; i !== -1 && i !== start; i = came[i]) pts.push({x: (i % GW) * CELL, y: Math.floor(i / GW) * CELL}); pts.reverse(); }
+  else pts = [free(to)];
+  // keep only turning points so walks look natural
+  const out = []; pts.forEach((p, i) => { const a = pts[i - 1], b = pts[i + 1];
+    if (!a || !b || (p.x - a.x) * (b.y - p.y) !== (p.y - a.y) * (b.x - p.x)) out.push(p); });
+  routeCache.set(key, out);
+  return out.map(p => ({...p}));
+}
+
 function buildWorkers(){
   workers = [];
   Object.keys(FIRMS).forEach(id => {
     const st = firmsState[id], o = OFFICES[id]; if (!st || st.out) return;
-    const x0 = 44, w = W - 56, door = {x: x0 + 8, y: o.y + o.h * .42 + 13}, street = {x: 17, y: door.y};
-    const ex = [{x: 17, y: EXCH.y + 40}, {x: 34, y: EXCH.y + 40}, {x: 80, y: EXCH.y + 52}];
-    const D = Object.fromEntries(st.desks.map(d => [d.role, {x: d.x, y: d.y - 8}]));
-    const screens = st.positions.map((p, i) => ({x: x0 + w - 74, y: o.y + 55 + i * 30}));
+    const x0 = 44, w = W - 56, door = {x: x0 + 10, y: o.y + o.h * .42 + 13};
+    const ex = [{x: 90, y: EXCH.y + 44}, {x: 150, y: EXCH.y + 40}];
+    const D = Object.fromEntries(st.desks.map(d => [d.role, free({x: d.x, y: d.y - 4})]));
+    const screens = st.positions.map((p, i) => free({x: x0 + w - 76, y: o.y + 55 + i * 30}));
+    const near = (pt, dx, dy) => free({x: pt.x + dx, y: pt.y + dy});
     const busy = st.tradedToday, hasPos = st.positions.length > 0;
     FIRMS[id].staff.forEach(([role]) => {
       const home = D[role]; let plan;
-      if (role === "scout" || role === "vol") plan = [[home, 2.5], [{x: home.x + 46, y: home.y + 26}, 1.5], [{x: home.x - 10, y: home.y + 40}, 1.2]].concat(busy ? [[D.strat, 1.2]] : []);
-      else if (role === "strat") plan = busy ? [[home, 3], [D.trader || home, 1.4]] : [[home, 5], [{x: home.x + 20, y: home.y + 30}, 1.5]];
-      else if (role === "trader") plan = busy ? [[home, 1.5], [door, 0], [street, 0], ...ex.map((p, i) => [p, i === 1 ? 0.8 : 0.4]), [street, 0], [door, 0]] : [[home, 4], [{x: home.x - 30, y: home.y + 34}, 2]];
-      else if (role === "risk") plan = hasPos ? screens.flatMap(s => [[s, 1.6]]).concat([[home, 2]]) : [[home, 5], [{x: home.x + 24, y: home.y + 30}, 1.5]];
+      if (role === "scout" || role === "vol") plan = [[home, 2.5], [near(home, 40, 30), 1.5], [near(home, -8, 44), 1.2]].concat(busy ? [[near(D.strat, 14, 6), 1.2]] : []);
+      else if (role === "strat") plan = busy ? [[home, 3], [near(D.trader || home, -14, 6), 1.4]] : [[home, 5], [near(home, 20, 34), 1.5]];
+      else if (role === "trader") plan = busy ? [[home, 1.5], [door, 0], [ex[0], 0.8], [ex[1], 0.6], [door, 0]] : [[home, 4], [near(home, -30, 36), 2]];
+      else if (role === "risk") plan = hasPos ? screens.map(s => [s, 1.6]).concat([[home, 2]]) : [[home, 5], [near(home, 24, 34), 1.5]];
       else plan = [[home, 99]];
-      workers.push({firm: id, role, plan, i: 0, x: home.x, y: home.y, wait: Math.random() * 2, facing: Math.PI, walking: false});
+      workers.push({firm: id, role, plan, i: 0, x: home.x, y: home.y, wait: Math.random() * 2, facing: Math.PI, walking: false, path: null});
     });
   });
   // the compliance officer at the exchange gate (shared rulebook)
-  workers.push({firm: "street", role: "comp", plan: [[{x: 21, y: EXCH.y + 39}, 3], [{x: 21, y: EXCH.y + 32}, 2]], i: 0, x: 21, y: EXCH.y + 39, wait: 0, facing: 0, walking: false});
+  const c1 = free({x: 24, y: EXCH.y + 26}), c2 = free({x: 12, y: EXCH.y + 30});
+  workers.push({firm: "street", role: "comp", plan: [[c1, 3], [c2, 2]], i: 0, x: c1.x, y: c1.y, wait: 0, facing: 0, walking: false, path: null});
 }
 
 function stepWorkers(dt){
   workers.forEach(k => {
+    if (k === selected) { k.walking = false; return; }
     if (k.wait > 0){ k.wait -= dt; k.walking = false; return; }
     const [tgt, pause] = k.plan[k.i % k.plan.length];
-    const dx = tgt.x - k.x, dy = tgt.y - k.y, d = Math.hypot(dx, dy), sp = (k.role === "trader" ? 70 : 42) * dt;
-    if (d <= sp){ k.x = tgt.x; k.y = tgt.y; k.i++; k.wait = pause; k.walking = false; }
+    if (!k.path) k.path = route(k, tgt);
+    const nxt = k.path[0];
+    if (!nxt){ k.path = null; k.i++; k.wait = pause; k.walking = false; return; }
+    const dx = nxt.x - k.x, dy = nxt.y - k.y, d = Math.hypot(dx, dy), sp = (k.role === "trader" ? 64 : 40) * dt;
+    if (d <= sp){ k.x = nxt.x; k.y = nxt.y; k.path.shift(); }
     else { k.x += dx / d * sp; k.y += dy / d * sp; k.facing = Math.atan2(dy, dx) + Math.PI / 2; k.walking = true; }
   });
 }
@@ -304,6 +403,7 @@ function load(d){
   ticker = (d.positions || []).map(p => `${p.underlying || p.symbol} ${p.last != null ? Number(p.last).toFixed(2) : ""}`.trim());
   if (d.regime && d.regime.spy_trend) ticker.push(`SPY trend ${d.regime.spy_trend}`);
   if (!ticker.length) ticker = ["Waiting for the opening bell"];
+  routeCache.clear(); buildGrid();
   buildWorkers();
   renderText();
 }
@@ -313,7 +413,7 @@ function renderText(){
   const lead = comp[0];
   $("block").innerHTML = `<div><span>Leader</span><b>${esc(FIRMS[lead.id].name)}</b></div><div><span>Value</span><b>${money(lead.equity)}</b></div>
     <div><span>Goal</span><b>$${GOAL.toLocaleString()}</b></div><div><span>Updated</span><b>${new Date(data.updated).toLocaleTimeString([], {hour:"numeric", minute:"2-digit"})}</b></div>`;
-  $("staff").innerHTML = `<h2>Who works where</h2><p>Each firm only hires the roles its strategy needs. Tap a firm on the plan for its books.</p>` +
+  $("staff").innerHTML = `<h2>Who works where</h2><p>Each firm only hires the roles its strategy needs. Tap a person to see what they're working on, or a firm for its books.</p>` +
     Object.entries(FIRMS).map(([id, fm]) => `<h2><span class="dot" style="background:var(${fm.colorVar})"></span>${esc(fm.name)}</h2>` +
       fm.staff.map(([r, label, job]) => `<p><span class="dot" style="background:${ROLE_COLOR[r]}"></span><b style="color:var(--ink);font-weight:500">${esc(label)}</b>: ${esc(job)}</p>`).join("")).join("") +
     `<h2><span class="dot" style="background:${ROLE_COLOR.comp}"></span>Compliance, shared</h2><p>Stands at the exchange door. Every order passes the rulebook: cash only, simple options, two new trades a day.</p>`;
@@ -331,9 +431,106 @@ function showCard(id){
 }
 cv.addEventListener("click", e => {
   const r = cv.getBoundingClientRect(), x = (e.clientX - r.left) / S, y = (e.clientY - r.top) / S;
+  const person = workers.filter(k => Math.hypot(k.x - x, k.y - y) < 14).sort((a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y))[0];
+  if (person){ showPop(person); return; }
+  closePop();
   const h = hit.slice().reverse().find(b => x >= b.x && x <= b.x + b.w && y >= b.y && y <= b.y + b.h);
   if (h) showCard(h.id); else $("card").style.display = "none";
 });
+
+
+// ---------- what each person is working on ----------
+let selected = null;
+const ROLE_NAME = {}; Object.values(FIRMS).forEach(fm => fm.staff.forEach(([r, l]) => ROLE_NAME[r] = ROLE_NAME[r] || l));
+const pct = (a, b) => Math.max(0, Math.min(100, b ? a / b * 100 : 0));
+function todayJournal(firm){ const day = (data.updated || "").slice(0, 10);
+  return (data.journal || []).filter(j => (j.time || "").startsWith(day) && (!firm || j.agent === firm)); }
+function lastOf(firm, types){ return (data.journal || []).find(j => j.agent === firm && types.includes(j.type)); }
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function nice(sym){
+  const m = /^([A-Z]+)(\d{2})(\d{2})(\d{2})([CP])(\d{8})$/.exec(sym || "");
+  if (!m) return sym || "";
+  return `${m[1]} $${+m[6] / 1000} ${m[5] === "C" ? "call" : "put"}, ${MON[+m[3] - 1]} ${+m[4]}`;
+}
+function roleInfo(k){
+  if (k.role === "comp"){
+    const blocks = todayJournal().filter(j => j.type === "rule_block");
+    const r = data.rules || {};
+    return {name: "Compliance officer", firm: "Shared by every firm", color: ROLE_COLOR.comp,
+      lines: [`Checks every order against the rulebook: cash only, long options or defined-risk spreads, ${r.max_new_trades_per_day ?? 2} new trades a day, ${r.max_open_positions ?? 4} open positions.`,
+              blocks.length ? `Turned away ${blocks.length} order${blocks.length > 1 ? "s" : ""} today. Latest: ${blocks[0].note}.` : "No orders turned away today."]};
+  }
+  const st = firmsState[k.firm], a = st.agent, fm = FIRMS[k.firm], P = (data.params || {})[k.firm] || {};
+  const label = (fm.staff.find(x => x[0] === k.role) || [])[1] || ROLE_NAME[k.role];
+  const base = {name: label, firm: fm.name, color: ROLE_COLOR[k.role], lines: [], goal: null};
+  const opensToday = todayJournal(k.firm).filter(j => j.type === "open").length, maxT = (data.rules || {}).max_new_trades_per_day ?? 2;
+  const lastOpen = lastOf(k.firm, ["open"]), lastClose = lastOf(k.firm, ["close"]);
+  if (st.out){ base.lines.push(`The firm is ${a.status}. ${a.status_reason || ""}`.trim()); return base; }
+  switch (k.role){
+    case "scout":
+      base.lines.push(k.firm === "trend"
+        ? `Scanning the watchlist for breakouts above the ${P.breakout_lookback ?? 55}-day high on at least ${P.min_rel_volume ?? 1.2}× normal volume, in stocks already in an uptrend.`
+        : `Hunting for washouts: RSI(2) under ${P.rsi_entry ?? 10} in stocks still above their 200-day average.`);
+      base.lines.push(st.tradedToday ? "Found a setup today and walked it over to the strategist." : "Nothing has met the bar yet today.");
+      break;
+    case "vol":
+      base.lines.push(`Comparing implied with realized volatility on SPY, QQQ and IWM. Flags a spread when options are at least ${P.min_iv_rv ?? 1.1}× pricier than actual moves.`);
+      base.lines.push(`Targets the ${Math.round((P.short_delta ?? .2) * 100)}-delta strike, $${P.width ?? 1} wide, ${P.min_dte ?? 21}–${P.max_dte ?? 45} days out.`);
+      break;
+    case "strat": {
+      const note = a.notes && a.notes[0] && a.notes[0].note;
+      base.lines.push(note ? `Latest thinking: “${note}”` : lastOpen ? `Last call: ${lastOpen.thesis}` : "Reviewing today's ideas. No trade approved yet.");
+      base.goal = {label: `Reach $${GOAL.toLocaleString()}`, value: `${money(a.equity)}`, pct: pct(a.equity, GOAL),
+                   note: `${(a.equity / 100).toFixed(2)}× the starting $100`};
+      break; }
+    case "trader": {
+      const lo = lastOpen ? `Last order: bought ${nice(lastOpen.symbol)}${lastOpen.instrument === "stock" ? " shares" : ""} for ${money(Math.abs(lastOpen.cost || 0))}${lastOpen.cost < 0 ? " credit" : ""}.` : "No orders placed yet.";
+      base.lines.push(lo);
+      if (lastClose) base.lines.push(`Last exit: ${nice(lastClose.symbol)}, ${lastClose.pnl >= 0 ? "+" : "-"}$${Math.abs(lastClose.pnl).toFixed(2)}. Reason: ${lastClose.note}.`);
+      if (k.firm === "meanrev" && st.positions.length) base.lines.push(`Waiting to sell ${st.positions.map(x => x.sym).join(", ")} into the bounce.`);
+      base.goal = {label: "Trades used today", value: `${opensToday} of ${maxT}`, pct: pct(opensToday, maxT),
+                   note: opensToday >= maxT ? "Daily limit reached. Exits are still allowed." : "Room for more if a good setup appears."};
+      break; }
+    case "risk": {
+      if (!st.positions.length){ base.lines.push("Nothing open to guard right now."); break; }
+      if (k.firm === "trend"){
+        const p = st.positions[0].p, gap = p.kind === "stock" && p.stop && p.last ? (p.last / p.stop - 1) * 100 : null;
+        base.lines.push(`Guarding ${st.positions.length} position${st.positions.length > 1 ? "s" : ""}, raising each stop as price climbs.`);
+        if (gap != null) base.lines.push(`${p.symbol}: stop at ${money(p.stop)}, ${gap.toFixed(1)}% below the price.`);
+        else if (p.stop) base.lines.push(`${nice(p.symbol)}: exits if ${p.underlying} ${p.opt_type === "put" ? "rises above" : "falls below"} ${money(p.stop)}.`);
+      } else {
+        const p = st.positions[0].p, tp = P.take_profit ?? .5;
+        base.lines.push(`Watching ${p.structure || "the spread"} on ${p.underlying || p.symbol}, expiring ${p.expiry}. Closes at ${Math.round(tp * 100)}% profit, at a ${P.stop_mult ?? 2}× loss, or ${P.exit_dte ?? 10} days before expiry.`);
+        if (p.mark != null && p.entry){ const kept = (p.entry - p.mark) / p.entry;
+          base.goal = {label: `Profit target (${Math.round(tp * 100)}% of credit)`, value: `${Math.max(0, kept * 100).toFixed(0)}% kept`,
+                       pct: pct(kept, tp), note: kept < 0 ? "Spread is currently losing value." : ""}; }
+      }
+      break; }
+    case "index": {
+      const p = st.positions[0] && st.positions[0].p;
+      base.lines.push(p ? `Bought ${Number(p.qty).toFixed(4)} SPY at ${money(p.entry)} and is simply holding.` : "Waiting to buy SPY.");
+      base.lines.push("Not racing. Shows what doing nothing would have earned.");
+      break; }
+  }
+  return base;
+}
+function showPop(k){
+  const i = roleInfo(k), pop = $("pop");
+  pop.innerHTML = `<button class="x" aria-label="Close" onclick="closePop()">×</button>
+    <div class="who"><span class="dot" style="background:${i.color}"></span>${esc(i.name)}</div><div class="firm">${esc(i.firm)}</div>
+    ${i.lines.map(l => `<p>${esc(l)}</p>`).join("")}
+    ${i.goal ? `<div class="goal"><div class="lbl"><span>${esc(i.goal.label)}</span><b>${esc(i.goal.value)}</b></div>
+      <div class="track" role="progressbar" aria-label="${esc(i.goal.label)}" aria-valuenow="${i.goal.pct.toFixed(0)}" aria-valuemin="0" aria-valuemax="100"><div class="fill" style="width:${Math.max(i.goal.pct, 1.5)}%"></div></div>
+      ${i.goal.note ? `<p style="color:var(--ink2);font-size:13px;margin-top:5px">${esc(i.goal.note)}</p>` : ""}</div>` : ""}`;
+  pop.style.display = "block";
+  const cw = cv.clientWidth, px = k.x * S, py = k.y * S, pw = Math.min(250, cw - 24);
+  pop.style.width = pw + "px";
+  pop.style.left = Math.max(12, Math.min(cw - pw - 12, px - pw / 2)) + "px";
+  const below = py + 18, h = pop.offsetHeight;
+  pop.style.top = (below + h < cv.clientHeight - 8 ? below : py - h - 18) + "px";
+  selected = k; $("card").style.display = "none";
+}
+function closePop(){ $("pop").style.display = "none"; selected = null; }
 
 // ---------- loop ----------
 let last = performance.now();
@@ -345,6 +542,7 @@ function frame(now){
   Object.keys(OFFICES).forEach(id => drawOffice(id, t));
   drawFirmMarkers(t);
   if (!reduce) stepWorkers(dt);
+  if (selected){ ctx.strokeStyle = theme.gold; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(selected.x, selected.y, 13 + Math.sin(t * 4), 0, Math.PI * 2); ctx.stroke(); }
   workers.forEach(k => person(k.x, k.y, ROLE_COLOR[k.role], k.facing, k.walking, t));
   requestAnimationFrame(frame);
 }
