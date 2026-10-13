@@ -159,10 +159,16 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
         system = PLAN_SYSTEM.format(name=a["name"], goal=config.RACE["goal"], style=a["style"],
                                     instruments=", ".join(a["instruments"]), session=SESSIONS[session],
                                     max_trades=config.RULES["max_new_trades_per_day"], max_pos=config.RULES["max_open_positions"])
-        try:
-            d = brain._call(config.PLAN_MODEL, system, json.dumps(view, default=str), 1800, 120)
-        except Exception as e:  # keep the old plan if the session fails
-            print(f"[plan:{aid}] session failed: {type(e).__name__}")
+        d, err = None, None
+        for attempt in range(2):                # one retry: long answers occasionally get cut off
+            try:
+                d = brain._call(config.PLAN_MODEL, system, json.dumps(view, default=str), 3500, 150)
+                break
+            except Exception as e:  # noqa: BLE001
+                err = type(e).__name__
+        if d is None:                           # keep the old plan if the session fails
+            print(f"[plan:{aid}] session failed: {err}")
+            store.journal({"type": "plan_error", "agent": aid, "note": f"{SESSIONS[session]} failed ({err}); kept the previous plan"})
             return None
     d["watchlist"] = [w for w in (d.get("watchlist") or []) if isinstance(w, dict) and w.get("symbol")][:8]
     for w in d["watchlist"]:
@@ -186,7 +192,7 @@ def next_trading_day(now):
     return d.isoformat()
 
 
-def main(session=None, force=False):
+def main(session=None, force=False, only=None):
     now = store.now_et()
     session = session or pick_session(now)
     if not session:
@@ -219,7 +225,7 @@ def main(session=None, force=False):
 
     changed = False
     for aid, agent in state["agents"].items():
-        if not config.AGENTS[aid]["competing"] or agent["status"] != "active":
+        if not config.AGENTS[aid]["competing"] or agent["status"] != "active" or (only and aid != only):
             continue
         cur = agent.get("plan") or {}
         if not force and cur.get("for_day") == for_day and any(r["session"] == SESSIONS[session] for r in cur.get("revisions", [])):
@@ -254,7 +260,7 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     sess = args[args.index("--session") + 1] if "--session" in args else None
     try:
-        main(sess, force="--force" in args)
+        main(sess, force="--force" in args, only=args[args.index("--agent") + 1] if "--agent" in args else None)
     except SystemExit as e:
         if e.code not in (None, 0):
             health.record_crash(RuntimeError(str(e.code)))

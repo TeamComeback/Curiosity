@@ -16,6 +16,9 @@ on:
       force:
         description: "Run even if the market is closed (true/false)"
         default: "false"
+      agent:
+        description: "Plan only: limit to one agent (trend, meanrev, volsell)"
+        default: ""
 
 permissions:
   contents: write
@@ -52,7 +55,8 @@ jobs:
           elif [ "$SCHED" = "40 20,21 * * 1-5" ] || [ "$SCHED" = "10 0 * * 1-5" ] || [ "$SCHED" = "40 11,12 * * 1-5" ]; then
             python plan.py
           elif [ "${{ inputs.task }}" = "plan" ]; then
-            if [ "${{ inputs.force }}" = "true" ]; then python plan.py --force; else python plan.py; fi
+            AG="${{ inputs.agent }}"
+            if [ "${{ inputs.force }}" = "true" ]; then python plan.py --force ${AG:+--agent $AG}; else python plan.py ${AG:+--agent $AG}; fi
           elif [ "${{ inputs.force }}" = "true" ]; then
             python run.py --force
           else
