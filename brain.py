@@ -85,8 +85,8 @@ def decide(aid, view):
         d["source"] = "llm"
         return d
     except Exception as e:  # fail closed: no new trades this run, default exits still run
-        print(f"[brain:{aid}] error: {e}")
-        return {"close": [], "adjust_stops": [], "open": [], "note": "", "source": f"error: {str(e)[:80]}"}
+        print(f"[brain:{aid}] error: {type(e).__name__}")  # never print details: they can contain the key
+        return {"close": [], "adjust_stops": [], "open": [], "note": "", "source": f"error: {type(e).__name__}"}
 
 
 def weekly_review(aid, stats, params, bounds, notes):
@@ -105,7 +105,7 @@ def weekly_review(aid, stats, params, bounds, notes):
     try:
         return _call(config.REVIEW_MODEL, "You are a self-improving trading agent.", json.dumps(prompt, default=str), 1200, 120)
     except Exception as e:
-        return {"summary": f"Review failed: {e}", "changes": []}
+        return {"summary": f"Review failed ({type(e).__name__}).", "changes": []}
 
 
 def final_assessment(payload):
@@ -121,4 +121,4 @@ def final_assessment(payload):
         return _call(config.REVIEW_MODEL, "You are a hedge fund risk officer writing a post-mortem.",
                      json.dumps({"task": task, **payload}, default=str), 2500, 180)
     except Exception as e:
-        return {"summary": f"Assessment failed: {e}", "agents": {}}
+        return {"summary": f"Assessment failed ({type(e).__name__}).", "agents": {}}

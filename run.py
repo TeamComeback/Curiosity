@@ -320,6 +320,8 @@ def main(force=False, broker=None):
         checks = health.run_checks()
         for c in checks:
             print(("OK   " if c["ok"] else "FAIL ") + c["name"] + ": " + c["detail"])
+        if any(c["name"] == "Anthropic API" and not c["ok"] for c in checks):
+            config.ANTHROPIC_API_KEY = ""  # bad key: run agents on fallback rules instead of failing every call
         blocking = [c for c in checks if not c["ok"] and c["name"] in ("GitHub secrets", "Alpaca paper account")]
         if blocking:
             raise SystemExit("Stopped: " + blocking[0]["detail"])

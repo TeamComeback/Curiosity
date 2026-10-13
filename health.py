@@ -2,6 +2,7 @@
 plain-English results to data/health.json so problems show on the dashboard and in
 the repo, not just in hidden Actions logs. Keys are never written anywhere."""
 import os
+import re
 import traceback
 
 import requests
@@ -10,20 +11,48 @@ import config
 import store
 
 
+SECRET_NAMES = ("ALPACA_API_KEY", "ALPACA_API_SECRET", "ANTHROPIC_API_KEY")
+
+
+def redact(text):
+    """Remove any secret value (raw or cleaned) and anything key-shaped from text."""
+    text = str(text)
+    for n in SECRET_NAMES:
+        raw = os.getenv(n, "")
+        for v in {raw, raw.strip(), "".join(raw.split())}:
+            if len(v) >= 6:
+                text = text.replace(v, "[hidden]")
+        for part in raw.split():
+            if len(part) >= 6:
+                text = text.replace(part, "[hidden]")
+    text = re.sub(r"sk-ant-[\w\-\u0080-\uffff\\n]+", "sk-ant-[hidden]", text)
+    text = re.sub(r"\bPK[A-Z0-9]{8,}\b", "PK[hidden]", text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def _check(name, fn):
     try:
         ok, detail = fn()
     except Exception as e:  # noqa: BLE001 - we want every failure reported
-        ok, detail = False, f"{type(e).__name__}: {str(e)[:300]}"
-    return {"name": name, "ok": bool(ok), "detail": detail}
+        ok, detail = False, type(e).__name__ + ": " + str(e)[:300]
+    return {"name": name, "ok": bool(ok), "detail": redact(detail)[:300]}
 
 
 def _secrets():
-    missing = [n for n in ("ALPACA_API_KEY", "ALPACA_API_SECRET", "ANTHROPIC_API_KEY") if not os.getenv(n)]
+    missing = [n for n in SECRET_NAMES if not os.getenv(n, "").strip()]
     if missing:
         return False, "Missing GitHub secret(s): " + ", ".join(missing) + ". Names must match exactly."
-    key = os.getenv("ALPACA_API_KEY", "")
-    hint = "" if key.startswith("PK") else " (Note: paper keys usually start with 'PK'; live keys won't work here.)"
+    bad = [n for n in SECRET_NAMES if not "".join(os.getenv(n, "").split()).isascii()]
+    if bad:
+        return False, ("These secrets contain unusual characters (often from copying via a screenshot, notes app "
+                       "or text recognition): " + ", ".join(bad) + ". Copy the key with the provider's Copy button "
+                       "and paste it directly into the GitHub secret.")
+    spaced = [n for n in SECRET_NAMES if os.getenv(n, "") != "".join(os.getenv(n, "").split())]
+    key = config.API_KEY
+    hint = "" if key.startswith("PK") else " Note: paper keys usually start with 'PK'; live keys won't work here."
+    if spaced:
+        hint += " Removed stray spaces/line breaks from: " + ", ".join(spaced) + "."
     return True, "All three secrets are present." + hint
 
 
@@ -101,9 +130,9 @@ def save(checks, crash=None):
     })
 
 
-def record_crash(exc):
+def record_crash(exc):  # noqa: D401
     h = store.load("health.json", {"checks": []})
     tb = traceback.format_exception(type(exc), exc, exc.__traceback__)
     where = next((l.strip() for l in reversed(tb) if l.strip().startswith('File "')), "")
-    save(h.get("checks", []), crash={"error": f"{type(exc).__name__}: {str(exc)[:400]}", "where": where[:300],
+    save(h.get("checks", []), crash={"error": redact(f"{type(exc).__name__}: {str(exc)[:400]}"), "where": redact(where)[:300],
                                      "time": store.now_et().isoformat(timespec="minutes")})

@@ -7,12 +7,12 @@ import os
 
 PAPER_BASE = os.getenv("ALPACA_BASE_URL", "https://paper-api.alpaca.markets")
 DATA_BASE = "https://data.alpaca.markets"
-API_KEY = os.getenv("ALPACA_API_KEY", "")
-API_SECRET = os.getenv("ALPACA_API_SECRET", "")
+API_KEY = "".join(os.getenv("ALPACA_API_KEY", "").split())
+API_SECRET = "".join(os.getenv("ALPACA_API_SECRET", "").split())
 STOCK_FEED = os.getenv("ALPACA_STOCK_FEED", "iex")
 OPTION_FEED = os.getenv("ALPACA_OPTION_FEED", "indicative")
 
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+ANTHROPIC_API_KEY = "".join(os.getenv("ANTHROPIC_API_KEY", "").split())
 BRAIN_MODEL = os.getenv("BRAIN_MODEL", "claude-haiku-5-5")      # per-run agent decisions
 REVIEW_MODEL = os.getenv("REVIEW_MODEL", "claude-sonnet-5-5")   # weekly reviews + final assessment
 
