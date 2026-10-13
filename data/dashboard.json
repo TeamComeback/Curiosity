@@ -162,6 +162,27 @@
  ],
  "journal": [
   {
+   "time": "2026-10-13T18:17:18-04:00",
+   "type": "plan",
+   "agent": "volsell",
+   "note": "After-close review: new. No current plan exists, and the scan has no implied-vol data (last_iv is null), so the required IV/RV \u2265 1.1 gate cannot be verified for any candidate. A $1-wide spread also ties up about $100 of collateral, which is essentially the whole $100 account.",
+   "symbol": ""
+  },
+  {
+   "time": "2026-10-13T18:17:11-04:00",
+   "type": "plan",
+   "agent": "meanrev",
+   "note": "After-close review: keep. The SMH position is still the only live thesis, and the fresh scan shows SMH at RSI(2) 1.6 with the close (588.19) still below the 5-day SMA (602.81). Cash is $0.07, so no new entries are possible, and the other washouts are either unaffordable (MU at $953) or in news-driven selloffs (JNJ).",
+   "symbol": ""
+  },
+  {
+   "time": "2026-10-13T18:17:04-04:00",
+   "type": "plan",
+   "agent": "trend",
+   "note": "After-close review: new. No prior plan exists. With $100 cash, most scan names are unaffordable as shares, so XLE is the only one that fits a full position. Its oil/energy trend is supported by the Guyana LNG and Netanyahu-Iran headlines and the Paul Tudor Jones oil call, though the rally could fade if the Iran news reverses.",
+   "symbol": "XLE"
+  },
+  {
    "time": "2026-10-13T15:49:40-04:00",
    "type": "open",
    "agent": "baseline",
@@ -218,5 +239,101 @@
    "exit_dte": 10,
    "min_iv_rv": 1.1
   }
- }
+ },
+ "plans": {
+  "trend": {
+   "for_day": "2026-10-14",
+   "made_at": "2026-10-13T18:17-04:00",
+   "session": "After-close review",
+   "decision": "new",
+   "why": "No prior plan exists. With $100 cash, most scan names are unaffordable as shares, so XLE is the only one that fits a full position. Its oil/energy trend is supported by the Guyana LNG and Netanyahu-Iran headlines and the Paul Tudor Jones oil call, though the rally could fade if the Iran news reverses.",
+   "summary": "Buy 1 share of XLE only if it closes above 66.42 with relative volume at or above 1.2x. Initial stop 2 ATR below entry (about 63.86), trailing at 3 ATR. Otherwise stay in cash.",
+   "watchlist": [
+    {
+     "symbol": "XLE",
+     "setup": "Energy ETF breakout above 55-day high, uptrend, oil/geopolitics tailwind",
+     "trigger": "Close above 66.42 on rel volume >= 1.2x; enter next open. Stop ~63.86 (2 ATR).",
+     "instrument": "stock",
+     "max_dollars": 67,
+     "conviction": 3
+    }
+   ],
+   "position_plans": [],
+   "avoid": [
+    "SPY, MSFT, V, MA, AAPL, CVX, XOM, META, PLTR, SHOP: share prices exceed $100 budget, and options would cost far more than the account can afford",
+    "BA puts: roc20 is -11% but the level is 1.24% away and options premium is too costly for $100; revisit only if the account grows",
+    "Scan rows marked 'broke out today' with negative distance_pct are ambiguous (close may be below the level); confirm before acting",
+    "Rates and inflation risk: Fed commentary and 10y at 5.2% could pressure risk assets"
+   ],
+   "brainstorm": "Once equity grows above roughly $150, test a single-share breakout in XOM or CVX on a close above the 55-day high, and track whether oil-linked breakouts follow through better than broad-market ones.",
+   "revisions": [
+    {
+     "at": "2026-10-13T18:17-04:00",
+     "session": "After-close review",
+     "decision": "new",
+     "why": "No prior plan exists. With $100 cash, most scan names are unaffordable as shares, so XLE is the only one that fits a full position. Its oil/energy trend is supported by the Guyana LNG and Netanyahu-Iran headlines and the Paul Tudor Jones oil call, though the rally could fade if the Iran news reverses.",
+     "watchlist": [
+      "XLE"
+     ]
+    }
+   ]
+  },
+  "meanrev": {
+   "for_day": "2026-10-14",
+   "made_at": "2026-10-13T18:17-04:00",
+   "session": "After-close review",
+   "decision": "keep",
+   "why": "The SMH position is still the only live thesis, and the fresh scan shows SMH at RSI(2) 1.6 with the close (588.19) still below the 5-day SMA (602.81). Cash is $0.07, so no new entries are possible, and the other washouts are either unaffordable (MU at $953) or in news-driven selloffs (JNJ).",
+   "summary": "Hold SMH with the existing stop at 552.5 and exit into the snap-back at the 5-day SMA (~603) or RSI(2) above 70, or by the 7-day time stop. Take no new trades until cash is available; the account can't fund anything else right now.",
+   "watchlist": [],
+   "position_plans": [
+    {
+     "symbol": "SMH",
+     "plan": "Hold. Keep the stop at 552.5 (do not widen). Exit at next open if the close reaches the 5-day SMA (~603) or RSI(2) > 70. Time-stop exit after 7 trading days if still open. Reward-to-risk is thin (~2.6% target vs ~6% stop), so do not add to it."
+    }
+   ],
+   "avoid": [
+    "MU: price ~$953 is far above the $100 account and its options minimums can't be met; the washout is also tied to a multi-day memory-chip selloff (YMTC share gains, SK Hynix below its 200-day).",
+    "JNJ: the WSJ spin-out report and the MedTech miss (stock down ~6% on the day) make this a news-driven decline, not a clean RSI washout; also unaffordable at $248 with $0.07 cash.",
+    "QQQ: the RSI(2) washout is broad-market and the account has no cash to act on it.",
+    "Any new entry while cash is below roughly $10: the account cannot fund a position."
+   ],
+   "brainstorm": "Add a pre-entry filter: only take RSI(2) washouts where (target - entry) / (entry - stop) >= 1.0, using the 5-day SMA as the target. SMH would have failed this (about 0.4), so the test would have blocked this trade.",
+   "revisions": [
+    {
+     "at": "2026-10-13T18:17-04:00",
+     "session": "After-close review",
+     "decision": "keep",
+     "why": "The SMH position is still the only live thesis, and the fresh scan shows SMH at RSI(2) 1.6 with the close (588.19) still below the 5-day SMA (602.81). Cash is $0.07, so no new entries are possible, and the other washouts are either unaffordable (MU at $953) or in news-driven selloffs (JNJ).",
+     "watchlist": []
+    }
+   ]
+  },
+  "volsell": {
+   "for_day": "2026-10-14",
+   "made_at": "2026-10-13T18:17-04:00",
+   "session": "After-close review",
+   "decision": "new",
+   "why": "No current plan exists, and the scan has no implied-vol data (last_iv is null), so the required IV/RV \u2265 1.1 gate cannot be verified for any candidate. A $1-wide spread also ties up about $100 of collateral, which is essentially the whole $100 account.",
+   "summary": "Stay flat tomorrow and build no spreads. Re-check the scan only if IV data for SPY, QQQ, or IWM loads and shows IV/RV at or above 1.1 with a 21\u201345 DTE expiry available. Otherwise, sit out.",
+   "watchlist": [],
+   "position_plans": [],
+   "avoid": [
+    "SPY, QQQ, IWM bull/bear credit spreads until real IV data confirms IV/RV \u2265 1.1 (unverified edge)",
+    "Any $1-wide spread at this account size: roughly $100 collateral per contract would risk near-total loss and could eliminate the account below $10",
+    "Put-side spreads into the Iran operation headline and hawkish Fed/inflation risk (Collins, Williams, Goolsbee comments), since a gap down through short strikes is the main threat"
+   ],
+   "brainstorm": "Test whether a narrower-width spread (e.g., $0.50 or $1 on a lower-priced ETF) is feasible so collateral stays under about $30 per contract, and only then evaluate IV/RV once quotes are available.",
+   "revisions": [
+    {
+     "at": "2026-10-13T18:17-04:00",
+     "session": "After-close review",
+     "decision": "new",
+     "why": "No current plan exists, and the scan has no implied-vol data (last_iv is null), so the required IV/RV \u2265 1.1 gate cannot be verified for any candidate. A $1-wide spread also ties up about $100 of collateral, which is essentially the whole $100 account.",
+     "watchlist": []
+    }
+   ]
+  }
+ },
+ "plans_updated": "2026-10-13T18:17-04:00"
 }
