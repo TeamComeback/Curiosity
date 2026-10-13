@@ -1,6 +1,6 @@
 """The monkey: a control firm that picks stocks at random.
 
-Same $100, same rulebook, same default stop and the same fractional shares as the real
+Same starting cash, same rulebook, same default stop and the same fractional shares as the real
 firms, but no skill at all: random stock, random size, random holding period. If an AI
 firm can't beat the monkey over time, its results are luck, not edge. Not racing."""
 import random

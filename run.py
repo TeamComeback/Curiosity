@@ -277,7 +277,7 @@ def write_dashboard(state, regime, equities):
         for aid, a in state["agents"].items() for pid, p in a["positions"].items()]
     store.save("dashboard.json", {
         "updated": store.now_et().isoformat(timespec="minutes"),
-        "race": state["race"], "regime": regime,
+        "race": state["race"], "regime": regime, "start_balance": config.RACE["start_balance"],
         "brain": "AI (" + config.BRAIN_MODEL + ")" if config.ANTHROPIC_API_KEY else "rules-only",
         "rules": config.RULES, "agents": agents, "equity_curve": curve, "positions": positions,
         "journal": store.load("journal.json", [])[-60:][::-1],

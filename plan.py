@@ -104,7 +104,7 @@ def scan(aid, bars, params, b=None):
 
 
 PLAN_SYSTEM = """You are the planning team (scout + strategist) of {name}, one of three AI trading firms in a
-paper-trading race: each started with $100, first to ${goal:,.0f} wins, below $10 is eliminated.
+paper-trading race: each started with ${start:,.0f}, first to ${goal:,.0f} wins, below $10 is eliminated.
 Your specialty: {style}
 Allowed instruments: {instruments}. Rules you cannot change: cash only, no naked options, max {max_trades}
 new trades per day, max {max_pos} open positions.
@@ -157,7 +157,7 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
                            for r in scan_rows[:3]],
              "position_plans": [], "avoid": [], "brainstorm": ""}
     else:
-        system = PLAN_SYSTEM.format(name=a["name"], goal=config.RACE["goal"], style=a["style"],
+        system = PLAN_SYSTEM.format(name=a["name"], goal=config.RACE["goal"], start=config.RACE["start_balance"], style=a["style"],
                                     instruments=", ".join(a["instruments"]), session=SESSIONS[session],
                                     max_trades=config.RULES["max_new_trades_per_day"], max_pos=config.RULES["max_open_positions"])
         d, err = None, None

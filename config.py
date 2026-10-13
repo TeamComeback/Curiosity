@@ -30,7 +30,7 @@ UNIVERSE = [
 
 # ---- The race ----
 RACE = {
-    "start_balance": 100.0,
+    "start_balance": 500.0,
     "goal": 5000.0,
     "eliminate_below": 10.0,    # equity under this = eliminated
 }
@@ -50,12 +50,13 @@ AGENTS = {
                 "style": "Volatility seller. Sells defined-risk credit spreads on index ETFs when implied "
                          "volatility is rich versus realized, collecting premium as time passes."},
     "baseline": {"name": "SPY benchmark", "competing": False, "instruments": ["stock"],
-                 "style": "Buys SPY with its $100 and holds. Not racing; it's the bar to beat."},
+                 "style": "Buys SPY with its starting cash and holds. Not racing; it's the bar to beat."},
     "monkey": {"name": "Random monkey", "competing": False, "instruments": ["stock"],
                "style": "Control group. Picks random stocks with random size and holding period under the "
                         "same rules. Not racing; if a firm can't beat it, the firm has no edge."},
 }
-VOL_UNDERLYINGS = ["SPY", "QQQ", "IWM"]
+# Index ETFs plus cheaper, liquid ETFs with $1 strikes so one spread doesn't tie up the whole account
+VOL_UNDERLYINGS = ["SPY", "QQQ", "IWM", "XLF", "XLE", "EEM", "GDX", "SLV", "TLT"]
 
 # ---- Hard rules (the only things agents cannot decide) ----
 RULES = {

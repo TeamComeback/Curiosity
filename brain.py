@@ -12,7 +12,7 @@ import requests
 import config
 
 DECIDE_SYSTEM = """You are {name}, one of three AI trading agents in a paper-trading race.
-Each agent started with $100. The first to reach ${goal:,.0f} wins. An agent that drops below
+Each agent started with ${start:,.0f}. The first to reach ${goal:,.0f} wins. An agent that drops below
 ${elim:.0f}, or can no longer afford any trade, fails. You may only trade your specialty:
 
 {style}
@@ -82,7 +82,7 @@ def decide(aid, view):
     if aid in ("baseline", "monkey") or not config.ANTHROPIC_API_KEY:
         return _rules_default(aid, view)
     a = config.AGENTS[aid]
-    system = DECIDE_SYSTEM.format(name=a["name"], goal=config.RACE["goal"], elim=config.RACE["eliminate_below"],
+    system = DECIDE_SYSTEM.format(name=a["name"], goal=config.RACE["goal"], start=config.RACE["start_balance"], elim=config.RACE["eliminate_below"],
                                   style=a["style"], instruments=", ".join(a["instruments"]),
                                   max_trades=config.RULES["max_new_trades_per_day"],
                                   max_pos=config.RULES["max_open_positions"])

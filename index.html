@@ -135,6 +135,7 @@ fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(render).c
 
 function render(d){
   DATA = d;
+  START = d.start_balance || 100;
   GOAL = d.race.goal || 5000;
   $("updated").textContent = "Updated " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
   const names = Object.fromEntries(d.agents.map(a => [a.id, a.name]));

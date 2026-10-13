@@ -1,8 +1,10 @@
-"""The benchmark: $100 into SPY (fractional) and hold. Not racing."""
+"""The benchmark: its starting cash into SPY (fractional) and hold. Not racing.
+Any new cash added to the race is invested in SPY too, so the comparison stays fair."""
 
 
 def entries(ctx):
-    if ctx["state"]["agents"]["baseline"]["positions"]:
+    agent = ctx["state"]["agents"]["baseline"]
+    if agent["cash"] - agent.get("reserved", 0) < 25:   # ignore crumbs
         return []
     price = ctx["prices"].get("SPY")
     if not price:

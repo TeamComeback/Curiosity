@@ -118,7 +118,7 @@ function phaseNow(){
   return "planning";                                               // weeknights: the game-plan crew stays
 }
 let phase = null;
-let GOAL = 5000, data = null, theme = {}, firmsState = {}, workers = [], ticker = [], hit = [];
+let GOAL = 5000, START = 100, data = null, theme = {}, firmsState = {}, workers = [], ticker = [], hit = [];
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money = n => "$" + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
@@ -179,13 +179,13 @@ function drawClimb(){
   const left = 40, right = W - 20;
   rect(0, CLIMB.top - 20, W, CLIMB.bottom - CLIMB.top + 40, theme.ground);
   // milestones
-  [[25, false], [100, true], [250, false], [1000, false], [2500, false]].forEach(([v, start]) => {
+  [[START / 4, false], [START, true], [START * 2, false], [Math.max(START * 4, GOAL / 2), false]].filter(([v]) => v < GOAL).forEach(([v, start]) => {
     const y = yClimb(v);
     ctx.setLineDash(start ? [] : [3, 4]); ctx.strokeStyle = start ? theme.ink2 : theme.rule; ctx.lineWidth = 1;
     ctx.beginPath(); ctx.moveTo(left, y); ctx.lineTo(right, y); ctx.stroke(); ctx.setLineDash([]);
     text(v >= 1000 ? `$${v / 1000}k` : `$${v}`, left - 6, y, 11, start ? theme.ink : theme.ink2, "right", start ? 600 : 500);
   });
-  text("start", left - 6, yClimb(100) + 12, 10, theme.ink2, "right");
+  text("start", left - 6, yClimb(START) + 12, 10, theme.ink2, "right");
   // elimination zone
   hatch(left, CLIMB.bottom, right - left, 12, alpha(theme.bad, .45));
   text("$10 · out of the race", right, CLIMB.bottom + 22, 11, theme.bad, "right", 500);
@@ -455,7 +455,7 @@ function posPnl(p){
   return 0;
 }
 function load(d){
-  data = d; GOAL = d.race && d.race.goal || 5000; phase = phaseNow();
+  data = d; GOAL = d.race && d.race.goal || 5000; START = d.start_balance || 100; phase = phaseNow();
   const today = (d.updated || "").slice(0, 10), curve = d.equity_curve || [];
   firmsState = {};
   d.agents.forEach(a => {
@@ -466,7 +466,7 @@ function load(d){
       y: o.y + (NB(id) ? 52 : o.h * .5 + (i % 2) * 34)}));
     const table = {x: x0 + w * .42, y: o.y + o.h - 30};
     firmsState[id] = {table, eq: a.equity, status: a.status, out: ["failed", "eliminated"].includes(a.status), agent: a, desks,
-      markerY: yClimb(100),
+      markerY: yClimb(START),
       history: curve.map(r => r.agents && r.agents[id]).filter(v => v != null),
       positions: (d.positions || []).filter(p => p.agent === id).slice(0, 4).map(p => ({sym: p.underlying || p.symbol, pnl: posPnl(p), p})),
       tradedToday: (d.journal || []).some(j => j.agent === id && j.type === "open" && (j.time || "").startsWith(today)) || (d.positions || []).some(p => p.agent === id)};
@@ -494,7 +494,7 @@ function renderText(){
 }
 
 function showCard(id){
-  const st = firmsState[id]; if (!st) return; const a = st.agent, ret = (a.equity / 100 - 1) * 100;
+  const st = firmsState[id]; if (!st) return; const a = st.agent, ret = (a.equity / START - 1) * 100;
   $("card").innerHTML = `<div class="h"><span>${esc(FIRMS[id].name)}</span><button aria-label="Close" onclick="document.getElementById('card').style.display='none'">×</button></div>
     <div class="eq">${money(a.equity)} <span class="${ret >= 0 ? "up" : "down"}" style="font-size:15px">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div>
     <p>${a.competing ? `${(a.equity / GOAL * 100).toFixed(1)}% of the way to $${GOAL.toLocaleString()}` : (id === "monkey" ? "Control group, not racing" : "Benchmark, not racing")}. Status: ${esc(a.status)}${a.status_reason ? `, ${esc(a.status_reason)}` : ""}.</p>
@@ -579,7 +579,7 @@ function roleInfo(k){
       base.lines.push(note ? `Latest thinking: “${note}”` : lastOpen ? `Last call: ${lastOpen.thesis}` : "Reviewing today's ideas. No trade approved yet.");
       if (livePlan && livePlan.summary) base.lines.push(`Working from this morning's plan: ${livePlan.summary}`);
       base.goal = {label: `Reach $${GOAL.toLocaleString()}`, value: `${money(a.equity)}`, pct: pct(a.equity, GOAL),
-                   note: `${(a.equity / 100).toFixed(2)}× the starting $100`};
+                   note: `${(a.equity / START).toFixed(2)}× the starting ${money(START)}`};
       break; }
     case "trader": {
       const lo = lastOpen ? `Last order: bought ${nice(lastOpen.symbol)}${lastOpen.instrument === "stock" ? " shares" : ""} for ${money(Math.abs(lastOpen.cost || 0))}${lastOpen.cost < 0 ? " credit" : ""}.` : "No orders placed yet.";

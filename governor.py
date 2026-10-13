@@ -48,7 +48,7 @@ def check_order(state, aid, cand, instrument, cost):
         return False, f"needs ${cost:.2f}, only ${available(agent):.2f} available (no margin)"
     if instrument == "stock" and cost < R["min_stock_trade"]:
         return False, "below minimum trade size"
-    if any(p.get("underlying", p["symbol"]) == cand["symbol"] for p in agent["positions"].values()):
+    if aid != "baseline" and any(p.get("underlying", p["symbol"]) == cand["symbol"] for p in agent["positions"].values()):
         return False, f"already holding {cand['symbol']}"
     last = agent["last_exits"].get(cand["symbol"])
     if last and (store.now_et().date() - date.fromisoformat(last)).days < R["reentry_cooldown_days"]:
