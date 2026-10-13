@@ -162,6 +162,13 @@
  ],
  "journal": [
   {
+   "time": "2026-10-13T18:20:35-04:00",
+   "type": "plan",
+   "agent": "volsell",
+   "note": "After-close review: revise. The IV/RV gate now passes on fresh data (SPY 1.30, QQQ 1.24, IWM 1.71), but the scan has no expiry, DTE, strikes, or credit quotes, so the edge is not yet tradable. A $1-wide spread also ties up roughly $70-80 of a $100 account, and the Iran operation and hawkish Fed headlines make put-side gap risk the main threat.",
+   "symbol": "IWM"
+  },
+  {
    "time": "2026-10-13T18:19:03-04:00",
    "type": "plan",
    "agent": "meanrev",
@@ -342,19 +349,28 @@
   },
   "volsell": {
    "for_day": "2026-10-14",
-   "made_at": "2026-10-13T18:17-04:00",
+   "made_at": "2026-10-13T18:20-04:00",
    "session": "After-close review",
-   "decision": "new",
-   "why": "No current plan exists, and the scan has no implied-vol data (last_iv is null), so the required IV/RV \u2265 1.1 gate cannot be verified for any candidate. A $1-wide spread also ties up about $100 of collateral, which is essentially the whole $100 account.",
-   "summary": "Stay flat tomorrow and build no spreads. Re-check the scan only if IV data for SPY, QQQ, or IWM loads and shows IV/RV at or above 1.1 with a 21\u201345 DTE expiry available. Otherwise, sit out.",
-   "watchlist": [],
+   "decision": "revise",
+   "why": "The IV/RV gate now passes on fresh data (SPY 1.30, QQQ 1.24, IWM 1.71), but the scan has no expiry, DTE, strikes, or credit quotes, so the edge is not yet tradable. A $1-wide spread also ties up roughly $70-80 of a $100 account, and the Iran operation and hawkish Fed headlines make put-side gap risk the main threat.",
+   "summary": "Watch IWM bear call spreads only, and only if a 21-45 DTE chain confirms IV/RV still at or above 1.1 and the credit is at least about $0.25 on the $1 width. Skip put-side spreads on SPY and QQQ until the Iran and Fed risk clears. Stay flat if the chain or credit does not confirm.",
+   "watchlist": [
+    {
+     "symbol": "IWM",
+     "setup": "Bear call spread, short strike near 0.20 delta above price, $1 wide, 21-45 DTE, selling premium on rich IV (IV/RV 1.71)",
+     "trigger": "Option chain confirms a 21-45 DTE expiry, credit at least $0.25 on the $1 width, and IWM holds below its recent highs at the open. Skip if IWM gaps up toward the short strike.",
+     "instrument": "spread",
+     "max_dollars": 75,
+     "conviction": 2
+    }
+   ],
    "position_plans": [],
    "avoid": [
-    "SPY, QQQ, IWM bull/bear credit spreads until real IV data confirms IV/RV \u2265 1.1 (unverified edge)",
-    "Any $1-wide spread at this account size: roughly $100 collateral per contract would risk near-total loss and could eliminate the account below $10",
-    "Put-side spreads into the Iran operation headline and hawkish Fed/inflation risk (Collins, Williams, Goolsbee comments), since a gap down through short strikes is the main threat"
+    "SPY and QQQ bull put spreads for now: the put side is exposed to a gap down on Iran operation or hawkish Fed news, and IV/RV is only verified from a daily scan, not live quotes",
+    "Any $1-wide spread that risks more than about $75 of the $100 account, since one loss would cripple the account near the $10 elimination line",
+    "Taking a second position in the same session: the two-trade daily cap and the thin account leave no room for error"
    ],
-   "brainstorm": "Test whether a narrower-width spread (e.g., $0.50 or $1 on a lower-priced ETF) is feasible so collateral stays under about $30 per contract, and only then evaluate IV/RV once quotes are available.",
+   "brainstorm": "If an IWM bear call trade works, test sizing down to a $0.50-wide spread (if available) to cut max loss roughly in half and keep more of the account alive.",
    "revisions": [
     {
      "at": "2026-10-13T18:17-04:00",
@@ -362,9 +378,18 @@
      "decision": "new",
      "why": "No current plan exists, and the scan has no implied-vol data (last_iv is null), so the required IV/RV \u2265 1.1 gate cannot be verified for any candidate. A $1-wide spread also ties up about $100 of collateral, which is essentially the whole $100 account.",
      "watchlist": []
+    },
+    {
+     "at": "2026-10-13T18:20-04:00",
+     "session": "After-close review",
+     "decision": "revise",
+     "why": "The IV/RV gate now passes on fresh data (SPY 1.30, QQQ 1.24, IWM 1.71), but the scan has no expiry, DTE, strikes, or credit quotes, so the edge is not yet tradable. A $1-wide spread also ties up roughly $70-80 of a $100 account, and the Iran operation and hawkish Fed headlines make put-side gap risk the main threat.",
+     "watchlist": [
+      "IWM"
+     ]
     }
    ]
   }
  },
- "plans_updated": "2026-10-13T18:19-04:00"
+ "plans_updated": "2026-10-13T18:20-04:00"
 }
