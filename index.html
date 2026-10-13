@@ -78,6 +78,7 @@ ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 </head>
 <body>
 <header><h1>Agent Race</h1><span class="sub" id="updated">Loading…</span></header>
+<div class="card banner" id="health" style="display:none;border-color:var(--bad)"></div>
 <div class="card banner" id="banner"><div class="t">Race to $5,000</div></div>
 <div class="pills" id="pills"></div>
 
@@ -116,6 +117,15 @@ const signed$ = n => (n<0?"-":"+") + "$" + Math.abs(Number(n)).toFixed(2);
 const cls = n => n>0 ? "pos" : n<0 ? "neg" : "";
 let START = 100, GOAL = 5000;
 const logPct = eq => Math.max(0, Math.min(1, Math.log(Math.max(eq,1)/START) / Math.log(GOAL/START))) * 100;
+
+fetch("data/health.json?ts=" + Date.now()).then(r => r.json()).then(h => {
+  const bad = (h.checks || []).filter(c => !c.ok);
+  if (h.ok || (!bad.length && !h.crash)) return;
+  const el = $("health"); el.style.display = "block";
+  el.innerHTML = `<div class="t" style="color:var(--bad)">⚠ Setup problem (checked ${esc(new Date(h.time).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}))})</div>` +
+    bad.map(c => `<div class="d"><b>${esc(c.name)}:</b> ${esc(c.detail)}</div>`).join("") +
+    (h.crash ? `<div class="d"><b>Last error:</b> ${esc(h.crash.error)}</div>` : "");
+}).catch(() => {});
 
 fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(render).catch(() => {
   $("updated").textContent = "No data yet";

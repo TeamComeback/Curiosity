@@ -92,4 +92,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import health
+    try:
+        main()
+    except Exception as e:
+        health.record_crash(e)
+        raise

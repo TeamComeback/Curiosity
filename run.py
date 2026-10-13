@@ -8,7 +8,7 @@ import uuid
 
 import requests
 
-import brain, config, governor, store
+import brain, config, governor, health, store
 from broker import AlpacaError, Broker
 from indicators import enrich
 import baseline, meanrev, trend, volsell
@@ -316,6 +316,13 @@ def check_finish(b, state, equities):
 
 # ---------------- main ----------------
 def main(force=False, broker=None):
+    if broker is None:
+        checks = health.run_checks()
+        for c in checks:
+            print(("OK   " if c["ok"] else "FAIL ") + c["name"] + ": " + c["detail"])
+        blocking = [c for c in checks if not c["ok"] and c["name"] in ("GitHub secrets", "Alpaca paper account")]
+        if blocking:
+            raise SystemExit("Stopped: " + blocking[0]["detail"])
     b = broker or Broker()
     if not b.clock().get("is_open") and not force:
         print("Market closed; nothing to do.")
@@ -410,4 +417,13 @@ def main(force=False, broker=None):
 
 
 if __name__ == "__main__":
-    main(force="--force" in sys.argv)
+    try:
+        main(force="--force" in sys.argv)
+    except SystemExit as e:
+        if e.code not in (None, 0):
+            health.record_crash(RuntimeError(str(e.code)))
+            print(e.code)
+            sys.exit(1)
+    except Exception as e:  # save the reason where the dashboard and repo can show it
+        health.record_crash(e)
+        raise
