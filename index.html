@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Agent Race</title>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f5f4f1;--surface:#fcfcfb;--line:#e4e2dc;--grid:#ecebe6;--track:#ecebe6;
+  --text:#0b0b0b;--text2:#52514e;--muted:#8a8984;
+  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#8a8984;
+  --good:#0ca30c;--bad:#d03b3b;--gold:#b07a00;
+  --radius:14px;
+}
+@media (prefers-color-scheme:dark){:root{
+  color-scheme:dark;
+  --bg:#111110;--surface:#1a1a19;--line:#2c2c2a;--grid:#262624;--track:#2c2c2a;
+  --text:#f0efec;--text2:#c3c2b7;--muted:#8f8e86;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#8f8e86;
+  --good:#3fbf3f;--bad:#e66767;--gold:#eda100;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  padding:env(safe-area-inset-top) 16px 40px;max-width:760px;margin-inline:auto}
+header{display:flex;justify-content:space-between;align-items:baseline;padding:18px 0 4px}
+h1{font-size:20px;margin:0;font-weight:600;letter-spacing:-.01em}
+h2{font-size:13px;margin:26px 0 10px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.06em}
+.sub{color:var(--muted);font-size:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.banner{margin-top:10px}
+.banner .t{font-weight:600;font-size:16px}
+.banner .d{color:var(--text2);font-size:13px;margin-top:4px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.pill{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--text2);background:var(--surface)}
+.agent{margin-bottom:10px}
+.agent .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.agent .name{display:flex;align-items:center;gap:8px;font-weight:600}
+.rank{font-size:12px;color:var(--muted);font-weight:600;width:20px}
+.sw{width:10px;height:10px;border-radius:3px;flex:none;display:inline-block}
+.status{font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--text2);white-space:nowrap}
+.status.winner{border-color:var(--gold);color:var(--gold)}
+.status.failed,.status.eliminated{border-color:var(--bad);color:var(--bad)}
+.reason.winner{color:var(--gold)}
+.money{display:flex;align-items:baseline;gap:10px;margin:8px 0 6px}
+.eq{font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.mult{font-size:14px;font-weight:600}
+.track{position:relative;height:10px;background:var(--track);border-radius:4px;overflow:hidden}
+.fill{position:absolute;left:0;top:0;bottom:0;border-radius:4px}
+.ticks{position:relative;height:16px;font-size:10px;color:var(--muted)}
+.ticks span{position:absolute;transform:translateX(-50%);top:2px}
+.stats{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--text2);margin-top:2px}
+.stats b{color:var(--text);font-weight:600}
+.note{font-size:13px;color:var(--text2);margin-top:8px;border-top:1px solid var(--line);padding-top:8px}
+.reason{font-size:12px;color:var(--bad);margin-top:6px}
+.pos{color:var(--good)}.neg{color:var(--bad)}
+.chartwrap{position:relative}
+svg{display:block;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--text2);margin-bottom:8px}
+.legend span{display:flex;align-items:center;gap:6px}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;
+  padding:8px 10px;font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.12);display:none;min-width:160px}
+.tip b{display:block;margin-bottom:4px}
+.tip div{display:flex;justify-content:space-between;gap:12px}
+.row{padding:12px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .h{display:flex;justify-content:space-between;gap:8px;font-weight:600;font-size:14px}
+.row .d{font-size:13px;color:var(--text2);margin-top:3px}
+.tag{font-size:11px;font-weight:600;padding:1px 7px;border-radius:6px;border:1px solid var(--line);color:var(--text2);margin-right:6px}
+details summary{cursor:pointer;color:var(--text2);font-size:13px;margin-top:8px}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+td,th{text-align:left;padding:5px 4px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.empty{color:var(--muted);font-size:13px;padding:6px 0}
+ul.rules{margin:0;padding-left:18px}
+ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
+</style>
+</head>
+<body>
+<header><h1>Agent Race</h1><span class="sub" id="updated">Loading…</span></header>
+<div class="card banner" id="banner"><div class="t">Race to $5,000</div></div>
+<div class="pills" id="pills"></div>
+
+<h2>Standings</h2>
+<div id="standings"></div>
+
+<h2>Equity over time</h2>
+<div class="card chartwrap">
+  <div class="legend" id="legend"></div>
+  <svg id="chart" viewBox="0 0 400 260" role="img" aria-label="Each agent's account value over time on a log scale, with the goal line"></svg>
+  <div class="tip" id="tip"></div>
+  <div class="sub">Log scale: each gridline is a multiple of the start, so a double looks the same at $100 or $2,000.</div>
+  <details><summary>Table view</summary><div id="tableview"></div></details>
+</div>
+
+<h2>Open positions</h2>
+<div class="card" id="positions"></div>
+
+<h2>Agent journal</h2>
+<div class="card" id="journal"></div>
+
+<h2>Weekly self-reviews</h2>
+<div class="card" id="reviews"></div>
+
+<h2>Rules of the race</h2>
+<div class="card"><ul class="rules" id="rules"></ul></div>
+
+<script>
+const COLOR = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", baseline:"var(--s4)"};
+const STATUS = {active:"Active", winner:"🏆 Winner", failed:"✕ Failed", eliminated:"✕ Eliminated"};
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money = n => n==null ? "–" : "$" + Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const money0 = n => "$" + Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
+const signed$ = n => (n<0?"-":"+") + "$" + Math.abs(Number(n)).toFixed(2);
+const cls = n => n>0 ? "pos" : n<0 ? "neg" : "";
+let START = 100, GOAL = 5000;
+const logPct = eq => Math.max(0, Math.min(1, Math.log(Math.max(eq,1)/START) / Math.log(GOAL/START))) * 100;
+
+fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(render).catch(() => {
+  $("updated").textContent = "No data yet";
+  $("standings").innerHTML = '<div class="card empty">The race has not started. Run the "Trading agent" workflow in GitHub Actions.</div>';
+});
+
+function render(d){
+  GOAL = d.race.goal || 5000;
+  $("updated").textContent = "Updated " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
+  const names = Object.fromEntries(d.agents.map(a => [a.id, a.name]));
+
+  if (d.race.status === "finished"){
+    const w = d.race.winner;
+    const a = d.race.assessment || {};
+    $("banner").innerHTML = `<div class="t">${w ? `🏆 ${esc(names[w])} won the race to ${money0(GOAL)}` : "Race over: every agent failed"}</div>
+      <div class="d">Finished ${new Date(d.race.finished_at).toLocaleString([], {month:"short",day:"numeric",year:"numeric"})}</div>
+      ${a.summary ? `<div class="d" style="margin-top:8px">${esc(a.summary)}</div>` : ""}
+      ${Object.entries(a.agents||{}).map(([k,v]) => `<div class="d"><span class="sw" style="background:${COLOR[k]};margin-right:6px"></span><b>${esc(names[k]||k)}:</b> ${esc(v)}</div>`).join("")}`;
+  } else {
+    const alive = d.agents.filter(a => a.competing && a.status==="active").length;
+    $("banner").innerHTML = `<div class="t">Race to ${money0(GOAL)}</div>
+      <div class="d">Each agent started with ${money0(START)}. First to ${money0(GOAL)} wins. ${alive} of 3 still racing.</div>`;
+  }
+  $("pills").innerHTML = [`Brain: ${esc(d.brain)}`, d.regime && d.regime.spy_trend ? `SPY trend: ${esc(d.regime.spy_trend)}` : ""]
+    .filter(Boolean).map(t => `<span class="pill">${t}</span>`).join("");
+
+  const comp = d.agents.filter(a => a.competing).sort((a,b) => (b.status==="winner")-(a.status==="winner") || b.equity-a.equity);
+  const bench = d.agents.filter(a => !a.competing);
+  const ticks = [2,5,10,25].filter(m => m < GOAL/START*0.6).map(m => `<span style="left:${logPct(START*m)}%">${m}×</span>`).join("") + `<span style="right:0;transform:none">${money0(GOAL)}</span>`;
+  $("standings").innerHTML = comp.map((a,i) => agentCard(a, i+1, ticks)).join("") + bench.map(a => agentCard(a, null, ticks)).join("");
+
+  chart(d, names);
+  positions(d.positions, names);
+  journal(d.journal);
+  reviews(d.reviews, names);
+  const r = d.rules;
+  $("rules").innerHTML = [
+    `Every agent starts with ${money0(START)} and trades only its specialty`,
+    `First to ${money0(GOAL)} wins; everyone is assessed when the race ends`,
+    `Eliminated below $10; failed if it can't afford its smallest trade`,
+    `Cash only, no margin; options limited to long calls/puts and defined-risk spreads`,
+    `At most ${r.max_new_trades_per_day} new trades per day and ${r.max_open_positions} open positions per agent`,
+    `Agents choose setups, dollar amounts, instruments, stops and exits; they can tighten stops, never loosen them`,
+    `Options results include a slippage haircut of half the bid-ask spread`,
+    `The SPY benchmark isn't racing; it shows what doing nothing would have earned`].map(t => `<li>${esc(t)}</li>`).join("");
+}
+
+function agentCard(a, rank, ticks){
+  const ret = (a.equity/START - 1) * 100;
+  const st = a.status;
+  return `<div class="card agent">
+    <div class="top"><div class="name">${rank ? `<span class="rank">#${rank}</span>` : ""}<span class="sw" style="background:${COLOR[a.id]}"></span>${esc(a.name)}</div>
+      <span class="status ${st}">${a.competing ? STATUS[st] || esc(st) : "Benchmark"}</span></div>
+    <div class="money"><span class="eq">${money(a.equity)}</span><span class="mult ${cls(ret)}">${a.multiple}× · ${ret>=0?"+":""}${ret.toFixed(1)}%</span></div>
+    ${a.competing ? `<div class="track" role="progressbar" aria-valuenow="${a.equity}" aria-valuemax="${GOAL}" aria-label="Progress to goal">
+      <div class="fill" style="width:${logPct(a.equity)}%;background:${COLOR[a.id]}"></div></div><div class="ticks">${ticks}</div>` : ""}
+    <div class="stats"><span>Cash <b>${money(a.available)}</b></span><span>Open <b>${a.open}</b></span><span>Closed <b>${a.closed}</b></span>
+      <span>Win rate <b>${a.win_rate==null?"–":a.win_rate+"%"}</b></span><span>Max DD <b>${a.max_dd_pct}%</b></span>
+      <span title="Return divided by max drawdown">Risk-adj <b>${a.risk_adj}</b></span></div>
+    ${a.status_reason && st!=="active" ? `<div class="reason ${st}">${esc(a.status_reason)}</div>` : ""}
+    ${a.notes && a.notes.length ? `<div class="note">“${esc(a.notes[0].note)}”</div>` : ""}
+  </div>`;
+}
+
+function chart(d, names){
+  const rows = d.equity_curve || [];
+  const ids = d.agents.map(a => a.id);
+  const series = ids.map(id => ({id, pts: rows.map(r => r.agents ? r.agents[id] : null)}));
+  $("legend").innerHTML = ids.map(id => `<span><span class="sw" style="background:${COLOR[id]}"></span>${esc(names[id])}</span>`).join("")
+    + `<span><span style="display:inline-block;width:14px;border-top:2px dashed var(--gold)"></span>Goal</span>`;
+  $("tableview").innerHTML = `<table><tr><th>Date</th>${ids.map(id=>`<th>${esc(names[id])}</th>`).join("")}</tr>` +
+    rows.slice().reverse().map(r => `<tr><td>${r.date}</td>${ids.map(id => `<td>${r.agents && r.agents[id]!=null ? money(r.agents[id]) : "–"}</td>`).join("")}</tr>`).join("") + "</table>";
+  const svg = $("chart");
+  if (rows.length < 2){ svg.innerHTML = `<text x="200" y="130" text-anchor="middle" fill="var(--muted)" font-size="13">The chart fills in after a second trading day</text>`; return; }
+  const W=400,H=260,L=44,R=58,T=10,B=24;
+  const vals = series.flatMap(s => s.pts).filter(v => v!=null && v>0);
+  const lo = Math.max(1, Math.min(...vals, START) * 0.8), hi = GOAL * 1.15;
+  const ly = v => Math.log(Math.max(v, lo));
+  const x = i => L + i*(W-L-R)/(rows.length-1);
+  const y = v => T + (ly(hi)-ly(v))*(H-T-B)/(ly(hi)-ly(lo));
+  let g = "";
+  [10,25,50,100,250,500,1000,2500,5000].filter(v => v>=lo && v<=hi).forEach(v => {
+    g += `<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="${v===START?"var(--muted)":"var(--grid)"}" stroke-width="1"/>`;
+    g += `<text x="${L-6}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--text2)">${v>=1000?"$"+v/1000+"k":"$"+v}</text>`;
+  });
+  g += `<line x1="${L}" x2="${W-R}" y1="${y(GOAL)}" y2="${y(GOAL)}" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="5 4"/>`;
+  const tk = [...new Set([0, Math.floor((rows.length-1)/2), rows.length-1])];
+  tk.forEach(i => g += `<text x="${x(i)}" y="${H-6}" text-anchor="middle" font-size="11" fill="var(--text2)">${rows[i].date.slice(5)}</text>`);
+  const labels = [];
+  series.forEach(s => {
+    let p = "", on = false;
+    s.pts.forEach((v,i) => { if (v==null) { on=false; return; } p += (on?"L":"M") + x(i).toFixed(1) + " " + y(v).toFixed(1); on = true; });
+    g += `<path d="${p}" fill="none" stroke="${COLOR[s.id]}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"${s.id==="baseline"?' stroke-dasharray="4 3"':""}/>`;
+    const last = s.pts[s.pts.length-1];
+    if (last!=null) labels.push({y:y(last), v:last});
+  });
+  labels.sort((a,b) => a.y-b.y);
+  for (let i=1;i<labels.length;i++) if (labels[i].y - labels[i-1].y < 13) labels[i].y = labels[i-1].y + 13;
+  labels.forEach(l => g += `<text x="${W-R+6}" y="${l.y+4}" font-size="11" fill="var(--text)">${money0(l.v)}</text>`);
+  g += `<line id="xh" y1="${T}" y2="${H-B}" stroke="var(--muted)" stroke-width="1" visibility="hidden"/>`;
+  g += series.map(s => `<circle class="dot" data-id="${s.id}" r="4.5" fill="${COLOR[s.id]}" stroke="var(--surface)" stroke-width="2" visibility="hidden"/>`).join("");
+  g += `<rect x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" fill="transparent" id="hit"/>`;
+  svg.innerHTML = g;
+  const tip = $("tip"), hit = $("hit"), xh = $("xh");
+  const move = ev => {
+    const pt = ev.touches ? ev.touches[0] : ev, box = svg.getBoundingClientRect();
+    const sx = (pt.clientX - box.left) * W / box.width;
+    const i = Math.max(0, Math.min(rows.length-1, Math.round((sx-L)/((W-L-R)/(rows.length-1)))));
+    xh.setAttribute("x1", x(i)); xh.setAttribute("x2", x(i)); xh.setAttribute("visibility","visible");
+    svg.querySelectorAll(".dot").forEach(c => {
+      const v = series.find(s => s.id===c.dataset.id).pts[i];
+      if (v==null) { c.setAttribute("visibility","hidden"); return; }
+      c.setAttribute("cx", x(i)); c.setAttribute("cy", y(v)); c.setAttribute("visibility","visible");
+    });
+    tip.innerHTML = `<b>${rows[i].date}</b>` + series.map(s => `<div><span><span class="sw" style="background:${COLOR[s.id]};margin-right:6px"></span>${esc(names[s.id])}</span><span>${s.pts[i]==null?"–":money(s.pts[i])}</span></div>`).join("");
+    tip.style.display = "block";
+    const px = x(i) * box.width / W;
+    tip.style.left = Math.min(Math.max(px - tip.offsetWidth/2, 0), box.width - tip.offsetWidth) + "px";
+    tip.style.top = (svg.offsetTop + 6) + "px";
+  };
+  const hide = () => { tip.style.display="none"; xh.setAttribute("visibility","hidden"); svg.querySelectorAll(".dot").forEach(c => c.setAttribute("visibility","hidden")); };
+  hit.addEventListener("mousemove", move); hit.addEventListener("touchstart", move, {passive:true}); hit.addEventListener("touchmove", move, {passive:true});
+  hit.addEventListener("mouseleave", hide); hit.addEventListener("touchend", () => setTimeout(hide, 1500));
+}
+
+function positions(list, names){
+  if (!list || !list.length){ $("positions").innerHTML = '<div class="empty">No open positions.</div>'; return; }
+  $("positions").innerHTML = list.map(p => {
+    let what, pnl = "";
+    if (p.kind==="stock"){ what = `${Number(p.qty).toFixed(4)} sh @ ${money(p.entry)}${p.stop?` · stop ${money(p.stop)}`:""}`;
+      if (p.last!=null){ const v=(p.last-p.entry)*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
+    else if (p.kind==="option"){ what = `${p.qty} ${esc(p.opt_type)}${p.qty>1?"s":""} @ ${money(p.entry)} · exp ${esc(p.expiry)}`;
+      if (p.mark!=null){ const v=(p.mark-p.entry)*100*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
+    else { what = `${esc(p.structure)} ×${p.qty} · credit ${money(p.entry)} · exp ${esc(p.expiry)}`;
+      if (p.mark!=null){ const v=(p.entry-p.mark)*100*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
+    return `<div class="row"><div class="h"><span><span class="sw" style="background:${COLOR[p.agent]};margin-right:6px"></span>${esc(p.underlying||p.symbol)}</span>${pnl}</div>
+      <div class="d">${esc(names[p.agent])} · ${what}</div>${p.thesis?`<div class="d">${esc(p.thesis)}${p.confidence?` · conf ${p.confidence}/5`:""}</div>`:""}</div>`;
+  }).join("");
+}
+
+function journal(list){
+  const label = {open:"OPEN",close:"CLOSE",rule_block:"BLOCKED",unfilled:"UNFILLED",exit_unfilled:"UNFILLED",error:"ERROR",
+    param_change:"RETUNED",failed:"FAILED",eliminated:"ELIMINATED",race_end:"FINISH"};
+  if (!list || !list.length){ $("journal").innerHTML = '<div class="empty">No activity yet.</div>'; return; }
+  $("journal").innerHTML = list.slice(0,40).map(j => {
+    const when = new Date(j.time).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
+    let body = esc(j.thesis || j.note || "");
+    if (j.type==="close") body = `<span class="${cls(j.pnl)}">${signed$(j.pnl)}</span> · ${esc(j.note)}`;
+    if (j.type==="open") body = `${esc(j.instrument)} · ${money(Math.abs(j.cost))} ${j.cost<0?"credit":""} · ${esc(j.thesis)}`;
+    const sym = j.symbol && j.symbol.length > 12 ? j.symbol.replace(/^([A-Z]+)(\d{6})([CP]).*/, "$1 $3 $2") : (j.symbol||"");
+    return `<div class="row"><div class="h"><span><span class="tag">${label[j.type]||esc(j.type).toUpperCase()}</span>${esc(sym)}</span><span class="sub">${when}</span></div>
+      <div class="d">${j.agent?`<span class="sw" style="background:${COLOR[j.agent]||"var(--muted)"};margin-right:6px"></span>`:""}${body}</div></div>`;
+  }).join("");
+}
+
+function reviews(list, names){
+  if (!list || !list.length){ $("reviews").innerHTML = '<div class="empty">Agents review themselves every Friday after the close.</div>'; return; }
+  $("reviews").innerHTML = list.map(r => `<div class="row"><div class="h"><span>Week of ${esc(r.date)}</span></div>` +
+    Object.entries(r.agents||{}).map(([k,v]) => `<div class="d"><span class="sw" style="background:${COLOR[k]};margin-right:6px"></span><b>${esc(names[k]||k)}:</b> ${esc(v.summary)}</div>` +
+      (v.applied||[]).map(a => `<div class="d" style="padding-left:16px">Retuned ${esc(a.param)}: ${a.old} → ${a.new}. ${esc(a.reason)}</div>`).join("")).join("") + `</div>`).join("");
+}
+</script>
+</body>
+</html>
