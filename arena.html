@@ -4,241 +4,355 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Race Arena</title>
+<title>The Street</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#07080a;--panel:rgba(18,19,22,.86);--line:rgba(255,255,255,.12);--text:#f0efec;--text2:#b9b8b0;--muted:#86857e;
-  --s1:#3987e5;--s2:#e8703a;--s3:#22b37f;--s4:#9a9990;--gold:#f2b632;--good:#3fbf3f;--bad:#e66767}
+:root{
+  color-scheme:light;
+  --ground:#e9ece8;--paper:#f6f7f4;--ink:#1f2a2e;--ink2:#56636a;--rule:#a9b3b4;--faint:#d5dad7;
+  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--bench:#7e8a8c;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
+}
+@media (prefers-color-scheme:dark){:root{
+  color-scheme:dark;
+  --ground:#11171a;--paper:#182024;--ink:#dce3e2;--ink2:#9aa7a9;--rule:#4a575c;--faint:#26312f;
+  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--bench:#8d999b;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
+}}
 *{box-sizing:border-box}
-html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;overflow:hidden}
-#scene{position:fixed;inset:0;touch-action:none}
-.top{position:fixed;left:0;right:0;top:0;padding:calc(env(safe-area-inset-top) + 10px) 14px 10px;display:flex;justify-content:space-between;align-items:center;
-  background:linear-gradient(var(--bg),rgba(7,8,10,0));pointer-events:none}
-.top a,.top button{pointer-events:auto}
-h1{font-size:17px;margin:0;font-weight:600}
-.sub{font-size:12px;color:var(--muted)}
-.btn{font:inherit;font-size:12px;color:var(--text2);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-decoration:none}
-.legend{position:fixed;left:14px;right:14px;bottom:calc(env(safe-area-inset-bottom) + 12px);display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--text2);
-  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 12px;backdrop-filter:blur(8px)}
-.legend span{display:flex;align-items:center;gap:6px}
-.sw{width:9px;height:9px;border-radius:50%;display:inline-block}
-.card{position:fixed;left:14px;right:14px;bottom:calc(env(safe-area-inset-bottom) + 12px);z-index:2;background:var(--panel);border:1px solid var(--line);border-radius:14px;
-  padding:12px 14px;backdrop-filter:blur(10px);display:none;max-height:42vh;overflow:auto}
-.card .h{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:15px}
-.card .eq{font-size:24px;font-weight:600;margin:4px 0 2px;font-variant-numeric:tabular-nums}
-.card .d{color:var(--text2);font-size:13px;margin-top:4px}
-.card .x{background:none;border:0;color:var(--muted);font-size:20px;line-height:1;padding:0 2px}
-.pos{color:var(--good)}.neg{color:var(--bad)}
-.hint{position:fixed;top:calc(env(safe-area-inset-top) + 52px);left:0;right:0;text-align:center;font-size:12px;color:var(--muted);pointer-events:none;transition:opacity 1s}
-#msg{position:fixed;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--text2)}
+html,body{margin:0;background:var(--ground);color:var(--ink);font:15px/1.45 "IBM Plex Sans Condensed",-apple-system,BlinkMacSystemFont,sans-serif}
+.wrap{max-width:480px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 8px) 0 calc(env(safe-area-inset-bottom) + 24px)}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:8px 14px 12px}
+.bar h1{font-size:20px;font-weight:600;margin:0;letter-spacing:-.01em}
+.bar a{color:var(--ink2);font-size:14px;text-decoration:none;border:1px solid var(--rule);border-radius:6px;padding:4px 10px}
+.bar a:focus-visible,canvas:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+canvas{display:block;width:100%;touch-action:pan-y}
+.block{margin:14px;border:1.5px solid var(--ink);background:var(--paper);display:grid;grid-template-columns:1fr auto;font-size:13px}
+.block div{padding:6px 10px;border-bottom:1px solid var(--rule)}
+.block div:nth-child(odd){border-right:1px solid var(--rule)}
+.block div:nth-last-child(-n+2){border-bottom:0}
+.block b{display:block;font-size:15px;font-weight:600}
+.block span{color:var(--ink2)}
+.staff{margin:0 14px;font-size:14px;color:var(--ink2)}
+.staff h2{font-size:15px;color:var(--ink);font-weight:600;margin:18px 0 6px}
+.staff p{margin:4px 0}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.card{position:fixed;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom) + 12px);max-width:456px;margin:0 auto;background:var(--paper);
+  border:1.5px solid var(--ink);padding:12px 14px;display:none;max-height:46vh;overflow:auto;z-index:5;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.card .h{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:16px}
+.card .eq{font-size:26px;font-weight:600;margin:2px 0;font-variant-numeric:tabular-nums}
+.card p{margin:4px 0;color:var(--ink2);font-size:14px}
+.card button{background:none;border:0;color:var(--ink2);font:inherit;font-size:22px;line-height:1;cursor:pointer}
+.up{color:var(--good)}.down{color:var(--bad)}
 </style>
 </head>
 <body>
-<div id="scene" role="img" aria-label="3D race arena: each agent is a glowing orb climbing its own tower toward a gold $5,000 ring; height is account value on a log scale"></div>
-<div class="top"><div><h1>Race Arena</h1><div class="sub" id="updated">Loading…</div></div><a class="btn" href="index.html">Dashboard</a></div>
-<div class="hint" id="hint">Drag to rotate · pinch to zoom · tap an orb</div>
-<div class="card" id="card"></div>
-<div class="legend" id="legend"></div>
-<div id="msg"></div>
+<div class="wrap">
+  <div class="bar"><h1>The Street</h1><a href="index.html">Dashboard</a></div>
+  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of three trading firms racing up the road to the $5,000 headquarters. Tap a firm for details."></canvas>
+  <div class="block" id="block"></div>
+  <div class="staff" id="staff"></div>
+</div>
+<div class="card" id="card" role="dialog" aria-live="polite"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <script>
-const COLORS = {trend:0x3987e5, meanrev:0xe8703a, volsell:0x22b37f, baseline:0x9a9990};
-const CSS = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", baseline:"var(--s4)"};
-const SLOT = {trend:[-7.5,0,0], meanrev:[-2.5,0,0], volsell:[2.5,0,0], baseline:[7.5,0,0]};
-const SHORT = {trend:"Trend", meanrev:"Mean-rev", volsell:"Vol-sell", baseline:"SPY"};
-const H = 20, FLOOR = 10, GOAL_DEFAULT = 5000;
-let GOAL = GOAL_DEFAULT;
-const yOf = v => Math.max(0, Math.min(1.08, Math.log(Math.max(v, FLOOR) / FLOOR) / Math.log(GOAL / FLOOR))) * H;
+const W = 400;
+const FIRMS = {
+  trend:   {name:"Trend Co.",         colorVar:"--trend",
+            staff:[["scout","Scout","Scans for breakouts to new highs"],["strat","Strategist","The AI: picks setups and position size"],
+                   ["trader","Trader","Places orders at the exchange"],["risk","Risk manager","Trails the stops as winners run"]]},
+  meanrev: {name:"Snapback Partners", colorVar:"--meanrev",
+            staff:[["scout","Scout","Hunts oversold washouts"],["strat","Strategist","The AI: picks setups and position size"],
+                   ["trader","Trader","Buys the dip, sells the bounce"]]},
+  volsell: {name:"Premium House",     colorVar:"--volsell",
+            staff:[["vol","Vol analyst","Compares implied vs. realized volatility"],["strat","Strategist","The AI: picks spreads and size"],
+                   ["trader","Options trader","Sells defined-risk credit spreads"],["risk","Risk manager","Watches profit targets, stops and expiry"]]},
+  baseline:{name:"Index Booth",       colorVar:"--bench", staff:[["index","Index buyer","Bought SPY once and holds it"]]},
+};
+const ROLE_COLOR = {scout:"#4b7f95", strat:"#7357b3", trader:"#c38a1c", risk:"#b8504a", vol:"#2c8f8a", index:"#7e8a8c", comp:"#55636a"};
+const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:200}, baseline:{y:1240,h:84}};
+const H = 1340, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84};
+const LANES = {trend:86, meanrev:168, volsell:250, baseline:332};
+let GOAL = 5000, data = null, theme = {}, firmsState = {}, workers = [], ticker = [], hit = [];
+const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money = n => "$" + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
-const $ = id => document.getElementById(id);
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (!window.THREE) { $("msg").style.display = "flex"; $("msg").textContent = "3D view couldn't load. Check your connection and reload."; }
+function readTheme(){
+  const cs = getComputedStyle(document.documentElement), g = v => cs.getPropertyValue(v).trim();
+  theme = {ground:g("--ground"), paper:g("--paper"), ink:g("--ink"), ink2:g("--ink2"), rule:g("--rule"), faint:g("--faint"),
+           gold:g("--gold"), good:g("--good"), bad:g("--bad")};
+  Object.keys(FIRMS).forEach(id => FIRMS[id].color = g(FIRMS[id].colorVar));
+}
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", readTheme);
 
-const renderer = new THREE.WebGLRenderer({antialias:true});
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-renderer.setSize(innerWidth, innerHeight);
-$("scene").appendChild(renderer.domElement);
-const scene = new THREE.Scene();
-scene.fog = new THREE.Fog(0x07080a, 30, 70);
-const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 200);
-const portrait = () => innerWidth / innerHeight < 0.8;
-camera.position.set(0, portrait() ? 17 : 13, portrait() ? 48 : 30);
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.target.set(0, 9, 0); controls.enableDamping = true; controls.dampingFactor = 0.08;
-controls.minDistance = 10; controls.maxDistance = 55; controls.maxPolarAngle = Math.PI * 0.62;
-controls.autoRotate = true; controls.autoRotateSpeed = 0.35;
-controls.addEventListener("start", () => { controls.autoRotate = false; $("hint").style.opacity = 0; });
+const cv = $("plan"), ctx = cv.getContext("2d");
+let S = 1;
+function size(){
+  const css = cv.clientWidth || Math.min(innerWidth, 480), dpr = Math.min(devicePixelRatio || 1, 3);
+  S = css / W; cv.style.height = (H * S) + "px"; cv.width = css * dpr; cv.height = H * S * dpr;
+  ctx.setTransform(S * dpr, 0, 0, S * dpr, 0, 0);
+}
+addEventListener("resize", size);
 
-scene.add(new THREE.AmbientLight(0xffffff, 0.35));
-const key = new THREE.DirectionalLight(0xffffff, 0.6); key.position.set(10, 30, 15); scene.add(key);
+// ---------- scale ----------
+const yClimb = v => {
+  const f = Math.log(Math.max(v, 10) / 10) / Math.log(GOAL / 10);
+  return CLIMB.bottom - Math.max(0, Math.min(1.04, f)) * (CLIMB.bottom - CLIMB.top);
+};
 
-function label(text, color = "#b9b8b0", size = 28){
-  const c = document.createElement("canvas"), ctx = c.getContext("2d");
-  ctx.font = `600 ${size}px -apple-system, Segoe UI, Roboto, sans-serif`;
-  const w = Math.ceil(ctx.measureText(text).width) + 16; c.width = w; c.height = size + 14;
-  ctx.font = `600 ${size}px -apple-system, Segoe UI, Roboto, sans-serif`; ctx.fillStyle = color; ctx.textBaseline = "middle";
-  ctx.fillText(text, 8, c.height / 2);
-  const tex = new THREE.CanvasTexture(c); tex.minFilter = THREE.LinearFilter;
-  const s = new THREE.Sprite(new THREE.SpriteMaterial({map:tex, transparent:true, depthWrite:false}));
-  const k = 0.03; s.scale.set(c.width * k, c.height * k, 1); return s;
+// ---------- drawing helpers ----------
+function font(px, w = 500){ ctx.font = `${w} ${px}px "IBM Plex Sans Condensed", -apple-system, sans-serif`; }
+function text(t, x, y, px = 12, color = theme.ink, align = "left", w = 500){ font(px, w); ctx.fillStyle = color; ctx.textAlign = align; ctx.textBaseline = "middle"; ctx.fillText(t, x, y); }
+function rect(x, y, w, h, fill, stroke, lw = 1){ ctx.beginPath(); ctx.rect(x, y, w, h); if (fill){ ctx.fillStyle = fill; ctx.fill(); } if (stroke){ ctx.lineWidth = lw; ctx.strokeStyle = stroke; ctx.stroke(); } }
+function alpha(hex, a){ const n = hex.replace("#", ""); const v = parseInt(n.length === 3 ? n.split("").map(c => c + c).join("") : n, 16);
+  return `rgba(${v >> 16 & 255},${v >> 8 & 255},${v & 255},${a})`; }
+function hatch(x, y, w, h, color){ ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip(); ctx.strokeStyle = color; ctx.lineWidth = 1;
+  for (let i = -h; i < w; i += 7){ ctx.beginPath(); ctx.moveTo(x + i, y + h); ctx.lineTo(x + i + h, y); ctx.stroke(); } ctx.restore(); }
+
+// ---------- static-ish layers ----------
+function drawHQ(t){
+  const winner = data && data.race.winner;
+  rect(0, 0, W, CLIMB.top - 20, theme.ground);
+  // plaza paving
+  ctx.strokeStyle = theme.faint; ctx.lineWidth = 1;
+  for (let x = 20; x < W; x += 20){ ctx.beginPath(); ctx.moveTo(x, 8); ctx.lineTo(x, 118); ctx.stroke(); }
+  // HQ building
+  const bx = 70, by = GOAL_Y - 22, bw = 260, bh = 70;
+  rect(bx, by, bw, bh, theme.paper, theme.gold, 3);
+  rect(bx + 6, by + 6, bw - 12, bh - 12, null, alpha(theme.gold, .5), 1);
+  text(`The $${GOAL.toLocaleString()} Club`, W / 2, by + 26, 17, theme.ink, "center", 600);
+  text(winner ? `Won by ${FIRMS[winner].name}` : "First firm through the door wins", W / 2, by + 48, 12, theme.ink2, "center");
+  // door
+  rect(W / 2 - 16, by + bh - 2, 32, 4, theme.gold);
+  if (winner){ for (let i = 0; i < 24; i++){ const a = i * 2.39 + t * .6, r = 30 + (i % 6) * 18;
+    rect(W / 2 + Math.cos(a) * r * 1.9, by + bh / 2 + Math.sin(a) * r * .55, 4, 4, i % 3 ? theme.gold : FIRMS[winner].color); } }
 }
 
-// floor: the market
-const floor = new THREE.Mesh(new THREE.CircleGeometry(16, 64), new THREE.MeshBasicMaterial({color:0x111215}));
-floor.rotation.x = -Math.PI / 2; scene.add(floor);
-const grid = new THREE.PolarGridHelper(16, 16, 8, 64, 0x2a2b30, 0x1c1d21); grid.position.y = 0.01; scene.add(grid);
-const failRing = new THREE.Mesh(new THREE.RingGeometry(15.6, 16, 64), new THREE.MeshBasicMaterial({color:0xe66767, transparent:true, opacity:0.5, side:THREE.DoubleSide}));
-failRing.rotation.x = -Math.PI / 2; failRing.position.y = 0.02; scene.add(failRing);
-const floorLbl = label("$10 · eliminated", "#e66767", 24); floorLbl.position.set(0, 0.6, 16.6); scene.add(floorLbl);
-
-// market particles drifting on the floor
-const PN = 500, pGeo = new THREE.BufferGeometry(), pPos = new Float32Array(PN * 3), pSeed = [];
-for (let i = 0; i < PN; i++){ const r = 2 + Math.random() * 13.5, a = Math.random() * Math.PI * 2; pSeed.push({r, a, s:(Math.random() - 0.5) * 0.15, h:Math.random()});
-  pPos.set([Math.cos(a) * r, 0.1 + Math.random() * 0.4, Math.sin(a) * r], i * 3); }
-pGeo.setAttribute("position", new THREE.BufferAttribute(pPos, 3));
-const particles = new THREE.Points(pGeo, new THREE.PointsMaterial({color:0x5a5c66, size:0.12, transparent:true, opacity:0.8}));
-scene.add(particles);
-
-// goal halo
-const goalY = H;
-const halo = new THREE.Mesh(new THREE.TorusGeometry(11, 0.09, 12, 128), new THREE.MeshBasicMaterial({color:0xf2b632}));
-halo.rotation.x = Math.PI / 2; halo.position.y = goalY; scene.add(halo);
-const haloGlow = new THREE.Mesh(new THREE.TorusGeometry(11, 0.5, 12, 128), new THREE.MeshBasicMaterial({color:0xf2b632, transparent:true, opacity:0.08}));
-haloGlow.rotation.x = Math.PI / 2; haloGlow.position.y = goalY; scene.add(haloGlow);
-
-const agentsObj = {}, pickables = [], streams = [];
-let data = null;
-
-function buildTower(id, agent, curve){
-  const [x, , z] = SLOT[id], col = COLORS[id], competing = agent.competing;
-  const g = new THREE.Group(); g.position.set(x, 0, z); scene.add(g);
-  const glass = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, H, 16, 1, true),
-    new THREE.MeshBasicMaterial({color:col, transparent:true, opacity:competing ? 0.18 : 0.08}));
-  glass.position.y = H / 2; g.add(glass);
-  [100, 500, 1000, 2500].forEach(v => {
-    const r = new THREE.Mesh(new THREE.TorusGeometry(0.55, 0.02, 6, 40), new THREE.MeshBasicMaterial({color:v === 100 ? 0xffffff : 0x55565c, transparent:true, opacity:v === 100 ? 0.5 : 0.35}));
-    r.rotation.x = Math.PI / 2; r.position.y = yOf(v); g.add(r);
-    if (id === "trend" && v !== 100) { const l = label(v >= 1000 ? `$${v / 1000}k` : `$${v}`, "#86857e", 22); l.position.set(-1.6, yOf(v), 0); g.add(l); }
+function drawClimb(){
+  const left = 40, right = W - 20;
+  rect(0, CLIMB.top - 20, W, CLIMB.bottom - CLIMB.top + 40, theme.ground);
+  // milestones
+  [[25, false], [100, true], [250, false], [1000, false], [2500, false]].forEach(([v, start]) => {
+    const y = yClimb(v);
+    ctx.setLineDash(start ? [] : [3, 4]); ctx.strokeStyle = start ? theme.ink2 : theme.rule; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(left, y); ctx.lineTo(right, y); ctx.stroke(); ctx.setLineDash([]);
+    text(v >= 1000 ? `$${v / 1000}k` : `$${v}`, left - 6, y, 11, start ? theme.ink : theme.ink2, "right", start ? 600 : 500);
   });
-  // equity history as a helix around the tower: angle = time, height = value
-  const pts = curve.map((r, i) => r.agents && r.agents[id] != null ? {i, v:r.agents[id]} : null).filter(Boolean);
-  if (pts.length > 1){
-    const n = pts.length, turns = Math.min(2.5, 0.5 + n / 20);
-    const path = pts.map((p, k) => { const a = (k / (n - 1)) * turns * Math.PI * 2; return new THREE.Vector3(Math.cos(a) * 1.3, yOf(p.v), Math.sin(a) * 1.3); });
-    const curveObj = new THREE.CatmullRomCurve3(path);
-    const tube = new THREE.Mesh(new THREE.TubeGeometry(curveObj, Math.max(20, n * 6), 0.05, 6, false),
-      new THREE.MeshBasicMaterial({color:col, transparent:true, opacity:competing ? 0.75 : 0.45}));
-    g.add(tube);
+  text("start", left - 6, yClimb(100) + 12, 10, theme.ink2, "right");
+  // elimination zone
+  hatch(left, CLIMB.bottom, right - left, 12, alpha(theme.bad, .45));
+  text("$10 · out of the race", right, CLIMB.bottom + 22, 11, theme.bad, "right", 500);
+  // roads: from offices up to the HQ door
+  Object.entries(LANES).forEach(([id, x]) => {
+    const bench = id === "baseline", w = bench ? 10 : 22;
+    rect(x - w / 2, CLIMB.top - 30, w, CLIMB.bottom - CLIMB.top + 42, bench ? alpha(theme.rule, .25) : alpha(theme.rule, .35));
+    if (!bench){ ctx.setLineDash([6, 8]); ctx.strokeStyle = theme.paper; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(x, CLIMB.top - 26); ctx.lineTo(x, CLIMB.bottom + 10); ctx.stroke(); ctx.setLineDash([]); }
+  });
+  // feeder roads into the HQ
+  ctx.strokeStyle = alpha(theme.rule, .35); ctx.lineWidth = 6;
+  Object.entries(LANES).forEach(([id, x]) => { if (id === "baseline") return;
+    ctx.beginPath(); ctx.moveTo(x, CLIMB.top - 28); ctx.quadraticCurveTo(x, GOAL_Y + 70, W / 2, GOAL_Y + 50); ctx.stroke(); });
+}
+
+function drawFirmMarkers(t){
+  Object.entries(LANES).forEach(([id, x]) => {
+    const st = firmsState[id]; if (!st) return;
+    st.markerY += (yClimb(st.eq) - st.markerY) * .06;
+    const y = st.markerY, bench = id === "baseline", out = st.out;
+    // equity history: faint trail along the road
+    if (st.history.length > 1){ ctx.strokeStyle = alpha(FIRMS[id].color, .45); ctx.lineWidth = 2; ctx.beginPath();
+      st.history.forEach((v, i) => { const hx = x + (bench ? 0 : 8) + Math.sin(i * .9) * 2, hy = yClimb(v); i ? ctx.lineTo(hx, hy) : ctx.moveTo(hx, hy); }); ctx.stroke(); }
+    // marker: a tiny version of the firm's building
+    const w = bench ? 18 : 30, h = bench ? 14 : 20;
+    rect(x - w / 2, y - h / 2, w, h, out ? theme.faint : FIRMS[id].color, theme.ink, 1.2);
+    if (!out && !bench){ const blink = (Math.sin(t * 3 + x) + 1) / 2; rect(x - 3, y - h / 2 - 4, 6, 3, alpha(FIRMS[id].color, .4 + blink * .6)); }
+    const lx = x + (bench ? 13 : 19);
+    text(money(st.eq), lx, y - 6, 11, out ? theme.bad : theme.ink, "left", 600);
+    text(bench ? "SPY" : FIRMS[id].name.split(" ")[0], lx, y + 7, 10, theme.ink2, "left");
+    hit.push({id, x: x - w, y: y - h, w: w * 2.6, h: h * 2});
+  });
+}
+
+function drawExchange(t){
+  const {y, h} = EXCH;
+  rect(0, y - 10, W, h + 20, theme.ground);
+  rect(40, y, W - 60, h, theme.paper, theme.ink, 2);
+  text("Exchange", 54, y + 16, 15, theme.ink, "left", 600);
+  text("orders fill here", 54, y + 32, 11, theme.ink2);
+  // trading floor counters
+  for (let i = 0; i < 5; i++) rect(170 + i * 40, y + 12, 28, 10, alpha(theme.rule, .5), theme.rule);
+  // ticker tape
+  rect(46, y + h - 26, W - 72, 18, theme.ink);
+  ctx.save(); ctx.beginPath(); ctx.rect(46, y + h - 26, W - 72, 18); ctx.clip();
+  const tape = ticker.join("     "); font(11, 500); const tw = ctx.measureText(tape + "     ").width || 1;
+  const off = reduce ? 0 : (t * 28) % tw;
+  for (let k = 0; k < 3; k++) text(tape, 52 - off + k * tw, y + h - 17, 11, theme.paper);
+  ctx.restore();
+  // compliance booth at the exchange door: the rulebook every order passes
+  rect(8, y + 22, 26, 34, theme.paper, theme.ink, 1.5);
+  text("Rules", 21, y + 66, 10, theme.ink2, "center");
+  // street running down the left side, past every office door
+  rect(0, y + h + 8, 34, H - y - h - 8, alpha(theme.rule, .3));
+  ctx.setLineDash([6, 8]); ctx.strokeStyle = theme.paper; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(17, y + h + 12); ctx.lineTo(17, H - 8); ctx.stroke(); ctx.setLineDash([]);
+}
+
+function drawOffice(id, t){
+  const o = OFFICES[id], st = firmsState[id], f = FIRMS[id]; if (!st) return;
+  const x = 44, w = W - 56, y = o.y, h = o.h, out = st.out, bench = id === "baseline";
+  rect(x, y, w, h, theme.paper);
+  rect(x, y, w, h, alpha(f.color, out ? .03 : .07));
+  // walls (thick plan lines) with a door gap on the street side
+  ctx.strokeStyle = theme.ink; ctx.lineWidth = 3; ctx.beginPath();
+  ctx.moveTo(x, y + h * .42); ctx.lineTo(x, y); ctx.lineTo(x + w, y); ctx.lineTo(x + w, y + h); ctx.lineTo(x, y + h); ctx.lineTo(x, y + h * .42 + 26); ctx.stroke();
+  ctx.lineWidth = 1; ctx.strokeStyle = theme.ink2; ctx.beginPath(); ctx.arc(x, y + h * .42, 26, 0, Math.PI / 2); ctx.stroke();
+  // sign
+  rect(x + 10, y + 8, 6, 18, f.color);
+  text(f.name, x + 22, y + 13, 15, theme.ink, "left", 600);
+  text(bench ? `${money(st.eq)} · benchmark` : `${money(st.eq)} · ${(st.eq / GOAL * 100).toFixed(1)}% of the way`, x + 22, y + 29, 11, theme.ink2);
+  // desks + station labels
+  st.desks.forEach(d => {
+    rect(d.x - 17, d.y - 30, 34, 14, alpha(theme.rule, .45), theme.ink2, 1);
+    rect(d.x - 9, d.y - 28, 18, 3, theme.ink2);
+    text(d.label, d.x, d.y + 14, 10, theme.ink2, "center");
+  });
+  // position monitors along the far wall: one per open trade, colored by P&L
+  st.positions.forEach((p, i) => {
+    const mx = x + w - 62, my = y + 44 + i * 30;
+    rect(mx, my, 52, 22, theme.ink, null);
+    rect(mx + 3, my + 3, 46, 16, p.pnl >= 0 ? alpha(theme.good, .9) : alpha(theme.bad, .9));
+    text(p.sym, mx + 26, my + 11, 10, "#fff", "center", 600);
+  });
+  if (out){
+    hatch(x + 2, y + 2, w - 4, h - 4, alpha(theme.ink2, .25));
+    ctx.save(); ctx.translate(x + w / 2, y + h / 2); ctx.rotate(-.12);
+    rect(-64, -16, 128, 32, theme.paper, theme.bad, 2.5); text(st.status === "eliminated" ? "Eliminated" : "Closed", 0, 1, 16, theme.bad, "center", 600);
+    ctx.restore();
   }
-  const eq = agent.equity, dead = ["failed", "eliminated"].includes(agent.status), won = agent.status === "winner";
-  const orb = new THREE.Mesh(new THREE.SphereGeometry(competing ? 0.75 : 0.5, 32, 24),
-    new THREE.MeshStandardMaterial({color:dead ? 0x3a3a3e : col, emissive:dead ? 0x000000 : col, emissiveIntensity:dead ? 0 : 0.85, roughness:0.35}));
-  orb.position.y = yOf(eq); orb.userData = {id}; g.add(orb); pickables.push(orb);
-  const glow = new THREE.Mesh(new THREE.SphereGeometry(competing ? 1.5 : 1, 24, 16),
-    new THREE.MeshBasicMaterial({color:won ? 0xf2b632 : col, transparent:true, opacity:dead ? 0 : 0.12, depthWrite:false}));
-  orb.add(glow);
-  if (!dead){ const pl = new THREE.PointLight(col, 0.9, 9); orb.add(pl); }
-  // governor shield: the rulebook that wraps every agent
-  const shield = new THREE.Mesh(new THREE.TorusGeometry(competing ? 1.25 : 0.85, 0.025, 8, 60),
-    new THREE.MeshBasicMaterial({color:dead ? 0xe66767 : 0xd8d6cf, transparent:true, opacity:dead ? 0.7 : 0.35}));
-  orb.add(shield);
-  const nameL = label(SHORT[id], dead ? "#e66767" : "#f0efec", 30);
-  nameL.position.set(0, (competing ? 1.75 : 1.3), 0); orb.add(nameL);
-  const eqL = label(money(eq), dead ? "#e66767" : "#b9b8b0", 26);
-  eqL.position.set(0, (competing ? -1.6 : -1.2), 0); orb.add(eqL);
-  // open positions orbit their agent: size = dollars in the trade, color = winning/losing
-  const sats = [];
-  (data.positions || []).filter(p => p.agent === id).forEach((p, k, arr) => {
-    const cost = Math.abs(p.cost || 10), val = posPnl(p);
-    const s = new THREE.Mesh(new THREE.SphereGeometry(0.12 + Math.min(0.35, Math.sqrt(cost) / 40), 16, 12),
-      new THREE.MeshStandardMaterial({color:val >= 0 ? 0x3fbf3f : 0xe66767, emissive:val >= 0 ? 0x1e6e1e : 0x7a2525, emissiveIntensity:0.9}));
-    s.userData = {phase:(k / arr.length) * Math.PI * 2, r:1.9 + (k % 2) * 0.35, speed:0.6 + k * 0.15, tilt:0.35 * (k % 2 ? 1 : -1)};
-    const tag = label((p.underlying || p.symbol) + (p.kind === "option" ? " " + (p.opt_type || "opt") : p.kind === "spread" ? " spread" : ""), "#d8d6cf", 20);
-    tag.position.y = 0.45; s.add(tag);
-    orb.add(s); sats.push(s);
-  });
-  agentsObj[id] = {group:g, orb, glow, shield, sats, agent, targetY:yOf(eq), dead, won};
+  hit.push({id, x, y, w, h});
 }
 
+// ---------- workers ----------
+function person(x, y, color, facing, walking, t){
+  const bob = walking && !reduce ? Math.sin(t * 12) * 1.2 : 0;
+  ctx.save(); ctx.translate(x, y); ctx.rotate(facing);
+  ctx.fillStyle = alpha("#000000", .12); ctx.beginPath(); ctx.ellipse(1.5, 2, 9, 6, 0, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = color; ctx.beginPath(); ctx.ellipse(0, bob * .3, 9, 5.5, 0, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = "#2a2522"; ctx.strokeStyle = alpha("#ffffff", .55); ctx.lineWidth = .8;
+  ctx.beginPath(); ctx.arc(0, bob * .3, 4.2, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+
+function buildWorkers(){
+  workers = [];
+  Object.keys(FIRMS).forEach(id => {
+    const st = firmsState[id], o = OFFICES[id]; if (!st || st.out) return;
+    const x0 = 44, w = W - 56, door = {x: x0 + 8, y: o.y + o.h * .42 + 13}, street = {x: 17, y: door.y};
+    const ex = [{x: 17, y: EXCH.y + 40}, {x: 34, y: EXCH.y + 40}, {x: 80, y: EXCH.y + 52}];
+    const D = Object.fromEntries(st.desks.map(d => [d.role, {x: d.x, y: d.y - 8}]));
+    const screens = st.positions.map((p, i) => ({x: x0 + w - 74, y: o.y + 55 + i * 30}));
+    const busy = st.tradedToday, hasPos = st.positions.length > 0;
+    FIRMS[id].staff.forEach(([role]) => {
+      const home = D[role]; let plan;
+      if (role === "scout" || role === "vol") plan = [[home, 2.5], [{x: home.x + 46, y: home.y + 26}, 1.5], [{x: home.x - 10, y: home.y + 40}, 1.2]].concat(busy ? [[D.strat, 1.2]] : []);
+      else if (role === "strat") plan = busy ? [[home, 3], [D.trader || home, 1.4]] : [[home, 5], [{x: home.x + 20, y: home.y + 30}, 1.5]];
+      else if (role === "trader") plan = busy ? [[home, 1.5], [door, 0], [street, 0], ...ex.map((p, i) => [p, i === 1 ? 0.8 : 0.4]), [street, 0], [door, 0]] : [[home, 4], [{x: home.x - 30, y: home.y + 34}, 2]];
+      else if (role === "risk") plan = hasPos ? screens.flatMap(s => [[s, 1.6]]).concat([[home, 2]]) : [[home, 5], [{x: home.x + 24, y: home.y + 30}, 1.5]];
+      else plan = [[home, 99]];
+      workers.push({firm: id, role, plan, i: 0, x: home.x, y: home.y, wait: Math.random() * 2, facing: Math.PI, walking: false});
+    });
+  });
+  // the compliance officer at the exchange gate (shared rulebook)
+  workers.push({firm: "street", role: "comp", plan: [[{x: 21, y: EXCH.y + 39}, 3], [{x: 21, y: EXCH.y + 32}, 2]], i: 0, x: 21, y: EXCH.y + 39, wait: 0, facing: 0, walking: false});
+}
+
+function stepWorkers(dt){
+  workers.forEach(k => {
+    if (k.wait > 0){ k.wait -= dt; k.walking = false; return; }
+    const [tgt, pause] = k.plan[k.i % k.plan.length];
+    const dx = tgt.x - k.x, dy = tgt.y - k.y, d = Math.hypot(dx, dy), sp = (k.role === "trader" ? 70 : 42) * dt;
+    if (d <= sp){ k.x = tgt.x; k.y = tgt.y; k.i++; k.wait = pause; k.walking = false; }
+    else { k.x += dx / d * sp; k.y += dy / d * sp; k.facing = Math.atan2(dy, dx) + Math.PI / 2; k.walking = true; }
+  });
+}
+
+// ---------- data ----------
 function posPnl(p){
   if (p.kind === "stock" && p.last != null) return (p.last - p.entry) * p.qty;
   if (p.kind === "option" && p.mark != null) return (p.mark - p.entry) * 100 * p.qty;
   if (p.kind === "spread" && p.mark != null) return (p.entry - p.mark) * 100 * p.qty;
   return 0;
 }
-
-// trade streams: today's opens shoot from the market floor up into the agent
-function addStream(id, color){
-  const a = agentsObj[id]; if (!a) return;
-  const start = new THREE.Vector3((Math.random() - 0.5) * 20, 0.2, (Math.random() - 0.5) * 20);
-  const geo = new THREE.SphereGeometry(0.12, 8, 6), mat = new THREE.MeshBasicMaterial({color});
-  for (let k = 0; k < 10; k++){ const m = new THREE.Mesh(geo, mat); scene.add(m);
-    streams.push({m, start, a, t:-k * 0.06, color}); }
+function load(d){
+  data = d; GOAL = d.race && d.race.goal || 5000;
+  const today = (d.updated || "").slice(0, 10), curve = d.equity_curve || [];
+  firmsState = {};
+  d.agents.forEach(a => {
+    const id = a.id; if (!FIRMS[id]) return;
+    const o = OFFICES[id], staff = FIRMS[id].staff, x0 = 44, w = W - 56, cols = staff.length;
+    const usable = w - 140, desks = staff.map(([role, label], i) => ({role, label,
+      x: x0 + 44 + (cols === 1 ? usable / 2 : i * usable / (cols - 1)),
+      y: o.y + (id === "baseline" ? 52 : o.h * .5 + (i % 2) * 34)}));
+    firmsState[id] = {eq: a.equity, status: a.status, out: ["failed", "eliminated"].includes(a.status), agent: a, desks,
+      markerY: yClimb(100),
+      history: curve.map(r => r.agents && r.agents[id]).filter(v => v != null),
+      positions: (d.positions || []).filter(p => p.agent === id).slice(0, 4).map(p => ({sym: p.underlying || p.symbol, pnl: posPnl(p), p})),
+      tradedToday: (d.journal || []).some(j => j.agent === id && j.type === "open" && (j.time || "").startsWith(today)) || (d.positions || []).some(p => p.agent === id)};
+  });
+  ticker = (d.positions || []).map(p => `${p.underlying || p.symbol} ${p.last != null ? Number(p.last).toFixed(2) : ""}`.trim());
+  if (d.regime && d.regime.spy_trend) ticker.push(`SPY trend ${d.regime.spy_trend}`);
+  if (!ticker.length) ticker = ["Waiting for the opening bell"];
+  buildWorkers();
+  renderText();
 }
 
-function render(d){
-  data = d; GOAL = d.race && d.race.goal || GOAL_DEFAULT;
-  $("updated").textContent = "Updated " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
-  const goalL = label(`$${GOAL.toLocaleString()} · goal`, "#f2b632", 30); goalL.position.set(0, goalY + 1, 11); scene.add(goalL);
-  d.agents.forEach(a => buildTower(a.id, a, d.equity_curve || []));
-  const today = (d.updated || "").slice(0, 10);
-  (d.journal || []).filter(j => j.type === "open" && (j.time || "").startsWith(today)).forEach(j => addStream(j.agent, COLORS[j.agent] || 0xffffff));
-  $("legend").innerHTML = d.agents.map(a => `<span><span class="sw" style="background:${CSS[a.id]}"></span>${esc(a.name.replace(" agent",""))}</span>`).join("")
-    + `<span><span class="sw" style="background:var(--good)"></span>Winning trade</span><span><span class="sw" style="background:var(--bad)"></span>Losing trade</span>`
-    + `<span style="color:var(--muted)">Height = account value (log scale) · ring = rulebook</span>`;
+function renderText(){
+  const comp = data.agents.filter(a => a.competing).sort((a, b) => b.equity - a.equity);
+  const lead = comp[0];
+  $("block").innerHTML = `<div><span>Leader</span><b>${esc(FIRMS[lead.id].name)}</b></div><div><span>Value</span><b>${money(lead.equity)}</b></div>
+    <div><span>Goal</span><b>$${GOAL.toLocaleString()}</b></div><div><span>Updated</span><b>${new Date(data.updated).toLocaleTimeString([], {hour:"numeric", minute:"2-digit"})}</b></div>`;
+  $("staff").innerHTML = `<h2>Who works where</h2><p>Each firm only hires the roles its strategy needs. Tap a firm on the plan for its books.</p>` +
+    Object.entries(FIRMS).map(([id, fm]) => `<h2><span class="dot" style="background:var(${fm.colorVar})"></span>${esc(fm.name)}</h2>` +
+      fm.staff.map(([r, label, job]) => `<p><span class="dot" style="background:${ROLE_COLOR[r]}"></span><b style="color:var(--ink);font-weight:500">${esc(label)}</b>: ${esc(job)}</p>`).join("")).join("") +
+    `<h2><span class="dot" style="background:${ROLE_COLOR.comp}"></span>Compliance, shared</h2><p>Stands at the exchange door. Every order passes the rulebook: cash only, simple options, two new trades a day.</p>`;
 }
 
 function showCard(id){
-  const a = agentsObj[id]; if (!a) return; const ag = a.agent;
-  const ret = (ag.equity / 100 - 1) * 100;
-  const pos = (data.positions || []).filter(p => p.agent === id);
-  $("card").innerHTML = `<div class="h"><span><span class="sw" style="background:${CSS[id]};margin-right:8px"></span>${esc(ag.name)}</span><button class="x" aria-label="Close" onclick="document.getElementById('card').style.display='none'">×</button></div>
-    <div class="eq">${money(ag.equity)} <span class="${ret >= 0 ? "pos" : "neg"}" style="font-size:14px">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div>
-    <div class="d">${ag.competing ? `${(ag.progress_pct || 0).toFixed(1)}% of the way to $${GOAL.toLocaleString()} · ` : "Benchmark · "}${esc(ag.status)}${ag.status_reason ? " · " + esc(ag.status_reason) : ""}</div>
-    <div class="d">Cash ${money(ag.available)} · ${ag.open} open · ${ag.closed} closed${ag.win_rate != null ? ` · ${ag.win_rate}% wins` : ""} · max drawdown ${ag.max_dd_pct}%</div>
-    ${pos.map(p => `<div class="d">• ${esc(p.underlying || p.symbol)} ${esc(p.kind)}: ${(v => `<span class="${v >= 0 ? "pos" : "neg"}">${v >= 0 ? "+" : "-"}$${Math.abs(v).toFixed(2)}</span>`)(posPnl(p))}${p.thesis ? ` — ${esc(p.thesis)}` : ""}</div>`).join("")}
-    ${ag.notes && ag.notes.length ? `<div class="d" style="font-style:italic">“${esc(ag.notes[0].note)}”</div>` : ""}`;
+  const st = firmsState[id]; if (!st) return; const a = st.agent, ret = (a.equity / 100 - 1) * 100;
+  $("card").innerHTML = `<div class="h"><span>${esc(FIRMS[id].name)}</span><button aria-label="Close" onclick="document.getElementById('card').style.display='none'">×</button></div>
+    <div class="eq">${money(a.equity)} <span class="${ret >= 0 ? "up" : "down"}" style="font-size:15px">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div>
+    <p>${a.competing ? `${(a.equity / GOAL * 100).toFixed(1)}% of the way to $${GOAL.toLocaleString()}` : "Benchmark, not racing"}. Status: ${esc(a.status)}${a.status_reason ? `, ${esc(a.status_reason)}` : ""}.</p>
+    <p>Cash ${money(a.available)} · ${a.open} open · ${a.closed} closed${a.win_rate != null ? ` · ${a.win_rate}% winners` : ""}</p>
+    ${st.positions.map(x => `<p>${esc(x.sym)}: <span class="${x.pnl >= 0 ? "up" : "down"}">${x.pnl >= 0 ? "+" : "-"}$${Math.abs(x.pnl).toFixed(2)}</span>${x.p.thesis ? `, ${esc(x.p.thesis)}` : ""}</p>`).join("")}
+    ${a.notes && a.notes.length ? `<p><i>“${esc(a.notes[0].note)}”</i></p>` : ""}`;
   $("card").style.display = "block";
 }
-
-const ray = new THREE.Raycaster(), ptr = new THREE.Vector2();
-let down = null;
-renderer.domElement.addEventListener("pointerdown", e => down = {x:e.clientX, y:e.clientY});
-renderer.domElement.addEventListener("pointerup", e => {
-  if (!down || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 8) return;
-  ptr.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
-  ray.setFromCamera(ptr, camera);
-  const hit = ray.intersectObjects(pickables, false)[0];
-  if (hit) { showCard(hit.object.userData.id); controls.autoRotate = false; } else $("card").style.display = "none";
+cv.addEventListener("click", e => {
+  const r = cv.getBoundingClientRect(), x = (e.clientX - r.left) / S, y = (e.clientY - r.top) / S;
+  const h = hit.slice().reverse().find(b => x >= b.x && x <= b.x + b.w && y >= b.y && y <= b.y + b.h);
+  if (h) showCard(h.id); else $("card").style.display = "none";
 });
 
-const clock = new THREE.Clock();
-function loop(){
-  const t = clock.getElapsedTime(), dt = Math.min(clock.getDelta(), 0.05);
-  for (let i = 0; i < PN; i++){ const s = pSeed[i]; s.a += s.s * 0.01; pPos[i * 3] = Math.cos(s.a) * s.r; pPos[i * 3 + 2] = Math.sin(s.a) * s.r;
-    pPos[i * 3 + 1] = 0.15 + Math.abs(Math.sin(t * 0.8 + s.h * 6)) * 0.35; }
-  pGeo.attributes.position.needsUpdate = true;
-  halo.rotation.z = t * 0.1; haloGlow.material.opacity = 0.06 + Math.sin(t * 1.5) * 0.03;
-  Object.values(agentsObj).forEach(a => {
-    a.orb.position.y += (a.targetY - a.orb.position.y) * 0.05;
-    if (!a.dead){ a.glow.scale.setScalar(1 + Math.sin(t * 2 + a.targetY) * 0.08); a.shield.rotation.x = Math.PI / 2 + Math.sin(t * 0.7) * 0.25; a.shield.rotation.y = t * 0.6; }
-    else { a.orb.position.y = Math.max(0.8, a.orb.position.y - 0.02); }
-    a.sats.forEach(s => { const u = s.userData, ang = u.phase + t * u.speed;
-      s.position.set(Math.cos(ang) * u.r, Math.sin(ang * 1.3) * u.tilt * 2, Math.sin(ang) * u.r); });
-  });
-  for (const s of streams){ s.t += 0.006; let k = s.t % 1.6; if (k < 0) { s.m.visible = false; continue; }
-    s.m.visible = k <= 1; const end = new THREE.Vector3(); s.a.orb.getWorldPosition(end);
-    s.m.position.lerpVectors(s.start, end, Math.min(k, 1)); s.m.position.y += Math.sin(Math.min(k, 1) * Math.PI) * 3; }
-  controls.update(); renderer.render(scene, camera); requestAnimationFrame(loop);
+// ---------- loop ----------
+let last = performance.now();
+function frame(now){
+  const dt = Math.min((now - last) / 1000, .05), t = now / 1000; last = now;
+  hit = [];
+  rect(0, 0, W, H, theme.ground);
+  drawHQ(t); drawClimb(); drawExchange(t);
+  Object.keys(OFFICES).forEach(id => drawOffice(id, t));
+  drawFirmMarkers(t);
+  if (!reduce) stepWorkers(dt);
+  workers.forEach(k => person(k.x, k.y, ROLE_COLOR[k.role], k.facing, k.walking, t));
+  requestAnimationFrame(frame);
 }
 
-addEventListener("resize", () => { camera.position.setLength(portrait() ? 51 : 33); camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
-setTimeout(() => $("hint").style.opacity = 0, 6000);
-
-fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { render(d); loop(); })
-  .catch(() => { $("msg").style.display = "flex"; $("msg").textContent = "No race data yet. It appears after the agents' first run."; loop(); });
+readTheme(); size();
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(() =>
+  fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { load(d); requestAnimationFrame(frame); })
+    .catch(() => { $("block").innerHTML = "<div><b>No race data yet</b><span>The plan fills in after the agents' first run.</span></div><div></div>"; }));
 </script>
 </body>
 </html>
