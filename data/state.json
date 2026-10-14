@@ -39,6 +39,10 @@
     {
      "date": "2026-10-14",
      "note": "XLE plan dropped (trigger never fired and XLE is not in the scan). Sub-penny breakdowns skipped because they have no tradeable puts. Keep premium sizing small when the underlying stop is far away."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "The overnight plan's XLE trigger never fired and the sub-penny names have no tradeable puts, so I'm taking the one liquid breakdown. Size puts by premium, since the underlying stop distance is wide."
     }
    ],
    "last_exits": {},
@@ -100,7 +104,8 @@
       ]
      }
     ]
-   }
+   },
+   "unsettled": []
   },
   "meanrev": {
    "cash": 400.07,
@@ -123,7 +128,7 @@
       "pct_vs_sma200": 15.7,
       "pct_vs_sma5": -2.6
      },
-     "last": 575.77
+     "last": 575.03
     }
    },
    "status": "active",
@@ -157,6 +162,10 @@
     {
      "date": "2026-10-14",
      "note": "No candidates and outside the entry window. Holding SMH to its default exits (stop 552.5, RSI(2) > 70 exit, 7-day time stop). Live cash is $400.07; the game plan's $0.07 figure is stale."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Passed on DAL, BMNR, AMAT, LRCX and SOXX because their stops sat 7-16% away against 3.5-6% targets (reward-to-risk under 1:1). TDACW is a thin penny warrant, so watch the spread and keep size small."
     }
    ],
    "last_exits": {},
@@ -205,7 +214,8 @@
       "watch": []
      }
     ]
-   }
+   },
+   "unsettled": []
   },
   "volsell": {
    "cash": 500.0,
@@ -222,6 +232,10 @@
     {
      "date": "2026-10-14",
      "note": "Passing: IWM bear call credit is 0.20 on a $1 width, below the 0.25 trigger in the game plan. XLE and TLT credits (0.15) pay under 18% of max loss, too thin to justify the risk. Wait for a richer credit."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Passing today: IWM bear call credit is 0.22, below the 0.25 trigger. SPY bull put (0.20 on $80 risk) has roughly zero expected value at 20 delta and conflicts with the avoid list. Wait for a richer credit."
     }
    ],
    "last_exits": {},
@@ -282,7 +296,8 @@
      }
     ]
    },
-   "min_trade_seen": 80.0
+   "min_trade_seen": 78.0,
+   "unsettled": []
   },
   "baseline": {
    "cash": 4.06,
@@ -301,7 +316,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 773.21
+     "last": 771.69
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -317,7 +332,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 773.21
+     "last": 771.69
     }
    },
    "status": "active",
@@ -326,9 +341,10 @@
    "closed": 0,
    "wins": 0,
    "peak": 500.01,
-   "max_dd": 0.0019,
+   "max_dd": 0.0037,
    "notes": [],
-   "last_exits": {}
+   "last_exits": {},
+   "unsettled": []
   },
   "monkey": {
    "cash": 500.0,
@@ -343,7 +359,8 @@
    "max_dd": 0.0,
    "notes": [],
    "last_exits": {},
-   "joined": "2026-10-13T19:21:59-04:00"
+   "joined": "2026-10-13T19:21:59-04:00",
+   "unsettled": []
   },
   "blackswan": {
    "cash": 500.0,
@@ -372,6 +389,10 @@
     {
      "date": "2026-10-14",
      "note": "Calm radar (15): two small Technology breakdown spreads, $110 total risk, SPY insurance skipped while SPY is above its 50-day average. Take profits in stages because crash rallies reverse fast."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Calm radar (15): two breakdown spreads totaling $110 risk, no SPY insurance while SPY is above its 50-day average. Take profits in stages, since crash rallies reverse fast."
     }
    ],
    "last_exits": {},
@@ -463,7 +484,8 @@
     "why": "Only one day of evidence: Technology has the most real breakdowns in the scan (ASTS, SMR, IONQ, CIFR, APLD, CRWV), and the chip selloff and analyst downgrade support it. I have no results yet, so I'll keep sizing small and drop the focus if these setups don't pay.",
     "set_at": "2026-10-13T22:01-04:00",
     "expires": "2026-10-27"
-   }
+   },
+   "unsettled": []
   }
  }
 }
