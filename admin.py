@@ -2,6 +2,7 @@
 
   python admin.py topup 400     add $400 cash to every agent (open positions untouched)
   python admin.py universe      rebuild the stock universe now (needs Alpaca keys)
+  python admin.py alert         send a test phone alert (checks the NTFY_TOPIC secret)
   python admin.py backfill      seed the permanent ledger from the journal (one time)
 
 A top-up is recorded as if every agent had started with the bigger balance: past equity
@@ -80,6 +81,26 @@ def backfill():
     print(f"Ledger seeded with {len(rows)} entries.")
 
 
+def test_alert():
+    import os
+    import requests
+    import alerts
+    topic = os.getenv("NTFY_TOPIC", "").strip()
+    if not topic:
+        raise SystemExit("NTFY_TOPIC secret is missing or empty - alerts are off.")
+    state = store.load_state()
+    lines = []
+    for aid, a in state.get("agents", {}).items():
+        lines.append(f"{alerts.NAMES.get(aid, aid)}: ${a['cash']:.2f} cash, {len(a['positions'])} open")
+    body = "Test alert - your phone is connected to the race.\n" + "\n".join(lines)
+    r = requests.post(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), timeout=15,
+                      headers={"Title": "Agent race: alerts are on", "Tags": "white_check_mark",
+                               "Click": os.getenv("DASHBOARD_URL", "")})
+    print(f"ntfy answered {r.status_code}; topic length {len(topic)} characters")
+    if r.status_code != 200:
+        raise SystemExit("ntfy did not accept the alert.")
+
+
 def build_universe():
     import universe
     from broker import Broker
@@ -91,6 +112,8 @@ if __name__ == "__main__":
         topup(float(sys.argv[2]))
     elif len(sys.argv) >= 2 and sys.argv[1] == "backfill":
         backfill()
+    elif len(sys.argv) >= 2 and sys.argv[1] == "alert":
+        test_alert()
     elif len(sys.argv) >= 2 and sys.argv[1] == "universe":
         build_universe()
     else:

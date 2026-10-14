@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "run (one cycle), review (weekly self-review), plan (game-plan session) or universe (rebuild stock list)"
+        description: "run (one cycle), review (weekly self-review), plan (game-plan session), universe (rebuild stock list) or alert (send a test phone alert)"
         default: "run"
       force:
         description: "Run even if the market is closed (true/false)"
@@ -56,6 +56,8 @@ jobs:
             python review.py
           elif [ "$SCHED" = "40 20,21 * * 1-5" ] || [ "$SCHED" = "10 0 * * 1-5" ] || [ "$SCHED" = "40 11,12 * * 1-5" ]; then
             python plan.py
+          elif [ "${{ inputs.task }}" = "alert" ]; then
+            python admin.py alert
           elif [ "${{ inputs.task }}" = "universe" ]; then
             python admin.py universe
           elif [ "${{ inputs.task }}" = "plan" ]; then
