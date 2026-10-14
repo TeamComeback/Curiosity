@@ -550,5 +550,174 @@
   ],
   "aggression": "stand_down",
   "why": "Only about 14 minutes remain before the 3:50 flat, too short for a clean pullback trade. BAC is already 2% above VWAP after a 3% run, so it is extended rather than pulling back, and the rest of the field is in 1-minute downtrends or below VWAP."
+ },
+ {
+  "time": "2026-10-14T19:24:31-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Evening check-in",
+  "for_day": "2026-10-15",
+  "decision": "revise",
+  "why": "The XLE plan's trigger never fired and it is stale, so I'm dropping it. Today's scan has three breakdowns outside my current book's sectors (AAL, RKT, KKR) that could diversify the five correlated distressed puts, and I can afford them.",
+  "summary": "Hold all five open puts with their stops unchanged. Tomorrow, look only for uncorrelated 55-day breakdowns in AAL, RKT and KKR, entering a put only if the underlying is still below today's level at the open and the premium fits the listed budget. Otherwise stay in cash.",
+  "watchlist": [
+   {
+    "symbol": "AAL",
+    "setup": "Broke below 55-day low (12.29) today on modest volume; roc20 -7%, Consumer Discretionary, uncorrelated with the distressed tech/small-cap shorts already held",
+    "trigger": "Underlying still below 12.29 at the open; buy the nearest-month put (21-60 DTE, ~0.5 delta) if premium fits the budget. Stop: underlying close back above 12.29.",
+    "instrument": "put",
+    "conviction": 2
+   },
+   {
+    "symbol": "RKT",
+    "setup": "Broke below 55-day low (10.78) today; roc20 -18.7%, Communication Services, a sector not yet in the book",
+    "trigger": "Underlying still below 10.78 at the open; buy a 21-60 DTE ~0.5 delta put if premium fits. Stop: underlying close back above 10.78.",
+    "instrument": "put",
+    "conviction": 2
+   },
+   {
+    "symbol": "KKR",
+    "setup": "Broke below 55-day low (87.15) today; roc20 -11.7%, Financials, the most diversifying name on the list",
+    "trigger": "Underlying still below 87.15 at the open; buy a 21-60 DTE ~0.5 delta put if premium fits. Stop: underlying close back above 87.15.",
+    "instrument": "put",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-14T19:24:31-04:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Financials",
+   "Communication Services"
+  ],
+  "avoid": [
+   "Technology"
+  ],
+  "why": "I have no sector results yet (my_results_by_sector is empty). The current book is concentrated in Technology and small-cap distressed names. Financials and Communication Services are the only sectors with fresh, uncorrelated breakdowns in today's scan, and leaning there diversifies the book. Technol",
+  "expires": "2026-10-28"
+ },
+ {
+  "time": "2026-10-14T19:25:07-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-10-15",
+  "decision": "keep",
+  "why": "The scan shows the same picture as my last several passes: the 2.5-ATR stop sits about 1.5-2x as far from entry as the SMA5 snap-back target, so reward-to-risk is roughly 0.4-1.0 for every washout. Crash radar is calm (15), but I have no results or scorecard yet to justify paying that ratio.",
+  "summary": "Hold SMH and STT on their existing stops and exits, and make no new entries. Keep about $700 in settled cash. SMH's exit target has moved: the 5-day SMA is now about 591, not 603.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-14T19:25:18-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Evening check-in",
+  "for_day": "2026-10-15",
+  "decision": "revise",
+  "why": "Today's scan keeps IWM as the only setup with real richness (IV/RV 1.6, calm crash radar at 15), but the plan's $75 cap and 'max loss about $75 of a $100 account' language is stale now that the account is $1,000. The 0.25 credit trigger still stands, because at about 20 delta the breakeven win rate is close to the expected win rate and the credit needs to clear slippage.",
+  "summary": "Stay flat unless a live 21-45 DTE IWM bear call spread (short strike about 0.20 delta above price, $1 wide) can be sold for at least $0.25 credit at the open with IWM holding below recent highs and no gap up toward the short strike. Max risk about $80 per trade; no second position.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Bear call spread, short strike about 0.20 delta above price, long strike $1 higher, 21-45 DTE. Rich IV (IV/RV 1.6 on the daily scan) versus realized vol of about 12.6%.",
+    "trigger": "Live chain shows credit of at least $0.25 on the $1 width (about 25% of width) at a 21-45 DTE expiry, IWM is below its recent highs at the open, and there is no gap up toward the short strike. If credit is 0.20-0.24, pass.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-14T19:25:38-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "Evening check-in",
+  "for_day": "2026-10-15",
+  "decision": "revise",
+  "why": "The plan's triggers are stale: ASTS, IONQ and SMR have already broken their levels, and the fresh scan shows bigger, cleaner Technology breakdowns (CRWV now -13.6%, RKLB -4.2% on a Neutron delay to 2027, APLD -5.2%). The radar is still calm at 15, so I can add a few sized-down spreads, but I'm keeping per-trade risk at the plan's $40-60 level rather than the ~15%-of-equity sizing in my recent note",
+  "summary": "Hold ASTS and IREN as they are. Tomorrow, look for new put debit spreads on the Technology breakdowns RKLB, CRWV and APLD, plus IONQ if it's still below its breakdown level, each capped at its max_dollars. No SPY insurance unless SPY closes below its 50-day, and no APP or XHB while the radar is calm.",
+  "watchlist": [
+   {
+    "symbol": "RKLB",
+    "setup": "Put debit spread on a Technology breakdown. It broke its 61.78 level today after the Neutron first launch slipped to 2027, a fresh negative catalyst.",
+    "trigger": "Enter if RKLB closes below 61.78 tomorrow, or rallies back to 61.78 and fails there.",
+    "instrument": "debit_spread",
+    "conviction": 3
+   },
+   {
+    "symbol": "CRWV",
+    "setup": "Put debit spread on a Technology breakdown. Down 13.6% from its 76.15 level with a -21% 20-day return, and the CEO's 'irrational market' defense is a sign of stress.",
+    "trigger": "Enter if CRWV closes below 76.15 tomorrow with the 20-day momentum still negative. Use a spread wide enough to fit the $60 cap; skip if no spread fits.",
+    "instrument": "debit_spread",
+    "conviction": 3
+   },
+   {
+    "symbol": "APLD",
+    "setup": "Put debit spread on a Technology breakdown. It broke its 21.45 level today on a -16.7% 20-day return.",
+    "trigger": "Enter if APLD closes below 21.45 tomorrow, or rallies back to 21.45 and fails there.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "IONQ",
+    "setup": "Put debit spread on a Technology breakdown. It is already below its 34.48 level (-8.9%).",
+    "trigger": "Enter only if IONQ closes below 34.48 tomorrow. Skip if it has reclaimed that level.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-14T19:25:50-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-10-15",
+  "decision": "revise",
+  "why": "Only one trade so far (TSLA, -$0.33 from a VWAP bounce on 0.54x volume), which is too little evidence to judge the setup. Today's scan shows the strongest liquidity and intraday range in mega-cap tech after a broad selloff, so I'm moving the focus there, with stricter volume filters.",
+  "summary": "Tomorrow, trade only liquid tech and index names (SPY, QQQ, NVDA, AMD) using opening-range breakouts and VWAP pullbacks that have at least 1.5x relative volume. Keep 0.6% targets and 0.3% stops with a 45-minute limit, one round trip per slice, and stay flat by the close. Skip any name without a volume trigger.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "Opening-range breakout or VWAP reclaim after the first 15 minutes, using the ~0.85% daily ATR range for a 0.6% target",
+    "trigger": "Price holds above the 15-minute opening-range high on at least 1.5x relative volume, or reclaims VWAP after a pullback with rising volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "QQQ",
+    "setup": "VWAP pullback bounce in a trending session",
+    "trigger": "Pulls back to VWAP and holds it on at least 1.5x relative volume, with price no more than 1.5% extended from VWAP",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "NVDA",
+    "setup": "Volume-backed momentum burst off the opening range",
+    "trigger": "Breaks the opening-range high with at least 1.5x relative volume and holds above it for 2 consecutive 2-minute bars",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "AMD",
+    "setup": "Opening-range breakout only; the stock is volatile, so require volume confirmation",
+    "trigger": "Breaks and holds above the opening-range high on at least 1.5x relative volume; skip if it's already more than 1.5% extended from VWAP",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-14T19:25:50-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Technology",
+   "Broad market / other"
+  ],
+  "avoid": [],
+  "why": "No own-results evidence yet, since Consumer Discretionary has only one losing trade. Today's scan shows the most liquidity and range in Technology and the broad index ETFs, and crash_radar is calm (15), so the setups have room to work. Reassess after 10 sessions.",
+  "expires": "2026-10-28"
  }
 ]
