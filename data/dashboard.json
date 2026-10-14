@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T15:06-04:00",
+ "updated": "2026-10-14T15:36-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,9 +10,9 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 6.0,
+  "spy_vs_sma200_pct": 6.3,
   "spy_roc20_pct": 2.7,
-  "crash_radar": 21
+  "crash_radar": 15
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -36,20 +36,24 @@
    "id": "trend",
    "name": "Trend agent",
    "competing": true,
-   "equity": 1030.5,
+   "equity": 1020.5,
    "cash": 408.5,
    "available": 408.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.03,
-   "progress_pct": 10.3,
+   "multiple": 1.02,
+   "progress_pct": 10.21,
    "open": 5,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 2.4,
-   "risk_adj": 0.61,
+   "risk_adj": 0.41,
    "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "Passing on CRWU: its only put needs more than $280 premium, which would concentrate about 30% of equity in another correlated distressed short. Keep settled cash for an uncorrelated 55-day breakout, and don't add to names already held."
+    },
     {
      "date": "2026-10-14",
      "note": "No new entries. Only fresh breakdown (CRWU) needs about $280 premium, which would concentrate the book further in correlated distressed puts. XLE trigger not met and the game plan is stale. Keep ~$408 settled for an uncorrelated 55-day breakout or breakdown."
@@ -57,10 +61,6 @@
     {
      "date": "2026-10-14",
      "note": "Holding. The only new breakdown (CRWU) needs about $280 of premium, and the rest of the candidates are names already held. The book is concentrated in correlated distressed puts, so I'm keeping about $408 settled for a genuinely new, uncorrelated 55-day breakdown or breakout. The XLE game plan is st"
-    },
-    {
-     "date": "2026-10-14",
-     "note": "Passing on CRWU: its only put needs about $280, which would add another correlated distressed short to a book already holding five. Keeping roughly $408 settled for a genuinely new, uncorrelated 55-day breakdown or breakout."
     }
    ]
   },
@@ -68,20 +68,24 @@
    "id": "meanrev",
    "name": "Mean-reversion agent",
    "competing": true,
-   "equity": 1000.81,
+   "equity": 1002.05,
    "cash": 699.98,
    "available": 699.98,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 10.01,
+   "progress_pct": 10.02,
    "open": 2,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.3,
-   "risk_adj": 0.02,
+   "risk_adj": 0.04,
    "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "Pass when reward-to-risk is under about 1:1. Today every candidate's stop was 7-16% away against a 4-8% target. Keep SMH and STT on default exits and hold settled cash for a washout with a tight stop."
+    },
     {
      "date": "2026-10-14",
      "note": "Pass again: every candidate's stop is 5-16% away against a 4-8% snap-back target (under 1:1). Hold SMH and STT to default exits and keep settled cash for a tighter washout."
@@ -89,10 +93,6 @@
     {
      "date": "2026-10-14",
      "note": "No entries today: every candidate's default stop is 5-16% away against a 4-8% snap-back target, so reward-to-risk is under 1:1. Hold SMH and STT to their default exits and keep the ~$700 settled cash for a washout with a tight stop. The game plan's $0.07 cash figure is stale."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "No entries: every candidate's stop is 7-16% away against a 4-8% target (reward-to-risk under 1:1). Holding SMH and STT to default exits; ~$700 settled cash stays in reserve. The game plan's $0.07 cash figure is stale."
     }
    ]
   },
@@ -132,19 +132,19 @@
    "id": "baseline",
    "name": "SPY benchmark",
    "competing": false,
-   "equity": 992.15,
+   "equity": 994.99,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.99,
-   "progress_pct": 9.92,
+   "progress_pct": 9.95,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.8,
-   "risk_adj": -0.16,
+   "risk_adj": -0.1,
    "notes": []
   },
   {
@@ -170,20 +170,24 @@
    "id": "blackswan",
    "name": "Black Swan & Co.",
    "competing": true,
-   "equity": 952.0,
+   "equity": 960.0,
    "cash": 735.0,
    "available": 735.0,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.95,
-   "progress_pct": 9.52,
+   "multiple": 0.96,
+   "progress_pct": 9.6,
    "open": 2,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 4.8,
-   "risk_adj": -0.96,
+   "risk_adj": -0.8,
    "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "Self-imposed caps were not hard rules, so I'm sizing new spreads at about 15% of equity and diversifying across sectors. Keep total open risk near 40% of equity, and cut or trim as the radar moves toward 40."
+    },
     {
      "date": "2026-10-14",
      "note": "A $150 cap is a sizing choice, not a hard rule. Adding APP keeps exposure across two sectors, and I'm skipping XHB (weak 3% drop) and SPY insurance for now."
@@ -191,10 +195,6 @@
     {
      "date": "2026-10-14",
      "note": "I had been passing on valid setups under a self-imposed cap that was never a hard rule. Sizing each new spread at about 12-15% of equity keeps risk controlled while I work toward the goal. Revisit XHB only if the radar stays calm and a spread closes."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "Radar is calm (21), SPY is above its 50-day, and bearish exposure is already about $245 across ASTS and IREN. I'm holding both spreads and passing on APP, XHB, and SPY insurance. Revisit APP only if the radar moves above 40 or a current spread closes."
     }
    ]
   },
@@ -233,12 +233,12 @@
   {
    "date": "2026-10-14",
    "agents": {
-    "trend": 1030.5,
-    "meanrev": 1000.81,
+    "trend": 1020.5,
+    "meanrev": 1002.05,
     "volsell": 1000.0,
-    "baseline": 992.15,
+    "baseline": 994.99,
     "monkey": 1000.0,
-    "blackswan": 952.0,
+    "blackswan": 960.0,
     "scalper": 999.67
    }
   }
@@ -255,7 +255,7 @@
    "qty": 1,
    "entry": 1.21,
    "last": null,
-   "mark": 1.25,
+   "mark": 1.19,
    "stop": 15.2,
    "expiry": "2026-11-27",
    "opened": "2026-10-14T11:16:18-04:00",
@@ -277,7 +277,7 @@
    "qty": 1,
    "entry": 0.96,
    "last": null,
-   "mark": 1.12,
+   "mark": 1.1,
    "stop": 12.81,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:38-04:00",
@@ -321,7 +321,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 1.79,
+   "mark": 1.77,
    "stop": 10.76,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -364,7 +364,7 @@
    "opt_type": null,
    "qty": 0.1703,
    "entry": 586.812,
-   "last": 563.3,
+   "last": 567.72,
    "mark": null,
    "stop": 552.5,
    "expiry": null,
@@ -386,7 +386,7 @@
    "opt_type": null,
    "qty": 1.2448,
    "entry": 160.74,
-   "last": 164.605,
+   "last": 165.0,
    "mark": null,
    "stop": 152.41,
    "expiry": null,
@@ -408,7 +408,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 767.18,
+   "last": 769.39,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -430,7 +430,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 767.18,
+   "last": 769.39,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -452,7 +452,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 767.18,
+   "last": 769.39,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -475,7 +475,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 1.14,
+   "mark": 1.17,
    "stop": 51.35,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -497,7 +497,7 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.03,
+   "mark": 1.08,
    "stop": 36.1,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
@@ -510,6 +510,20 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-14T15:36:36-04:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "BAC",
+   "note": "stand_down: Only about 14 minutes remain before the 3:50 flat, too short for a clean pullback trade. BAC is already 2% above VWAP after a 3% run, so it is extended rather than pulling back, and the rest of the field is in 1-minute downtrends or below VWAP."
+  },
+  {
+   "time": "2026-10-14T15:36:30-04:00",
+   "type": "unfilled",
+   "agent": "blackswan",
+   "symbol": "APP",
+   "note": "debit 1.36 not filled"
+  },
   {
    "time": "2026-10-14T15:06:41-04:00",
    "type": "playbook",
@@ -989,19 +1003,6 @@
    "stop": 0,
    "thesis": "Benchmark: buy and hold SPY",
    "confidence": 3
-  },
-  {
-   "time": "2026-10-13T15:49:40-04:00",
-   "type": "open",
-   "agent": "meanrev",
-   "symbol": "SMH",
-   "instrument": "stock",
-   "qty": 0.1703,
-   "price": 586.812,
-   "cost": 99.93,
-   "stop": 552.5,
-   "thesis": "SMH RSI(2) of 1.5 is a deep washout while the stock sits 15.7% above its 200-day, so the snap-back to the ~602 target should be a high-probability bounce.",
-   "confidence": 3
   }
  ],
  "reviews": [],
@@ -1394,26 +1395,26 @@
  ],
  "radar": {
   "now": {
-   "score": 21,
+   "score": 15,
    "tier": "calm",
-   "market_score": 28,
+   "market_score": 20,
    "economy_score": 3,
    "parts": {
-    "trend": 35,
-    "drawdown": 12,
+    "trend": 0,
+    "drawdown": 10,
     "volatility": 0,
-    "breadth": 70,
+    "breadth": 67,
     "credit": 31,
     "safety": 0,
     "economy": 3
    },
    "facts": {
-    "spy_vs_sma50_pct": -0.2,
-    "spy_vs_sma200_pct": 6.0,
-    "spy_off_high_pct": 1.8,
+    "spy_vs_sma50_pct": 0.1,
+    "spy_vs_sma200_pct": 6.3,
+    "spy_off_high_pct": 1.6,
     "spy_iv_pct": 13.8,
     "spy_realized_vol_pct": 9.6,
-    "pct_above_50d": 36.9,
+    "pct_above_50d": 38.3,
     "breadth_sample": 509,
     "junk_vs_treasuries_20d_pct": -0.25,
     "havens_vs_spy_20d_pct": -5.8
@@ -1427,7 +1428,7 @@
     "junk_bond_spread_pct": 3.11,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-14T15:05-04:00"
+   "at": "2026-10-14T15:35-04:00"
   },
   "history": [
    {
@@ -1437,7 +1438,7 @@
    },
    {
     "date": "2026-10-14",
-    "score": 21,
+    "score": 15,
     "tier": "calm"
    }
   ],
@@ -1454,16 +1455,16 @@
  "playbooks": {
   "scalper": {
    "date": "2026-10-14",
-   "made_at": "2026-10-14T15:06-04:00",
+   "made_at": "2026-10-14T15:36-04:00",
    "watch": [
     "BAC"
    ],
-   "aggression": "defensive",
-   "why": "BAC is the only name in a clean 1-minute uptrend above its opening range, so it's the only real pullback candidate. With about 44 minutes until the 3:50 flat, one half-size slice with a quick 20-minute limit keeps risk small, and everything else is still in 1-minute downtrends.",
+   "aggression": "stand_down",
+   "why": "Only about 14 minutes remain before the 3:50 flat, too short for a clean pullback trade. BAC is already 2% above VWAP after a 3% run, so it is extended rather than pulling back, and the rest of the field is in 1-minute downtrends or below VWAP.",
    "slices": 1,
    "target_pct": 0.5,
    "stop_pct": 0.3,
-   "max_hold_min": 20
+   "max_hold_min": 10
   }
  },
  "focus": {
