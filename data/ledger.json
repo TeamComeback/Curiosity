@@ -339,5 +339,89 @@
    "downtrend": true
   },
   "from_plan": true
+ },
+ {
+  "time": "2026-10-14T12:10:37-04:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-bf6606febd",
+  "symbol": "CWVX261120P00008000",
+  "underlying": "CWVX",
+  "sector": "Broad market / other",
+  "instrument": "put",
+  "qty": 1,
+  "price": 1.75,
+  "cost": 182.0,
+  "stop": 10.76,
+  "why": "CWVX broke below its 55-day low at 8.87 on 13.8x relative volume and sits 69% below its 200-day SMA, a strong, high-conviction breakdown; the 10.76 stop sits above the breakdown level.",
+  "confidence": 4,
+  "signals": {
+   "rel_volume": 13.78,
+   "roc20_pct": -10.7,
+   "pct_vs_sma50": -50.9,
+   "pct_vs_sma200": -68.6
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-10-14T12:10:38-04:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-0dc0b9229c",
+  "symbol": "PLUG261106P00001500",
+  "underlying": "PLUG",
+  "sector": "Broad market / other",
+  "instrument": "put",
+  "qty": 5,
+  "price": 0.14,
+  "cost": 75.0,
+  "stop": 1.63,
+  "why": "PLUG broke below its 55-day low at 1.55 on 2.9x volume with roc20 at -23.6% and is 41% below its 200-day SMA; the 1.63 stop sits just above the breakdown level, and the premium is small.",
+  "confidence": 3,
+  "signals": {
+   "rel_volume": 2.87,
+   "roc20_pct": -23.6,
+   "pct_vs_sma50": -29.8,
+   "pct_vs_sma200": -40.8
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-10-14T12:10:57-04:00",
+  "type": "trade_opened",
+  "agent": "blackswan",
+  "position_id": "pos-a0895dfd5c",
+  "symbol": "IREN",
+  "underlying": "IREN",
+  "sector": "Technology",
+  "instrument": "debit_spread",
+  "qty": 1,
+  "price": 1.2,
+  "cost": 130.0,
+  "stop": 36.1,
+  "why": "IREN broke its 20-day low at 32.71, is down 16% over 20 days and sits below its 200-day in a calm radar (15), so a bear put spread capped at $150 targets the breakdown.",
+  "confidence": 3,
+  "signals": {
+   "roc20_pct": -16.3,
+   "pct_vs_sma50": -24.9,
+   "pct_vs_sma200": -31.4,
+   "pct_above_low": -4.51,
+   "downtrend": true
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-10-14T12:11:02-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "BAC",
+   "NVDA",
+   "AVGO",
+   "SPY",
+   "QQQ"
+  ],
+  "aggression": "defensive",
+  "why": "Most of the tape is red and choppy, with only BAC above its opening range and NVDA and AVGO holding uptrends below VWAP. Defensive mode limits us to half-size VWAP bounces in the few names with clean trends, and the calm crash radar and SPY's uptrend support that."
  }
 ]
