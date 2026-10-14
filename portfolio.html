@@ -123,7 +123,7 @@ function sheet(id, start){
     <header><div><h2><i style="background:var(--${id})"></i>${esc(NAMES[id])}</h2><div class="muted" style="font-size:13px">${esc(role)} · ${esc(a.status)}</div></div>
       <div class="val">${money(a.equity)}<small class="${ret >= 0 ? "up" : "down"}">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}% since start</small></div></header>
     <div class="sec"><h3>Books</h3>
-      <p>Cash ${money(a.available)} · ${pos.length} open · ${a.closed} closed${a.win_rate != null ? ` · ${a.win_rate}% winners` : ""} · realized ${closed.length ? signed(realized) : "$0.00"}</p></div>
+      <p>Cash ${money(a.available)}${a.settling ? ` (+${money(a.settling)} settling)` : ""} · ${pos.length} open · ${a.closed} closed${a.win_rate != null ? ` · ${a.win_rate}% winners` : ""} · realized ${closed.length ? signed(realized) : "$0.00"}</p></div>
     ${["trend", "meanrev", "volsell", "blackswan"].includes(id) ? `<div class="sec"><h3>Sector focus</h3>${f && (f.lean_in.length || f.avoid.length) ?
       `<p>${f.lean_in.map(s => `<span class="tag lean">${id === "blackswan" ? "Betting against" : "Leaning into"} ${esc(s)}</span>`).join("")}${f.avoid.map(s => `<span class="tag avoid">Avoiding ${esc(s)}</span>`).join("")}</p>
        <p class="muted">${esc(f.why)}${/[.!?]$/.test(f.why || "") ? "" : "."} Expires ${esc(f.expires)} unless renewed.</p>` : `<p class="muted">No sector focus yet. The planners set one once they see a sector working.</p>`}</div>` : ""}

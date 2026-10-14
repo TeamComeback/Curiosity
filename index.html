@@ -191,6 +191,7 @@ function render(d){
     `First to ${money0(GOAL)} wins; everyone is assessed when the race ends`,
     `Eliminated below $10; failed if it can't afford its smallest trade`,
     `Cash only, no margin; options limited to long calls/puts and defined-risk spreads`,
+    `Like a real cash account, sale proceeds settle the next trading day and can't be spent until then (no good-faith violations)`,
     `Black Swan only bets on falling prices: puts, put spreads, inverse ETFs and safe havens`,
     `No daily trade limit, position cap or waiting period: firms trade whenever their analysis says so (a malfunction guard pauses a firm after ${r.malfunction_guard_trades_per_day ?? 30} orders in one day)`,
     `Agents choose setups, dollar amounts, instruments, stops and exits; they can tighten stops, never loosen them`,
@@ -255,7 +256,7 @@ function agentCard(a, rank, ticks){
     <div class="money"><span class="eq">${money(a.equity)}</span><span class="mult ${cls(ret)}">${a.multiple}× · ${ret>=0?"+":""}${ret.toFixed(1)}%</span></div>
     ${a.competing ? `<div class="track" role="progressbar" aria-valuenow="${a.equity}" aria-valuemax="${GOAL}" aria-label="Progress to goal">
       <div class="fill" style="width:${logPct(a.equity)}%;background:${COLOR[a.id]}"></div></div><div class="ticks">${ticks}</div>` : ""}
-    <div class="stats"><span>Cash <b>${money(a.available)}</b></span><span>Open <b>${a.open}</b></span><span>Closed <b>${a.closed}</b></span>
+    <div class="stats"><span>Cash <b>${money(a.available)}</b>${a.settling ? ` <span title="Sale proceeds settle the next trading day">(+${money(a.settling)} settling)</span>` : ""}</span><span>Open <b>${a.open}</b></span><span>Closed <b>${a.closed}</b></span>
       <span>Win rate <b>${a.win_rate==null?"–":a.win_rate+"%"}</b></span><span>Max DD <b>${a.max_dd_pct}%</b></span>
       <span title="Return divided by max drawdown">Risk-adj <b>${a.risk_adj}</b></span></div>
     ${a.status_reason && st!=="active" ? `<div class="reason ${st}">${esc(a.status_reason)}</div>` : ""}

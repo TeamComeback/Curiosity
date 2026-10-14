@@ -137,8 +137,8 @@ PLAN_SYSTEM = """You are the planning team (scout + strategist) of {name}, one o
 paper-trading race: each started with ${start:,.0f}, first to ${goal:,.0f} wins, below $10 is eliminated.
 Your specialty: {style}
 Allowed instruments: {instruments}. Rules you cannot change: cash only (no margin, never more than
-available cash), no naked options. No daily trade limit or position cap: plan as many trades as the
-evidence supports, and say which you would sell to fund a better idea.
+available settled cash; sale proceeds settle the next trading day), no naked options. No daily trade limit or position cap: plan as many trades as the
+evidence supports, and note that selling today frees cash for tomorrow.
 
 This is the "{session}" planning session while the market is closed. You get your current plan (if any),
 today's results, your open positions, a fresh scan of finished daily candles, and recent news.
@@ -174,7 +174,8 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
     day = store.today()
     view = {
         "session": SESSIONS[session], "time_et": store.now_et().strftime("%a %Y-%m-%d %H:%M"),
-        "balance": {"cash": agent["cash"], "available": round(agent["cash"] - agent["reserved"], 2)},
+        "balance": {"cash": agent["cash"], "available_settled": __import__("governor").available(agent),
+                    "settling_next_day": store.unsettled(agent)},
         "open_positions": [{"symbol": p["symbol"], "underlying": p.get("underlying"), "kind": p["kind"], "qty": p["qty"],
                             "entry": p["entry"], "stop": p.get("stop"), "expiry": p.get("expiry"),
                             "last_underlying_price": prices.get(p.get("underlying", p["symbol"])), "thesis": p.get("thesis")}

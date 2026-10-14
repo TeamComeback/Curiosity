@@ -95,3 +95,31 @@ def journal(event):
     RUN_EVENTS.append(event)
     save("journal.json", j[-800:])
     print(f"[journal] {event.get('type')} {event.get('sleeve', '')} {event.get('symbol', '')} {event.get('note', '')}")
+
+
+# ---------------- settlement (cash account, T+1) ----------------
+def next_trading_day(day):
+    """The next market day after `day` (YYYY-MM-DD), from the saved Alpaca calendar, else next weekday."""
+    from datetime import date, timedelta
+    later = sorted(c["date"] for c in load("calendar.json", []) if c.get("date", "") > day)
+    if later:
+        return later[0]
+    d = date.fromisoformat(day) + timedelta(days=1)
+    while d.weekday() >= 5:
+        d += timedelta(days=1)
+    return d.isoformat()
+
+
+def add_unsettled(agent, amount, note=""):
+    """Sale proceeds (and credits received) settle on the next trading day."""
+    if amount <= 0.004:
+        return
+    agent.setdefault("unsettled", []).append({"amount": round(amount, 2), "settles": next_trading_day(today()), "note": note[:40]})
+
+
+def unsettled(agent):
+    """Cash that hasn't settled yet. Settled entries are dropped as their day arrives."""
+    day = today()
+    rows = [r for r in agent.get("unsettled", []) if r["settles"] > day]
+    agent["unsettled"] = rows
+    return round(sum(r["amount"] for r in rows), 2)

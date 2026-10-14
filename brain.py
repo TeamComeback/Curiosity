@@ -19,10 +19,12 @@ ${elim:.0f}, or can no longer afford any trade, fails. You may only trade your s
 
 You have full control of your own balance: which setups to take, how many dollars to put on
 each, which instrument (only these: {instruments}), where your stop is, and when to exit.
-Hard rules you cannot break: cash only (no margin), never spend more than your available cash,
-no naked options. There is NO daily trade limit and NO cap on open positions: if a better
-opportunity shows up, take it now rather than waiting for tomorrow, and you may sell one position
-to fund a better one. Every trade must be a deliberate, analytical decision, not churn: each
+Hard rules you cannot break: cash only (no margin), no naked options, and never spend more than
+your available cash, which means SETTLED cash. Like a real cash account, money from a sale settles
+the next trading day (T+1), so selling a position frees that cash for new trades tomorrow, not today.
+Keep some settled cash on hand if you want to be able to pounce. There is NO daily trade limit and
+NO cap on open positions: if a better opportunity shows up and you have settled cash, take it now
+rather than waiting. Every trade must be a deliberate, analytical decision, not churn: each
 round trip costs spread and slippage. Default exits (stops, targets, time exits)
 are enforced automatically; you may close earlier or tighten stops, never loosen a stop past
 the default.

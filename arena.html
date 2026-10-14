@@ -530,7 +530,7 @@ function showCard(id){
   $("card").innerHTML = `<div class="h"><span>${esc(FIRMS[id].name)}</span><button aria-label="Close" onclick="document.getElementById('card').style.display='none'">×</button></div>
     <div class="eq">${money(a.equity)} <span class="${ret >= 0 ? "up" : "down"}" style="font-size:15px">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div>
     <p>${a.competing ? `${(a.equity / GOAL * 100).toFixed(1)}% of the way to $${GOAL.toLocaleString()}` : (id === "monkey" ? "Control group, not racing" : "Benchmark, not racing")}. Status: ${esc(a.status)}${a.status_reason ? `, ${esc(a.status_reason)}` : ""}.</p>
-    <p>Cash ${money(a.available)} · ${a.open} open · ${a.closed} closed${a.win_rate != null ? ` · ${a.win_rate}% winners` : ""}</p>
+    <p>Cash ${money(a.available)}${a.settling ? ` (+${money(a.settling)} settling tomorrow)` : ""} · ${a.open} open · ${a.closed} closed${a.win_rate != null ? ` · ${a.win_rate}% winners` : ""}</p>
     ${st.positions.map(x => `<p>${esc(x.sym)}: <span class="${x.pnl >= 0 ? "up" : "down"}">${x.pnl >= 0 ? "+" : "-"}$${Math.abs(x.pnl).toFixed(2)}</span>${x.p.thesis ? `, ${esc(x.p.thesis)}` : ""}</p>`).join("")}
     ${a.notes && a.notes.length ? `<p><i>“${esc(a.notes[0].note)}”</i></p>` : ""}`;
   $("card").style.display = "block";
@@ -629,7 +629,7 @@ function roleInfo(k){
       base.lines.push(lo);
       if (lastClose) base.lines.push(`Last exit: ${nice(lastClose.symbol)}, ${lastClose.pnl >= 0 ? "+" : "-"}$${Math.abs(lastClose.pnl).toFixed(2)}. Reason: ${lastClose.note}.`);
       if (k.firm === "meanrev" && st.positions.length) base.lines.push(`Waiting to sell ${st.positions.map(x => x.sym).join(", ")} into the bounce.`);
-      const deployed = a.equity > 0 ? (a.equity - a.available) / a.equity : 0;
+      const deployed = a.equity > 0 ? Math.max(0, a.equity - a.available - (a.settling || 0)) / a.equity : 0;
       base.goal = {label: "Money at work", value: `${Math.round(deployed * 100)}% invested`, pct: deployed * 100,
                    note: `${opensToday} trade${opensToday === 1 ? "" : "s"} opened today. No daily limit: the firm acts whenever it finds a better opportunity.`};
       break; }

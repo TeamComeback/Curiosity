@@ -179,6 +179,8 @@ def open_trade(b, state, aid, cand, order, ctx):
         return store.journal({"type": "rule_block", "agent": aid, "symbol": cand["symbol"], "note": f"bad instrument {inst}"})
 
     agent["cash"] = round(agent["cash"] - pos["cost"], 2)
+    if pos["cost"] < 0:                                   # a credit received settles next trading day
+        store.add_unsettled(agent, -pos["cost"], f"credit {cand['symbol']}")
     if cand.get("hold_days"):
         pos["hold_days"] = cand["hold_days"]
     if cand.get("play"):
@@ -263,6 +265,7 @@ def close_trade(b, state, aid, pid, reason, qty=None):
         part_cost = pos["cost"] * nq / pos["qty"]
         pnl = round(proceeds - part_cost, 2)
         agent["cash"] = round(agent["cash"] + proceeds, 2)
+        store.add_unsettled(agent, proceeds, f"sold part {pos['symbol']}")
         pos["qty"] = round(pos["qty"] - nq, 4) if pos["kind"] == "stock" else int(pos["qty"] - nq)
         pos["cost"] = round(pos["cost"] - part_cost, 2)
         pos["realized"] = round(pos.get("realized", 0) + pnl, 2)
@@ -276,6 +279,7 @@ def close_trade(b, state, aid, pid, reason, qty=None):
         return None
     pnl = round(proceeds - pos["cost"] + pos.get("realized", 0), 2)       # whole trade, including earlier trims
     agent["cash"] = round(agent["cash"] + proceeds, 2)
+    store.add_unsettled(agent, proceeds, f"sold {pos['symbol']}")
     agent["closed"] += 1
     agent["wins"] += 1 if pnl > 0 else 0
     agent["last_exits"][pos.get("underlying", pos["symbol"])] = store.today()
@@ -319,7 +323,9 @@ def agent_view(state, aid, cands, ctx, can_open, standings):
     return {
         "time_et": store.now_et().strftime("%Y-%m-%d %H:%M"),
         "race": {"goal": config.RACE["goal"], "standings": standings},
-        "balance": {"cash": agent["cash"], "available": governor.available(agent), "equity": eq,
+        "balance": {"cash": agent["cash"], "available": governor.available(agent), "settling": store.unsettled(agent),
+                    "settlement_note": "available = settled cash. Sale proceeds settle the next trading day (cash account, "
+                                       "T+1); you can't spend them until then.", "equity": eq,
                     "start": config.RACE["start_balance"], "progress_to_goal_pct": round(eq / config.RACE["goal"] * 100, 2)},
         "can_open": can_open,
         "trades_today": governor.entries_today(state, aid),
@@ -356,7 +362,8 @@ def write_dashboard(state, regime, equities):
         a["max_dd"] = round(max(a.get("max_dd", 0), 1 - eq / a["peak"] if a["peak"] else 0), 4)
         ret = eq / config.RACE["start_balance"] - 1
         agents.append({"id": aid, "name": config.AGENTS[aid]["name"], "competing": config.AGENTS[aid]["competing"],
-                       "equity": eq, "cash": a["cash"], "available": governor.available(a), "status": a["status"],
+                       "equity": eq, "cash": a["cash"], "available": governor.available(a),
+                       "settling": store.unsettled(a), "status": a["status"],
                        "status_reason": a["status_reason"], "multiple": round(eq / config.RACE["start_balance"], 2),
                        "progress_pct": round(min(eq / config.RACE["goal"], 1) * 100, 2),
                        "open": len(a["positions"]), "closed": a["closed"],

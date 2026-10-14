@@ -9,7 +9,9 @@ R = config.RULES
 
 
 def available(agent):
-    return round(agent["cash"] - agent["reserved"], 2)
+    """Settled cash the firm can spend now: cash minus spread collateral minus proceeds still settling.
+    Spending only settled cash is how a cash account avoids good-faith violations."""
+    return round(agent["cash"] - agent["reserved"] - store.unsettled(agent), 2)
 
 
 def entries_today(state, aid):
@@ -50,7 +52,9 @@ def check_order(state, aid, cand, instrument, cost):
     if cost <= 0:
         return False, "nothing to buy"
     if R["no_margin"] and cost > available(agent) + 1e-6:
-        return False, f"needs ${cost:.2f}, only ${available(agent):.2f} available (no margin)"
+        pend = store.unsettled(agent)
+        return False, (f"needs ${cost:.2f}, only ${available(agent):.2f} settled cash available"
+                       + (f" (${pend:.2f} more settles next trading day)" if pend else " (no margin)"))
     if instrument == "stock" and cost < R["min_stock_trade"]:
         return False, "below minimum trade size"
     if aid != "baseline" and any(p.get("underlying", p["symbol"]) == cand["symbol"] for p in agent["positions"].values()):
@@ -74,8 +78,9 @@ def update_status(state, aid, equity, min_trade_cost):
         agent.update(status="eliminated", status_reason=f"equity ${equity:.2f} fell below ${config.RACE['eliminate_below']:.0f}",
                      status_at=store.now_et().isoformat(timespec="seconds"))
         return "eliminated"
-    if not agent["positions"] and min_trade_cost is not None and available(agent) < min_trade_cost:
-        agent.update(status="failed", status_reason=f"${available(agent):.2f} left, cheapest possible trade costs ${min_trade_cost:.2f}",
+    total = round(agent["cash"] - agent["reserved"], 2)          # settling cash still counts: it's coming
+    if not agent["positions"] and min_trade_cost is not None and total < min_trade_cost:
+        agent.update(status="failed", status_reason=f"${total:.2f} left, cheapest possible trade costs ${min_trade_cost:.2f}",
                      status_at=store.now_et().isoformat(timespec="seconds"))
         return "failed"
     return None
