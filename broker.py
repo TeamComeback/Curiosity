@@ -54,9 +54,16 @@ class Broker:
     # ---------- stock data ----------
     def daily_bars(self, symbols, days=320):
         start = (datetime.now(timezone.utc) - timedelta(days=int(days * 1.5))).strftime("%Y-%m-%d")
+        return self._bars(symbols, "1Day", start)
+
+    def minute_bars(self, symbols, start_iso):
+        """1-minute bars since start_iso (RFC3339), for the scalper."""
+        return self._bars(symbols, "1Min", start_iso)
+
+    def _bars(self, symbols, timeframe, start):
         out, token = {}, None
         while True:
-            params = {"symbols": ",".join(symbols), "timeframe": "1Day", "start": start,
+            params = {"symbols": ",".join(symbols), "timeframe": timeframe, "start": start,
                       "feed": config.STOCK_FEED, "limit": 10000, "adjustment": "split"}
             if token:
                 params["page_token"] = token

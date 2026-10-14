@@ -80,6 +80,20 @@ def scan(aid, bars, params, b=None, agent_for_scan=None):
             ranked = [r for r in ranked if r["sector"] in f.get("lean_in", [])][:8] + \
                      [r for r in ranked if r["sector"] not in f.get("lean_in", []) + f.get("avoid", [])]
         return ranked[:20]
+    if aid == "scalper":          # liquid stocks that move a lot in a day: a scalper's hunting ground
+        for sym, df in bars.items():
+            if len(df) < 25 or sym in set(config.BEAR_SYMBOLS) - {"SPY", "QQQ", "IWM", "DIA"}:
+                continue
+            h = enrich(df)
+            last = h.iloc[-1]
+            close = float(last["close"])
+            dollar_vol = float((h["close"] * h["volume"]).tail(20).mean())
+            if close < 10 or dollar_vol < 2e8:
+                continue
+            out.append({"symbol": sym, "close": round(close, 2), "atr_pct": round(float(last["atr20"]) / close * 100, 2),
+                        "avg_dollar_volume_m": round(dollar_vol / 1e6), "change_today_pct": round(float(h["close"].pct_change().iloc[-1]) * 100, 2),
+                        "sector": universe.sector_of(sym)})
+        return sorted(out, key=lambda r: -r["atr_pct"])[:20]
     if aid == "blackswan":
         import blackswan as bs
         bp = params.get("blackswan", {})

@@ -1,7 +1,8 @@
 """Market-day loop. GitHub's scheduler often starts jobs late or skips them, so instead of
 relying on one scheduled job per half hour, one job stays up through the trading day: it runs a
-trading cycle at :05 and :35 past every hour while the market is open, saves the results to the
-repo after each cycle (so the dashboard updates), and exits after the close. Several start times
+trading cycle at :05 and :35 past every hour while the market is open, runs the scalper's quick
+check every 2 minutes in between, saves the results to the repo (so the dashboard updates), and
+exits after the close. Several start times
 are scheduled as backups; whichever starts first covers the day, the rest exit right away.
 Usage: python daylong.py [max_minutes]"""
 import subprocess
@@ -27,8 +28,12 @@ def next_slot(now):
     return (base + timedelta(hours=1)).replace(minute=5)
 
 
+SCALP_EVERY = 120          # seconds between the scalper's checks
+SAVE_EVERY = 600           # GitHub Pages rebuilds on each save; keep it to a few an hour
+
+
 def main():
-    start, b, cycles = time.time(), Broker(), 0
+    start, b, cycles, last_save = time.time(), Broker(), 0, time.time()
     while time.time() - start < MAX_MIN * 60:
         try:
             clk = b.clock()
@@ -39,6 +44,7 @@ def main():
         if clk.get("is_open"):
             subprocess.run([sys.executable, "run.py"])
             subprocess.run(SAVE, shell=True)
+            last_save = time.time()
             cycles += 1
         elif clk.get("next_open"):
             nxt = datetime.fromisoformat(clk["next_open"])
@@ -46,10 +52,19 @@ def main():
                 print(f"[day] market closed until {clk['next_open']}; {cycles} cycles run.")
                 return
         now = store.now_et()
-        wait = (next_slot(now) - now).total_seconds()
-        if time.time() - start + wait > MAX_MIN * 60:
+        target = next_slot(now)
+        if time.time() - start + (target - now).total_seconds() > MAX_MIN * 60:
             break
-        time.sleep(max(wait, 30))
+        while True:                                   # between rounds: the scalper's 2-minute checks
+            left = (target - store.now_et()).total_seconds()
+            if left <= 0:
+                break
+            time.sleep(min(SCALP_EVERY, max(left, 1)))
+            if clk.get("is_open") and (target - store.now_et()).total_seconds() > 45:
+                subprocess.run([sys.executable, "scalp.py"])
+                if time.time() - last_save >= SAVE_EVERY:
+                    subprocess.run(SAVE, shell=True)
+                    last_save = time.time()
     print(f"[day] time limit reached after {cycles} cycles; the next scheduled job takes over.")
 
 

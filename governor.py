@@ -62,7 +62,7 @@ def check_order(state, aid, cand, instrument, cost):
     last = agent["last_exits"].get(cand["symbol"])
     if last and R.get("reentry_cooldown_days") and (store.now_et().date() - date.fromisoformat(last)).days < R["reentry_cooldown_days"]:
         return False, "re-entry cooldown"
-    if instrument == "stock" and aid != "baseline":
+    if instrument == "stock" and aid not in ("baseline", "scalper"):   # the scalper sells exactly what it buys, same day
         for other, a in state["agents"].items():
             if other != aid and any(p["kind"] == "stock" and p["symbol"] == cand["symbol"] for p in a["positions"].values()):
                 return False, f"{cand['symbol']} shares already held by {other} (shared account)"

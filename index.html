@@ -10,7 +10,7 @@
   color-scheme:light;
   --bg:#f5f4f1;--surface:#fcfcfb;--line:#e4e2dc;--grid:#ecebe6;--track:#ecebe6;
   --text:#0b0b0b;--text2:#52514e;--muted:#8a8984;
-  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#8a8984;--s5:#d55181;--s6:#6a4fc0;
+  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#8a8984;--s5:#d55181;--s6:#6a4fc0;--s7:#0a8fb0;
   --good:#0ca30c;--bad:#d03b3b;--gold:#b07a00;
   --radius:14px;
 }
@@ -18,7 +18,7 @@
   color-scheme:dark;
   --bg:#111110;--surface:#1a1a19;--line:#2c2c2a;--grid:#262624;--track:#2c2c2a;
   --text:#f0efec;--text2:#c3c2b7;--muted:#8f8e86;
-  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#8f8e86;--s5:#e87ba4;--s6:#9b84e8;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#8f8e86;--s5:#e87ba4;--s6:#9b84e8;--s7:#2fb6d6;
   --good:#3fbf3f;--bad:#e66767;--gold:#eda100;
 }}
 *{box-sizing:border-box}
@@ -126,7 +126,7 @@ ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 <div class="card"><ul class="rules" id="rules"></ul></div>
 
 <script>
-const COLOR = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", blackswan:"var(--s6)", baseline:"var(--s4)", monkey:"var(--s5)"};
+const COLOR = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", blackswan:"var(--s6)", scalper:"var(--s7)", baseline:"var(--s4)", monkey:"var(--s5)"};
 let DATA = null;
 const STATUS = {active:"Active", winner:"🏆 Winner", failed:"✕ Failed", eliminated:"✕ Eliminated"};
 const $ = id => document.getElementById(id);
@@ -193,6 +193,7 @@ function render(d){
     `Cash only, no margin; options limited to long calls/puts and defined-risk spreads`,
     `Like a real cash account, sale proceeds settle the next trading day and can't be spent until then (no good-faith violations)`,
     `Black Swan only bets on falling prices: puts, put spreads, inverse ETFs and safe havens`,
+    `Rapid Fire scalps shares intraday: checks every 2 minutes, always flat by 3:50 PM, one round trip per cash slice per day`,
     `No daily trade limit, position cap or waiting period: firms trade whenever their analysis says so (a malfunction guard pauses a firm after ${r.malfunction_guard_trades_per_day ?? 30} orders in one day)`,
     `Agents choose setups, dollar amounts, instruments, stops and exits; they can tighten stops, never loosen them`,
     `Options results include a slippage haircut of half the bid-ask spread`,
@@ -345,7 +346,7 @@ function positions(list, names){
 
 function journal(list){
   const label = {open:"OPEN",close:"CLOSE",rule_block:"BLOCKED",unfilled:"UNFILLED",exit_unfilled:"UNFILLED",error:"ERROR",
-    param_change:"RETUNED",failed:"FAILED",eliminated:"ELIMINATED",race_end:"FINISH",trim:"TOOK PROFIT",radar:"RADAR"};
+    param_change:"RETUNED",playbook:"PLAYBOOK",failed:"FAILED",eliminated:"ELIMINATED",race_end:"FINISH",trim:"TOOK PROFIT",radar:"RADAR"};
   if (!list || !list.length){ $("journal").innerHTML = '<div class="empty">No activity yet.</div>'; return; }
   $("journal").innerHTML = list.slice(0,40).map(j => {
     const when = new Date(j.time).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});

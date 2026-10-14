@@ -12,12 +12,12 @@
 :root{
   color-scheme:light;
   --ground:#e9ece8;--paper:#f6f7f4;--ink:#1f2a2e;--ink2:#56636a;--rule:#a9b3b4;--faint:#d5dad7;
-  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--blackswan:#6a4fc0;--bench:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
+  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--blackswan:#6a4fc0;--scalper:#0a8fb0;--bench:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
 }
 @media (prefers-color-scheme:dark){:root{
   color-scheme:dark;
   --ground:#11171a;--paper:#182024;--ink:#dce3e2;--ink2:#9aa7a9;--rule:#4a575c;--faint:#26312f;
-  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--blackswan:#9b84e8;--bench:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
+  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--blackswan:#9b84e8;--scalper:#2fb6d6;--bench:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
 }}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--ground);color:var(--ink);font:15px/1.45 "IBM Plex Sans Condensed",-apple-system,BlinkMacSystemFont,sans-serif}
@@ -62,7 +62,7 @@ canvas{display:block;width:100%;touch-action:pan-y}
 <div class="wrap">
   <div class="bar"><h1>The Street</h1><span style="display:flex;gap:8px"><a href="portfolio.html">Portfolio</a><a href="index.html">Dashboard</a></span></div>
   <div class="stage"><div class="pop" id="pop" role="dialog" aria-live="polite"></div>
-  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of four trading firms racing up the road to the $10,000 headquarters. Tap a firm or a person for details."></canvas></div>
+  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of five trading firms racing up the road to the $10,000 headquarters. Tap a firm or a person for details."></canvas></div>
   <div class="block" id="block"></div>
   <div class="staff" id="staff"></div>
 </div>
@@ -83,15 +83,19 @@ const FIRMS = {
   blackswan:{name:"Black Swan & Co.",  colorVar:"--blackswan",
             staff:[["radar","Radar analyst","Reads the Crash Radar: breadth, credit, volatility and the economy"],["scout","Scout","Hunts the weakest stocks and sectors breaking down"],
                    ["strat","Strategist","The AI: picks the bet and sizes it to the radar"],["trader","Options trader","Buys puts, put spreads and inverse ETFs"]]},
+  scalper: {name:"Rapid Fire Trading", colorVar:"--scalper",
+            staff:[["tape","Tape reader","Watches 1-minute charts for breakouts, VWAP bounces and bursts"],["strat","Strategist","The AI: sets the playbook every 30 minutes"],
+                   ["trader","Scalper","Fires and closes quick trades every 2 minutes"],["risk","Risk manager","Enforces stops, time limits and flat by 3:50 PM"]]},
   baseline:{name:"Index Booth",       colorVar:"--bench", staff:[["index","Index buyer","Bought SPY once and holds it"]]},
   monkey:  {name:"Monkey Business",   colorVar:"--monkey", staff:[["dart","Dart thrower","Picks a random stock, size and holding time. The control group."]]},
 };
-const ROLE_COLOR = {scout:"#4b7f95", strat:"#7357b3", trader:"#c38a1c", risk:"#b8504a", vol:"#2c8f8a", radar:"#3f5f8f", index:"#7e8a8c", comp:"#55636a", dart:"#c0507d"};
-const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:200}, blackswan:{y:1240,h:200}, baseline:{y:1460,h:84}, monkey:{y:1564,h:84}};
-const H = 1666, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84, door:[30, 58]};
+const ROLE_COLOR = {scout:"#4b7f95", strat:"#7357b3", trader:"#c38a1c", risk:"#b8504a", vol:"#2c8f8a", radar:"#3f5f8f", tape:"#2f8fa6", index:"#7e8a8c", comp:"#55636a", dart:"#c0507d"};
+const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:200}, blackswan:{y:1240,h:200}, scalper:{y:1460,h:200}, baseline:{y:1680,h:84}, monkey:{y:1784,h:84}};
+const H = 1886, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84, door:[30, 58]};
 const BOOTH = {x:2, y:EXCH.y - 2, w:30, h:22};
-const LANES = {trend:66, meanrev:124, volsell:182, blackswan:240, baseline:300, monkey:352};
-const SHORT = {trend:"Trend", meanrev:"Snapback", volsell:"Premium", blackswan:"Black Swan", baseline:"SPY", monkey:"Monkey"};
+const LANES = {trend:62, meanrev:108, volsell:154, blackswan:200, scalper:246, baseline:302, monkey:354};
+const SHORT = {trend:"Trend", meanrev:"Snapback", volsell:"Premium", blackswan:"Black Swan", scalper:"Rapid Fire", baseline:"SPY", monkey:"Monkey"};
+const LABEL_ABOVE = {meanrev:1, blackswan:1};      // alternate labels above/below so neighbouring lanes never collide
 const NB = id => id === "baseline" || id === "monkey";   // non-racing: benchmark and control
 
 // ---------- office hours (US/Eastern) ----------
@@ -219,7 +223,7 @@ function drawFirmMarkers(t){
     rect(x - w / 2, y - h / 2, w, h, out ? theme.faint : FIRMS[id].color, theme.ink, 1.2);
     if (!out && !bench){ const blink = (Math.sin(t * 3 + x) + 1) / 2; rect(x - 3, y - h / 2 - 4, 6, 3, alpha(FIRMS[id].color, .4 + blink * .6)); }
     // labels sit centered under each marker so neighbouring lanes never collide
-    const ly = y + h / 2 + 9;
+    const ly = LABEL_ABOVE[id] ? y - h / 2 - 28 : y + h / 2 + 9;
     font(11, 600); const tw = ctx.measureText(money(st.eq)).width;
     rect(x - tw / 2 - 3, ly - 7, tw + 6, 26, alpha(theme.ground, .85));
     text(money(st.eq), x, ly, 11, out ? theme.bad : theme.ink, "center", 600);
@@ -289,6 +293,14 @@ function drawOffice(id, t){
     if (sc != null){ const ang = Math.PI + sc / 100 * Math.PI, wob = reduce ? 0 : Math.sin(t * 2) * .03;
       ctx.beginPath(); ctx.moveTo(dx0, dy0); ctx.lineTo(dx0 + Math.cos(ang + wob) * 13, dy0 + Math.sin(ang + wob) * 13); ctx.strokeStyle = theme.ink; ctx.lineWidth = 2; ctx.stroke(); }
     text(sc != null ? `radar ${sc}` : "radar", dx0, dy0 + 9, 9, theme.ink2, "center", 600);
+  }
+  if (id === "scalper"){                                       // lightning bolt on the sign
+    font(15, 600); const bnw = ctx.measureText(f.name).width; font(11, 500);
+    const bsw = ctx.measureText(`${money(st.eq)} · ${(st.eq / GOAL * 100).toFixed(1)}% of the way`).width;
+    const bx = x + 22 + Math.max(bnw, bsw) + 16, by = y + 6;
+    ctx.beginPath(); ctx.moveTo(bx + 6, by); ctx.lineTo(bx - 2, by + 12); ctx.lineTo(bx + 3, by + 12); ctx.lineTo(bx - 3, by + 24);
+    ctx.lineTo(bx + 9, by + 9); ctx.lineTo(bx + 4, by + 9); ctx.lineTo(bx + 10, by); ctx.closePath();
+    ctx.fillStyle = f.color; ctx.fill(); ctx.strokeStyle = theme.ink; ctx.lineWidth = 1; ctx.stroke();
   }
   if (id === "monkey"){
     font(15, 600); const nw = ctx.measureText(f.name).width; font(11, 500);
@@ -428,7 +440,7 @@ function buildWorkers(){
     FIRMS[id].staff.forEach(([role], si) => {
       const home = D[role]; let plan;
       if (phase !== "open"){
-        const planner = ["scout", "vol", "strat", "radar"].includes(role);
+        const planner = ["scout", "vol", "strat", "radar", "tape"].includes(role);
         const stays = (phase === "weekend" || phase === "holiday") ? (role === "risk" && hasPos)
                     : (phase === "review") ? !NB(id)
                     : planner || (role === "risk" && hasPos);
@@ -442,7 +454,7 @@ function buildWorkers(){
       }
       if (role === "radar"){ const dial = free({x: x0 + w - 34, y: o.y + 52});
         plan = [[home, 2.5], [dial, 2], [near(home, 30, 30), 1.4]].concat(busy ? [[near(D.strat, 14, 6), 1.2]] : []); }
-      else if (role === "scout" || role === "vol") plan = [[home, 2.5], [near(home, 40, 30), 1.5], [near(home, -8, 44), 1.2]].concat(busy ? [[near(D.strat, 14, 6), 1.2]] : []);
+      else if (role === "scout" || role === "vol" || role === "tape") plan = [[home, 2.5], [near(home, 40, 30), 1.5], [near(home, -8, 44), 1.2]].concat(busy ? [[near(D.strat, 14, 6), 1.2]] : []);
       else if (role === "strat") plan = busy ? [[home, 3], [near(D.trader || home, -14, 6), 1.4]] : [[home, 5], [near(home, 20, 34), 1.5]];
       else if (role === "trader") plan = busy ? [[home, 1.5], [door, 0], [ex[0], 0.8], [ex[1], 0.6], [door, 0]] : [[home, 4], [near(home, -30, 36), 2]];
       else if (role === "risk") plan = hasPos ? screens.map(s => [s, 1.6]).concat([[home, 2]]) : [[home, 5], [near(home, 24, 34), 1.5]];
@@ -574,7 +586,7 @@ function roleInfo(k){
   if (st.out){ base.lines.push(`The firm is ${a.status}. ${a.status_reason || ""}`.trim()); return base; }
   const planObj = (data.plans || {})[k.firm], todayET = etNow().date;
   const livePlan = planObj && planObj.for_day >= todayET ? planObj : null;
-  if (phase !== "open" && ["scout", "vol", "strat", "radar"].includes(k.role)){
+  if (phase !== "open" && ["scout", "vol", "strat", "radar", "tape"].includes(k.role)){
     if (!livePlan){
       base.lines.push(phase === "review" ? "In the weekly review: grading this week's trades and retuning the strategy."
         : "Starting tonight's game plan. The first session runs about 4:40 PM ET, then check-ins around 8:10 PM and before the open.");
@@ -596,6 +608,12 @@ function roleInfo(k){
     return base;
   }
   switch (k.role){
+    case "tape": {
+      const pb = (data.playbooks || {}).scalper;
+      base.lines.push(pb ? `Watching ${(pb.watch || []).join(", ")} on 1-minute charts. Playbook: ${pb.aggression}.` : "Waiting for today's playbook.");
+      base.lines.push("Looks for opening-range breakouts, bounces off VWAP in uptrending stocks, and momentum bursts on heavy volume. Checks every 2 minutes.");
+      if (pb && pb.why) base.lines.push(`Strategist's call: ${pb.why}`);
+      break; }
     case "radar": {
       const rd = (data.radar || {}).now || {}, labels = (data.radar || {}).labels || {};
       if (rd.score == null){ base.lines.push("Waiting for the first Crash Radar reading."); break; }
@@ -635,6 +653,12 @@ function roleInfo(k){
       break; }
     case "risk": {
       if (!st.positions.length){ base.lines.push("Nothing open to guard right now."); break; }
+      if (k.firm === "scalper"){
+        const p = st.positions[0].p;
+        base.lines.push(`Watching ${st.positions.length} open scalp${st.positions.length > 1 ? "s" : ""}. Each closes at its target, its stop, if it loses VWAP, after its time limit, or at 3:50 PM.`);
+        base.lines.push(`${p.symbol}: bought at ${money(p.entry)}${p.last ? `, now ${money(p.last)}` : ""}.`);
+        break;
+      }
       if (k.firm === "trend"){
         const p = st.positions[0].p, gap = p.kind === "stock" && p.stop && p.last ? (p.last / p.stop - 1) * 100 : null;
         base.lines.push(`Guarding ${st.positions.length} position${st.positions.length > 1 ? "s" : ""}, raising each stop as price climbs.`);

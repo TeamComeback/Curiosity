@@ -14,9 +14,9 @@ import focus
 import universe
 from broker import AlpacaError, Broker
 from indicators import enrich
-import baseline, blackswan, meanrev, monkey, radar, trend, volsell
+import baseline, blackswan, meanrev, monkey, radar, scalper, trend, volsell
 
-REGISTRY = {"trend": trend, "meanrev": meanrev, "volsell": volsell, "blackswan": blackswan,
+REGISTRY = {"trend": trend, "meanrev": meanrev, "volsell": volsell, "blackswan": blackswan, "scalper": scalper,
             "baseline": baseline, "monkey": monkey}
 from common import mid, pick_option, pick_put_spread, split_today
 
@@ -424,6 +424,7 @@ def write_dashboard(state, regime, equities):
         "scorecards": {aid: plan_mod.scorecard_summary(a) for aid, a in state["agents"].items() if a.get("scorecard")},
         "calendar": store.load("calendar.json", []),
         "radar": store.load("radar.json", {}),
+        "playbooks": {aid: a.get("playbook") for aid, a in state["agents"].items() if a.get("playbook")},
         "focus": {aid: focus.current(a) for aid, a in state["agents"].items() if focus.current(a)},
         "sector_stats": {aid: focus.sector_stats(aid) for aid in state["agents"]},
         "universe": {k: store.load("universe.json", {}).get(k) for k in ("built", "pool_size")} |
@@ -524,6 +525,12 @@ def main(force=False, broker=None):
                  for aid, a in state["agents"].items() if config.AGENTS[aid]["competing"]]
     for aid, agent in state["agents"].items():
         if agent["status"] != "active":
+            continue
+        if aid == "scalper":                 # the AI sets the scalper's playbook; the 2-minute loop trades it
+            try:
+                scalper.update_playbook({**ctx, "equity": agent_equity(agent, prices)}, state, b)
+            except Exception as e:  # noqa: BLE001
+                print(f"[scalper] playbook failed: {type(e).__name__}")
             continue
         ok, why = governor.can_trade_today(state, aid)
         can_open = ok and in_window(aid)

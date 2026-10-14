@@ -18,7 +18,7 @@ def nice(sym):
     return f"{m[1]} ${int(m[6]) / 1000:g} {'call' if m[5] == 'C' else 'put'} {MON[int(m[3]) - 1]} {int(m[4])}" if m else str(sym or "")
 
 
-NAMES = {"trend": "Trend Co.", "meanrev": "Snapback", "volsell": "Premium House", "blackswan": "Black Swan",
+NAMES = {"trend": "Trend Co.", "meanrev": "Snapback", "volsell": "Premium House", "blackswan": "Black Swan", "scalper": "Rapid Fire",
          "baseline": "SPY", "monkey": "Monkey"}
 
 

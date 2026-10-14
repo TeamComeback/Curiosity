@@ -60,6 +60,13 @@ AGENTS = {
                            "money is running to safety. 'stock' here means ONLY inverse ETFs and safe havens; never "
                            "buys ordinary stocks. Takes profits in stages, because crash rallies reverse violently. "
                            "Its sector focus means the sectors it bets AGAINST."},
+    "scalper": {"name": "Rapid Fire Trading", "competing": True, "instruments": ["stock"],
+                "style": "Intraday scalper. Trades shares of the most liquid, most active stocks minute by minute: "
+                         "opening-range breakouts, pullbacks to VWAP in a trending stock, and volume-backed momentum bursts. "
+                         "Small quick targets, tight stops, a time limit on every trade, and always flat by the close. "
+                         "Cash account: proceeds settle next day, so the day's cash is split into slices and each slice "
+                         "gets one round trip a day. You set the playbook (which stocks, how aggressive, how many slices, "
+                         "targets and stops); code executes it every 2 minutes."},
     "baseline": {"name": "SPY benchmark", "competing": False, "instruments": ["stock"],
                  "style": "Buys SPY with its starting cash and holds. Not racing; it's the bar to beat."},
     "monkey": {"name": "Random monkey", "competing": False, "instruments": ["stock"],
@@ -98,6 +105,8 @@ DEFAULT_PARAMS = {
                 "opt_min_dte": 14, "opt_max_dte": 45, "opt_delta": 0.50},
     "volsell": {"short_delta": 0.20, "width": 1, "min_dte": 21, "max_dte": 45,
                 "take_profit": 0.50, "stop_mult": 2.0, "exit_dte": 10, "min_iv_rv": 1.10},
+    "scalper": {"target_pct": 0.6, "stop_pct": 0.3, "max_hold_min": 45, "slices": 4, "min_rel_volume": 1.5,
+                "max_extension_pct": 1.5},
     "blackswan": {"breakdown_lookback": 20, "stop_atr": 2.0, "trail_atr": 3.0, "opt_min_dte": 45,
                   "opt_max_dte": 120, "opt_delta": 0.40, "spread_width_pct": 0.05, "insurance_pct": 0.08,
                   "stop_pct": 0.50, "exit_dte": 21, "leveraged_max_days": 5},
@@ -110,6 +119,8 @@ PARAM_BOUNDS = {
                 "opt_min_dte": (7, 45), "opt_max_dte": (14, 90), "opt_delta": (0.25, 0.80)},
     "volsell": {"short_delta": (0.08, 0.40), "width": (1, 5), "min_dte": (7, 40), "max_dte": (14, 60),
                 "take_profit": (0.25, 0.85), "stop_mult": (1.0, 3.0), "exit_dte": (0, 21), "min_iv_rv": (0.9, 1.6)},
+    "scalper": {"target_pct": (0.2, 2.0), "stop_pct": (0.1, 1.0), "max_hold_min": (10, 180), "slices": (1, 8),
+                "min_rel_volume": (1.0, 4.0), "max_extension_pct": (0.5, 3.0)},
     "blackswan": {"breakdown_lookback": (10, 60), "stop_atr": (1.0, 5.0), "trail_atr": (1.5, 6.0),
                   "opt_min_dte": (30, 90), "opt_max_dte": (60, 180), "opt_delta": (0.20, 0.60),
                   "spread_width_pct": (0.02, 0.12), "insurance_pct": (0.0, 0.15), "stop_pct": (0.30, 0.70),

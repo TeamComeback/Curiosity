@@ -12,12 +12,12 @@
 :root{
   color-scheme:light;
   --ground:#e9ece8;--paper:#f6f7f4;--ink:#1f2a2e;--ink2:#56636a;--rule:#a9b3b4;--faint:#d5dad7;
-  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--blackswan:#6a4fc0;--baseline:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
+  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--blackswan:#6a4fc0;--scalper:#0a8fb0;--baseline:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
 }
 @media (prefers-color-scheme:dark){:root{
   color-scheme:dark;
   --ground:#11171a;--paper:#182024;--ink:#dce3e2;--ink2:#9aa7a9;--rule:#4a575c;--faint:#26312f;
-  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--blackswan:#9b84e8;--baseline:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
+  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--blackswan:#9b84e8;--scalper:#2fb6d6;--baseline:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
 }}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--ground);color:var(--ink);font:15px/1.45 "IBM Plex Sans Condensed",-apple-system,BlinkMacSystemFont,sans-serif}
@@ -77,8 +77,8 @@ tr:last-child td{border-bottom:0}
   </section>
 </div>
 <script>
-const NAMES = {trend:"Trend Co.", meanrev:"Snapback Partners", volsell:"Premium House", blackswan:"Black Swan & Co.", baseline:"Index Booth (SPY)", monkey:"Monkey Business"};
-const ORDER = ["trend", "meanrev", "volsell", "blackswan", "monkey", "baseline"];
+const NAMES = {trend:"Trend Co.", meanrev:"Snapback Partners", volsell:"Premium House", blackswan:"Black Swan & Co.", scalper:"Rapid Fire Trading", baseline:"Index Booth (SPY)", monkey:"Monkey Business"};
+const ORDER = ["trend", "meanrev", "volsell", "blackswan", "scalper", "monkey", "baseline"];
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money = n => n == null ? "–" : (n < 0 ? "-" : "") + "$" + Math.abs(Number(n)).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -118,13 +118,14 @@ function sheet(id, start){
   const closed = L.filter(e => e.type === "trade_closed" && e.agent === id && !e.partial);
   const realized = closed.reduce((s, e) => s + (e.pnl || 0), 0) + pos.reduce((s, p) => s + (p.realized || 0), 0);
   const rd = (D.radar || {}).now;
-  const role = id === "blackswan" ? `Racing to $${(D.race.goal || 10000).toLocaleString()} by betting on falling prices${rd && rd.score != null ? ` · Crash Radar ${rd.score}/100 (${rd.tier})` : ""}` : id === "monkey" ? "Control group: random picks, same rules" : id === "baseline" ? "Benchmark: SPY bought and held" : `Racing to $${(D.race.goal || 10000).toLocaleString()}`;
+  const pbk = (D.playbooks || {})[id];
+  const role = id === "scalper" ? `Racing to $${(D.race.goal || 10000).toLocaleString()} with quick intraday trades${pbk ? ` · playbook: ${pbk.aggression}, watching ${(pbk.watch || []).slice(0, 5).join(", ")}` : ""}` : id === "blackswan" ? `Racing to $${(D.race.goal || 10000).toLocaleString()} by betting on falling prices${rd && rd.score != null ? ` · Crash Radar ${rd.score}/100 (${rd.tier})` : ""}` : id === "monkey" ? "Control group: random picks, same rules" : id === "baseline" ? "Benchmark: SPY bought and held" : `Racing to $${(D.race.goal || 10000).toLocaleString()}`;
   return `<section class="sheet" aria-label="${esc(NAMES[id])}">
     <header><div><h2><i style="background:var(--${id})"></i>${esc(NAMES[id])}</h2><div class="muted" style="font-size:13px">${esc(role)} · ${esc(a.status)}</div></div>
       <div class="val">${money(a.equity)}<small class="${ret >= 0 ? "up" : "down"}">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}% since start</small></div></header>
     <div class="sec"><h3>Books</h3>
       <p>Cash ${money(a.available)}${a.settling ? ` (+${money(a.settling)} settling)` : ""} · ${pos.length} open · ${a.closed} closed${a.win_rate != null ? ` · ${a.win_rate}% winners` : ""} · realized ${closed.length ? signed(realized) : "$0.00"}</p></div>
-    ${["trend", "meanrev", "volsell", "blackswan"].includes(id) ? `<div class="sec"><h3>Sector focus</h3>${f && (f.lean_in.length || f.avoid.length) ?
+    ${["trend", "meanrev", "volsell", "blackswan", "scalper"].includes(id) ? `<div class="sec"><h3>Sector focus</h3>${f && (f.lean_in.length || f.avoid.length) ?
       `<p>${f.lean_in.map(s => `<span class="tag lean">${id === "blackswan" ? "Betting against" : "Leaning into"} ${esc(s)}</span>`).join("")}${f.avoid.map(s => `<span class="tag avoid">Avoiding ${esc(s)}</span>`).join("")}</p>
        <p class="muted">${esc(f.why)}${/[.!?]$/.test(f.why || "") ? "" : "."} Expires ${esc(f.expires)} unless renewed.</p>` : `<p class="muted">No sector focus yet. The planners set one once they see a sector working.</p>`}</div>` : ""}
     <div class="sec"><h3>Holdings</h3>${pos.length ? `<table><thead><tr><th>Position</th><th>Sector</th><th class="n">Cost</th><th class="n">P&amp;L</th></tr></thead><tbody>${
@@ -152,6 +153,8 @@ function entry(e){
       why: e.why, sub: (e.summary ? e.summary + " " : "") + ((e.watchlist || []).length ? "Watching " + e.watchlist.map(w => w.symbol).join(", ") + "." : "")};
     case "focus": return {what: `${c}${esc(who)} set its sector focus`, why: e.why,
       sub: [e.lean_in && e.lean_in.length ? "Leaning into " + e.lean_in.join(", ") : "", e.avoid && e.avoid.length ? "avoiding " + e.avoid.join(", ") : "", e.expires ? `until ${e.expires}` : ""].filter(Boolean).join(" · ")};
+    case "playbook": return {what: `${c}${esc(who)} set its playbook: ${esc(e.aggression)}`, why: e.why,
+      sub: (e.watch || []).length ? "Watching " + e.watch.join(", ") : ""};
     case "topup": return {what: "Every firm's starting balance raised", why: e.note, sub: ""};
     default: return null;
   }
