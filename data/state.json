@@ -13,7 +13,8 @@
   "counts": {
    "trend": 5,
    "meanrev": 1,
-   "blackswan": 2
+   "blackswan": 2,
+   "scalper": 1
   }
  },
  "agents": {
@@ -28,7 +29,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.21,
-     "mark": 1.21,
+     "mark": 1.24,
      "expiry": "2026-11-27",
      "strike": 14.5,
      "delta": -0.5,
@@ -46,8 +47,8 @@
       "pct_vs_sma200": -23.6
      },
      "sector": "Technology",
-     "low_water": 14.085,
-     "exit_half_spread": 0.025
+     "low_water": 14.065,
+     "exit_half_spread": 0.04
     },
     "pos-a3a860ab78": {
      "kind": "option",
@@ -56,7 +57,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.96,
-     "mark": 1.06,
+     "mark": 1.1,
      "expiry": "2026-11-06",
      "strike": 10.0,
      "delta": -0.39,
@@ -74,7 +75,7 @@
       "pct_vs_sma200": -43.3
      },
      "sector": "Technology",
-     "low_water": 10.155,
+     "low_water": 10.115,
      "exit_half_spread": 0.025
     },
     "pos-ea0031af4c": {
@@ -84,7 +85,7 @@
      "opt_type": "put",
      "qty": 2,
      "entry": 0.55,
-     "mark": 0.57,
+     "mark": 0.58,
      "expiry": "2026-11-06",
      "strike": 6.0,
      "delta": -0.46,
@@ -103,7 +104,7 @@
      },
      "sector": "Technology",
      "low_water": 5.875,
-     "exit_half_spread": 0.03
+     "exit_half_spread": 0.02
     },
     "pos-bf6606febd": {
      "kind": "option",
@@ -112,7 +113,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.75,
-     "mark": 1.7,
+     "mark": 1.65,
      "expiry": "2026-11-20",
      "strike": 8.0,
      "delta": -0.38,
@@ -131,7 +132,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 8.15,
-     "exit_half_spread": 0.125
+     "exit_half_spread": 0.18
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -209,6 +210,10 @@
     {
      "date": "2026-10-14",
      "note": "Blocked orders are a sizing signal, not a dead end: a liquid name can need a bigger premium budget. Keep the book from getting too correlated, and avoid adding to names already held."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Passing on CRWU: its only put needs more than $280 premium, which would put about 30% of equity in one more bearish name. The book already holds puts on SOFI, CIFR, SMR, PLUG and CWVX, all correlated distressed shorts in a calm, uptrending SPY regime. Keep cash for a genuinely new, uncorrelated brea"
     }
    ],
    "last_exits": {},
@@ -294,7 +299,7 @@
       "pct_vs_sma200": 15.7,
       "pct_vs_sma5": -2.6
      },
-     "last": 567.63
+     "last": 569.57
     },
     "pos-3514fae9b2": {
      "kind": "stock",
@@ -314,7 +319,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 162.425
+     "last": 163.26
     }
    },
    "status": "active",
@@ -372,6 +377,10 @@
     {
      "date": "2026-10-14",
      "note": "No candidate clears roughly 1:1 reward-to-risk (stops 7-16% away vs 4-8% targets). Holding SMH and STT to their default exits and keeping ~$700 in settled cash for a washout with a tight stop."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "No new entries: every candidate's stop sits 5-16% away against a 4-8% snap-back target, and STT (candidate 5) is already held. Keep settled cash for a washout with a tight stop and hold SMH and STT to their default exits."
     }
    ],
    "last_exits": {},
@@ -462,6 +471,10 @@
     {
      "date": "2026-10-14",
      "note": "Passed all 5. Best setup is IWM bear call 285/286 at 0.21 credit ($79 risk), below the 0.25 trigger. At about 20 delta the breakeven win rate (~79%) is close to the expected win rate (~80%), so EV is roughly zero after slippage. Re-check IWM at the open for a credit of at least 0.25 on the $1 width."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Passed: IWM 284/285 bear call credit is 0.24 on $76 risk, below the 0.25 trigger. Breakeven win rate (~76%) is too close to the ~80% expected at 20 delta to clear slippage. The game plan's '$100 account' references are stale; we now have $1,000."
     }
    ],
    "last_exits": {},
@@ -522,7 +535,7 @@
      }
     ]
    },
-   "min_trade_seen": 79.0,
+   "min_trade_seen": 76.0,
    "unsettled": []
   },
   "baseline": {
@@ -542,7 +555,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 769.645
+     "last": 769.67
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -558,7 +571,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 769.645
+     "last": 769.67
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -574,7 +587,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 769.645
+     "last": 769.67
     }
    },
    "status": "active",
@@ -630,7 +643,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.09,
+     "mark": 1.21,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -650,9 +663,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.165,
+     "exit_half_spread": 0.19,
      "peak_mark": 1.25,
-     "low_water": 42.695
+     "low_water": 42.665
     },
     "pos-a0895dfd5c": {
      "kind": "debit_spread",
@@ -676,7 +689,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.21,
+     "mark": 1.07,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
@@ -696,9 +709,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.235,
+     "exit_half_spread": 0.06,
      "peak_mark": 1.21,
-     "low_water": 31.335
+     "low_water": 31.305
     }
    },
    "status": "active",
@@ -707,7 +720,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.0,
-   "max_dd": 0.035,
+   "max_dd": 0.037,
    "notes": [
     {
      "date": "2026-10-14",
@@ -748,6 +761,10 @@
     {
      "date": "2026-10-14",
      "note": "Two breakdown spreads (ASTS, IREN) are already on, and the plan caps new risk. APP and XHB are valid setups, but adding them would exceed the planned risk. SPY insurance stays off while SPY is above its 50-day. Revisit APP/XHB only if an existing spread closes."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Radar is calm (16) and SPY is above its 50-day, so I'm holding the two breakdown spreads (ASTS, IREN) and passing on APP/XHB to keep bearish exposure capped at about $245. Revisit APP only if one of the current spreads closes or the radar moves above 40."
     }
    ],
    "last_exits": {},
@@ -843,15 +860,38 @@
    "unsettled": []
   },
   "scalper": {
-   "cash": 1000.0,
+   "cash": 833.37,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-b6b4dbbf2e": {
+     "kind": "stock",
+     "symbol": "TSLA",
+     "qty": 0.4539,
+     "entry": 367.114,
+     "cost": 166.63,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 366.05,
+     "atr": 0,
+     "opened": "2026-10-14T13:00:24-04:00",
+     "thesis": "VWAP pullback bounce on TSLA: 0.54x volume, +0.00% vs VWAP; target +0.6%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Consumer Discretionary",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.3,
+     "max_hold_min": 30,
+     "last": 367.08,
+     "peak_gain": 0.028873864794065618
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
    "closed": 0,
    "wins": 0,
-   "peak": 1000.0,
+   "peak": 1000.02,
    "max_dd": 0.0,
    "notes": [],
    "last_exits": {},
@@ -859,16 +899,19 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-10-14",
-    "made_at": "2026-10-14T12:36-04:00",
+    "made_at": "2026-10-14T13:05-04:00",
     "watch": [
-     "BAC",
-     "AAPL",
+     "SPY",
+     "QQQ",
+     "NVDA",
      "MU",
      "TSLA",
-     "SPY"
+     "AVGO",
+     "TSM",
+     "SMH"
     ],
     "aggression": "defensive",
-    "why": "Most of the tape is red, so I'm keeping defensive sizing and limiting the watchlist to names with a 1-minute uptrend. BAC is the only clean opening-range breakout, and AAPL, MU, and TSLA are uptrending into or near VWAP for bounce setups, with SPY as the regime check.",
+    "why": "The 1-minute trend is up in SPY, QQQ, NVDA, MU, TSLA, AVGO, TSM and SMH, and each sits within about 1% below VWAP, so VWAP bounces are the cleanest setup. The tape is still mostly red and the crash radar is calm, so I'm keeping defensive sizing and the current 0.6%/0.3% bracket to avoid churn.",
     "slices": 3,
     "target_pct": 0.6,
     "stop_pct": 0.3,
