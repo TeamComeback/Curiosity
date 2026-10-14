@@ -8,10 +8,8 @@
   "final_standings": null
  },
  "entries": {
-  "date": "2026-10-13",
-  "counts": {
-   "meanrev": 1
-  }
+  "date": "2026-10-14",
+  "counts": {}
  },
  "agents": {
   "trend": {
@@ -25,7 +23,12 @@
    "wins": 0,
    "peak": 500.0,
    "max_dd": 0.0,
-   "notes": [],
+   "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "Skip penny-stock breakdowns (CDT, SDST, HCAI, DKI, RKDA) since they have no tradeable puts; XLE trigger not met, so the plan is dropped."
+    }
+   ],
    "last_exits": {},
    "plan": {
     "for_day": "2026-10-14",
@@ -108,7 +111,7 @@
       "pct_vs_sma200": 15.7,
       "pct_vs_sma5": -2.6
      },
-     "last": 588.2
+     "last": 574.75
     }
    },
    "status": "active",
@@ -117,7 +120,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 500.24,
-   "max_dd": 0.0,
+   "max_dd": 0.0046,
    "notes": [
     {
      "date": "2026-10-13",
@@ -126,6 +129,10 @@
     {
      "date": "2026-10-13",
      "note": "Cash is nearly fully deployed in SMH (about $100 position), so there is nothing to add. Next session, only take RSI(2) washouts where the stop distance is small relative to the expected snap-back to the 5-day high or RSI 70."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Balance shows $400.07 cash, not the $0.07 in the stale game plan. Equity is $497.95 with only the SMH position open (mark 574.75, stop 552.5). No candidates and outside the entry window, so holding SMH to its default exits."
     }
    ],
    "last_exits": {},
@@ -248,7 +255,7 @@
    }
   },
   "baseline": {
-   "cash": 401.06,
+   "cash": 4.06,
    "reserved": 0.0,
    "positions": {
     "pos-fe0738abd6": {
@@ -264,7 +271,23 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 778.03
+     "last": 773.59
+    },
+    "pos-aa166577d2": {
+     "kind": "stock",
+     "symbol": "SPY",
+     "qty": 0.5132,
+     "entry": 773.586,
+     "cost": 397.0,
+     "direction": "long",
+     "stop": 0,
+     "atr": 0.0,
+     "opened": "2026-10-14T10:02:06-04:00",
+     "thesis": "Benchmark: buy and hold SPY",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "last": 773.59
     }
    },
    "status": "active",
@@ -273,7 +296,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 500.01,
-   "max_dd": 0.0002,
+   "max_dd": 0.0012,
    "notes": [],
    "last_exits": {}
   },
@@ -303,7 +326,12 @@
    "wins": 0,
    "peak": 500.0,
    "max_dd": 0.0,
-   "notes": [],
+   "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "Calm radar (14): keep sizing small, max 2 breakdown spreads per day, and skip SPY insurance unless SPY closes below its 50-day average."
+    }
+   ],
    "last_exits": {},
    "joined": "2026-10-13T22:01:29-04:00",
    "plan": {

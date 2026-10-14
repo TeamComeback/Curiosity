@@ -105,5 +105,39 @@
   "agent": "blackswan",
   "note": "Evening check-in: new. No plan or positions existed, and the market is calm (Crash Radar 11). The scan's clearest breakdowns are in Technology, with chip weakness and the KOSPI plunge in the news, so I can start a small, targeted plan. Most other breakdowns are penny stocks or warrants that I'll avoid.",
   "symbol": "ASTS, SMR, IONQ, SPY"
+ },
+ {
+  "time": "2026-10-14T10:02:04-04:00",
+  "type": "rule_block",
+  "agent": "trend",
+  "symbol": "CRWG",
+  "note": "no put affordable within $150.00"
+ },
+ {
+  "time": "2026-10-14T10:02:06-04:00",
+  "type": "open",
+  "agent": "baseline",
+  "symbol": "SPY",
+  "instrument": "stock",
+  "qty": 0.5132,
+  "price": 773.586,
+  "cost": 397.0,
+  "stop": 0,
+  "thesis": "Benchmark: buy and hold SPY",
+  "confidence": 3
+ },
+ {
+  "time": "2026-10-14T10:02:16-04:00",
+  "type": "error",
+  "agent": "blackswan",
+  "symbol": "ASTS",
+  "note": "GET https://data.alpaca.markets/v1beta1/options/snapshots/ASTS -> 400: {\"message\":\"rpc error: code = Unavailable desc = name resolver error: lookup marketcache-indicative.marketdata on 10.62.16.10:53:"
+ },
+ {
+  "time": "2026-10-14T10:02:20-04:00",
+  "type": "error",
+  "agent": "blackswan",
+  "symbol": "APP",
+  "note": "GET https://data.alpaca.markets/v1beta1/options/snapshots/APP -> 400: {\"message\":\"rpc error: code = Unavailable desc = name resolver error: lookup marketcache-indicative.marketdata on 10.62.16.10:53: "
  }
 ]
