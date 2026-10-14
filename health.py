@@ -4,6 +4,7 @@ the repo, not just in hidden Actions logs. Keys are never written anywhere."""
 import os
 import re
 import traceback
+from datetime import timedelta
 
 import requests
 
@@ -72,7 +73,8 @@ def _alpaca_account():
 def _alpaca_data():
     r = requests.get(config.DATA_BASE + "/v2/stocks/bars", timeout=20,
                      headers={"APCA-API-KEY-ID": config.API_KEY, "APCA-API-SECRET-KEY": config.API_SECRET},
-                     params={"symbols": "SPY", "timeframe": "1Day", "limit": 5, "feed": config.STOCK_FEED})
+                     params={"symbols": "SPY", "timeframe": "1Day", "limit": 5, "feed": config.STOCK_FEED,
+                             "start": (store.now_et().date() - timedelta(days=10)).isoformat()})
     if r.status_code >= 400:
         return False, f"Market data error HTTP {r.status_code}: {r.text[:200]}"
     n = len((r.json().get("bars") or {}).get("SPY", []))
