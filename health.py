@@ -17,7 +17,7 @@ SECRET_NAMES = ("ALPACA_API_KEY", "ALPACA_API_SECRET", "ANTHROPIC_API_KEY")
 def redact(text):
     """Remove any secret value (raw or cleaned) and anything key-shaped from text."""
     text = str(text)
-    for n in SECRET_NAMES:
+    for n in SECRET_NAMES + ("FRED_API_KEY", "NTFY_TOPIC"):
         raw = os.getenv(n, "")
         for v in {raw, raw.strip(), "".join(raw.split())}:
             if len(v) >= 6:
@@ -25,6 +25,7 @@ def redact(text):
         for part in raw.split():
             if len(part) >= 6:
                 text = text.replace(part, "[hidden]")
+    text = re.sub(r"api_key=[^&\s]+", "api_key=[hidden]", text)
     text = re.sub(r"sk-ant-[\w\-\u0080-\uffff\\n]+", "sk-ant-[hidden]", text)
     text = re.sub(r"\bPK[A-Z0-9]{8,}\b", "PK[hidden]", text)
     text = re.sub(r"<[^>]+>", " ", text)
@@ -110,6 +111,16 @@ def _anthropic():
     return True, "Anthropic key OK."
 
 
+def _fred():
+    r = requests.get("https://api.stlouisfed.org/fred/series/observations", timeout=20,
+                     params={"series_id": "T10Y2Y", "api_key": config.FRED_API_KEY, "file_type": "json",
+                             "sort_order": "desc", "limit": 1})
+    if r.status_code == 200:
+        return True, "Connected: the Crash Radar includes economy data."
+    return False, (f"FRED answered {r.status_code}. Check the FRED_API_KEY secret (32 letters and numbers). "
+                   "The Crash Radar keeps running on market data meanwhile.")
+
+
 def run_checks():
     checks = [_check("GitHub secrets", _secrets)]
     if checks[0]["ok"] or (config.API_KEY and config.API_SECRET):
@@ -117,6 +128,8 @@ def run_checks():
                    _check("Alpaca stock data", _alpaca_data),
                    _check("Alpaca options data", _alpaca_options)]
     checks.append(_check("Anthropic API", _anthropic))
+    if config.FRED_API_KEY:
+        checks.append(_check("FRED economy data", _fred))
     save(checks)
     return checks
 

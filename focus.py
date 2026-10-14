@@ -16,7 +16,7 @@ MAX_LEAN = 3
 def sector_stats(aid):
     rows = {}
     for e in store.load("ledger.json", []):
-        if e.get("agent") != aid or e.get("type") != "trade_closed":
+        if e.get("agent") != aid or e.get("type") != "trade_closed" or e.get("partial"):
             continue
         s = rows.setdefault(e.get("sector") or "Broad market / other", {"trades": 0, "wins": 0, "pnl": 0.0})
         s["trades"] += 1

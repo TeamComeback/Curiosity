@@ -80,6 +80,27 @@ def scan(aid, bars, params, b=None, agent_for_scan=None):
             ranked = [r for r in ranked if r["sector"] in f.get("lean_in", [])][:8] + \
                      [r for r in ranked if r["sector"] not in f.get("lean_in", []) + f.get("avoid", [])]
         return ranked[:20]
+    if aid == "blackswan":
+        import blackswan as bs
+        bp = params.get("blackswan", {})
+        for sym, df in bars.items():
+            if len(df) < 210:
+                continue
+            h = enrich(df)
+            last = h.iloc[-1]
+            close = float(last["close"])
+            lo = float(h.iloc[:-1]["low"].tail(int(bp.get("breakdown_lookback", 20))).min())
+            dist = (close / lo - 1) * 100
+            kind = ("sector" if sym in bs.SECTOR_ETFS else "index" if sym in bs.INDEXES else
+                    "haven" if sym in config.SAFE_HAVENS else None if sym in bs.NOT_STOCKS else "stock")
+            if kind == "haven":
+                if close > last["sma50"] and last["roc20"] > 0:
+                    out.append({"symbol": sym, "setup": "safe haven rising", "roc20_pct": round(float(last["roc20"]) * 100, 1)})
+            elif kind and close < last["sma50"] and dist <= 3 and last["roc20"] < 0 and (kind != "stock" or last["sma50"] < last["sma200"]):
+                out.append({"symbol": sym, "kind": kind, "setup": "broke down today" if dist <= 0 else "near breakdown (put spread)",
+                            "level": round(lo, 2), "distance_pct": round(dist, 2), "roc20_pct": round(float(last["roc20"]) * 100, 1),
+                            "below_200d": bool(close < last["sma200"]), "sector": universe.sector_of(sym)})
+        return sorted(out, key=lambda c: (c.get("distance_pct", 99), c.get("roc20_pct", 0)))[:20]
     if aid == "volsell":
         ivh = store.load("iv_history.json", {})
         for und in config.VOL_UNDERLYINGS:
@@ -112,7 +133,7 @@ def scan(aid, bars, params, b=None, agent_for_scan=None):
     return out
 
 
-PLAN_SYSTEM = """You are the planning team (scout + strategist) of {name}, one of three AI trading firms in a
+PLAN_SYSTEM = """You are the planning team (scout + strategist) of {name}, one of {n_firms} AI trading firms in a
 paper-trading race: each started with ${start:,.0f}, first to ${goal:,.0f} wins, below $10 is eliminated.
 Your specialty: {style}
 Allowed instruments: {instruments}. Rules you cannot change: cash only, no naked options, max {max_trades}
@@ -130,12 +151,14 @@ only where your own results ("my_results_by_sector") or today's scan give real e
 back out when it stops paying. A focus expires after 10 trading days unless you renew it.
 Sector names must come from: {sectors}.
 
+The "crash_radar" (0-100 market stress: calm under 40, warning 40-70, stress 70+) is shared by every firm.
+
 Reply with ONLY a JSON object:
 {{"decision":"keep|revise|scrap|new",
  "why":"one or two sentences on what changed your mind (or why the plan still holds)",
  "summary":"tomorrow's plan in 1-3 sentences",
  "watchlist":[{{"symbol":"...","setup":"...","trigger":"the price/condition that would make you act",
-               "instrument":"stock|call|put|spread","max_dollars":<number>,"conviction":1-5}}],
+               "instrument":"{inst_choices}","max_dollars":<number>,"conviction":1-5}}],
  "position_plans":[{{"symbol":"...","plan":"hold / tighten stop to X / exit at open if Y"}}],
  "avoid":["symbol or situation to stay away from, with a reason"],
  "brainstorm":"one new idea or tweak to test, or empty",
@@ -166,18 +189,22 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
         "my_plan_scorecard": scorecard_summary(agent),
         "my_results_by_sector": focus.sector_stats(aid),
         "current_sector_focus": focus.current(agent),
+        "crash_radar": {k: (__import__("radar").current() or {}).get(k) for k in ("score", "tier", "parts", "facts", "economy")},
     }
     if not config.ANTHROPIC_API_KEY:
         d = {"decision": "new" if not current else "keep", "why": "Rules-only mode: plan is the top scan results.",
              "summary": "Watch the strongest scan results.",
              "watchlist": [{"symbol": r["symbol"], "setup": r.get("setup", r.get("trend_side", "")), "trigger": "scanner signal",
-                            "instrument": "spread" if aid == "volsell" else "stock", "max_dollars": 40, "conviction": 2}
-                           for r in scan_rows[:3]],
+                            "instrument": "spread" if aid == "volsell" else "debit_spread" if aid == "blackswan" else "stock",
+                            "max_dollars": 40, "conviction": 2}
+                           for r in scan_rows[:3] if r.get("symbol")],
              "position_plans": [], "avoid": [], "brainstorm": ""}
     else:
         system = PLAN_SYSTEM.format(name=a["name"], goal=config.RACE["goal"], start=config.RACE["start_balance"],
                                     sectors=", ".join(universe.SECTORS), style=a["style"],
                                     instruments=", ".join(a["instruments"]), session=SESSIONS[session],
+                                    inst_choices="|".join(a["instruments"]),
+                                    n_firms=sum(1 for x in config.AGENTS.values() if x["competing"]),
                                     max_trades=config.RULES["max_new_trades_per_day"], max_pos=config.RULES["max_open_positions"])
         d, err = None, None
         for attempt in range(2):                # one retry: long answers occasionally get cut off
@@ -260,6 +287,8 @@ def grade(aid, agent, bars):
             return None
         if inst == "spread":   # bull put spreads want the underlying up, bear call spreads want it down
             inst = "put" if "call" in str(setup).lower() else "stock"
+        if inst == "debit_spread":
+            inst = "put"
         last_day = str(df.index[-1].tz_convert("America/New_York").date()) if df.index.tz is not None else str(df.index[-1].date())
         if last_day != today:
             return None
@@ -332,6 +361,7 @@ def main(session=None, force=False, only=None):
     if not state or state["race"]["status"] != "running":
         print("No running race.")
         return
+    store.add_missing_agents(state)      # a firm added mid-race starts planning right away
     for_day = next_trading_day(now)
     params = store.load_params()
 
@@ -340,7 +370,9 @@ def main(session=None, force=False, only=None):
             universe.build_weekly(b)
         except Exception as e:  # noqa: BLE001 - keep last week's list
             print(f"[plan] universe rebuild failed: {type(e).__name__}")
-    symbols = list(dict.fromkeys(["SPY"] + config.VOL_UNDERLYINGS + universe.candidates(b, state)))
+    import blackswan as bs
+    symbols = list(dict.fromkeys(["SPY"] + config.VOL_UNDERLYINGS + config.BEAR_SYMBOLS + config.SAFE_HAVENS
+                                 + bs.SECTOR_ETFS + universe.candidates(b, state)))
     bars = {}
     for i in range(0, len(symbols), 50):
         bars.update(b.daily_bars(symbols[i:i + 50]))
@@ -349,6 +381,12 @@ def main(session=None, force=False, only=None):
     except Exception:  # noqa: BLE001
         prices = {}
     since = (now - timedelta(hours=20)).isoformat(timespec="seconds")
+    if session == "close":          # finished daily candles: refresh the Crash Radar for tonight's planners
+        try:
+            import radar
+            radar.compute(bars, {s_: float(df["close"].iloc[-1]) for s_, df in bars.items() if len(df)})
+        except Exception as e:  # noqa: BLE001
+            print(f"[plan] radar failed: {type(e).__name__}")
 
     changed = False
     for aid, agent in state["agents"].items():
@@ -366,7 +404,7 @@ def main(session=None, force=False, only=None):
                                "note": f"Plan graded: {g['right_way']} of {g['scored']} picks moved the planned way"
                                        + (f", avg {g['avg_move_pct']:+.2f}%" if g['avg_move_pct'] is not None else "")})
         rows = scan(aid, bars, params, b, agent)
-        watch = [r["symbol"] for r in rows][:12] + [w["symbol"] for w in cur.get("watchlist", [])] + \
+        watch = [r["symbol"] for r in rows if r.get("symbol")][:12] + [w["symbol"] for w in cur.get("watchlist", [])] + \
                 [p.get("underlying", p["symbol"]) for p in agent["positions"].values()]
         try:
             news = b.news(list(dict.fromkeys(watch)), since) if watch else []

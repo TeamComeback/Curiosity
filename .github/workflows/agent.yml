@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "run (one cycle), review (weekly self-review), plan (game-plan session), universe (rebuild stock list) or alert (send a test phone alert)"
+        description: "run (one cycle), review (weekly self-review), plan (game-plan session), universe (rebuild stock list), radar (Crash Radar reading) or alert (send a test phone alert)"
         default: "run"
       force:
         description: "Run even if the market is closed (true/false)"
@@ -49,6 +49,7 @@ jobs:
           REVIEW_MODEL: ${{ vars.REVIEW_MODEL || 'claude-sonnet-5-5' }}
           PLAN_MODEL: ${{ vars.PLAN_MODEL }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           DASHBOARD_URL: https://teamcomeback.github.io/Curiosity/
         run: |
           SCHED="${{ github.event.schedule }}"
@@ -56,6 +57,8 @@ jobs:
             python review.py
           elif [ "$SCHED" = "40 20,21 * * 1-5" ] || [ "$SCHED" = "10 0 * * 1-5" ] || [ "$SCHED" = "40 11,12 * * 1-5" ]; then
             python plan.py
+          elif [ "${{ inputs.task }}" = "radar" ]; then
+            python admin.py radar
           elif [ "${{ inputs.task }}" = "alert" ]; then
             python admin.py alert
           elif [ "${{ inputs.task }}" = "universe" ]; then

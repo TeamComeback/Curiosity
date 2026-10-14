@@ -14,10 +14,11 @@ import focus
 import universe
 from broker import AlpacaError, Broker
 from indicators import enrich
-import baseline, meanrev, monkey, trend, volsell
+import baseline, blackswan, meanrev, monkey, radar, trend, volsell
 
-REGISTRY = {"trend": trend, "meanrev": meanrev, "volsell": volsell, "baseline": baseline, "monkey": monkey}
-from common import mid, pick_option, split_today
+REGISTRY = {"trend": trend, "meanrev": meanrev, "volsell": volsell, "blackswan": blackswan,
+            "baseline": baseline, "monkey": monkey}
+from common import mid, pick_option, pick_put_spread, split_today
 
 SLIP = config.RULES["slippage_half_spread"]
 
@@ -59,7 +60,7 @@ def position_value(pos, prices):
         px = prices.get(pos["symbol"], pos["entry"])
         pos["last"] = px
         return px * pos["qty"]
-    if pos["kind"] == "option":
+    if pos["kind"] in ("option", "debit_spread"):
         return pos.get("mark", pos["entry"]) * 100 * pos["qty"]
     return -pos.get("mark", pos["credit"]) * 100 * pos["qty"]
 
@@ -77,10 +78,15 @@ def _fill(b, sub, seconds=20):
 def open_trade(b, state, aid, cand, order, ctx):
     agent = state["agents"][aid]
     inst = order["instrument"]
-    p = ctx["params"].get(aid, {})
+    p = {**ctx["params"].get(aid, {}), **cand.get("opt", {})}
+    if cand.get("max_dollars") is not None and order.get("dollars") is not None:   # firm's own per-trade cap
+        order = {**order, "dollars": min(float(order["dollars"]), float(cand["max_dollars"]))}
     default_stop = cand.get("stop") or 0
     stop = default_stop
     agent_stop = order.get("stop")
+    px = cand.get("price") or 0
+    if agent_stop and px and ((cand.get("direction") == "short") == (float(agent_stop) <= px)):
+        agent_stop = None              # a stop on the wrong side of the price would fire instantly: ignore it
     if agent_stop and default_stop:  # agents may tighten, never loosen past the default
         stop = max(agent_stop, default_stop) if cand.get("direction") != "short" else min(agent_stop, default_stop)
 
@@ -118,6 +124,31 @@ def open_trade(b, state, aid, cand, order, ctx):
                "qty": n, "entry": fill, "mark": fill, "expiry": opt["expiry"], "strike": opt["strike"],
                "delta": round(opt["delta"], 2), "cost": cost}
 
+    elif inst == "debit_spread":
+        budget = min(float(order.get("dollars") or 0), governor.available(agent))
+        sp = pick_put_spread(b, cand["symbol"], cand["price"], p, budget)
+        if not sp:
+            return store.journal({"type": "rule_block", "agent": aid, "symbol": cand["symbol"],
+                                  "note": f"no put spread affordable within ${budget:.2f}"})
+        n = int(budget // (sp["debit"] * 100))
+        ok, why = governor.check_order(state, aid, cand, inst, n * sp["debit"] * 100)
+        if not ok or n < 1:
+            return store.journal({"type": "rule_block", "agent": aid, "symbol": cand["symbol"], "note": why})
+        legs = [{"symbol": sp["long"]["symbol"], "ratio_qty": "1", "side": "buy", "position_intent": "buy_to_open"},
+                {"symbol": sp["short"]["symbol"], "ratio_qty": "1", "side": "sell", "position_intent": "sell_to_open"}]
+        limit = round(sp["debit"] + min(sp["half_spread"], 0.05), 2)
+        o = _fill(b, b.submit_mleg(legs, n, limit, cid(aid)), 30)
+        if not o:
+            return store.journal({"type": "unfilled", "agent": aid, "symbol": cand["symbol"],
+                                  "note": f"debit {limit} not filled"})
+        n = int(float(o["filled_qty"]))
+        fill = abs(float(o.get("filled_avg_price") or limit))
+        slip = round(min(sp["half_spread"], 0.10) * 100 * n, 2) if SLIP else 0
+        pos = {"kind": "debit_spread", "symbol": cand["symbol"], "underlying": cand["symbol"], "qty": n,
+               "legs": legs, "structure": "bear put spread", "expiry": sp["expiry"], "entry": fill, "mark": fill,
+               "width": sp["width"], "long_strike": sp["long"]["strike"], "short_strike": sp["short"]["strike"],
+               "cost": round(fill * 100 * n + slip, 2)}
+
     elif inst == "spread":
         n = max(1, int(order.get("contracts") or 1))
         while n > 1 and cand["max_loss_per"] * n > governor.available(agent):
@@ -150,6 +181,8 @@ def open_trade(b, state, aid, cand, order, ctx):
     agent["cash"] = round(agent["cash"] - pos["cost"], 2)
     if cand.get("hold_days"):
         pos["hold_days"] = cand["hold_days"]
+    if cand.get("play"):
+        pos["play"] = cand["play"]
     pos.update({"direction": cand.get("direction", "long"), "stop": stop, "atr": cand.get("atr", 0),
                 "opened": store.now_et().isoformat(timespec="seconds"),
                 "thesis": order.get("thesis") or cand.get("rule_thesis", ""),
@@ -171,26 +204,48 @@ def open_trade(b, state, aid, cand, order, ctx):
                                and plan.get("for_day") == store.today()})
 
 
-def close_trade(b, state, aid, pid, reason):
+def close_trade(b, state, aid, pid, reason, qty=None):
+    """Close a position, or part of it (qty) when a firm takes profits in stages."""
     agent = state["agents"][aid]
     pos = agent["positions"][pid]
+    nq = pos["qty"]
+    if qty and pos["kind"] != "spread" and 0 < qty < pos["qty"]:
+        nq = qty
     if pos["kind"] == "stock":
-        o = _fill(b, b.submit_stock(pos["symbol"], pos["qty"], "sell", cid("x" + aid)))
+        o = _fill(b, b.submit_stock(pos["symbol"], nq, "sell", cid("x" + aid)))
         if not o:
             return store.journal({"type": "exit_unfilled", "agent": aid, "symbol": pos["symbol"], "note": reason})
         exit_px = float(o["filled_avg_price"])
-        proceeds = round(exit_px * pos["qty"], 2)
+        nq = float(o.get("filled_qty") or nq)
+        proceeds = round(exit_px * nq, 2)
+    elif pos["kind"] == "debit_spread":
+        legs = [{"symbol": pos["legs"][0]["symbol"], "ratio_qty": "1", "side": "sell", "position_intent": "sell_to_close"},
+                {"symbol": pos["legs"][1]["symbol"], "ratio_qty": "1", "side": "buy", "position_intent": "buy_to_close"}]
+        half = pos.get("exit_half_spread", 0.03)
+        limit = max(round(pos.get("mark", pos["entry"]) - min(max(half, 0.01), 0.05), 2), 0.01)
+        try:  # selling a spread is a net credit: Alpaca writes it as a negative limit price
+            sub = b.submit_mleg(legs, nq, -limit, cid("x" + aid))
+        except AlpacaError as e:
+            if "limit" not in str(e).lower():
+                raise
+            sub = b.submit_mleg(legs, nq, limit, cid("x" + aid))
+        o = _fill(b, sub, 30)
+        if not o:
+            return store.journal({"type": "exit_unfilled", "agent": aid, "symbol": pos["symbol"], "note": reason})
+        exit_px = min(abs(float(o.get("filled_avg_price") or limit)), pos["width"])
+        slip = min(half, 0.10) * 100 * nq if SLIP else 0
+        proceeds = round(max(exit_px * 100 * nq - slip, 0), 2)
     elif pos["kind"] == "option":
-        q = b.option_quotes([pos["symbol"]]).get(pos["symbol"]) or {}
-        m, spr = mid(q)
-        bid = float(q.get("bp") or 0)
+        quote = b.option_quotes([pos["symbol"]]).get(pos["symbol"]) or {}
+        m, spr = mid(quote)
+        bid = float(quote.get("bp") or 0)
         limit = max(bid, 0.01)
-        o = _fill(b, b.submit_option(pos["symbol"], pos["qty"], "sell", limit, "sell_to_close", cid("x" + aid)))
+        o = _fill(b, b.submit_option(pos["symbol"], nq, "sell", limit, "sell_to_close", cid("x" + aid)))
         if not o:
             return store.journal({"type": "exit_unfilled", "agent": aid, "symbol": pos["symbol"], "note": reason})
         exit_px = float(o["filled_avg_price"])
-        slip = (spr or 0) / 2 * 100 * pos["qty"] if SLIP else 0
-        proceeds = round(exit_px * 100 * pos["qty"] - slip, 2)
+        slip = (spr or 0) / 2 * 100 * nq if SLIP else 0
+        proceeds = round(exit_px * 100 * nq - slip, 2)
     else:
         legs = [{"symbol": pos["legs"][0]["symbol"], "ratio_qty": "1", "side": "buy", "position_intent": "buy_to_close"},
                 {"symbol": pos["legs"][1]["symbol"], "ratio_qty": "1", "side": "sell", "position_intent": "sell_to_close"}]
@@ -203,7 +258,23 @@ def close_trade(b, state, aid, pid, reason):
         slip = min(half, 0.10) * 100 * pos["qty"] if SLIP else 0
         proceeds = round(max(-(exit_px * 100 * pos["qty"]) - slip, -pos["width"] * 100 * pos["qty"]), 2)
         agent["reserved"] = round(max(agent["reserved"] - pos["width"] * 100 * pos["qty"], 0), 2)
-    pnl = round(proceeds - pos["cost"], 2)
+    if nq < pos["qty"]:                                   # partial: keep the rest open
+        pos.setdefault("orig_cost", pos["cost"])
+        part_cost = pos["cost"] * nq / pos["qty"]
+        pnl = round(proceeds - part_cost, 2)
+        agent["cash"] = round(agent["cash"] + proceeds, 2)
+        pos["qty"] = round(pos["qty"] - nq, 4) if pos["kind"] == "stock" else int(pos["qty"] - nq)
+        pos["cost"] = round(pos["cost"] - part_cost, 2)
+        pos["realized"] = round(pos.get("realized", 0) + pnl, 2)
+        pos["trimmed"] = True
+        store.journal({"type": "trim", "agent": aid, "symbol": pos["symbol"], "qty": nq, "exit": exit_px,
+                       "pnl": pnl, "note": reason})
+        store.ledger({"type": "trade_closed", "partial": True, "agent": aid, "position_id": pid, "symbol": pos["symbol"],
+                      "underlying": pos.get("underlying", pos["symbol"]), "sector": pos.get("sector"),
+                      "instrument": pos["kind"], "qty": nq, "entry": pos["entry"], "exit": exit_px, "pnl": pnl,
+                      "opened": pos["opened"], "why_entered": pos.get("thesis"), "why_exited": reason})
+        return None
+    pnl = round(proceeds - pos["cost"] + pos.get("realized", 0), 2)       # whole trade, including earlier trims
     agent["cash"] = round(agent["cash"] + proceeds, 2)
     agent["closed"] += 1
     agent["wins"] += 1 if pnl > 0 else 0
@@ -216,7 +287,7 @@ def close_trade(b, state, aid, pid, reason):
                   "underlying": pos.get("underlying", pos["symbol"]),
                   "sector": pos.get("sector") or universe.sector_of(pos.get("underlying", pos["symbol"])),
                   "instrument": pos["kind"], "entry": pos["entry"], "exit": exit_px, "pnl": pnl,
-                  "return_pct": round(pnl / abs(pos["cost"]) * 100, 1) if pos.get("cost") else None,
+                  "return_pct": round(pnl / abs(pos.get("orig_cost", pos["cost"])) * 100, 1) if pos.get("cost") else None,
                   "opened": pos["opened"], "why_entered": pos.get("thesis"), "why_exited": reason})
 
 
@@ -242,6 +313,7 @@ def agent_view(state, aid, cands, ctx, can_open, standings):
                           "opened": p["opened"], "expiry": p.get("expiry"), "structure": p.get("structure"),
                           "thesis": p.get("thesis")})
     keep = ("symbol", "sector", "direction", "price", "stop", "level", "target_hint", "structure", "short_strike", "size_pct",
+            "play", "max_dollars", "suggested_instrument", "hold_days",
             "long_strike", "expiry", "credit", "width", "max_loss_per", "signals", "rule_thesis")
     journal = store.load("journal.json", [])
     return {
@@ -256,9 +328,12 @@ def agent_view(state, aid, cands, ctx, can_open, standings):
                         **({"max_loss_per_contract": c["max_loss_per"]} if "max_loss_per" in c else {})}
                        for i, c in enumerate(cands)],
         "option_note": "For call/put orders, 'dollars' is your premium budget; the system buys the contract "
-                       "nearest your target delta (params.opt_delta) that fits it, or skips if none fits.",
+                       "nearest your target delta (params.opt_delta) that fits it, or skips if none fits. For "
+                       "debit_spread (bear put spread), 'dollars' is the most you'll pay, which is also the most "
+                       "you can lose; the system buys the put near your target delta and sells a cheaper one below it.",
         "params": ctx["params"].get(aid, {}),
         "regime": ctx["regime"],
+        "crash_radar": {k: (ctx.get("radar") or {}).get(k) for k in ("score", "tier", "parts", "facts", "economy")},
         "recent_closed_trades": [j for j in journal if j.get("type") == "close" and j.get("agent") == aid][-8:],
         "sector_focus": focus.current(agent),
         "my_results_by_sector": focus.sector_stats(aid),
@@ -304,6 +379,7 @@ def write_dashboard(state, regime, equities):
         "plans": {aid: a.get("plan") for aid, a in state["agents"].items() if a.get("plan")},
         "scorecards": {aid: plan_mod.scorecard_summary(a) for aid, a in state["agents"].items() if a.get("scorecard")},
         "calendar": store.load("calendar.json", []),
+        "radar": store.load("radar.json", {}),
         "focus": {aid: focus.current(a) for aid, a in state["agents"].items() if focus.current(a)},
         "sector_stats": {aid: focus.sector_stats(aid) for aid in state["agents"]},
         "universe": {k: store.load("universe.json", {}).get(k) for k in ("built", "pool_size")} |
@@ -369,13 +445,20 @@ def main(force=False, broker=None):
 
     held = {p.get("underlying", p["symbol"]) for a in state["agents"].values() for p in a["positions"].values()}
     cands = universe.candidates(b, state, extra=screener_candidates())
-    symbols = list(dict.fromkeys(["SPY"] + config.VOL_UNDERLYINGS + cands + sorted(held)))
+    symbols = list(dict.fromkeys(["SPY"] + config.VOL_UNDERLYINGS + config.BEAR_SYMBOLS + config.SAFE_HAVENS
+                                 + blackswan.SECTOR_ETFS + cands + sorted(held)))
     bars = {}
     for i in range(0, len(symbols), 50):
         bars.update(b.daily_bars(symbols[i:i + 50]))
     prices = b.latest_prices(symbols)
     regime = market_regime(bars, prices)
-    ctx = {"broker": b, "bars": bars, "prices": prices, "regime": regime, "params": params,
+    try:
+        crash = radar.compute(bars, prices)
+    except Exception as e:  # noqa: BLE001 - the radar must never stop a run
+        print(f"[radar] failed: {type(e).__name__}")
+        crash = radar.current()
+    regime["crash_radar"] = crash.get("score")
+    ctx = {"radar": crash, "broker": b, "bars": bars, "prices": prices, "regime": regime, "params": params,
            "state": state, "candidates": cands, "vol_underlyings": config.VOL_UNDERLYINGS}
 
     # 1) default exits (always enforced)
@@ -383,7 +466,9 @@ def main(force=False, broker=None):
         for pid, pos in list(agent["positions"].items()):
             try:
                 reason = REGISTRY[aid].manage(ctx, pos)
-                if reason:
+                if isinstance(reason, dict):        # take profits in stages: sell part, keep the rest
+                    close_trade(b, state, aid, pid, reason["reason"], qty=reason.get("qty"))
+                elif reason:
                     close_trade(b, state, aid, pid, reason)
             except AlpacaError as e:
                 store.journal({"type": "error", "agent": aid, "symbol": pos["symbol"], "note": str(e)[:200]})
@@ -397,7 +482,7 @@ def main(force=False, broker=None):
         ok, why = governor.can_trade_today(state, aid)
         can_open = ok and in_window(aid)
         try:
-            found = focus.rank(REGISTRY[aid].entries(ctx), agent) if can_open else []
+            found = focus.rank(REGISTRY[aid].entries(ctx), agent, limit=8 if aid == "blackswan" else 6) if can_open else []
         except AlpacaError as e:
             store.journal({"type": "error", "agent": aid, "note": str(e)[:200]})
             found = []

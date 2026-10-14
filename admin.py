@@ -2,6 +2,7 @@
 
   python admin.py topup 400     add $400 cash to every agent (open positions untouched)
   python admin.py universe      rebuild the stock universe now (needs Alpaca keys)
+  python admin.py radar         compute and save the Crash Radar now (no trading)
   python admin.py alert         send a test phone alert (checks the NTFY_TOPIC secret)
   python admin.py backfill      seed the permanent ledger from the journal (one time)
 
@@ -101,6 +102,27 @@ def test_alert():
         raise SystemExit("ntfy did not accept the alert.")
 
 
+def crash_radar():
+    import blackswan
+    import radar
+    import universe
+    from broker import Broker
+    b = Broker()
+    state = store.load_state() or {"agents": {}}
+    syms = list(dict.fromkeys(["SPY"] + config.VOL_UNDERLYINGS + config.BEAR_SYMBOLS + config.SAFE_HAVENS
+                              + blackswan.SECTOR_ETFS + universe.core_symbols()))
+    bars = {}
+    for i in range(0, len(syms), 50):
+        bars.update(b.daily_bars(syms[i:i + 50]))
+    prices = b.latest_prices(syms)
+    r = radar.compute(bars, prices)
+    print(f"Crash Radar {r['score']}/100 ({r['tier']}); parts {r['parts']}; facts {r['facts']}; economy {r['economy'].get('status')}")
+    dash = store.load("dashboard.json", {})
+    if dash:
+        dash["radar"] = store.load("radar.json", {})
+        store.save("dashboard.json", dash)
+
+
 def build_universe():
     import universe
     from broker import Broker
@@ -112,6 +134,8 @@ if __name__ == "__main__":
         topup(float(sys.argv[2]))
     elif len(sys.argv) >= 2 and sys.argv[1] == "backfill":
         backfill()
+    elif len(sys.argv) >= 2 and sys.argv[1] == "radar":
+        crash_radar()
     elif len(sys.argv) >= 2 and sys.argv[1] == "alert":
         test_alert()
     elif len(sys.argv) >= 2 and sys.argv[1] == "universe":

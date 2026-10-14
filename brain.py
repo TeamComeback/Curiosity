@@ -11,7 +11,7 @@ import requests
 
 import config
 
-DECIDE_SYSTEM = """You are {name}, one of three AI trading agents in a paper-trading race.
+DECIDE_SYSTEM = """You are {name}, one of {n_firms} AI trading firms in a paper-trading race.
 Each agent started with ${start:,.0f}. The first to reach ${goal:,.0f} wins. An agent that drops below
 ${elim:.0f}, or can no longer afford any trade, fails. You may only trade your specialty:
 
@@ -24,6 +24,10 @@ trades per day, at most {max_pos} open positions. Default exits (stops, targets,
 are enforced automatically; you may close earlier or tighten stops, never loosen a stop past
 the default.
 
+"crash_radar" is a shared 0-100 market-stress score (calm under 40, warning 40-70, stress 70+).
+Every firm sees it; weigh it against your own setups. Candidates may carry "max_dollars" (your
+firm's own per-trade cap) and "suggested_instrument".
+
 Think like a fund manager trying to compound a tiny account fast WITHOUT going bust: a
 blown-up agent cannot win. Passing on weak setups is normal.
 
@@ -34,8 +38,8 @@ take an unplanned setup if it's clearly better.
 Reply with ONLY a JSON object:
 {{"close":[{{"position_id":"...","reason":"..."}}],
  "adjust_stops":[{{"position_id":"...","stop":<number>}}],
- "open":[{{"candidate_id":<int>,"instrument":"stock|call|put|spread","dollars":<number>,
-          "contracts":<int, spreads only>,"stop":<number, stock/options: underlying stop>,
+ "open":[{{"candidate_id":<int>,"instrument":"{inst_choices}","dollars":<number>,
+          "contracts":<int, credit spreads only>,"stop":<number, stock/options: underlying stop>,
           "thesis":"one sentence","confidence":1-5}}],
  "note":"optional one-line lesson or plan to remember"}}"""
 
@@ -68,6 +72,10 @@ def _rules_default(aid, view):
     elif aid == "monkey":
         out["open"].append({"candidate_id": 0, "instrument": "stock",
                             "dollars": round(avail * c.get("size_pct", 0.4), 2), "thesis": c["rule_thesis"], "confidence": 0})
+    elif aid == "blackswan":
+        out["open"].append({"candidate_id": 0, "instrument": c.get("suggested_instrument", "debit_spread"),
+                            "dollars": round(min(avail * 0.3, c.get("max_dollars") or avail), 2),
+                            "stop": c.get("stop"), "thesis": c["rule_thesis"], "confidence": 3})
     elif aid == "volsell":
         out["open"].append({"candidate_id": 0, "instrument": "spread", "contracts": 1,
                             "thesis": c["rule_thesis"], "confidence": 3})
@@ -84,6 +92,8 @@ def decide(aid, view):
     a = config.AGENTS[aid]
     system = DECIDE_SYSTEM.format(name=a["name"], goal=config.RACE["goal"], start=config.RACE["start_balance"], elim=config.RACE["eliminate_below"],
                                   style=a["style"], instruments=", ".join(a["instruments"]),
+                                  inst_choices="|".join(a["instruments"]),
+                                  n_firms=sum(1 for x in config.AGENTS.values() if x["competing"]),
                                   max_trades=config.RULES["max_new_trades_per_day"],
                                   max_pos=config.RULES["max_open_positions"])
     try:
@@ -122,7 +132,7 @@ def final_assessment(payload):
     task = ("The race is over. Assess each agent: why it won, lagged, or failed; what its trade record "
             "shows about its edge (or lack of one); its risk-taking vs results; and whether its result "
             "looks like skill or luck. Compare all against the SPY benchmark. Reply ONLY JSON: "
-            "{\"summary\":\"...\",\"agents\":{\"trend\":\"...\",\"meanrev\":\"...\",\"volsell\":\"...\"},"
+            "{\"summary\":\"...\",\"agents\":{\"trend\":\"...\",\"meanrev\":\"...\",\"volsell\":\"...\",\"blackswan\":\"...\"},"
             "\"lessons\":[\"...\"]}")
     try:
         return _call(config.REVIEW_MODEL, "You are a hedge fund risk officer writing a post-mortem.",

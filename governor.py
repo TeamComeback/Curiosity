@@ -36,10 +36,13 @@ def check_order(state, aid, cand, instrument, cost):
     agent = state["agents"][aid]
     if instrument not in config.AGENTS[aid]["instruments"]:
         return False, f"{instrument} is outside this agent's specialty"
-    if instrument in ("call", "put", "spread") and instrument not in R["options_allowed"]:
+    if instrument in ("call", "put", "spread", "debit_spread") and instrument not in R["options_allowed"]:
         return False, "option type not allowed"
-    if instrument == "put" and cand.get("direction") != "short":
+    if instrument in ("put", "debit_spread") and cand.get("direction") != "short":
         return False, "puts only on breakdown setups"
+    if aid == "blackswan" and instrument == "stock" and cand["symbol"] not in (
+            list(config.INVERSE_ETFS.values()) + list(config.LEVERAGED_INVERSE.values()) + config.SAFE_HAVENS):
+        return False, "Black Swan only buys inverse ETFs and safe havens as shares"
     if instrument in ("stock", "call") and cand.get("direction") == "short":
         return False, "no shorting stock (no margin); use puts"
     if cost <= 0:

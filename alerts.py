@@ -18,17 +18,24 @@ def nice(sym):
     return f"{m[1]} ${int(m[6]) / 1000:g} {'call' if m[5] == 'C' else 'put'} {MON[int(m[3]) - 1]} {int(m[4])}" if m else str(sym or "")
 
 
-NAMES = {"trend": "Trend Co.", "meanrev": "Snapback", "volsell": "Premium House", "baseline": "SPY", "monkey": "Monkey"}
+NAMES = {"trend": "Trend Co.", "meanrev": "Snapback", "volsell": "Premium House", "blackswan": "Black Swan",
+         "baseline": "SPY", "monkey": "Monkey"}
 
 
 def _line(e):
     who = NAMES.get(e.get("agent"), e.get("agent") or "")
     t = e.get("type")
     if t == "open":
-        return f"🟢 {who} bought {nice(e.get('symbol'))}{' shares' if e.get('instrument') == 'stock' else ''} for ${abs(e.get('cost') or 0):.2f}"
+        kind = {"stock": " shares", "debit_spread": " put spread", "spread": " credit spread"}.get(e.get("instrument"), "")
+        return f"{'🐻' if e.get('agent') == 'blackswan' else '🟢'} {who} bought {nice(e.get('symbol'))}{kind} for ${abs(e.get('cost') or 0):.2f}"
     if t == "close":
         pnl = e.get("pnl") or 0
         return f"{'✅' if pnl >= 0 else '🔻'} {who} closed {nice(e.get('symbol'))}: {'+' if pnl >= 0 else '-'}${abs(pnl):.2f} ({e.get('note')})"
+    if t == "trim":
+        pnl = e.get("pnl") or 0
+        return f"✂️ {who} sold part of {nice(e.get('symbol'))}: {'+' if pnl >= 0 else '-'}${abs(pnl):.2f} ({e.get('note')})"
+    if t == "radar":
+        return f"🐻 {e.get('note')}"
     if t in ("eliminated", "failed"):
         return f"⛔ {who} {t}: {e.get('note')}"
     if t == "race_end":
@@ -65,7 +72,7 @@ def flush(title="Agent race"):
     lines = [l for l in (_line(e) for e in store.RUN_EVENTS) if l]
     store.RUN_EVENTS.clear()
     if lines:
-        urgent = any(l.startswith(("⛔", "🏆")) for l in lines)
+        urgent = any(l.startswith(("⛔", "🏆")) or ("to STRESS" in l) for l in lines)
         send(title, "\n".join(lines[:12]), priority="high" if urgent else "default")
 
 
