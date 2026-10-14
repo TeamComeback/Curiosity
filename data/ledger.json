@@ -132,5 +132,56 @@
   "time": "2026-10-13T19:21:59-04:00",
   "type": "topup",
   "note": "Every firm's starting balance raised to $500 (+$400 cash each; open positions unchanged)."
+ },
+ {
+  "time": "2026-10-13T22:01:53-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "Evening check-in",
+  "for_day": "2026-10-14",
+  "decision": "new",
+  "why": "No plan or positions existed, and the market is calm (Crash Radar 11). The scan's clearest breakdowns are in Technology, with chip weakness and the KOSPI plunge in the news, so I can start a small, targeted plan. Most other breakdowns are penny stocks or warrants that I'll avoid.",
+  "summary": "Tomorrow, I'll look for put debit spreads on the Technology names that are breaking down, starting with ASTS below its 47.58 level after the Piper downgrade. I'll add cheap far-out SPY put-spread insurance only if SPY closes below its 50-day average. No more than 2 new trades, and I'll stay in cash otherwise.",
+  "watchlist": [
+   {
+    "symbol": "ASTS",
+    "setup": "Put debit spread after breakdown. Piper downgraded to Neutral with a $54 target, and the analyst sees SpaceX squeezing its launch pricing. It's already broken below 47.58.",
+    "trigger": "Enter if ASTS trades and closes below 47.58 in the first hour, or rallies back to 47.58 and fails there.",
+    "instrument": "debit_spread",
+    "conviction": 3
+   },
+   {
+    "symbol": "SMR",
+    "setup": "Put debit spread on a Technology breakdown. It's down 23% over 20 days and sits just under its 6.62 level.",
+    "trigger": "Enter if SMR closes below 6.62 with volume above its average.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "IONQ",
+    "setup": "Put debit spread on a Technology breakdown, just below its 35.90 level.",
+    "trigger": "Enter if IONQ closes below 35.90 on the next session. Only take this if ASTS and SMR don't already use both of my daily slots.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "SPY",
+    "setup": "Cheap far-out put-spread insurance (45-120 DTE, roughly 0.4 delta). Crash Radar is calm, so the premium should be low.",
+    "trigger": "Buy only if SPY closes below its 50-day average (about 1.3% below the current price). Otherwise, skip.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-13T22:01:53-04:00",
+  "type": "focus",
+  "agent": "blackswan",
+  "lean_in": [
+   "Technology"
+  ],
+  "avoid": [],
+  "why": "Only one day of evidence: Technology has the most real breakdowns in the scan (ASTS, SMR, IONQ, CIFR, APLD, CRWV), and the chip selloff and analyst downgrade support it. I have no results yet, so I'll keep sizing small and drop the focus if these setups don't pay.",
+  "expires": "2026-10-27"
  }
 ]

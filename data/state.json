@@ -108,7 +108,7 @@
       "pct_vs_sma200": 15.7,
       "pct_vs_sma5": -2.6
      },
-     "last": 587.87
+     "last": 588.2
     }
    },
    "status": "active",
@@ -116,7 +116,7 @@
    "status_at": null,
    "closed": 0,
    "wins": 0,
-   "peak": 500.18,
+   "peak": 500.24,
    "max_dd": 0.0,
    "notes": [
     {
@@ -264,7 +264,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 777.845
+     "last": 778.03
     }
    },
    "status": "active",
@@ -291,6 +291,109 @@
    "notes": [],
    "last_exits": {},
    "joined": "2026-10-13T19:21:59-04:00"
+  },
+  "blackswan": {
+   "cash": 500.0,
+   "reserved": 0.0,
+   "positions": {},
+   "status": "active",
+   "status_reason": "",
+   "status_at": null,
+   "closed": 0,
+   "wins": 0,
+   "peak": 500.0,
+   "max_dd": 0.0,
+   "notes": [],
+   "last_exits": {},
+   "joined": "2026-10-13T22:01:29-04:00",
+   "plan": {
+    "for_day": "2026-10-14",
+    "made_at": "2026-10-13T22:01-04:00",
+    "session": "Evening check-in",
+    "decision": "new",
+    "why": "No plan or positions existed, and the market is calm (Crash Radar 11). The scan's clearest breakdowns are in Technology, with chip weakness and the KOSPI plunge in the news, so I can start a small, targeted plan. Most other breakdowns are penny stocks or warrants that I'll avoid.",
+    "summary": "Tomorrow, I'll look for put debit spreads on the Technology names that are breaking down, starting with ASTS below its 47.58 level after the Piper downgrade. I'll add cheap far-out SPY put-spread insurance only if SPY closes below its 50-day average. No more than 2 new trades, and I'll stay in cash otherwise.",
+    "watchlist": [
+     {
+      "symbol": "ASTS",
+      "setup": "Put debit spread after breakdown. Piper downgraded to Neutral with a $54 target, and the analyst sees SpaceX squeezing its launch pricing. It's already broken below 47.58.",
+      "trigger": "Enter if ASTS trades and closes below 47.58 in the first hour, or rallies back to 47.58 and fails there.",
+      "instrument": "debit_spread",
+      "max_dollars": 60,
+      "conviction": 3
+     },
+     {
+      "symbol": "SMR",
+      "setup": "Put debit spread on a Technology breakdown. It's down 23% over 20 days and sits just under its 6.62 level.",
+      "trigger": "Enter if SMR closes below 6.62 with volume above its average.",
+      "instrument": "debit_spread",
+      "max_dollars": 40,
+      "conviction": 2
+     },
+     {
+      "symbol": "IONQ",
+      "setup": "Put debit spread on a Technology breakdown, just below its 35.90 level.",
+      "trigger": "Enter if IONQ closes below 35.90 on the next session. Only take this if ASTS and SMR don't already use both of my daily slots.",
+      "instrument": "debit_spread",
+      "max_dollars": 40,
+      "conviction": 2
+     },
+     {
+      "symbol": "SPY",
+      "setup": "Cheap far-out put-spread insurance (45-120 DTE, roughly 0.4 delta). Crash Radar is calm, so the premium should be low.",
+      "trigger": "Buy only if SPY closes below its 50-day average (about 1.3% below the current price). Otherwise, skip.",
+      "instrument": "debit_spread",
+      "max_dollars": 50,
+      "conviction": 2
+     }
+    ],
+    "position_plans": [],
+    "avoid": [
+     "Warrants and rights (CDROW, XLABW, DAICW, AFJKR, LPAAW): near-zero prices, thin markets, and likely no usable options.",
+     "Penny stocks with extreme drops (TGL, AZTR, MRM, DKI, SXTC, SDST): thin liquidity, reverse-split distortion, and the recent TGL earnings improvement makes it a poor short.",
+     "CRWV: down only 0.6% against a large level, and the setup is marginal."
+    ],
+    "brainstorm": "If Technology breakdowns persist for two sessions, test a put debit spread on a broad semiconductor or tech ETF rather than single names, since single names can squeeze on news.",
+    "revisions": [
+     {
+      "at": "2026-10-13T22:01-04:00",
+      "session": "Evening check-in",
+      "decision": "new",
+      "why": "No plan or positions existed, and the market is calm (Crash Radar 11). The scan's clearest breakdowns are in Technology, with chip weakness and the KOSPI plunge in the news, so I can start a small, targeted plan. Most other breakdowns are penny stocks or warrants that I'll avoid.",
+      "watch": [
+       {
+        "symbol": "ASTS",
+        "instrument": "debit_spread",
+        "setup": "Put debit spread after breakdown. Piper downgraded to Neutral with a $54 target,"
+       },
+       {
+        "symbol": "SMR",
+        "instrument": "debit_spread",
+        "setup": "Put debit spread on a Technology breakdown. It's down 23% over 20 days and sits "
+       },
+       {
+        "symbol": "IONQ",
+        "instrument": "debit_spread",
+        "setup": "Put debit spread on a Technology breakdown, just below its 35.90 level."
+       },
+       {
+        "symbol": "SPY",
+        "instrument": "debit_spread",
+        "setup": "Cheap far-out put-spread insurance (45-120 DTE, roughly 0.4 delta). Crash Radar "
+       }
+      ]
+     }
+    ]
+   },
+   "focus": {
+    "lean_in": [
+     "Technology"
+    ],
+    "avoid": [],
+    "why": "Only one day of evidence: Technology has the most real breakdowns in the scan (ASTS, SMR, IONQ, CIFR, APLD, CRWV), and the chip selloff and analyst downgrade support it. I have no results yet, so I'll keep sizing small and drop the focus if these setups don't pay.",
+    "set_at": "2026-10-13T22:01-04:00",
+    "expires": "2026-10-27"
+   }
   }
  }
 }
