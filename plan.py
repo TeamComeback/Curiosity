@@ -96,7 +96,7 @@ def scan(aid, bars, params, b=None, agent_for_scan=None):
             if kind == "haven":
                 if close > last["sma50"] and last["roc20"] > 0:
                     out.append({"symbol": sym, "setup": "safe haven rising", "roc20_pct": round(float(last["roc20"]) * 100, 1)})
-            elif kind and close < last["sma50"] and dist <= 3 and last["roc20"] < 0 and (kind != "stock" or last["sma50"] < last["sma200"]):
+            elif kind and close < last["sma50"] and dist <= 3 and last["roc20"] < 0 and (kind != "stock" or (last["sma50"] < last["sma200"] and close >= 15)):
                 out.append({"symbol": sym, "kind": kind, "setup": "broke down today" if dist <= 0 else "near breakdown (put spread)",
                             "level": round(lo, 2), "distance_pct": round(dist, 2), "roc20_pct": round(float(last["roc20"]) * 100, 1),
                             "below_200d": bool(close < last["sma200"]), "sector": universe.sector_of(sym)})
