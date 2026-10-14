@@ -361,7 +361,9 @@ def main(session=None, force=False, only=None):
     if not state or state["race"]["status"] != "running":
         print("No running race.")
         return
+    before = set(state["agents"])
     store.add_missing_agents(state)      # a firm added mid-race starts planning right away
+    joined = set(state["agents"]) - before
     for_day = next_trading_day(now)
     params = store.load_params()
 
@@ -427,6 +429,11 @@ def main(session=None, force=False, only=None):
                            + (f"; avoiding {', '.join(nf['avoid'])}" if nf['avoid'] else "") + f". {nf['why']}"})
         store.journal({"type": "plan", "agent": aid, "note": f"{plan['session']}: {plan['decision']}. {plan['why']}",
                        "symbol": ", ".join(w["symbol"] for w in plan["watchlist"][:4])})
+    if joined:                           # show the new firm on the dashboard tonight
+        import run
+        run.write_dashboard(state, store.load("dashboard.json", {}).get("regime", {}),
+                            {aid: run.agent_equity(a, prices) for aid, a in state["agents"].items()})
+        changed = True
     if changed:
         store.save("state.json", state)
         dash = store.load("dashboard.json", {})
