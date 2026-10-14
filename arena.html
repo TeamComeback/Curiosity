@@ -12,12 +12,12 @@
 :root{
   color-scheme:light;
   --ground:#e9ece8;--paper:#f6f7f4;--ink:#1f2a2e;--ink2:#56636a;--rule:#a9b3b4;--faint:#d5dad7;
-  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--bench:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
+  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--blackswan:#6a4fc0;--bench:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
 }
 @media (prefers-color-scheme:dark){:root{
   color-scheme:dark;
   --ground:#11171a;--paper:#182024;--ink:#dce3e2;--ink2:#9aa7a9;--rule:#4a575c;--faint:#26312f;
-  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--bench:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
+  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--blackswan:#9b84e8;--bench:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
 }}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--ground);color:var(--ink);font:15px/1.45 "IBM Plex Sans Condensed",-apple-system,BlinkMacSystemFont,sans-serif}
@@ -62,7 +62,7 @@ canvas{display:block;width:100%;touch-action:pan-y}
 <div class="wrap">
   <div class="bar"><h1>The Street</h1><span style="display:flex;gap:8px"><a href="portfolio.html">Portfolio</a><a href="index.html">Dashboard</a></span></div>
   <div class="stage"><div class="pop" id="pop" role="dialog" aria-live="polite"></div>
-  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of three trading firms racing up the road to the $5,000 headquarters. Tap a firm or a person for details."></canvas></div>
+  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of four trading firms racing up the road to the $5,000 headquarters. Tap a firm or a person for details."></canvas></div>
   <div class="block" id="block"></div>
   <div class="staff" id="staff"></div>
 </div>
@@ -80,14 +80,18 @@ const FIRMS = {
   volsell: {name:"Premium House",     colorVar:"--volsell",
             staff:[["vol","Vol analyst","Compares implied vs. realized volatility"],["strat","Strategist","The AI: picks spreads and size"],
                    ["trader","Options trader","Sells defined-risk credit spreads"],["risk","Risk manager","Watches profit targets, stops and expiry"]]},
+  blackswan:{name:"Black Swan & Co.",  colorVar:"--blackswan",
+            staff:[["radar","Radar analyst","Reads the Crash Radar: breadth, credit, volatility and the economy"],["scout","Scout","Hunts the weakest stocks and sectors breaking down"],
+                   ["strat","Strategist","The AI: picks the bet and sizes it to the radar"],["trader","Options trader","Buys puts, put spreads and inverse ETFs"]]},
   baseline:{name:"Index Booth",       colorVar:"--bench", staff:[["index","Index buyer","Bought SPY once and holds it"]]},
   monkey:  {name:"Monkey Business",   colorVar:"--monkey", staff:[["dart","Dart thrower","Picks a random stock, size and holding time. The control group."]]},
 };
-const ROLE_COLOR = {scout:"#4b7f95", strat:"#7357b3", trader:"#c38a1c", risk:"#b8504a", vol:"#2c8f8a", index:"#7e8a8c", comp:"#55636a", dart:"#c0507d"};
-const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:200}, baseline:{y:1240,h:84}, monkey:{y:1344,h:84}};
-const H = 1446, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84, door:[30, 58]};
+const ROLE_COLOR = {scout:"#4b7f95", strat:"#7357b3", trader:"#c38a1c", risk:"#b8504a", vol:"#2c8f8a", radar:"#3f5f8f", index:"#7e8a8c", comp:"#55636a", dart:"#c0507d"};
+const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:200}, blackswan:{y:1240,h:200}, baseline:{y:1460,h:84}, monkey:{y:1564,h:84}};
+const H = 1666, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84, door:[30, 58]};
 const BOOTH = {x:2, y:EXCH.y - 2, w:30, h:22};
-const LANES = {trend:70, meanrev:140, volsell:210, baseline:282, monkey:346};
+const LANES = {trend:66, meanrev:124, volsell:182, blackswan:240, baseline:300, monkey:352};
+const SHORT = {trend:"Trend", meanrev:"Snapback", volsell:"Premium", blackswan:"Black Swan", baseline:"SPY", monkey:"Monkey"};
 const NB = id => id === "baseline" || id === "monkey";   // non-racing: benchmark and control
 
 // ---------- office hours (US/Eastern) ----------
@@ -219,7 +223,7 @@ function drawFirmMarkers(t){
     font(11, 600); const tw = ctx.measureText(money(st.eq)).width;
     rect(x - tw / 2 - 3, ly - 7, tw + 6, 26, alpha(theme.ground, .85));
     text(money(st.eq), x, ly, 11, out ? theme.bad : theme.ink, "center", 600);
-    text(id === "baseline" ? "SPY" : id === "monkey" ? "Monkey" : FIRMS[id].name.split(" ")[0], x, ly + 12, 10, theme.ink2, "center");
+    text(SHORT[id], x, ly + 12, 10, theme.ink2, "center");
     hit.push({id, x: x - 32, y: y - h, w: 64, h: h + 36});
   });
 }
@@ -268,8 +272,28 @@ function drawOffice(id, t){
     rect(d.x - 9, d.y - 28, 18, 3, theme.ink2);
     text(d.label, d.x, d.y + 14, 10, theme.ink2, "center");
   });
+  if (id === "blackswan"){
+    rect(x, y, w, h, alpha(theme.ink, .05));                    // the dark office
+    font(15, 600); const nw = ctx.measureText(f.name).width; font(11, 500);
+    const sw = ctx.measureText(`${money(st.eq)} · ${(st.eq / GOAL * 100).toFixed(1)}% of the way`).width;
+    const bx = Math.max(x + 22 + nw + 18, x + 22 + sw + 16), by = y + 17, c = f.color;   // the bear on the sign
+    [[-7, -6], [7, -6]].forEach(([dx, dy]) => { ctx.beginPath(); ctx.arc(bx + dx, by + dy, 3.6, 0, Math.PI * 2); ctx.fillStyle = c; ctx.fill(); ctx.strokeStyle = theme.ink; ctx.lineWidth = 1; ctx.stroke(); });
+    ctx.beginPath(); ctx.arc(bx, by, 9, 0, Math.PI * 2); ctx.fillStyle = c; ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(bx, by + 3, 4, 3, 0, 0, Math.PI * 2); ctx.fillStyle = theme.paper; ctx.fill();
+    ctx.beginPath(); ctx.arc(bx, by + 2, 1.3, 0, Math.PI * 2); ctx.fillStyle = theme.ink; ctx.fill();
+    [[-3.4, -2], [3.4, -2]].forEach(([dx, dy]) => { ctx.beginPath(); ctx.arc(bx + dx, by + dy, 1.1, 0, Math.PI * 2); ctx.fill(); });
+    // the Crash Radar dial on the wall
+    const rd = (data && data.radar && data.radar.now) || {}, sc = rd.score ?? null, dx0 = x + w - 34, dy0 = y + 30;
+    [[0, .4, theme.good], [.4, .7, theme.gold], [.7, 1, theme.bad]].forEach(([a0, a1, col]) => {
+      ctx.beginPath(); ctx.arc(dx0, dy0, 15, Math.PI + a0 * Math.PI, Math.PI + a1 * Math.PI); ctx.strokeStyle = alpha(col, .85); ctx.lineWidth = 5; ctx.stroke(); });
+    if (sc != null){ const ang = Math.PI + sc / 100 * Math.PI, wob = reduce ? 0 : Math.sin(t * 2) * .03;
+      ctx.beginPath(); ctx.moveTo(dx0, dy0); ctx.lineTo(dx0 + Math.cos(ang + wob) * 13, dy0 + Math.sin(ang + wob) * 13); ctx.strokeStyle = theme.ink; ctx.lineWidth = 2; ctx.stroke(); }
+    text(sc != null ? `radar ${sc}` : "radar", dx0, dy0 + 9, 9, theme.ink2, "center", 600);
+  }
   if (id === "monkey"){
-    const bx = x + w * .45, by = y + 14;
+    font(15, 600); const nw = ctx.measureText(f.name).width; font(11, 500);
+    const sw = ctx.measureText(`${money(st.eq)} · control group, not racing`).width;
+    const bx = Math.max(x + 22 + nw + 16, x + 22 + sw + 14, x + w - 120 + 34), by = y + 16;
     [9, 6, 3].forEach((r, i) => { ctx.beginPath(); ctx.arc(bx, by, r, 0, Math.PI * 2); ctx.fillStyle = i % 2 ? theme.paper : f.color; ctx.fill(); });
     ctx.strokeStyle = theme.ink; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(bx, by, 9, 0, Math.PI * 2); ctx.stroke();
   }
@@ -289,7 +313,7 @@ function drawOffice(id, t){
     }
     ctx.fillStyle = alpha("#000000", stays ? .06 : .16); ctx.fillRect(x + 1.5, y + 1.5, w - 3, h - 3);
     if (!bench){ rect(st.table.x - 26, st.table.y - 9, 52, 18, alpha(theme.rule, .6), theme.ink2, 1);
-      text(phase === "review" ? "Weekly review" : phase === "weekend" ? "Closed for the weekend" : phase === "holiday" ? "Market holiday" : "Game plan", st.table.x, st.table.y - 17, 10, theme.ink2, "center", 600); }
+      text(phase === "review" ? "Weekly review" : phase === "weekend" ? "Closed for the weekend" : phase === "holiday" ? "Market holiday" : "Game plan", st.table.x, st.table.y + 18, 10, theme.ink2, "center", 600); }
   }
   if (out){
     hatch(x + 2, y + 2, w - 4, h - 4, alpha(theme.ink2, .25));
@@ -339,6 +363,7 @@ function buildGrid(){
     if (st){
       st.desks.forEach(d => block(d.x - 17, d.y - 30, 34, 14, 4));
       st.positions.forEach((p, i) => block(x + w - 62, y + 44 + i * 30, 52, 22, 4));
+      if (id === "blackswan") block(x + w - 52, y + 10, 36, 30, 3);
       if (st.out) block(x, y, w, h, 0);
       if (phase !== "open" && !NB(id)) block(st.table.x - 26, st.table.y - 9, 52, 18, 3);
     }
@@ -403,7 +428,7 @@ function buildWorkers(){
     FIRMS[id].staff.forEach(([role], si) => {
       const home = D[role]; let plan;
       if (phase !== "open"){
-        const planner = ["scout", "vol", "strat"].includes(role);
+        const planner = ["scout", "vol", "strat", "radar"].includes(role);
         const stays = (phase === "weekend" || phase === "holiday") ? (role === "risk" && hasPos)
                     : (phase === "review") ? !NB(id)
                     : planner || (role === "risk" && hasPos);
@@ -415,7 +440,9 @@ function buildWorkers(){
         workers.push({firm: id, role, plan, i: 0, x: seat.x, y: seat.y, wait: Math.random() * 3, facing: 0, walking: false, path: null});
         return;
       }
-      if (role === "scout" || role === "vol") plan = [[home, 2.5], [near(home, 40, 30), 1.5], [near(home, -8, 44), 1.2]].concat(busy ? [[near(D.strat, 14, 6), 1.2]] : []);
+      if (role === "radar"){ const dial = free({x: x0 + w - 34, y: o.y + 52});
+        plan = [[home, 2.5], [dial, 2], [near(home, 30, 30), 1.4]].concat(busy ? [[near(D.strat, 14, 6), 1.2]] : []); }
+      else if (role === "scout" || role === "vol") plan = [[home, 2.5], [near(home, 40, 30), 1.5], [near(home, -8, 44), 1.2]].concat(busy ? [[near(D.strat, 14, 6), 1.2]] : []);
       else if (role === "strat") plan = busy ? [[home, 3], [near(D.trader || home, -14, 6), 1.4]] : [[home, 5], [near(home, 20, 34), 1.5]];
       else if (role === "trader") plan = busy ? [[home, 1.5], [door, 0], [ex[0], 0.8], [ex[1], 0.6], [door, 0]] : [[home, 4], [near(home, -30, 36), 2]];
       else if (role === "risk") plan = hasPos ? screens.map(s => [s, 1.6]).concat([[home, 2]]) : [[home, 5], [near(home, 24, 34), 1.5]];
@@ -452,6 +479,7 @@ function posPnl(p){
   if (p.kind === "stock" && p.last != null) return (p.last - p.entry) * p.qty;
   if (p.kind === "option" && p.mark != null) return (p.mark - p.entry) * 100 * p.qty;
   if (p.kind === "spread" && p.mark != null) return (p.entry - p.mark) * 100 * p.qty;
+  if (p.kind === "debit_spread" && p.mark != null) return (p.mark - p.entry) * 100 * p.qty;
   return 0;
 }
 function load(d){
@@ -463,8 +491,12 @@ function load(d){
     const o = OFFICES[id], staff = FIRMS[id].staff, x0 = 44, w = W - 56, cols = staff.length;
     const usable = w - 140, desks = staff.map(([role, label], i) => ({role, label,
       x: NB(id) ? x0 + w - 120 : x0 + 44 + (cols === 1 ? usable / 2 : i * usable / (cols - 1)),
-      y: o.y + (NB(id) ? 52 : o.h * .5 + (i % 2) * 34)}));
-    const table = {x: x0 + w * .42, y: o.y + o.h - 30};
+      y: o.y + (NB(id) ? 60 : o.h * .5 + (i % 2) * 34)}));
+    // the planning table sits in the widest gap between the lower-row desks
+    const low = desks.filter((d, i) => i % 2).map(d => d.x);
+    let tx = x0 + w * .42, best = -1;
+    for (let cx = x0 + 70; cx <= x0 + w - 90; cx += 4){ const gap = Math.min(...low.map(lx => Math.abs(lx - cx)), 999); if (gap > best){ best = gap; tx = cx; } }
+    const table = {x: tx, y: o.y + o.h - 30};
     firmsState[id] = {table, eq: a.equity, status: a.status, out: ["failed", "eliminated"].includes(a.status), agent: a, desks,
       markerY: yClimb(START),
       history: curve.map(r => r.agents && r.agents[id]).filter(v => v != null),
@@ -542,7 +574,7 @@ function roleInfo(k){
   if (st.out){ base.lines.push(`The firm is ${a.status}. ${a.status_reason || ""}`.trim()); return base; }
   const planObj = (data.plans || {})[k.firm], todayET = etNow().date;
   const livePlan = planObj && planObj.for_day >= todayET ? planObj : null;
-  if (phase !== "open" && ["scout", "vol", "strat"].includes(k.role)){
+  if (phase !== "open" && ["scout", "vol", "strat", "radar"].includes(k.role)){
     if (!livePlan){
       base.lines.push(phase === "review" ? "In the weekly review: grading this week's trades and retuning the strategy."
         : "Starting tonight's game plan. The first session runs about 4:40 PM ET, then check-ins around 8:10 PM and before the open.");
@@ -564,7 +596,18 @@ function roleInfo(k){
     return base;
   }
   switch (k.role){
+    case "radar": {
+      const rd = (data.radar || {}).now || {}, labels = (data.radar || {}).labels || {};
+      if (rd.score == null){ base.lines.push("Waiting for the first Crash Radar reading."); break; }
+      const top = Object.entries(rd.parts || {}).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([k2, v]) => `${labels[k2] || k2} ${v}`).join(", ");
+      base.lines.push(`Crash Radar at ${rd.score}/100: ${rd.tier}. Loudest signals: ${top}.`);
+      base.lines.push({calm: "Calm market: the firm hunts the weakest stocks and buys cheap insurance.", warning: "Warning: index and sector puts and inverse ETFs are in play.",
+                       stress: "Stress: the firm can go in hard, including 3x inverse funds for a few days."}[rd.tier] || "");
+      base.goal = {label: "Market stress", value: `${rd.score} / 100`, pct: rd.score, note: "Over 40 is a warning; over 70 is stress."};
+      break; }
     case "scout":
+      if (k.firm === "blackswan"){ base.lines.push(`Hunting for breakdowns: stocks and sectors at their ${P.breakdown_lookback ?? 20}-day low, below the 50-day and in a downtrend.`);
+        base.lines.push(st.tradedToday ? "Found a breakdown today and took it to the strategist." : "Nothing has broken down cleanly yet today."); break; }
       base.lines.push(k.firm === "trend"
         ? `Scanning the watchlist for breakouts above the ${P.breakout_lookback ?? 55}-day high on at least ${P.min_rel_volume ?? 1.2}× normal volume, in stocks already in an uptrend.`
         : `Hunting for washouts: RSI(2) under ${P.rsi_entry ?? 10} in stocks still above their 200-day average.`);
@@ -582,7 +625,7 @@ function roleInfo(k){
                    note: `${(a.equity / START).toFixed(2)}× the starting ${money(START)}`};
       break; }
     case "trader": {
-      const lo = lastOpen ? `Last order: bought ${nice(lastOpen.symbol)}${lastOpen.instrument === "stock" ? " shares" : ""} for ${money(Math.abs(lastOpen.cost || 0))}${lastOpen.cost < 0 ? " credit" : ""}.` : "No orders placed yet.";
+      const lo = lastOpen ? `Last order: bought ${nice(lastOpen.symbol)}${({stock: " shares", debit_spread: " put spread"})[lastOpen.instrument] || ""} for ${money(Math.abs(lastOpen.cost || 0))}${lastOpen.cost < 0 ? " credit" : ""}.` : "No orders placed yet.";
       base.lines.push(lo);
       if (lastClose) base.lines.push(`Last exit: ${nice(lastClose.symbol)}, ${lastClose.pnl >= 0 ? "+" : "-"}$${Math.abs(lastClose.pnl).toFixed(2)}. Reason: ${lastClose.note}.`);
       if (k.firm === "meanrev" && st.positions.length) base.lines.push(`Waiting to sell ${st.positions.map(x => x.sym).join(", ")} into the bounce.`);

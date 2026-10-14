@@ -58,7 +58,8 @@ AGENTS = {
                            "Warning: index and sector puts, inverse ETFs (SH, PSQ, RWM, DOG). Stress: goes in hard, "
                            "2-3x inverse ETFs (SQQQ, SPXU) allowed for a few days. Safe havens (TLT, GLD, UUP) when "
                            "money is running to safety. 'stock' here means ONLY inverse ETFs and safe havens; never "
-                           "buys ordinary stocks. Takes profits in stages, because crash rallies reverse violently."},
+                           "buys ordinary stocks. Takes profits in stages, because crash rallies reverse violently. "
+                           "Its sector focus means the sectors it bets AGAINST."},
     "baseline": {"name": "SPY benchmark", "competing": False, "instruments": ["stock"],
                  "style": "Buys SPY with its starting cash and holds. Not racing; it's the bar to beat."},
     "monkey": {"name": "Random monkey", "competing": False, "instruments": ["stock"],

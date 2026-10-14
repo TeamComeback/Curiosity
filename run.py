@@ -366,7 +366,7 @@ def write_dashboard(state, regime, equities):
                        "notes": a["notes"][-3:][::-1]})
     positions = [{"agent": aid, "position_id": pid, **{k: p.get(k) for k in (
         "kind", "symbol", "underlying", "structure", "opt_type", "qty", "entry", "last", "mark", "stop",
-        "expiry", "opened", "thesis", "confidence", "cost")}}
+        "expiry", "opened", "thesis", "confidence", "cost", "realized", "play", "width")}}
         for aid, a in state["agents"].items() for pid, p in a["positions"].items()]
     store.save("dashboard.json", {
         "updated": store.now_et().isoformat(timespec="minutes"),

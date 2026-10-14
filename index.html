@@ -10,7 +10,7 @@
   color-scheme:light;
   --bg:#f5f4f1;--surface:#fcfcfb;--line:#e4e2dc;--grid:#ecebe6;--track:#ecebe6;
   --text:#0b0b0b;--text2:#52514e;--muted:#8a8984;
-  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#8a8984;--s5:#d55181;
+  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#8a8984;--s5:#d55181;--s6:#6a4fc0;
   --good:#0ca30c;--bad:#d03b3b;--gold:#b07a00;
   --radius:14px;
 }
@@ -18,7 +18,7 @@
   color-scheme:dark;
   --bg:#111110;--surface:#1a1a19;--line:#2c2c2a;--grid:#262624;--track:#2c2c2a;
   --text:#f0efec;--text2:#c3c2b7;--muted:#8f8e86;
-  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#8f8e86;--s5:#e87ba4;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#8f8e86;--s5:#e87ba4;--s6:#9b84e8;
   --good:#3fbf3f;--bad:#e66767;--gold:#eda100;
 }}
 *{box-sizing:border-box}
@@ -73,6 +73,22 @@ table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
 td,th{text-align:left;padding:5px 4px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
 .empty{color:var(--muted);font-size:13px;padding:6px 0}
 ul.rules{margin:0;padding-left:18px}
+.radar-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.radar-score{font-size:30px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.radar-tier{font-size:12px;font-weight:700;letter-spacing:.06em;padding:2px 9px;border-radius:999px;border:1px solid currentColor}
+.t-calm{color:var(--good)}.t-warning{color:var(--gold)}.t-stress{color:var(--bad)}
+.gauge{position:relative;height:12px;display:flex;margin:10px 0 2px}
+.gauge span{height:100%}
+.gauge .z1{width:40%;border-radius:6px 0 0 6px;background:color-mix(in srgb,var(--good) 22%,transparent)}
+.gauge .z2{width:30%;background:color-mix(in srgb,var(--gold) 26%,transparent)}
+.gauge .z3{width:30%;border-radius:0 6px 6px 0;background:color-mix(in srgb,var(--bad) 24%,transparent)}
+.gauge .mark{position:absolute;top:-2px;width:4px;height:16px;border-radius:2px;background:var(--text);transform:translateX(-50%)}
+.gscale{position:relative;height:14px;font-size:10px;color:var(--muted)}
+.gscale span{position:absolute;transform:translateX(-50%)}
+.parts{display:grid;grid-template-columns:auto 1fr auto;gap:6px 10px;align-items:center;font-size:12px;color:var(--text2);margin-top:12px}
+.pbar{height:6px;border-radius:3px;background:var(--track);overflow:hidden}
+.pbar i{display:block;height:100%;border-radius:3px}
+.parts b{font-variant-numeric:tabular-nums;color:var(--text);font-weight:600;text-align:right;min-width:22px}
 ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 </style>
 </head>
@@ -81,6 +97,9 @@ ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 <div class="card banner" id="health" style="display:none;border-color:var(--bad)"></div>
 <div class="card banner" id="banner"><div class="t">Race to $5,000</div></div>
 <div class="pills" id="pills"></div>
+
+<h2>Crash Radar</h2>
+<div class="card" id="radar"><div class="empty">The first reading arrives with the next run.</div></div>
 
 <h2>Standings</h2>
 <div id="standings"></div>
@@ -107,7 +126,7 @@ ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 <div class="card"><ul class="rules" id="rules"></ul></div>
 
 <script>
-const COLOR = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", baseline:"var(--s4)", monkey:"var(--s5)"};
+const COLOR = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", blackswan:"var(--s6)", baseline:"var(--s4)", monkey:"var(--s5)"};
 let DATA = null;
 const STATUS = {active:"Active", winner:"🏆 Winner", failed:"✕ Failed", eliminated:"✕ Eliminated"};
 const $ = id => document.getElementById(id);
@@ -149,8 +168,9 @@ function render(d){
       ${Object.entries(a.agents||{}).map(([k,v]) => `<div class="d"><span class="sw" style="background:${COLOR[k]};margin-right:6px"></span><b>${esc(names[k]||k)}:</b> ${esc(v)}</div>`).join("")}`;
   } else {
     const alive = d.agents.filter(a => a.competing && a.status==="active").length;
+    const racing = d.agents.filter(a => a.competing).length;
     $("banner").innerHTML = `<div class="t">Race to ${money0(GOAL)}</div>
-      <div class="d">Each agent started with ${money0(START)}. First to ${money0(GOAL)} wins. ${alive} of 3 still racing.</div>`;
+      <div class="d">Each agent started with ${money0(START)}. First to ${money0(GOAL)} wins. ${alive} of ${racing} still racing.</div>`;
   }
   $("pills").innerHTML = [`Brain: ${esc(d.brain)}`, d.regime && d.regime.spy_trend ? `SPY trend: ${esc(d.regime.spy_trend)}` : ""]
     .filter(Boolean).map(t => `<span class="pill">${t}</span>`).join("");
@@ -160,6 +180,7 @@ function render(d){
   const ticks = [2,5,10,25].filter(m => m < GOAL/START*0.6).map(m => `<span style="left:${logPct(START*m)}%">${m}×</span>`).join("") + `<span style="right:0;transform:none">${money0(GOAL)}</span>`;
   $("standings").innerHTML = comp.map((a,i) => agentCard(a, i+1, ticks)).join("") + bench.map(a => agentCard(a, null, ticks)).join("");
 
+  radarCard(d.radar);
   chart(d, names);
   positions(d.positions, names);
   journal(d.journal);
@@ -170,10 +191,49 @@ function render(d){
     `First to ${money0(GOAL)} wins; everyone is assessed when the race ends`,
     `Eliminated below $10; failed if it can't afford its smallest trade`,
     `Cash only, no margin; options limited to long calls/puts and defined-risk spreads`,
+    `Black Swan only bets on falling prices: puts, put spreads, inverse ETFs and safe havens`,
     `At most ${r.max_new_trades_per_day} new trades per day and ${r.max_open_positions} open positions per agent`,
     `Agents choose setups, dollar amounts, instruments, stops and exits; they can tighten stops, never loosen them`,
     `Options results include a slippage haircut of half the bid-ask spread`,
     `The SPY benchmark isn't racing; it shows what doing nothing would have earned`].map(t => `<li>${esc(t)}</li>`).join("");
+}
+
+function radarCard(rd){
+  const r = rd && rd.now;
+  if (!r || r.score == null) return;
+  const labels = rd.labels || {};
+  const hist = (rd.history || []).slice(-60);
+  const tone = t => t === "stress" ? "var(--bad)" : t === "warning" ? "var(--gold)" : "var(--good)";
+  const what = {calm: "Calm: Black Swan hunts the weakest stocks and buys cheap insurance.",
+                warning: "Warning: index and sector puts and inverse ETFs come into play.",
+                stress: "Stress: Black Swan can go in hard, including 3x inverse funds for a few days."}[r.tier] || "";
+  let spark = "";
+  if (hist.length > 1){
+    const W = 300, H = 44, x = i => i * W / (hist.length - 1), y = v => H - 2 - v * (H - 4) / 100;
+    spark = `<svg viewBox="0 0 ${W} ${H}" style="margin-top:12px" role="img" aria-label="Crash Radar over the last ${hist.length} days">
+      <line x1="0" x2="${W}" y1="${y(40)}" y2="${y(40)}" stroke="var(--grid)" stroke-dasharray="3 3"/>
+      <line x1="0" x2="${W}" y1="${y(70)}" y2="${y(70)}" stroke="var(--grid)" stroke-dasharray="3 3"/>
+      <path d="${hist.map((h,i) => (i?"L":"M") + x(i).toFixed(1) + " " + y(h.score).toFixed(1)).join("")}" fill="none" stroke="var(--s6)" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="${x(hist.length-1)}" cy="${y(hist[hist.length-1].score)}" r="3.5" fill="var(--s6)"/></svg>
+      <div class="sub" style="display:flex;justify-content:space-between"><span>${esc(hist[0].date.slice(5))}</span><span>dashed lines: 40 and 70</span><span>${esc(hist[hist.length-1].date.slice(5))}</span></div>`;
+  }
+  const parts = Object.entries(r.parts || {}).sort((a,b) => b[1]-a[1]).map(([k,v]) =>
+    `<span>${esc(labels[k] || k)}</span><span class="pbar"><i style="width:${v}%;background:${tone(v>=70?"stress":v>=40?"warning":"calm")}"></i></span><b>${v}</b>`).join("");
+  const f = r.facts || {}, e = r.economy || {};
+  const facts = [f.pct_above_50d!=null && `${f.pct_above_50d}% of stocks above their 50-day`,
+    f.spy_off_high_pct!=null && `SPY ${f.spy_off_high_pct}% off its high`,
+    e.yield_curve_10y_2y!=null && `yield curve ${e.yield_curve_10y_2y > 0 ? "+" : ""}${e.yield_curve_10y_2y}`,
+    e.sahm_indicator!=null && `Sahm ${e.sahm_indicator}`].filter(Boolean).join(" · ");
+  $("radar").innerHTML = `<div class="radar-top"><span><span class="radar-score">${r.score}</span><span class="sub"> / 100</span></span>
+      <span class="radar-tier t-${esc(r.tier)}">${esc(String(r.tier).toUpperCase())}</span></div>
+    <div class="gauge" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${r.score}" aria-label="Crash Radar">
+      <span class="z1"></span><span class="z2"></span><span class="z3"></span><span class="mark" style="left:${Math.min(Math.max(r.score, 1), 99)}%"></span></div>
+    <div class="gscale"><span style="left:20%">calm</span><span style="left:55%">warning</span><span style="left:85%">stress</span></div>
+    <div class="d" style="font-size:13px;color:var(--text2);margin-top:6px">${esc(what)}</div>
+    <div class="parts">${parts}</div>
+    ${facts ? `<div class="sub" style="margin-top:10px">${esc(facts)}</div>` : ""}
+    <div class="sub" style="margin-top:4px">Economy data: ${esc(e.status === "on" ? "on (FRED)" : e.status || "off")}</div>
+    ${spark}`;
 }
 
 function scoreLine(id){
@@ -273,6 +333,8 @@ function positions(list, names){
       if (p.last!=null){ const v=(p.last-p.entry)*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
     else if (p.kind==="option"){ what = `${p.qty} ${esc(p.opt_type)}${p.qty>1?"s":""} @ ${money(p.entry)} · exp ${esc(p.expiry)}`;
       if (p.mark!=null){ const v=(p.mark-p.entry)*100*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
+    else if (p.kind==="debit_spread"){ what = `${esc(p.structure)} ×${p.qty} · paid ${money(p.entry)} · exp ${esc(p.expiry)}`;
+      if (p.mark!=null){ const v=(p.mark-p.entry)*100*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
     else { what = `${esc(p.structure)} ×${p.qty} · credit ${money(p.entry)} · exp ${esc(p.expiry)}`;
       if (p.mark!=null){ const v=(p.entry-p.mark)*100*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
     return `<div class="row"><div class="h"><span><span class="sw" style="background:${COLOR[p.agent]};margin-right:6px"></span>${esc(p.underlying||p.symbol)}</span>${pnl}</div>
@@ -282,11 +344,12 @@ function positions(list, names){
 
 function journal(list){
   const label = {open:"OPEN",close:"CLOSE",rule_block:"BLOCKED",unfilled:"UNFILLED",exit_unfilled:"UNFILLED",error:"ERROR",
-    param_change:"RETUNED",failed:"FAILED",eliminated:"ELIMINATED",race_end:"FINISH"};
+    param_change:"RETUNED",failed:"FAILED",eliminated:"ELIMINATED",race_end:"FINISH",trim:"TOOK PROFIT",radar:"RADAR"};
   if (!list || !list.length){ $("journal").innerHTML = '<div class="empty">No activity yet.</div>'; return; }
   $("journal").innerHTML = list.slice(0,40).map(j => {
     const when = new Date(j.time).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
     let body = esc(j.thesis || j.note || "");
+    if (j.type==="trim") body = `<span class="${cls(j.pnl)}">${signed$(j.pnl)}</span> on part · ${esc(j.note)}`;
     if (j.type==="close") body = `<span class="${cls(j.pnl)}">${signed$(j.pnl)}</span> · ${esc(j.note)}`;
     if (j.type==="open") body = `${esc(j.instrument)} · ${money(Math.abs(j.cost))} ${j.cost<0?"credit":""} · ${esc(j.thesis)}`;
     const sym = j.symbol && j.symbol.length > 12 ? j.symbol.replace(/^([A-Z]+)(\d{6})([CP]).*/, "$1 $3 $2") : (j.symbol||"");
