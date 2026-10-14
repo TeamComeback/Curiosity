@@ -322,7 +322,7 @@ def agent_view(state, aid, cands, ctx, can_open, standings):
         "balance": {"cash": agent["cash"], "available": governor.available(agent), "equity": eq,
                     "start": config.RACE["start_balance"], "progress_to_goal_pct": round(eq / config.RACE["goal"] * 100, 2)},
         "can_open": can_open,
-        "trades_left_today": max(config.RULES["max_new_trades_per_day"] - governor.entries_today(state, aid), 0),
+        "trades_today": governor.entries_today(state, aid),
         "positions": positions,
         "candidates": [{"candidate_id": i, **{k: c[k] for k in keep if k in c},
                         **({"max_loss_per_contract": c["max_loss_per"]} if "max_loss_per" in c else {})}
@@ -504,7 +504,7 @@ def main(force=False, broker=None):
                 if tighter:
                     pos["stop"] = round(new, 2)
         if can_open:
-            for order in d.get("open", [])[:config.RULES["max_new_trades_per_day"]]:
+            for order in d.get("open", []):
                 i = order.get("candidate_id")
                 if not isinstance(i, int) or not 0 <= i < len(found):
                     continue

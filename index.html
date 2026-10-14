@@ -192,7 +192,7 @@ function render(d){
     `Eliminated below $10; failed if it can't afford its smallest trade`,
     `Cash only, no margin; options limited to long calls/puts and defined-risk spreads`,
     `Black Swan only bets on falling prices: puts, put spreads, inverse ETFs and safe havens`,
-    `At most ${r.max_new_trades_per_day} new trades per day and ${r.max_open_positions} open positions per agent`,
+    `No daily trade limit, position cap or waiting period: firms trade whenever their analysis says so (a malfunction guard pauses a firm after ${r.malfunction_guard_trades_per_day ?? 30} orders in one day)`,
     `Agents choose setups, dollar amounts, instruments, stops and exits; they can tighten stops, never loosen them`,
     `Options results include a slippage haircut of half the bid-ask spread`,
     `The SPY benchmark isn't racing; it shows what doing nothing would have earned`].map(t => `<li>${esc(t)}</li>`).join("");

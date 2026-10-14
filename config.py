@@ -79,9 +79,13 @@ BEAR_SYMBOLS = list(dict.fromkeys(RADAR_SYMBOLS + list(INVERSE_ETFS.values()) + 
 RULES = {
     "no_margin": True,                # can only spend its own available cash
     "options_allowed": ["call", "put", "spread", "debit_spread"],  # long options + defined-risk spreads; nothing naked
-    "max_new_trades_per_day": 2,      # anti-overtrading
-    "max_open_positions": 4,
-    "reentry_cooldown_days": 1,       # no re-buying a symbol the same day it was sold
+    # No daily trade limit, no position cap, no re-entry waiting period: each firm trades as often
+    # as its analysis says, like any cash-account trader. The only ceiling is a malfunction guard
+    # far above normal behavior, so a software bug can't fire off hundreds of orders.
+    "max_new_trades_per_day": None,
+    "max_open_positions": None,
+    "reentry_cooldown_days": 0,
+    "malfunction_guard_trades_per_day": 30,
     "min_stock_trade": 2.00,          # smallest fractional-share order, dollars
     "slippage_half_spread": True,     # options P&L haircut = half the bid-ask at entry and exit
 }
@@ -115,12 +119,6 @@ PARAM_BOUNDS = {
 # Long-option default exits (agents can close earlier at any time)
 OPTION_EXITS = {"stop_pct": 0.50, "target_pct": 1.00, "exit_dte": 5}
 
-# When each agent may open new trades (US/Eastern, 24h).
-ENTRY_WINDOWS = {
-    "trend": ("10:00", "15:30"),
-    "meanrev": ("15:00", "15:55"),
-    "volsell": ("10:30", "15:00"),
-    "blackswan": ("10:00", "15:30"),
-    "baseline": ("09:45", "15:55"),
-    "monkey": ("10:00", "15:30"),
-}
+# When each agent may open new trades (US/Eastern, 24h): the whole session for every firm;
+# when to act inside it is the firm's own call.
+ENTRY_WINDOWS = {aid: ("09:35", "15:55") for aid in AGENTS}

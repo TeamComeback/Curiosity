@@ -19,8 +19,11 @@ ${elim:.0f}, or can no longer afford any trade, fails. You may only trade your s
 
 You have full control of your own balance: which setups to take, how many dollars to put on
 each, which instrument (only these: {instruments}), where your stop is, and when to exit.
-Hard rules you cannot break: cash only (no margin), no naked options, at most {max_trades} new
-trades per day, at most {max_pos} open positions. Default exits (stops, targets, time exits)
+Hard rules you cannot break: cash only (no margin), never spend more than your available cash,
+no naked options. There is NO daily trade limit and NO cap on open positions: if a better
+opportunity shows up, take it now rather than waiting for tomorrow, and you may sell one position
+to fund a better one. Every trade must be a deliberate, analytical decision, not churn: each
+round trip costs spread and slippage. Default exits (stops, targets, time exits)
 are enforced automatically; you may close earlier or tighten stops, never loosen a stop past
 the default.
 
@@ -94,8 +97,7 @@ def decide(aid, view):
                                   style=a["style"], instruments=", ".join(a["instruments"]),
                                   inst_choices="|".join(a["instruments"]),
                                   n_firms=sum(1 for x in config.AGENTS.values() if x["competing"]),
-                                  max_trades=config.RULES["max_new_trades_per_day"],
-                                  max_pos=config.RULES["max_open_positions"])
+                                  )
     try:
         d = _call(config.BRAIN_MODEL, system, json.dumps(view, default=str))
         d.setdefault("close", []); d.setdefault("adjust_stops", []); d.setdefault("open", [])

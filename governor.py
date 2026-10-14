@@ -24,9 +24,11 @@ def can_trade_today(state, aid):
         return False, "race finished"
     if agent["status"] != "active":
         return False, f"agent {agent['status']}"
-    if entries_today(state, aid) >= R["max_new_trades_per_day"] and aid != "baseline":
+    if R.get("max_new_trades_per_day") and entries_today(state, aid) >= R["max_new_trades_per_day"] and aid != "baseline":
         return False, "daily trade limit reached"
-    if len(agent["positions"]) >= R["max_open_positions"]:
+    if entries_today(state, aid) >= R.get("malfunction_guard_trades_per_day", 30) and aid != "baseline":
+        return False, "malfunction guard: unusually many orders today, paused until tomorrow"
+    if R.get("max_open_positions") and len(agent["positions"]) >= R["max_open_positions"]:
         return False, "max open positions"
     return True, "ok"
 
@@ -54,7 +56,7 @@ def check_order(state, aid, cand, instrument, cost):
     if aid != "baseline" and any(p.get("underlying", p["symbol"]) == cand["symbol"] for p in agent["positions"].values()):
         return False, f"already holding {cand['symbol']}"
     last = agent["last_exits"].get(cand["symbol"])
-    if last and (store.now_et().date() - date.fromisoformat(last)).days < R["reentry_cooldown_days"]:
+    if last and R.get("reentry_cooldown_days") and (store.now_et().date() - date.fromisoformat(last)).days < R["reentry_cooldown_days"]:
         return False, "re-entry cooldown"
     if instrument == "stock" and aid != "baseline":
         for other, a in state["agents"].items():

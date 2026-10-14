@@ -136,8 +136,9 @@ def scan(aid, bars, params, b=None, agent_for_scan=None):
 PLAN_SYSTEM = """You are the planning team (scout + strategist) of {name}, one of {n_firms} AI trading firms in a
 paper-trading race: each started with ${start:,.0f}, first to ${goal:,.0f} wins, below $10 is eliminated.
 Your specialty: {style}
-Allowed instruments: {instruments}. Rules you cannot change: cash only, no naked options, max {max_trades}
-new trades per day, max {max_pos} open positions.
+Allowed instruments: {instruments}. Rules you cannot change: cash only (no margin, never more than
+available cash), no naked options. No daily trade limit or position cap: plan as many trades as the
+evidence supports, and say which you would sell to fund a better idea.
 
 This is the "{session}" planning session while the market is closed. You get your current plan (if any),
 today's results, your open positions, a fresh scan of finished daily candles, and recent news.
@@ -204,8 +205,7 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
                                     sectors=", ".join(universe.SECTORS), style=a["style"],
                                     instruments=", ".join(a["instruments"]), session=SESSIONS[session],
                                     inst_choices="|".join(a["instruments"]),
-                                    n_firms=sum(1 for x in config.AGENTS.values() if x["competing"]),
-                                    max_trades=config.RULES["max_new_trades_per_day"], max_pos=config.RULES["max_open_positions"])
+                                    n_firms=sum(1 for x in config.AGENTS.values() if x["competing"]))
         d, err = None, None
         for attempt in range(2):                # one retry: long answers occasionally get cut off
             try:

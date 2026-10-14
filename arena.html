@@ -522,7 +522,7 @@ function renderText(){
   $("staff").innerHTML = `<h2>Who works where</h2><p>Each firm only hires the roles its strategy needs. Tap a person to see what they're working on, or a firm for its books.</p>` +
     Object.entries(FIRMS).map(([id, fm]) => `<h2><span class="dot" style="background:var(${fm.colorVar})"></span>${esc(fm.name)}</h2>` +
       fm.staff.map(([r, label, job]) => `<p><span class="dot" style="background:${ROLE_COLOR[r]}"></span><b style="color:var(--ink);font-weight:500">${esc(label)}</b>: ${esc(job)}</p>`).join("")).join("") +
-    `<h2><span class="dot" style="background:${ROLE_COLOR.comp}"></span>Compliance, shared</h2><p>Stands at the exchange door. Every order passes the rulebook: cash only, simple options, two new trades a day.</p>`;
+    `<h2><span class="dot" style="background:${ROLE_COLOR.comp}"></span>Compliance, shared</h2><p>Stands at the exchange door. Every order passes the rulebook: cash only, no margin, simple options. No daily trade limit.</p>`;
 }
 
 function showCard(id){
@@ -563,13 +563,13 @@ function roleInfo(k){
     const blocks = todayJournal().filter(j => j.type === "rule_block");
     const r = data.rules || {};
     return {name: "Compliance officer", firm: "Shared by every firm", color: ROLE_COLOR.comp,
-      lines: [`Checks every order against the rulebook: cash only, long options or defined-risk spreads, ${r.max_new_trades_per_day ?? 2} new trades a day, ${r.max_open_positions ?? 4} open positions.`,
+      lines: [`Checks every order against the rulebook: cash only, never more than the firm's available cash, long options or defined-risk spreads. No daily trade limit or position cap.`,
               blocks.length ? `Turned away ${blocks.length} order${blocks.length > 1 ? "s" : ""} today. Latest: ${blocks[0].note}.` : "No orders turned away today."]};
   }
   const st = firmsState[k.firm], a = st.agent, fm = FIRMS[k.firm], P = (data.params || {})[k.firm] || {};
   const label = (fm.staff.find(x => x[0] === k.role) || [])[1] || ROLE_NAME[k.role];
   const base = {name: label, firm: fm.name, color: ROLE_COLOR[k.role], lines: [], goal: null};
-  const opensToday = todayJournal(k.firm).filter(j => j.type === "open").length, maxT = (data.rules || {}).max_new_trades_per_day ?? 2;
+  const opensToday = todayJournal(k.firm).filter(j => j.type === "open").length;
   const lastOpen = lastOf(k.firm, ["open"]), lastClose = lastOf(k.firm, ["close"]);
   if (st.out){ base.lines.push(`The firm is ${a.status}. ${a.status_reason || ""}`.trim()); return base; }
   const planObj = (data.plans || {})[k.firm], todayET = etNow().date;
@@ -629,8 +629,9 @@ function roleInfo(k){
       base.lines.push(lo);
       if (lastClose) base.lines.push(`Last exit: ${nice(lastClose.symbol)}, ${lastClose.pnl >= 0 ? "+" : "-"}$${Math.abs(lastClose.pnl).toFixed(2)}. Reason: ${lastClose.note}.`);
       if (k.firm === "meanrev" && st.positions.length) base.lines.push(`Waiting to sell ${st.positions.map(x => x.sym).join(", ")} into the bounce.`);
-      base.goal = {label: "Trades used today", value: `${opensToday} of ${maxT}`, pct: pct(opensToday, maxT),
-                   note: opensToday >= maxT ? "Daily limit reached. Exits are still allowed." : "Room for more if a good setup appears."};
+      const deployed = a.equity > 0 ? (a.equity - a.available) / a.equity : 0;
+      base.goal = {label: "Money at work", value: `${Math.round(deployed * 100)}% invested`, pct: deployed * 100,
+                   note: `${opensToday} trade${opensToday === 1 ? "" : "s"} opened today. No daily limit: the firm acts whenever it finds a better opportunity.`};
       break; }
     case "risk": {
       if (!st.positions.length){ base.lines.push("Nothing open to guard right now."); break; }
