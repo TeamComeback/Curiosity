@@ -35,6 +35,10 @@
     {
      "date": "2026-10-14",
      "note": "Dropped the XLE plan since its 66.42 trigger never fired and XLE isn't in today's scan. Skipped the sub-penny breakdowns because they have no tradeable puts. Sized small because the 33% stop distance means the premium is the real risk."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "XLE plan dropped (trigger never fired and XLE is not in the scan). Sub-penny breakdowns skipped because they have no tradeable puts. Keep premium sizing small when the underlying stop is far away."
     }
    ],
    "last_exits": {},
@@ -119,7 +123,7 @@
       "pct_vs_sma200": 15.7,
       "pct_vs_sma5": -2.6
      },
-     "last": 575.535
+     "last": 575.77
     }
    },
    "status": "active",
@@ -149,6 +153,10 @@
     {
      "date": "2026-10-14",
      "note": "No candidates and outside the entry window. Holding SMH to its default exits (stop 552.5, RSI(2) > 70 exit, 7-day time stop). Live cash is $400.07, so the game plan's $0.07 figure is stale."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "No candidates and outside the entry window. Holding SMH to its default exits (stop 552.5, RSI(2) > 70 exit, 7-day time stop). Live cash is $400.07; the game plan's $0.07 figure is stale."
     }
    ],
    "last_exits": {},
@@ -210,7 +218,12 @@
    "wins": 0,
    "peak": 500.0,
    "max_dd": 0.0,
-   "notes": [],
+   "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "Passing: IWM bear call credit is 0.20 on a $1 width, below the 0.25 trigger in the game plan. XLE and TLT credits (0.15) pay under 18% of max loss, too thin to justify the risk. Wait for a richer credit."
+    }
+   ],
    "last_exits": {},
    "plan": {
     "for_day": "2026-10-14",
@@ -268,7 +281,8 @@
       ]
      }
     ]
-   }
+   },
+   "min_trade_seen": 80.0
   },
   "baseline": {
    "cash": 4.06,
@@ -287,7 +301,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 773.04
+     "last": 773.21
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -303,7 +317,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 773.04
+     "last": 773.21
     }
    },
    "status": "active",
@@ -354,6 +368,10 @@
     {
      "date": "2026-10-14",
      "note": "Calm radar (15): two breakdown spreads, $110 total risk. Skip SPY insurance while SPY is above its 50-day average, and stage profit-taking because crash rallies reverse fast."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Calm radar (15): two small Technology breakdown spreads, $110 total risk, SPY insurance skipped while SPY is above its 50-day average. Take profits in stages because crash rallies reverse fast."
     }
    ],
    "last_exits": {},
