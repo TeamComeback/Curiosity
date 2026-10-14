@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T10:02-04:00",
+ "updated": "2026-10-14T10:04-04:00",
  "race": {
   "status": "running",
   "goal": 5000.0,
@@ -9,9 +9,9 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 6.9,
+  "spy_vs_sma200_pct": 6.8,
   "spy_roc20_pct": 2.7,
-  "crash_radar": 14
+  "crash_radar": 15
  },
  "start_balance": 500.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -49,6 +49,10 @@
    "notes": [
     {
      "date": "2026-10-14",
+     "note": "XLE trigger (66.42) not met, so that plan is dropped. Penny-stock breakdowns have no tradeable puts, so I skipped them and took the one liquid breakdown instead."
+    },
+    {
+     "date": "2026-10-14",
      "note": "Skip penny-stock breakdowns (CDT, SDST, HCAI, DKI, RKDA) since they have no tradeable puts; XLE trigger not met, so the plan is dropped."
     }
    ]
@@ -57,7 +61,7 @@
    "id": "meanrev",
    "name": "Mean-reversion agent",
    "competing": true,
-   "equity": 497.95,
+   "equity": 498.14,
    "cash": 400.07,
    "available": 400.07,
    "status": "active",
@@ -68,8 +72,12 @@
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.5,
-   "risk_adj": -0.08,
+   "risk_adj": -0.07,
    "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "No candidates and outside the entry window. Holding SMH to its default exits (stop 552.5, RSI(2) > 70 exit, 7-day time stop). The game plan's cash figure is stale; live cash is $400.07."
+    },
     {
      "date": "2026-10-14",
      "note": "Balance shows $400.07 cash, not the $0.07 in the stale game plan. Equity is $497.95 with only the SMH position open (mark 574.75, stop 552.5). No candidates and outside the entry window, so holding SMH to its default exits."
@@ -77,10 +85,6 @@
     {
      "date": "2026-10-13",
      "note": "Cash is nearly fully deployed in SMH (about $100 position), so there is nothing to add. Next session, only take RSI(2) washouts where the stop distance is small relative to the expected snap-back to the 5-day high or RSI 70."
-    },
-    {
-     "date": "2026-10-13",
-     "note": "Only one trade: MU's $943 price and the options minimums don't fit a $100 account, and the SMH stop is about 6% away against a roughly 2.6% target, so reward-to-risk is thin. Size the full $100 only when the stop distance is small relative to the expected bounce."
     }
    ]
   },
@@ -106,18 +110,18 @@
    "id": "baseline",
    "name": "SPY benchmark",
    "competing": false,
-   "equity": 499.39,
+   "equity": 499.16,
    "cash": 4.06,
    "available": 4.06,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 9.99,
+   "progress_pct": 9.98,
    "open": 2,
    "closed": 0,
    "win_rate": null,
-   "max_dd_pct": 0.1,
-   "risk_adj": -0.02,
+   "max_dd_pct": 0.2,
+   "risk_adj": -0.03,
    "notes": []
   },
   {
@@ -157,6 +161,10 @@
    "notes": [
     {
      "date": "2026-10-14",
+     "note": "Calm radar (15): two small breakdown put spreads in Technology, keep total risk under $120, skip SPY insurance while SPY is above its 50-day average, and take profits in stages since crash rallies reverse fast."
+    },
+    {
+     "date": "2026-10-14",
      "note": "Calm radar (14): keep sizing small, max 2 breakdown spreads per day, and skip SPY insurance unless SPY closes below its 50-day average."
     }
    ]
@@ -178,9 +186,9 @@
    "date": "2026-10-14",
    "agents": {
     "trend": 500.0,
-    "meanrev": 497.95,
+    "meanrev": 498.14,
     "volsell": 500.0,
-    "baseline": 499.39,
+    "baseline": 499.16,
     "monkey": 500.0,
     "blackswan": 500.0
    }
@@ -197,7 +205,7 @@
    "opt_type": null,
    "qty": 0.1703,
    "entry": 586.812,
-   "last": 574.75,
+   "last": 575.88,
    "mark": null,
    "stop": 552.5,
    "expiry": null,
@@ -219,7 +227,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 773.59,
+   "last": 773.23,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -241,7 +249,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 773.59,
+   "last": 773.23,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -255,6 +263,27 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-14T10:04:47-04:00",
+   "type": "rule_block",
+   "agent": "blackswan",
+   "symbol": "IREN",
+   "note": "no put spread affordable within $50.00"
+  },
+  {
+   "time": "2026-10-14T10:04:47-04:00",
+   "type": "rule_block",
+   "agent": "blackswan",
+   "symbol": "ASTS",
+   "note": "no put spread affordable within $60.00"
+  },
+  {
+   "time": "2026-10-14T10:04:37-04:00",
+   "type": "rule_block",
+   "agent": "trend",
+   "symbol": "CRWG",
+   "note": "no put affordable within $75.00"
+  },
   {
    "time": "2026-10-14T10:02:20-04:00",
    "type": "error",
@@ -779,7 +808,7 @@
  ],
  "radar": {
   "now": {
-   "score": 14,
+   "score": 15,
    "tier": "calm",
    "market_score": 18,
    "economy_score": 3,
@@ -787,18 +816,18 @@
     "trend": 0,
     "drawdown": 7,
     "volatility": 0,
-    "breadth": 63,
+    "breadth": 64,
     "credit": 31,
     "safety": 0,
     "economy": 3
    },
    "facts": {
-    "spy_vs_sma50_pct": 0.7,
-    "spy_vs_sma200_pct": 6.9,
-    "spy_off_high_pct": 1.0,
+    "spy_vs_sma50_pct": 0.6,
+    "spy_vs_sma200_pct": 6.8,
+    "spy_off_high_pct": 1.1,
     "spy_iv_pct": 12.7,
     "spy_realized_vol_pct": 9.6,
-    "pct_above_50d": 39.9,
+    "pct_above_50d": 39.6,
     "breadth_sample": 551,
     "junk_vs_treasuries_20d_pct": -0.25,
     "havens_vs_spy_20d_pct": -5.8
@@ -812,7 +841,7 @@
     "junk_bond_spread_pct": 3.11,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-14T10:01-04:00"
+   "at": "2026-10-14T10:04-04:00"
   },
   "history": [
    {
@@ -822,7 +851,7 @@
    },
    {
     "date": "2026-10-14",
-    "score": 14,
+    "score": 15,
     "tier": "calm"
    }
   ],
