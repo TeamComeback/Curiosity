@@ -11,13 +11,13 @@
  "entries": {
   "date": "2026-10-14",
   "counts": {
-   "trend": 1,
+   "trend": 3,
    "meanrev": 1
   }
  },
  "agents": {
   "trend": {
-   "cash": 876.5,
+   "cash": 665.5,
    "reserved": 0.0,
    "positions": {
     "pos-5f3108fb3d": {
@@ -27,7 +27,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.21,
-     "mark": 1.21,
+     "mark": 1.19,
      "expiry": "2026-11-27",
      "strike": 14.5,
      "delta": -0.5,
@@ -44,6 +44,60 @@
       "pct_vs_sma50": -18.1,
       "pct_vs_sma200": -23.6
      },
+     "sector": "Technology",
+     "low_water": 14.195,
+     "exit_half_spread": 0.015
+    },
+    "pos-a3a860ab78": {
+     "kind": "option",
+     "symbol": "CIFR261106P00010000",
+     "underlying": "CIFR",
+     "opt_type": "put",
+     "qty": 1,
+     "entry": 0.96,
+     "mark": 0.96,
+     "expiry": "2026-11-06",
+     "strike": 10.0,
+     "delta": -0.39,
+     "cost": 98.0,
+     "direction": "short",
+     "stop": 12.81,
+     "atr": 1.223,
+     "opened": "2026-10-14T11:35:38-04:00",
+     "thesis": "CIFR broke below its 55-day low at 10.70 on 2.9x volume and is 43% below its 200-day SMA, so the downtrend is established; the stop at 12.81 sits above the breakdown level.",
+     "confidence": 3,
+     "signals": {
+      "rel_volume": 2.87,
+      "roc20_pct": -24.9,
+      "pct_vs_sma50": -37.1,
+      "pct_vs_sma200": -43.3
+     },
+     "sector": "Technology"
+    },
+    "pos-ea0031af4c": {
+     "kind": "option",
+     "symbol": "SMR261106P00006000",
+     "underlying": "SMR",
+     "opt_type": "put",
+     "qty": 2,
+     "entry": 0.55,
+     "mark": 0.55,
+     "expiry": "2026-11-06",
+     "strike": 6.0,
+     "delta": -0.46,
+     "cost": 113.0,
+     "direction": "short",
+     "stop": 6.94,
+     "atr": 0.496,
+     "opened": "2026-10-14T11:35:39-04:00",
+     "thesis": "SMR broke below its 55-day low at 6.42 on 1.9x volume with roc20 at -23%, and it is 49% below its 200-day SMA; the stop at 6.94 sits just above the breakdown level.",
+     "confidence": 3,
+     "signals": {
+      "rel_volume": 1.88,
+      "roc20_pct": -23.0,
+      "pct_vs_sma50": -32.9,
+      "pct_vs_sma200": -48.9
+     },
      "sector": "Technology"
     }
    },
@@ -53,7 +107,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.0,
-   "max_dd": 0.0025,
+   "max_dd": 0.0095,
    "notes": [
     {
      "date": "2026-10-14",
@@ -78,6 +132,10 @@
     {
      "date": "2026-10-14",
      "note": "The XLE plan is dead and the game plan is stale. I'm taking the most liquid breakdown with a tight underlying stop and keeping about $800 settled for new breakdowns. Size puts by premium, since the underlying stop distance drives the risk."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Stale XLE plan is dropped. Keeping the rest of settled cash for new breakdowns, and I'm not doubling up on the SOFI put I already hold."
     }
    ],
    "last_exits": {},
@@ -163,7 +221,7 @@
       "pct_vs_sma200": 15.7,
       "pct_vs_sma5": -2.6
      },
-     "last": 573.29
+     "last": 571.665
     },
     "pos-3514fae9b2": {
      "kind": "stock",
@@ -183,7 +241,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 160.66
+     "last": 162.77
     }
    },
    "status": "active",
@@ -225,6 +283,10 @@
     {
      "date": "2026-10-14",
      "note": "Live balance shows $900 available, so the earlier $400 and $0.07 notes are stale. Passed on BMNR, DAL, AMAT, SOXX and LRCX because their stops were 7-16% away against 4-6% targets; STT is the only setup that clears roughly 1:1."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "No new entries: every candidate's stop is 7-16% away against a 4-6% snap-back target (reward-to-risk under 1:1). Holding SMH (stop 552.5) and STT (stop 152.41) to their default exits; cash stays in reserve for a washout with a tight stop."
     }
    ],
    "last_exits": {},
@@ -299,6 +361,10 @@
     {
      "date": "2026-10-14",
      "note": "Passing today: IWM bear call credit is 0.21 on a $1 width, below the 0.25 trigger. SPY bull put at 0.25 on $75 risk is the only candidate near the bar, but the game plan avoids SPY put spreads on Iran gap risk. Wait for a richer credit or a confirmed IWM setup."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Pass all 5 candidates. Every credit is under 22% of max loss (IWM 0.18/$82, SPY 0.18/$82, QQQ 0.10/$90, XLE 0.13/$87, TLT 0.14/$86). At about 20 delta the win rate is near 80%, so these trades are roughly break-even to negative EV after slippage. Wait for credits of at least 0.25 on a $1 width, as t"
     }
    ],
    "last_exits": {},
@@ -359,7 +425,7 @@
      }
     ]
    },
-   "min_trade_seen": 75.0,
+   "min_trade_seen": 82.0,
    "unsettled": []
   },
   "baseline": {
@@ -379,7 +445,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 771.94
+     "last": 771.61
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -395,7 +461,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.94
+     "last": 771.61
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -411,7 +477,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.94
+     "last": 771.61
     }
    },
    "status": "active",
@@ -420,7 +486,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.01,
-   "max_dd": 0.0019,
+   "max_dd": 0.0022,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -476,6 +542,10 @@
     {
      "date": "2026-10-14",
      "note": "Two $50-60 budgets were too small for any put spread on these names, so I'm committing $150 to the single highest-conviction setup instead of splitting it. Skipping SPY insurance since SPY is still above its 50-day, and passing on IREN/APP/XHB to stay within risk limits."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Calm radar (15) with SPY above its 50-day, so I skip SPY insurance. The $50-60 budgets were too small to fund any spread, so I'm sizing two breakdown spreads at $150 each for $300 total risk, keep about $700 in cash, and plan staged profit-taking."
     }
    ],
    "last_exits": {},

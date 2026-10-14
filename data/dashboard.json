@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T11:17-04:00",
+ "updated": "2026-10-14T11:36-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,7 +10,7 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 6.7,
+  "spy_vs_sma200_pct": 6.6,
   "spy_roc20_pct": 2.7,
   "crash_radar": 15
  },
@@ -36,20 +36,24 @@
    "id": "trend",
    "name": "Trend agent",
    "competing": true,
-   "equity": 997.5,
-   "cash": 876.5,
-   "available": 876.5,
+   "equity": 990.5,
+   "cash": 665.5,
+   "available": 665.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.0,
-   "progress_pct": 9.98,
-   "open": 1,
+   "multiple": 0.99,
+   "progress_pct": 9.9,
+   "open": 3,
    "closed": 0,
    "win_rate": null,
-   "max_dd_pct": 0.2,
-   "risk_adj": -0.05,
+   "max_dd_pct": 0.9,
+   "risk_adj": -0.19,
    "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "Stale XLE plan is dropped. Keeping the rest of settled cash for new breakdowns, and I'm not doubling up on the SOFI put I already hold."
+    },
     {
      "date": "2026-10-14",
      "note": "The XLE plan is dead and the game plan is stale. I'm taking the most liquid breakdown with a tight underlying stop and keeping about $800 settled for new breakdowns. Size puts by premium, since the underlying stop distance drives the risk."
@@ -57,10 +61,6 @@
     {
      "date": "2026-10-14",
      "note": "The overnight plan's XLE trigger never fired and the sub-penny names have no tradeable puts, so I'm taking the one liquid breakdown. Size puts by premium, since the underlying stop distance is wide."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "XLE plan dropped (trigger never fired and XLE is not in the scan). Sub-penny breakdowns skipped because they have no tradeable puts. Keep premium sizing small when the underlying stop is far away."
     }
    ]
   },
@@ -68,20 +68,24 @@
    "id": "meanrev",
    "name": "Mean-reversion agent",
    "competing": true,
-   "equity": 997.6,
+   "equity": 999.95,
    "cash": 699.98,
    "available": 699.98,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 9.98,
+   "progress_pct": 10.0,
    "open": 2,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.3,
-   "risk_adj": -0.05,
+   "risk_adj": -0.0,
    "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "No new entries: every candidate's stop is 7-16% away against a 4-6% snap-back target (reward-to-risk under 1:1). Holding SMH (stop 552.5) and STT (stop 152.41) to their default exits; cash stays in reserve for a washout with a tight stop."
+    },
     {
      "date": "2026-10-14",
      "note": "Live balance shows $900 available, so the earlier $400 and $0.07 notes are stale. Passed on BMNR, DAL, AMAT, SOXX and LRCX because their stops were 7-16% away against 4-6% targets; STT is the only setup that clears roughly 1:1."
@@ -89,10 +93,6 @@
     {
      "date": "2026-10-14",
      "note": "Passed on DAL, BMNR, AMAT, LRCX and SOXX because their stops sat 7-16% away against 3.5-6% targets (reward-to-risk under 1:1). TDACW is a thin penny warrant, so watch the spread and keep size small."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "No candidates and outside the entry window. Holding SMH to its default exits (stop 552.5, RSI(2) > 70 exit, 7-day time stop). Live cash is $400.07; the game plan's $0.07 figure is stale."
     }
    ]
   },
@@ -116,15 +116,15 @@
    "notes": [
     {
      "date": "2026-10-14",
+     "note": "Pass all 5 candidates. Every credit is under 22% of max loss (IWM 0.18/$82, SPY 0.18/$82, QQQ 0.10/$90, XLE 0.13/$87, TLT 0.14/$86). At about 20 delta the win rate is near 80%, so these trades are roughly break-even to negative EV after slippage. Wait for credits of at least 0.25 on a $1 width, as t"
+    },
+    {
+     "date": "2026-10-14",
      "note": "Passing today: IWM bear call credit is 0.21 on a $1 width, below the 0.25 trigger. SPY bull put at 0.25 on $75 risk is the only candidate near the bar, but the game plan avoids SPY put spreads on Iran gap risk. Wait for a richer credit or a confirmed IWM setup."
     },
     {
      "date": "2026-10-14",
      "note": "Passing today: IWM bear call credit is 0.22, below the 0.25 trigger. SPY bull put (0.20 on $80 risk) has roughly zero expected value at 20 delta and conflicts with the avoid list. Wait for a richer credit."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "Passing: IWM bear call credit is 0.20 on a $1 width, below the 0.25 trigger in the game plan. XLE and TLT credits (0.15) pay under 18% of max loss, too thin to justify the risk. Wait for a richer credit."
     }
    ]
   },
@@ -132,7 +132,7 @@
    "id": "baseline",
    "name": "SPY benchmark",
    "competing": false,
-   "equity": 998.28,
+   "equity": 997.85,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
@@ -144,7 +144,7 @@
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.2,
-   "risk_adj": -0.03,
+   "risk_adj": -0.04,
    "notes": []
   },
   {
@@ -186,15 +186,15 @@
    "notes": [
     {
      "date": "2026-10-14",
+     "note": "Calm radar (15) with SPY above its 50-day, so I skip SPY insurance. The $50-60 budgets were too small to fund any spread, so I'm sizing two breakdown spreads at $150 each for $300 total risk, keep about $700 in cash, and plan staged profit-taking."
+    },
+    {
+     "date": "2026-10-14",
      "note": "Two $50-60 budgets were too small for any put spread on these names, so I'm committing $150 to the single highest-conviction setup instead of splitting it. Skipping SPY insurance since SPY is still above its 50-day, and passing on IREN/APP/XHB to stay within risk limits."
     },
     {
      "date": "2026-10-14",
      "note": "Calm radar (15): two breakdown spreads totaling $110 risk, no SPY insurance while SPY is above its 50-day average. Take profits in stages, since crash rallies reverse fast."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "Calm radar (15): two small Technology breakdown spreads, $110 total risk, SPY insurance skipped while SPY is above its 50-day average. Take profits in stages because crash rallies reverse fast."
     }
    ]
   }
@@ -214,10 +214,10 @@
   {
    "date": "2026-10-14",
    "agents": {
-    "trend": 997.5,
-    "meanrev": 997.6,
+    "trend": 990.5,
+    "meanrev": 999.95,
     "volsell": 1000.0,
-    "baseline": 998.28,
+    "baseline": 997.85,
     "monkey": 1000.0,
     "blackswan": 1000.0
    }
@@ -235,13 +235,57 @@
    "qty": 1,
    "entry": 1.21,
    "last": null,
-   "mark": 1.21,
+   "mark": 1.19,
    "stop": 15.2,
    "expiry": "2026-11-27",
    "opened": "2026-10-14T11:16:18-04:00",
    "thesis": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level.",
    "confidence": 3,
    "cost": 123.5,
+   "realized": null,
+   "play": null,
+   "width": null
+  },
+  {
+   "agent": "trend",
+   "position_id": "pos-a3a860ab78",
+   "kind": "option",
+   "symbol": "CIFR261106P00010000",
+   "underlying": "CIFR",
+   "structure": null,
+   "opt_type": "put",
+   "qty": 1,
+   "entry": 0.96,
+   "last": null,
+   "mark": 0.96,
+   "stop": 12.81,
+   "expiry": "2026-11-06",
+   "opened": "2026-10-14T11:35:38-04:00",
+   "thesis": "CIFR broke below its 55-day low at 10.70 on 2.9x volume and is 43% below its 200-day SMA, so the downtrend is established; the stop at 12.81 sits above the breakdown level.",
+   "confidence": 3,
+   "cost": 98.0,
+   "realized": null,
+   "play": null,
+   "width": null
+  },
+  {
+   "agent": "trend",
+   "position_id": "pos-ea0031af4c",
+   "kind": "option",
+   "symbol": "SMR261106P00006000",
+   "underlying": "SMR",
+   "structure": null,
+   "opt_type": "put",
+   "qty": 2,
+   "entry": 0.55,
+   "last": null,
+   "mark": 0.55,
+   "stop": 6.94,
+   "expiry": "2026-11-06",
+   "opened": "2026-10-14T11:35:39-04:00",
+   "thesis": "SMR broke below its 55-day low at 6.42 on 1.9x volume with roc20 at -23%, and it is 49% below its 200-day SMA; the stop at 6.94 sits just above the breakdown level.",
+   "confidence": 3,
+   "cost": 113.0,
    "realized": null,
    "play": null,
    "width": null
@@ -256,7 +300,7 @@
    "opt_type": null,
    "qty": 0.1703,
    "entry": 586.812,
-   "last": 573.29,
+   "last": 571.665,
    "mark": null,
    "stop": 552.5,
    "expiry": null,
@@ -278,7 +322,7 @@
    "opt_type": null,
    "qty": 1.2448,
    "entry": 160.74,
-   "last": 160.66,
+   "last": 162.77,
    "mark": null,
    "stop": 152.41,
    "expiry": null,
@@ -300,7 +344,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 771.94,
+   "last": 771.61,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -322,7 +366,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 771.94,
+   "last": 771.61,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -344,7 +388,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 771.94,
+   "last": 771.61,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -358,6 +402,46 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-14T11:36:58-04:00",
+   "type": "unfilled",
+   "agent": "blackswan",
+   "symbol": "IREN",
+   "note": "debit 1.1 not filled"
+  },
+  {
+   "time": "2026-10-14T11:36:27-04:00",
+   "type": "unfilled",
+   "agent": "blackswan",
+   "symbol": "ASTS",
+   "note": "debit 1.21 not filled"
+  },
+  {
+   "time": "2026-10-14T11:35:39-04:00",
+   "type": "open",
+   "agent": "trend",
+   "symbol": "SMR261106P00006000",
+   "instrument": "put",
+   "qty": 2,
+   "price": 0.55,
+   "cost": 113.0,
+   "stop": 6.94,
+   "thesis": "SMR broke below its 55-day low at 6.42 on 1.9x volume with roc20 at -23%, and it is 49% below its 200-day SMA; the stop at 6.94 sits just above the breakdown level.",
+   "confidence": 3
+  },
+  {
+   "time": "2026-10-14T11:35:38-04:00",
+   "type": "open",
+   "agent": "trend",
+   "symbol": "CIFR261106P00010000",
+   "instrument": "put",
+   "qty": 1,
+   "price": 0.96,
+   "cost": 98.0,
+   "stop": 12.81,
+   "thesis": "CIFR broke below its 55-day low at 10.70 on 2.9x volume and is 43% below its 200-day SMA, so the downtrend is established; the stop at 12.81 sits above the breakdown level.",
+   "confidence": 3
+  },
   {
    "time": "2026-10-14T11:17:11-04:00",
    "type": "unfilled",
@@ -1030,7 +1114,7 @@
    "economy_score": 3,
    "parts": {
     "trend": 0,
-    "drawdown": 8,
+    "drawdown": 9,
     "volatility": 0,
     "breadth": 66,
     "credit": 31,
@@ -1039,9 +1123,9 @@
    },
    "facts": {
     "spy_vs_sma50_pct": 0.4,
-    "spy_vs_sma200_pct": 6.7,
-    "spy_off_high_pct": 1.2,
-    "spy_iv_pct": 13.0,
+    "spy_vs_sma200_pct": 6.6,
+    "spy_off_high_pct": 1.3,
+    "spy_iv_pct": 13.1,
     "spy_realized_vol_pct": 9.6,
     "pct_above_50d": 38.7,
     "breadth_sample": 509,
@@ -1057,7 +1141,7 @@
     "junk_bond_spread_pct": 3.11,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-14T11:16-04:00"
+   "at": "2026-10-14T11:35-04:00"
   },
   "history": [
    {

@@ -269,5 +269,51 @@
   "confidence": 3,
   "signals": {},
   "from_plan": false
+ },
+ {
+  "time": "2026-10-14T11:35:38-04:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-a3a860ab78",
+  "symbol": "CIFR261106P00010000",
+  "underlying": "CIFR",
+  "sector": "Technology",
+  "instrument": "put",
+  "qty": 1,
+  "price": 0.96,
+  "cost": 98.0,
+  "stop": 12.81,
+  "why": "CIFR broke below its 55-day low at 10.70 on 2.9x volume and is 43% below its 200-day SMA, so the downtrend is established; the stop at 12.81 sits above the breakdown level.",
+  "confidence": 3,
+  "signals": {
+   "rel_volume": 2.87,
+   "roc20_pct": -24.9,
+   "pct_vs_sma50": -37.1,
+   "pct_vs_sma200": -43.3
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-10-14T11:35:39-04:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-ea0031af4c",
+  "symbol": "SMR261106P00006000",
+  "underlying": "SMR",
+  "sector": "Technology",
+  "instrument": "put",
+  "qty": 2,
+  "price": 0.55,
+  "cost": 113.0,
+  "stop": 6.94,
+  "why": "SMR broke below its 55-day low at 6.42 on 1.9x volume with roc20 at -23%, and it is 49% below its 200-day SMA; the stop at 6.94 sits just above the breakdown level.",
+  "confidence": 3,
+  "signals": {
+   "rel_volume": 1.88,
+   "roc20_pct": -23.0,
+   "pct_vs_sma50": -32.9,
+   "pct_vs_sma200": -48.9
+  },
+  "from_plan": false
  }
 ]
