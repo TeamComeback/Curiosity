@@ -341,6 +341,9 @@ def agent_view(state, aid, cands, ctx, can_open, standings):
         "regime": ctx["regime"],
         "crash_radar": {k: (ctx.get("radar") or {}).get(k) for k in ("score", "tier", "parts", "facts", "economy")},
         "recent_closed_trades": [j for j in journal if j.get("type") == "close" and j.get("agent") == aid][-8:],
+        "blocked_today": [{"symbol": j.get("symbol"), "why": j.get("note")} for j in journal
+                          if j.get("agent") == aid and j.get("type") in ("rule_block", "unfilled", "error")
+                          and j.get("time", "").startswith(store.today())][-6:],
         "sector_focus": focus.current(agent),
         "my_results_by_sector": focus.sector_stats(aid),
         "my_notes": agent["notes"][-8:],

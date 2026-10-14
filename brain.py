@@ -29,6 +29,10 @@ round trip costs spread and slippage. Default exits (stops, targets, time exits)
 are enforced automatically; you may close earlier or tighten stops, never loosen a stop past
 the default.
 
+"blocked_today" lists your orders that didn't go through today and why. Learn from it: if a
+budget was too small for any contract, either commit enough to make the trade work or pick a
+different setup or instrument; don't resubmit the same order unchanged.
+
 "crash_radar" is a shared 0-100 market-stress score (calm under 40, warning 40-70, stress 70+).
 Every firm sees it; weigh it against your own setups. Candidates may carry "max_dollars" (your
 firm's own per-trade cap) and "suggested_instrument".

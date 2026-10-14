@@ -110,24 +110,23 @@ def pick_put_spread(broker, underlying, price, p, budget):
     target = today + timedelta(days=(p["opt_min_dte"] + p["opt_max_dte"]) // 2)
     expiry = min({r["expiry"] for r in rows}, key=lambda e: abs((e - target).days))
     rows = sorted([r for r in rows if r["expiry"] == expiry], key=lambda r: r["strike"])
-    long = min(rows, key=lambda r: abs(abs(r["delta"]) - p["opt_delta"]))
     width_want = max(price * p["spread_width_pct"], 1.0)
-    best = None
-    for mult in (1.0, 0.6, 0.35):                       # narrower if the wide one doesn't fit the budget
-        want = long["strike"] - width_want * mult
+    # closest to the target delta first; if that doesn't fit the budget, step further out of the money
+    longs = sorted([r for r in rows if 0.12 <= abs(r["delta"]) <= 0.65], key=lambda r: abs(abs(r["delta"]) - p["opt_delta"]))[:10]
+    for long in longs:
         lower = [r for r in rows if r["strike"] < long["strike"]]
         if not lower:
-            break
-        short = min(lower, key=lambda r: abs(r["strike"] - want))
-        width = round(long["strike"] - short["strike"], 2)
-        debit = round(long["mid"] - short["mid"], 2)
-        if width <= 0 or debit <= 0.05 or debit >= width * 0.9:
             continue
-        if debit * 100 <= budget:
-            best = {"long": long, "short": short, "width": width, "debit": debit, "expiry": expiry.isoformat(),
-                    "half_spread": round((long["spread"] + short["spread"]) / 2, 3)}
-            break
-    return best
+        for mult in (1.0, 0.6, 0.35):                   # narrower if the wide one doesn't fit the budget
+            short = min(lower, key=lambda r: abs(r["strike"] - (long["strike"] - width_want * mult)))
+            width = round(long["strike"] - short["strike"], 2)
+            debit = round(long["mid"] - short["mid"], 2)
+            if width <= 0 or debit <= 0.05 or debit >= width * 0.9:
+                continue
+            if debit * 100 <= budget:
+                return {"long": long, "short": short, "width": width, "debit": debit, "expiry": expiry.isoformat(),
+                        "half_spread": round((long["spread"] + short["spread"]) / 2, 3)}
+    return None
 
 
 def debit_spread_mark(broker, pos):

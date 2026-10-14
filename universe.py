@@ -105,7 +105,7 @@ def build_weekly(b):
             print(f"[universe] bars batch failed: {type(e).__name__}")
     tags = tag_sectors(bars)
     u = load()
-    u.update({"built": store.now_et().isoformat(timespec="minutes"), "core": core, "sectors": tags,
+    u.update({"built": store.now_et().isoformat(timespec="minutes"), "core": core, "sectors": tags, "pool": pool,
               "pool_size": len(pool), "ranked_size": len(ranked)})
     store.save("universe.json", u)
     counts = pd.Series(list(tags.values())).value_counts().to_dict() if tags else {}
@@ -116,7 +116,7 @@ def build_weekly(b):
 def daily_extras(b):
     """Today's most active stocks and top movers (cached for the day)."""
     u = load()
-    if u.get("daily", {}).get("date") == store.today():
+    if u.get("daily", {}).get("date") == store.today() and u["daily"].get("filtered"):
         return u["daily"]["symbols"]
     syms = []
     try:
@@ -129,8 +129,18 @@ def daily_extras(b):
         syms += [x["symbol"] for x in js.get("gainers", []) + js.get("losers", [])]
     except Exception as e:  # noqa: BLE001
         print(f"[universe] movers unavailable: {type(e).__name__}")
-    syms = [s for s in dict.fromkeys(syms) if s.isalpha() and len(s) <= 5]
-    u["daily"] = {"date": store.today(), "symbols": syms}
+    pool = set(u.get("pool") or [])
+    if not pool:                                  # older list without the pool saved: fetch it once
+        try:
+            assets = b._t("GET", "/v2/assets", params={"status": "active", "asset_class": "us_equity"})
+            pool = {a["symbol"] for a in assets if a.get("tradable") and a.get("fractionable")
+                    and a.get("exchange") in EXCHANGES and a["symbol"].isalpha() and len(a["symbol"]) <= 5}
+            u["pool"] = sorted(pool)
+        except Exception as e:  # noqa: BLE001
+            print(f"[universe] asset list unavailable: {type(e).__name__}")
+    # only real, fractionable listings: drops warrants, units and rights (e.g. ...W, ...U) that show up as movers
+    syms = [s for s in dict.fromkeys(syms) if s.isalpha() and len(s) <= 5 and (not pool or s in pool)]
+    u["daily"] = {"date": store.today(), "symbols": syms, "filtered": bool(pool)}
     store.save("universe.json", u)
     return syms
 
