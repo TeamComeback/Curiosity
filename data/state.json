@@ -2,27 +2,58 @@
  "created": "2026-10-13T15:49:33-04:00",
  "race": {
   "status": "running",
-  "goal": 5000.0,
+  "goal": 10000.0,
   "winner": null,
   "finished_at": null,
-  "final_standings": null
+  "final_standings": null,
+  "start_balance": 1000.0
  },
  "entries": {
   "date": "2026-10-14",
-  "counts": {}
+  "counts": {
+   "trend": 1,
+   "meanrev": 1
+  }
  },
  "agents": {
   "trend": {
-   "cash": 500.0,
+   "cash": 876.5,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-5f3108fb3d": {
+     "kind": "option",
+     "symbol": "SOFI261127P00014500",
+     "underlying": "SOFI",
+     "opt_type": "put",
+     "qty": 1,
+     "entry": 1.21,
+     "mark": 1.21,
+     "expiry": "2026-11-27",
+     "strike": 14.5,
+     "delta": -0.5,
+     "cost": 123.5,
+     "direction": "short",
+     "stop": 15.2,
+     "atr": 0.511,
+     "opened": "2026-10-14T11:16:18-04:00",
+     "thesis": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level.",
+     "confidence": 3,
+     "signals": {
+      "rel_volume": 4.28,
+      "roc20_pct": -10.9,
+      "pct_vs_sma50": -18.1,
+      "pct_vs_sma200": -23.6
+     },
+     "sector": "Technology"
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
    "closed": 0,
    "wins": 0,
-   "peak": 500.0,
-   "max_dd": 0.0,
+   "peak": 1000.0,
+   "max_dd": 0.0025,
    "notes": [
     {
      "date": "2026-10-14",
@@ -43,6 +74,10 @@
     {
      "date": "2026-10-14",
      "note": "The overnight plan's XLE trigger never fired and the sub-penny names have no tradeable puts, so I'm taking the one liquid breakdown. Size puts by premium, since the underlying stop distance is wide."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "The XLE plan is dead and the game plan is stale. I'm taking the most liquid breakdown with a tight underlying stop and keeping about $800 settled for new breakdowns. Size puts by premium, since the underlying stop distance drives the risk."
     }
    ],
    "last_exits": {},
@@ -108,7 +143,7 @@
    "unsettled": []
   },
   "meanrev": {
-   "cash": 400.07,
+   "cash": 699.98,
    "reserved": 0.0,
    "positions": {
     "pos-dda4f591f8": {
@@ -128,7 +163,27 @@
       "pct_vs_sma200": 15.7,
       "pct_vs_sma5": -2.6
      },
-     "last": 575.03
+     "last": 573.29
+    },
+    "pos-3514fae9b2": {
+     "kind": "stock",
+     "symbol": "STT",
+     "qty": 1.2448,
+     "entry": 160.74,
+     "cost": 200.09,
+     "direction": "long",
+     "stop": 152.41,
+     "atr": 3.298,
+     "opened": "2026-10-14T11:16:27-04:00",
+     "thesis": "STT RSI(2) washout (0.5) while still 2.6% above its 200-day; the stop is about 5.1% away against a roughly 7% snap-back target, so reward-to-risk is about 1.4:1, the best of the candidates.",
+     "confidence": 3,
+     "signals": {
+      "rsi2": 0.5,
+      "pct_vs_sma200": 2.6,
+      "pct_vs_sma5": -6.5
+     },
+     "sector": "Financials",
+     "last": 160.66
     }
    },
    "status": "active",
@@ -136,8 +191,8 @@
    "status_at": null,
    "closed": 0,
    "wins": 0,
-   "peak": 500.24,
-   "max_dd": 0.0046,
+   "peak": 1000.24,
+   "max_dd": 0.0026,
    "notes": [
     {
      "date": "2026-10-13",
@@ -166,6 +221,10 @@
     {
      "date": "2026-10-14",
      "note": "Passed on DAL, BMNR, AMAT, LRCX and SOXX because their stops sat 7-16% away against 3.5-6% targets (reward-to-risk under 1:1). TDACW is a thin penny warrant, so watch the spread and keep size small."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Live balance shows $900 available, so the earlier $400 and $0.07 notes are stale. Passed on BMNR, DAL, AMAT, SOXX and LRCX because their stops were 7-16% away against 4-6% targets; STT is the only setup that clears roughly 1:1."
     }
    ],
    "last_exits": {},
@@ -218,7 +277,7 @@
    "unsettled": []
   },
   "volsell": {
-   "cash": 500.0,
+   "cash": 1000.0,
    "reserved": 0.0,
    "positions": {},
    "status": "active",
@@ -226,7 +285,7 @@
    "status_at": null,
    "closed": 0,
    "wins": 0,
-   "peak": 500.0,
+   "peak": 1000.0,
    "max_dd": 0.0,
    "notes": [
     {
@@ -236,6 +295,10 @@
     {
      "date": "2026-10-14",
      "note": "Passing today: IWM bear call credit is 0.22, below the 0.25 trigger. SPY bull put (0.20 on $80 risk) has roughly zero expected value at 20 delta and conflicts with the avoid list. Wait for a richer credit."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Passing today: IWM bear call credit is 0.21 on a $1 width, below the 0.25 trigger. SPY bull put at 0.25 on $75 risk is the only candidate near the bar, but the game plan avoids SPY put spreads on Iran gap risk. Wait for a richer credit or a confirmed IWM setup."
     }
    ],
    "last_exits": {},
@@ -296,11 +359,11 @@
      }
     ]
    },
-   "min_trade_seen": 78.0,
+   "min_trade_seen": 75.0,
    "unsettled": []
   },
   "baseline": {
-   "cash": 4.06,
+   "cash": 5.02,
    "reserved": 0.0,
    "positions": {
     "pos-fe0738abd6": {
@@ -316,7 +379,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 771.69
+     "last": 771.94
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -332,7 +395,23 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.69
+     "last": 771.94
+    },
+    "pos-d99c404220": {
+     "kind": "stock",
+     "symbol": "SPY",
+     "qty": 0.6464,
+     "entry": 772.036,
+     "cost": 499.04,
+     "direction": "long",
+     "stop": 0,
+     "atr": 0.0,
+     "opened": "2026-10-14T11:16:33-04:00",
+     "thesis": "Benchmark: buy and hold SPY",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "last": 771.94
     }
    },
    "status": "active",
@@ -340,14 +419,14 @@
    "status_at": null,
    "closed": 0,
    "wins": 0,
-   "peak": 500.01,
-   "max_dd": 0.0037,
+   "peak": 1000.01,
+   "max_dd": 0.0019,
    "notes": [],
    "last_exits": {},
    "unsettled": []
   },
   "monkey": {
-   "cash": 500.0,
+   "cash": 1000.0,
    "reserved": 0.0,
    "positions": {},
    "status": "active",
@@ -355,7 +434,7 @@
    "status_at": null,
    "closed": 0,
    "wins": 0,
-   "peak": 500.0,
+   "peak": 1000.0,
    "max_dd": 0.0,
    "notes": [],
    "last_exits": {},
@@ -363,7 +442,7 @@
    "unsettled": []
   },
   "blackswan": {
-   "cash": 500.0,
+   "cash": 1000.0,
    "reserved": 0.0,
    "positions": {},
    "status": "active",
@@ -371,7 +450,7 @@
    "status_at": null,
    "closed": 0,
    "wins": 0,
-   "peak": 500.0,
+   "peak": 1000.0,
    "max_dd": 0.0,
    "notes": [
     {
@@ -393,6 +472,10 @@
     {
      "date": "2026-10-14",
      "note": "Calm radar (15): two breakdown spreads totaling $110 risk, no SPY insurance while SPY is above its 50-day average. Take profits in stages, since crash rallies reverse fast."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Two $50-60 budgets were too small for any put spread on these names, so I'm committing $150 to the single highest-conviction setup instead of splitting it. Skipping SPY insurance since SPY is still above its 50-day, and passing on IREN/APP/XHB to stay within risk limits."
     }
    ],
    "last_exits": {},
