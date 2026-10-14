@@ -28,7 +28,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.21,
-     "mark": 1.17,
+     "mark": 1.21,
      "expiry": "2026-11-27",
      "strike": 14.5,
      "delta": -0.5,
@@ -46,8 +46,8 @@
       "pct_vs_sma200": -23.6
      },
      "sector": "Technology",
-     "low_water": 14.175,
-     "exit_half_spread": 0.045
+     "low_water": 14.085,
+     "exit_half_spread": 0.025
     },
     "pos-a3a860ab78": {
      "kind": "option",
@@ -56,7 +56,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.96,
-     "mark": 1.0,
+     "mark": 1.06,
      "expiry": "2026-11-06",
      "strike": 10.0,
      "delta": -0.39,
@@ -75,7 +75,7 @@
      },
      "sector": "Technology",
      "low_water": 10.155,
-     "exit_half_spread": 0.035
+     "exit_half_spread": 0.025
     },
     "pos-ea0031af4c": {
      "kind": "option",
@@ -84,7 +84,7 @@
      "opt_type": "put",
      "qty": 2,
      "entry": 0.55,
-     "mark": 0.53,
+     "mark": 0.57,
      "expiry": "2026-11-06",
      "strike": 6.0,
      "delta": -0.46,
@@ -102,8 +102,8 @@
       "pct_vs_sma200": -48.9
      },
      "sector": "Technology",
-     "low_water": 5.935,
-     "exit_half_spread": 0.015
+     "low_water": 5.875,
+     "exit_half_spread": 0.03
     },
     "pos-bf6606febd": {
      "kind": "option",
@@ -112,7 +112,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.75,
-     "mark": 1.75,
+     "mark": 1.7,
      "expiry": "2026-11-20",
      "strike": 8.0,
      "delta": -0.38,
@@ -129,7 +129,9 @@
       "pct_vs_sma50": -50.9,
       "pct_vs_sma200": -68.6
      },
-     "sector": "Broad market / other"
+     "sector": "Broad market / other",
+     "low_water": 8.15,
+     "exit_half_spread": 0.125
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -138,7 +140,7 @@
      "opt_type": "put",
      "qty": 5,
      "entry": 0.14,
-     "mark": 0.14,
+     "mark": 0.15,
      "expiry": "2026-11-06",
      "strike": 1.5,
      "delta": -0.5,
@@ -155,7 +157,9 @@
       "pct_vs_sma50": -29.8,
       "pct_vs_sma200": -40.8
      },
-     "sector": "Broad market / other"
+     "sector": "Broad market / other",
+     "low_water": 1.44,
+     "exit_half_spread": 0.01
     }
    },
    "status": "active",
@@ -201,6 +205,10 @@
     {
      "date": "2026-10-14",
      "note": "The XLE game plan is stale and I'm ignoring it. I'm keeping roughly $400 settled for new breakdowns and avoiding further adds to the existing SOFI, CIFR and SMR puts, since the book is getting concentrated in correlated bearish names."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Blocked orders are a sizing signal, not a dead end: a liquid name can need a bigger premium budget. Keep the book from getting too correlated, and avoid adding to names already held."
     }
    ],
    "last_exits": {},
@@ -286,7 +294,7 @@
       "pct_vs_sma200": 15.7,
       "pct_vs_sma5": -2.6
      },
-     "last": 570.35
+     "last": 567.63
     },
     "pos-3514fae9b2": {
      "kind": "stock",
@@ -306,7 +314,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 163.65
+     "last": 162.425
     }
    },
    "status": "active",
@@ -360,6 +368,10 @@
     {
      "date": "2026-10-14",
      "note": "Pass when reward-to-risk is under about 1:1. Today every candidate had a 7-16% stop against a 4-8% snap-back target. Keep cash for a washout with a tight stop; the game plan's $0.07 cash figure is stale."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "No candidate clears roughly 1:1 reward-to-risk (stops 7-16% away vs 4-8% targets). Holding SMH and STT to their default exits and keeping ~$700 in settled cash for a washout with a tight stop."
     }
    ],
    "last_exits": {},
@@ -446,6 +458,10 @@
     {
      "date": "2026-10-14",
      "note": "Passed on IWM bear call 285/286 at 0.24 credit ($76 risk). Breakeven win rate is about 76% against roughly 80% at 20 delta, so the edge is too thin after slippage. Still waiting for the 0.25+ trigger on a $1 width."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Passed all 5. Best setup is IWM bear call 285/286 at 0.21 credit ($79 risk), below the 0.25 trigger. At about 20 delta the breakeven win rate (~79%) is close to the expected win rate (~80%), so EV is roughly zero after slippage. Re-check IWM at the open for a credit of at least 0.25 on the $1 width."
     }
    ],
    "last_exits": {},
@@ -506,7 +522,7 @@
      }
     ]
    },
-   "min_trade_seen": 76.0,
+   "min_trade_seen": 79.0,
    "unsettled": []
   },
   "baseline": {
@@ -526,7 +542,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 770.58
+     "last": 769.645
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -542,7 +558,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 770.58
+     "last": 769.645
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -558,7 +574,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 770.58
+     "last": 769.645
     }
    },
    "status": "active",
@@ -567,7 +583,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.01,
-   "max_dd": 0.0035,
+   "max_dd": 0.0047,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -614,7 +630,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.25,
+     "mark": 1.09,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -634,9 +650,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.155,
+     "exit_half_spread": 0.165,
      "peak_mark": 1.25,
-     "low_water": 42.73
+     "low_water": 42.695
     },
     "pos-a0895dfd5c": {
      "kind": "debit_spread",
@@ -660,7 +676,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.2,
+     "mark": 1.21,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
@@ -679,7 +695,10 @@
       "pct_above_low": -4.51,
       "downtrend": true
      },
-     "sector": "Technology"
+     "sector": "Technology",
+     "exit_half_spread": 0.235,
+     "peak_mark": 1.21,
+     "low_water": 31.335
     }
    },
    "status": "active",
@@ -688,7 +707,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.0,
-   "max_dd": 0.02,
+   "max_dd": 0.035,
    "notes": [
     {
      "date": "2026-10-14",
@@ -725,6 +744,10 @@
     {
      "date": "2026-10-14",
      "note": "Two breakdown spreads are the daily max, so this is the second; with ASTS that is about $275 at risk, and I'm skipping SPY insurance while SPY is above its 50-day."
+    },
+    {
+     "date": "2026-10-14",
+     "note": "Two breakdown spreads (ASTS, IREN) are already on, and the plan caps new risk. APP and XHB are valid setups, but adding them would exceed the planned risk. SPY insurance stays off while SPY is above its 50-day. Revisit APP/XHB only if an existing spread closes."
     }
    ],
    "last_exits": {},
@@ -836,16 +859,16 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-10-14",
-    "made_at": "2026-10-14T12:11-04:00",
+    "made_at": "2026-10-14T12:36-04:00",
     "watch": [
      "BAC",
-     "NVDA",
-     "AVGO",
-     "SPY",
-     "QQQ"
+     "AAPL",
+     "MU",
+     "TSLA",
+     "SPY"
     ],
     "aggression": "defensive",
-    "why": "Most of the tape is red and choppy, with only BAC above its opening range and NVDA and AVGO holding uptrends below VWAP. Defensive mode limits us to half-size VWAP bounces in the few names with clean trends, and the calm crash radar and SPY's uptrend support that.",
+    "why": "Most of the tape is red, so I'm keeping defensive sizing and limiting the watchlist to names with a 1-minute uptrend. BAC is the only clean opening-range breakout, and AAPL, MU, and TSLA are uptrending into or near VWAP for bounce setups, with SPY as the regime check.",
     "slices": 3,
     "target_pct": 0.6,
     "stop_pct": 0.3,
