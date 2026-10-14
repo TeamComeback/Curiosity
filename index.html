@@ -152,6 +152,11 @@ fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(render).c
   $("standings").innerHTML = '<div class="card empty">The race has not started. Run the "Trading agent" workflow in GitHub Actions.</div>';
 });
 
+setInterval(() => {                       // keep the page current without a manual reload
+  if (document.hidden || !DATA) return;
+  fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { if (d.updated !== DATA.updated) render(d); }).catch(() => {});
+}, 60000);
+
 function render(d){
   DATA = d;
   START = d.start_balance || 100;

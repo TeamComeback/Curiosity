@@ -92,6 +92,12 @@ Promise.all([fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()), 
   .then(([d, l]) => { D = d; L = l.slice().reverse(); draw(); })
   .catch(() => { $("sheets").innerHTML = '<div class="sheet"><div class="empty">No data yet. The book fills in after the agents\' first run.</div></div>'; });
 
+setInterval(() => {                       // keep the book current without a manual reload
+  if (document.hidden || !D) return;
+  Promise.all([fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()), fetch("data/ledger.json?ts=" + Date.now()).then(r => r.ok ? r.json() : [])])
+    .then(([d, l]) => { if (d.updated !== D.updated || l.length !== L.length){ D = d; L = l.slice().reverse(); draw(); } }).catch(() => {});
+}, 60000);
+
 function pnl(p){
   if (p.kind === "stock" && p.last != null) return (p.last - p.entry) * p.qty;
   if (p.kind === "option" && p.mark != null) return (p.mark - p.entry) * 100 * p.qty;
