@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T13:36-04:00",
+ "updated": "2026-10-14T14:06-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,9 +10,9 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 6.2,
+  "spy_vs_sma200_pct": 6.1,
   "spy_roc20_pct": 2.7,
-  "crash_radar": 16
+  "crash_radar": 21
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -36,20 +36,24 @@
    "id": "trend",
    "name": "Trend agent",
    "competing": true,
-   "equity": 995.5,
+   "equity": 1031.5,
    "cash": 408.5,
    "available": 408.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.0,
-   "progress_pct": 9.96,
+   "multiple": 1.03,
+   "progress_pct": 10.32,
    "open": 5,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 2.4,
-   "risk_adj": -0.09,
+   "risk_adj": 0.63,
    "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "Passing on CRWU: its only put needs about $280, which would add another correlated distressed short to a book already holding five. Keeping roughly $408 settled for a genuinely new, uncorrelated 55-day breakdown or breakout."
+    },
     {
      "date": "2026-10-14",
      "note": "Holding. All live breakdown candidates are names already in the book (SOFI, CIFR, SMR, PLUG, CWVX) or CRWU, which is blocked by its premium cost. The XLE trigger (66.42) hasn't fired, so that plan is dropped. Keeping about $408 settled for a new, uncorrelated breakdown."
@@ -57,10 +61,6 @@
     {
      "date": "2026-10-14",
      "note": "Passing on CRWU: its only put needs more than $280 premium, which would put about 30% of equity in one more bearish name. The book already holds puts on SOFI, CIFR, SMR, PLUG and CWVX, all correlated distressed shorts in a calm, uptrending SPY regime. Keep cash for a genuinely new, uncorrelated brea"
-    },
-    {
-     "date": "2026-10-14",
-     "note": "Blocked orders are a sizing signal, not a dead end: a liquid name can need a bigger premium budget. Keep the book from getting too correlated, and avoid adding to names already held."
     }
    ]
   },
@@ -68,20 +68,24 @@
    "id": "meanrev",
    "name": "Mean-reversion agent",
    "competing": true,
-   "equity": 999.94,
+   "equity": 999.09,
    "cash": 699.98,
    "available": 699.98,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 10.0,
+   "progress_pct": 9.99,
    "open": 2,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.3,
-   "risk_adj": -0.0,
+   "risk_adj": -0.02,
    "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "No entries: every candidate's stop is 7-16% away against a 4-8% target (reward-to-risk under 1:1). Holding SMH and STT to default exits; ~$700 settled cash stays in reserve. The game plan's $0.07 cash figure is stale."
+    },
     {
      "date": "2026-10-14",
      "note": "Every candidate today has a stop 7-16% away against a 4-8% snap-back target (reward-to-risk under 1:1), so I'm passing. Keep SMH and STT on default exits and hold ~$700 settled cash for a washout with a tight stop."
@@ -89,10 +93,6 @@
     {
      "date": "2026-10-14",
      "note": "No new entries: every candidate's stop sits 5-16% away against a 4-8% snap-back target, and STT (candidate 5) is already held. Keep settled cash for a washout with a tight stop and hold SMH and STT to their default exits."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "No candidate clears roughly 1:1 reward-to-risk (stops 7-16% away vs 4-8% targets). Holding SMH and STT to their default exits and keeping ~$700 in settled cash for a washout with a tight stop."
     }
    ]
   },
@@ -116,15 +116,15 @@
    "notes": [
     {
      "date": "2026-10-14",
+     "note": "Passed all 5. Best credit-to-risk is IWM 284/285 bear call at 0.22 on $78 risk (~78% breakeven vs ~80% expected win), below our 0.25 trigger. QQQ, XLE, GDX, and TLT are all under 22% credit-to-risk, so EV is roughly zero after slippage. Recheck IWM at the open for a 0.25+ credit on a $1 width."
+    },
+    {
+     "date": "2026-10-14",
      "note": "Passed again: best candidate IWM 284/285 bear call at 0.20 credit ($80 risk) is below the 0.25 trigger. At ~20 delta the breakeven win rate (~80%) roughly equals the expected win rate, so EV is negative after slippage. Recheck IWM at the open for 0.25+ on the $1 width."
     },
     {
      "date": "2026-10-14",
      "note": "Passed: IWM 284/285 bear call credit is 0.24 on $76 risk, below the 0.25 trigger. Breakeven win rate (~76%) is too close to the ~80% expected at 20 delta to clear slippage. The game plan's '$100 account' references are stale; we now have $1,000."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "Passed all 5. Best setup is IWM bear call 285/286 at 0.21 credit ($79 risk), below the 0.25 trigger. At about 20 delta the breakeven win rate (~79%) is close to the expected win rate (~80%), so EV is roughly zero after slippage. Re-check IWM at the open for a credit of at least 0.25 on the $1 width."
     }
    ]
   },
@@ -132,19 +132,19 @@
    "id": "baseline",
    "name": "SPY benchmark",
    "competing": false,
-   "equity": 994.12,
+   "equity": 992.8,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.99,
-   "progress_pct": 9.94,
+   "progress_pct": 9.93,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.7,
-   "risk_adj": -0.12,
+   "risk_adj": -0.14,
    "notes": []
   },
   {
@@ -170,20 +170,24 @@
    "id": "blackswan",
    "name": "Black Swan & Co.",
    "competing": true,
-   "equity": 955.0,
+   "equity": 959.0,
    "cash": 735.0,
    "available": 735.0,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.95,
-   "progress_pct": 9.55,
+   "multiple": 0.96,
+   "progress_pct": 9.59,
    "open": 2,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 4.5,
-   "risk_adj": -0.9,
+   "risk_adj": -0.82,
    "notes": [
+    {
+     "date": "2026-10-14",
+     "note": "Radar is calm (21), SPY is above its 50-day, and bearish exposure is already about $245 across ASTS and IREN. I'm holding both spreads and passing on APP, XHB, and SPY insurance. Revisit APP only if the radar moves above 40 or a current spread closes."
+    },
     {
      "date": "2026-10-14",
      "note": "Radar is calm (16), SPY is above its 50-day, and bearish exposure is already about $245 across ASTS and IREN. Holding both spreads and passing on APP/XHB and SPY insurance. Revisit APP only if the radar moves above 40 or a current spread closes."
@@ -191,10 +195,6 @@
     {
      "date": "2026-10-14",
      "note": "Radar is calm (16) and SPY is above its 50-day, so I'm holding the two breakdown spreads (ASTS, IREN) and passing on APP/XHB to keep bearish exposure capped at about $245. Revisit APP only if one of the current spreads closes or the radar moves above 40."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "Two breakdown spreads (ASTS, IREN) are already on, and the plan caps new risk. APP and XHB are valid setups, but adding them would exceed the planned risk. SPY insurance stays off while SPY is above its 50-day. Revisit APP/XHB only if an existing spread closes."
     }
    ]
   },
@@ -233,12 +233,12 @@
   {
    "date": "2026-10-14",
    "agents": {
-    "trend": 995.5,
-    "meanrev": 999.94,
+    "trend": 1031.5,
+    "meanrev": 999.09,
     "volsell": 1000.0,
-    "baseline": 994.12,
+    "baseline": 992.8,
     "monkey": 1000.0,
-    "blackswan": 955.0,
+    "blackswan": 959.0,
     "scalper": 999.67
    }
   }
@@ -255,7 +255,7 @@
    "qty": 1,
    "entry": 1.21,
    "last": null,
-   "mark": 1.26,
+   "mark": 1.31,
    "stop": 15.2,
    "expiry": "2026-11-27",
    "opened": "2026-10-14T11:16:18-04:00",
@@ -277,7 +277,7 @@
    "qty": 1,
    "entry": 0.96,
    "last": null,
-   "mark": 1.12,
+   "mark": 1.2,
    "stop": 12.81,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:38-04:00",
@@ -299,7 +299,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.57,
+   "mark": 0.61,
    "stop": 6.94,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -321,7 +321,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 1.7,
+   "mark": 1.75,
    "stop": 10.76,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -343,7 +343,7 @@
    "qty": 5,
    "entry": 0.14,
    "last": null,
-   "mark": 0.13,
+   "mark": 0.15,
    "stop": 1.63,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T12:10:38-04:00",
@@ -364,7 +364,7 @@
    "opt_type": null,
    "qty": 0.1703,
    "entry": 586.812,
-   "last": 567.445,
+   "last": 565.72,
    "mark": null,
    "stop": 552.5,
    "expiry": null,
@@ -386,7 +386,7 @@
    "opt_type": null,
    "qty": 1.2448,
    "entry": 160.74,
-   "last": 163.34,
+   "last": 162.89,
    "mark": null,
    "stop": 152.41,
    "expiry": null,
@@ -408,7 +408,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 768.71,
+   "last": 767.685,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -430,7 +430,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 768.71,
+   "last": 767.685,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -452,7 +452,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 768.71,
+   "last": 767.685,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -475,7 +475,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 1.05,
+   "mark": 1.06,
    "stop": 51.35,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -497,7 +497,7 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.15,
+   "mark": 1.18,
    "stop": 36.1,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
@@ -510,6 +510,13 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-14T14:06:09-04:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "SPY, QQQ, MU, SOXS",
+   "note": "stand_down: Most liquid names are in 1-minute downtrends below VWAP, and the only current setup (HYG) has a 0.16% range, too small for a 0.6% target. I'm standing down and watching SPY/QQQ/MU for a reclaim of VWAP with volume before re-engaging."
+  },
   {
    "time": "2026-10-14T13:36:00-04:00",
    "type": "playbook",
@@ -1359,26 +1366,26 @@
  ],
  "radar": {
   "now": {
-   "score": 16,
+   "score": 21,
    "tier": "calm",
-   "market_score": 20,
+   "market_score": 27,
    "economy_score": 3,
    "parts": {
-    "trend": 0,
-    "drawdown": 11,
+    "trend": 35,
+    "drawdown": 12,
     "volatility": 0,
-    "breadth": 68,
+    "breadth": 70,
     "credit": 31,
     "safety": 0,
     "economy": 3
    },
    "facts": {
-    "spy_vs_sma50_pct": 0.0,
-    "spy_vs_sma200_pct": 6.2,
-    "spy_off_high_pct": 1.6,
-    "spy_iv_pct": 13.5,
+    "spy_vs_sma50_pct": -0.1,
+    "spy_vs_sma200_pct": 6.1,
+    "spy_off_high_pct": 1.8,
+    "spy_iv_pct": 13.8,
     "spy_realized_vol_pct": 9.6,
-    "pct_above_50d": 37.7,
+    "pct_above_50d": 37.1,
     "breadth_sample": 509,
     "junk_vs_treasuries_20d_pct": -0.25,
     "havens_vs_spy_20d_pct": -5.8
@@ -1392,7 +1399,7 @@
     "junk_bond_spread_pct": 3.11,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-14T13:35-04:00"
+   "at": "2026-10-14T14:05-04:00"
   },
   "history": [
    {
@@ -1402,7 +1409,7 @@
    },
    {
     "date": "2026-10-14",
-    "score": 16,
+    "score": 21,
     "tier": "calm"
    }
   ],
@@ -1419,16 +1426,15 @@
  "playbooks": {
   "scalper": {
    "date": "2026-10-14",
-   "made_at": "2026-10-14T13:36-04:00",
+   "made_at": "2026-10-14T14:06-04:00",
    "watch": [
     "SPY",
     "QQQ",
-    "NVDA",
     "MU",
-    "AAPL"
+    "SOXS"
    ],
    "aggression": "stand_down",
-   "why": "Most of the liquid names have flipped to 1-minute downtrends and sit below VWAP, so the VWAP-bounce premise no longer holds, and the only up-trending names (HYG, SOXS, SHOP) are either flat or below VWAP. The TSLA scalp already lost on this same setup, so I'm standing down until a name is back in an",
+   "why": "Most liquid names are in 1-minute downtrends below VWAP, and the only current setup (HYG) has a 0.16% range, too small for a 0.6% target. I'm standing down and watching SPY/QQQ/MU for a reclaim of VWAP with volume before re-engaging.",
    "slices": 2,
    "target_pct": 0.6,
    "stop_pct": 0.3,
