@@ -53,6 +53,40 @@ def market_regime(bars, prices):
             "spy_roc20_pct": round(float(h["roc20"]) * 100, 1)}
 
 
+# ---------------- balance changes ----------------
+def sync_race_settings(state):
+    """Apply a raised starting balance / goal from config to a race already running.
+    Every firm (and the benchmark and control) gets the same extra cash; past equity points and peaks
+    shift by that amount so charts stay continuous and returns are measured from the new start."""
+    race = state["race"]
+    old = race.get("start_balance", 500.0)
+    new = config.RACE["start_balance"]
+    race["goal"] = config.RACE["goal"]
+    if new <= old + 1e-9:
+        race["start_balance"] = max(old, new)
+        return
+    amount = round(new - old, 2)
+    for a in state["agents"].values():
+        if a.get("joined") and a["closed"] == 0 and not a["positions"] and abs(a["cash"] - old) < 0.01:
+            a["cash"], a["peak"] = new, new                 # untouched firm: simply starts at the new balance
+            continue
+        old_peak = a.get("peak") or old
+        dd_dollars = a.get("max_dd", 0) * old_peak
+        a["cash"] = round(a["cash"] + amount, 2)
+        a["peak"] = round(old_peak + amount, 2)
+        a["max_dd"] = round(dd_dollars / a["peak"], 4) if a["peak"] else 0
+    curve = store.load("equity.json", [])
+    for row in curve:
+        for aid in list(row.get("agents", {})):
+            row["agents"][aid] = round(row["agents"][aid] + amount, 2)
+    store.save("equity.json", curve)
+    race["start_balance"] = new
+    note = (f"Every firm's starting balance raised to ${new:,.0f} (+${amount:,.0f} cash each; open positions unchanged). "
+            f"Goal is now ${config.RACE['goal']:,.0f}.")
+    store.journal({"type": "topup", "note": note})
+    store.ledger({"type": "topup", "note": note})
+
+
 # ---------------- valuation ----------------
 def position_value(pos, prices):
     """Signed market value of a position (spreads are a liability)."""
@@ -447,6 +481,8 @@ def main(force=False, broker=None):
         return
     state = store.load_state() or store.init_state()
     store.add_missing_agents(state)
+    if state["race"]["status"] == "running":
+        sync_race_settings(state)
     if state["race"]["status"] != "running":
         print("Race finished. Delete data/state.json to start a new race.")
         return

@@ -46,7 +46,7 @@ def init_state():
     bal = config.RACE["start_balance"]
     return {
         "created": now_et().isoformat(timespec="seconds"),
-        "race": {"status": "running", "goal": config.RACE["goal"], "winner": None,
+        "race": {"status": "running", "goal": config.RACE["goal"], "start_balance": bal, "winner": None,
                  "finished_at": None, "final_standings": None},
         "entries": {"date": today(), "counts": {}},
         "agents": {aid: {"cash": bal, "reserved": 0.0, "positions": {}, "status": "active",

@@ -118,7 +118,7 @@ function sheet(id, start){
   const closed = L.filter(e => e.type === "trade_closed" && e.agent === id && !e.partial);
   const realized = closed.reduce((s, e) => s + (e.pnl || 0), 0) + pos.reduce((s, p) => s + (p.realized || 0), 0);
   const rd = (D.radar || {}).now;
-  const role = id === "blackswan" ? `Racing to $${(D.race.goal || 5000).toLocaleString()} by betting on falling prices${rd && rd.score != null ? ` · Crash Radar ${rd.score}/100 (${rd.tier})` : ""}` : id === "monkey" ? "Control group: random picks, same rules" : id === "baseline" ? "Benchmark: SPY bought and held" : `Racing to $${(D.race.goal || 5000).toLocaleString()}`;
+  const role = id === "blackswan" ? `Racing to $${(D.race.goal || 10000).toLocaleString()} by betting on falling prices${rd && rd.score != null ? ` · Crash Radar ${rd.score}/100 (${rd.tier})` : ""}` : id === "monkey" ? "Control group: random picks, same rules" : id === "baseline" ? "Benchmark: SPY bought and held" : `Racing to $${(D.race.goal || 10000).toLocaleString()}`;
   return `<section class="sheet" aria-label="${esc(NAMES[id])}">
     <header><div><h2><i style="background:var(--${id})"></i>${esc(NAMES[id])}</h2><div class="muted" style="font-size:13px">${esc(role)} · ${esc(a.status)}</div></div>
       <div class="val">${money(a.equity)}<small class="${ret >= 0 ? "up" : "down"}">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}% since start</small></div></header>

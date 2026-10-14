@@ -31,8 +31,8 @@ UNIVERSE = [
 
 # ---- The race ----
 RACE = {
-    "start_balance": 500.0,
-    "goal": 5000.0,
+    "start_balance": 1000.0,
+    "goal": 10000.0,
     "eliminate_below": 10.0,    # equity under this = eliminated
 }
 

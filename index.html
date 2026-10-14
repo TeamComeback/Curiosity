@@ -95,7 +95,7 @@ ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 <body>
 <header><h1>Agent Race</h1><span style="display:flex;gap:10px;align-items:baseline"><a href="arena.html" style="font-size:12px;color:var(--text2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;text-decoration:none">The Street</a><a href="portfolio.html" style="font-size:12px;color:var(--text2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;text-decoration:none">Portfolio</a><span class="sub" id="updated">Loading…</span></span></header>
 <div class="card banner" id="health" style="display:none;border-color:var(--bad)"></div>
-<div class="card banner" id="banner"><div class="t">Race to $5,000</div></div>
+<div class="card banner" id="banner"><div class="t">Race to $10,000</div></div>
 <div class="pills" id="pills"></div>
 
 <h2>Crash Radar</h2>
@@ -135,7 +135,7 @@ const money = n => n==null ? "–" : "$" + Number(n).toLocaleString(undefined,{m
 const money0 = n => "$" + Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
 const signed$ = n => (n<0?"-":"+") + "$" + Math.abs(Number(n)).toFixed(2);
 const cls = n => n>0 ? "pos" : n<0 ? "neg" : "";
-let START = 100, GOAL = 5000;
+let START = 1000, GOAL = 10000;
 const logPct = eq => Math.max(0, Math.min(1, Math.log(Math.max(eq,1)/START) / Math.log(GOAL/START))) * 100;
 
 fetch("data/health.json?ts=" + Date.now()).then(r => r.json()).then(h => {
@@ -155,7 +155,7 @@ fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(render).c
 function render(d){
   DATA = d;
   START = d.start_balance || 100;
-  GOAL = d.race.goal || 5000;
+  GOAL = d.race.goal || 10000;
   $("updated").textContent = "Updated " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
   const names = Object.fromEntries(d.agents.map(a => [a.id, a.name]));
 
@@ -282,7 +282,7 @@ function chart(d, names){
   const x = i => L + i*(W-L-R)/(rows.length-1);
   const y = v => T + (ly(hi)-ly(v))*(H-T-B)/(ly(hi)-ly(lo));
   let g = "";
-  [10,25,50,100,250,500,1000,2500,5000].filter(v => v>=lo && v<=hi).forEach(v => {
+  [10,25,50,100,250,500,1000,2500,5000,10000].filter(v => v>=lo && v<=hi).forEach(v => {
     g += `<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="${v===START?"var(--muted)":"var(--grid)"}" stroke-width="1"/>`;
     g += `<text x="${L-6}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--text2)">${v>=1000?"$"+v/1000+"k":"$"+v}</text>`;
   });

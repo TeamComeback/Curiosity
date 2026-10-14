@@ -62,7 +62,7 @@ canvas{display:block;width:100%;touch-action:pan-y}
 <div class="wrap">
   <div class="bar"><h1>The Street</h1><span style="display:flex;gap:8px"><a href="portfolio.html">Portfolio</a><a href="index.html">Dashboard</a></span></div>
   <div class="stage"><div class="pop" id="pop" role="dialog" aria-live="polite"></div>
-  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of four trading firms racing up the road to the $5,000 headquarters. Tap a firm or a person for details."></canvas></div>
+  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of four trading firms racing up the road to the $10,000 headquarters. Tap a firm or a person for details."></canvas></div>
   <div class="block" id="block"></div>
   <div class="staff" id="staff"></div>
 </div>
@@ -122,7 +122,7 @@ function phaseNow(){
   return "planning";                                               // weeknights: the game-plan crew stays
 }
 let phase = null;
-let GOAL = 5000, START = 100, data = null, theme = {}, firmsState = {}, workers = [], ticker = [], hit = [];
+let GOAL = 10000, START = 1000, data = null, theme = {}, firmsState = {}, workers = [], ticker = [], hit = [];
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money = n => "$" + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
@@ -483,7 +483,7 @@ function posPnl(p){
   return 0;
 }
 function load(d){
-  data = d; GOAL = d.race && d.race.goal || 5000; START = d.start_balance || 100; phase = phaseNow();
+  data = d; GOAL = d.race && d.race.goal || 10000; START = d.start_balance || 100; phase = phaseNow();
   const today = (d.updated || "").slice(0, 10), curve = d.equity_curve || [];
   firmsState = {};
   d.agents.forEach(a => {
