@@ -12,12 +12,14 @@
   "date": "2026-10-15",
   "counts": {
    "monkey": 1,
-   "scalper": 1
+   "scalper": 1,
+   "trend": 1,
+   "blackswan": 1
   }
  },
  "agents": {
   "trend": {
-   "cash": 408.5,
+   "cash": 50.58,
    "reserved": 0.0,
    "positions": {
     "pos-5f3108fb3d": {
@@ -27,7 +29,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.21,
-     "mark": 1.06,
+     "mark": 0.98,
      "expiry": "2026-11-27",
      "strike": 14.5,
      "delta": -0.5,
@@ -46,7 +48,7 @@
      },
      "sector": "Technology",
      "low_water": 13.975,
-     "exit_half_spread": 0.025
+     "exit_half_spread": 0.02
     },
     "pos-a3a860ab78": {
      "kind": "option",
@@ -55,7 +57,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.96,
-     "mark": 1.48,
+     "mark": 1.35,
      "expiry": "2026-11-06",
      "strike": 10.0,
      "delta": -0.39,
@@ -74,7 +76,7 @@
      },
      "sector": "Technology",
      "low_water": 9.405,
-     "exit_half_spread": 0.045
+     "exit_half_spread": 0.035
     },
     "pos-ea0031af4c": {
      "kind": "option",
@@ -83,7 +85,7 @@
      "opt_type": "put",
      "qty": 2,
      "entry": 0.55,
-     "mark": 0.53,
+     "mark": 0.55,
      "expiry": "2026-11-06",
      "strike": 6.0,
      "delta": -0.46,
@@ -102,7 +104,7 @@
      },
      "sector": "Technology",
      "low_water": 5.74,
-     "exit_half_spread": 0.025
+     "exit_half_spread": 0.01
     },
     "pos-bf6606febd": {
      "kind": "option",
@@ -111,7 +113,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.75,
-     "mark": 1.95,
+     "mark": 1.83,
      "expiry": "2026-11-20",
      "strike": 8.0,
      "delta": -0.38,
@@ -130,7 +132,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 7.83,
-     "exit_half_spread": 0.23
+     "exit_half_spread": 0.255
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -139,7 +141,7 @@
      "opt_type": "put",
      "qty": 5,
      "entry": 0.14,
-     "mark": 0.14,
+     "mark": 0.15,
      "expiry": "2026-11-06",
      "strike": 1.5,
      "delta": -0.5,
@@ -158,7 +160,28 @@
      },
      "sector": "Broad market / other",
      "low_water": 1.425,
-     "exit_half_spread": 0.045
+     "exit_half_spread": 0.025
+    },
+    "pos-88810b3067": {
+     "kind": "stock",
+     "symbol": "ETSY",
+     "qty": 4.0,
+     "entry": 89.48,
+     "cost": 357.92,
+     "direction": "long",
+     "stop": 83.87,
+     "atr": 2.744,
+     "opened": "2026-10-15T13:06:08-04:00",
+     "thesis": "ETSY broke above its 55-day high at 87.35 on 2.4x relative volume with a 16% gap above its 50-day SMA, a fresh uncorrelated breakout; 4 shares fit the cash, and the 83.87 stop risks about $22.",
+     "confidence": 3,
+     "signals": {
+      "rel_volume": 2.38,
+      "roc20_pct": 12.7,
+      "pct_vs_sma50": 16.0,
+      "pct_vs_sma200": 34.3
+     },
+     "sector": "Consumer Staples",
+     "last": 89.36
     }
    },
    "status": "active",
@@ -167,7 +190,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1033.5,
-   "max_dd": 0.0235,
+   "max_dd": 0.0237,
    "notes": [
     {
      "date": "2026-10-14",
@@ -232,6 +255,10 @@
     {
      "date": "2026-10-14",
      "note": "Passing on CRWU: its only put needs more than $280 premium, which would concentrate about 30% of equity in another correlated distressed short. Keep settled cash for an uncorrelated 55-day breakout, and don't add to names already held."
+    },
+    {
+     "date": "2026-10-15",
+     "note": "Live candidates no longer include AAL, RKT or KKR, so the overnight watchlist is dropped. MA's call premium (~$1,700+) and MRNA's share price exceed my cash, and FMC and KORU would add to the bearish cluster. Only ETSY fits."
     }
    ],
    "last_exits": {},
@@ -361,7 +388,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 167.44
+     "last": 166.735
     }
    },
    "status": "active",
@@ -447,6 +474,10 @@
     {
      "date": "2026-10-15",
      "note": "No entries: every washout candidate's stop is 6-17% away against a 3-12% snap-back target (reward-to-risk under 1:1). Hold STT to its default exits and keep settled cash for a tighter setup."
+    },
+    {
+     "date": "2026-10-15",
+     "note": "Passed again: the best washout (SOXX, RSI(2) 0.1) has about 0.7:1 reward-to-risk (8.1% stop vs 5.8% target), under my 1:1 floor. Holding STT on its default exits and keeping settled cash."
     }
    ],
    "last_exits": {
@@ -565,6 +596,10 @@
     {
      "date": "2026-10-15",
      "note": "Passed all 3. IWM 288/289 bear call credit is 0.19 on $81 risk (19% of width), below the 0.25 trigger. XLE (0.14 on $86) and TLT (0.18 on $82) are also too thin after slippage. Stay flat and recheck IWM for 0.25+ on the $1 width."
+    },
+    {
+     "date": "2026-10-15",
+     "note": "Passed: best candidate IWM 288/289 bear call is 0.22 on $78 risk (22% of width), below my 0.25 trigger. SPY, XLE, and TLT are 10-15% of width. Stay flat and recheck IWM for 0.25+ on the $1 width."
     }
    ],
    "last_exits": {},
@@ -610,7 +645,7 @@
      }
     ]
    },
-   "min_trade_seen": 81.0,
+   "min_trade_seen": 78.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -637,7 +672,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 770.005
+     "last": 769.56
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -653,7 +688,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 770.005
+     "last": 769.56
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -669,7 +704,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 770.005
+     "last": 769.56
     }
    },
    "status": "active",
@@ -702,7 +737,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 434.52
+     "last": 435.86
     }
    },
    "status": "active",
@@ -710,7 +745,7 @@
    "status_at": null,
    "closed": 0,
    "wins": 0,
-   "peak": 1000.37,
+   "peak": 1000.67,
    "max_dd": 0.001,
    "notes": [],
    "last_exits": {},
@@ -718,7 +753,7 @@
    "unsettled": []
   },
   "blackswan": {
-   "cash": 735.0,
+   "cash": 643.5,
    "reserved": 0.0,
    "positions": {
     "pos-25be894208": {
@@ -743,7 +778,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.08,
+     "mark": 0.96,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -763,7 +798,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.205,
+     "exit_half_spread": 0.345,
      "peak_mark": 1.25,
      "low_water": 42.245
     },
@@ -789,7 +824,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.24,
+     "mark": 1.28,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
@@ -809,9 +844,52 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.31,
-     "peak_mark": 1.24,
+     "exit_half_spread": 0.155,
+     "peak_mark": 1.28,
      "low_water": 28.235
+    },
+    "pos-ebf1f3ff74": {
+     "kind": "debit_spread",
+     "symbol": "APLD",
+     "underlying": "APLD",
+     "qty": 1,
+     "legs": [
+      {
+       "symbol": "APLD270115P00017000",
+       "ratio_qty": "1",
+       "side": "buy",
+       "position_intent": "buy_to_open"
+      },
+      {
+       "symbol": "APLD270115P00015000",
+       "ratio_qty": "1",
+       "side": "sell",
+       "position_intent": "sell_to_open"
+      }
+     ],
+     "structure": "bear put spread",
+     "expiry": "2027-01-15",
+     "entry": 0.86,
+     "mark": 0.86,
+     "width": 2.0,
+     "long_strike": 17.0,
+     "short_strike": 15.0,
+     "cost": 91.5,
+     "play": "weak_stock",
+     "direction": "short",
+     "stop": 22.38,
+     "atr": 1.585,
+     "opened": "2026-10-15T13:07:01-04:00",
+     "thesis": "APLD closed through its 20.02 breakdown level at 19.21, down 16.7% over 20 days and 40% below its 200-day, so a smaller $90 bear put spread keeps Technology exposure sized down while the radar is calm.",
+     "confidence": 2,
+     "signals": {
+      "roc20_pct": -16.7,
+      "pct_vs_sma50": -27.7,
+      "pct_vs_sma200": -40.0,
+      "pct_above_low": -4.02,
+      "downtrend": true
+     },
+     "sector": "Technology"
     }
    },
    "status": "active",
@@ -889,6 +967,10 @@
     {
      "date": "2026-10-15",
      "note": "Stale triggers should be checked against live levels, not the plan's old numbers. Total open risk is about $405 (~42% of equity) after these two, so skip IREN (already held), XLI and SPY insurance, and cut or trim if the radar moves toward 40."
+    },
+    {
+     "date": "2026-10-15",
+     "note": "Blocked orders failed on debit price, not thesis, so I resized to a budget that fits one contract instead of resubmitting unchanged. Total bearish exposure is now about $450 across correlated Technology names, so I'm skipping IREN (already held), SPY insurance (SPY above its 50-day) and XLI, and wil"
     }
    ],
    "last_exits": {},
@@ -1018,7 +1100,7 @@
      "target_pct": 0.5,
      "stop_pct": 0.25,
      "max_hold_min": 30,
-     "last": 273.125,
+     "last": 273.165,
      "peak_gain": 0.013541308309972244
     }
    },
@@ -1028,7 +1110,7 @@
    "closed": 1,
    "wins": 0,
    "peak": 1000.02,
-   "max_dd": 0.0003,
+   "max_dd": 0.0004,
    "notes": [],
    "last_exits": {
     "TSLA": "2026-10-14"
@@ -1037,16 +1119,16 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-10-15",
-    "made_at": "2026-10-15T12:44-04:00",
+    "made_at": "2026-10-15T13:07-04:00",
     "watch": [
-     "IWM",
      "SPY",
      "QQQ",
-     "MSFT",
-     "NVDA"
+     "NVDA",
+     "IWM",
+     "MSFT"
     ],
     "aggression": "defensive",
-    "why": "SPY trend is up and IWM has a live VWAP bounce, but midday volume is thinning and most names sit below their opening ranges, so I'm limiting trades to half size on liquid names with quick targets. Shorter holds and tighter stops suit a midday tape that can chop.",
+    "why": "SPY is trending up and the regime is calm, but midday volume is thin, so I'm keeping half-size VWAP bounces on the most liquid names with quick targets and tight stops. MSFT is on watch for its opening-range breakout, and the open IWM scalp keeps one slice in use.",
     "slices": 3,
     "target_pct": 0.5,
     "stop_pct": 0.25,
