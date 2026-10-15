@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T13:07-04:00",
+ "updated": "2026-10-15T13:17-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -202,16 +202,16 @@
    "id": "scalper",
    "name": "Rapid Fire Trading",
    "competing": true,
-   "equity": 999.63,
-   "cash": 833.08,
+   "equity": 999.66,
+   "cash": 999.66,
    "available": 833.08,
-   "settling": 0,
+   "settling": 166.58,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
    "progress_pct": 10.0,
-   "open": 1,
-   "closed": 1,
+   "open": 0,
+   "closed": 2,
    "win_rate": 0.0,
    "max_dd_pct": 0.0,
    "risk_adj": -0.01,
@@ -251,7 +251,7 @@
     "baseline": 995.21,
     "monkey": 1000.67,
     "blackswan": 953.5,
-    "scalper": 999.63
+    "scalper": 999.66
    }
   }
  ],
@@ -563,31 +563,23 @@
    "realized": null,
    "play": "weak_stock",
    "width": 2.0
-  },
-  {
-   "agent": "scalper",
-   "position_id": "pos-91422db118",
-   "kind": "stock",
-   "symbol": "IWM",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 0.6097,
-   "entry": 273.238,
-   "last": 273.165,
-   "mark": null,
-   "stop": 272.57,
-   "expiry": null,
-   "opened": "2026-10-15T12:46:53-04:00",
-   "thesis": "VWAP pullback bounce on IWM: 0.44x volume, +0.11% vs VWAP; target +0.5%, stop -0.25%",
-   "confidence": 3,
-   "cost": 166.59,
-   "realized": null,
-   "play": "scalp",
-   "width": null
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-15T13:17:15-04:00",
+   "type": "close",
+   "agent": "scalper",
+   "symbol": "IWM",
+   "qty": 0.6097,
+   "entry": 273.238,
+   "exit": 273.212,
+   "pnl": -0.01,
+   "note": "time limit, 30 min (-0.03%)",
+   "opened": "2026-10-15T12:46:53-04:00",
+   "confidence": 3,
+   "thesis": "VWAP pullback bounce on IWM: 0.44x volume, +0.11% vs VWAP; target +0.5%, stop -0.25%"
+  },
   {
    "time": "2026-10-15T13:07:01-04:00",
    "type": "open",
@@ -1094,13 +1086,6 @@
    "agent": "trend",
    "symbol": "CRWG",
    "note": "no put affordable within $75.00"
-  },
-  {
-   "time": "2026-10-14T10:02:20-04:00",
-   "type": "error",
-   "agent": "blackswan",
-   "symbol": "APP",
-   "note": "GET https://data.alpaca.markets/v1beta1/options/snapshots/APP -> 400: {\"message\":\"rpc error: code = Unavailable desc = name resolver error: lookup marketcache-indicative.marketdata on 10.62.16.10:53: "
   }
  ],
  "reviews": [],
@@ -1739,6 +1724,13 @@
   "monkey": {},
   "blackswan": {},
   "scalper": {
+   "Technology": {
+    "trades": 1,
+    "wins": 0,
+    "pnl": -0.01,
+    "win_rate_pct": 0,
+    "avg_pnl": -0.01
+   },
    "Consumer Discretionary": {
     "trades": 1,
     "wins": 0,
