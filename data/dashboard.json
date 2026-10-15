@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T15:36-04:00",
+ "updated": "2026-10-15T12:44-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -11,8 +11,8 @@
  "regime": {
   "spy_trend": "up",
   "spy_vs_sma200_pct": 6.3,
-  "spy_roc20_pct": 2.7,
-  "crash_radar": 15
+  "spy_roc20_pct": 2.1,
+  "crash_radar": 17
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -36,19 +36,19 @@
    "id": "trend",
    "name": "Trend agent",
    "competing": true,
-   "equity": 1020.5,
+   "equity": 1033.5,
    "cash": 408.5,
    "available": 408.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.02,
-   "progress_pct": 10.21,
+   "multiple": 1.03,
+   "progress_pct": 10.33,
    "open": 5,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 2.4,
-   "risk_adj": 0.41,
+   "risk_adj": 0.67,
    "notes": [
     {
      "date": "2026-10-14",
@@ -68,20 +68,24 @@
    "id": "meanrev",
    "name": "Mean-reversion agent",
    "competing": true,
-   "equity": 1002.05,
-   "cash": 699.98,
+   "equity": 1001.59,
+   "cash": 793.81,
    "available": 699.98,
-   "settling": 0,
+   "settling": 93.83,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
    "progress_pct": 10.02,
-   "open": 2,
-   "closed": 0,
-   "win_rate": null,
+   "open": 1,
+   "closed": 1,
+   "win_rate": 0.0,
    "max_dd_pct": 0.3,
-   "risk_adj": 0.04,
+   "risk_adj": 0.03,
    "notes": [
+    {
+     "date": "2026-10-15",
+     "note": "No entries: every washout candidate's stop is 6-17% away against a 3-12% snap-back target (reward-to-risk under 1:1). Hold STT to its default exits and keep settled cash for a tighter setup."
+    },
     {
      "date": "2026-10-14",
      "note": "Pass when reward-to-risk is under about 1:1. Today every candidate's stop was 7-16% away against a 4-8% target. Keep SMH and STT on default exits and hold settled cash for a washout with a tight stop."
@@ -89,10 +93,6 @@
     {
      "date": "2026-10-14",
      "note": "Pass again: every candidate's stop is 5-16% away against a 4-8% snap-back target (under 1:1). Hold SMH and STT to default exits and keep settled cash for a tighter washout."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "No entries today: every candidate's default stop is 5-16% away against a 4-8% snap-back target, so reward-to-risk is under 1:1. Hold SMH and STT to their default exits and keep the ~$700 settled cash for a washout with a tight stop. The game plan's $0.07 cash figure is stale."
     }
    ]
   },
@@ -115,16 +115,16 @@
    "risk_adj": 0.0,
    "notes": [
     {
+     "date": "2026-10-15",
+     "note": "Passed all 3. IWM 288/289 bear call credit is 0.19 on $81 risk (19% of width), below the 0.25 trigger. XLE (0.14 on $86) and TLT (0.18 on $82) are also too thin after slippage. Stay flat and recheck IWM for 0.25+ on the $1 width."
+    },
+    {
      "date": "2026-10-14",
      "note": "Passed: best candidate IWM 284/285 bear call is 0.23 credit on $77 risk (~77% breakeven vs ~81% expected at 19 delta), still below the 0.25 trigger. Recheck IWM at the open for 0.25+ on the $1 width."
     },
     {
      "date": "2026-10-14",
      "note": "Pass again: best candidate IWM 284/285 bear call is 0.21 credit on $79 risk (~27% credit/risk, ~79% breakeven vs ~80% expected at 20 delta), below the 0.25 trigger. Other candidates are 18-24% credit/risk, so no edge after slippage. Recheck IWM at the open for 0.25+ on the $1 width."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "Passed all 5. Best credit-to-risk is IWM 284/285 bear call at 0.22 on $78 risk (~78% breakeven vs ~80% expected win), below our 0.25 trigger. QQQ, XLE, GDX, and TLT are all under 22% credit-to-risk, so EV is roughly zero after slippage. Recheck IWM at the open for a 0.25+ credit on a $1 width."
     }
    ]
   },
@@ -132,58 +132,62 @@
    "id": "baseline",
    "name": "SPY benchmark",
    "competing": false,
-   "equity": 994.99,
+   "equity": 995.32,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.99,
+   "multiple": 1.0,
    "progress_pct": 9.95,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.8,
-   "risk_adj": -0.1,
+   "risk_adj": -0.09,
    "notes": []
   },
   {
    "id": "monkey",
    "name": "Random monkey",
    "competing": false,
-   "equity": 1000.0,
-   "cash": 1000.0,
-   "available": 1000.0,
+   "equity": 1000.37,
+   "cash": 577.89,
+   "available": 577.89,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
    "progress_pct": 10.0,
-   "open": 0,
+   "open": 1,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.0,
-   "risk_adj": 0.0,
+   "risk_adj": 0.01,
    "notes": []
   },
   {
    "id": "blackswan",
    "name": "Black Swan & Co.",
    "competing": true,
-   "equity": 960.0,
+   "equity": 967.0,
    "cash": 735.0,
    "available": 735.0,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.96,
-   "progress_pct": 9.6,
+   "multiple": 0.97,
+   "progress_pct": 9.67,
    "open": 2,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 4.8,
-   "risk_adj": -0.8,
+   "risk_adj": -0.66,
    "notes": [
+    {
+     "date": "2026-10-15",
+     "note": "Stale triggers should be checked against live levels, not the plan's old numbers. Total open risk is about $405 (~42% of equity) after these two, so skip IREN (already held), XLI and SPY insurance, and cut or trim if the radar moves toward 40."
+    },
     {
      "date": "2026-10-14",
      "note": "Self-imposed caps were not hard rules, so I'm sizing new spreads at about 15% of equity and diversifying across sectors. Keep total open risk near 40% of equity, and cut or trim as the radar moves toward 40."
@@ -191,10 +195,6 @@
     {
      "date": "2026-10-14",
      "note": "A $150 cap is a sizing choice, not a hard rule. Adding APP keeps exposure across two sectors, and I'm skipping XHB (weak 3% drop) and SPY insurance for now."
-    },
-    {
-     "date": "2026-10-14",
-     "note": "I had been passing on valid setups under a self-imposed cap that was never a hard rule. Sizing each new spread at about 12-15% of equity keeps risk controlled while I work toward the goal. Revisit XHB only if the radar stays calm and a spread closes."
     }
    ]
   },
@@ -204,8 +204,8 @@
    "competing": true,
    "equity": 999.67,
    "cash": 999.67,
-   "available": 833.37,
-   "settling": 166.3,
+   "available": 999.67,
+   "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
@@ -241,6 +241,18 @@
     "blackswan": 960.0,
     "scalper": 999.67
    }
+  },
+  {
+   "date": "2026-10-15",
+   "agents": {
+    "trend": 1033.5,
+    "meanrev": 1001.59,
+    "volsell": 1000.0,
+    "baseline": 995.32,
+    "monkey": 1000.37,
+    "blackswan": 967.0,
+    "scalper": 999.67
+   }
   }
  ],
  "positions": [
@@ -255,7 +267,7 @@
    "qty": 1,
    "entry": 1.21,
    "last": null,
-   "mark": 1.19,
+   "mark": 1.06,
    "stop": 15.2,
    "expiry": "2026-11-27",
    "opened": "2026-10-14T11:16:18-04:00",
@@ -277,7 +289,7 @@
    "qty": 1,
    "entry": 0.96,
    "last": null,
-   "mark": 1.1,
+   "mark": 1.48,
    "stop": 12.81,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:38-04:00",
@@ -299,7 +311,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.68,
+   "mark": 0.53,
    "stop": 6.94,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -321,7 +333,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 1.77,
+   "mark": 1.95,
    "stop": 10.76,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -356,28 +368,6 @@
   },
   {
    "agent": "meanrev",
-   "position_id": "pos-dda4f591f8",
-   "kind": "stock",
-   "symbol": "SMH",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 0.1703,
-   "entry": 586.812,
-   "last": 567.72,
-   "mark": null,
-   "stop": 552.5,
-   "expiry": null,
-   "opened": "2026-10-13T15:49:40-04:00",
-   "thesis": "SMH RSI(2) of 1.5 is a deep washout while the stock sits 15.7% above its 200-day, so the snap-back to the ~602 target should be a high-probability bounce.",
-   "confidence": 3,
-   "cost": 99.93,
-   "realized": null,
-   "play": null,
-   "width": null
-  },
-  {
-   "agent": "meanrev",
    "position_id": "pos-3514fae9b2",
    "kind": "stock",
    "symbol": "STT",
@@ -386,7 +376,7 @@
    "opt_type": null,
    "qty": 1.2448,
    "entry": 160.74,
-   "last": 165.0,
+   "last": 166.92,
    "mark": null,
    "stop": 152.41,
    "expiry": null,
@@ -408,7 +398,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 769.39,
+   "last": 769.645,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -430,7 +420,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 769.39,
+   "last": 769.645,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -452,7 +442,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 769.39,
+   "last": 769.645,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -460,6 +450,28 @@
    "thesis": "Benchmark: buy and hold SPY",
    "confidence": 3,
    "cost": 499.04,
+   "realized": null,
+   "play": null,
+   "width": null
+  },
+  {
+   "agent": "monkey",
+   "position_id": "pos-80b19d5fba",
+   "kind": "stock",
+   "symbol": "HUM",
+   "underlying": null,
+   "structure": null,
+   "opt_type": null,
+   "qty": 0.97,
+   "entry": 435.168,
+   "last": 435.55,
+   "mark": null,
+   "stop": 401.48,
+   "expiry": null,
+   "opened": "2026-10-15T12:43:33-04:00",
+   "thesis": "Dart landed on HUM",
+   "confidence": 0,
+   "cost": 422.11,
    "realized": null,
    "play": null,
    "width": null
@@ -475,7 +487,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 1.17,
+   "mark": 1.08,
    "stop": 51.35,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -497,8 +509,8 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.08,
-   "stop": 36.1,
+   "mark": 1.24,
+   "stop": 35.53,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
    "thesis": "IREN broke its 20-day low at 32.71, is down 16% over 20 days and sits below its 200-day in a calm radar (15), so a bear put spread capped at $150 targets the breakdown.",
@@ -510,6 +522,54 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-15T12:44:50-04:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "IWM, SPY, QQQ, MSFT, NVDA",
+   "note": "defensive: SPY trend is up and IWM has a live VWAP bounce, but midday volume is thinning and most names sit below their opening ranges, so I'm limiting trades to half size on liquid names with quick targets. Shorter holds and tighter stops suit a midday tape that can chop."
+  },
+  {
+   "time": "2026-10-15T12:44:45-04:00",
+   "type": "unfilled",
+   "agent": "blackswan",
+   "symbol": "APLD",
+   "note": "debit 0.82 not filled"
+  },
+  {
+   "time": "2026-10-15T12:44:13-04:00",
+   "type": "unfilled",
+   "agent": "blackswan",
+   "symbol": "CRWV",
+   "note": "debit 0.84 not filled"
+  },
+  {
+   "time": "2026-10-15T12:43:33-04:00",
+   "type": "open",
+   "agent": "monkey",
+   "symbol": "HUM",
+   "instrument": "stock",
+   "qty": 0.97,
+   "price": 435.168,
+   "cost": 422.11,
+   "stop": 401.48,
+   "thesis": "Dart landed on HUM",
+   "confidence": 0
+  },
+  {
+   "time": "2026-10-15T12:43:13-04:00",
+   "type": "close",
+   "agent": "meanrev",
+   "symbol": "SMH",
+   "qty": 0.1703,
+   "entry": 586.812,
+   "exit": 550.944,
+   "pnl": -6.1,
+   "note": "stop loss (underlying)",
+   "opened": "2026-10-13T15:49:40-04:00",
+   "confidence": 3,
+   "thesis": "SMH RSI(2) of 1.5 is a deep washout while the stock sits 15.7% above its 200-day, so the snap-back to the ~602 target should be a high-probability bounce."
+  },
   {
    "time": "2026-10-14T19:25:50-04:00",
    "type": "plan",
@@ -963,38 +1023,6 @@
    "agent": "blackswan",
    "note": "Evening check-in: new. No plan or positions existed, and the market is calm (Crash Radar 11). The scan's clearest breakdowns are in Technology, with chip weakness and the KOSPI plunge in the news, so I can start a small, targeted plan. Most other breakdowns are penny stocks or warrants that I'll avoid.",
    "symbol": "ASTS, SMR, IONQ, SPY"
-  },
-  {
-   "time": "2026-10-13T22:01:53-04:00",
-   "type": "focus",
-   "agent": "blackswan",
-   "note": "Leaning into Technology. Only one day of evidence: Technology has the most real breakdowns in the scan (ASTS, SMR, IONQ, CIFR, APLD, CRWV), and the chip selloff and analyst downgrade support it. I have no results yet, so I'll keep sizing small and drop the focus if these setups don't pay."
-  },
-  {
-   "time": "2026-10-13T19:21:59-04:00",
-   "type": "topup",
-   "note": "Every firm's starting balance raised to $500 (+$400 cash each; open positions unchanged)."
-  },
-  {
-   "time": "2026-10-13T18:48:02-04:00",
-   "type": "plan",
-   "agent": "volsell",
-   "note": "Evening check-in: keep. The plan still holds: IWM has the richest IV/RV (1.75), and the hawkish Fed comments (Collins, Goolsbee on AI-driven inflation) lean toward downside or range-bound risk that favors bear call spreads. The Iran operation headlines add gap-down risk to the put side, which reinforces skipping SPY and QQQ bull put spreads.",
-   "symbol": "IWM"
-  },
-  {
-   "time": "2026-10-13T18:47:54-04:00",
-   "type": "plan",
-   "agent": "meanrev",
-   "note": "Evening check-in: keep. Cash is $0.07 and the SMH position is still the only exposure, so nothing new can be funded. The scan's SMH read (RSI(2) 1.6, close 588.19 vs 5-day SMA 602.81) matches the thesis, and the stop at 552.5 is still the right risk line.",
-   "symbol": ""
-  },
-  {
-   "time": "2026-10-13T18:47:49-04:00",
-   "type": "plan",
-   "agent": "trend",
-   "note": "Evening check-in: keep. XLE is still 1.14% below its 66.42 trigger, so the breakout is unconfirmed, and the energy news flow (oil-rally commentary, Iran operation reports, Guyana/Exxon supply talk) still supports the setup. Nothing else in the scan is affordable with $100 cash, so the plan stays as written.",
-   "symbol": "XLE"
   }
  ],
  "reviews": [],
@@ -1480,44 +1508,49 @@
    "date": "2026-11-04",
    "open": "09:30",
    "close": "16:00"
+  },
+  {
+   "date": "2026-11-05",
+   "open": "09:30",
+   "close": "16:00"
   }
  ],
  "radar": {
   "now": {
-   "score": 15,
+   "score": 17,
    "tier": "calm",
-   "market_score": 20,
-   "economy_score": 3,
+   "market_score": 21,
+   "economy_score": 5,
    "parts": {
     "trend": 0,
     "drawdown": 10,
     "volatility": 0,
-    "breadth": 67,
-    "credit": 31,
+    "breadth": 60,
+    "credit": 49,
     "safety": 0,
-    "economy": 3
+    "economy": 5
    },
    "facts": {
     "spy_vs_sma50_pct": 0.1,
     "spy_vs_sma200_pct": 6.3,
-    "spy_off_high_pct": 1.6,
-    "spy_iv_pct": 13.8,
-    "spy_realized_vol_pct": 9.6,
-    "pct_above_50d": 38.3,
-    "breadth_sample": 509,
-    "junk_vs_treasuries_20d_pct": -0.25,
-    "havens_vs_spy_20d_pct": -5.8
+    "spy_off_high_pct": 1.5,
+    "spy_iv_pct": 13.0,
+    "spy_realized_vol_pct": 10.3,
+    "pct_above_50d": 40.9,
+    "breadth_sample": 504,
+    "junk_vs_treasuries_20d_pct": -0.96,
+    "havens_vs_spy_20d_pct": -5.3
    },
    "economy": {
     "status": "on",
-    "as_of": "2026-10-14",
-    "yield_curve_10y_2y": 0.42,
-    "jobless_claims_4wk": 198000,
-    "claims_vs_1yr_low_pct": 0.0,
-    "junk_bond_spread_pct": 3.11,
+    "as_of": "2026-10-15",
+    "yield_curve_10y_2y": 0.37,
+    "jobless_claims_4wk": 198500,
+    "claims_vs_1yr_low_pct": 0.1,
+    "junk_bond_spread_pct": 3.25,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-14T15:35-04:00"
+   "at": "2026-10-15T12:43-04:00"
   },
   "history": [
    {
@@ -1528,6 +1561,11 @@
    {
     "date": "2026-10-14",
     "score": 15,
+    "tier": "calm"
+   },
+   {
+    "date": "2026-10-15",
+    "score": 17,
     "tier": "calm"
    }
   ],
@@ -1543,17 +1581,21 @@
  },
  "playbooks": {
   "scalper": {
-   "date": "2026-10-14",
-   "made_at": "2026-10-14T15:36-04:00",
+   "date": "2026-10-15",
+   "made_at": "2026-10-15T12:44-04:00",
    "watch": [
-    "BAC"
+    "IWM",
+    "SPY",
+    "QQQ",
+    "MSFT",
+    "NVDA"
    ],
-   "aggression": "stand_down",
-   "why": "Only about 14 minutes remain before the 3:50 flat, too short for a clean pullback trade. BAC is already 2% above VWAP after a 3% run, so it is extended rather than pulling back, and the rest of the field is in 1-minute downtrends or below VWAP.",
-   "slices": 1,
+   "aggression": "defensive",
+   "why": "SPY trend is up and IWM has a live VWAP bounce, but midday volume is thinning and most names sit below their opening ranges, so I'm limiting trades to half size on liquid names with quick targets. Shorter holds and tighter stops suit a midday tape that can chop.",
+   "slices": 3,
    "target_pct": 0.5,
-   "stop_pct": 0.3,
-   "max_hold_min": 10
+   "stop_pct": 0.25,
+   "max_hold_min": 30
   }
  },
  "focus": {
@@ -1605,7 +1647,15 @@
  },
  "sector_stats": {
   "trend": {},
-  "meanrev": {},
+  "meanrev": {
+   "Technology": {
+    "trades": 1,
+    "wins": 0,
+    "pnl": -6.1,
+    "win_rate_pct": 0,
+    "avg_pnl": -6.1
+   }
+  },
   "volsell": {},
   "baseline": {},
   "monkey": {},
@@ -1624,6 +1674,5 @@
   "built": "2026-10-13T19:38-04:00",
   "pool_size": 7355,
   "core_size": 501
- },
- "plans_updated": "2026-10-14T19:25-04:00"
+ }
 }

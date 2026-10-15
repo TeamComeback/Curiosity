@@ -719,5 +719,54 @@
   "avoid": [],
   "why": "No own-results evidence yet, since Consumer Discretionary has only one losing trade. Today's scan shows the most liquidity and range in Technology and the broad index ETFs, and crash_radar is calm (15), so the setups have room to work. Reassess after 10 sessions.",
   "expires": "2026-10-28"
+ },
+ {
+  "time": "2026-10-15T12:43:13-04:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-dda4f591f8",
+  "symbol": "SMH",
+  "underlying": "SMH",
+  "sector": "Technology",
+  "instrument": "stock",
+  "entry": 586.812,
+  "exit": 550.944,
+  "pnl": -6.1,
+  "return_pct": -6.1,
+  "opened": "2026-10-13T15:49:40-04:00",
+  "why_entered": "SMH RSI(2) of 1.5 is a deep washout while the stock sits 15.7% above its 200-day, so the snap-back to the ~602 target should be a high-probability bounce.",
+  "why_exited": "stop loss (underlying)"
+ },
+ {
+  "time": "2026-10-15T12:43:33-04:00",
+  "type": "trade_opened",
+  "agent": "monkey",
+  "position_id": "pos-80b19d5fba",
+  "symbol": "HUM",
+  "underlying": "HUM",
+  "sector": "Financials",
+  "instrument": "stock",
+  "qty": 0.97,
+  "price": 435.168,
+  "cost": 422.11,
+  "stop": 401.48,
+  "why": "Dart landed on HUM",
+  "confidence": 0,
+  "signals": {},
+  "from_plan": false
+ },
+ {
+  "time": "2026-10-15T12:44:50-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "IWM",
+   "SPY",
+   "QQQ",
+   "MSFT",
+   "NVDA"
+  ],
+  "aggression": "defensive",
+  "why": "SPY trend is up and IWM has a live VWAP bounce, but midday volume is thinning and most names sit below their opening ranges, so I'm limiting trades to half size on liquid names with quick targets. Shorter holds and tighter stops suit a midday tape that can chop."
  }
 ]
