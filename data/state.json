@@ -11,7 +11,8 @@
  "entries": {
   "date": "2026-10-15",
   "counts": {
-   "monkey": 1
+   "monkey": 1,
+   "scalper": 1
   }
  },
  "agents": {
@@ -360,7 +361,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 166.92
+     "last": 167.44
     }
    },
    "status": "active",
@@ -368,7 +369,7 @@
    "status_at": null,
    "closed": 1,
    "wins": 0,
-   "peak": 1002.05,
+   "peak": 1002.24,
    "max_dd": 0.0026,
    "notes": [
     {
@@ -636,7 +637,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 769.645
+     "last": 770.005
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -652,7 +653,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 769.645
+     "last": 770.005
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -668,7 +669,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 769.645
+     "last": 770.005
     }
    },
    "status": "active",
@@ -701,7 +702,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 435.55
+     "last": 434.52
     }
    },
    "status": "active",
@@ -710,7 +711,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.37,
-   "max_dd": 0.0,
+   "max_dd": 0.001,
    "notes": [],
    "last_exits": {},
    "joined": "2026-10-13T19:21:59-04:00",
@@ -995,9 +996,32 @@
    "unsettled": []
   },
   "scalper": {
-   "cash": 999.67,
+   "cash": 833.08,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-91422db118": {
+     "kind": "stock",
+     "symbol": "IWM",
+     "qty": 0.6097,
+     "entry": 273.238,
+     "cost": 166.59,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 272.57,
+     "atr": 0,
+     "opened": "2026-10-15T12:46:53-04:00",
+     "thesis": "VWAP pullback bounce on IWM: 0.44x volume, +0.11% vs VWAP; target +0.5%, stop -0.25%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.5,
+     "stop_pct": 0.25,
+     "max_hold_min": 30,
+     "last": 273.125,
+     "peak_gain": 0.013541308309972244
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
@@ -1029,8 +1053,8 @@
     "max_hold_min": 30
    },
    "scalp_day": {
-    "date": "2026-10-14",
-    "equity": 1000.0
+    "date": "2026-10-15",
+    "equity": 999.67
    },
    "plan": {
     "for_day": "2026-10-15",
