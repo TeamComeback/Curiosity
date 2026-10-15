@@ -64,6 +64,9 @@ def main():
     if not state or state["race"]["status"] != "running":
         print("No running race.")
         return
+    if any(r.get("date") == store.today() for r in store.load("reviews.json", [])):
+        print("Weekly review already done today.")
+        return
     journal = store.load("journal.json", [])
     curve = store.load("equity.json", [])
     entry = {"date": store.today(), "agents": {}}

@@ -170,7 +170,7 @@ def open_trade(b, state, aid, cand, order, ctx):
             return store.journal({"type": "rule_block", "agent": aid, "symbol": cand["symbol"], "note": why})
         legs = [{"symbol": sp["long"]["symbol"], "ratio_qty": "1", "side": "buy", "position_intent": "buy_to_open"},
                 {"symbol": sp["short"]["symbol"], "ratio_qty": "1", "side": "sell", "position_intent": "sell_to_open"}]
-        limit = round(sp["debit"] + min(sp["half_spread"], 0.05), 2)
+        limit = round(min(sp["debit"] + max(sp["half_spread"], 0.02), sp["width"] * 0.9), 2)   # meet the market so it fills
         o = _fill(b, b.submit_mleg(legs, n, limit, cid(aid)), 30)
         if not o:
             return store.journal({"type": "unfilled", "agent": aid, "symbol": cand["symbol"],

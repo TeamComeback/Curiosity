@@ -2,14 +2,14 @@ name: Trading agent race
 
 on:
   schedule:
-    # Market-day loop: one job runs a cycle every 30 min through the session. Later start times are
-    # backups in case GitHub starts a job late or skips it; extras exit right away.
-    - cron: "5 13,15,17,19 * * 1-5"
-    - cron: "30 21 * * 5"
-    # Overnight game-plan sessions (plan.py picks the right one by US/Eastern time and skips repeats):
-    - cron: "40 20,21 * * 1-5"   # after the close
-    - cron: "10 0 * * 1-5"       # evening check-in (Sun-Thu evenings ET)
-    - cron: "40 11,12 * * 1-5"   # pre-market call
+    # Every job runs the firms' whole day as a self-continuing chain (see daylong.py). GitHub often
+    # starts scheduled jobs late or skips them, so there are many start times: whichever fires first
+    # starts the chain, and any that fire while it's running wait their turn and exit if there's
+    # nothing to do. Times are UTC: 11:20 = 7:20 AM EDT; the 23:20 and 00:20 starts cover the
+    # evening check-in, including Sunday's.
+    - cron: "20 11-23 * * 1-5"
+    - cron: "20 0 * * 1-5"
+    - cron: "20 23 * * 0"
   workflow_dispatch:
     inputs:
       task:
@@ -19,11 +19,12 @@ on:
         description: "Run even if the market is closed (true/false)"
         default: "false"
       agent:
-        description: "Plan only: limit to one agent (trend, meanrev, volsell)"
+        description: "Plan only: limit to one agent (trend, meanrev, volsell, blackswan, scalper)"
         default: ""
 
 permissions:
   contents: write
+  actions: write          # lets a job start its successor before GitHub's 6-hour limit
 
 concurrency:
   group: trading-agent
@@ -52,17 +53,16 @@ jobs:
           PLAN_MODEL: ${{ vars.PLAN_MODEL }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DASHBOARD_URL: https://teamcomeback.github.io/Curiosity/
         run: |
           SCHED="${{ github.event.schedule }}"
           git config user.name "trading-agent"
           git config user.email "trading-agent@users.noreply.github.com"
-          if [ "$SCHED" = "30 21 * * 5" ] || [ "${{ inputs.task }}" = "review" ]; then
+          if [ -n "$SCHED" ] || [ "${{ inputs.task }}" = "day" ]; then
+            python daylong.py 330
+          elif [ "${{ inputs.task }}" = "review" ]; then
             python review.py
-          elif [ "$SCHED" = "40 20,21 * * 1-5" ] || [ "$SCHED" = "10 0 * * 1-5" ] || [ "$SCHED" = "40 11,12 * * 1-5" ]; then
-            python plan.py
-          elif [ "$SCHED" = "5 13,15,17,19 * * 1-5" ] || [ "${{ inputs.task }}" = "day" ]; then
-            python daylong.py 340
           elif [ "${{ inputs.task }}" = "radar" ]; then
             python admin.py radar
           elif [ "${{ inputs.task }}" = "alert" ]; then
