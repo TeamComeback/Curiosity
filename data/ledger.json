@@ -893,5 +893,118 @@
   ],
   "aggression": "defensive",
   "why": "About 14 minutes remain before the 3:50 flat, so there's room for at most one short, tightly bracketed trade. Defensive sizing on the names that are still trending up above VWAP (MU, AMD, QQQ, IWM, TSM) fits a calm tape, and the 10-minute hold keeps any entry inside the window."
+ },
+ {
+  "time": "2026-10-15T16:40:49-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-10-16",
+  "decision": "keep",
+  "why": "AAL, RKT and KKR are no longer live candidates, and none of the fresh breakouts fit $50.58 of settled cash with an uncorrelated setup. The existing stops still hold, and ETSY is still above its breakout level with its stop intact.",
+  "summary": "Hold all five puts and the ETSY shares with their stops unchanged. Enter nothing new unless a cheap, uncorrelated 55-day breakdown appears that fits the cash. Otherwise stay in cash.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-15T16:41:03-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-10-16",
+  "decision": "revise",
+  "why": "SMH was stopped out today for -$6.10, so the plan's SMH hold and target are stale and removed. Re-scoring the fresh scan with the 2.5-ATR stop against the 5-day SMA target leaves no candidate at my 1:1 floor: the best are ANET (~0.97) and HPE (~0.90), with DELL (~0.98, unaffordable-stop risk) excluded.",
+  "summary": "No new entries tomorrow. Hold STT on its existing stop (152.41) and exits (RSI(2)>70 or close above the 5-day SMA, ~173). Keep settled cash for a washout whose 5-day SMA target is at least as far as its 2.5-ATR stop.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-15T16:41:13-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-10-16",
+  "decision": "revise",
+  "why": "Nothing is open and no live spread met the 0.25 credit trigger, so the plan still holds. I'm correcting the IWM IV/RV figure to the scan's 1.40 (not 1.6) and flagging an unreconciled QQQ trade note: it says a QQQ spread was taken, but open_positions and today_trades are empty and cash is still $1,000, so I'm treating it as not executed.",
+  "summary": "Stay flat unless a live IWM bear call spread (about 0.20 delta, $1 wide, 21-45 DTE) can be sold for at least $0.25 credit with IWM below recent highs and no gap-up toward the short strike. Max loss about $80, one position at most. Confirm whether any QQQ position actually exists before doing anything else.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Bear call spread, short strike about 0.20 delta above price, long strike $1 higher, 21-45 DTE. Scan IV/RV 1.40 with 20-day realized vol at 13.5%; IWM close 275.02, so the short strike should be near the 285-290 area on a live chain.",
+    "trigger": "Live credit of at least $0.25 on the $1 width at a 21-45 DTE expiry, IWM below its recent highs at the open, and no gap-up toward the short strike. Pass on 0.20-0.24.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-15T16:41:47-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "After-close review",
+  "for_day": "2026-10-16",
+  "decision": "revise",
+  "why": "The fresh scan resets RKLB's breakdown level to 58.85 and adds AAOI as a new Technology breakdown. CRWV and IONQ have dropped out of the scan, and APLD is already held, so the old watchlist is stale and total open risk is already near the 40%-of-equity guide.",
+  "summary": "Hold ASTS and IREN unchanged. Tomorrow, enter one RKLB put debit spread (max $60) only if it closes below 58.85. Consider AAOI (max $40) only if it closes below 85.81 and it fits the open-risk limit after RKLB. Otherwise do nothing.",
+  "watchlist": [
+   {
+    "symbol": "RKLB",
+    "setup": "Put debit spread on a Technology breakdown. Broke down today to 58.85, -6.1% from that level, with a -18.5% 20-day return and below its 200-day. The Neutron slip is a fresh negative catalyst.",
+    "trigger": "Enter if RKLB closes below 58.85 tomorrow, or rallies back to 58.85 and fails there. Size to the $60 cap.",
+    "instrument": "debit_spread",
+    "conviction": 3
+   },
+   {
+    "symbol": "AAOI",
+    "setup": "Put debit spread on a Technology breakdown. Broke down today to 85.81 (-2.4%), with a -14.7% 20-day return and below its 200-day. Its B. Riley neutral and lower target add to the pressure.",
+    "trigger": "Enter only if AAOI closes below 85.81 tomorrow AND total open debit risk stays near or under 40% of equity after the RKLB fill. Skip otherwise.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-15T16:42:01-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-10-16",
+  "decision": "revise",
+  "why": "The plan's only live test went 0 for 4 on picks (avg -0.81%), and the one trade taken was a 0.44x-volume IWM bounce that timed out at -0.03%. The 1.5x volume gate was not met on any name today, and NVDA/AMD (ATR 2.5-4.6%) can't be scalped with a 0.3% stop. Cutting to the names with tight enough ranges, a smaller target, and a shorter hold.",
+  "summary": "Trade only SPY, QQQ and IWM. Take an opening-range breakout or VWAP reclaim only on at least 1.5x relative volume, with a 0.4% target, 0.2% stop and a 30-minute limit. One round trip per slice, flat by the close. If no name reaches 1.5x volume, take no trades.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "Opening-range breakout above the 15-minute high, or VWAP reclaim after a pullback, on at least 1.5x relative volume",
+    "trigger": "Holds above the 15-minute opening-range high for 2 consecutive 2-minute bars at 1.5x+ relative volume, or reclaims VWAP with rising volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "QQQ",
+    "setup": "VWAP pullback bounce in a trending session",
+    "trigger": "Pulls back to VWAP and holds it on at least 1.5x relative volume, with price no more than 1.5% above VWAP",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IWM",
+    "setup": "VWAP pullback bounce or opening-range breakout; IWM led today (+1.34%) while tech sold off",
+    "trigger": "Holds VWAP or breaks the opening-range high on at least 1.5x relative volume (today's 0.44x bounce would not have qualified)",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-15T16:42:01-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Broad market / other"
+  ],
+  "avoid": [
+   "Consumer Discretionary"
+  ],
+  "why": "Broad-market ETFs are the only names where the 1.5x volume gate and tight stops fit the ATR. Consumer Discretionary has lost on its only trade, and Technology's single trade was flat, so Technology is neither leaned into nor avoided yet. Reassess after more sessions.",
+  "expires": "2026-10-29"
  }
 ]
