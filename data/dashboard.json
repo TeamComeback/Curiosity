@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T14:36-04:00",
+ "updated": "2026-10-15T15:06-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,7 +10,7 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 6.3,
+  "spy_vs_sma200_pct": 6.5,
   "spy_roc20_pct": 2.1,
   "crash_radar": 17
  },
@@ -36,20 +36,24 @@
    "id": "trend",
    "name": "Trend agent",
    "competing": true,
-   "equity": 971.22,
+   "equity": 953.92,
    "cash": 50.58,
    "available": 50.58,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.97,
-   "progress_pct": 9.71,
+   "multiple": 0.95,
+   "progress_pct": 9.54,
    "open": 6,
    "closed": 0,
    "win_rate": null,
-   "max_dd_pct": 6.0,
-   "risk_adj": -0.48,
+   "max_dd_pct": 7.7,
+   "risk_adj": -0.6,
    "notes": [
+    {
+     "date": "2026-10-15",
+     "note": "Cash is $50.58 with no affordable, uncorrelated 55-day setup live. FMC's put was blocked and would add to the bearish cluster, so hold all stops and wait for settled cash."
+    },
     {
      "date": "2026-10-15",
      "note": "Cash is $50.58, too little for any affordable, uncorrelated 55-day breakout (V, SAP, VRT, KORU and ETSY are unaffordable or already held). FMC's put is the only other breakdown and would add to the bearish cluster, so I'm holding all stops and waiting for settled cash."
@@ -57,10 +61,6 @@
     {
      "date": "2026-10-15",
      "note": "Cash is down to $50, so the only realistic new entry is a cheap uncorrelated put. Keep the existing stops and skip setups whose premium exceeds the budget."
-    },
-    {
-     "date": "2026-10-15",
-     "note": "Holding. Cash is $50.58, the game-plan names (AAL, RKT, KKR) are no longer live candidates, and the remaining breakdowns (FMC, KORU) would add to the bearish cluster. Keep the existing stops and wait for a new, affordable, uncorrelated 55-day breakout."
     }
    ]
   },
@@ -68,7 +68,7 @@
    "id": "meanrev",
    "name": "Mean-reversion agent",
    "competing": true,
-   "equity": 1002.82,
+   "equity": 1002.6,
    "cash": 793.81,
    "available": 699.98,
    "settling": 93.83,
@@ -80,8 +80,12 @@
    "closed": 1,
    "win_rate": 0.0,
    "max_dd_pct": 0.3,
-   "risk_adj": 0.06,
+   "risk_adj": 0.05,
    "notes": [
+    {
+     "date": "2026-10-15",
+     "note": "No entries again: the best washouts (SOXX, SMCI) are about 0.7:1 reward-to-risk, below my 1:1 floor. SMH was stopped out for -$6.10, so the stop-out lesson is that deep washouts in names far above their 200-day can keep falling. Holding STT on its default exits and keeping settled cash."
+    },
     {
      "date": "2026-10-15",
      "note": "Passed again: the best washouts (SOXX ~0.7:1, SMCI ~0.7:1) are below my 1:1 reward-to-risk floor. Holding STT on default exits and keeping settled cash for a tighter setup."
@@ -89,10 +93,6 @@
     {
      "date": "2026-10-15",
      "note": "No entries: the best washouts (SOXX ~0.7:1, SMH ~0.8:1, SMCI ~0.7:1, DAL ~0.4:1, ARM ~0.3:1) all sit below my 1:1 reward-to-risk floor. Hold STT on default exits and keep settled cash."
-    },
-    {
-     "date": "2026-10-15",
-     "note": "No entries: the best washout (SOXX) has about 0.7:1 reward-to-risk and SMCI about 0.7:1, both under my 1:1 floor. Hold STT on default exits and keep settled cash for a setup where the target is at least as far as the stop."
     }
    ]
   },
@@ -116,15 +116,15 @@
    "notes": [
     {
      "date": "2026-10-15",
+     "note": "Passed again. Best live credit/width is XLE 0.17 (17%) and IWM 0.16 (16%), both below the 0.25 trigger, so there is no edge after slippage. Stay flat and recheck IWM at 0.25+ on the $1 width."
+    },
+    {
+     "date": "2026-10-15",
      "note": "Passed: best live candidate is IWM 288/289 bear call at 0.17 credit (17% of width), below the 0.25 trigger. SPY, XLE and TLT are 8-15% of width. Stay flat and recheck IWM at 0.25+ on the $1 width."
     },
     {
      "date": "2026-10-15",
      "note": "Passed all 4: best is IWM 288/289 bear call at 0.22 credit (22% of width), below the 0.25 trigger. SPY, XLE, and TLT are 10-18%. Stay flat and recheck IWM for 0.25+ on the $1 width."
-    },
-    {
-     "date": "2026-10-15",
-     "note": "Passed again: best credit/width is IWM 288/289 at 0.21 (21%), below the 0.25 trigger. SPY, XLE, and TLT are 12-17%. Stay flat and recheck IWM for 0.25+ on the $1 width."
     }
    ]
   },
@@ -132,26 +132,26 @@
    "id": "baseline",
    "name": "SPY benchmark",
    "competing": false,
-   "equity": 995.82,
+   "equity": 997.66,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 9.96,
+   "progress_pct": 9.98,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.8,
-   "risk_adj": -0.08,
+   "risk_adj": -0.05,
    "notes": []
   },
   {
    "id": "monkey",
    "name": "Random monkey",
    "competing": false,
-   "equity": 998.24,
+   "equity": 998.01,
    "cash": 577.89,
    "available": 577.89,
    "settling": 0,
@@ -162,7 +162,7 @@
    "open": 1,
    "closed": 0,
    "win_rate": null,
-   "max_dd_pct": 0.2,
+   "max_dd_pct": 0.3,
    "risk_adj": -0.04,
    "notes": []
   },
@@ -170,20 +170,24 @@
    "id": "blackswan",
    "name": "Black Swan & Co.",
    "competing": true,
-   "equity": 940.5,
+   "equity": 935.5,
    "cash": 643.5,
    "available": 643.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.94,
-   "progress_pct": 9.4,
+   "progress_pct": 9.35,
    "open": 3,
    "closed": 0,
    "win_rate": null,
-   "max_dd_pct": 5.9,
+   "max_dd_pct": 6.5,
    "risk_adj": -1.0,
    "notes": [
+    {
+     "date": "2026-10-15",
+     "note": "Skipped IREN (already held), APLD (already held), XLI (not in a downtrend) and SPY insurance (no radar or trend trigger). Kept Technology exposure in check and sized MTZ to a budget that can fill one contract."
+    },
     {
      "date": "2026-10-15",
      "note": "Technology bearish exposure is already concentrated across ASTS, IREN and APLD, so MTZ is sized at $60 instead of the 15%-of-equity rule. Skip SPY insurance until SPY breaks its 50-day, and keep total open risk near 40% of equity."
@@ -191,10 +195,6 @@
     {
      "date": "2026-10-15",
      "note": "Radar is calm at 17 and Technology bearish exposure is already about $330 at cost across ASTS, IREN and APLD. CRWV failed to fill twice, and XLI and SPY insurance don't meet their triggers. Pass today; revisit CRWV only if a spread fits a budget under its max, and drop the self-imposed 15%-of-equity"
-    },
-    {
-     "date": "2026-10-15",
-     "note": "Radar is calm at 17 and Technology bearish exposure is already about $330 at cost across ASTS, IREN and APLD. CRWV's live price is past its trigger, but its debit spreads failed twice, and a third fill would add correlated Tech risk. Pass today and revisit CRWV only if a spread fits a budget under t"
     }
    ]
   },
@@ -245,12 +245,12 @@
   {
    "date": "2026-10-15",
    "agents": {
-    "trend": 971.22,
-    "meanrev": 1002.82,
+    "trend": 953.92,
+    "meanrev": 1002.6,
     "volsell": 1000.0,
-    "baseline": 995.82,
-    "monkey": 998.24,
-    "blackswan": 940.5,
+    "baseline": 997.66,
+    "monkey": 998.01,
+    "blackswan": 935.5,
     "scalper": 999.66
    }
   }
@@ -267,7 +267,7 @@
    "qty": 1,
    "entry": 1.21,
    "last": null,
-   "mark": 0.91,
+   "mark": 0.86,
    "stop": 15.2,
    "expiry": "2026-11-27",
    "opened": "2026-10-14T11:16:18-04:00",
@@ -289,7 +289,7 @@
    "qty": 1,
    "entry": 0.96,
    "last": null,
-   "mark": 1.25,
+   "mark": 1.21,
    "stop": 12.81,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:38-04:00",
@@ -311,7 +311,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.57,
+   "mark": 0.49,
    "stop": 6.94,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -333,7 +333,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 1.65,
+   "mark": 1.62,
    "stop": 10.76,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -355,7 +355,7 @@
    "qty": 5,
    "entry": 0.14,
    "last": null,
-   "mark": 0.14,
+   "mark": 0.16,
    "stop": 1.63,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T12:10:38-04:00",
@@ -376,7 +376,7 @@
    "opt_type": null,
    "qty": 4.0,
    "entry": 89.48,
-   "last": 88.91,
+   "last": 89.085,
    "mark": null,
    "stop": 83.87,
    "expiry": null,
@@ -398,7 +398,7 @@
    "opt_type": null,
    "qty": 1.2448,
    "entry": 160.74,
-   "last": 167.905,
+   "last": 167.73,
    "mark": null,
    "stop": 152.41,
    "expiry": null,
@@ -420,7 +420,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 770.03,
+   "last": 771.465,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -442,7 +442,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 770.03,
+   "last": 771.465,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -464,7 +464,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 770.03,
+   "last": 771.465,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -486,7 +486,7 @@
    "opt_type": null,
    "qty": 0.97,
    "entry": 435.168,
-   "last": 433.355,
+   "last": 433.11,
    "mark": null,
    "stop": 401.48,
    "expiry": null,
@@ -509,7 +509,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 1.08,
+   "mark": 0.93,
    "stop": 51.35,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -531,7 +531,7 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.17,
+   "mark": 1.29,
    "stop": 35.53,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
@@ -553,7 +553,7 @@
    "qty": 1,
    "entry": 0.86,
    "last": null,
-   "mark": 0.72,
+   "mark": 0.7,
    "stop": 22.38,
    "expiry": "2027-01-15",
    "opened": "2026-10-15T13:07:01-04:00",
@@ -566,6 +566,13 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-15T15:06:15-04:00",
+   "type": "rule_block",
+   "agent": "blackswan",
+   "symbol": "MTZ",
+   "note": "no put spread affordable within $100.00"
+  },
   {
    "time": "2026-10-15T14:36:32-04:00",
    "type": "playbook",
@@ -1078,13 +1085,6 @@
    "agent": "blackswan",
    "symbol": "APP",
    "note": "no put spread affordable within $50.00"
-  },
-  {
-   "time": "2026-10-14T10:06:13-04:00",
-   "type": "rule_block",
-   "agent": "blackswan",
-   "symbol": "ASTS",
-   "note": "no put spread affordable within $60.00"
   }
  ],
  "reviews": [],
@@ -1581,24 +1581,24 @@
   "now": {
    "score": 17,
    "tier": "calm",
-   "market_score": 21,
+   "market_score": 20,
    "economy_score": 5,
    "parts": {
     "trend": 0,
-    "drawdown": 10,
+    "drawdown": 9,
     "volatility": 0,
-    "breadth": 60,
+    "breadth": 58,
     "credit": 49,
     "safety": 0,
     "economy": 5
    },
    "facts": {
-    "spy_vs_sma50_pct": 0.2,
-    "spy_vs_sma200_pct": 6.3,
-    "spy_off_high_pct": 1.5,
-    "spy_iv_pct": 13.1,
+    "spy_vs_sma50_pct": 0.4,
+    "spy_vs_sma200_pct": 6.5,
+    "spy_off_high_pct": 1.3,
+    "spy_iv_pct": 13.4,
     "spy_realized_vol_pct": 10.3,
-    "pct_above_50d": 41.1,
+    "pct_above_50d": 41.7,
     "breadth_sample": 504,
     "junk_vs_treasuries_20d_pct": -0.96,
     "havens_vs_spy_20d_pct": -5.3
@@ -1612,7 +1612,7 @@
     "junk_bond_spread_pct": 3.25,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-15T14:36-04:00"
+   "at": "2026-10-15T15:05-04:00"
   },
   "history": [
    {
@@ -1644,7 +1644,7 @@
  "playbooks": {
   "scalper": {
    "date": "2026-10-15",
-   "made_at": "2026-10-15T14:36-04:00",
+   "made_at": "2026-10-15T15:06-04:00",
    "watch": [
     "NVDA",
     "SPY",
@@ -1654,7 +1654,7 @@
     "AMD"
    ],
    "aggression": "normal",
-   "why": "The regime is calm with SPY and most megacap tech in clean 1-minute uptrends, so I'm moving from defensive to normal for the afternoon. I'm keeping the 0.5% target, 0.25% stop, 30-minute limit, and 3 slices, and AMD stays on the list only because the code enforces its extension cap.",
+   "why": "The tape is calm and trending up with SPY and megacap tech above VWAP, so normal sizing still fits. With about 44 minutes until the 3:50 flat, I'm keeping the 30-minute limit and the 0.5%/0.25% bracket, and trimming the list to liquid names that have clean 1-minute trends.",
    "slices": 3,
    "target_pct": 0.5,
    "stop_pct": 0.25,
