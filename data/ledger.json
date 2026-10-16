@@ -1553,5 +1553,35 @@
   ],
   "aggression": "defensive",
   "why": "SPY, QQQ and IWM are all weak and below VWAP with small ranges, so I'm keeping size at defensive. Only about $42 is settled cash, so I'm cutting to 2 slices and watching the few names with live VWAP setups (NVDA is already open, TSM is set up now, and TLT and SMH are showing bounces)."
+ },
+ {
+  "time": "2026-10-16T11:58:47-04:00",
+  "type": "trade_closed",
+  "agent": "scalper",
+  "position_id": "pos-565df1eb2b",
+  "symbol": "NVDA",
+  "underlying": "NVDA",
+  "sector": "Technology",
+  "instrument": "stock",
+  "entry": 217.166,
+  "exit": 217.498,
+  "pnl": 0.25,
+  "return_pct": 0.2,
+  "opened": "2026-10-16T11:32:47-04:00",
+  "why_entered": "VWAP pullback bounce on NVDA: 1.25x volume, +0.28% vs VWAP; target +0.5%, stop -0.3%",
+  "why_exited": "time limit, 26 min (+0.16%)"
+ },
+ {
+  "time": "2026-10-16T12:06:39-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "NVDA",
+   "SMH",
+   "TSM",
+   "TLT"
+  ],
+  "aggression": "stand_down",
+  "why": "Only about $42 is settled cash, too little for meaningful size, and the tape is weak: SPY, QQQ, IWM and most leaders are red and below VWAP. The overnight plan's IWM strength is stale, since IWM is now -1.24%. Stand down and keep NVDA, SMH, TSM and TLT on watch for a clean reclaim once cash settles."
  }
 ]
