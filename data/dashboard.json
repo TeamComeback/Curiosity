@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T14:37-04:00",
+ "updated": "2026-10-16T15:07-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,7 +10,7 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 5.2,
+  "spy_vs_sma200_pct": 5.1,
   "spy_roc20_pct": 1.2,
   "crash_radar": 25
  },
@@ -36,20 +36,24 @@
    "id": "trend",
    "name": "Trend Co.",
    "competing": true,
-   "equity": 1066.32,
+   "equity": 1090.09,
    "cash": 65.08,
    "available": 0.58,
    "settling": 64.5,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.07,
-   "progress_pct": 10.66,
+   "multiple": 1.09,
+   "progress_pct": 10.9,
    "open": 6,
    "closed": 1,
    "win_rate": 0.0,
    "max_dd_pct": 11.5,
-   "risk_adj": 0.58,
+   "risk_adj": 0.79,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "Only $0.58 is settled, so no entry is affordable. Hold all stops. ETSY (85.80) is below its 87.35 breakout level; exit at the close if it stays there, as planned."
+    },
     {
      "date": "2026-10-16",
      "note": "Only $0.58 is settled, so no entries are possible. Holding all stops. ETSY is below its 87.35 breakout level; if it closes there, exit at the close, since proceeds settle T+1 either way. Redeploy once cash settles."
@@ -57,10 +61,6 @@
     {
      "date": "2026-10-16",
      "note": "Only $0.58 is settled, so no entry is affordable. Holding all stops. ETSY is trading below its 87.35 breakout level, so exit at the next close if it stays there. Redeploy only once proceeds settle."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "Only $0.58 is settled, so no candidate is affordable (PLUG put and EOG shares both exceed it). Holding all stops. Exit ETSY at the next open if it closes below its 87.35 breakout level, and redeploy only once proceeds settle."
     }
    ]
   },
@@ -68,20 +68,24 @@
    "id": "meanrev",
    "name": "Snapback Partners",
    "competing": true,
-   "equity": 998.62,
+   "equity": 997.6,
    "cash": 543.46,
    "available": 543.46,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 9.99,
+   "progress_pct": 9.98,
    "open": 2,
    "closed": 1,
    "win_rate": 0.0,
    "max_dd_pct": 0.7,
-   "risk_adj": -0.03,
+   "risk_adj": -0.05,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "No entries: OKTA (~1.1:1, 58% above its 200-day, tech) and CRWD (~0.85:1) fail my 1:1 floor or are too extended. Holding STT at its 160.74 stop and FTNT at 154.63; keeping settled cash for a non-tech washout that clears 1:1."
+    },
     {
      "date": "2026-10-16",
      "note": "No new entries. OKTA (~1.05:1, 59% above its 200-day, second tech name beside FTNT) and CRWD (~0.8:1) fail my 1:1 floor and sector limits. Holding STT at its 160.74 stop and FTNT at 154.63; keeping settled cash for a non-tech washout that clears 1:1 without heavy extension."
@@ -89,10 +93,6 @@
     {
      "date": "2026-10-16",
      "note": "No new entries: OKTA is about 1.09:1 but 58% above its 200-day and a second tech-sector name next to FTNT, CRWD is 0.85:1, and TWST is 0.37:1. STT and FTNT stay on their current stops."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "Passing on OKTA (1.08:1, but 58% above its 200-day and a second Technology name next to FTNT) and CRWD (0.85:1). Holding STT at its 160.74 breakeven stop and FTNT at 154.63; keep settled cash for a non-tech washout that clears 1:1 with less extension."
     }
    ]
   },
@@ -116,15 +116,15 @@
    "notes": [
     {
      "date": "2026-10-16",
+     "note": "Took the 0.25+ credit trigger on IWM with one contract at $75 max loss. Game-plan strikes were 288/289, but live candidate 285/286 was the one that met the credit trigger, so live prices governed. Manage at 50% profit or the default stop."
+    },
+    {
+     "date": "2026-10-16",
      "note": "No trade: best live credits are XLE 0.20, IWM 0.18, TLT 0.18 and EEM 0.15 on $1 widths (15-20%), all below my 25% trigger. Broker shows no positions, so there is nothing to manage. Stay flat and recheck for 25%+ credit."
     },
     {
      "date": "2026-10-16",
      "note": "No trade: best live credit is IWM 285/286 at 0.15 (15% of the $1 width), below my 25% trigger. Stay flat and recheck for 25%+ credit on a $1 width."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "Pass: best live credit is IWM 285/286 at 0.18 (18% of width) and XLE 0.16. At 0.20 delta the expected value is about 0.8\u00d70.18 \u2212 0.2\u00d70.82 \u2248 \u22120.02 per share before slippage, so no edge. Keep cash settled and recheck for 25%+ credit on a $1 width."
     }
    ]
   },
@@ -132,58 +132,62 @@
    "id": "baseline",
    "name": "Index Booth (SPY)",
    "competing": false,
-   "equity": 985.5,
+   "equity": 985.05,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.99,
-   "progress_pct": 9.86,
+   "progress_pct": 9.85,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 1.5,
-   "risk_adj": -0.29,
+   "risk_adj": -0.3,
    "notes": []
   },
   {
    "id": "monkey",
    "name": "Monkey Business",
    "competing": false,
-   "equity": 983.5,
+   "equity": 983.13,
    "cash": 577.89,
    "available": 577.89,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.98,
-   "progress_pct": 9.84,
+   "progress_pct": 9.83,
    "open": 1,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 1.9,
-   "risk_adj": -0.33,
+   "risk_adj": -0.34,
    "notes": []
   },
   {
    "id": "blackswan",
    "name": "Black Swan & Co.",
    "competing": true,
-   "equity": 707.5,
+   "equity": 722.5,
    "cash": 143.5,
    "available": 143.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.71,
-   "progress_pct": 7.07,
+   "multiple": 0.72,
+   "progress_pct": 7.22,
    "open": 5,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 31.6,
-   "risk_adj": -0.92,
+   "risk_adj": -0.88,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "Passing: open bearish debit is about 80% of equity, settled cash is $143.50, and the only fresh candidates are correlated Tech shorts or untriggered XLI/SPY insurance. RKLB is no longer in the scan, so the game-plan entry is dropped. Revisit when a position closes and frees settled cash, or if the r"
+    },
     {
      "date": "2026-10-16",
      "note": "Passing again: open bearish debit is about 80% of equity, settled cash is $143.50, and the radar is calm at 25. APP, AAOI and SPY insurance would add correlated or concentrated risk, and XLI hasn't broken down. Revisit once a position closes and frees settled cash, or if the radar rises above 40."
@@ -191,10 +195,6 @@
     {
      "date": "2026-10-16",
      "note": "Passing: open bearish debit is about 80% of equity across correlated breakdown bets, cash is only $143.50, and XLI is not yet below its 164.66 breakdown level. Revisit after a position closes and frees settled cash, or if the radar rises above 40."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "Open bearish debit is about 79% of equity with only $143 settled cash, so I'm passing on all candidates. The radar is calm at 24 and no setup clears the bar. Revisit only after a position closes and frees settled cash, or if the radar rises above 40."
     }
    ]
   },
@@ -257,12 +257,12 @@
   {
    "date": "2026-10-16",
    "agents": {
-    "trend": 1066.32,
-    "meanrev": 998.62,
+    "trend": 1090.09,
+    "meanrev": 997.6,
     "volsell": 1000.0,
-    "baseline": 985.5,
-    "monkey": 983.5,
-    "blackswan": 707.5,
+    "baseline": 985.05,
+    "monkey": 983.13,
+    "blackswan": 722.5,
     "scalper": 1000.02
    }
   }
@@ -279,8 +279,8 @@
    "qty": 1,
    "entry": 0.96,
    "last": null,
-   "mark": 1.71,
-   "stop": 12.66,
+   "mark": 1.78,
+   "stop": 12.53,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:38-04:00",
    "thesis": "CIFR broke below its 55-day low at 10.70 on 2.9x volume and is 43% below its 200-day SMA, so the downtrend is established; the stop at 12.81 sits above the breakdown level.",
@@ -301,7 +301,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.57,
+   "mark": 0.63,
    "stop": 6.94,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -323,8 +323,8 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 2.36,
-   "stop": 10.76,
+   "mark": 2.42,
+   "stop": 10.74,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
    "thesis": "CWVX broke below its 55-day low at 8.87 on 13.8x relative volume and sits 69% below its 200-day SMA, a strong, high-conviction breakdown; the 10.76 stop sits above the breakdown level.",
@@ -366,7 +366,7 @@
    "opt_type": null,
    "qty": 4.0,
    "entry": 89.48,
-   "last": 86.13,
+   "last": 85.8,
    "mark": null,
    "stop": 83.87,
    "expiry": null,
@@ -388,7 +388,7 @@
    "opt_type": null,
    "qty": 1.013,
    "entry": 49.36,
-   "last": 50.07,
+   "last": 50.155,
    "mark": null,
    "stop": 47.12,
    "expiry": null,
@@ -410,7 +410,7 @@
    "opt_type": null,
    "qty": 1.2448,
    "entry": 160.74,
-   "last": 163.41,
+   "last": 163.31,
    "mark": null,
    "stop": 160.74,
    "expiry": null,
@@ -432,7 +432,7 @@
    "opt_type": null,
    "qty": 1.4876,
    "entry": 168.29,
-   "last": 169.23,
+   "last": 168.63,
    "mark": null,
    "stop": 154.63,
    "expiry": null,
@@ -454,7 +454,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 762.01,
+   "last": 761.66,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -476,7 +476,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 762.01,
+   "last": 761.66,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -498,7 +498,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 762.01,
+   "last": 761.66,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -520,7 +520,7 @@
    "opt_type": null,
    "qty": 0.97,
    "entry": 435.168,
-   "last": 418.15,
+   "last": 417.775,
    "mark": null,
    "stop": 401.48,
    "expiry": null,
@@ -543,7 +543,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 1.01,
+   "mark": 1.09,
    "stop": 51.35,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -565,8 +565,8 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.23,
-   "stop": 34.48,
+   "mark": 1.27,
+   "stop": 34.17,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
    "thesis": "IREN broke its 20-day low at 32.71, is down 16% over 20 days and sits below its 200-day in a calm radar (15), so a bear put spread capped at $150 targets the breakdown.",
@@ -587,7 +587,7 @@
    "qty": 1,
    "entry": 0.86,
    "last": null,
-   "mark": 0.89,
+   "mark": 0.92,
    "stop": 22.38,
    "expiry": "2027-01-15",
    "opened": "2026-10-15T13:07:01-04:00",
@@ -609,7 +609,7 @@
    "qty": 1,
    "entry": 1.5,
    "last": null,
-   "mark": 1.16,
+   "mark": 1.18,
    "stop": 131.8,
    "expiry": "2027-01-15",
    "opened": "2026-10-16T10:06:17-04:00",
@@ -631,7 +631,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 1.35,
+   "mark": 1.33,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -644,6 +644,20 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-16T15:07:29-04:00",
+   "type": "unfilled",
+   "agent": "volsell",
+   "symbol": "IWM",
+   "note": "credit 0.25 not filled"
+  },
+  {
+   "time": "2026-10-16T15:06:42-04:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-60%)"
+  },
   {
    "time": "2026-10-16T14:36:32-04:00",
    "type": "exit_unfilled",
@@ -1164,20 +1178,6 @@
    "agent": "volsell",
    "symbol": "QQQ",
    "note": "credit 0.29 not filled"
-  },
-  {
-   "time": "2026-10-15T15:06:15-04:00",
-   "type": "rule_block",
-   "agent": "blackswan",
-   "symbol": "MTZ",
-   "note": "no put spread affordable within $100.00"
-  },
-  {
-   "time": "2026-10-15T14:36:32-04:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "NVDA, SPY, QQQ, MSFT, META",
-   "note": "normal: The regime is calm with SPY and most megacap tech in clean 1-minute uptrends, so I'm moving from defensive to normal for the afternoon. I'm keeping the 0.5% target, 0.25% stop, 30-minute limit, and 3 slices, and AMD stays on the list only because the code enforces its extension cap."
   }
  ],
  "reviews": [],
@@ -1911,18 +1911,18 @@
     "trend": 35,
     "drawdown": 17,
     "volatility": 0,
-    "breadth": 67,
+    "breadth": 68,
     "credit": 53,
     "safety": 0,
     "economy": 6
    },
    "facts": {
     "spy_vs_sma50_pct": -0.9,
-    "spy_vs_sma200_pct": 5.2,
+    "spy_vs_sma200_pct": 5.1,
     "spy_off_high_pct": 2.5,
     "spy_iv_pct": 13.2,
     "spy_realized_vol_pct": 9.6,
-    "pct_above_50d": 38.1,
+    "pct_above_50d": 37.9,
     "breadth_sample": 507,
     "junk_vs_treasuries_20d_pct": -1.12,
     "havens_vs_spy_20d_pct": -4.3
@@ -1936,7 +1936,7 @@
     "junk_bond_spread_pct": 3.25,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-16T14:36-04:00"
+   "at": "2026-10-16T15:06-04:00"
   },
   "history": [
    {
@@ -1971,21 +1971,21 @@
   }
  },
  "compliance_today": {
-  "approved": 10,
+  "approved": 11,
   "denied": 0,
   "last_denied": null
  },
  "playbooks": {
   "scalper": {
    "date": "2026-10-16",
-   "made_at": "2026-10-16T14:37-04:00",
+   "made_at": "2026-10-16T15:07-04:00",
    "watch": [
     "SPY",
     "QQQ",
     "IWM"
    ],
    "aggression": "stand_down",
-   "why": "SPY, QQQ and IWM are all below VWAP on the day, most of the candidates are weak, and today's VWAP bounces have mostly failed, so I'm staying flat. Only $41.74 is settled, so trading capacity is minimal anyway. I'll reassess if SPY or QQQ reclaims VWAP on rising volume.",
+   "why": "SPY, QQQ, IWM, and nearly every candidate are below VWAP with 1-minute trends down, and today's bounces have mostly failed. With about 40 minutes left and only $41.74 settled, the risk/reward doesn't justify new trades. The overnight plan's note that IWM is up 1.34% conflicts with the live data (-1.",
    "slices": 1,
    "target_pct": 0.5,
    "stop_pct": 0.3,

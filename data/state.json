@@ -29,13 +29,13 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.96,
-     "mark": 1.71,
+     "mark": 1.78,
      "expiry": "2026-11-06",
      "strike": 10.0,
      "delta": -0.39,
      "cost": 98.0,
      "direction": "short",
-     "stop": 12.66,
+     "stop": 12.53,
      "atr": 1.223,
      "opened": "2026-10-14T11:35:38-04:00",
      "thesis": "CIFR broke below its 55-day low at 10.70 on 2.9x volume and is 43% below its 200-day SMA, so the downtrend is established; the stop at 12.81 sits above the breakdown level.",
@@ -47,8 +47,8 @@
       "pct_vs_sma200": -43.3
      },
      "sector": "Technology",
-     "low_water": 8.995,
-     "exit_half_spread": 0.045
+     "low_water": 8.865,
+     "exit_half_spread": 0.07
     },
     "pos-ea0031af4c": {
      "kind": "option",
@@ -57,7 +57,7 @@
      "opt_type": "put",
      "qty": 2,
      "entry": 0.55,
-     "mark": 0.57,
+     "mark": 0.63,
      "expiry": "2026-11-06",
      "strike": 6.0,
      "delta": -0.46,
@@ -76,7 +76,7 @@
      },
      "sector": "Technology",
      "low_water": 5.74,
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.02
     },
     "pos-bf6606febd": {
      "kind": "option",
@@ -85,13 +85,13 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.75,
-     "mark": 2.36,
+     "mark": 2.42,
      "expiry": "2026-11-20",
      "strike": 8.0,
      "delta": -0.38,
      "cost": 182.0,
      "direction": "short",
-     "stop": 10.76,
+     "stop": 10.74,
      "atr": 1.344,
      "opened": "2026-10-14T12:10:37-04:00",
      "thesis": "CWVX broke below its 55-day low at 8.87 on 13.8x relative volume and sits 69% below its 200-day SMA, a strong, high-conviction breakdown; the 10.76 stop sits above the breakdown level.",
@@ -103,8 +103,8 @@
       "pct_vs_sma200": -68.6
      },
      "sector": "Broad market / other",
-     "low_water": 6.86,
-     "exit_half_spread": 0.115
+     "low_water": 6.705,
+     "exit_half_spread": 0.18
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -153,7 +153,7 @@
       "pct_vs_sma200": 34.3
      },
      "sector": "Consumer Staples",
-     "last": 86.13,
+     "last": 85.8,
      "high_water": 89.97
     },
     "pos-2ce62f642c": {
@@ -175,8 +175,8 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 50.07,
-     "high_water": 50.095
+     "last": 50.155,
+     "high_water": 50.155
     }
    },
    "status": "active",
@@ -184,7 +184,7 @@
    "status_at": null,
    "closed": 1,
    "wins": 0,
-   "peak": 1066.32,
+   "peak": 1090.09,
    "max_dd": 0.1145,
    "notes": [
     {
@@ -322,6 +322,10 @@
     {
      "date": "2026-10-16",
      "note": "Only $0.58 is settled, so no entries are possible. Holding all stops. ETSY is below its 87.35 breakout level; if it closes there, exit at the close, since proceeds settle T+1 either way. Redeploy once cash settles."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Only $0.58 is settled, so no entry is affordable. Hold all stops. ETSY (85.80) is below its 87.35 breakout level; exit at the close if it stays there, as planned."
     }
    ],
    "last_exits": {
@@ -466,7 +470,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 163.41
+     "last": 163.31
     },
     "pos-6f6a3c3d01": {
      "kind": "stock",
@@ -486,7 +490,7 @@
       "pct_vs_sma5": -8.4
      },
      "sector": "Broad market / other",
-     "last": 169.23
+     "last": 168.63
     }
    },
    "status": "active",
@@ -644,6 +648,10 @@
     {
      "date": "2026-10-16",
      "note": "No new entries. OKTA (~1.05:1, 59% above its 200-day, second tech name beside FTNT) and CRWD (~0.8:1) fail my 1:1 floor and sector limits. Holding STT at its 160.74 stop and FTNT at 154.63; keeping settled cash for a non-tech washout that clears 1:1 without heavy extension."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "No entries: OKTA (~1.1:1, 58% above its 200-day, tech) and CRWD (~0.85:1) fail my 1:1 floor or are too extended. Holding STT at its 160.74 stop and FTNT at 154.63; keeping settled cash for a non-tech washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -854,6 +862,10 @@
     {
      "date": "2026-10-16",
      "note": "No trade: best live credits are XLE 0.20, IWM 0.18, TLT 0.18 and EEM 0.15 on $1 widths (15-20%), all below my 25% trigger. Broker shows no positions, so there is nothing to manage. Stay flat and recheck for 25%+ credit."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Took the 0.25+ credit trigger on IWM with one contract at $75 max loss. Game-plan strikes were 288/289, but live candidate 285/286 was the one that met the credit trigger, so live prices governed. Manage at 50% profit or the default stop."
     }
    ],
    "last_exits": {},
@@ -931,7 +943,7 @@
      }
     ]
    },
-   "min_trade_seen": 80.0,
+   "min_trade_seen": 75.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -978,7 +990,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 762.01
+     "last": 761.66
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -994,7 +1006,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 762.01
+     "last": 761.66
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1010,7 +1022,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 762.01
+     "last": 761.66
     }
    },
    "status": "active",
@@ -1019,7 +1031,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.01,
-   "max_dd": 0.0145,
+   "max_dd": 0.015,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -1043,7 +1055,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 418.15
+     "last": 417.775
     }
    },
    "status": "active",
@@ -1084,7 +1096,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.01,
+     "mark": 1.09,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -1104,9 +1116,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.195,
+     "exit_half_spread": 0.29,
      "peak_mark": 1.25,
-     "low_water": 40.91
+     "low_water": 40.33
     },
     "pos-a0895dfd5c": {
      "kind": "debit_spread",
@@ -1130,14 +1142,14 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.23,
+     "mark": 1.27,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
      "cost": 130.0,
      "play": "weak_stock",
      "direction": "short",
-     "stop": 34.48,
+     "stop": 34.17,
      "atr": 2.431,
      "opened": "2026-10-14T12:10:57-04:00",
      "thesis": "IREN broke its 20-day low at 32.71, is down 16% over 20 days and sits below its 200-day in a calm radar (15), so a bear put spread capped at $150 targets the breakdown.",
@@ -1150,9 +1162,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.29,
+     "exit_half_spread": 0.18,
      "peak_mark": 1.42,
-     "low_water": 27.185
+     "low_water": 26.875
     },
     "pos-ebf1f3ff74": {
      "kind": "debit_spread",
@@ -1176,7 +1188,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 0.89,
+     "mark": 0.92,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -1196,9 +1208,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.07,
-     "peak_mark": 0.89,
-     "low_water": 18.25
+     "exit_half_spread": 0.095,
+     "peak_mark": 0.92,
+     "low_water": 18.07
     },
     "pos-d7a488bc5f": {
      "kind": "debit_spread",
@@ -1222,7 +1234,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 1.16,
+     "mark": 1.18,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -1242,7 +1254,7 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.75,
+     "exit_half_spread": 0.615,
      "peak_mark": 1.22,
      "low_water": 124.98
     },
@@ -1268,7 +1280,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 1.35,
+     "mark": 1.33,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -1288,7 +1300,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.86,
+     "exit_half_spread": 1.815,
      "peak_mark": 1.41
     }
    },
@@ -1439,6 +1451,10 @@
     {
      "date": "2026-10-16",
      "note": "Passing again: open bearish debit is about 80% of equity, settled cash is $143.50, and the radar is calm at 25. APP, AAOI and SPY insurance would add correlated or concentrated risk, and XLI hasn't broken down. Revisit once a position closes and frees settled cash, or if the radar rises above 40."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Passing: open bearish debit is about 80% of equity, settled cash is $143.50, and the only fresh candidates are correlated Tech shorts or untriggered XLI/SPY insurance. RKLB is no longer in the scan, so the game-plan entry is dropped. Revisit when a position closes and frees settled cash, or if the r"
     }
    ],
    "last_exits": {},
@@ -1643,14 +1659,14 @@
    ],
    "playbook": {
     "date": "2026-10-16",
-    "made_at": "2026-10-16T14:37-04:00",
+    "made_at": "2026-10-16T15:07-04:00",
     "watch": [
      "SPY",
      "QQQ",
      "IWM"
     ],
     "aggression": "stand_down",
-    "why": "SPY, QQQ and IWM are all below VWAP on the day, most of the candidates are weak, and today's VWAP bounces have mostly failed, so I'm staying flat. Only $41.74 is settled, so trading capacity is minimal anyway. I'll reassess if SPY or QQQ reclaims VWAP on rising volume.",
+    "why": "SPY, QQQ, IWM, and nearly every candidate are below VWAP with 1-minute trends down, and today's bounces have mostly failed. With about 40 minutes left and only $41.74 settled, the risk/reward doesn't justify new trades. The overnight plan's note that IWM is up 1.34% conflicts with the live data (-1.",
     "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,
