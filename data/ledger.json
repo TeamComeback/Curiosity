@@ -1685,5 +1685,122 @@
   "opened": "2026-10-15T13:06:08-04:00",
   "why_entered": "ETSY broke above its 55-day high at 87.35 on 2.4x relative volume with a 16% gap above its 50-day SMA, a fresh uncorrelated breakout; 4 shares fit the cash, and the 83.87 stop risks about $22.",
   "why_exited": "agent: Failed breakout: ETSY is at 85.30, below the 87.35 breakout level that was the entry thesis. Exiting now instead of wait"
+ },
+ {
+  "time": "2026-10-16T16:40:57-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-10-19",
+  "decision": "revise",
+  "why": "SOFI and ETSY were both closed today, so the old plan's ETSY and SOFI holds are obsolete. Cash of $405.54 settles tomorrow, which makes entries affordable for the first time. Energy broke out across the scan today, and XLE and SU fit the budget.",
+  "summary": "Hold the four bearish puts (CIFR, SMR, CWVX, PLUG) and the BP stock with stops unchanged. Once proceeds settle, enter only one or two Energy breakouts if they trigger on a close: XLE above 67.90 or SU above 76.72. Keep total new risk within about $340.",
+  "watchlist": [
+   {
+    "symbol": "XLE",
+    "setup": "Energy ETF breakout above its 55-day high, roc20 +6.1%, sector breadth strong today",
+    "trigger": "Close above 67.90 on rel volume at least 1.2, after settlement",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "SU",
+    "setup": "Energy breakout, roc20 +12.6%, level 76.72 sits about 1.8% above the last price",
+    "trigger": "Close above 76.72 on rel volume at least 1.2",
+    "instrument": "stock",
+    "conviction": 3
+   }
+  ]
+ },
+ {
+  "time": "2026-10-16T16:40:57-04:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Energy"
+  ],
+  "avoid": [],
+  "why": "Energy had the largest cluster of breakouts in today's scan (OVV, COP, EOG, BP, SHEL, SU, CVX, XLE) and BP is already working. My own closed results are too small (Technology -$59, Consumer Staples -$16.88) to justify a broader tilt, so I am narrowing the focus to the sector with the cleanest curren",
+  "expires": "2026-10-30"
+ },
+ {
+  "time": "2026-10-16T16:41:14-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-10-19",
+  "decision": "keep",
+  "why": "Nothing in the fresh scan clears my 1:1 floor on the 2.5-ATR stop with a 5-day SMA target: NTAP is closest at about 0.94:1, OKTA about 0.98:1, and the rest sit between 0.2:1 and 0.9:1. Both open positions still have their stops and exit rules in place, and crash radar is calm at 24.",
+  "summary": "No new entries. Hold STT (stop at 160.74 breakeven) and FTNT (stop 154.63), and exit each on its RSI(2) or 5-day SMA rule. Keep cash settled for any washout that clears 1:1 without heavy extension.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-16T16:41:24-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-10-19",
+  "decision": "revise",
+  "why": "The fresh scan keeps IWM as the only setup with a bearish trend and rich IV (IV/RV 1.40), and the crash radar is calm at 24. I'm tightening the plan: the 0.25 credit trigger stays, but I'm adding a 35-45 DTE preference and a hard skip on any gap-up, since the news flow (Hormuz, Fed hike talk, hot PPI) raises upside-gap risk.",
+  "summary": "Stay flat unless a live IWM bear call spread (short strike about 0.20 delta, roughly 284-290, $1 wide, 21-45 DTE, preferably 35-45 DTE) can be sold for at least $0.25 credit with IWM below its recent highs and no gap-up at the open. One contract, max loss about $75-80. Pass on credits of 0.20-0.24.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Bear call spread: short call about 0.20 delta above the 270.47 close (around 284-290), long call $1 higher, 35-45 DTE preferred (21 minimum). IV 20.3% vs 20-day realized vol 14.5%, IV/RV 1.40.",
+    "trigger": "Live natural credit of at least $0.25 on the $1 width at a 21-45 DTE expiry, IWM below its recent highs at the open, and no gap-up toward the short strike. Skip 0.20-0.24.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-16T16:41:24-04:00",
+  "type": "focus",
+  "agent": "volsell",
+  "lean_in": [
+   "Broad market / other"
+  ],
+  "avoid": [
+   "Materials"
+  ],
+  "why": "Broad market is the only area where the scan shows a bearish trend with IV/RV above 1.4 (IWM, SPY). Our own results are too thin to judge (one scored pick, IWM, down 1.34%), so this is a light lean, not a conviction bet. Materials (GDX, SLV) shows IV/RV at or below 1.04, so there is no volatility ed",
+  "expires": "2026-10-30"
+ },
+ {
+  "time": "2026-10-16T16:41:39-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "After-close review",
+  "for_day": "2026-10-19",
+  "decision": "revise",
+  "why": "RKLB dropped out of the fresh scan, so the pre-market entry no longer has a basis. Open bearish debit is about 80% of equity against a ~$50-100 target, and the radar is calm at 24, so adding risk would break my own sizing rule.",
+  "summary": "No new trades tomorrow. Hold ASTS, IREN, APLD, PLD and AGCO on their stops, and only consider new put spreads if a position closes and frees settled cash or the radar rises above 40.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-16T16:41:52-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-10-19",
+  "decision": "revise",
+  "why": "Yesterday's executed trades came from AI-semis and bond names outside the current plan, and the plan's own picks fell 1-2.5%, so the broad-ETF thesis was not tested. Tech results were slightly positive (+0.82 over 6 trades), but that sample is too small to justify trading the high-ATR names against a 0.3% stop, so I'm keeping them off the watchlist.",
+  "summary": "Trade only SPY and IWM on 1.5x+ relative-volume opening-range breakouts or VWAP reclaims, with at most 1.5% extension above VWAP. Use four $250 slices, a 0.6% target, a 0.3% stop and a 45-minute limit, and be flat by the close. Drop QQQ and skip the session if neither ETF clears the volume gate.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "Opening-range breakout above the 15-minute high, or VWAP reclaim after a pullback",
+    "trigger": "Holds above the 15-minute opening-range high for 2 consecutive 2-minute bars at 1.5x+ relative volume, or reclaims VWAP on rising volume with price no more than 1.5% above VWAP",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "IWM",
+    "setup": "Opening-range breakout or VWAP reclaim, relative strength against a weak tech tape",
+    "trigger": "Breaks the 15-minute opening-range high or reclaims VWAP on at least 1.5x relative volume, with price no more than 1.5% above VWAP",
+    "instrument": "stock",
+    "conviction": 3
+   }
+  ]
  }
 ]
