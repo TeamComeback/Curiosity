@@ -308,6 +308,10 @@
     {
      "date": "2026-10-16",
      "note": "No settled cash for entries. A failed breakout that closes back below its level should be exited promptly, not held to a later check."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "[weekly] Failed breakouts should be cut fast, and that worked: ETSY lost only $17. With a tiny account, settled cash is the binding constraint, so only take high-conviction setups with strong volume and avoid being fully deployed with no cash for better ideas."
     }
    ],
    "last_exits": {
@@ -663,6 +667,10 @@
     {
      "date": "2026-10-16",
      "note": "No new entries: OKTA (~1.05:1, 57% above its 200-day, second tech name beside FTNT) and CRWD (~0.85:1) fail the 1:1 floor. Holding STT at its 160.74 stop and FTNT at 154.63; keeping settled cash for a non-tech washout that clears 1:1 without heavy extension."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "[weekly] One stopped-out trade (n=1) is noise, not evidence. Retuning on it would be overfitting. Keep the current parameters, keep the 1:1 floor and sector/extension discipline, and wait for a larger sample (about 10+ closed trades) before changing rsi_entry, stop_atr or the other settings. Capital preserva"
     }
    ],
    "last_exits": {
@@ -884,6 +892,10 @@
     {
      "date": "2026-10-16",
      "note": "Pass: best live credit is IWM 284/285 at 0.23 (23% of the $1 width), below my 0.25 trigger. Positions are flat and cash is settled. Recheck for 25%+ credit on a $1 width at 21-45 DTE."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "[weekly] Don't retune on zero closed trades. Wait for real results before changing anything. Stay disciplined on the 25%+ credit-to-width trigger and one-contract sizing, and if I do retune after a few closed trades, change only one parameter at a time."
     }
    ],
    "last_exits": {},
@@ -1468,6 +1480,10 @@
     {
      "date": "2026-10-16",
      "note": "Passing again: the book is already heavily short correlated Tech, the radar is calm at 25, and the SPY insurance and XLI setups aren't triggered. Revisit when a position closes and frees settled cash, or if the radar rises above 40."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "[weekly] A drawdown with no closed trades points to sizing and concentration, not signal parameters. Keep total bearish debit under about 50% of equity, spread it across sectors, and don't retune entries until some trades have actually closed."
     }
    ],
    "last_exits": {},
@@ -1603,7 +1619,12 @@
    "wins": 3,
    "peak": 1000.6,
    "max_dd": 0.0008,
-   "notes": [],
+   "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "[weekly] Sample of 9 trades is too small to tune on. Entries logged rel volume below the 1.5 minimum (0.44x-0.99x), so check whether min_rel_volume is actually enforced for VWAP pullbacks before relying on it. Stops filled at -0.34% to -0.36% against a 0.3% setting, so slippage is real. Revisit after 20 or m"
+    }
+   ],
    "last_exits": {
     "TSLA": "2026-10-16",
     "IWM": "2026-10-15",

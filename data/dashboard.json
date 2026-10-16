@@ -1164,14 +1164,236 @@
    "symbol": ""
   }
  ],
- "reviews": [],
+ "reviews": [
+  {
+   "date": "2026-10-16",
+   "agents": {
+    "trend": {
+     "summary": "Both closed trades this week were losses (SOFI put -$59, ETSY -$16.88) with an 11.5% max drawdown on a tiny account. Equity is still up 5.5% because of open positions, and the losses came from a tight stop on a put and a failed breakout that was cut quickly, which is the strategy working as designed. Two trades is too small a sample to justify a big retune, but false breakouts at a 55-day lookback with a 1.2x volume floor are worth filtering a bit more.",
+     "applied": [
+      {
+       "agent": "trend",
+       "param": "min_rel_volume",
+       "old": 1.2,
+       "new": 1.75,
+       "reason": "Require stronger volume confirmation to reduce failed breakouts and avoid spending scarce settled cash on marginal setups."
+      },
+      {
+       "agent": "trend",
+       "param": "opt_min_dte",
+       "old": 21,
+       "new": 30,
+       "reason": "The SOFI put was stopped out on an underlying trail, and more time value cushions option decay and noise on small positions."
+      }
+     ],
+     "stats": {
+      "equity_now": 1054.98,
+      "equity_week_ago": 1000.0,
+      "closed_trades": 2,
+      "closed_this_week": 2,
+      "week_pnl": -75.88,
+      "win_rate": 0.0,
+      "avg_win": null,
+      "avg_loss": -37.94,
+      "max_drawdown_pct": 11.5,
+      "avg_pnl_by_confidence": {
+       "3": -37.94
+      },
+      "this_week_trades": [
+       {
+        "symbol": "SOFI261127P00014500",
+        "pnl": -59.0,
+        "note": "trailing stop on underlying",
+        "thesis": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level.",
+        "confidence": 3
+       },
+       {
+        "symbol": "ETSY",
+        "pnl": -16.88,
+        "note": "agent: Failed breakout: ETSY is at 85.30, below the 87.35 breakout level that was the entry thesis. Exiting now instead of wait",
+        "thesis": "ETSY broke above its 55-day high at 87.35 on 2.4x relative volume with a 16% gap above its 50-day SMA, a fresh uncorrelated breakout; 4 shares fit the cash, and the 83.87 stop risks about $22.",
+        "confidence": 3
+       }
+      ]
+     }
+    },
+    "meanrev": {
+     "summary": "The week produced one closed trade, an SMH stop-out for -$6.10, which took equity from 1000.24 to 999.37 with a 0.7% max drawdown. One trade is far too small a sample to say the edge is broken. The RSI(2) of 1.5 was already well inside my entry threshold of 10, so a looser or tighter entry would not have changed the outcome. The recent notes show the filters (1:1 reward-to-risk floor, sector limits, extension cap) are working as intended and I'm not forcing trades.",
+     "applied": [],
+     "stats": {
+      "equity_now": 999.37,
+      "equity_week_ago": 1000.24,
+      "closed_trades": 1,
+      "closed_this_week": 1,
+      "week_pnl": -6.1,
+      "win_rate": 0.0,
+      "avg_win": null,
+      "avg_loss": -6.1,
+      "max_drawdown_pct": 0.7,
+      "avg_pnl_by_confidence": {
+       "3": -6.1
+      },
+      "this_week_trades": [
+       {
+        "symbol": "SMH",
+        "pnl": -6.1,
+        "note": "stop loss (underlying)",
+        "thesis": "SMH RSI(2) of 1.5 is a deep washout while the stock sits 15.7% above its 200-day, so the snap-back to the ~602 target should be a high-probability bounce.",
+        "confidence": 3
+       }
+      ]
+     }
+    },
+    "volsell": {
+     "summary": "Equity is flat at $1000 with 0 closed trades, 0 weekly P&L and 0% drawdown, because the credit-to-width trigger kept me out of the market. There are no wins, losses or confidence data to learn from, so any retune would be guesswork. The filters are doing their job by avoiding roughly zero or negative EV setups, so I'm keeping the parameters.",
+     "applied": [],
+     "stats": {
+      "equity_now": 1000.0,
+      "equity_week_ago": 1000.0,
+      "closed_trades": 0,
+      "closed_this_week": 0,
+      "week_pnl": 0,
+      "win_rate": null,
+      "avg_win": null,
+      "avg_loss": null,
+      "max_drawdown_pct": 0.0,
+      "avg_pnl_by_confidence": {},
+      "this_week_trades": []
+     }
+    },
+    "blackswan": {
+     "summary": "Equity fell from $1000 to $749.50 (max drawdown 31.6%) with zero closed trades, so the loss is all unrealized mark-to-market on open bearish debit spreads. The radar is calm at about 25, and the book is heavily short correlated Tech with only about $143 of settled cash. There is no closed-trade data to tune against, so I'm making only small risk-reducing changes and leaving the signal and entry parameters alone.",
+     "applied": [
+      {
+       "agent": "blackswan",
+       "param": "stop_pct",
+       "old": 0.5,
+       "new": 0.4,
+       "reason": "The 31.6% drawdown came from positions that haven't hit the 50% stop. A tighter 40% stop caps the loss per spread and frees settled cash sooner, which I need to redeploy."
+      },
+      {
+       "agent": "blackswan",
+       "param": "insurance_pct",
+       "old": 0.08,
+       "new": 0.043,
+       "reason": "The radar is calm and cash is scarce. Cutting the far-out index put budget from 8% to 4% of equity keeps more cash for real breakdown setups, and the insurance only pays off in a stress event."
+      }
+     ],
+     "stats": {
+      "equity_now": 749.5,
+      "equity_week_ago": 1000.0,
+      "closed_trades": 0,
+      "closed_this_week": 0,
+      "week_pnl": 0,
+      "win_rate": null,
+      "avg_win": null,
+      "avg_loss": null,
+      "max_drawdown_pct": 31.6,
+      "avg_pnl_by_confidence": {},
+      "this_week_trades": []
+     }
+    },
+    "scalper": {
+     "summary": "Equity is flat at $1000.02 after 9 trades, with a 33% win rate and a max drawdown of 0.1%. Average win is about 2x average loss (0.47 vs 0.23), so expectancy is roughly breakeven. Only one trade reached the 0.6% target, while several time-limit exits ended slightly positive, so the target looks a bit far for this chop. The sample is too small to justify more changes.",
+     "applied": [
+      {
+       "agent": "scalper",
+       "param": "target_pct",
+       "old": 0.6,
+       "new": 0.5,
+       "reason": "Only 1 of 9 trades hit 0.6%, and the winning time-limit exits peaked around 0.3%. A closer target should convert more of these into wins while keeping the reward-to-risk ratio at about 1.7:1 against t"
+      }
+     ],
+     "stats": {
+      "equity_now": 1000.02,
+      "equity_week_ago": null,
+      "closed_trades": 9,
+      "closed_this_week": 9,
+      "week_pnl": 0.02,
+      "win_rate": 33.3,
+      "avg_win": 0.47,
+      "avg_loss": -0.23,
+      "max_drawdown_pct": 0.1,
+      "avg_pnl_by_confidence": {
+       "3": 0.0
+      },
+      "this_week_trades": [
+       {
+        "symbol": "TSLA",
+        "pnl": -0.33,
+        "note": "lost VWAP: setup failed (-0.20%)",
+        "thesis": "VWAP pullback bounce on TSLA: 0.54x volume, +0.00% vs VWAP; target +0.6%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "IWM",
+        "pnl": -0.01,
+        "note": "time limit, 30 min (-0.03%)",
+        "thesis": "VWAP pullback bounce on IWM: 0.44x volume, +0.11% vs VWAP; target +0.5%, stop -0.25%",
+        "confidence": 3
+       },
+       {
+        "symbol": "TSLA",
+        "pnl": -0.41,
+        "note": "stop (-0.34%)",
+        "thesis": "VWAP pullback bounce on TSLA: 1.46x volume, +0.40% vs VWAP; target +0.6%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "AVGO",
+        "pnl": -0.15,
+        "note": "lost VWAP: setup failed (-0.12%)",
+        "thesis": "VWAP pullback bounce on AVGO: 0.99x volume, +0.02% vs VWAP; target +0.6%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "NVDA",
+        "pnl": 0.84,
+        "note": "target hit (+0.68%)",
+        "thesis": "VWAP pullback bounce on NVDA: 0.8x volume, +0.25% vs VWAP; target +0.6%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SMH",
+        "pnl": 0.31,
+        "note": "time limit, 30 min (+0.30%)",
+        "thesis": "VWAP pullback bounce on SMH: 0.61x volume, +0.21% vs VWAP; target +0.6%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "AVGO",
+        "pnl": -0.42,
+        "note": "stop (-0.36%)",
+        "thesis": "VWAP pullback bounce on AVGO: 1.31x volume, +0.31% vs VWAP; target +0.6%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "TLT",
+        "pnl": -0.06,
+        "note": "time limit, 27 min (-0.03%)",
+        "thesis": "VWAP pullback bounce on TLT: 4.19x volume, +0.19% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "NVDA",
+        "pnl": 0.25,
+        "note": "time limit, 26 min (+0.16%)",
+        "thesis": "VWAP pullback bounce on NVDA: 1.25x volume, +0.28% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       }
+      ]
+     }
+    }
+   }
+  }
+ ],
  "params": {
   "trend": {
    "breakout_lookback": 55,
    "stop_atr": 2.0,
    "trail_atr": 3.0,
-   "min_rel_volume": 1.2,
-   "opt_min_dte": 21,
+   "min_rel_volume": 1.75,
+   "opt_min_dte": 30,
    "opt_max_dte": 60,
    "opt_delta": 0.5
   },
@@ -1195,7 +1417,7 @@
    "min_iv_rv": 1.1
   },
   "scalper": {
-   "target_pct": 0.6,
+   "target_pct": 0.5,
    "stop_pct": 0.3,
    "max_hold_min": 45,
    "slices": 4,
@@ -1210,8 +1432,8 @@
    "opt_max_dte": 120,
    "opt_delta": 0.4,
    "spread_width_pct": 0.05,
-   "insurance_pct": 0.08,
-   "stop_pct": 0.5,
+   "insurance_pct": 0.043,
+   "stop_pct": 0.4,
    "exit_dte": 21,
    "leveraged_max_days": 5
   }

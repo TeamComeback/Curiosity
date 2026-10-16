@@ -1327,5 +1327,35 @@
   "agent": "scalper",
   "note": "After-close review: revise. Yesterday's executed trades came from AI-semis and bond names outside the current plan, and the plan's own picks fell 1-2.5%, so the broad-ETF thesis was not tested. Tech results were slightly positive (+0.82 over 6 trades), but that sample is too small to justify trading the high-ATR names against a 0.3% stop, so I'm keeping them off the watchlist.",
   "symbol": "SPY, IWM"
+ },
+ {
+  "time": "2026-10-16T17:30:04-04:00",
+  "type": "param_change",
+  "agent": "trend",
+  "note": "min_rel_volume: 1.2 -> 1.75 (Require stronger volume confirmation to reduce failed breakouts and avoid spending scarce settled cash on marginal setups.)"
+ },
+ {
+  "time": "2026-10-16T17:30:04-04:00",
+  "type": "param_change",
+  "agent": "trend",
+  "note": "opt_min_dte: 21 -> 30 (The SOFI put was stopped out on an underlying trail, and more time value cushions option decay and noise on small positions.)"
+ },
+ {
+  "time": "2026-10-16T17:30:19-04:00",
+  "type": "param_change",
+  "agent": "blackswan",
+  "note": "stop_pct: 0.5 -> 0.4 (The 31.6% drawdown came from positions that haven't hit the 50% stop. A tighter 40% stop caps the loss per spread and frees settled cash sooner, which I need to redeploy.)"
+ },
+ {
+  "time": "2026-10-16T17:30:19-04:00",
+  "type": "param_change",
+  "agent": "blackswan",
+  "note": "insurance_pct: 0.08 -> 0.043 (The radar is calm and cash is scarce. Cutting the far-out index put budget from 8% to 4% of equity keeps more cash for real breakdown setups, and the insurance only pays off in a stress event.)"
+ },
+ {
+  "time": "2026-10-16T17:30:27-04:00",
+  "type": "param_change",
+  "agent": "scalper",
+  "note": "target_pct: 0.6 -> 0.5 (Only 1 of 9 trades hit 0.6%, and the winning time-limit exits peaked around 0.3%. A closer target should convert more of these into wins while keeping the reward-to-risk ratio at about 1.7:1 against t)"
  }
 ]
