@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T15:36-04:00",
+ "updated": "2026-10-16T09:37-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -11,7 +11,7 @@
  "regime": {
   "spy_trend": "up",
   "spy_vs_sma200_pct": 6.6,
-  "spy_roc20_pct": 2.1,
+  "spy_roc20_pct": 1.2,
   "crash_radar": 16
  },
  "start_balance": 1000.0,
@@ -34,22 +34,26 @@
  "agents": [
   {
    "id": "trend",
-   "name": "Trend agent",
+   "name": "Trend Co.",
    "competing": true,
-   "equity": 919.06,
-   "cash": 50.58,
+   "equity": 934.96,
+   "cash": 115.08,
    "available": 50.58,
-   "settling": 0,
+   "settling": 64.5,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.92,
-   "progress_pct": 9.19,
-   "open": 6,
-   "closed": 0,
-   "win_rate": null,
+   "multiple": 0.93,
+   "progress_pct": 9.35,
+   "open": 5,
+   "closed": 1,
+   "win_rate": 0.0,
    "max_dd_pct": 11.1,
-   "risk_adj": -0.73,
+   "risk_adj": -0.59,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "No candidates today and only $50.58 available, so hold all stops. SOFI put closed out at its trailing stop. Watch ETSY's 87.35 breakout level and wait for settled cash before new entries."
+    },
     {
      "date": "2026-10-15",
      "note": "Cash is $50.58 with no affordable, uncorrelated 55-day setup. FMC's put was blocked and would add to the bearish cluster, so I'm holding all stops and waiting for settled cash."
@@ -57,31 +61,31 @@
     {
      "date": "2026-10-15",
      "note": "Cash is $50.58 with no affordable, uncorrelated 55-day setup live. FMC's put was blocked and would add to the bearish cluster, so hold all stops and wait for settled cash."
-    },
-    {
-     "date": "2026-10-15",
-     "note": "Cash is $50.58, too little for any affordable, uncorrelated 55-day breakout (V, SAP, VRT, KORU and ETSY are unaffordable or already held). FMC's put is the only other breakdown and would add to the bearish cluster, so I'm holding all stops and waiting for settled cash."
     }
    ]
   },
   {
    "id": "meanrev",
-   "name": "Mean-reversion agent",
+   "name": "Snapback Partners",
    "competing": true,
-   "equity": 1001.44,
+   "equity": 1004.23,
    "cash": 793.81,
-   "available": 699.98,
-   "settling": 93.83,
+   "available": 793.81,
+   "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 10.01,
+   "progress_pct": 10.04,
    "open": 1,
    "closed": 1,
    "win_rate": 0.0,
    "max_dd_pct": 0.3,
-   "risk_adj": 0.03,
+   "risk_adj": 0.08,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "Every washout candidate today has reward-to-risk of about 0.3-0.6:1 (SOXX ~0.55, SMH ~0.58, SMCI ~0.54, TSM ~0.6, XLK ~0.61, SNDK ~0.34), all under my 1:1 floor. Passing. STT stop moved to breakeven 160.74 and held on its default exits. Keep settled cash for a washout whose snap-back target is at le"
+    },
     {
      "date": "2026-10-15",
      "note": "No entries again: every washout's 2.5-ATR stop is still well beyond its snap-back target (best about 0.7:1 vs my 1:1 floor). Holding STT on default exits (stop 152.41, exit on RSI(2)>70 or close above the 5-day SMA) and keeping ~$700 settled cash for a setup where the target is at least as far as th"
@@ -89,16 +93,12 @@
     {
      "date": "2026-10-15",
      "note": "No entries again: the best washouts (SOXX, SMCI) are about 0.7:1 reward-to-risk, below my 1:1 floor. SMH was stopped out for -$6.10, so the stop-out lesson is that deep washouts in names far above their 200-day can keep falling. Holding STT on its default exits and keeping settled cash."
-    },
-    {
-     "date": "2026-10-15",
-     "note": "Passed again: the best washouts (SOXX ~0.7:1, SMCI ~0.7:1) are below my 1:1 reward-to-risk floor. Holding STT on default exits and keeping settled cash for a tighter setup."
     }
    ]
   },
   {
    "id": "volsell",
-   "name": "Vol-selling agent",
+   "name": "Premium House",
    "competing": true,
    "equity": 1000.0,
    "cash": 1000.0,
@@ -115,31 +115,31 @@
    "risk_adj": 0.0,
    "notes": [
     {
+     "date": "2026-10-16",
+     "note": "Flat. Best live credit/width is IWM 289/288 bear call at 0.24 (24%), just under the 0.25 trigger, so pass. Recheck IWM for 0.25+ on the $1 width; the QQQ spread in my notes is not in the ledger, so there is nothing to manage."
+    },
+    {
      "date": "2026-10-15",
      "note": "Game plan only watched IWM, but live QQQ credit of 0.29 on $71 risk beat the 0.25 trigger, so I took the unplanned setup. Keep position small and respect the 695 underlying stop given the hawkish-Fed and oil gap risk."
     },
     {
      "date": "2026-10-15",
      "note": "Passed again. Best live credit/width is XLE 0.17 (17%) and IWM 0.16 (16%), both below the 0.25 trigger, so there is no edge after slippage. Stay flat and recheck IWM at 0.25+ on the $1 width."
-    },
-    {
-     "date": "2026-10-15",
-     "note": "Passed: best live candidate is IWM 288/289 bear call at 0.17 credit (17% of width), below the 0.25 trigger. SPY, XLE and TLT are 8-15% of width. Stay flat and recheck IWM at 0.25+ on the $1 width."
     }
    ]
   },
   {
    "id": "baseline",
-   "name": "SPY benchmark",
+   "name": "Index Booth (SPY)",
    "competing": false,
-   "equity": 998.29,
+   "equity": 998.6,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 9.98,
+   "progress_pct": 9.99,
    "open": 3,
    "closed": 0,
    "win_rate": null,
@@ -149,41 +149,45 @@
   },
   {
    "id": "monkey",
-   "name": "Random monkey",
+   "name": "Monkey Business",
    "competing": false,
-   "equity": 997.26,
+   "equity": 988.24,
    "cash": 577.89,
    "available": 577.89,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.0,
-   "progress_pct": 9.97,
+   "multiple": 0.99,
+   "progress_pct": 9.88,
    "open": 1,
    "closed": 0,
    "win_rate": null,
-   "max_dd_pct": 0.3,
-   "risk_adj": -0.05,
+   "max_dd_pct": 1.2,
+   "risk_adj": -0.24,
    "notes": []
   },
   {
    "id": "blackswan",
    "name": "Black Swan & Co.",
    "competing": true,
-   "equity": 932.5,
+   "equity": 947.5,
    "cash": 643.5,
    "available": 643.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.93,
-   "progress_pct": 9.32,
+   "multiple": 0.95,
+   "progress_pct": 9.47,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 6.8,
-   "risk_adj": -1.0,
+   "risk_adj": -0.78,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "The overnight plan's RKLB idea isn't in today's candidate list, so I dropped it. Total open risk is now near 45% of equity, so I'm adding only one small, uncorrelated position and passing on VRT and PLD for budget reasons."
+    },
     {
      "date": "2026-10-15",
      "note": "Passing today. Technology bearish exposure (ASTS, IREN, APLD, about $330 at cost) is already concentrated and correlated. MTZ failed to fit $60 and $100 budgets, and paying up to the $186 max would push Tech risk toward half of equity. SPY insurance and XLI don't meet their triggers. Revisit MTZ onl"
@@ -191,10 +195,6 @@
     {
      "date": "2026-10-15",
      "note": "Skipped IREN (already held), APLD (already held), XLI (not in a downtrend) and SPY insurance (no radar or trend trigger). Kept Technology exposure in check and sized MTZ to a budget that can fill one contract."
-    },
-    {
-     "date": "2026-10-15",
-     "note": "Technology bearish exposure is already concentrated across ASTS, IREN and APLD, so MTZ is sized at $60 instead of the 15%-of-equity rule. Skip SPY insurance until SPY breaks its 50-day, and keep total open risk near 40% of equity."
     }
    ]
   },
@@ -204,8 +204,8 @@
    "competing": true,
    "equity": 999.66,
    "cash": 999.66,
-   "available": 833.08,
-   "settling": 166.58,
+   "available": 999.66,
+   "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
@@ -253,31 +253,21 @@
     "blackswan": 932.5,
     "scalper": 999.66
    }
+  },
+  {
+   "date": "2026-10-16",
+   "agents": {
+    "trend": 934.96,
+    "meanrev": 1004.23,
+    "volsell": 1000.0,
+    "baseline": 998.6,
+    "monkey": 988.24,
+    "blackswan": 947.5,
+    "scalper": 999.66
+   }
   }
  ],
  "positions": [
-  {
-   "agent": "trend",
-   "position_id": "pos-5f3108fb3d",
-   "kind": "option",
-   "symbol": "SOFI261127P00014500",
-   "underlying": "SOFI",
-   "structure": null,
-   "opt_type": "put",
-   "qty": 1,
-   "entry": 1.21,
-   "last": null,
-   "mark": 0.83,
-   "stop": 15.2,
-   "expiry": "2026-11-27",
-   "opened": "2026-10-14T11:16:18-04:00",
-   "thesis": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level.",
-   "confidence": 3,
-   "cost": 123.5,
-   "realized": null,
-   "play": null,
-   "width": null
-  },
   {
    "agent": "trend",
    "position_id": "pos-a3a860ab78",
@@ -289,7 +279,7 @@
    "qty": 1,
    "entry": 0.96,
    "last": null,
-   "mark": 1.16,
+   "mark": 1.28,
    "stop": 12.81,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:38-04:00",
@@ -311,7 +301,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.47,
+   "mark": 0.46,
    "stop": 6.94,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -333,7 +323,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 1.55,
+   "mark": 1.75,
    "stop": 10.76,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -376,7 +366,7 @@
    "opt_type": null,
    "qty": 4.0,
    "entry": 89.48,
-   "last": 88.87,
+   "last": 89.97,
    "mark": null,
    "stop": 83.87,
    "expiry": null,
@@ -398,9 +388,9 @@
    "opt_type": null,
    "qty": 1.2448,
    "entry": 160.74,
-   "last": 166.8,
+   "last": 169.04,
    "mark": null,
-   "stop": 152.41,
+   "stop": 160.74,
    "expiry": null,
    "opened": "2026-10-14T11:16:27-04:00",
    "thesis": "STT RSI(2) washout (0.5) while still 2.6% above its 200-day; the stop is about 5.1% away against a roughly 7% snap-back target, so reward-to-risk is about 1.4:1, the best of the candidates.",
@@ -420,7 +410,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 771.95,
+   "last": 772.195,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -442,7 +432,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 771.95,
+   "last": 772.195,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -464,7 +454,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 771.95,
+   "last": 772.195,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -486,7 +476,7 @@
    "opt_type": null,
    "qty": 0.97,
    "entry": 435.168,
-   "last": 432.345,
+   "last": 423.04,
    "mark": null,
    "stop": 401.48,
    "expiry": null,
@@ -509,7 +499,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 0.95,
+   "mark": 0.91,
    "stop": 51.35,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -531,7 +521,7 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.22,
+   "mark": 1.29,
    "stop": 35.53,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
@@ -553,7 +543,7 @@
    "qty": 1,
    "entry": 0.86,
    "last": null,
-   "mark": 0.72,
+   "mark": 0.84,
    "stop": 22.38,
    "expiry": "2027-01-15",
    "opened": "2026-10-15T13:07:01-04:00",
@@ -566,6 +556,34 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-16T09:37:28-04:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "SPY, IWM, QQQ",
+   "note": "defensive: Tape is calm with tiny ranges (SPY 0.16%, QQQ 0.37%) and no setups yet, so I'm keeping size small and limiting trades to the three most liquid index ETFs. The tighter target and stop fit the narrow ranges better than the overnight 0.5%/0.3% plan."
+  },
+  {
+   "time": "2026-10-16T09:37:20-04:00",
+   "type": "unfilled",
+   "agent": "blackswan",
+   "symbol": "JNK",
+   "note": "debit 0.9 not filled"
+  },
+  {
+   "time": "2026-10-16T09:36:24-04:00",
+   "type": "close",
+   "agent": "trend",
+   "symbol": "SOFI261127P00014500",
+   "qty": 1,
+   "entry": 1.21,
+   "exit": 0.67,
+   "pnl": -59.0,
+   "note": "trailing stop on underlying",
+   "opened": "2026-10-14T11:16:18-04:00",
+   "confidence": 3,
+   "thesis": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level."
+  },
   {
    "time": "2026-10-16T07:41:34-04:00",
    "type": "plan",
@@ -1005,27 +1023,6 @@
    "stop": 366.05,
    "thesis": "VWAP pullback bounce on TSLA: 0.54x volume, +0.00% vs VWAP; target +0.6%, stop -0.3%",
    "confidence": 3
-  },
-  {
-   "time": "2026-10-14T12:36:12-04:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "BAC, AAPL, MU, TSLA, SPY",
-   "note": "defensive: Most of the tape is red, so I'm keeping defensive sizing and limiting the watchlist to names with a 1-minute uptrend. BAC is the only clean opening-range breakout, and AAPL, MU, and TSLA are uptrending into or near VWAP for bounce setups, with SPY as the regime check."
-  },
-  {
-   "time": "2026-10-14T12:35:49-04:00",
-   "type": "rule_block",
-   "agent": "trend",
-   "symbol": "CRWU",
-   "note": "no put affordable within $280.00"
-  },
-  {
-   "time": "2026-10-14T12:11:02-04:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "BAC, NVDA, AVGO, SPY, QQQ",
-   "note": "defensive: Most of the tape is red and choppy, with only BAC above its opening range and NVDA and AVGO holding uptrends below VWAP. Defensive mode limits us to half-size VWAP bounces in the few names with clean trends, and the calm crash radar and SPY's uptrend support that."
   }
  ],
  "reviews": [],
@@ -1754,37 +1751,37 @@
    "score": 16,
    "tier": "calm",
    "market_score": 19,
-   "economy_score": 5,
+   "economy_score": 6,
    "parts": {
     "trend": 0,
     "drawdown": 8,
     "volatility": 0,
-    "breadth": 54,
-    "credit": 49,
+    "breadth": 52,
+    "credit": 53,
     "safety": 0,
-    "economy": 5
+    "economy": 6
    },
    "facts": {
-    "spy_vs_sma50_pct": 0.4,
+    "spy_vs_sma50_pct": 0.5,
     "spy_vs_sma200_pct": 6.6,
     "spy_off_high_pct": 1.2,
-    "spy_iv_pct": 13.3,
-    "spy_realized_vol_pct": 10.3,
-    "pct_above_50d": 43.5,
-    "breadth_sample": 504,
-    "junk_vs_treasuries_20d_pct": -0.96,
-    "havens_vs_spy_20d_pct": -5.3
+    "spy_iv_pct": 13.5,
+    "spy_realized_vol_pct": 9.6,
+    "pct_above_50d": 44.4,
+    "breadth_sample": 507,
+    "junk_vs_treasuries_20d_pct": -1.12,
+    "havens_vs_spy_20d_pct": -4.3
    },
    "economy": {
     "status": "on",
-    "as_of": "2026-10-15",
-    "yield_curve_10y_2y": 0.37,
+    "as_of": "2026-10-16",
+    "yield_curve_10y_2y": 0.33,
     "jobless_claims_4wk": 198500,
     "claims_vs_1yr_low_pct": 0.1,
     "junk_bond_spread_pct": 3.25,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-15T15:35-04:00"
+   "at": "2026-10-16T09:36-04:00"
   },
   "history": [
    {
@@ -1801,6 +1798,11 @@
     "date": "2026-10-15",
     "score": 16,
     "tier": "calm"
+   },
+   {
+    "date": "2026-10-16",
+    "score": 16,
+    "tier": "calm"
    }
   ],
   "labels": {
@@ -1815,21 +1817,19 @@
  },
  "playbooks": {
   "scalper": {
-   "date": "2026-10-15",
-   "made_at": "2026-10-15T15:36-04:00",
+   "date": "2026-10-16",
+   "made_at": "2026-10-16T09:37-04:00",
    "watch": [
-    "MU",
-    "AMD",
-    "QQQ",
+    "SPY",
     "IWM",
-    "TSM"
+    "QQQ"
    ],
    "aggression": "defensive",
-   "why": "About 14 minutes remain before the 3:50 flat, so there's room for at most one short, tightly bracketed trade. Defensive sizing on the names that are still trending up above VWAP (MU, AMD, QQQ, IWM, TSM) fits a calm tape, and the 10-minute hold keeps any entry inside the window.",
-   "slices": 1,
-   "target_pct": 0.3,
-   "stop_pct": 0.15,
-   "max_hold_min": 10
+   "why": "Tape is calm with tiny ranges (SPY 0.16%, QQQ 0.37%) and no setups yet, so I'm keeping size small and limiting trades to the three most liquid index ETFs. The tighter target and stop fit the narrow ranges better than the overnight 0.5%/0.3% plan.",
+   "slices": 4,
+   "target_pct": 0.4,
+   "stop_pct": 0.25,
+   "max_hold_min": 30
   }
  },
  "focus": {
@@ -1883,7 +1883,15 @@
   }
  },
  "sector_stats": {
-  "trend": {},
+  "trend": {
+   "Technology": {
+    "trades": 1,
+    "wins": 0,
+    "pnl": -59.0,
+    "win_rate_pct": 0,
+    "avg_pnl": -59.0
+   }
+  },
   "meanrev": {
    "Technology": {
     "trades": 1,
@@ -1918,6 +1926,5 @@
   "built": "2026-10-13T19:38-04:00",
   "pool_size": 7355,
   "core_size": 501
- },
- "plans_updated": "2026-10-16T07:41-04:00"
+ }
 }

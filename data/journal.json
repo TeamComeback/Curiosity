@@ -855,5 +855,33 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. Yesterday's results were flat (plan hit rate 25%, pick moves negative), so the plan doesn't have strong evidence behind it. Cash is now $999.66 rather than $833, and the stored parameters (0.6% target, 0.3% stop, 45 min) don't match the summary (0.5%, 0.25%, 30 min). Crash radar is calm at 16, so I'm keeping the broad-market-only approach but resizing slices and aligning the exit rules.",
   "symbol": "SPY, IWM, QQQ"
+ },
+ {
+  "time": "2026-10-16T09:36:24-04:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "SOFI261127P00014500",
+  "qty": 1,
+  "entry": 1.21,
+  "exit": 0.67,
+  "pnl": -59.0,
+  "note": "trailing stop on underlying",
+  "opened": "2026-10-14T11:16:18-04:00",
+  "confidence": 3,
+  "thesis": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level."
+ },
+ {
+  "time": "2026-10-16T09:37:20-04:00",
+  "type": "unfilled",
+  "agent": "blackswan",
+  "symbol": "JNK",
+  "note": "debit 0.9 not filled"
+ },
+ {
+  "time": "2026-10-16T09:37:28-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, IWM, QQQ",
+  "note": "defensive: Tape is calm with tiny ranges (SPY 0.16%, QQQ 0.37%) and no setups yet, so I'm keeping size small and limiting trades to the three most liquid index ETFs. The tighter target and stop fit the narrow ranges better than the overnight 0.5%/0.3% plan."
  }
 ]

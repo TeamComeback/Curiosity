@@ -9,47 +9,14 @@
   "start_balance": 1000.0
  },
  "entries": {
-  "date": "2026-10-15",
-  "counts": {
-   "monkey": 1,
-   "scalper": 1,
-   "trend": 1,
-   "blackswan": 1
-  }
+  "date": "2026-10-16",
+  "counts": {}
  },
  "agents": {
   "trend": {
-   "cash": 50.58,
+   "cash": 115.08,
    "reserved": 0.0,
    "positions": {
-    "pos-5f3108fb3d": {
-     "kind": "option",
-     "symbol": "SOFI261127P00014500",
-     "underlying": "SOFI",
-     "opt_type": "put",
-     "qty": 1,
-     "entry": 1.21,
-     "mark": 0.83,
-     "expiry": "2026-11-27",
-     "strike": 14.5,
-     "delta": -0.5,
-     "cost": 123.5,
-     "direction": "short",
-     "stop": 15.2,
-     "atr": 0.511,
-     "opened": "2026-10-14T11:16:18-04:00",
-     "thesis": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level.",
-     "confidence": 3,
-     "signals": {
-      "rel_volume": 4.28,
-      "roc20_pct": -10.9,
-      "pct_vs_sma50": -18.1,
-      "pct_vs_sma200": -23.6
-     },
-     "sector": "Technology",
-     "low_water": 13.975,
-     "exit_half_spread": 0.045
-    },
     "pos-a3a860ab78": {
      "kind": "option",
      "symbol": "CIFR261106P00010000",
@@ -57,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.96,
-     "mark": 1.16,
+     "mark": 1.28,
      "expiry": "2026-11-06",
      "strike": 10.0,
      "delta": -0.39,
@@ -76,7 +43,7 @@
      },
      "sector": "Technology",
      "low_water": 9.405,
-     "exit_half_spread": 0.07
+     "exit_half_spread": 0.345
     },
     "pos-ea0031af4c": {
      "kind": "option",
@@ -85,7 +52,7 @@
      "opt_type": "put",
      "qty": 2,
      "entry": 0.55,
-     "mark": 0.47,
+     "mark": 0.46,
      "expiry": "2026-11-06",
      "strike": 6.0,
      "delta": -0.46,
@@ -104,7 +71,7 @@
      },
      "sector": "Technology",
      "low_water": 5.74,
-     "exit_half_spread": 0.025
+     "exit_half_spread": 0.065
     },
     "pos-bf6606febd": {
      "kind": "option",
@@ -113,7 +80,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.75,
-     "mark": 1.55,
+     "mark": 1.75,
      "expiry": "2026-11-20",
      "strike": 8.0,
      "delta": -0.38,
@@ -131,8 +98,8 @@
       "pct_vs_sma200": -68.6
      },
      "sector": "Broad market / other",
-     "low_water": 7.83,
-     "exit_half_spread": 0.23
+     "low_water": 7.78,
+     "exit_half_spread": 0.33
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -181,14 +148,14 @@
       "pct_vs_sma200": 34.3
      },
      "sector": "Consumer Staples",
-     "last": 88.87,
-     "high_water": 89.36
+     "last": 89.97,
+     "high_water": 89.97
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 0,
+   "closed": 1,
    "wins": 0,
    "peak": 1033.5,
    "max_dd": 0.1107,
@@ -280,9 +247,15 @@
     {
      "date": "2026-10-15",
      "note": "Cash is $50.58 with no affordable, uncorrelated 55-day setup. FMC's put was blocked and would add to the bearish cluster, so I'm holding all stops and waiting for settled cash."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "No candidates today and only $50.58 available, so hold all stops. SOFI put closed out at its trailing stop. Watch ETSY's 87.35 breakout level and wait for settled cash before new entries."
     }
    ],
-   "last_exits": {},
+   "last_exits": {
+    "SOFI": "2026-10-16"
+   },
    "plan": {
     "for_day": "2026-10-16",
     "made_at": "2026-10-16T07:40-04:00",
@@ -350,7 +323,13 @@
      }
     ]
    },
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 64.5,
+     "settles": "2026-10-19",
+     "note": "sold SOFI261127P00014500"
+    }
+   ],
    "focus": {
     "lean_in": [
      "Financials",
@@ -405,7 +384,7 @@
      "entry": 160.74,
      "cost": 200.09,
      "direction": "long",
-     "stop": 152.41,
+     "stop": 160.74,
      "atr": 3.298,
      "opened": "2026-10-14T11:16:27-04:00",
      "thesis": "STT RSI(2) washout (0.5) while still 2.6% above its 200-day; the stop is about 5.1% away against a roughly 7% snap-back target, so reward-to-risk is about 1.4:1, the best of the candidates.",
@@ -416,7 +395,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 166.8
+     "last": 169.04
     }
    },
    "status": "active",
@@ -424,7 +403,7 @@
    "status_at": null,
    "closed": 1,
    "wins": 0,
-   "peak": 1002.82,
+   "peak": 1004.23,
    "max_dd": 0.0026,
    "notes": [
     {
@@ -526,6 +505,10 @@
     {
      "date": "2026-10-15",
      "note": "No entries again: every washout's 2.5-ATR stop is still well beyond its snap-back target (best about 0.7:1 vs my 1:1 floor). Holding STT on default exits (stop 152.41, exit on RSI(2)>70 or close above the 5-day SMA) and keeping ~$700 settled cash for a setup where the target is at least as far as th"
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Every washout candidate today has reward-to-risk of about 0.3-0.6:1 (SOXX ~0.55, SMH ~0.58, SMCI ~0.54, TSM ~0.6, XLK ~0.61, SNDK ~0.34), all under my 1:1 floor. Passing. STT stop moved to breakeven 160.74 and held on its default exits. Keep settled cash for a washout whose snap-back target is at le"
     }
    ],
    "last_exits": {
@@ -688,6 +671,10 @@
     {
      "date": "2026-10-15",
      "note": "Game plan only watched IWM, but live QQQ credit of 0.29 on $71 risk beat the 0.25 trigger, so I took the unplanned setup. Keep position small and respect the 695 underlying stop given the hawkish-Fed and oil gap risk."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Flat. Best live credit/width is IWM 289/288 bear call at 0.24 (24%), just under the 0.25 trigger, so pass. Recheck IWM for 0.25+ on the $1 width; the QQQ spread in my notes is not in the ledger, so there is nothing to manage."
     }
    ],
    "last_exits": {},
@@ -765,7 +752,7 @@
      }
     ]
    },
-   "min_trade_seen": 71.0,
+   "min_trade_seen": 76.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -812,7 +799,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 771.95
+     "last": 772.195
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -828,7 +815,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.95
+     "last": 772.195
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -844,7 +831,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.95
+     "last": 772.195
     }
    },
    "status": "active",
@@ -877,7 +864,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 432.345
+     "last": 423.04
     }
    },
    "status": "active",
@@ -886,7 +873,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.67,
-   "max_dd": 0.0034,
+   "max_dd": 0.0124,
    "notes": [],
    "last_exits": {},
    "joined": "2026-10-13T19:21:59-04:00",
@@ -918,7 +905,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 0.95,
+     "mark": 0.91,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -938,7 +925,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.36,
+     "exit_half_spread": 0.65,
      "peak_mark": 1.25,
      "low_water": 42.245
     },
@@ -964,7 +951,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.22,
+     "mark": 1.29,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
@@ -984,7 +971,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.15,
+     "exit_half_spread": 0.585,
      "peak_mark": 1.41,
      "low_water": 28.235
     },
@@ -1010,7 +997,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 0.72,
+     "mark": 0.84,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -1030,8 +1017,8 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.115,
-     "peak_mark": 0.76,
+     "exit_half_spread": 0.42,
+     "peak_mark": 0.84,
      "low_water": 19.21
     }
    },
@@ -1134,6 +1121,10 @@
     {
      "date": "2026-10-15",
      "note": "Passing today. Technology bearish exposure (ASTS, IREN, APLD, about $330 at cost) is already concentrated and correlated. MTZ failed to fit $60 and $100 budgets, and paying up to the $186 max would push Tech risk toward half of equity. SPY insurance and XLI don't meet their triggers. Revisit MTZ onl"
+    },
+    {
+     "date": "2026-10-16",
+     "note": "The overnight plan's RKLB idea isn't in today's candidate list, so I dropped it. Total open risk is now near 45% of equity, so I'm adding only one small, uncorrelated position and passing on VRT and PLD for budget reasons."
     }
    ],
    "last_exits": {},
@@ -1297,21 +1288,19 @@
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [],
    "playbook": {
-    "date": "2026-10-15",
-    "made_at": "2026-10-15T15:36-04:00",
+    "date": "2026-10-16",
+    "made_at": "2026-10-16T09:37-04:00",
     "watch": [
-     "MU",
-     "AMD",
-     "QQQ",
+     "SPY",
      "IWM",
-     "TSM"
+     "QQQ"
     ],
     "aggression": "defensive",
-    "why": "About 14 minutes remain before the 3:50 flat, so there's room for at most one short, tightly bracketed trade. Defensive sizing on the names that are still trending up above VWAP (MU, AMD, QQQ, IWM, TSM) fits a calm tape, and the 10-minute hold keeps any entry inside the window.",
-    "slices": 1,
-    "target_pct": 0.3,
-    "stop_pct": 0.15,
-    "max_hold_min": 10
+    "why": "Tape is calm with tiny ranges (SPY 0.16%, QQQ 0.37%) and no setups yet, so I'm keeping size small and limiting trades to the three most liquid index ETFs. The tighter target and stop fit the narrow ranges better than the overnight 0.5%/0.3% plan.",
+    "slices": 4,
+    "target_pct": 0.4,
+    "stop_pct": 0.25,
+    "max_hold_min": 30
    },
    "scalp_day": {
     "date": "2026-10-15",

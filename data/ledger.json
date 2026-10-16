@@ -1210,5 +1210,34 @@
     "conviction": 2
    }
   ]
+ },
+ {
+  "time": "2026-10-16T09:36:24-04:00",
+  "type": "trade_closed",
+  "agent": "trend",
+  "position_id": "pos-5f3108fb3d",
+  "symbol": "SOFI261127P00014500",
+  "underlying": "SOFI",
+  "sector": "Technology",
+  "instrument": "option",
+  "entry": 1.21,
+  "exit": 0.67,
+  "pnl": -59.0,
+  "return_pct": -47.8,
+  "opened": "2026-10-14T11:16:18-04:00",
+  "why_entered": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level.",
+  "why_exited": "trailing stop on underlying"
+ },
+ {
+  "time": "2026-10-16T09:37:28-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "IWM",
+   "QQQ"
+  ],
+  "aggression": "defensive",
+  "why": "Tape is calm with tiny ranges (SPY 0.16%, QQQ 0.37%) and no setups yet, so I'm keeping size small and limiting trades to the three most liquid index ETFs. The tighter target and stop fit the narrow ranges better than the overnight 0.5%/0.3% plan."
  }
 ]
