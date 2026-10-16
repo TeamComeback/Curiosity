@@ -28,7 +28,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.96,
-     "mark": 1.32,
+     "mark": 1.29,
      "expiry": "2026-11-06",
      "strike": 10.0,
      "delta": -0.39,
@@ -47,7 +47,7 @@
      },
      "sector": "Technology",
      "low_water": 9.405,
-     "exit_half_spread": 0.14
+     "exit_half_spread": 0.055
     },
     "pos-ea0031af4c": {
      "kind": "option",
@@ -56,7 +56,7 @@
      "opt_type": "put",
      "qty": 2,
      "entry": 0.55,
-     "mark": 0.42,
+     "mark": 0.44,
      "expiry": "2026-11-06",
      "strike": 6.0,
      "delta": -0.46,
@@ -75,7 +75,7 @@
      },
      "sector": "Technology",
      "low_water": 5.74,
-     "exit_half_spread": 0.04
+     "exit_half_spread": 0.01
     },
     "pos-bf6606febd": {
      "kind": "option",
@@ -103,7 +103,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 7.78,
-     "exit_half_spread": 0.28
+     "exit_half_spread": 0.225
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -112,7 +112,7 @@
      "opt_type": "put",
      "qty": 5,
      "entry": 0.14,
-     "mark": 0.09,
+     "mark": 0.1,
      "expiry": "2026-11-06",
      "strike": 1.5,
      "delta": -0.5,
@@ -131,7 +131,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 1.425,
-     "exit_half_spread": 0.04
+     "exit_half_spread": 0.035
     },
     "pos-88810b3067": {
      "kind": "stock",
@@ -152,7 +152,7 @@
       "pct_vs_sma200": 34.3
      },
      "sector": "Consumer Staples",
-     "last": 88.99,
+     "last": 88.0,
      "high_water": 89.97
     },
     "pos-2ce62f642c": {
@@ -174,7 +174,8 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 49.24
+     "last": 49.27,
+     "high_water": 49.27
     }
    },
    "status": "active",
@@ -280,6 +281,10 @@
     {
      "date": "2026-10-16",
      "note": "Cash is down to $50.58, so I'm taking the one affordable, uncorrelated breakout (BP, 1 share). Energy long is not in the Technology avoid list and does not add to the bearish puts."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Only $0.58 is settled, so no new entries are possible. Hold all stops, including the BP and ETSY trailing levels, and wait for the sale proceeds to settle before taking any setup."
     }
    ],
    "last_exits": {
@@ -424,7 +429,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 166.475
+     "last": 166.68
     }
    },
    "status": "active",
@@ -542,6 +547,10 @@
     {
      "date": "2026-10-16",
      "note": "Passed on FTNT (about 0.8:1 reward-to-risk, Technology, under my 1:1 floor) and TWST (about 0.3:1, 63% above its 200-day). STT stop is already at breakeven 160.74; holding on default exits and keeping settled cash."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "No entries: all three candidates (OKTA ~0.9:1, FTNT ~0.8:1, TWST ~0.3:1) are below my 1:1 reward-to-risk floor. STT stop is already at breakeven 160.74; hold on default exits and keep settled cash."
     }
    ],
    "last_exits": {
@@ -712,6 +721,10 @@
     {
      "date": "2026-10-16",
      "note": "Flat. No live candidate reaches the 0.25 credit-to-width trigger: EEM is 0.20, IWM 0.14, XLE 0.14, SPY 0.09. Broker shows no open positions, so no QQQ spread to reconcile. Recheck IWM for 0.25+ on the $1 width."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Flat again: best live credit/width is EEM 67.5/68.5 at 0.24 (24%), just under my 0.25 trigger, and IWM is at 0.17. No positions to reconcile. Recheck IWM or EEM for 0.25+ on the $1 width."
     }
    ],
    "last_exits": {},
@@ -789,7 +802,7 @@
      }
     ]
    },
-   "min_trade_seen": 80.0,
+   "min_trade_seen": 76.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -836,7 +849,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 771.18
+     "last": 771.54
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -852,7 +865,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.18
+     "last": 771.54
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -868,7 +881,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.18
+     "last": 771.54
     }
    },
    "status": "active",
@@ -901,7 +914,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 419.57
+     "last": 418.84
     }
    },
    "status": "active",
@@ -910,7 +923,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.67,
-   "max_dd": 0.0158,
+   "max_dd": 0.0165,
    "notes": [],
    "last_exits": {},
    "joined": "2026-10-13T19:21:59-04:00",
@@ -942,7 +955,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.17,
+     "mark": 0.86,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -962,7 +975,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.525,
+     "exit_half_spread": 0.225,
      "peak_mark": 1.25,
      "low_water": 42.245
     },
@@ -988,7 +1001,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.21,
+     "mark": 1.05,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
@@ -1008,7 +1021,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.205,
+     "exit_half_spread": 0.135,
      "peak_mark": 1.41,
      "low_water": 28.235
     },
@@ -1034,7 +1047,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 0.76,
+     "mark": 0.8,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -1054,7 +1067,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.184,
+     "exit_half_spread": 0.075,
      "peak_mark": 0.84,
      "low_water": 19.21
     },
@@ -1080,7 +1093,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 1.5,
+     "mark": 0.98,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -1099,7 +1112,10 @@
       "pct_above_low": 1.6,
       "downtrend": true
      },
-     "sector": "Real Estate"
+     "sector": "Real Estate",
+     "exit_half_spread": 0.58,
+     "peak_mark": 0.98,
+     "low_water": 127.47
     }
    },
    "status": "active",
@@ -1108,7 +1124,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.0,
-   "max_dd": 0.0675,
+   "max_dd": 0.1475,
    "notes": [
     {
      "date": "2026-10-14",
@@ -1209,6 +1225,10 @@
     {
      "date": "2026-10-16",
      "note": "Open debit risk is about $331 across ASTS, IREN and APLD, so I'm diversifying with a sector that isn't Technology. I'm skipping SPY insurance: the radar is calm and the far-out put would decay while the thesis waits."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Open bearish debit risk is about $369 marked, roughly 43% of equity across four correlated breakdown bets, so I'm passing on JNK and VCIT. JNK's last spread also failed to fill. Revisit only if a position closes and frees settled cash, or if the radar moves above 40."
     }
    ],
    "last_exits": {},
@@ -1354,31 +1374,9 @@
    ]
   },
   "scalper": {
-   "cash": 749.09,
+   "cash": 874.88,
    "reserved": 0.0,
    "positions": {
-    "pos-932e952a2a": {
-     "kind": "stock",
-     "symbol": "NVDA",
-     "qty": 0.5768,
-     "entry": 216.624,
-     "cost": 124.95,
-     "play": "scalp",
-     "direction": "long",
-     "stop": 215.96,
-     "atr": 0,
-     "opened": "2026-10-16T10:16:30-04:00",
-     "thesis": "VWAP pullback bounce on NVDA: 0.8x volume, +0.25% vs VWAP; target +0.6%, stop -0.3%",
-     "confidence": 3,
-     "signals": {},
-     "sector": "Technology",
-     "setup": "VWAP pullback bounce",
-     "target_pct": 0.6,
-     "stop_pct": 0.3,
-     "max_hold_min": 30,
-     "last": 217.15,
-     "peak_gain": 0.3674569761429991
-    },
     "pos-bfd27ea76d": {
      "kind": "stock",
      "symbol": "SMH",
@@ -1398,22 +1396,23 @@
      "target_pct": 0.6,
      "stop_pct": 0.3,
      "max_hold_min": 30,
-     "last": 550.1,
-     "peak_gain": -0.01524019638080576
+     "last": 553.17,
+     "peak_gain": 0.36213609495368004
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 4,
-   "wins": 0,
-   "peak": 1000.02,
+   "closed": 5,
+   "wins": 1,
+   "peak": 1000.39,
    "max_dd": 0.0007,
    "notes": [],
    "last_exits": {
     "TSLA": "2026-10-16",
     "IWM": "2026-10-15",
-    "AVGO": "2026-10-16"
+    "AVGO": "2026-10-16",
+    "NVDA": "2026-10-16"
    },
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [
@@ -1426,6 +1425,11 @@
      "amount": 124.65,
      "settles": "2026-10-19",
      "note": "sold AVGO"
+    },
+    {
+     "amount": 125.79,
+     "settles": "2026-10-19",
+     "note": "sold NVDA"
     }
    ],
    "playbook": {
