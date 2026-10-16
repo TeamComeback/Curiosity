@@ -73,6 +73,19 @@ table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
 td,th{text-align:left;padding:5px 4px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
 .empty{color:var(--muted);font-size:13px;padding:6px 0}
 ul.rules{margin:0;padding-left:18px}
+.plan{padding:12px 0;border-bottom:1px solid var(--line)}
+.plan:first-child{padding-top:0}.plan:last-child{border-bottom:0;padding-bottom:0}
+.plan .h{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:600;font-size:14px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.chip.keep{color:var(--text2)}.chip.revise,.chip.new{color:var(--gold)}.chip.scrap{color:var(--bad)}
+.plan .sum{font-size:13px;color:var(--text);margin-top:4px}
+.plan .meta{font-size:12px;color:var(--muted);margin-top:3px}
+.tl{list-style:none;margin:8px 0 0;padding:0 0 0 12px;border-left:2px solid var(--line)}
+.tl li{font-size:13px;color:var(--text2);margin:0 0 6px;position:relative}
+.tl li::before{content:"";position:absolute;left:-17px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--line)}
+.tl li b{color:var(--text);font-weight:600}
+.wl{font-size:13px;color:var(--text2);margin-top:6px}
+.wl div{margin:2px 0}
 .radar-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .radar-score{font-size:30px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .radar-tier{font-size:12px;font-weight:700;letter-spacing:.06em;padding:2px 9px;border-radius:999px;border:1px solid currentColor}
@@ -97,6 +110,9 @@ ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 <div class="card banner" id="health" style="display:none;border-color:var(--bad)"></div>
 <div class="card banner" id="banner"><div class="t">Race to $10,000</div></div>
 <div class="pills" id="pills"></div>
+
+<h2 id="nighth">Overnight game plan</h2>
+<div class="card" id="night"><div class="empty">Plans appear after the first planning session (about 4:40 PM ET).</div></div>
 
 <h2>Crash Radar</h2>
 <div class="card" id="radar"><div class="empty">The first reading arrives with the next run.</div></div>
@@ -154,7 +170,7 @@ fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(render).c
 
 setInterval(() => {                       // keep the page current without a manual reload
   if (document.hidden || !DATA) return;
-  fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { if (d.updated !== DATA.updated) render(d); }).catch(() => {});
+  fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { if (d.updated !== DATA.updated || d.plans_updated !== DATA.plans_updated) render(d); }).catch(() => {});
 }, 60000);
 
 function render(d){
@@ -186,6 +202,7 @@ function render(d){
   $("standings").innerHTML = comp.map((a,i) => agentCard(a, i+1, ticks)).join("") + bench.map(a => agentCard(a, null, ticks)).join("");
 
   radarCard(d.radar);
+  nightCard(d, names);
   chart(d, names);
   positions(d.positions, names);
   journal(d.journal);
@@ -203,6 +220,32 @@ function render(d){
     `Agents choose setups, dollar amounts, instruments, stops and exits; they can tighten stops, never loosen them`,
     `Options results include a slippage haircut of half the bid-ask spread`,
     `The SPY benchmark isn't racing; it shows what doing nothing would have earned`].map(t => `<li>${esc(t)}</li>`).join("");
+}
+
+const WHEN = t => { if (!t) return ""; const d = new Date(t); return d.toLocaleString([], {weekday:"short", hour:"numeric", minute:"2-digit"}); };
+const DECIDED = {keep:"kept", revise:"changed", scrap:"scrapped", new:"new plan"};
+function nightCard(d, names){
+  const plans = d.plans || {}, ids = Object.keys(COLOR).filter(id => plans[id]);
+  if (!ids.length) return;
+  const latest = ids.map(id => (plans[id].revisions || []).slice(-1)[0]).filter(Boolean).map(r => r.at).sort().pop();
+  const day = plans[ids[0]].for_day;
+  $("nighth").textContent = `Overnight game plan · for ${new Date(day + "T12:00").toLocaleDateString([], {weekday:"long", month:"short", day:"numeric"})}`;
+  const focus = d.focus || {};
+  $("night").innerHTML = `<div class="sub" style="margin-bottom:10px">What each firm's planners decided after the close, at the evening check-in and before the open. Last update ${esc(WHEN(latest))}.</div>` +
+    ids.map(id => {
+      const p = plans[id], revs = p.revisions || [], last = revs[revs.length - 1] || {}, f = focus[id];
+      const changes = revs.filter(r => r.decision === "revise" || r.decision === "scrap").length;
+      return `<div class="plan">
+        <div class="h"><span><span class="sw" style="background:${COLOR[id]};margin-right:6px"></span>${esc(names[id] || id)}</span>
+          <span class="chip ${esc(last.decision || p.decision)}">${esc((DECIDED[last.decision || p.decision] || p.decision || "").toUpperCase())} · ${esc(WHEN(last.at || p.made_at))}</span></div>
+        <div class="sum">${esc(p.summary || "No trades planned.")}</div>
+        <div class="meta">${revs.length} session${revs.length === 1 ? "" : "s"} so far${changes ? ` · changed its mind ${changes} time${changes > 1 ? "s" : ""}` : ""}${f && f.lean_in && f.lean_in.length ? ` · ${id === "blackswan" ? "betting against" : "leaning into"} ${esc(f.lean_in.join(", "))}` : ""}</div>
+        <details><summary>Watchlist and what changed</summary>
+          ${(p.watchlist || []).length ? `<div class="wl">${p.watchlist.map(w => `<div><b>${esc(w.symbol)}</b>${w.instrument ? ` (${esc(w.instrument.replace("_", " "))})` : ""}: ${esc(w.trigger || w.setup || "")}</div>`).join("")}</div>` : `<div class="wl">Nothing on the watchlist: the plan is to wait.</div>`}
+          <ul class="tl">${revs.map(r => `<li><b>${esc(WHEN(r.at))} · ${esc(r.session)}:</b> ${esc(DECIDED[r.decision] || r.decision)}. ${esc(r.why)}</li>`).join("")}</ul>
+          ${p.brainstorm ? `<div class="wl"><b>Idea to test:</b> ${esc(p.brainstorm)}</div>` : ""}
+        </details></div>`;
+    }).join("");
 }
 
 function radarCard(rd){
@@ -345,7 +388,8 @@ function positions(list, names){
     else { what = `${esc(p.structure)} ×${p.qty} · credit ${money(p.entry)} · exp ${esc(p.expiry)}`;
       if (p.mark!=null){ const v=(p.entry-p.mark)*100*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
     return `<div class="row"><div class="h"><span><span class="sw" style="background:${COLOR[p.agent]};margin-right:6px"></span>${esc(p.underlying||p.symbol)}</span>${pnl}</div>
-      <div class="d">${esc(names[p.agent])} · ${what}</div>${p.thesis?`<div class="d">${esc(p.thesis)}${p.confidence?` · conf ${p.confidence}/5`:""}</div>`:""}</div>`;
+      <div class="d">${esc(names[p.agent])} · ${what}</div>
+      ${p.opened ? `<div class="d">Opened ${esc(new Date(p.opened).toLocaleString([], {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}))}</div>` : ""}${p.thesis?`<div class="d">${esc(p.thesis)}${p.confidence?` · conf ${p.confidence}/5`:""}</div>`:""}</div>`;
   }).join("");
 }
 

@@ -38,15 +38,15 @@ RACE = {
 
 # Competing agents (each keeps its specialty) + a non-competing benchmark.
 AGENTS = {
-    "trend":   {"name": "Trend agent", "competing": True,
+    "trend":   {"name": "Trend Co.", "competing": True,
                 "instruments": ["stock", "call", "put"],
                 "style": "Trend follower. Trades breakouts to new highs in established uptrends (or "
                          "breakdowns via puts), lets winners run with trailing stops, cuts losers fast."},
-    "meanrev": {"name": "Mean-reversion agent", "competing": True,
+    "meanrev": {"name": "Snapback Partners", "competing": True,
                 "instruments": ["stock", "call"],
                 "style": "Mean-reversion trader. Buys sharp short-term washouts (RSI(2) extremes) in "
                          "stocks that are still above their 200-day average, and sells into the snap-back."},
-    "volsell": {"name": "Vol-selling agent", "competing": True,
+    "volsell": {"name": "Premium House", "competing": True,
                 "instruments": ["spread"],
                 "style": "Volatility seller. Sells defined-risk credit spreads on index ETFs when implied "
                          "volatility is rich versus realized, collecting premium as time passes."},
@@ -67,9 +67,9 @@ AGENTS = {
                          "Cash account: proceeds settle next day, so the day's cash is split into slices and each slice "
                          "gets one round trip a day. You set the playbook (which stocks, how aggressive, how many slices, "
                          "targets and stops); code executes it every 2 minutes."},
-    "baseline": {"name": "SPY benchmark", "competing": False, "instruments": ["stock"],
+    "baseline": {"name": "Index Booth (SPY)", "competing": False, "instruments": ["stock"],
                  "style": "Buys SPY with its starting cash and holds. Not racing; it's the bar to beat."},
-    "monkey": {"name": "Random monkey", "competing": False, "instruments": ["stock"],
+    "monkey": {"name": "Monkey Business", "competing": False, "instruments": ["stock"],
                "style": "Control group. Picks random stocks with random size and holding period under the "
                         "same rules. Not racing; if a firm can't beat it, the firm has no edge."},
 }
