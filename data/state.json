@@ -13,7 +13,8 @@
   "counts": {
    "trend": 1,
    "blackswan": 1,
-   "scalper": 7
+   "scalper": 7,
+   "meanrev": 1
   }
  },
  "agents": {
@@ -28,7 +29,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.96,
-     "mark": 1.59,
+     "mark": 1.55,
      "expiry": "2026-11-06",
      "strike": 10.0,
      "delta": -0.39,
@@ -47,7 +48,7 @@
      },
      "sector": "Technology",
      "low_water": 9.2,
-     "exit_half_spread": 0.075
+     "exit_half_spread": 0.07
     },
     "pos-ea0031af4c": {
      "kind": "option",
@@ -56,7 +57,7 @@
      "opt_type": "put",
      "qty": 2,
      "entry": 0.55,
-     "mark": 0.52,
+     "mark": 0.57,
      "expiry": "2026-11-06",
      "strike": 6.0,
      "delta": -0.46,
@@ -75,7 +76,7 @@
      },
      "sector": "Technology",
      "low_water": 5.74,
-     "exit_half_spread": 0.04
+     "exit_half_spread": 0.02
     },
     "pos-bf6606febd": {
      "kind": "option",
@@ -84,7 +85,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.75,
-     "mark": 2.02,
+     "mark": 2.1,
      "expiry": "2026-11-20",
      "strike": 8.0,
      "delta": -0.38,
@@ -102,8 +103,8 @@
       "pct_vs_sma200": -68.6
      },
      "sector": "Broad market / other",
-     "low_water": 7.44,
-     "exit_half_spread": 0.305
+     "low_water": 7.24,
+     "exit_half_spread": 0.275
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -112,7 +113,7 @@
      "opt_type": "put",
      "qty": 5,
      "entry": 0.14,
-     "mark": 0.12,
+     "mark": 0.15,
      "expiry": "2026-11-06",
      "strike": 1.5,
      "delta": -0.5,
@@ -131,7 +132,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 1.425,
-     "exit_half_spread": 0.045
+     "exit_half_spread": 0.015
     },
     "pos-88810b3067": {
      "kind": "stock",
@@ -152,7 +153,7 @@
       "pct_vs_sma200": 34.3
      },
      "sector": "Consumer Staples",
-     "last": 87.19,
+     "last": 87.67,
      "high_water": 89.97
     },
     "pos-2ce62f642c": {
@@ -174,8 +175,8 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 49.61,
-     "high_water": 49.61
+     "last": 49.81,
+     "high_water": 49.81
     }
    },
    "status": "active",
@@ -297,6 +298,10 @@
     {
      "date": "2026-10-16",
      "note": "Only $0.58 is settled, so no entries are possible. All candidates (SU, SHEL, BP, EOG) are unaffordable and BP is already held. Hold all stops and redeploy once sale proceeds settle. Re-check ETSY against the 87.35 breakout level at the next close."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Only $0.58 is settled, so no entries are possible. Hold all stops (CIFR 12.81, SMR 6.94, CWVX 10.76, PLUG 1.63, ETSY 83.87, BP 47.12) and redeploy once sale proceeds settle. Watch ETSY's 87.35 breakout level."
     }
    ],
    "last_exits": {
@@ -420,7 +425,7 @@
    ]
   },
   "meanrev": {
-   "cash": 793.81,
+   "cash": 543.46,
    "reserved": 0.0,
    "positions": {
     "pos-3514fae9b2": {
@@ -441,7 +446,27 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 165.82
+     "last": 165.42
+    },
+    "pos-6f6a3c3d01": {
+     "kind": "stock",
+     "symbol": "FTNT",
+     "qty": 1.4876,
+     "entry": 168.29,
+     "cost": 250.35,
+     "direction": "long",
+     "stop": 154.63,
+     "atr": 5.369,
+     "opened": "2026-10-16T12:36:10-04:00",
+     "thesis": "FTNT RSI(2) of 1.2 washout still 36% above its 200-day in a calm regime (crash radar 24, SPY above 200-day); target 183.53 vs stop 154.63 gives about 1.15:1, which clears my 1:1 floor and my stated condition for re-entering tech.",
+     "confidence": 2,
+     "signals": {
+      "rsi2": 1.2,
+      "pct_vs_sma200": 36.2,
+      "pct_vs_sma5": -8.4
+     },
+     "sector": "Broad market / other",
+     "last": 168.05
     }
    },
    "status": "active",
@@ -450,7 +475,7 @@
    "closed": 1,
    "wins": 0,
    "peak": 1004.23,
-   "max_dd": 0.0041,
+   "max_dd": 0.0048,
    "notes": [
     {
      "date": "2026-10-13",
@@ -575,6 +600,10 @@
     {
      "date": "2026-10-16",
      "note": "No entries. OKTA is about 1.02:1 but 60% above its 200-day, and the other two are below 1:1. STT stays on its breakeven stop at 160.74 with default exits."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Entered FTNT at about 1.15:1, the first tech washout to clear the floor; keep size modest given the sector headwinds. OKTA (1.04:1) passed on 59% extension above its 200-day, and CRWD, PANW and TWST stay below 1:1."
     }
    ],
    "last_exits": {
@@ -761,6 +790,10 @@
     {
      "date": "2026-10-16",
      "note": "Pass: best live credit/width is IWM 286/287 at 0.22 (22%), below the 0.25 trigger. At about 0.2 delta, EV is roughly zero after slippage. No positions open. Recheck IWM or EEM for 25%+ credit on the $1 width."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Pass again. Best live credit/width is XLE 0.20 and IWM 0.19 (EEM 0.18, TLT 0.08), all below the 0.25 trigger. At about 0.2 delta, expected value is roughly 0.79\u00d719 \u2212 0.21\u00d781 \u2248 \u2212$2 per contract before slippage. Stay flat and recheck for 25%+ credit on the $1 width."
     }
    ],
    "last_exits": {},
@@ -838,7 +871,7 @@
      }
     ]
    },
-   "min_trade_seen": 78.0,
+   "min_trade_seen": 80.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -885,7 +918,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 767.155
+     "last": 766.53
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -901,7 +934,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 767.155
+     "last": 766.53
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -917,7 +950,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 767.155
+     "last": 766.53
     }
    },
    "status": "active",
@@ -926,7 +959,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.01,
-   "max_dd": 0.0079,
+   "max_dd": 0.0087,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -950,7 +983,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 416.39
+     "last": 418.69
     }
    },
    "status": "active",
@@ -991,7 +1024,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.03,
+     "mark": 1.02,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -1011,9 +1044,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.05,
+     "exit_half_spread": 0.165,
      "peak_mark": 1.25,
-     "low_water": 42.245
+     "low_water": 42.155
     },
     "pos-a0895dfd5c": {
      "kind": "debit_spread",
@@ -1037,7 +1070,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.41,
+     "mark": 1.42,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
@@ -1057,8 +1090,8 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.125,
-     "peak_mark": 1.41,
+     "exit_half_spread": 0.245,
+     "peak_mark": 1.42,
      "low_water": 27.65
     },
     "pos-ebf1f3ff74": {
@@ -1083,7 +1116,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 0.84,
+     "mark": 0.83,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -1103,7 +1136,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.145,
+     "exit_half_spread": 0.055,
      "peak_mark": 0.84,
      "low_water": 18.62
     },
@@ -1129,7 +1162,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 1.05,
+     "mark": 1.22,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -1149,9 +1182,9 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.5,
-     "peak_mark": 1.05,
-     "low_water": 127.195
+     "exit_half_spread": 0.62,
+     "peak_mark": 1.22,
+     "low_water": 126.29
     }
    },
    "status": "active",
@@ -1277,6 +1310,10 @@
     {
      "date": "2026-10-16",
      "note": "Diversify into uncorrelated sectors and keep each new entry small; the earlier $100 budget was too tight to fill, so this one is sized to fit a real spread."
+    },
+    {
+     "date": "2026-10-16",
+     "note": "Open bearish debit cost is about $481 (roughly half of $932.50 equity) across four correlated breakdown bets. The radar is calm at 24, and AGCO's budget already failed twice. Passing; revisit only after a position closes and frees settled cash, or if the radar moves above 40."
     }
    ],
    "last_exits": {},
@@ -1481,7 +1518,7 @@
    ],
    "playbook": {
     "date": "2026-10-16",
-    "made_at": "2026-10-16T12:06-04:00",
+    "made_at": "2026-10-16T12:36-04:00",
     "watch": [
      "NVDA",
      "SMH",
@@ -1489,7 +1526,7 @@
      "TLT"
     ],
     "aggression": "stand_down",
-    "why": "Only about $42 is settled cash, too little for meaningful size, and the tape is weak: SPY, QQQ, IWM and most leaders are red and below VWAP. The overnight plan's IWM strength is stale, since IWM is now -1.24%. Stand down and keep NVDA, SMH, TSM and TLT on watch for a clean reclaim once cash settles.",
+    "why": "Only $41.74 is settled, too little for meaningful size, and the tape is weak with SPY, QQQ and IWM below VWAP. Stay flat and keep NVDA, SMH, TSM and TLT on watch for a clean VWAP reclaim once cash settles.",
     "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,
