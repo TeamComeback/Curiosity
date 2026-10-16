@@ -132,6 +132,7 @@ def open_trade(b, state, aid, cand, order, ctx):
         qty = math.floor(dollars / cand["price"] * 10000) / 10000
         o = _fill(b, b.submit_stock(cand["symbol"], qty, "buy", cid(aid)))
         if not o:
+            governor.outcome(aid, cand["symbol"], "not filled")
             return store.journal({"type": "unfilled", "agent": aid, "symbol": cand["symbol"]})
         qty, fill = float(o["filled_qty"]), float(o["filled_avg_price"])
         cost = round(qty * fill, 2)
@@ -147,9 +148,12 @@ def open_trade(b, state, aid, cand, order, ctx):
         cost_est = n * opt["ask"] * 100
         ok, why = governor.check_order(state, aid, cand, inst, cost_est)
         if not ok or n < 1:
-            return store.journal({"type": "rule_block", "agent": aid, "symbol": cand["symbol"], "note": why})
+            if ok:
+                governor.outcome(aid, cand["symbol"], "not placed: budget too small for one contract")
+            return store.journal({"type": "rule_block", "agent": aid, "symbol": cand["symbol"], "note": why if not ok else "budget too small for one contract"})
         o = _fill(b, b.submit_option(opt["symbol"], n, "buy", opt["ask"], "buy_to_open", cid(aid)))
         if not o:
+            governor.outcome(aid, cand["symbol"], "not filled")
             return store.journal({"type": "unfilled", "agent": aid, "symbol": opt["symbol"]})
         n, fill = int(float(o["filled_qty"])), float(o["filled_avg_price"])
         slip = round(opt["spread"] / 2 * 100 * n, 2) if SLIP else 0
@@ -167,12 +171,15 @@ def open_trade(b, state, aid, cand, order, ctx):
         n = int(budget // (sp["debit"] * 100))
         ok, why = governor.check_order(state, aid, cand, inst, n * sp["debit"] * 100)
         if not ok or n < 1:
-            return store.journal({"type": "rule_block", "agent": aid, "symbol": cand["symbol"], "note": why})
+            if ok:
+                governor.outcome(aid, cand["symbol"], "not placed: budget too small for one spread")
+            return store.journal({"type": "rule_block", "agent": aid, "symbol": cand["symbol"], "note": why if not ok else "budget too small for one spread"})
         legs = [{"symbol": sp["long"]["symbol"], "ratio_qty": "1", "side": "buy", "position_intent": "buy_to_open"},
                 {"symbol": sp["short"]["symbol"], "ratio_qty": "1", "side": "sell", "position_intent": "sell_to_open"}]
         limit = round(min(sp["debit"] + max(sp["half_spread"], 0.02), sp["width"] * 0.9), 2)   # meet the market so it fills
         o = _fill(b, b.submit_mleg(legs, n, limit, cid(aid)), 30)
         if not o:
+            governor.outcome(aid, cand["symbol"], "not filled")
             return store.journal({"type": "unfilled", "agent": aid, "symbol": cand["symbol"],
                                   "note": f"debit {limit} not filled"})
         n = int(float(o["filled_qty"]))
@@ -198,6 +205,7 @@ def open_trade(b, state, aid, cand, order, ctx):
             sub = b.submit_mleg(cand["legs"], n, cand["credit"], cid(aid))
         o = _fill(b, sub, 30)
         if not o:
+            governor.outcome(aid, cand["symbol"], "not filled")
             return store.journal({"type": "unfilled", "agent": aid, "symbol": cand["symbol"],
                                   "note": f"credit {cand['credit']} not filled"})
         n = int(float(o["filled_qty"]))
@@ -225,6 +233,7 @@ def open_trade(b, state, aid, cand, order, ctx):
                 "confidence": order.get("confidence", 0), "signals": cand.get("signals", {})})
     pid = cid("pos")
     agent["positions"][pid] = pos
+    governor.outcome(aid, cand["symbol"], f"filled: {pos['qty']:g} at {pos['entry']:g}")
     if aid != "baseline":
         state["entries"]["counts"][aid] = governor.entries_today(state, aid) + 1
     pos["sector"] = universe.sector_of(cand["symbol"])
@@ -424,6 +433,9 @@ def write_dashboard(state, regime, equities):
         "scorecards": {aid: plan_mod.scorecard_summary(a) for aid, a in state["agents"].items() if a.get("scorecard")},
         "calendar": store.load("calendar.json", []),
         "radar": store.load("radar.json", {}),
+        "compliance_today": (lambda c: {"approved": len(c.get("approved", [])), "denied": len(c.get("denied", [])),
+                                        "last_denied": (c.get("denied") or [{}])[-1].get("reason")})(
+                                store.load("compliance.json", {}).get(store.today(), {})),
         "playbooks": {aid: a.get("playbook") for aid, a in state["agents"].items() if a.get("playbook")},
         "focus": {aid: focus.current(a) for aid, a in state["agents"].items() if focus.current(a)},
         "sector_stats": {aid: focus.sector_stats(aid) for aid in state["agents"]},
@@ -566,6 +578,7 @@ def main(force=False, broker=None):
                 try:
                     open_trade(b, state, aid, found[i], order, ctx)
                 except AlpacaError as e:
+                    governor.outcome(aid, found[i]["symbol"], "broker error")
                     store.journal({"type": "error", "agent": aid, "symbol": found[i]["symbol"], "note": str(e)[:200]})
         if d.get("note"):
             agent["notes"].append({"date": store.today(), "note": str(d["note"])[:300]})

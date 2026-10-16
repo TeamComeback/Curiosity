@@ -29,13 +29,49 @@ def can_trade_today(state, aid):
     if R.get("max_new_trades_per_day") and entries_today(state, aid) >= R["max_new_trades_per_day"] and aid != "baseline":
         return False, "daily trade limit reached"
     if entries_today(state, aid) >= R.get("malfunction_guard_trades_per_day", 30) and aid != "baseline":
-        return False, "malfunction guard: unusually many orders today, paused until tomorrow"
+        why = "malfunction guard: unusually many orders today, paused until tomorrow"
+        if not agent.get("guard_logged") == store.today():
+            agent["guard_logged"] = store.today()
+            record(aid, {"symbol": "(all orders)"}, "-", 0, False, why)
+        return False, why
     if R.get("max_open_positions") and len(agent["positions"]) >= R["max_open_positions"]:
         return False, "max open positions"
     return True, "ok"
 
 
 def check_order(state, aid, cand, instrument, cost):
+    """Validate one agent order and record the decision in the compliance log."""
+    ok, why = _check_order(state, aid, cand, instrument, cost)
+    record(aid, cand, instrument, cost, ok, why, governor_available=available(state["agents"][aid]))
+    return ok, why
+
+
+# ---------------- the compliance officer's daily log ----------------
+def record(aid, cand, instrument, cost, ok, why, governor_available=None):
+    log = store.load("compliance.json", {})
+    day = log.setdefault(store.today(), {"approved": [], "denied": []})
+    entry = {"time": store.now_et().isoformat(timespec="seconds"), "agent": aid, "symbol": cand.get("symbol"),
+             "instrument": instrument, "side": "buy", "amount": round(float(cost or 0), 2),
+             "settled_cash": governor_available, "reason": why}
+    if ok:
+        entry["outcome"] = "pending"
+    day["approved" if ok else "denied"].append(entry)
+    for old in sorted(log)[:-30]:              # keep 30 trading days
+        log.pop(old, None)
+    store.save("compliance.json", log)
+
+
+def outcome(aid, symbol, result):
+    """After an approved order: filled, not filled, or not placed (e.g. no contract fit the budget)."""
+    log = store.load("compliance.json", {})
+    for e in reversed(log.get(store.today(), {}).get("approved", [])):
+        if e["agent"] == aid and e["symbol"] == symbol and e.get("outcome") == "pending":
+            e["outcome"] = result
+            store.save("compliance.json", log)
+            return
+
+
+def _check_order(state, aid, cand, instrument, cost):
     """Validate one agent order. cost = cash the trade consumes (premium, shares, or spread collateral)."""
     agent = state["agents"][aid]
     if instrument not in config.AGENTS[aid]["instruments"]:

@@ -573,10 +573,12 @@ function nice(sym){
 function roleInfo(k){
   if (k.role === "comp"){
     const blocks = todayJournal().filter(j => j.type === "rule_block");
+    const comp = (data.compliance_today || {});
     const r = data.rules || {};
     return {name: "Compliance officer", firm: "Shared by every firm", color: ROLE_COLOR.comp,
       lines: [`Checks every order against the rulebook: cash only, never more than the firm's available cash, long options or defined-risk spreads. No daily trade limit or position cap.`,
-              blocks.length ? `Turned away ${blocks.length} order${blocks.length > 1 ? "s" : ""} today. Latest: ${blocks[0].note}.` : "No orders turned away today."]};
+              comp.approved != null ? `Today: approved ${comp.approved} order${comp.approved === 1 ? "" : "s"}, denied ${comp.denied}.${comp.last_denied ? ` Latest denial: ${comp.last_denied}.` : ""} The full log is on the dashboard.`
+                : blocks.length ? `Turned away ${blocks.length} order${blocks.length > 1 ? "s" : ""} today. Latest: ${blocks[0].note}.` : "No orders turned away today."]};
   }
   const st = firmsState[k.firm], a = st.agent, fm = FIRMS[k.firm], P = (data.params || {})[k.firm] || {};
   const label = (fm.staff.find(x => x[0] === k.role) || [])[1] || ROLE_NAME[k.role];

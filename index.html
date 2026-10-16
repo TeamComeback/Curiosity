@@ -86,6 +86,12 @@ ul.rules{margin:0;padding-left:18px}
 .tl li b{color:var(--text);font-weight:600}
 .wl{font-size:13px;color:var(--text2);margin-top:6px}
 .wl div{margin:2px 0}
+.seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:10px}
+.seg button{flex:1;font:inherit;font-size:13px;font-weight:600;padding:7px 4px;border:0;background:transparent;color:var(--text2);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--track);color:var(--text)}
+.ctop{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+.ctop select{font:inherit;font-size:13px;padding:4px 6px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text)}
+.ok{color:var(--good)}.no{color:var(--bad)}
 .radar-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .radar-score{font-size:30px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .radar-tier{font-size:12px;font-weight:700;letter-spacing:.06em;padding:2px 9px;border-radius:999px;border:1px solid currentColor}
@@ -131,6 +137,9 @@ ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 
 <h2>Open positions</h2>
 <div class="card" id="positions"></div>
+
+<h2>Compliance desk</h2>
+<div class="card" id="compliance"><div class="empty">The compliance log starts with the next trading round.</div></div>
 
 <h2>Agent journal</h2>
 <div class="card" id="journal"></div>
@@ -203,6 +212,7 @@ function render(d){
 
   radarCard(d.radar);
   nightCard(d, names);
+  loadCompliance();
   chart(d, names);
   positions(d.positions, names);
   journal(d.journal);
@@ -246,6 +256,34 @@ function nightCard(d, names){
           ${p.brainstorm ? `<div class="wl"><b>Idea to test:</b> ${esc(p.brainstorm)}</div>` : ""}
         </details></div>`;
     }).join("");
+}
+
+let COMP = {}, compDay = null, compTab = "approved";
+function loadCompliance(){
+  fetch("data/compliance.json?ts=" + Date.now()).then(r => r.ok ? r.json() : {}).then(c => { COMP = c || {}; compliance(); }).catch(() => {});
+}
+function compliance(){
+  const days = Object.keys(COMP).sort().reverse();
+  if (!days.length) return;
+  if (!compDay || !COMP[compDay]) compDay = days[0];
+  const d = COMP[compDay], names = Object.fromEntries((DATA ? DATA.agents : []).map(a => [a.id, a.name]));
+  const nice = s => { const m = /^([A-Z]+)(\d{2})(\d{2})(\d{2})([CP])(\d{8})$/.exec(s || ""); return m ? `${m[1]} $${+m[6] / 1000} ${m[5] === "C" ? "call" : "put"}` : (s || ""); };
+  const KIND = {stock: "shares", call: "call", put: "put", spread: "credit spread", debit_spread: "put spread"};
+  const t = x => new Date(x).toLocaleTimeString([], {hour: "numeric", minute: "2-digit"});
+  const list = (d[compTab] || []).slice().reverse();
+  const filled = (d.approved || []).filter(e => String(e.outcome || "").startsWith("filled")).length;
+  $("compliance").innerHTML = `<div class="ctop"><span class="sub">Every new order is checked against the rulebook before it reaches the exchange. Exits are always allowed.</span>
+      <select aria-label="Day">${days.map(x => `<option ${x === compDay ? "selected" : ""}>${x}</option>`).join("")}</select></div>
+    <div class="seg" role="tablist"><button aria-pressed="${compTab === "approved"}" data-t="approved">Approved (${(d.approved || []).length})</button>
+      <button aria-pressed="${compTab === "denied"}" data-t="denied">Denied (${(d.denied || []).length})</button></div>
+    ${compTab === "approved" ? `<div class="sub" style="margin-bottom:6px">${filled} of ${(d.approved || []).length} approved orders filled.</div>` : ""}
+    ${list.length ? list.map(e => `<div class="row"><div class="h"><span><span class="sw" style="background:${COLOR[e.agent] || "var(--muted)"};margin-right:6px"></span>${esc(nice(e.symbol))}
+        <span class="sub">${nice(e.symbol) !== e.symbol ? "" : esc(KIND[e.instrument] || e.instrument || "")}</span></span><span class="sub">${esc(t(e.time))}</span></div>
+      <div class="d">${esc(names[e.agent] || e.agent)}${e.amount ? ` · ${money(e.amount)}` : ""}${e.settled_cash != null ? ` · settled cash ${money(e.settled_cash)}` : ""}</div>
+      <div class="d ${compTab === "approved" ? "ok" : "no"}">${compTab === "approved" ? `✓ Approved · ${esc(e.outcome || "")}` : `✕ ${esc(e.reason)}`}</div></div>`).join("")
+      : `<div class="empty">No ${compTab} orders on ${esc(compDay)}.</div>`}`;
+  $("compliance").querySelectorAll(".seg button").forEach(b => b.onclick = () => { compTab = b.dataset.t; compliance(); });
+  $("compliance").querySelector("select").onchange = ev => { compDay = ev.target.value; compliance(); };
 }
 
 function radarCard(rd){
