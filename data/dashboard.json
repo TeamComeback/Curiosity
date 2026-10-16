@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T15:07-04:00",
+ "updated": "2026-10-16T15:37-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,7 +10,7 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 5.1,
+  "spy_vs_sma200_pct": 5.2,
   "spy_roc20_pct": 1.2,
   "crash_radar": 25
  },
@@ -36,20 +36,24 @@
    "id": "trend",
    "name": "Trend Co.",
    "competing": true,
-   "equity": 1090.09,
-   "cash": 65.08,
+   "equity": 1054.98,
+   "cash": 406.12,
    "available": 0.58,
-   "settling": 64.5,
+   "settling": 405.54,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.09,
-   "progress_pct": 10.9,
-   "open": 6,
-   "closed": 1,
+   "multiple": 1.05,
+   "progress_pct": 10.55,
+   "open": 5,
+   "closed": 2,
    "win_rate": 0.0,
    "max_dd_pct": 11.5,
-   "risk_adj": 0.79,
+   "risk_adj": 0.48,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "No settled cash for entries. A failed breakout that closes back below its level should be exited promptly, not held to a later check."
+    },
     {
      "date": "2026-10-16",
      "note": "Only $0.58 is settled, so no entry is affordable. Hold all stops. ETSY (85.80) is below its 87.35 breakout level; exit at the close if it stays there, as planned."
@@ -57,10 +61,6 @@
     {
      "date": "2026-10-16",
      "note": "Only $0.58 is settled, so no entries are possible. Holding all stops. ETSY is below its 87.35 breakout level; if it closes there, exit at the close, since proceeds settle T+1 either way. Redeploy once cash settles."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "Only $0.58 is settled, so no entry is affordable. Holding all stops. ETSY is trading below its 87.35 breakout level, so exit at the next close if it stays there. Redeploy only once proceeds settle."
     }
    ]
   },
@@ -68,20 +68,24 @@
    "id": "meanrev",
    "name": "Snapback Partners",
    "competing": true,
-   "equity": 997.6,
+   "equity": 999.37,
    "cash": 543.46,
    "available": 543.46,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 9.98,
+   "progress_pct": 9.99,
    "open": 2,
    "closed": 1,
    "win_rate": 0.0,
    "max_dd_pct": 0.7,
-   "risk_adj": -0.05,
+   "risk_adj": -0.01,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "No new entries: OKTA (~1.05:1, 57% above its 200-day, second tech name beside FTNT) and CRWD (~0.85:1) fail the 1:1 floor. Holding STT at its 160.74 stop and FTNT at 154.63; keeping settled cash for a non-tech washout that clears 1:1 without heavy extension."
+    },
     {
      "date": "2026-10-16",
      "note": "No entries: OKTA (~1.1:1, 58% above its 200-day, tech) and CRWD (~0.85:1) fail my 1:1 floor or are too extended. Holding STT at its 160.74 stop and FTNT at 154.63; keeping settled cash for a non-tech washout that clears 1:1."
@@ -89,10 +93,6 @@
     {
      "date": "2026-10-16",
      "note": "No new entries. OKTA (~1.05:1, 59% above its 200-day, second tech name beside FTNT) and CRWD (~0.8:1) fail my 1:1 floor and sector limits. Holding STT at its 160.74 stop and FTNT at 154.63; keeping settled cash for a non-tech washout that clears 1:1 without heavy extension."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "No new entries: OKTA is about 1.09:1 but 58% above its 200-day and a second tech-sector name next to FTNT, CRWD is 0.85:1, and TWST is 0.37:1. STT and FTNT stay on their current stops."
     }
    ]
   },
@@ -116,15 +116,15 @@
    "notes": [
     {
      "date": "2026-10-16",
+     "note": "Pass: best live credit is IWM 284/285 at 0.23 (23% of the $1 width), below my 0.25 trigger. Positions are flat and cash is settled. Recheck for 25%+ credit on a $1 width at 21-45 DTE."
+    },
+    {
+     "date": "2026-10-16",
      "note": "Took the 0.25+ credit trigger on IWM with one contract at $75 max loss. Game-plan strikes were 288/289, but live candidate 285/286 was the one that met the credit trigger, so live prices governed. Manage at 50% profit or the default stop."
     },
     {
      "date": "2026-10-16",
      "note": "No trade: best live credits are XLE 0.20, IWM 0.18, TLT 0.18 and EEM 0.15 on $1 widths (15-20%), all below my 25% trigger. Broker shows no positions, so there is nothing to manage. Stay flat and recheck for 25%+ credit."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "No trade: best live credit is IWM 285/286 at 0.15 (15% of the $1 width), below my 25% trigger. Stay flat and recheck for 25%+ credit on a $1 width."
     }
    ]
   },
@@ -132,58 +132,62 @@
    "id": "baseline",
    "name": "Index Booth (SPY)",
    "competing": false,
-   "equity": 985.05,
+   "equity": 986.28,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.99,
-   "progress_pct": 9.85,
+   "progress_pct": 9.86,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 1.5,
-   "risk_adj": -0.3,
+   "risk_adj": -0.27,
    "notes": []
   },
   {
    "id": "monkey",
    "name": "Monkey Business",
    "competing": false,
-   "equity": 983.13,
+   "equity": 981.5,
    "cash": 577.89,
    "available": 577.89,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.98,
-   "progress_pct": 9.83,
+   "progress_pct": 9.81,
    "open": 1,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 1.9,
-   "risk_adj": -0.34,
+   "risk_adj": -0.37,
    "notes": []
   },
   {
    "id": "blackswan",
    "name": "Black Swan & Co.",
    "competing": true,
-   "equity": 722.5,
+   "equity": 749.5,
    "cash": 143.5,
    "available": 143.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.72,
-   "progress_pct": 7.22,
+   "multiple": 0.75,
+   "progress_pct": 7.5,
    "open": 5,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 31.6,
-   "risk_adj": -0.88,
+   "risk_adj": -0.79,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "Passing again: the book is already heavily short correlated Tech, the radar is calm at 25, and the SPY insurance and XLI setups aren't triggered. Revisit when a position closes and frees settled cash, or if the radar rises above 40."
+    },
     {
      "date": "2026-10-16",
      "note": "Passing: open bearish debit is about 80% of equity, settled cash is $143.50, and the only fresh candidates are correlated Tech shorts or untriggered XLI/SPY insurance. RKLB is no longer in the scan, so the game-plan entry is dropped. Revisit when a position closes and frees settled cash, or if the r"
@@ -191,10 +195,6 @@
     {
      "date": "2026-10-16",
      "note": "Passing again: open bearish debit is about 80% of equity, settled cash is $143.50, and the radar is calm at 25. APP, AAOI and SPY insurance would add correlated or concentrated risk, and XLI hasn't broken down. Revisit once a position closes and frees settled cash, or if the radar rises above 40."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "Passing: open bearish debit is about 80% of equity across correlated breakdown bets, cash is only $143.50, and XLI is not yet below its 164.66 breakdown level. Revisit after a position closes and frees settled cash, or if the radar rises above 40."
     }
    ]
   },
@@ -257,12 +257,12 @@
   {
    "date": "2026-10-16",
    "agents": {
-    "trend": 1090.09,
-    "meanrev": 997.6,
+    "trend": 1054.98,
+    "meanrev": 999.37,
     "volsell": 1000.0,
-    "baseline": 985.05,
-    "monkey": 983.13,
-    "blackswan": 722.5,
+    "baseline": 986.28,
+    "monkey": 981.5,
+    "blackswan": 749.5,
     "scalper": 1000.02
    }
   }
@@ -279,7 +279,7 @@
    "qty": 1,
    "entry": 0.96,
    "last": null,
-   "mark": 1.78,
+   "mark": 1.75,
    "stop": 12.53,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:38-04:00",
@@ -301,7 +301,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.63,
+   "mark": 0.57,
    "stop": 6.94,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -323,7 +323,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 2.42,
+   "mark": 2.34,
    "stop": 10.74,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -345,35 +345,13 @@
    "qty": 5,
    "entry": 0.14,
    "last": null,
-   "mark": 0.17,
+   "mark": 0.15,
    "stop": 1.63,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T12:10:38-04:00",
    "thesis": "PLUG broke below its 55-day low at 1.55 on 2.9x volume with roc20 at -23.6% and is 41% below its 200-day SMA; the 1.63 stop sits just above the breakdown level, and the premium is small.",
    "confidence": 3,
    "cost": 75.0,
-   "realized": null,
-   "play": null,
-   "width": null
-  },
-  {
-   "agent": "trend",
-   "position_id": "pos-88810b3067",
-   "kind": "stock",
-   "symbol": "ETSY",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 4.0,
-   "entry": 89.48,
-   "last": 85.8,
-   "mark": null,
-   "stop": 83.87,
-   "expiry": null,
-   "opened": "2026-10-15T13:06:08-04:00",
-   "thesis": "ETSY broke above its 55-day high at 87.35 on 2.4x relative volume with a 16% gap above its 50-day SMA, a fresh uncorrelated breakout; 4 shares fit the cash, and the 83.87 stop risks about $22.",
-   "confidence": 3,
-   "cost": 357.92,
    "realized": null,
    "play": null,
    "width": null
@@ -388,7 +366,7 @@
    "opt_type": null,
    "qty": 1.013,
    "entry": 49.36,
-   "last": 50.155,
+   "last": 50.205,
    "mark": null,
    "stop": 47.12,
    "expiry": null,
@@ -410,7 +388,7 @@
    "opt_type": null,
    "qty": 1.2448,
    "entry": 160.74,
-   "last": 163.31,
+   "last": 164.59,
    "mark": null,
    "stop": 160.74,
    "expiry": null,
@@ -432,7 +410,7 @@
    "opt_type": null,
    "qty": 1.4876,
    "entry": 168.29,
-   "last": 168.63,
+   "last": 168.75,
    "mark": null,
    "stop": 154.63,
    "expiry": null,
@@ -454,7 +432,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 761.66,
+   "last": 762.62,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -476,7 +454,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 761.66,
+   "last": 762.62,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -498,7 +476,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 761.66,
+   "last": 762.62,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -520,7 +498,7 @@
    "opt_type": null,
    "qty": 0.97,
    "entry": 435.168,
-   "last": 417.775,
+   "last": 416.09,
    "mark": null,
    "stop": 401.48,
    "expiry": null,
@@ -543,7 +521,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 1.09,
+   "mark": 1.21,
    "stop": 51.35,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -565,8 +543,8 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.27,
-   "stop": 34.17,
+   "mark": 1.47,
+   "stop": 34.09,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
    "thesis": "IREN broke its 20-day low at 32.71, is down 16% over 20 days and sits below its 200-day in a calm radar (15), so a bear put spread capped at $150 targets the breakdown.",
@@ -587,7 +565,7 @@
    "qty": 1,
    "entry": 0.86,
    "last": null,
-   "mark": 0.92,
+   "mark": 0.88,
    "stop": 22.38,
    "expiry": "2027-01-15",
    "opened": "2026-10-15T13:07:01-04:00",
@@ -609,7 +587,7 @@
    "qty": 1,
    "entry": 1.5,
    "last": null,
-   "mark": 1.18,
+   "mark": 1.19,
    "stop": 131.8,
    "expiry": "2027-01-15",
    "opened": "2026-10-16T10:06:17-04:00",
@@ -631,7 +609,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 1.33,
+   "mark": 1.31,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -644,6 +622,27 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-16T15:36:46-04:00",
+   "type": "close",
+   "agent": "trend",
+   "symbol": "ETSY",
+   "qty": 4.0,
+   "entry": 89.48,
+   "exit": 85.26,
+   "pnl": -16.88,
+   "note": "agent: Failed breakout: ETSY is at 85.30, below the 87.35 breakout level that was the entry thesis. Exiting now instead of wait",
+   "opened": "2026-10-15T13:06:08-04:00",
+   "confidence": 3,
+   "thesis": "ETSY broke above its 55-day high at 87.35 on 2.4x relative volume with a 16% gap above its 50-day SMA, a fresh uncorrelated breakout; 4 shares fit the cash, and the 83.87 stop risks about $22."
+  },
+  {
+   "time": "2026-10-16T15:36:37-04:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-60%)"
+  },
   {
    "time": "2026-10-16T15:07:29-04:00",
    "type": "unfilled",
@@ -1164,20 +1163,6 @@
    "type": "scorecard",
    "agent": "trend",
    "note": "Plan graded: 0 of 3 picks moved the planned way, avg -3.86%"
-  },
-  {
-   "time": "2026-10-15T15:36:56-04:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "MU, AMD, QQQ, IWM, TSM",
-   "note": "defensive: About 14 minutes remain before the 3:50 flat, so there's room for at most one short, tightly bracketed trade. Defensive sizing on the names that are still trending up above VWAP (MU, AMD, QQQ, IWM, TSM) fits a calm tape, and the 10-minute hold keeps any entry inside the window."
-  },
-  {
-   "time": "2026-10-15T15:36:41-04:00",
-   "type": "unfilled",
-   "agent": "volsell",
-   "symbol": "QQQ",
-   "note": "credit 0.29 not filled"
   }
  ],
  "reviews": [],
@@ -1909,20 +1894,20 @@
    "economy_score": 6,
    "parts": {
     "trend": 35,
-    "drawdown": 17,
+    "drawdown": 16,
     "volatility": 0,
-    "breadth": 68,
+    "breadth": 67,
     "credit": 53,
     "safety": 0,
     "economy": 6
    },
    "facts": {
-    "spy_vs_sma50_pct": -0.9,
-    "spy_vs_sma200_pct": 5.1,
-    "spy_off_high_pct": 2.5,
+    "spy_vs_sma50_pct": -0.8,
+    "spy_vs_sma200_pct": 5.2,
+    "spy_off_high_pct": 2.4,
     "spy_iv_pct": 13.2,
     "spy_realized_vol_pct": 9.6,
-    "pct_above_50d": 37.9,
+    "pct_above_50d": 38.3,
     "breadth_sample": 507,
     "junk_vs_treasuries_20d_pct": -1.12,
     "havens_vs_spy_20d_pct": -4.3
@@ -1936,7 +1921,7 @@
     "junk_bond_spread_pct": 3.25,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-16T15:06-04:00"
+   "at": "2026-10-16T15:36-04:00"
   },
   "history": [
    {
@@ -1978,18 +1963,18 @@
  "playbooks": {
   "scalper": {
    "date": "2026-10-16",
-   "made_at": "2026-10-16T15:07-04:00",
+   "made_at": "2026-10-16T15:37-04:00",
    "watch": [
     "SPY",
     "QQQ",
     "IWM"
    ],
    "aggression": "stand_down",
-   "why": "SPY, QQQ, IWM, and nearly every candidate are below VWAP with 1-minute trends down, and today's bounces have mostly failed. With about 40 minutes left and only $41.74 settled, the risk/reward doesn't justify new trades. The overnight plan's note that IWM is up 1.34% conflicts with the live data (-1.",
+   "why": "With about 13 minutes until the 3:50 flatten and only $41.74 settled, there isn't time for a clean setup to develop and play out. Most candidates are below VWAP with 1-minute trends down, and today's bounces have mostly failed, so I'm standing down and keeping the index names on watch.",
    "slices": 1,
    "target_pct": 0.5,
    "stop_pct": 0.3,
-   "max_hold_min": 25
+   "max_hold_min": 10
   }
  },
  "focus": {
@@ -2044,6 +2029,13 @@
  },
  "sector_stats": {
   "trend": {
+   "Consumer Staples": {
+    "trades": 1,
+    "wins": 0,
+    "pnl": -16.88,
+    "win_rate_pct": 0,
+    "avg_pnl": -16.88
+   },
    "Technology": {
     "trades": 1,
     "wins": 0,
