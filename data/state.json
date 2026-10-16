@@ -12,7 +12,8 @@
   "date": "2026-10-16",
   "counts": {
    "trend": 1,
-   "blackswan": 1
+   "blackswan": 1,
+   "scalper": 2
   }
  },
  "agents": {
@@ -151,7 +152,7 @@
       "pct_vs_sma200": 34.3
      },
      "sector": "Consumer Staples",
-     "last": 89.34,
+     "last": 88.665,
      "high_water": 89.97
     },
     "pos-2ce62f642c": {
@@ -173,7 +174,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 49.355
+     "last": 49.31
     }
    },
    "status": "active",
@@ -182,7 +183,7 @@
    "closed": 1,
    "wins": 0,
    "peak": 1033.5,
-   "max_dd": 0.1113,
+   "max_dd": 0.114,
    "notes": [
     {
      "date": "2026-10-14",
@@ -423,7 +424,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 167.315
+     "last": 166.69
     }
    },
    "status": "active",
@@ -432,7 +433,7 @@
    "closed": 1,
    "wins": 0,
    "peak": 1004.23,
-   "max_dd": 0.0026,
+   "max_dd": 0.003,
    "notes": [
     {
      "date": "2026-10-13",
@@ -835,7 +836,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 771.4
+     "last": 771.28
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -851,7 +852,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.4
+     "last": 771.28
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -867,7 +868,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.4
+     "last": 771.28
     }
    },
    "status": "active",
@@ -900,7 +901,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 422.87
+     "last": 419.975
     }
    },
    "status": "active",
@@ -909,7 +910,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.67,
-   "max_dd": 0.0126,
+   "max_dd": 0.0154,
    "notes": [],
    "last_exits": {},
    "joined": "2026-10-13T19:21:59-04:00",
@@ -1353,9 +1354,53 @@
    ]
   },
   "scalper": {
-   "cash": 999.66,
+   "cash": 749.76,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-5a5af4a19b": {
+     "kind": "stock",
+     "symbol": "TSLA",
+     "qty": 0.339,
+     "entry": 368.594,
+     "cost": 124.95,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 367.45,
+     "atr": 0,
+     "opened": "2026-10-16T10:14:29-04:00",
+     "thesis": "VWAP pullback bounce on TSLA: 1.46x volume, +0.40% vs VWAP; target +0.6%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Consumer Discretionary",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.3,
+     "max_hold_min": 30,
+     "last": 368.905,
+     "peak_gain": 0.08437467782980157
+    },
+    "pos-932e952a2a": {
+     "kind": "stock",
+     "symbol": "NVDA",
+     "qty": 0.5768,
+     "entry": 216.624,
+     "cost": 124.95,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 215.96,
+     "atr": 0,
+     "opened": "2026-10-16T10:16:30-04:00",
+     "thesis": "VWAP pullback bounce on NVDA: 0.8x volume, +0.25% vs VWAP; target +0.6%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.3,
+     "max_hold_min": 30,
+     "last": 216.61
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
