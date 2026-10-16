@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T10:52-04:00",
+ "updated": "2026-10-16T11:06-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,9 +10,9 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 6.5,
+  "spy_vs_sma200_pct": 6.3,
   "spy_roc20_pct": 1.2,
-  "crash_radar": 16
+  "crash_radar": 17
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -36,20 +36,24 @@
    "id": "trend",
    "name": "Trend Co.",
    "competing": true,
-   "equity": 923.7,
+   "equity": 969.25,
    "cash": 65.08,
    "available": 0.58,
    "settling": 64.5,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.92,
-   "progress_pct": 9.24,
+   "multiple": 0.97,
+   "progress_pct": 9.69,
    "open": 6,
    "closed": 1,
    "win_rate": 0.0,
    "max_dd_pct": 11.5,
-   "risk_adj": -0.67,
+   "risk_adj": -0.27,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "Only $0.58 settled cash, so no entries are possible. Hold all stops (SOFI-closed, CIFR 12.81, SMR 6.94, CWVX 10.76, PLUG 1.63, ETSY 83.87, BP 47.12) and redeploy only when sale proceeds settle."
+    },
     {
      "date": "2026-10-16",
      "note": "Only $0.58 is settled, so no new entries are possible. Hold all stops, including the BP and ETSY trailing levels, and wait for the sale proceeds to settle before taking any setup."
@@ -57,10 +61,6 @@
     {
      "date": "2026-10-16",
      "note": "Cash is down to $50.58, so I'm taking the one affordable, uncorrelated breakout (BP, 1 share). Energy long is not in the Technology avoid list and does not add to the bearish puts."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "No candidates today and only $50.58 available, so hold all stops. SOFI put closed out at its trailing stop. Watch ETSY's 87.35 breakout level and wait for settled cash before new entries."
     }
    ]
   },
@@ -68,7 +68,7 @@
    "id": "meanrev",
    "name": "Snapback Partners",
    "competing": true,
-   "equity": 1001.8,
+   "equity": 1002.35,
    "cash": 793.81,
    "available": 793.81,
    "settling": 0,
@@ -80,8 +80,12 @@
    "closed": 1,
    "win_rate": 0.0,
    "max_dd_pct": 0.3,
-   "risk_adj": 0.04,
+   "risk_adj": 0.05,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "No entries. Best candidate OKTA is about 0.98:1 reward-to-risk and 61% above its 200-day, FTNT about 0.9:1 in Technology, TWST about 0.36:1. STT stop is already at breakeven 160.74; hold on default exits and keep settled cash."
+    },
     {
      "date": "2026-10-16",
      "note": "No entries: all three candidates (OKTA ~0.9:1, FTNT ~0.8:1, TWST ~0.3:1) are below my 1:1 reward-to-risk floor. STT stop is already at breakeven 160.74; hold on default exits and keep settled cash."
@@ -89,10 +93,6 @@
     {
      "date": "2026-10-16",
      "note": "Passed on FTNT (about 0.8:1 reward-to-risk, Technology, under my 1:1 floor) and TWST (about 0.3:1, 63% above its 200-day). STT stop is already at breakeven 160.74; holding on default exits and keeping settled cash."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "Every washout candidate today has reward-to-risk of about 0.3-0.6:1 (SOXX ~0.55, SMH ~0.58, SMCI ~0.54, TSM ~0.6, XLK ~0.61, SNDK ~0.34), all under my 1:1 floor. Passing. STT stop moved to breakeven 160.74 and held on its default exits. Keep settled cash for a washout whose snap-back target is at le"
     }
    ]
   },
@@ -116,15 +116,15 @@
    "notes": [
     {
      "date": "2026-10-16",
+     "note": "Pass: best live credit/width is EEM 0.12 and IWM/SPY 0.18 (12-18% of width). At delta 0.2, expected value is about 0.8\u00d70.18 \u2212 0.2\u00d70.82 \u2248 \u22120.02 per share before slippage. Broker shows no open positions. Recheck for 25%+ credit on $1 width."
+    },
+    {
+     "date": "2026-10-16",
      "note": "Flat again: best live credit/width is EEM 67.5/68.5 at 0.24 (24%), just under my 0.25 trigger, and IWM is at 0.17. No positions to reconcile. Recheck IWM or EEM for 0.25+ on the $1 width."
     },
     {
      "date": "2026-10-16",
      "note": "Flat. No live candidate reaches the 0.25 credit-to-width trigger: EEM is 0.20, IWM 0.14, XLE 0.14, SPY 0.09. Broker shows no open positions, so no QQQ spread to reconcile. Recheck IWM for 0.25+ on the $1 width."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "Flat. Best live credit/width is IWM 289/288 bear call at 0.24 (24%), just under the 0.25 trigger, so pass. Recheck IWM for 0.25+ on the $1 width; the QQQ spread in my notes is not in the ledger, so there is nothing to manage."
     }
    ]
   },
@@ -132,32 +132,32 @@
    "id": "baseline",
    "name": "Index Booth (SPY)",
    "competing": false,
-   "equity": 998.4,
+   "equity": 996.53,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 9.98,
+   "progress_pct": 9.97,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 0.8,
-   "risk_adj": -0.03,
+   "risk_adj": -0.07,
    "notes": []
   },
   {
    "id": "monkey",
    "name": "Monkey Business",
    "competing": false,
-   "equity": 985.05,
+   "equity": 984.84,
    "cash": 577.89,
    "available": 577.89,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.99,
+   "multiple": 0.98,
    "progress_pct": 9.85,
    "open": 1,
    "closed": 0,
@@ -170,20 +170,24 @@
    "id": "blackswan",
    "name": "Black Swan & Co.",
    "competing": true,
-   "equity": 852.5,
+   "equity": 893.5,
    "cash": 483.5,
    "available": 483.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.85,
-   "progress_pct": 8.53,
+   "multiple": 0.89,
+   "progress_pct": 8.94,
    "open": 4,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 14.8,
-   "risk_adj": -1.0,
+   "risk_adj": -0.72,
    "notes": [
+    {
+     "date": "2026-10-16",
+     "note": "Passing today: open bearish debit risk is about 46% of equity across four correlated breakdown bets, and the radar is calm at 17. ORCL is a fresh Technology short, but it would add more correlated risk. Revisit only after a position closes and frees settled cash."
+    },
     {
      "date": "2026-10-16",
      "note": "Open bearish debit risk is about $369 marked, roughly 43% of equity across four correlated breakdown bets, so I'm passing on JNK and VCIT. JNK's last spread also failed to fill. Revisit only if a position closes and frees settled cash, or if the radar moves above 40."
@@ -191,10 +195,6 @@
     {
      "date": "2026-10-16",
      "note": "Open debit risk is about $331 across ASTS, IREN and APLD, so I'm diversifying with a sector that isn't Technology. I'm skipping SPY insurance: the radar is calm and the far-out put would decay while the thesis waits."
-    },
-    {
-     "date": "2026-10-16",
-     "note": "The overnight plan's RKLB idea isn't in today's candidate list, so I dropped it. Total open risk is now near 45% of equity, so I'm adding only one small, uncorrelated position and passing on VRT and PLD for budget reasons."
     }
    ]
   },
@@ -202,19 +202,19 @@
    "id": "scalper",
    "name": "Rapid Fire Trading",
    "competing": true,
-   "equity": 1000.1,
-   "cash": 875.3,
+   "equity": 999.83,
+   "cash": 999.83,
    "available": 374.95,
-   "settling": 500.35,
+   "settling": 624.88,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
    "progress_pct": 10.0,
-   "open": 1,
-   "closed": 6,
-   "win_rate": 33.3,
+   "open": 0,
+   "closed": 7,
+   "win_rate": 28.6,
    "max_dd_pct": 0.1,
-   "risk_adj": 0.0,
+   "risk_adj": -0.0,
    "notes": []
   }
  ],
@@ -257,13 +257,13 @@
   {
    "date": "2026-10-16",
    "agents": {
-    "trend": 923.7,
-    "meanrev": 1001.8,
+    "trend": 969.25,
+    "meanrev": 1002.35,
     "volsell": 1000.0,
-    "baseline": 998.4,
-    "monkey": 985.05,
-    "blackswan": 852.5,
-    "scalper": 1000.1
+    "baseline": 996.53,
+    "monkey": 984.84,
+    "blackswan": 893.5,
+    "scalper": 999.83
    }
   }
  ],
@@ -279,7 +279,7 @@
    "qty": 1,
    "entry": 0.96,
    "last": null,
-   "mark": 1.29,
+   "mark": 1.46,
    "stop": 12.81,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:38-04:00",
@@ -301,7 +301,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.44,
+   "mark": 0.48,
    "stop": 6.94,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -323,7 +323,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 1.85,
+   "mark": 1.89,
    "stop": 10.76,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -345,7 +345,7 @@
    "qty": 5,
    "entry": 0.14,
    "last": null,
-   "mark": 0.1,
+   "mark": 0.14,
    "stop": 1.63,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T12:10:38-04:00",
@@ -366,7 +366,7 @@
    "opt_type": null,
    "qty": 4.0,
    "entry": 89.48,
-   "last": 89.13,
+   "last": 88.25,
    "mark": null,
    "stop": 83.87,
    "expiry": null,
@@ -388,7 +388,7 @@
    "opt_type": null,
    "qty": 1.013,
    "entry": 49.36,
-   "last": 49.46,
+   "last": 49.53,
    "mark": null,
    "stop": 47.12,
    "expiry": null,
@@ -410,7 +410,7 @@
    "opt_type": null,
    "qty": 1.2448,
    "entry": 160.74,
-   "last": 167.09,
+   "last": 167.53,
    "mark": null,
    "stop": 160.74,
    "expiry": null,
@@ -432,7 +432,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 772.04,
+   "last": 770.585,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -454,7 +454,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 772.04,
+   "last": 770.585,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -476,7 +476,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 772.04,
+   "last": 770.585,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -498,7 +498,7 @@
    "opt_type": null,
    "qty": 0.97,
    "entry": 435.168,
-   "last": 419.755,
+   "last": 419.54,
    "mark": null,
    "stop": 401.48,
    "expiry": null,
@@ -521,7 +521,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 0.86,
+   "mark": 1.03,
    "stop": 51.35,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -543,8 +543,8 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.05,
-   "stop": 35.53,
+   "mark": 1.36,
+   "stop": 35.48,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
    "thesis": "IREN broke its 20-day low at 32.71, is down 16% over 20 days and sits below its 200-day in a calm radar (15), so a bear put spread capped at $150 targets the breakdown.",
@@ -565,7 +565,7 @@
    "qty": 1,
    "entry": 0.86,
    "last": null,
-   "mark": 0.8,
+   "mark": 0.76,
    "stop": 22.38,
    "expiry": "2027-01-15",
    "opened": "2026-10-15T13:07:01-04:00",
@@ -587,7 +587,7 @@
    "qty": 1,
    "entry": 1.5,
    "last": null,
-   "mark": 0.98,
+   "mark": 0.95,
    "stop": 132.75,
    "expiry": "2027-01-15",
    "opened": "2026-10-16T10:06:17-04:00",
@@ -597,31 +597,30 @@
    "realized": null,
    "play": "weak_stock",
    "width": 5.0
-  },
-  {
-   "agent": "scalper",
-   "position_id": "pos-af472d1723",
-   "kind": "stock",
-   "symbol": "AVGO",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 0.3685,
-   "entry": 339.09,
-   "last": 338.68,
-   "mark": null,
-   "stop": 338.04,
-   "expiry": null,
-   "opened": "2026-10-16T10:38:25-04:00",
-   "thesis": "VWAP pullback bounce on AVGO: 1.31x volume, +0.31% vs VWAP; target +0.6%, stop -0.3%",
-   "confidence": 3,
-   "cost": 124.95,
-   "realized": null,
-   "play": "scalp",
-   "width": null
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-16T11:06:24-04:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "TLT, SOXS, NVDA, SMH",
+   "note": "defensive: SPY, IWM and QQQ are all down with ranges under 1%, too small for a reliable target, and the overnight IWM and SPY plan no longer matches the live tape. TLT and SOXS are the only names with a live VWAP-bounce setup, and only 3 slices are actually settled cash today, so I'm using defensive size with "
+  },
+  {
+   "time": "2026-10-16T11:00:41-04:00",
+   "type": "close",
+   "agent": "scalper",
+   "symbol": "AVGO",
+   "qty": 0.3685,
+   "entry": 339.09,
+   "exit": 337.93,
+   "pnl": -0.42,
+   "note": "stop (-0.36%)",
+   "opened": "2026-10-16T10:38:25-04:00",
+   "confidence": 3,
+   "thesis": "VWAP pullback bounce on AVGO: 1.31x volume, +0.31% vs VWAP; target +0.6%, stop -0.3%"
+  },
   {
    "time": "2026-10-16T10:52:35-04:00",
    "type": "close",
@@ -1133,20 +1132,6 @@
    "agent": "volsell",
    "note": "Evening check-in: revise. Today's scan keeps IWM as the only setup with real richness (IV/RV 1.6, calm crash radar at 15), but the plan's $75 cap and 'max loss about $75 of a $100 account' language is stale now that the account is $1,000. The 0.25 credit trigger still stands, because at about 20 delta the breakeven win rate is close to the expected win rate and the credit needs to clear slippage.",
    "symbol": "IWM"
-  },
-  {
-   "time": "2026-10-14T19:25:07-04:00",
-   "type": "plan",
-   "agent": "meanrev",
-   "note": "Evening check-in: keep. The scan shows the same picture as my last several passes: the 2.5-ATR stop sits about 1.5-2x as far from entry as the SMA5 snap-back target, so reward-to-risk is roughly 0.4-1.0 for every washout. Crash radar is calm (15), but I have no results or scorecard yet to justify paying that ratio.",
-   "symbol": ""
-  },
-  {
-   "time": "2026-10-14T19:24:31-04:00",
-   "type": "plan",
-   "agent": "trend",
-   "note": "Evening check-in: revise. The XLE plan's trigger never fired and it is stale, so I'm dropping it. Today's scan has three breakdowns outside my current book's sectors (AAL, RKT, KKR) that could diversify the five correlated distressed puts, and I can afford them.",
-   "symbol": "AAL, RKT, KKR"
   }
  ],
  "reviews": [],
@@ -1872,7 +1857,7 @@
  ],
  "radar": {
   "now": {
-   "score": 16,
+   "score": 17,
    "tier": "calm",
    "market_score": 20,
    "economy_score": 6,
@@ -1880,18 +1865,18 @@
     "trend": 0,
     "drawdown": 9,
     "volatility": 0,
-    "breadth": 52,
+    "breadth": 55,
     "credit": 53,
     "safety": 0,
     "economy": 6
    },
    "facts": {
-    "spy_vs_sma50_pct": 0.4,
-    "spy_vs_sma200_pct": 6.5,
-    "spy_off_high_pct": 1.3,
-    "spy_iv_pct": 13.2,
+    "spy_vs_sma50_pct": 0.3,
+    "spy_vs_sma200_pct": 6.3,
+    "spy_off_high_pct": 1.4,
+    "spy_iv_pct": 13.1,
     "spy_realized_vol_pct": 9.6,
-    "pct_above_50d": 44.2,
+    "pct_above_50d": 42.8,
     "breadth_sample": 507,
     "junk_vs_treasuries_20d_pct": -1.12,
     "havens_vs_spy_20d_pct": -4.3
@@ -1905,7 +1890,7 @@
     "junk_bond_spread_pct": 3.25,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-16T10:35-04:00"
+   "at": "2026-10-16T11:05-04:00"
   },
   "history": [
    {
@@ -1925,7 +1910,7 @@
    },
    {
     "date": "2026-10-16",
-    "score": 16,
+    "score": 17,
     "tier": "calm"
    }
   ],
@@ -1947,19 +1932,19 @@
  "playbooks": {
   "scalper": {
    "date": "2026-10-16",
-   "made_at": "2026-10-16T10:06-04:00",
+   "made_at": "2026-10-16T11:06-04:00",
    "watch": [
+    "TLT",
+    "SOXS",
     "NVDA",
-    "TSLA",
-    "SMH",
-    "AVGO"
+    "SMH"
    ],
    "aggression": "defensive",
-   "why": "SPY, IWM and QQQ have day ranges of only 0.28\u20130.75%, too small for the 0.4% target to be reliable, and they are all trending down. NVDA and AVGO are the only names with a VWAP-bounce setup, and TSLA and SMH are holding up trends with ranges wide enough to support a 0.6% target.",
-   "slices": 4,
-   "target_pct": 0.6,
+   "why": "SPY, IWM and QQQ are all down with ranges under 1%, too small for a reliable target, and the overnight IWM and SPY plan no longer matches the live tape. TLT and SOXS are the only names with a live VWAP-bounce setup, and only 3 slices are actually settled cash today, so I'm using defensive size with ",
+   "slices": 3,
+   "target_pct": 0.5,
    "stop_pct": 0.3,
-   "max_hold_min": 30
+   "max_hold_min": 25
   }
  },
  "focus": {
@@ -2037,11 +2022,11 @@
   "blackswan": {},
   "scalper": {
    "Technology": {
-    "trades": 4,
+    "trades": 5,
     "wins": 2,
-    "pnl": 0.99,
-    "win_rate_pct": 50,
-    "avg_pnl": 0.25
+    "pnl": 0.57,
+    "win_rate_pct": 40,
+    "avg_pnl": 0.11
    },
    "Consumer Discretionary": {
     "trades": 2,
