@@ -10,7 +10,7 @@
   color-scheme:light;
   --bg:#f5f4f1;--surface:#fcfcfb;--line:#e4e2dc;--grid:#ecebe6;--track:#ecebe6;
   --text:#0b0b0b;--text2:#52514e;--muted:#8a8984;
-  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#8a8984;--s5:#d55181;--s6:#6a4fc0;--s7:#0a8fb0;
+  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#8a8984;--s5:#d55181;--s6:#6a4fc0;--s7:#0a8fb0;--s8:#c2410c;
   --good:#0ca30c;--bad:#d03b3b;--gold:#b07a00;
   --radius:14px;
 }
@@ -18,7 +18,7 @@
   color-scheme:dark;
   --bg:#111110;--surface:#1a1a19;--line:#2c2c2a;--grid:#262624;--track:#2c2c2a;
   --text:#f0efec;--text2:#c3c2b7;--muted:#8f8e86;
-  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#8f8e86;--s5:#e87ba4;--s6:#9b84e8;--s7:#2fb6d6;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#8f8e86;--s5:#e87ba4;--s6:#9b84e8;--s7:#2fb6d6;--s8:#f07a3a;
   --good:#3fbf3f;--bad:#e66767;--gold:#eda100;
 }}
 *{box-sizing:border-box}
@@ -151,7 +151,7 @@ ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
 <div class="card"><ul class="rules" id="rules"></ul></div>
 
 <script>
-const COLOR = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", blackswan:"var(--s6)", scalper:"var(--s7)", baseline:"var(--s4)", monkey:"var(--s5)"};
+const COLOR = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", blackswan:"var(--s6)", scalper:"var(--s7)", hyper:"var(--s8)", baseline:"var(--s4)", monkey:"var(--s5)"};
 let DATA = null;
 const STATUS = {active:"Active", winner:"🏆 Winner", failed:"✕ Failed", eliminated:"✕ Eliminated"};
 const $ = id => document.getElementById(id);
@@ -206,7 +206,7 @@ function render(d){
     .filter(Boolean).map(t => `<span class="pill">${t}</span>`).join("");
 
   const comp = d.agents.filter(a => a.competing).sort((a,b) => (b.status==="winner")-(a.status==="winner") || b.equity-a.equity);
-  const bench = d.agents.filter(a => !a.competing);
+  const bench = d.agents.filter(a => !a.competing).sort((a, b) => (b.exhibition || 0) - (a.exhibition || 0));
   const ticks = [2,5,10,25].filter(m => m < GOAL/START*0.6).map(m => `<span style="left:${logPct(START*m)}%">${m}×</span>`).join("") + `<span style="right:0;transform:none">${money0(GOAL)}</span>`;
   $("standings").innerHTML = comp.map((a,i) => agentCard(a, i+1, ticks)).join("") + bench.map(a => agentCard(a, null, ticks)).join("");
 
@@ -225,6 +225,7 @@ function render(d){
     `Cash only, no margin; options limited to long calls/puts and defined-risk spreads`,
     `Like a real cash account, sale proceeds settle the next trading day and can't be spent until then (no good-faith violations)`,
     `Black Swan only bets on falling prices: puts, put spreads, inverse ETFs and safe havens`,
+    `Full Throttle is an exhibition: an aggressive scalper under the same rules; reaching the goal doesn't end the race`,
     `Rapid Fire scalps shares intraday: checks every 2 minutes, always flat by 3:50 PM, one round trip per cash slice per day`,
     `No daily trade limit, position cap or waiting period: firms trade whenever their analysis says so (a malfunction guard pauses a firm after ${r.malfunction_guard_trades_per_day ?? 30} orders in one day)`,
     `Agents choose setups, dollar amounts, instruments, stops and exits; they can tighten stops, never loosen them`,
@@ -339,9 +340,9 @@ function agentCard(a, rank, ticks){
   const st = a.status;
   return `<div class="card agent">
     <div class="top"><div class="name">${rank ? `<span class="rank">#${rank}</span>` : ""}<span class="sw" style="background:${COLOR[a.id]}"></span>${esc(a.name)}</div>
-      <span class="status ${st}">${a.competing ? STATUS[st] || esc(st) : a.id === "monkey" ? "Control" : "Benchmark"}</span></div>
+      <span class="status ${st}">${a.competing ? STATUS[st] || esc(st) : a.exhibition ? (a.reached_goal ? "🏁 Exhibition · reached goal" : "Exhibition") : a.id === "monkey" ? "Control" : "Benchmark"}</span></div>
     <div class="money"><span class="eq">${money(a.equity)}</span><span class="mult ${cls(ret)}">${a.multiple}× · ${ret>=0?"+":""}${ret.toFixed(1)}%</span></div>
-    ${a.competing ? `<div class="track" role="progressbar" aria-valuenow="${a.equity}" aria-valuemax="${GOAL}" aria-label="Progress to goal">
+    ${a.competing || a.exhibition ? `<div class="track" role="progressbar" aria-valuenow="${a.equity}" aria-valuemax="${GOAL}" aria-label="Progress to goal">
       <div class="fill" style="width:${logPct(a.equity)}%;background:${COLOR[a.id]}"></div></div><div class="ticks">${ticks}</div>` : ""}
     <div class="stats"><span>Cash <b>${money(a.available)}</b>${a.settling ? ` <span title="Sale proceeds settle the next trading day">(+${money(a.settling)} settling)</span>` : ""}</span><span>Open <b>${a.open}</b></span><span>Closed <b>${a.closed}</b></span>
       <span>Win rate <b>${a.win_rate==null?"–":a.win_rate+"%"}</b></span><span>Max DD <b>${a.max_dd_pct}%</b></span>

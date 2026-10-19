@@ -12,12 +12,12 @@
 :root{
   color-scheme:light;
   --ground:#e9ece8;--paper:#f6f7f4;--ink:#1f2a2e;--ink2:#56636a;--rule:#a9b3b4;--faint:#d5dad7;
-  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--blackswan:#6a4fc0;--scalper:#0a8fb0;--baseline:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
+  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--blackswan:#6a4fc0;--scalper:#0a8fb0;--hyper:#c2410c;--baseline:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
 }
 @media (prefers-color-scheme:dark){:root{
   color-scheme:dark;
   --ground:#11171a;--paper:#182024;--ink:#dce3e2;--ink2:#9aa7a9;--rule:#4a575c;--faint:#26312f;
-  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--blackswan:#9b84e8;--scalper:#2fb6d6;--baseline:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
+  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--blackswan:#9b84e8;--scalper:#2fb6d6;--hyper:#f07a3a;--baseline:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
 }}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--ground);color:var(--ink);font:15px/1.45 "IBM Plex Sans Condensed",-apple-system,BlinkMacSystemFont,sans-serif}
@@ -86,8 +86,8 @@ tr:last-child td{border-bottom:0}
   </section>
 </div>
 <script>
-const NAMES = {trend:"Trend Co.", meanrev:"Snapback Partners", volsell:"Premium House", blackswan:"Black Swan & Co.", scalper:"Rapid Fire Trading", baseline:"Index Booth (SPY)", monkey:"Monkey Business"};
-const ORDER = ["trend", "meanrev", "volsell", "blackswan", "scalper", "monkey", "baseline"];
+const NAMES = {trend:"Trend Co.", meanrev:"Snapback Partners", volsell:"Premium House", blackswan:"Black Swan & Co.", scalper:"Rapid Fire Trading", hyper:"Full Throttle Trading", baseline:"Index Booth (SPY)", monkey:"Monkey Business"};
+const ORDER = ["trend", "meanrev", "volsell", "blackswan", "scalper", "hyper", "monkey", "baseline"];
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money = n => n == null ? "–" : (n < 0 ? "-" : "") + "$" + Math.abs(Number(n)).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -138,7 +138,7 @@ function sheet(id, start){
   const realized = closed.reduce((s, e) => s + (e.pnl || 0), 0) + pos.reduce((s, p) => s + (p.realized || 0), 0);
   const rd = (D.radar || {}).now;
   const pbk = (D.playbooks || {})[id];
-  const role = id === "scalper" ? `Racing to $${(D.race.goal || 10000).toLocaleString()} with quick intraday trades${pbk ? ` · playbook: ${pbk.aggression}, watching ${(pbk.watch || []).slice(0, 5).join(", ")}` : ""}` : id === "blackswan" ? `Racing to $${(D.race.goal || 10000).toLocaleString()} by betting on falling prices${rd && rd.score != null ? ` · Crash Radar ${rd.score}/100 (${rd.tier})` : ""}` : id === "monkey" ? "Control group: random picks, same rules" : id === "baseline" ? "Benchmark: SPY bought and held" : `Racing to $${(D.race.goal || 10000).toLocaleString()}`;
+  const role = id === "hyper" ? `Exhibition: aggressive scalping, not racing${pbk ? ` · watching ${(pbk.watch || []).slice(0, 6).join(", ")}` : ""}` : id === "scalper" ? `Racing to $${(D.race.goal || 10000).toLocaleString()} with quick intraday trades${pbk ? ` · playbook: ${pbk.aggression}, watching ${(pbk.watch || []).slice(0, 5).join(", ")}` : ""}` : id === "blackswan" ? `Racing to $${(D.race.goal || 10000).toLocaleString()} by betting on falling prices${rd && rd.score != null ? ` · Crash Radar ${rd.score}/100 (${rd.tier})` : ""}` : id === "monkey" ? "Control group: random picks, same rules" : id === "baseline" ? "Benchmark: SPY bought and held" : `Racing to $${(D.race.goal || 10000).toLocaleString()}`;
   return `<section class="sheet" aria-label="${esc(NAMES[id])}">
     <header><div><h2><i style="background:var(--${id})"></i>${esc(NAMES[id])}</h2><div class="muted" style="font-size:13px">${esc(role)} · ${esc(a.status)}</div></div>
       <div class="val">${money(a.equity)}<small class="${ret >= 0 ? "up" : "down"}">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}% since start</small></div></header>

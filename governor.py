@@ -98,7 +98,7 @@ def _check_order(state, aid, cand, instrument, cost):
     last = agent["last_exits"].get(cand["symbol"])
     if last and R.get("reentry_cooldown_days") and (store.now_et().date() - date.fromisoformat(last)).days < R["reentry_cooldown_days"]:
         return False, "re-entry cooldown"
-    if instrument == "stock" and aid not in ("baseline", "scalper"):   # the scalper sells exactly what it buys, same day
+    if instrument == "stock" and aid not in ("baseline", "scalper", "hyper"):   # the scalper sells exactly what it buys, same day
         for other, a in state["agents"].items():
             if other != aid and any(p["kind"] == "stock" and p["symbol"] == cand["symbol"] for p in a["positions"].values()):
                 return False, f"{cand['symbol']} shares already held by {other} (shared account)"
@@ -108,7 +108,7 @@ def _check_order(state, aid, cand, instrument, cost):
 def update_status(state, aid, equity, min_trade_cost):
     """Apply the race's fail rules. Returns a new status string if it changed."""
     agent = state["agents"][aid]
-    if agent["status"] != "active" or not config.AGENTS[aid]["competing"]:
+    if agent["status"] != "active" or not (config.AGENTS[aid]["competing"] or config.AGENTS[aid].get("exhibition")):
         return None
     if equity < config.RACE["eliminate_below"]:
         agent.update(status="eliminated", status_reason=f"equity ${equity:.2f} fell below ${config.RACE['eliminate_below']:.0f}",

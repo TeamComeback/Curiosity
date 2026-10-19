@@ -15,9 +15,15 @@ def main():
     if not b.clock().get("is_open"):
         return
     state = store.load_state()
-    if not state or "scalper" not in state.get("agents", {}):
+    if not state:
         return
-    if not scalper.tick(b, state):
+    traded = False
+    for aid in scalper.PROFILES:
+        try:
+            traded = scalper.tick(b, state, aid) or traded
+        except Exception as e:  # noqa: BLE001 - one firm's problem must not stop the other
+            print(f"[scalp] {aid} tick failed: {type(e).__name__}")
+    if not traded:
         store.save("state.json", state)
         return
     held = sorted({p["symbol"] for a in state["agents"].values() for p in a["positions"].values() if p["kind"] == "stock"})

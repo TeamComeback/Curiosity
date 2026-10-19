@@ -18,7 +18,7 @@ def nice(sym):
     return f"{m[1]} ${int(m[6]) / 1000:g} {'call' if m[5] == 'C' else 'put'} {MON[int(m[3]) - 1]} {int(m[4])}" if m else str(sym or "")
 
 
-NAMES = {"trend": "Trend Co.", "meanrev": "Snapback", "volsell": "Premium House", "blackswan": "Black Swan", "scalper": "Rapid Fire",
+NAMES = {"trend": "Trend Co.", "meanrev": "Snapback", "volsell": "Premium House", "blackswan": "Black Swan", "scalper": "Rapid Fire", "hyper": "Full Throttle",
          "baseline": "SPY", "monkey": "Monkey"}
 
 
@@ -38,6 +38,8 @@ def _line(e):
         return f"🐻 {e.get('note')}"
     if t in ("eliminated", "failed"):
         return f"⛔ {who} {t}: {e.get('note')}"
+    if t == "exhibition_goal":
+        return f"🏁 {e.get('note')}"
     if t == "race_end":
         return f"🏆 Race over: {e.get('note')}"
     if t == "plan" and not str(e.get("note", "")).split(":", 1)[-1].strip().startswith("keep"):

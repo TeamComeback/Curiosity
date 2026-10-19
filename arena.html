@@ -12,12 +12,12 @@
 :root{
   color-scheme:light;
   --ground:#e9ece8;--paper:#f6f7f4;--ink:#1f2a2e;--ink2:#56636a;--rule:#a9b3b4;--faint:#d5dad7;
-  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--blackswan:#6a4fc0;--scalper:#0a8fb0;--bench:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
+  --trend:#2f6fb5;--meanrev:#d9822b;--volsell:#1f9e73;--blackswan:#6a4fc0;--scalper:#0a8fb0;--hyper:#c2410c;--bench:#7e8a8c;--monkey:#c0507d;--gold:#b98a1f;--good:#2c8a3e;--bad:#c4423b;
 }
 @media (prefers-color-scheme:dark){:root{
   color-scheme:dark;
   --ground:#11171a;--paper:#182024;--ink:#dce3e2;--ink2:#9aa7a9;--rule:#4a575c;--faint:#26312f;
-  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--blackswan:#9b84e8;--scalper:#2fb6d6;--bench:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
+  --trend:#5b93d6;--meanrev:#e59a4c;--volsell:#3cbb8f;--blackswan:#9b84e8;--scalper:#2fb6d6;--hyper:#f07a3a;--bench:#8d999b;--monkey:#e07ba4;--gold:#d8ab3e;--good:#5cc06c;--bad:#e06a62;
 }}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--ground);color:var(--ink);font:15px/1.45 "IBM Plex Sans Condensed",-apple-system,BlinkMacSystemFont,sans-serif}
@@ -62,7 +62,7 @@ canvas{display:block;width:100%;touch-action:pan-y}
 <div class="wrap">
   <div class="bar"><h1>The Street</h1><span style="display:flex;gap:8px"><a href="portfolio.html">Portfolio</a><a href="index.html">Dashboard</a></span></div>
   <div class="stage"><div class="pop" id="pop" role="dialog" aria-live="polite"></div>
-  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of five trading firms racing up the road to the $10,000 headquarters. Tap a firm or a person for details."></canvas></div>
+  <canvas id="plan" tabindex="0" role="img" aria-label="Top-down plan of five racing trading firms plus an exhibition scalper racing up the road to the $10,000 headquarters. Tap a firm or a person for details."></canvas></div>
   <div class="block" id="block"></div>
   <div class="staff" id="staff"></div>
 </div>
@@ -86,16 +86,19 @@ const FIRMS = {
   scalper: {name:"Rapid Fire Trading", colorVar:"--scalper",
             staff:[["tape","Tape reader","Watches 1-minute charts for breakouts, VWAP bounces and bursts"],["strat","Strategist","The AI: sets the playbook every 30 minutes"],
                    ["trader","Scalper","Fires and closes quick trades every 2 minutes"],["risk","Risk manager","Enforces stops, time limits and flat by 3:50 PM"]]},
+  hyper:   {name:"Full Throttle Trading", colorVar:"--hyper",
+            staff:[["tape","Tape reader","Watches the fastest movers minute by minute, 3x ETFs included"],["strat","Strategist","The AI: picks the targets every 30 minutes; always in attack mode"],
+                   ["trader","Scalper","Fires up to two trades every 2 minutes"],["risk","Risk manager","Quick stops, short holds, flat by 3:50 PM"]]},
   baseline:{name:"Index Booth",       colorVar:"--bench", staff:[["index","Index buyer","Bought SPY once and holds it"]]},
   monkey:  {name:"Monkey Business",   colorVar:"--monkey", staff:[["dart","Dart thrower","Picks a random stock, size and holding time. The control group."]]},
 };
 const ROLE_COLOR = {scout:"#4b7f95", strat:"#7357b3", trader:"#c38a1c", risk:"#b8504a", vol:"#2c8f8a", radar:"#3f5f8f", tape:"#2f8fa6", index:"#7e8a8c", comp:"#55636a", dart:"#c0507d"};
-const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:200}, blackswan:{y:1240,h:200}, scalper:{y:1460,h:200}, baseline:{y:1680,h:84}, monkey:{y:1784,h:84}};
-const H = 1886, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84, door:[30, 58]};
+const OFFICES = {trend:{y:600,h:200}, meanrev:{y:820,h:180}, volsell:{y:1020,h:200}, blackswan:{y:1240,h:200}, scalper:{y:1460,h:200}, hyper:{y:1680,h:200}, baseline:{y:1900,h:84}, monkey:{y:2004,h:84}};
+const H = 2106, GOAL_Y = 34, CLIMB = {top:150, bottom:470}, EXCH = {y:494, h:84, door:[30, 58]};
 const BOOTH = {x:2, y:EXCH.y - 2, w:30, h:22};
-const LANES = {trend:62, meanrev:108, volsell:154, blackswan:200, scalper:246, baseline:302, monkey:354};
-const SHORT = {trend:"Trend", meanrev:"Snapback", volsell:"Premium", blackswan:"Black Swan", scalper:"Rapid Fire", baseline:"SPY", monkey:"Monkey"};
-const LABEL_ABOVE = {meanrev:1, blackswan:1};      // alternate labels above/below so neighbouring lanes never collide
+const LANES = {trend:58, meanrev:100, volsell:142, blackswan:184, scalper:226, hyper:268, baseline:314, monkey:356};
+const SHORT = {trend:"Trend", meanrev:"Snapback", volsell:"Premium", blackswan:"Black Swan", scalper:"Rapid Fire", hyper:"Full Throttle", baseline:"SPY", monkey:"Monkey"};
+const LABEL_ABOVE = {meanrev:1, blackswan:1, hyper:1, monkey:1};      // alternate labels above/below so neighbouring lanes never collide
 const NB = id => id === "baseline" || id === "monkey";   // non-racing: benchmark and control
 
 // ---------- office hours (US/Eastern) ----------
@@ -257,6 +260,9 @@ function drawExchange(t){
   text("Rules", BOOTH.x + BOOTH.w / 2, BOOTH.y + BOOTH.h / 2, 10, theme.ink2, "center", 600);
 }
 
+function subtitle(id, st){
+  return `${money(st.eq)} · ${id === "hyper" ? "exhibition · " : ""}${(st.eq / GOAL * 100).toFixed(1)}% of the way`;
+}
 function drawOffice(id, t){
   const o = OFFICES[id], st = firmsState[id], f = FIRMS[id]; if (!st) return;
   const x = 44, w = W - 56, y = o.y, h = o.h, out = st.out, bench = NB(id);
@@ -269,7 +275,7 @@ function drawOffice(id, t){
   // sign
   rect(x + 10, y + 8, 6, 18, f.color);
   text(f.name, x + 22, y + 13, 15, theme.ink, "left", 600);
-  text(bench ? `${money(st.eq)} · ${id === "monkey" ? "control group, not racing" : "benchmark"}` : `${money(st.eq)} · ${(st.eq / GOAL * 100).toFixed(1)}% of the way`, x + 22, y + 29, 11, theme.ink2);
+  text(bench ? `${money(st.eq)} · ${id === "monkey" ? "control group, not racing" : "benchmark"}` : subtitle(id, st), x + 22, y + 29, 11, theme.ink2);
   // desks + station labels
   st.desks.forEach(d => {
     rect(d.x - 17, d.y - 30, 34, 14, alpha(theme.rule, .45), theme.ink2, 1);
@@ -294,13 +300,15 @@ function drawOffice(id, t){
       ctx.beginPath(); ctx.moveTo(dx0, dy0); ctx.lineTo(dx0 + Math.cos(ang + wob) * 13, dy0 + Math.sin(ang + wob) * 13); ctx.strokeStyle = theme.ink; ctx.lineWidth = 2; ctx.stroke(); }
     text(sc != null ? `radar ${sc}` : "radar", dx0, dy0 + 9, 9, theme.ink2, "center", 600);
   }
-  if (id === "scalper"){                                       // lightning bolt on the sign
+  if (id === "scalper" || id === "hyper"){                     // lightning bolt(s) on the sign
     font(15, 600); const bnw = ctx.measureText(f.name).width; font(11, 500);
-    const bsw = ctx.measureText(`${money(st.eq)} · ${(st.eq / GOAL * 100).toFixed(1)}% of the way`).width;
-    const bx = x + 22 + Math.max(bnw, bsw) + 16, by = y + 6;
-    ctx.beginPath(); ctx.moveTo(bx + 6, by); ctx.lineTo(bx - 2, by + 12); ctx.lineTo(bx + 3, by + 12); ctx.lineTo(bx - 3, by + 24);
-    ctx.lineTo(bx + 9, by + 9); ctx.lineTo(bx + 4, by + 9); ctx.lineTo(bx + 10, by); ctx.closePath();
-    ctx.fillStyle = f.color; ctx.fill(); ctx.strokeStyle = theme.ink; ctx.lineWidth = 1; ctx.stroke();
+    const bsw = ctx.measureText(subtitle(id, st)).width;
+    for (let k = 0; k < (id === "hyper" ? 2 : 1); k++){
+      const bx = x + 22 + Math.max(bnw, bsw) + 16 + k * 14, by = y + 6;
+      ctx.beginPath(); ctx.moveTo(bx + 6, by); ctx.lineTo(bx - 2, by + 12); ctx.lineTo(bx + 3, by + 12); ctx.lineTo(bx - 3, by + 24);
+      ctx.lineTo(bx + 9, by + 9); ctx.lineTo(bx + 4, by + 9); ctx.lineTo(bx + 10, by); ctx.closePath();
+      ctx.fillStyle = f.color; ctx.fill(); ctx.strokeStyle = theme.ink; ctx.lineWidth = 1; ctx.stroke();
+    }
   }
   if (id === "monkey"){
     font(15, 600); const nw = ctx.measureText(f.name).width; font(11, 500);
@@ -541,7 +549,7 @@ function showCard(id){
   const st = firmsState[id]; if (!st) return; const a = st.agent, ret = (a.equity / START - 1) * 100;
   $("card").innerHTML = `<div class="h"><span>${esc(FIRMS[id].name)}</span><button aria-label="Close" onclick="document.getElementById('card').style.display='none'">×</button></div>
     <div class="eq">${money(a.equity)} <span class="${ret >= 0 ? "up" : "down"}" style="font-size:15px">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div>
-    <p>${a.competing ? `${(a.equity / GOAL * 100).toFixed(1)}% of the way to $${GOAL.toLocaleString()}` : (id === "monkey" ? "Control group, not racing" : "Benchmark, not racing")}. Status: ${esc(a.status)}${a.status_reason ? `, ${esc(a.status_reason)}` : ""}.</p>
+    <p>${a.competing ? `${(a.equity / GOAL * 100).toFixed(1)}% of the way to $${GOAL.toLocaleString()}` : a.exhibition ? `Exhibition, not racing: ${(a.equity / GOAL * 100).toFixed(1)}% of the way${a.reached_goal ? " (reached the goal!)" : ""}` : (id === "monkey" ? "Control group, not racing" : "Benchmark, not racing")}. Status: ${esc(a.status)}${a.status_reason ? `, ${esc(a.status_reason)}` : ""}.</p>
     <p>Cash ${money(a.available)}${a.settling ? ` (+${money(a.settling)} settling tomorrow)` : ""} · ${a.open} open · ${a.closed} closed${a.win_rate != null ? ` · ${a.win_rate}% winners` : ""}</p>
     ${st.positions.map(x => `<p>${esc(x.sym)}: <span class="${x.pnl >= 0 ? "up" : "down"}">${x.pnl >= 0 ? "+" : "-"}$${Math.abs(x.pnl).toFixed(2)}</span>${x.p.thesis ? `, ${esc(x.p.thesis)}` : ""}</p>`).join("")}
     ${a.notes && a.notes.length ? `<p><i>“${esc(a.notes[0].note)}”</i></p>` : ""}`;
@@ -611,7 +619,7 @@ function roleInfo(k){
   }
   switch (k.role){
     case "tape": {
-      const pb = (data.playbooks || {}).scalper;
+      const pb = (data.playbooks || {})[k.firm];
       base.lines.push(pb ? `Watching ${(pb.watch || []).join(", ")} on 1-minute charts. Playbook: ${pb.aggression}.` : "Waiting for today's playbook.");
       base.lines.push("Looks for opening-range breakouts, bounces off VWAP in uptrending stocks, and momentum bursts on heavy volume. Checks every 2 minutes.");
       if (pb && pb.why) base.lines.push(`Strategist's call: ${pb.why}`);
@@ -655,7 +663,7 @@ function roleInfo(k){
       break; }
     case "risk": {
       if (!st.positions.length){ base.lines.push("Nothing open to guard right now."); break; }
-      if (k.firm === "scalper"){
+      if (k.firm === "scalper" || k.firm === "hyper"){
         const p = st.positions[0].p;
         base.lines.push(`Watching ${st.positions.length} open scalp${st.positions.length > 1 ? "s" : ""}. Each closes at its target, its stop, if it loses VWAP, after its time limit, or at 3:50 PM.`);
         base.lines.push(`${p.symbol}: bought at ${money(p.entry)}${p.last ? `, now ${money(p.last)}` : ""}.`);

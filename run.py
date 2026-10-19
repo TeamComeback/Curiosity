@@ -14,9 +14,9 @@ import focus
 import universe
 from broker import AlpacaError, Broker
 from indicators import enrich
-import baseline, blackswan, meanrev, monkey, radar, scalper, trend, volsell
+import baseline, blackswan, hyper, meanrev, monkey, radar, scalper, trend, volsell
 
-REGISTRY = {"trend": trend, "meanrev": meanrev, "volsell": volsell, "blackswan": blackswan, "scalper": scalper,
+REGISTRY = {"trend": trend, "meanrev": meanrev, "volsell": volsell, "blackswan": blackswan, "scalper": scalper, "hyper": hyper,
             "baseline": baseline, "monkey": monkey}
 from common import mid, pick_option, pick_put_spread, split_today
 
@@ -408,6 +408,7 @@ def write_dashboard(state, regime, equities):
         a["max_dd"] = round(max(a.get("max_dd", 0), 1 - eq / a["peak"] if a["peak"] else 0), 4)
         ret = eq / config.RACE["start_balance"] - 1
         agents.append({"id": aid, "name": config.AGENTS[aid]["name"], "competing": config.AGENTS[aid]["competing"],
+                       "exhibition": bool(config.AGENTS[aid].get("exhibition")), "reached_goal": a.get("reached_goal"),
                        "equity": eq, "cash": a["cash"], "available": governor.available(a),
                        "settling": store.unsettled(a), "status": a["status"],
                        "status_reason": a["status_reason"], "multiple": round(eq / config.RACE["start_balance"], 2),
@@ -538,9 +539,9 @@ def main(force=False, broker=None):
     for aid, agent in state["agents"].items():
         if agent["status"] != "active":
             continue
-        if aid == "scalper":                 # the AI sets the scalper's playbook; the 2-minute loop trades it
+        if aid in scalper.PROFILES:          # the AI sets the scalpers' playbooks; the 2-minute loop trades them
             try:
-                scalper.update_playbook({**ctx, "equity": agent_equity(agent, prices)}, state, b)
+                scalper.update_playbook({**ctx, "equity": agent_equity(agent, prices)}, state, b, aid)
             except Exception as e:  # noqa: BLE001
                 print(f"[scalper] playbook failed: {type(e).__name__}")
             continue
@@ -594,6 +595,11 @@ def main(force=False, broker=None):
             if changed == "eliminated":
                 liquidate(b, state, aid, "eliminated")
                 equities[aid] = agent_equity(a, prices)
+    for aid, a in state["agents"].items():           # exhibition firms can reach the goal without ending the race
+        if config.AGENTS[aid].get("exhibition") and not a.get("reached_goal") and equities[aid] >= config.RACE["goal"]:
+            a["reached_goal"] = store.now_et().isoformat(timespec="minutes")
+            store.journal({"type": "exhibition_goal", "agent": aid, "note": f"{config.AGENTS[aid]['name']} reached "
+                           f"${equities[aid]:,.2f} (exhibition: the race continues)"})
     check_finish(b, state, equities)
     write_dashboard(state, regime, equities)
     store.save("state.json", state)

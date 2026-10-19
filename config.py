@@ -67,6 +67,10 @@ AGENTS = {
                          "Cash account: proceeds settle next day, so the day's cash is split into slices and each slice "
                          "gets one round trip a day. You set the playbook (which stocks, how aggressive, how many slices, "
                          "targets and stops); code executes it every 2 minutes."},
+    "hyper": {"name": "Full Throttle Trading", "competing": False, "exhibition": True, "instruments": ["stock"],
+              "style": "Aggressive intraday scalper (exhibition: not racing). Same rules and cash as everyone, "
+                       "always in attack mode: more, smaller cash slices, up to two new trades per check, the fastest "
+                       "movers including 3x ETFs held for minutes, and always flat by the close."},
     "baseline": {"name": "Index Booth (SPY)", "competing": False, "instruments": ["stock"],
                  "style": "Buys SPY with its starting cash and holds. Not racing; it's the bar to beat."},
     "monkey": {"name": "Monkey Business", "competing": False, "instruments": ["stock"],
@@ -107,6 +111,8 @@ DEFAULT_PARAMS = {
                 "take_profit": 0.50, "stop_mult": 2.0, "exit_dte": 10, "min_iv_rv": 1.10},
     "scalper": {"target_pct": 0.6, "stop_pct": 0.3, "max_hold_min": 45, "slices": 4, "min_rel_volume": 1.5,
                 "max_extension_pct": 1.5},
+    "hyper": {"target_pct": 0.5, "stop_pct": 0.35, "max_hold_min": 20, "slices": 8, "min_rel_volume": 1.0,
+              "max_extension_pct": 3.0},
     "blackswan": {"breakdown_lookback": 20, "stop_atr": 2.0, "trail_atr": 3.0, "opt_min_dte": 45,
                   "opt_max_dte": 120, "opt_delta": 0.40, "spread_width_pct": 0.05, "insurance_pct": 0.08,
                   "stop_pct": 0.50, "exit_dte": 21, "leveraged_max_days": 5},
@@ -121,6 +127,8 @@ PARAM_BOUNDS = {
                 "take_profit": (0.25, 0.85), "stop_mult": (1.0, 3.0), "exit_dte": (0, 21), "min_iv_rv": (0.9, 1.6)},
     "scalper": {"target_pct": (0.2, 2.0), "stop_pct": (0.1, 1.0), "max_hold_min": (10, 180), "slices": (1, 8),
                 "min_rel_volume": (1.0, 4.0), "max_extension_pct": (0.5, 3.0)},
+    "hyper": {"target_pct": (0.2, 2.0), "stop_pct": (0.1, 1.0), "max_hold_min": (5, 90), "slices": (4, 12),
+              "min_rel_volume": (0.8, 3.0), "max_extension_pct": (1.0, 5.0)},
     "blackswan": {"breakdown_lookback": (10, 60), "stop_atr": (1.0, 5.0), "trail_atr": (1.5, 6.0),
                   "opt_min_dte": (30, 90), "opt_max_dte": (60, 180), "opt_delta": (0.20, 0.60),
                   "spread_width_pct": (0.02, 0.12), "insurance_pct": (0.0, 0.15), "stop_pct": (0.30, 0.70),
