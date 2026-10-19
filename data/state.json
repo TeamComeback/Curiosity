@@ -12,7 +12,8 @@
   "date": "2026-10-19",
   "counts": {
    "scalper": 6,
-   "trend": 1
+   "trend": 1,
+   "hyper": 4
   }
  },
  "agents": {
@@ -151,7 +152,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 49.34,
+     "last": 49.265,
      "high_water": 50.205
     },
     "pos-e9580fb11e": {
@@ -173,7 +174,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 67.72,
+     "last": 67.66,
      "high_water": 67.99
     }
    },
@@ -540,7 +541,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 165.66
+     "last": 165.81
     },
     "pos-6f6a3c3d01": {
      "kind": "stock",
@@ -560,7 +561,7 @@
       "pct_vs_sma5": -8.4
      },
      "sector": "Broad market / other",
-     "last": 171.24
+     "last": 170.835
     }
    },
    "status": "active",
@@ -1126,7 +1127,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 768.7
+     "last": 768.76
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1142,7 +1143,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 768.7
+     "last": 768.76
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1158,7 +1159,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 768.7
+     "last": 768.76
     }
    },
    "status": "active",
@@ -1191,7 +1192,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 413.49
+     "last": 412.6
     }
    },
    "status": "active",
@@ -1746,60 +1747,15 @@
    ]
   },
   "scalper": {
-   "cash": 752.88,
+   "cash": 1003.59,
    "reserved": 0.0,
-   "positions": {
-    "pos-241fcf1df6": {
-     "kind": "stock",
-     "symbol": "AVGO",
-     "qty": 0.371,
-     "entry": 336.942,
-     "cost": 125.01,
-     "play": "scalp",
-     "direction": "long",
-     "stop": 335.53,
-     "atr": 0,
-     "opened": "2026-10-19T10:40:46-04:00",
-     "thesis": "VWAP pullback bounce on AVGO: 0.6x volume, +0.26% vs VWAP; target +0.6%, stop -0.4%",
-     "confidence": 3,
-     "signals": {},
-     "sector": "Technology",
-     "setup": "VWAP pullback bounce",
-     "target_pct": 0.6,
-     "stop_pct": 0.4,
-     "max_hold_min": 30,
-     "last": 337.75,
-     "peak_gain": 0.23980388316089396
-    },
-    "pos-277590ce68": {
-     "kind": "stock",
-     "symbol": "MU",
-     "qty": 0.1364,
-     "entry": 915.966,
-     "cost": 124.94,
-     "play": "scalp",
-     "direction": "long",
-     "stop": 912.25,
-     "atr": 0,
-     "opened": "2026-10-19T10:42:48-04:00",
-     "thesis": "VWAP pullback bounce on MU: 0.75x volume, +0.44% vs VWAP; target +0.6%, stop -0.4%",
-     "confidence": 3,
-     "signals": {},
-     "sector": "Technology",
-     "setup": "VWAP pullback bounce",
-     "target_pct": 0.6,
-     "stop_pct": 0.4,
-     "max_hold_min": 30,
-     "last": 919.2,
-     "peak_gain": 0.35306987377261567
-    }
-   },
+   "positions": {},
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 13,
-   "wins": 6,
-   "peak": 1003.56,
+   "closed": 15,
+   "wins": 8,
+   "peak": 1003.85,
    "max_dd": 0.0008,
    "notes": [
     {
@@ -1810,13 +1766,14 @@
    "last_exits": {
     "TSLA": "2026-10-19",
     "IWM": "2026-10-15",
-    "AVGO": "2026-10-16",
+    "AVGO": "2026-10-19",
     "NVDA": "2026-10-16",
     "SMH": "2026-10-16",
     "TLT": "2026-10-16",
     "AAPL": "2026-10-19",
     "MSFT": "2026-10-19",
-    "SPY": "2026-10-19"
+    "SPY": "2026-10-19",
+    "MU": "2026-10-19"
    },
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [
@@ -1839,6 +1796,16 @@
      "amount": 124.89,
      "settles": "2026-10-20",
      "note": "sold SPY"
+    },
+    {
+     "amount": 125.29,
+     "settles": "2026-10-20",
+     "note": "sold AVGO"
+    },
+    {
+     "amount": 125.42,
+     "settles": "2026-10-20",
+     "note": "sold MU"
     }
    ],
    "playbook": {
@@ -2032,16 +1999,105 @@
    ]
   },
   "hyper": {
-   "cash": 1000.0,
+   "cash": 666.72,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-8e409cd62b": {
+     "kind": "stock",
+     "symbol": "SOXL",
+     "qty": 0.8087,
+     "entry": 103.062,
+     "cost": 83.35,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 102.67,
+     "atr": 0,
+     "opened": "2026-10-19T11:08:57-04:00",
+     "thesis": "momentum burst on SOXL: 2.44x volume, +1.33% vs VWAP; target +0.6%, stop -0.35%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "momentum burst",
+     "target_pct": 0.6,
+     "stop_pct": 0.35,
+     "max_hold_min": 20,
+     "last": 103.04,
+     "peak_gain": -0.021346374027275683
+    },
+    "pos-363bb6398a": {
+     "kind": "stock",
+     "symbol": "AMD",
+     "qty": 0.1513,
+     "entry": 550.768,
+     "cost": 83.33,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 548.8,
+     "atr": 0,
+     "opened": "2026-10-19T11:08:57-04:00",
+     "thesis": "momentum burst on AMD: 1.96x volume, +0.42% vs VWAP; target +0.6%, stop -0.35%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "momentum burst",
+     "target_pct": 0.6,
+     "stop_pct": 0.35,
+     "max_hold_min": 20,
+     "last": 550.6,
+     "peak_gain": -0.030502861458914232
+    },
+    "pos-bc02dba1e5": {
+     "kind": "stock",
+     "symbol": "SPY",
+     "qty": 0.1084,
+     "entry": 768.576,
+     "cost": 83.31,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 765.89,
+     "atr": 0,
+     "opened": "2026-10-19T11:11:01-04:00",
+     "thesis": "opening-range breakout on SPY: 1.6x volume, +0.15% vs VWAP; target +0.6%, stop -0.35%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "opening-range breakout",
+     "target_pct": 0.6,
+     "stop_pct": 0.35,
+     "max_hold_min": 20,
+     "last": 768.885,
+     "peak_gain": 0.04020422183361738
+    },
+    "pos-e00a6913d6": {
+     "kind": "stock",
+     "symbol": "NVDA",
+     "qty": 0.3817,
+     "entry": 218.216,
+     "cost": 83.29,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 217.5,
+     "atr": 0,
+     "opened": "2026-10-19T11:11:02-04:00",
+     "thesis": "opening-range breakout on NVDA: 1.21x volume, +0.77% vs VWAP; target +0.6%, stop -0.35%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "opening-range breakout",
+     "target_pct": 0.6,
+     "stop_pct": 0.35,
+     "max_hold_min": 20,
+     "last": 218.03,
+     "peak_gain": -0.03941049235620664
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
    "closed": 0,
    "wins": 0,
    "peak": 1000.0,
-   "max_dd": 0.0,
+   "max_dd": 0.0003,
    "notes": [],
    "last_exits": {},
    "joined": "2026-10-19T11:05:03-04:00",
@@ -2069,6 +2125,10 @@
     "target_pct": 0.6,
     "stop_pct": 0.35,
     "max_hold_min": 20
+   },
+   "scalp_day": {
+    "date": "2026-10-19",
+    "equity": 1000.0
    }
   }
  }
