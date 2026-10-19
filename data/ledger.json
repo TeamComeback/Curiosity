@@ -1922,5 +1922,111 @@
   ],
   "why": "Broad-market ETFs are the only names where the 1.5x volume gate and the stop fit the ATR, and IWM outperformed SPY and QQQ on the last scored day. Consumer Discretionary lost on both of my trades (-0.74). Technology made +0.82 over 6 trades (50% win rate), but its single-name ATRs of 2.5% to 6.6% ar",
   "expires": "2026-11-01"
+ },
+ {
+  "time": "2026-10-19T07:40:25-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-10-19",
+  "decision": "revise",
+  "why": "Settled cash is now $406.12, so the plan's 'after settlement' condition no longer applies and XLE can be bought on a valid close above 67.90 once it triggers. The Energy breakout cluster in today's scan still holds, with BP already working.",
+  "summary": "Hold the four puts and the BP stock with their stops. Buy at most one Energy breakout on a close above its level with relative volume of at least 1.75: XLE above 67.90 first, or SU above 76.72 if XLE doesn't trigger. Use an initial stop about 2 ATR below entry and take only one position.",
+  "watchlist": [
+   {
+    "symbol": "XLE",
+    "setup": "Energy ETF breakout above its 55-day high, roc20 +6.1%, sector breadth strong; price is about 0.5% below the 67.90 level",
+    "trigger": "Close above 67.90 on relative volume of at least 1.75. Initial stop about 2 ATR (~$2.58) below entry, roughly 65.3.",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "SU",
+    "setup": "Energy breakout, roc20 +12.6%, price about 1.8% below the 76.72 level; alternate only if XLE does not trigger",
+    "trigger": "Close above 76.72 on relative volume of at least 1.75. Only one of XLE or SU gets bought.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-19T07:40:37-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-10-19",
+  "decision": "keep",
+  "why": "Recomputing reward-to-risk from the fresh scan (SMA5 target vs 2.5\u00d7ATR stop), no new candidate clears the 1:1 floor. The best are OKTA at about 0.98, NTAP at 0.94 and SNOW at 0.87, and all are extended or tech. FTNT's cushion over its stop has also shrunk to roughly 1:1 at today's price, so the plan holds without changes.",
+  "summary": "No new entries. Hold STT (stop 160.74) and FTNT (stop 154.63), exit each on its RSI(2)>70 or close-above-5-day-SMA rule, and keep cash settled for a non-tech washout that clears 1:1 without heavy extension.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-19T07:40:45-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-10-19",
+  "decision": "keep",
+  "why": "The IWM bear-call setup is stronger on the scan (IV/RV up to 1.55 from 1.40, trend still bearish), but the entry still depends on live credit, which I don't have yet. Headlines (hot PPI, energy-shock comments, Burry's warning) support caution, not a new trade, so the 0.25 credit trigger stays.",
+  "summary": "Stay flat unless a live IWM bear call spread can be sold for at least $0.25 on a $1 width, with the short call around 284-290 at 21-45 DTE (35-45 preferred). Skip the trade if IWM opens near its highs or gaps up toward the short strike. Risk one contract, about $75 max loss.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Bear call spread: short call about 0.20 delta above the 270.47 close (around 284-290), long call $1 higher, 35-45 DTE preferred (21 minimum). Scan IV 22.5% vs 20-day realized 14.5%, IV/RV 1.55, trend bearish.",
+    "trigger": "Live natural credit of at least $0.25 on the $1 width at a 21-45 DTE expiry, IWM below its recent highs at the open, and no gap-up toward the short strike. Skip credits of 0.20-0.24.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-19T07:41:03-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "Pre-market call",
+  "for_day": "2026-10-19",
+  "decision": "revise",
+  "why": "The plan's price references are now reconciled. IREN's 27.00 matches the scan (its 26.6 level sits 1.5% below), so the old 30.39 is stale. PLD and APLD also match the scan, and the PLD and APLD breakdowns are triggered. Open debit is roughly 85% of equity against a 50% guideline, and the AGCO fill is over budget, so I'm adding nothing and marking AGCO as the first position to reduce.",
+  "summary": "No new trades. Confirm the ASTS and AGCO fills and marks at the open, hold PLD, APLD and IREN on their stops, and treat AGCO as the first reduction candidate. Sales settle next day, so any cash raised can't be redeployed until Wednesday. Stay flat on new entries until debit falls below about 50% of equity.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-19T07:41:16-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-10-19",
+  "decision": "revise",
+  "why": "The plan's sizing text assumes $958 is still settling, but all $1,000 is now settled cash, so the $250 slices are live. The stop also needs widening: 0.3% stops filled at about -0.35%, and SPY's 0.9% ATR makes a 0.3% stop noise. Scorecard hit rate is 14%, so I'm keeping the universe narrow (SPY and IWM only) and fixing the parameter mismatch.",
+  "summary": "Trade only SPY and IWM, one slice per 15-minute opening-range breakout or VWAP reclaim at 1.5x+ relative volume, with price no more than 1.5% above VWAP. Use a 0.6% target, a 0.4% stop and a 30-minute time limit, with four $250 slices. Stay flat by the close.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "15-minute opening-range breakout, or VWAP reclaim after a shallow pullback, after a weak open",
+    "trigger": "Holds above the 15-minute opening-range high for 2 consecutive 2-minute bars at 1.5x+ relative volume, or reclaims VWAP on rising volume with price no more than 1.5% above VWAP. Skip if the open is a gap-down with no VWAP reclaim.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IWM",
+    "setup": "Relative-strength opening-range breakout or VWAP reclaim, only if IWM is outperforming SPY over the same window",
+    "trigger": "Breaks the 15-minute opening-range high or reclaims VWAP at 1.5x+ relative volume, with price no more than 1.5% above VWAP and IWM outperforming SPY over the same 15 minutes",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-19T07:41:16-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Broad market / other"
+  ],
+  "avoid": [
+   "Consumer Discretionary"
+  ],
+  "why": "Broad-market ETFs are the only names where the 1.5x volume gate and the stop fit the ATR, and IWM outperformed SPY and QQQ on the last scored day. Consumer Discretionary lost on both of my trades (-0.74). I'm not leaning into Technology overall: its +0.82 over 6 trades came from a mix of ETFs and si",
+  "expires": "2026-11-02"
  }
 ]
