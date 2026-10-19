@@ -10,7 +10,9 @@
  },
  "entries": {
   "date": "2026-10-19",
-  "counts": {}
+  "counts": {
+   "scalper": 2
+  }
  },
  "agents": {
   "trend": {
@@ -148,7 +150,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 49.515,
+     "last": 49.975,
      "high_water": 50.205
     }
    },
@@ -507,7 +509,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 164.93
+     "last": 165.1
     },
     "pos-6f6a3c3d01": {
      "kind": "stock",
@@ -527,7 +529,7 @@
       "pct_vs_sma5": -8.4
      },
      "sector": "Broad market / other",
-     "last": 171.2
+     "last": 169.72
     }
    },
    "status": "active",
@@ -1081,7 +1083,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 766.85
+     "last": 766.65
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1097,7 +1099,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 766.85
+     "last": 766.65
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1113,7 +1115,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 766.85
+     "last": 766.65
     }
    },
    "status": "active",
@@ -1146,7 +1148,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 414.15
+     "last": 419.9
     }
    },
    "status": "active",
@@ -1697,9 +1699,53 @@
    ]
   },
   "scalper": {
-   "cash": 1000.02,
+   "cash": 500.06,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-751ab012ed": {
+     "kind": "stock",
+     "symbol": "AAPL",
+     "qty": 0.7266,
+     "entry": 344.074,
+     "cost": 250.0,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 342.69,
+     "atr": 0,
+     "opened": "2026-10-19T09:54:54-04:00",
+     "thesis": "VWAP pullback bounce on AAPL: 0.57x volume, +0.26% vs VWAP; target +0.6%, stop -0.4%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Consumer Staples",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.4,
+     "max_hold_min": 30,
+     "last": 344.655,
+     "peak_gain": 0.16885902451215795
+    },
+    "pos-bc23a2b948": {
+     "kind": "stock",
+     "symbol": "MSFT",
+     "qty": 0.47,
+     "entry": 531.826,
+     "cost": 249.96,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 529.72,
+     "atr": 0,
+     "opened": "2026-10-19T09:56:55-04:00",
+     "thesis": "VWAP pullback bounce on MSFT: 0.96x volume, +0.13% vs VWAP; target +0.6%, stop -0.4%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Consumer Discretionary",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.4,
+     "max_hold_min": 30,
+     "last": 531.92
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
