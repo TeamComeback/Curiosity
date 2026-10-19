@@ -2161,5 +2161,82 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, NVDA, AMZN, MSFT",
   "note": "normal: Today's bounces netted about +$3.57 with no stop-outs, so the setup is working modestly in a calm, uptrending tape (SPY +6% over its 200-day SMA). I'm keeping the same 0.6%/0.4%/25-minute parameters across four slices and widening the list to the most liquid trend names for tomorrow's settled cash."
+ },
+ {
+  "time": "2026-10-19T16:40:18-04:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 1 of 2 picks moved the planned way, avg -0.17%"
+ },
+ {
+  "time": "2026-10-19T16:40:32-04:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Energy; avoiding Technology, Consumer Staples. Energy is the cleanest breakout cluster in the scan (8 names, roc20 mostly 6-13%), and BP and XLE are both working, though XLE is slightly under water. Technology (-$59) and Consumer Staples (-$16.88) are negative on closed trades. Energy has no closed trades yet, so the tilt is scan-based and the b"
+ },
+ {
+  "time": "2026-10-19T16:40:32-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: revise. Settled cash is $75.93, so the 340 and 310 dollar Energy entries in the plan can't be funded, and XLE is already held. I'm replacing them with a plan sized to the cash I actually have, and keeping all stops unchanged.",
+  "symbol": "OVV"
+ },
+ {
+  "time": "2026-10-19T16:40:32-04:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 0 of 0 picks moved the planned way"
+ },
+ {
+  "time": "2026-10-19T16:40:45-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: keep. Recomputing reward-to-risk from the fresh scan (SMA5 target vs. 2.5x ATR stop) gives no candidate near 1:1; the best are FRO (~0.6:1), OKTA (~0.6:1) and DHT (~0.5:1). STT and FTNT are both still inside their stops, so the plan holds.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-19T16:40:45-04:00",
+  "type": "scorecard",
+  "agent": "volsell",
+  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -0.31%"
+ },
+ {
+  "time": "2026-10-19T16:40:53-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "After-close review: keep. Nothing has changed enough to move off the plan: every live IWM, XLE and EEM credit still falls short of the 0.25-on-$1 trigger, and the scan's IWM IV/RV of 1.39 is still above the 1.1 floor. The crash radar is calm at 25, and IWM's scored pick went the wrong way (-0.31%), so I'm not adding size.",
+  "symbol": "IWM"
+ },
+ {
+  "time": "2026-10-19T16:40:53-04:00",
+  "type": "scorecard",
+  "agent": "blackswan",
+  "note": "Plan graded: 0 of 0 picks moved the planned way"
+ },
+ {
+  "time": "2026-10-19T16:41:09-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "note": "After-close review: revise. Price action supports the thesis (PLD broke down today, AGCO is at 102.09 and below its 103 level), but the book is about 85% of equity in bearish debit against a 50% guideline and only $143.50 is settled. The old plan's plan to sell AGCO near cost conflicts with the 1.3 mark against a 3.3 cost, so I'm changing it to verify the fill and hold the stop instead of realizing a large loss to meet a gui",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-19T16:41:09-04:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 2 of 2 picks moved the planned way, avg +0.37%"
+ },
+ {
+  "time": "2026-10-19T16:41:26-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "note": "Leaning into Broad market / other, Technology; avoiding Real Estate. Broad market ETFs are the only names where the volume gate and stop fit the ATR. Consumer Discretionary swung from -$0.74 to +$0.98 across 4 trades after today's TSLA and MSFT wins, so I'm dropping it from the avoid list while the sample stays tiny. Technology is +$1.55 over 9 trades, but that mixes"
+ },
+ {
+  "time": "2026-10-19T16:41:26-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's six bounce trades made +$3.57, but five of them were in names my plan excluded and entered at 0.53x-0.96x relative volume, below the 1.5x gate. The executed config (0.6% target, 0.4% stop, 30-min limit) also differs from the saved plan (0.5%/0.3%/45 min). I'm keeping the ETF focus but re-basing the rules on what was actually run, and treating the enforcement failure as a bug to fix before ",
+  "symbol": "SPY, IWM, QQQ"
  }
 ]
