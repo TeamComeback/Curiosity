@@ -9,13 +9,8 @@
   "start_balance": 1000.0
  },
  "entries": {
-  "date": "2026-10-16",
-  "counts": {
-   "trend": 1,
-   "blackswan": 2,
-   "scalper": 7,
-   "meanrev": 1
-  }
+  "date": "2026-10-19",
+  "counts": {}
  },
  "agents": {
   "trend": {
@@ -29,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.96,
-     "mark": 1.75,
+     "mark": 1.52,
      "expiry": "2026-11-06",
      "strike": 10.0,
      "delta": -0.39,
@@ -48,7 +43,7 @@
      },
      "sector": "Technology",
      "low_water": 8.865,
-     "exit_half_spread": 0.01
+     "exit_half_spread": 0.185
     },
     "pos-ea0031af4c": {
      "kind": "option",
@@ -57,7 +52,7 @@
      "opt_type": "put",
      "qty": 2,
      "entry": 0.55,
-     "mark": 0.57,
+     "mark": 0.53,
      "expiry": "2026-11-06",
      "strike": 6.0,
      "delta": -0.46,
@@ -76,7 +71,7 @@
      },
      "sector": "Technology",
      "low_water": 5.74,
-     "exit_half_spread": 0.02
+     "exit_half_spread": 0.12
     },
     "pos-bf6606febd": {
      "kind": "option",
@@ -85,7 +80,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.75,
-     "mark": 2.34,
+     "mark": 1.9,
      "expiry": "2026-11-20",
      "strike": 8.0,
      "delta": -0.38,
@@ -104,7 +99,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 6.705,
-     "exit_half_spread": 0.175
+     "exit_half_spread": 0.375
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -113,7 +108,7 @@
      "opt_type": "put",
      "qty": 5,
      "entry": 0.14,
-     "mark": 0.15,
+     "mark": 0.12,
      "expiry": "2026-11-06",
      "strike": 1.5,
      "delta": -0.5,
@@ -132,7 +127,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 1.375,
-     "exit_half_spread": 0.025
+     "exit_half_spread": 0.045
     },
     "pos-2ce62f642c": {
      "kind": "stock",
@@ -153,7 +148,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 50.205,
+     "last": 49.515,
      "high_water": 50.205
     }
    },
@@ -163,7 +158,7 @@
    "closed": 2,
    "wins": 0,
    "peak": 1090.09,
-   "max_dd": 0.1145,
+   "max_dd": 0.1154,
    "notes": [
     {
      "date": "2026-10-14",
@@ -312,6 +307,10 @@
     {
      "date": "2026-10-16",
      "note": "[weekly] Failed breakouts should be cut fast, and that worked: ETSY lost only $17. With a tiny account, settled cash is the binding constraint, so only take high-conviction setups with strong volume and avoid being fully deployed with no cash for better ideas."
+    },
+    {
+     "date": "2026-10-19",
+     "note": "No candidates are live at 09:36 and XLE has not closed above its 67.90 trigger, so holding all positions and stops. Enter Energy only on a close above the trigger with relative volume of at least 1.75."
     }
    ],
    "last_exits": {
@@ -508,7 +507,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 164.59
+     "last": 164.93
     },
     "pos-6f6a3c3d01": {
      "kind": "stock",
@@ -528,7 +527,7 @@
       "pct_vs_sma5": -8.4
      },
      "sector": "Broad market / other",
-     "last": 168.75
+     "last": 171.2
     }
    },
    "status": "active",
@@ -539,10 +538,6 @@
    "peak": 1004.23,
    "max_dd": 0.0072,
    "notes": [
-    {
-     "date": "2026-10-13",
-     "note": "Only one trade: MU's $943 price and the options minimums don't fit a $100 account, and the SMH stop is about 6% away against a roughly 2.6% target, so reward-to-risk is thin. Size the full $100 only when the stop distance is small relative to the expected bounce."
-    },
     {
      "date": "2026-10-13",
      "note": "Cash is nearly fully deployed in SMH (about $100 position), so there is nothing to add. Next session, only take RSI(2) washouts where the stop distance is small relative to the expected snap-back to the 5-day high or RSI 70."
@@ -698,6 +693,10 @@
     {
      "date": "2026-10-16",
      "note": "[weekly] One stopped-out trade (n=1) is noise, not evidence. Retuning on it would be overfitting. Keep the current parameters, keep the 1:1 floor and sector/extension discipline, and wait for a larger sample (about 10+ closed trades) before changing rsi_entry, stop_atr or the other settings. Capital preserva"
+    },
+    {
+     "date": "2026-10-19",
+     "note": "No new entries: STT (about 0.27:1 to target 167.79) and META (about 0.38:1 to 730.10) fail the 1:1 floor. Hold STT at its 160.74 breakeven stop and FTNT at its 154.63 stop, and keep cash settled for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -937,6 +936,10 @@
     {
      "date": "2026-10-16",
      "note": "[weekly] Don't retune on zero closed trades. Wait for real results before changing anything. Stay disciplined on the 25%+ credit-to-width trigger and one-contract sizing, and if I do retune after a few closed trades, change only one parameter at a time."
+    },
+    {
+     "date": "2026-10-19",
+     "note": "Pass: IWM 285/286 bear call is 0.20 on a $1 width (20%) and XLE 64/63 put is 0.17 (17%), both below my 0.25 trigger. Stay flat and recheck for 25%+ credit on a $1 width at 21-45 DTE."
     }
    ],
    "last_exits": {},
@@ -1009,7 +1012,7 @@
      }
     ]
    },
-   "min_trade_seen": 77.0,
+   "min_trade_seen": 80.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -1078,7 +1081,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 762.62
+     "last": 766.85
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1094,7 +1097,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 762.62
+     "last": 766.85
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1110,7 +1113,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 762.62
+     "last": 766.85
     }
    },
    "status": "active",
@@ -1143,7 +1146,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 416.09
+     "last": 414.15
     }
    },
    "status": "active",
@@ -1152,7 +1155,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.67,
-   "max_dd": 0.0192,
+   "max_dd": 0.021,
    "notes": [],
    "last_exits": {},
    "joined": "2026-10-13T19:21:59-04:00",
@@ -1184,7 +1187,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.21,
+     "mark": 1.18,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -1204,7 +1207,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.255,
+     "exit_half_spread": 0.82,
      "peak_mark": 1.25,
      "low_water": 40.33
     },
@@ -1230,7 +1233,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.47,
+     "mark": 1.28,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
@@ -1250,7 +1253,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.21,
+     "exit_half_spread": 0.26,
      "peak_mark": 1.47,
      "low_water": 26.795
     },
@@ -1276,7 +1279,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 0.88,
+     "mark": 0.83,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -1296,7 +1299,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.09,
+     "exit_half_spread": 0.265,
      "peak_mark": 0.92,
      "low_water": 17.965
     },
@@ -1322,14 +1325,14 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 1.19,
+     "mark": 1.4,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
      "cost": 160.0,
      "play": "weak_stock",
      "direction": "short",
-     "stop": 131.8,
+     "stop": 130.99,
      "atr": 2.272,
      "opened": "2026-10-16T10:06:17-04:00",
      "thesis": "PLD is testing its 20-day low at 126.19 after a -6.1% 20-day move and trades below its 200-day. Real Estate is uncorrelated with my open Technology puts, so this adds a different breakdown exposure without stacking more Tech risk.",
@@ -1342,9 +1345,9 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.555,
-     "peak_mark": 1.22,
-     "low_water": 124.98
+     "exit_half_spread": 0.91,
+     "peak_mark": 1.4,
+     "low_water": 124.17
     },
     "pos-8572906c01": {
      "kind": "debit_spread",
@@ -1368,7 +1371,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 1.31,
+     "mark": 1.37,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -1388,7 +1391,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.845,
+     "exit_half_spread": 3.02,
      "peak_mark": 1.41
     }
    },
@@ -1551,6 +1554,10 @@
     {
      "date": "2026-10-16",
      "note": "[weekly] A drawdown with no closed trades points to sizing and concentration, not signal parameters. Keep total bearish debit under about 50% of equity, spread it across sectors, and don't retune entries until some trades have actually closed."
+    },
+    {
+     "date": "2026-10-19",
+     "note": "No new trades: bearish debit is about 85% of equity against a 50% guideline, settled cash is only $143.50, and the new candidates are correlated Tech/Comm shorts or untriggered insurance. Hold existing stops (ASTS 51.35, IREN 34.09, APLD 22.38, PLD 130.99, AGCO 111.61). Re-evaluate AGCO for reductio"
     }
    ],
    "last_exits": {},
@@ -1717,19 +1724,20 @@
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [],
    "playbook": {
-    "date": "2026-10-16",
-    "made_at": "2026-10-16T15:37-04:00",
+    "date": "2026-10-19",
+    "made_at": "2026-10-19T09:36-04:00",
     "watch": [
+     "AAPL",
+     "MSFT",
      "SPY",
-     "QQQ",
      "IWM"
     ],
-    "aggression": "stand_down",
-    "why": "With about 13 minutes until the 3:50 flatten and only $41.74 settled, there isn't time for a clean setup to develop and play out. Most candidates are below VWAP with 1-minute trends down, and today's bounces have mostly failed, so I'm standing down and keeping the index names on watch.",
-    "slices": 1,
-    "target_pct": 0.5,
-    "stop_pct": 0.3,
-    "max_hold_min": 10
+    "aggression": "normal",
+    "why": "SPY is in an uptrend (5.8% above its 200-day average) with a calm crash radar, but most of the market is drifting lower, so I'm keeping size normal and limiting the watchlist to the names showing clean strength: AAPL and MSFT are trending up and above their opening ranges, with SPY and IWM as broad-",
+    "slices": 4,
+    "target_pct": 0.6,
+    "stop_pct": 0.4,
+    "max_hold_min": 30
    },
    "scalp_day": {
     "date": "2026-10-16",
