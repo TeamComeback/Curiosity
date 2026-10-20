@@ -11,7 +11,9 @@
  "entries": {
   "date": "2026-10-20",
   "counts": {
-   "trend": 1
+   "trend": 1,
+   "scalper": 3,
+   "hyper": 6
   }
  },
  "agents": {
@@ -150,7 +152,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 49.74,
+     "last": 49.37,
      "high_water": 50.205
     },
     "pos-e9580fb11e": {
@@ -172,7 +174,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 68.06,
+     "last": 67.88,
      "high_water": 68.06
     },
     "pos-47b298eed1": {
@@ -194,7 +196,7 @@
       "pct_vs_sma200": 11.9
      },
      "sector": "Broad market / other",
-     "last": 356.24
+     "last": 354.625
     }
    },
    "status": "active",
@@ -593,7 +595,7 @@
       "pct_vs_sma5": -6.5
      },
      "sector": "Financials",
-     "last": 165.075
+     "last": 166.475
     },
     "pos-6f6a3c3d01": {
      "kind": "stock",
@@ -613,7 +615,7 @@
       "pct_vs_sma5": -8.4
      },
      "sector": "Broad market / other",
-     "last": 170.29
+     "last": 169.99
     }
    },
    "status": "active",
@@ -1229,7 +1231,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 765.435
+     "last": 767.34
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1245,7 +1247,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 765.435
+     "last": 767.34
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1261,7 +1263,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 765.435
+     "last": 767.34
     }
    },
    "status": "active",
@@ -1851,15 +1853,82 @@
    ]
   },
   "scalper": {
-   "cash": 1003.59,
+   "cash": 627.3,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-39620aa41c": {
+     "kind": "stock",
+     "symbol": "IWM",
+     "qty": 0.4588,
+     "entry": 273.488,
+     "cost": 125.48,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 272.75,
+     "atr": 0,
+     "opened": "2026-10-20T09:51:44-04:00",
+     "thesis": "VWAP pullback bounce on IWM: 1.48x volume, +0.33% vs VWAP; target +0.4%, stop -0.25%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Industrials",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.4,
+     "stop_pct": 0.25,
+     "max_hold_min": 30,
+     "last": 273.885,
+     "peak_gain": 0.15430293102440817
+    },
+    "pos-f7b1b9260e": {
+     "kind": "stock",
+     "symbol": "SPY",
+     "qty": 0.1635,
+     "entry": 766.846,
+     "cost": 125.38,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 764.9,
+     "atr": 0,
+     "opened": "2026-10-20T09:53:45-04:00",
+     "thesis": "VWAP pullback bounce on SPY: 1.45x volume, +0.17% vs VWAP; target +0.4%, stop -0.25%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.4,
+     "stop_pct": 0.25,
+     "max_hold_min": 30,
+     "last": 767.34,
+     "peak_gain": 0.06441971399733237
+    },
+    "pos-6d194040ab": {
+     "kind": "stock",
+     "symbol": "QQQ",
+     "qty": 0.1756,
+     "entry": 714.286,
+     "cost": 125.43,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 712.61,
+     "atr": 0,
+     "opened": "2026-10-20T09:55:47-04:00",
+     "thesis": "VWAP pullback bounce on QQQ: 0.74x volume, +0.19% vs VWAP; target +0.4%, stop -0.25%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.4,
+     "stop_pct": 0.25,
+     "max_hold_min": 30,
+     "last": 714.97,
+     "peak_gain": 0.07405997037601697
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
    "closed": 15,
    "wins": 8,
-   "peak": 1003.85,
+   "peak": 1003.97,
    "max_dd": 0.0008,
    "notes": [
     {
@@ -2117,16 +2186,147 @@
    ]
   },
   "hyper": {
-   "cash": 1001.73,
+   "cash": 400.63,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-31a257bdc8": {
+     "kind": "stock",
+     "symbol": "TSLA",
+     "qty": 0.2719,
+     "entry": 368.4,
+     "cost": 100.17,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 367.26,
+     "atr": 0,
+     "opened": "2026-10-20T09:51:44-04:00",
+     "thesis": "VWAP pullback bounce on TSLA: 0.63x volume, +0.54% vs VWAP; target +0.6%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.3,
+     "max_hold_min": 15,
+     "last": 368.685,
+     "peak_gain": 0.07736156351791923
+    },
+    "pos-66b9dbed82": {
+     "kind": "stock",
+     "symbol": "MU",
+     "qty": 0.1121,
+     "entry": 893.878,
+     "cost": 100.2,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 890.62,
+     "atr": 0,
+     "opened": "2026-10-20T09:53:46-04:00",
+     "thesis": "VWAP pullback bounce on MU: 0.6x volume, +0.54% vs VWAP; target +0.6%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.3,
+     "max_hold_min": 15,
+     "last": 896.67,
+     "peak_gain": 0.3123468750769076
+    },
+    "pos-f384cbd93e": {
+     "kind": "stock",
+     "symbol": "BAC",
+     "qty": 1.9687,
+     "entry": 50.89,
+     "cost": 100.19,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 50.73,
+     "atr": 0,
+     "opened": "2026-10-20T09:55:49-04:00",
+     "thesis": "opening-range breakout on BAC: 1.18x volume, +0.82% vs VWAP; target +0.6%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Financials",
+     "setup": "opening-range breakout",
+     "target_pct": 0.6,
+     "stop_pct": 0.3,
+     "max_hold_min": 15,
+     "last": 50.81,
+     "peak_gain": -0.15720180782078375
+    },
+    "pos-6950f49458": {
+     "kind": "stock",
+     "symbol": "TQQQ",
+     "qty": 1.4429,
+     "entry": 69.42,
+     "cost": 100.17,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 69.21,
+     "atr": 0,
+     "opened": "2026-10-20T09:55:50-04:00",
+     "thesis": "VWAP pullback bounce on TQQQ: 1.24x volume, +0.50% vs VWAP; target +0.6%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.3,
+     "max_hold_min": 15,
+     "last": 69.64,
+     "peak_gain": 0.31691155286661665
+    },
+    "pos-32c94c145f": {
+     "kind": "stock",
+     "symbol": "INTC",
+     "qty": 1.1095,
+     "entry": 90.33,
+     "cost": 100.22,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 90.01,
+     "atr": 0,
+     "opened": "2026-10-20T09:57:53-04:00",
+     "thesis": "VWAP pullback bounce on INTC: 0.81x volume, +0.81% vs VWAP; target +0.6%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.3,
+     "max_hold_min": 15,
+     "last": 90.32
+    },
+    "pos-93bb7f4d66": {
+     "kind": "stock",
+     "symbol": "SNDK",
+     "qty": 0.0737,
+     "entry": 1358.882,
+     "cost": 100.15,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 1354.05,
+     "atr": 0,
+     "opened": "2026-10-20T09:57:53-04:00",
+     "thesis": "VWAP pullback bounce on SNDK: 0.75x volume, +0.75% vs VWAP; target +0.6%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.3,
+     "max_hold_min": 15,
+     "last": 1358.125
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
    "closed": 12,
    "wins": 8,
    "peak": 1002.95,
-   "max_dd": 0.0012,
+   "max_dd": 0.0014,
    "notes": [],
    "last_exits": {
     "SOXL": "2026-10-19",
