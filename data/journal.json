@@ -2320,5 +2320,60 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. The Hormuz tanker and undersea-cable headlines add gap-down risk for SPY, IWM and QQQ, so I'm requiring a VWAP reclaim before any open entry. Relative-volume gating is still unverified in code, so I'm adding a manual check on every entry.",
   "symbol": "SPY, IWM, QQQ"
+ },
+ {
+  "time": "2026-10-20T09:36:22-04:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CIFR261106P00010000",
+  "note": "option target (+120%)"
+ },
+ {
+  "time": "2026-10-20T09:36:22-04:00",
+  "type": "close",
+  "agent": "monkey",
+  "symbol": "HUM",
+  "qty": 0.97,
+  "entry": 435.168,
+  "exit": 418.336,
+  "pnl": -16.32,
+  "note": "random holding period over (5 days)",
+  "opened": "2026-10-15T12:43:33-04:00",
+  "confidence": 0,
+  "thesis": "Dart landed on HUM"
+ },
+ {
+  "time": "2026-10-20T09:36:53-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-70%)"
+ },
+ {
+  "time": "2026-10-20T09:37:00-04:00",
+  "type": "open",
+  "agent": "trend",
+  "symbol": "HLT",
+  "instrument": "stock",
+  "qty": 0.1964,
+  "price": 354.11,
+  "cost": 69.55,
+  "stop": 344.04,
+  "thesis": "HLT cleared its 55-day high at 350.87 on 2.9x relative volume with a 12.7% 20-day rate of change, and it sits 11.9% above its 200-day SMA; the 344.04 stop risks about 3.4% under the breakout level.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-10-20T09:37:21-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, IWM, QQQ, BAC",
+  "note": "defensive: SPY is the only liquid name with a clean uptrend and an opening-range breakout, but its 0.09% range is very tight, so I'm using a smaller target, a tighter stop, and a shorter hold. Most single names are trending down, so I'm running defensive with VWAP bounces at half size."
+ },
+ {
+  "time": "2026-10-20T09:37:26-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "symbol": "SOXL, TQQQ, MU, SNDK, IREN",
+  "note": "aggressive: Market is calm with SPY trending up, so I'm running full-size setups on the most active movers and 3x ETFs. Ten slices give more shots, with tight stops and short holds to keep risk small."
  }
 ]
