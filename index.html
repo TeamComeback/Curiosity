@@ -78,7 +78,8 @@ ul.rules{margin:0;padding-left:18px}
 .plan .h{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:600;font-size:14px}
 .chip{font-size:11px;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
 .chip.keep{color:var(--text2)}.chip.revise,.chip.new{color:var(--gold)}.chip.scrap{color:var(--bad)}
-.plan .sum{font-size:13px;color:var(--text);margin-top:4px}
+.plan .sum{font-size:13px;color:var(--text);margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.plan.open .sum{display:block}
 .plan .meta{font-size:12px;color:var(--muted);margin-top:3px}
 .tl{list-style:none;margin:8px 0 0;padding:0 0 0 12px;border-left:2px solid var(--line)}
 .tl li{font-size:13px;color:var(--text2);margin:0 0 6px;position:relative}
@@ -109,50 +110,94 @@ ul.rules{margin:0;padding-left:18px}
 .pbar i{display:block;height:100%;border-radius:3px}
 .parts b{font-variant-numeric:tabular-nums;color:var(--text);font-weight:600;text-align:right;min-width:22px}
 ul.rules li{font-size:13px;color:var(--text2);margin:4px 0}
+nav.jump{position:sticky;top:0;z-index:5;display:flex;gap:6px;overflow-x:auto;padding:8px 0;margin:6px -16px 0;padding-inline:16px;
+  background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);scrollbar-width:none}
+nav.jump a{flex:none;font-size:12px;font-weight:600;color:var(--text2);border:1px solid var(--line);border-radius:999px;padding:4px 11px;text-decoration:none;background:var(--surface)}
+h2{scroll-margin-top:52px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.tile{border:1px solid var(--line);border-radius:10px;padding:8px}
+.tile .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.tile .v{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+.hl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.hl .tile .v{font-size:14px}
+.hl .tile .s{font-size:12px;color:var(--text2);margin-top:2px}
+.mini{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+.mini td,.mini th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.mini th{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.mini td.n,.mini th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mini .line{font-size:12px;color:var(--text2)}
+.srow{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.srow:last-child{border-bottom:0}
+.srow .nm{font-weight:600;font-size:14px;display:flex;align-items:center;gap:6px;min-width:0}
+.srow .nm span.t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.srow .eqv{font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+.srow .chg{font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+.srow .bar{grid-column:2/4;height:5px;border-radius:3px;background:var(--track);overflow:hidden}
+.srow .bar i{display:block;height:100%}
+.srow{cursor:pointer}
+.srow .more-info{grid-column:2/4}
+.srow .nm .sub{font-weight:400}
+.tag2{font-size:10px;font-weight:700;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px}
+.act{display:grid;grid-template-columns:52px 1fr auto;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px;align-items:start}
+.act:last-child{border-bottom:0}
+.act time{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.act .w{min-width:0}
+.act .w b{font-weight:600}
+.act .w .x{color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.act.open .w .x{white-space:normal}
+.act .amt{font-variant-numeric:tabular-nums;white-space:nowrap}
+.more{display:block;width:100%;margin-top:8px;font:inherit;font-size:13px;color:var(--text2);background:transparent;border:1px solid var(--line);border-radius:10px;padding:7px;cursor:pointer}
+.pgrp{padding:8px 0;border-bottom:1px solid var(--line)}.pgrp:last-child{border-bottom:0}
+.pgrp .gh{font-size:12px;font-weight:600;color:var(--text2);margin-bottom:2px}
+@media (max-width:420px){.tiles{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 <header><h1>Agent Race</h1><span style="display:flex;gap:10px;align-items:baseline"><a href="arena.html" style="font-size:12px;color:var(--text2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;text-decoration:none">The Street</a><a href="portfolio.html" style="font-size:12px;color:var(--text2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;text-decoration:none">Portfolio</a><span class="sub" id="updated">Loading…</span></span></header>
 <div class="card banner" id="health" style="display:none;border-color:var(--bad)"></div>
 <div class="card banner" id="banner"><div class="t">Race to $10,000</div></div>
-<div class="pills" id="pills"></div>
+<nav class="jump" aria-label="Sections"><a href="#recaph">Recap</a><a href="#standh">Standings</a><a href="#planh">Plans</a><a href="#posh">Positions</a><a href="#acth">Activity</a><a href="#radarh">Radar</a><a href="#moreh">More</a></nav>
 
-<h2 id="nighth">Overnight game plan</h2>
-<div class="card" id="night"><div class="empty">Plans appear after the first planning session (about 4:40 PM ET).</div></div>
+<h2 id="recaph">Daily recap</h2>
+<div class="card" id="recap"><div class="empty">The first recap is written after today's close (about 4:40 PM ET).</div></div>
 
-<h2>Crash Radar</h2>
-<div class="card" id="radar"><div class="empty">The first reading arrives with the next run.</div></div>
-
-<h2>Standings</h2>
-<div id="standings"></div>
+<h2 id="standh">Standings</h2>
+<div class="card" id="standings"></div>
 
 <h2>Equity over time</h2>
 <div class="card chartwrap">
   <div class="legend" id="legend"></div>
-  <svg id="chart" viewBox="0 0 400 260" role="img" aria-label="Each agent's account value over time on a log scale, with the goal line"></svg>
+  <svg id="chart" viewBox="0 0 400 260" role="img" aria-label="Each firm's account value over time on a log scale, with the goal line"></svg>
   <div class="tip" id="tip"></div>
-  <div class="sub">Log scale: each gridline is a multiple of the start, so a double looks the same at $100 or $2,000.</div>
+  <div class="sub">Log scale: each gridline is a multiple of the start.</div>
   <details><summary>Table view</summary><div id="tableview"></div></details>
 </div>
 
-<h2>Open positions</h2>
+<h2 id="planh"><span id="nighth">Game plans</span></h2>
+<div class="card" id="night"><div class="empty">Plans appear after the first planning session (about 4:40 PM ET).</div></div>
+
+<h2 id="posh">Open positions</h2>
 <div class="card" id="positions"></div>
 
-<h2>Compliance desk</h2>
-<div class="card" id="compliance"><div class="empty">The compliance log starts with the next trading round.</div></div>
+<h2 id="acth">Activity</h2>
+<div class="card">
+  <div class="seg" role="tablist" id="acttabs"><button data-t="trades" aria-pressed="true">Trades</button><button data-t="plans" aria-pressed="false">Plans</button><button data-t="issues" aria-pressed="false">Issues</button><button data-t="compliance" aria-pressed="false">Compliance</button></div>
+  <div id="journal"></div>
+  <div id="compliance" hidden></div>
+</div>
 
-<h2>Agent journal</h2>
-<div class="card" id="journal"></div>
+<h2 id="radarh">Crash Radar</h2>
+<div class="card" id="radar"><div class="empty">The first reading arrives with the next run.</div></div>
 
-<h2>Weekly self-reviews</h2>
-<div class="card" id="reviews"></div>
-
-<h2>Rules of the race</h2>
-<div class="card"><ul class="rules" id="rules"></ul></div>
+<h2 id="moreh">More</h2>
+<div class="card">
+  <details><summary>Weekly self-reviews</summary><div id="reviews"></div></details>
+  <details><summary>Rules of the race</summary><ul class="rules" id="rules"></ul></details>
+</div>
 
 <script>
 const COLOR = {trend:"var(--s1)", meanrev:"var(--s2)", volsell:"var(--s3)", blackswan:"var(--s6)", scalper:"var(--s7)", hyper:"var(--s8)", baseline:"var(--s4)", monkey:"var(--s5)"};
-let DATA = null;
+let DATA = null, DAYCHG = {};
 const STATUS = {active:"Active", winner:"🏆 Winner", failed:"✕ Failed", eliminated:"✕ Eliminated"};
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -179,7 +224,7 @@ fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(render).c
 
 setInterval(() => {                       // keep the page current without a manual reload
   if (document.hidden || !DATA) return;
-  fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { if (d.updated !== DATA.updated || d.plans_updated !== DATA.plans_updated) render(d); }).catch(() => {});
+  fetch("data/dashboard.json?ts=" + Date.now()).then(r => r.json()).then(d => { if (d.updated !== DATA.updated || d.plans_updated !== DATA.plans_updated || d.recap_updated !== DATA.recap_updated) render(d); }).catch(() => {});
 }, 60000);
 
 function render(d){
@@ -200,22 +245,25 @@ function render(d){
     const alive = d.agents.filter(a => a.competing && a.status==="active").length;
     const racing = d.agents.filter(a => a.competing).length;
     $("banner").innerHTML = `<div class="t">Race to ${money0(GOAL)}</div>
-      <div class="d">Each agent started with ${money0(START)}. First to ${money0(GOAL)} wins. ${alive} of ${racing} still racing.</div>`;
+      <div class="d">Each firm started with ${money0(START)}. First to ${money0(GOAL)} wins. ${alive} of ${racing} still racing${d.regime && d.regime.spy_trend ? ` · SPY trend ${esc(d.regime.spy_trend)}` : ""}${d.radar && d.radar.now ? ` · Crash Radar ${d.radar.now.score} (${esc(d.radar.now.tier)})` : ""}.</div>`;
   }
-  $("pills").innerHTML = [`Brain: ${esc(d.brain)}`, d.regime && d.regime.spy_trend ? `SPY trend: ${esc(d.regime.spy_trend)}` : ""]
-    .filter(Boolean).map(t => `<span class="pill">${t}</span>`).join("");
 
   const comp = d.agents.filter(a => a.competing).sort((a,b) => (b.status==="winner")-(a.status==="winner") || b.equity-a.equity);
   const bench = d.agents.filter(a => !a.competing).sort((a, b) => (b.exhibition || 0) - (a.exhibition || 0));
   const ticks = [2,5,10,25].filter(m => m < GOAL/START*0.6).map(m => `<span style="left:${logPct(START*m)}%">${m}×</span>`).join("") + `<span style="right:0;transform:none">${money0(GOAL)}</span>`;
-  $("standings").innerHTML = comp.map((a,i) => agentCard(a, i+1, ticks)).join("") + bench.map(a => agentCard(a, null, ticks)).join("");
+  const curve = d.equity_curve || [], last = curve[curve.length-1] || {agents:{}}, prev = curve[curve.length-2] || {agents:{}};
+  DAYCHG = Object.fromEntries(d.agents.map(a => [a.id, prev.agents && prev.agents[a.id] != null ? a.equity - prev.agents[a.id] : null]));
+  $("standings").innerHTML = comp.map((a,i) => standRow(a, i+1)).join("") + bench.map(a => standRow(a, null)).join("");
+  $("standings").insertAdjacentHTML("beforeend", `<div class="sub" style="margin-top:6px">Tap a firm for its stats.</div>`);
+  $("standings").querySelectorAll(".srow").forEach(el => el.onclick = () => { const m = el.querySelector(".more-info"); m.hidden = !m.hidden; });
 
   radarCard(d.radar);
   nightCard(d, names);
   loadCompliance();
+  loadRecap();
   chart(d, names);
   positions(d.positions, names);
-  journal(d.journal);
+  LEDGER = null; journal();
   reviews(d.reviews, names);
   const r = d.rules;
   $("rules").innerHTML = [
@@ -242,7 +290,7 @@ function nightCard(d, names){
   const day = plans[ids[0]].for_day;
   $("nighth").textContent = `Overnight game plan · for ${new Date(day + "T12:00").toLocaleDateString([], {weekday:"long", month:"short", day:"numeric"})}`;
   const focus = d.focus || {};
-  $("night").innerHTML = `<div class="sub" style="margin-bottom:10px">What each firm's planners decided after the close, at the evening check-in and before the open. Last update ${esc(WHEN(latest))}.</div>` +
+  $("night").innerHTML = `<div class="sub" style="margin-bottom:8px">Last planning update ${esc(WHEN(latest))}. Tap a firm for its watchlist and reasoning.</div>` +
     ids.map(id => {
       const p = plans[id], revs = p.revisions || [], last = revs[revs.length - 1] || {}, f = focus[id];
       const changes = revs.filter(r => r.decision === "revise" || r.decision === "scrap").length;
@@ -250,13 +298,14 @@ function nightCard(d, names){
         <div class="h"><span><span class="sw" style="background:${COLOR[id]};margin-right:6px"></span>${esc(names[id] || id)}</span>
           <span class="chip ${esc(last.decision || p.decision)}">${esc((DECIDED[last.decision || p.decision] || p.decision || "").toUpperCase())} · ${esc(WHEN(last.at || p.made_at))}</span></div>
         <div class="sum">${esc(p.summary || "No trades planned.")}</div>
-        <div class="meta">${revs.length} session${revs.length === 1 ? "" : "s"} so far${changes ? ` · changed its mind ${changes} time${changes > 1 ? "s" : ""}` : ""}${f && f.lean_in && f.lean_in.length ? ` · ${id === "blackswan" ? "betting against" : "leaning into"} ${esc(f.lean_in.join(", "))}` : ""}</div>
         <details><summary>Watchlist and what changed</summary>
+        <div class="meta">${revs.length} session${revs.length === 1 ? "" : "s"} so far${changes ? ` · changed its mind ${changes} time${changes > 1 ? "s" : ""}` : ""}${f && f.lean_in && f.lean_in.length ? ` · ${id === "blackswan" ? "betting against" : "leaning into"} ${esc(f.lean_in.join(", "))}` : ""}</div>
           ${(p.watchlist || []).length ? `<div class="wl">${p.watchlist.map(w => `<div><b>${esc(w.symbol)}</b>${w.instrument ? ` (${esc(w.instrument.replace("_", " "))})` : ""}: ${esc(w.trigger || w.setup || "")}</div>`).join("")}</div>` : `<div class="wl">Nothing on the watchlist: the plan is to wait.</div>`}
           <ul class="tl">${revs.map(r => `<li><b>${esc(WHEN(r.at))} · ${esc(r.session)}:</b> ${esc(DECIDED[r.decision] || r.decision)}. ${esc(r.why)}</li>`).join("")}</ul>
           ${p.brainstorm ? `<div class="wl"><b>Idea to test:</b> ${esc(p.brainstorm)}</div>` : ""}
         </details></div>`;
     }).join("");
+  $("night").querySelectorAll(".plan details").forEach(dt => dt.ontoggle = () => dt.closest(".plan").classList.toggle("open", dt.open));
 }
 
 let COMP = {}, compDay = null, compTab = "approved";
@@ -319,10 +368,74 @@ function radarCard(rd){
       <span class="z1"></span><span class="z2"></span><span class="z3"></span><span class="mark" style="left:${Math.min(Math.max(r.score, 1), 99)}%"></span></div>
     <div class="gscale"><span style="left:20%">calm</span><span style="left:55%">warning</span><span style="left:85%">stress</span></div>
     <div class="d" style="font-size:13px;color:var(--text2);margin-top:6px">${esc(what)}</div>
-    <div class="parts">${parts}</div>
+    <details><summary>What's driving it</summary><div class="parts">${parts}</div>
     ${facts ? `<div class="sub" style="margin-top:10px">${esc(facts)}</div>` : ""}
     <div class="sub" style="margin-top:4px">Economy data: ${esc(e.status === "on" ? "on (FRED)" : e.status || "off")}</div>
-    ${spark}`;
+    ${spark}</details>`;
+}
+
+function standRow(a, rank){
+  const ret = (a.equity/START - 1) * 100, dc = DAYCHG[a.id], st = a.status;
+  const tag = a.competing ? (st !== "active" ? STATUS[st] || st : "") : a.exhibition ? (a.reached_goal ? "🏁 Exhibition" : "Exhibition") : a.id === "monkey" ? "Control" : "Benchmark";
+  return `<div class="srow" data-x tabindex="0">
+    <span class="rank">${rank ? "#" + rank : ""}</span>
+    <div class="nm"><span class="sw" style="background:${COLOR[a.id]}"></span><span class="t">${esc(a.name)}${tag ? `<div class="sub">${esc(tag)}</div>` : ""}</span></div>
+    <div><div class="eqv">${money(a.equity)}</div><div class="chg"><span class="${cls(dc)}">${dc == null ? "" : `${signed$(dc)} today · `}</span><span class="${cls(ret)}">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div></div>
+    ${a.competing || a.exhibition ? `<div class="bar" role="progressbar" aria-label="Progress to ${money0(GOAL)}" aria-valuenow="${a.equity}"><i style="width:${logPct(a.equity)}%;background:${COLOR[a.id]}"></i></div>` : ""}
+    <div class="more-info" hidden>
+      <div class="stats"><span>Cash <b>${money(a.available)}</b>${a.settling ? ` (+${money(a.settling)} settling)` : ""}</span><span>Open <b>${a.open}</b></span><span>Closed <b>${a.closed}</b></span>
+        <span>Win rate <b>${a.win_rate==null?"–":a.win_rate+"%"}</b></span><span>Max DD <b>${a.max_dd_pct}%</b></span></div>
+      ${a.status_reason && st!=="active" ? `<div class="reason ${st}">${esc(a.status_reason)}</div>` : ""}
+      ${scoreLine(a.id)}
+      ${a.notes && a.notes.length ? `<div class="note">“${esc(a.notes[0].note)}”</div>` : ""}
+    </div></div>`;
+}
+
+let RECAPS = [], recapDay = null;
+function loadRecap(){
+  fetch("data/recaps.json?ts=" + Date.now()).then(r => r.ok ? r.json() : []).then(x => { RECAPS = x || []; recapCard(); }).catch(() => {});
+}
+function recapCard(){
+  if (!RECAPS.length) return;
+  const days = RECAPS.map(r => r.date).reverse();
+  if (!recapDay || !days.includes(recapDay)) recapDay = days[0];
+  const r = RECAPS.find(x => x.date === recapDay), t = r.totals || {}, F = r.firms || {};
+  const nice = s => { const m = /^([A-Z]+)(\d{2})(\d{2})(\d{2})([CP])(\d{8})$/.exec(s || ""); return m ? `${m[1]} $${+m[6] / 1000} ${m[5] === "C" ? "call" : "put"}` : (s || ""); };
+  const nm = id => (F[id] && F[id].name) || id;
+  const sw = id => `<span class="sw" style="background:${COLOR[id] || "var(--muted)"};margin-right:5px"></span>`;
+  const dur = m => m == null ? "" : m < 60 ? `${m} min` : `${Math.floor(m/60)}h ${m%60}m`;
+  const tile = (k, tr, extra) => `<div class="tile"><div class="k">${k}</div>${tr ? `<div class="v">${sw(tr.agent)}${esc(nice(tr.symbol))} <span class="${cls(tr.pnl)}">${signed$(tr.pnl)}</span></div>
+      <div class="s">${esc(nm(tr.agent))}${tr.return_pct != null ? ` · ${tr.return_pct >= 0 ? "+" : ""}${tr.return_pct}%` : ""}${tr.minutes_held != null ? ` · held ${dur(tr.minutes_held)}` : ""}</div>${extra ? `<div class="s">${extra}</div>` : ""}` : `<div class="s">None today</div>`}</div>`;
+  const order = Object.keys(COLOR).filter(id => F[id]);
+  const label = new Date(r.date + "T12:00").toLocaleDateString([], {weekday:"long", month:"short", day:"numeric"});
+  $("recap").innerHTML = `<div class="ctop"><b>${esc(label)}</b><select aria-label="Day">${days.map(x => `<option ${x === recapDay ? "selected" : ""}>${x}</option>`).join("")}</select></div>
+    <div style="font-size:14px">${esc(r.headline || "")}</div>
+    <div class="tiles"><div class="tile"><div class="k">Opened</div><div class="v">${t.opened ?? 0}</div></div>
+      <div class="tile"><div class="k">Closed</div><div class="v">${t.closed ?? 0}</div></div>
+      <div class="tile"><div class="k">Winners</div><div class="v">${t.closed ? Math.round(100 * t.wins / t.closed) + "%" : "–"}</div></div>
+      <div class="tile"><div class="k">Realized</div><div class="v ${cls(t.realized)}">${signed$(t.realized || 0)}</div></div></div>
+    <div class="hl">
+      ${tile("Biggest win", (r.biggest_wins || [])[0])}
+      ${tile("Biggest loss", (r.biggest_losses || [])[0])}
+      ${tile("Smartest call", r.smartest, r.smartest_why ? esc(r.smartest_why) : "")}
+      ${tile("Most efficient", (r.most_efficient || [])[0], (r.most_efficient || [])[0] ? `${r.most_efficient[0].pct_per_hour}% per hour held` : "")}
+    </div>
+    <table class="mini" style="margin-top:12px"><thead><tr><th>Firm</th><th class="n">Day</th><th class="n">Trades</th></tr></thead><tbody>
+      ${order.map(id => { const f = F[id]; return `<tr><td>${sw(id)}<b>${esc(f.name)}</b>${f.summary ? `<div class="line">${esc(f.summary)}</div>` : ""}</td>
+        <td class="n ${cls(f.day_pnl)}">${f.day_pnl == null ? "–" : signed$(f.day_pnl)}<div class="line">${f.day_pct == null ? "" : (f.day_pct >= 0 ? "+" : "") + f.day_pct + "%"}</div></td>
+        <td class="n">${f.closed ? `${f.wins}/${f.closed} won` : f.opened ? `${f.opened} opened` : "–"}</td></tr>`; }).join("")}
+    </tbody></table>
+    <details><summary>Projections at the current pace</summary>
+      <table class="mini"><thead><tr><th>Firm</th><th class="n">Avg/day</th><th class="n">In ~1 month</th><th class="n">To ${money0(GOAL)}</th></tr></thead><tbody>
+      ${order.filter(id => F[id].racing || F[id].exhibition).map(id => { const f = F[id]; return `<tr><td>${sw(id)}${esc(f.name)}</td>
+        <td class="n ${cls(f.avg_daily_pct)}">${f.avg_daily_pct == null ? "–" : (f.avg_daily_pct >= 0 ? "+" : "") + f.avg_daily_pct + "%"}</td>
+        <td class="n">${f.projection_30d == null ? "–" : money0(f.projection_30d)}</td>
+        <td class="n">${f.days_to_goal ? `${f.days_to_goal} trading days` : "not on pace"}</td></tr>`; }).join("")}
+      </tbody></table>
+      <div class="sub" style="margin-top:6px">A straight-line extension of each firm's average daily growth so far. Early numbers swing a lot; read it as pace, not a forecast.</div>
+    </details>
+    ${r.tomorrow ? `<div class="sub" style="margin-top:8px"><b>Tomorrow:</b> ${esc(r.tomorrow)}</div>` : ""}`;
+  $("recap").querySelector("select").onchange = ev => { recapDay = ev.target.value; recapCard(); };
 }
 
 function scoreLine(id){
@@ -414,38 +527,69 @@ function chart(d, names){
   hit.addEventListener("mouseleave", hide); hit.addEventListener("touchend", () => setTimeout(hide, 1500));
 }
 
+const NICE = s => { const m = /^([A-Z]+)(\d{2})(\d{2})(\d{2})([CP])(\d{8})$/.exec(s || ""); return m ? `${m[1]} $${+m[6] / 1000} ${m[5] === "C" ? "call" : "put"}` : (s || ""); };
+const HM = t => new Date(t).toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
+const DHM = t => new Date(t).toLocaleString([], {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"});
+
 function positions(list, names){
   if (!list || !list.length){ $("positions").innerHTML = '<div class="empty">No open positions.</div>'; return; }
-  $("positions").innerHTML = list.map(p => {
-    let what, pnl = "";
-    if (p.kind==="stock"){ what = `${Number(p.qty).toFixed(4)} sh @ ${money(p.entry)}${p.stop?` · stop ${money(p.stop)}`:""}`;
-      if (p.last!=null){ const v=(p.last-p.entry)*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
-    else if (p.kind==="option"){ what = `${p.qty} ${esc(p.opt_type)}${p.qty>1?"s":""} @ ${money(p.entry)} · exp ${esc(p.expiry)}`;
-      if (p.mark!=null){ const v=(p.mark-p.entry)*100*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
-    else if (p.kind==="debit_spread"){ what = `${esc(p.structure)} ×${p.qty} · paid ${money(p.entry)} · exp ${esc(p.expiry)}`;
-      if (p.mark!=null){ const v=(p.mark-p.entry)*100*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
-    else { what = `${esc(p.structure)} ×${p.qty} · credit ${money(p.entry)} · exp ${esc(p.expiry)}`;
-      if (p.mark!=null){ const v=(p.entry-p.mark)*100*p.qty; pnl = `<span class="${cls(v)}">${signed$(v)}</span>`; } }
-    return `<div class="row"><div class="h"><span><span class="sw" style="background:${COLOR[p.agent]};margin-right:6px"></span>${esc(p.underlying||p.symbol)}</span>${pnl}</div>
-      <div class="d">${esc(names[p.agent])} · ${what}</div>
-      ${p.opened ? `<div class="d">Opened ${esc(new Date(p.opened).toLocaleString([], {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}))}</div>` : ""}${p.thesis?`<div class="d">${esc(p.thesis)}${p.confidence?` · conf ${p.confidence}/5`:""}</div>`:""}</div>`;
-  }).join("");
+  const groups = {};
+  list.forEach(p => (groups[p.agent] = groups[p.agent] || []).push(p));
+  const val = p => p.kind === "stock" ? (p.last != null ? (p.last - p.entry) * p.qty : null)
+    : p.kind === "spread" ? (p.mark != null ? (p.entry - p.mark) * 100 * p.qty : null) : (p.mark != null ? (p.mark - p.entry) * 100 * p.qty : null);
+  const what = p => p.kind === "stock" ? `${Number(p.qty).toFixed(2)} sh @ ${money(p.entry)}`
+    : p.kind === "option" ? `${p.qty} ${esc(p.opt_type)} @ ${money(p.entry)}` : `${esc(p.structure)} ×${p.qty} @ ${money(p.entry)}`;
+  $("positions").innerHTML = Object.keys(COLOR).filter(id => groups[id]).map(id => {
+    const ps = groups[id], tot = ps.reduce((s, p) => s + (val(p) || 0), 0);
+    return `<div class="pgrp"><div class="gh"><span class="sw" style="background:${COLOR[id]};margin-right:6px"></span>${esc(names[id])} · ${ps.length} open · <span class="${cls(tot)}">${signed$(tot)}</span></div>` +
+      ps.map((p, i) => { const v = val(p); return `<div class="act" data-x>
+        <time>${esc(new Date(p.opened).toLocaleDateString([], {month:"short", day:"numeric"}))}</time>
+        <div class="w"><b>${esc(NICE(p.symbol))}</b> <span class="sub">${what(p)}${p.expiry ? ` · exp ${esc(p.expiry.slice(5))}` : ""}</span>
+          <div class="x">Opened ${esc(DHM(p.opened))}. ${esc(p.thesis || "")}</div></div>
+        <span class="amt ${cls(v)}">${v == null ? "–" : signed$(v)}</span></div>`; }).join("") + `</div>`;
+  }).join("") + `<div class="sub" style="margin-top:6px">Tap a position to read why it was bought.</div>`;
+  $("positions").querySelectorAll("[data-x]").forEach(el => el.onclick = () => el.classList.toggle("open"));
 }
 
-function journal(list){
-  const label = {open:"OPEN",close:"CLOSE",rule_block:"BLOCKED",unfilled:"UNFILLED",exit_unfilled:"UNFILLED",error:"ERROR",
-    param_change:"RETUNED",playbook:"PLAYBOOK",failed:"FAILED",eliminated:"ELIMINATED",race_end:"FINISH",trim:"TOOK PROFIT",radar:"RADAR"};
-  if (!list || !list.length){ $("journal").innerHTML = '<div class="empty">No activity yet.</div>'; return; }
-  $("journal").innerHTML = list.slice(0,40).map(j => {
-    const when = new Date(j.time).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
-    let body = esc(j.thesis || j.note || "");
-    if (j.type==="trim") body = `<span class="${cls(j.pnl)}">${signed$(j.pnl)}</span> on part · ${esc(j.note)}`;
-    if (j.type==="close") body = `<span class="${cls(j.pnl)}">${signed$(j.pnl)}</span> · ${esc(j.note)}`;
-    if (j.type==="open") body = `${esc(j.instrument)} · ${money(Math.abs(j.cost))} ${j.cost<0?"credit":""} · ${esc(j.thesis)}`;
-    const sym = j.symbol && j.symbol.length > 12 ? j.symbol.replace(/^([A-Z]+)(\d{6})([CP]).*/, "$1 $3 $2") : (j.symbol||"");
-    return `<div class="row"><div class="h"><span><span class="tag">${label[j.type]||esc(j.type).toUpperCase()}</span>${esc(sym)}</span><span class="sub">${when}</span></div>
-      <div class="d">${j.agent?`<span class="sw" style="background:${COLOR[j.agent]||"var(--muted)"};margin-right:6px"></span>`:""}${body}</div></div>`;
-  }).join("");
+let ACT = "trades", ACT_N = 25, LEDGER = null;
+document.addEventListener("click", ev => {
+  const b = ev.target.closest("#acttabs button"); if (!b) return;
+  ACT = b.dataset.t; ACT_N = 25;
+  document.querySelectorAll("#acttabs button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  activity();
+});
+function journal(){ if (LEDGER === null) fetch("data/ledger.json?ts=" + Date.now()).then(r => r.ok ? r.json() : []).then(l => { LEDGER = l.slice().reverse(); activity(); }).catch(() => { LEDGER = []; activity(); }); else activity(); }
+function activity(){
+  const showComp = ACT === "compliance";
+  $("compliance").hidden = !showComp; $("journal").hidden = showComp;
+  if (showComp){ compliance(); return; }
+  const names = Object.fromEntries((DATA ? DATA.agents : []).map(a => [a.id, a.name]));
+  const sw = id => `<span class="sw" style="background:${COLOR[id] || "var(--muted)"};margin-right:5px"></span>`;
+  let rows = [];
+  if (ACT === "trades"){
+    rows = (LEDGER || []).filter(e => e.type === "trade_opened" || e.type === "trade_closed").map(e => {
+      const closed = e.type === "trade_closed";
+      return {time: e.time, agent: e.agent, head: `${closed ? (e.partial ? "Sold part of" : "Sold") : "Bought"} <b>${esc(NICE(e.symbol))}</b>`,
+        amt: closed ? `<span class="${cls(e.pnl)}">${signed$(e.pnl || 0)}</span>` : `<span class="sub">${money(Math.abs(e.cost || 0))}</span>`,
+        text: closed ? `${esc(e.why_exited || "")}. Opened ${e.opened ? esc(DHM(e.opened)) : "–"}.` : `${e.from_plan ? "From the overnight plan. " : ""}${esc(e.why || "")}`};
+    });
+  } else {
+    const want = ACT === "plans" ? ["plan", "focus", "playbook", "scorecard", "recap", "radar", "param_change", "topup", "exhibition_goal"]
+                                 : ["rule_block", "unfilled", "exit_unfilled", "error", "failed", "eliminated", "plan_error"];
+    const LBL = {plan:"Plan", focus:"Sector focus", playbook:"Playbook", scorecard:"Scorecard", recap:"Recap", radar:"Radar", param_change:"Retuned",
+      topup:"Top-up", exhibition_goal:"Goal", rule_block:"Blocked", unfilled:"Not filled", exit_unfilled:"Exit not filled", error:"Error", failed:"Failed", eliminated:"Eliminated", plan_error:"Plan error"};
+    rows = ((DATA && DATA.journal) || []).filter(j => want.includes(j.type)).map(j => ({time: j.time, agent: j.agent,
+      head: `${LBL[j.type] || j.type}${j.symbol ? ` · <b>${esc(NICE(j.symbol))}</b>` : ""}`, amt: "", text: esc(j.note || j.thesis || "")}));
+  }
+  if (!rows.length){ $("journal").innerHTML = '<div class="empty">Nothing here yet.</div>'; return; }
+  let lastDay = "";
+  $("journal").innerHTML = rows.slice(0, ACT_N).map(r => {
+    const day = new Date(r.time).toLocaleDateString([], {weekday:"short", month:"short", day:"numeric"});
+    const sep = day !== lastDay ? `<div class="sub" style="padding-top:8px;font-weight:600">${esc(day)}</div>` : ""; lastDay = day;
+    return sep + `<div class="act" data-x><time>${esc(HM(r.time))}</time><div class="w">${r.agent ? sw(r.agent) : ""}${esc(names[r.agent] || "")} · ${r.head}<div class="x">${r.text}</div></div><span class="amt">${r.amt}</span></div>`;
+  }).join("") + (rows.length > ACT_N ? `<button class="more" id="actmore">Show more (${rows.length - ACT_N} older)</button>` : "");
+  $("journal").querySelectorAll("[data-x]").forEach(el => el.onclick = () => el.classList.toggle("open"));
+  const m = $("actmore"); if (m) m.onclick = () => { ACT_N += 50; activity(); };
 }
 
 function reviews(list, names){

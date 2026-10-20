@@ -38,6 +38,8 @@ def _line(e):
         return f"🐻 {e.get('note')}"
     if t in ("eliminated", "failed"):
         return f"⛔ {who} {t}: {e.get('note')}"
+    if t == "recap":
+        return f"📰 Daily recap: {str(e.get('note', ''))[:220]}"
     if t == "exhibition_goal":
         return f"🏁 {e.get('note')}"
     if t == "race_end":

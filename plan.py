@@ -398,6 +398,12 @@ def main(session=None, force=False, only=None):
     except Exception:  # noqa: BLE001
         prices = {}
     since = (now - timedelta(hours=20)).isoformat(timespec="seconds")
+    if session == "close" and not any(r.get("date") == store.today() for r in store.load("recaps.json", [])):
+        try:                        # the day's recap, written once after the close
+            import recap
+            recap.main()
+        except Exception as e:  # noqa: BLE001
+            print(f"[plan] recap failed: {type(e).__name__}")
     if session == "close":          # finished daily candles: refresh the Crash Radar for tonight's planners
         try:
             import radar

@@ -63,6 +63,8 @@ jobs:
             python daylong.py 330
           elif [ "${{ inputs.task }}" = "review" ]; then
             python review.py
+          elif [ "${{ inputs.task }}" = "recap" ]; then
+            python recap.py
           elif [ "${{ inputs.task }}" = "radar" ]; then
             python admin.py radar
           elif [ "${{ inputs.task }}" = "alert" ]; then

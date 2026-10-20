@@ -94,6 +94,7 @@ def main():
         for when, label, cmd in planning_events(now):
             if now >= when and label not in done and (now - when) < timedelta(hours=3) and not is_open:
                 print(f"[day] {label}")
+                sh("git pull -q --rebase || true")        # pick up any code changes made during the day
                 sh(cmd)
                 save()
                 last_save = time.time()
