@@ -4170,5 +4170,37 @@
   ],
   "aggression": "stand_down",
   "why": "Settled cash is $0.01 with the rest of the equity settling until tomorrow, so no new round trip can be funded today, and no positions are open. The afternoon tape is choppy, so no new entries."
+ },
+ {
+  "time": "2026-10-20T15:36:44-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "IWM",
+   "QQQ"
+  ],
+  "aggression": "defensive",
+  "why": "Settled cash is $0.01 with about $1,005 settling tomorrow, so no new trades can be funded today and the code should stay flat. For the next session, SPY and IWM are the most liquid names with clean VWAP behavior, and today's mixed results (several time-limit exits and a stop) argue for half-size VWA"
+ },
+ {
+  "time": "2026-10-20T15:36:51-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "watch": [
+   "SOXL",
+   "CRWV",
+   "STX",
+   "SNDK",
+   "MU",
+   "INTC",
+   "AMD",
+   "NVDA",
+   "IREN",
+   "TSLA",
+   "SMH"
+  ],
+  "aggression": "aggressive",
+  "why": "Only about $17 is spendable and roughly 14 minutes remain before the 3:50 flatten, so I'm keeping 4 slices for the largest possible shots and shortening the hold to 10 minutes. I'm focusing on the fastest movers (SOXL, CRWV, STX, SNDK) where the 0.6% target and 0.3% stop have been filling quickly."
  }
 ]
