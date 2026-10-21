@@ -3217,5 +3217,80 @@
   "stop": 276.5,
   "thesis": "VWAP pullback bounce on IWM: 1.2x volume, +0.08% vs VWAP; target +0.5%, stop -0.3%",
   "confidence": 3
+ },
+ {
+  "time": "2026-10-21T10:03:05-04:00",
+  "type": "open",
+  "agent": "hyper",
+  "symbol": "MU",
+  "instrument": "stock",
+  "qty": 0.1109,
+  "price": 910.52,
+  "cost": 100.98,
+  "stop": 907.06,
+  "thesis": "VWAP pullback bounce on MU: 0.86x volume, +0.47% vs VWAP; target +0.6%, stop -0.3%",
+  "confidence": 3
+ },
+ {
+  "time": "2026-10-21T10:03:07-04:00",
+  "type": "open",
+  "agent": "hyper",
+  "symbol": "CRWV",
+  "instrument": "stock",
+  "qty": 1.6324,
+  "price": 61.86,
+  "cost": 100.98,
+  "stop": 61.63,
+  "thesis": "VWAP pullback bounce on CRWV: 0.85x volume, +1.18% vs VWAP; target +0.6%, stop -0.3%",
+  "confidence": 3
+ },
+ {
+  "time": "2026-10-21T10:06:08-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-65%)"
+ },
+ {
+  "time": "2026-10-21T10:06:09-04:00",
+  "type": "close",
+  "agent": "scalper",
+  "symbol": "IWM",
+  "qty": 0.453,
+  "entry": 277.346,
+  "exit": 275.852,
+  "pnl": -0.68,
+  "note": "stop (-0.42%)",
+  "opened": "2026-10-21T09:56:56-04:00",
+  "confidence": 3,
+  "thesis": "VWAP pullback bounce on IWM: 1.2x volume, +0.08% vs VWAP; target +0.5%, stop -0.3%"
+ },
+ {
+  "time": "2026-10-21T10:06:09-04:00",
+  "type": "close",
+  "agent": "hyper",
+  "symbol": "MU",
+  "qty": 0.1109,
+  "entry": 910.52,
+  "exit": 903.972,
+  "pnl": -0.73,
+  "note": "stop (-0.48%)",
+  "opened": "2026-10-21T10:03:05-04:00",
+  "confidence": 3,
+  "thesis": "VWAP pullback bounce on MU: 0.86x volume, +0.47% vs VWAP; target +0.6%, stop -0.3%"
+ },
+ {
+  "time": "2026-10-21T10:06:37-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "NFLX, META, SPY",
+  "note": "defensive: Most of the tape is choppy with thin ranges and the IWM scalp just hit its stop, so I'm keeping size at half and cutting slices to 3. NFLX and META are the cleanest up-trends above their opening ranges with real dollar volume, and SPY stays on as the market anchor."
+ },
+ {
+  "time": "2026-10-21T10:06:41-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "symbol": "SPCX, META, NFLX, SNDK, CRWV",
+  "note": "aggressive: SPCX, META, and NFLX are trading above their opening ranges with the crash radar calm and SPY above its 200-day SMA. I widened the stop to 0.35% because the MU stop filled at -0.48% against a 0.3% stop, and the 0.7% target keeps reward-to-risk above 2:1."
  }
 ]
