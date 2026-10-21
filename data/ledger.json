@@ -5215,5 +5215,43 @@
   "opened": "2026-10-21T10:38:39-04:00",
   "why_entered": "VWAP pullback bounce on IWM: 1.09x volume, +0.08% vs VWAP; target +0.5%, stop -0.3%",
   "why_exited": "time limit, 40 min (-0.16%)"
+ },
+ {
+  "time": "2026-10-21T11:29:00-04:00",
+  "type": "trade_closed",
+  "agent": "scalper",
+  "position_id": "pos-9deb24766a",
+  "symbol": "MSFT",
+  "underlying": "MSFT",
+  "sector": "Technology",
+  "instrument": "stock",
+  "entry": 529.788,
+  "exit": 531.01,
+  "pnl": 0.39,
+  "return_pct": 0.2,
+  "opened": "2026-10-21T10:48:53-04:00",
+  "why_entered": "VWAP pullback bounce on MSFT: 0.94x volume, +0.14% vs VWAP; target +0.5%, stop -0.3%",
+  "why_exited": "time limit, 40 min (+0.24%)"
+ },
+ {
+  "time": "2026-10-21T11:36:53-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "watch": [
+   "SOXL",
+   "TQQQ",
+   "SNDK",
+   "CRWV",
+   "MU",
+   "META",
+   "NVDA",
+   "TSLA",
+   "SPCX",
+   "STX",
+   "SMH",
+   "QQQ"
+  ],
+  "aggression": "aggressive",
+  "why": "Settled cash is effectively zero until tomorrow, so this playbook is for the next session. I'm keeping the 0.7% target and 0.4% stop because today's 0.35% stops filled past their levels, and I'm dropping the weakest names (XLE, INTC, EWZ) in favor of the fastest movers with the widest ranges."
  }
 ]
