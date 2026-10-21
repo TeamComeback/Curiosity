@@ -5270,5 +5270,34 @@
   "opened": "2026-10-21T11:16:45-04:00",
   "why_entered": "VWAP pullback bounce on NVDA: 3.29x volume, +0.28% vs VWAP; target +0.5%, stop -0.3%",
   "why_exited": "time limit, 40 min (+0.01%)"
+ },
+ {
+  "time": "2026-10-21T12:05:34-04:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-6f6a3c3d01",
+  "symbol": "FTNT",
+  "underlying": "FTNT",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "entry": 168.29,
+  "exit": 173.36,
+  "pnl": 7.54,
+  "return_pct": 3.0,
+  "opened": "2026-10-16T12:36:10-04:00",
+  "why_entered": "FTNT RSI(2) of 1.2 washout still 36% above its 200-day in a calm regime (crash radar 24, SPY above 200-day); target 183.53 vs stop 154.63 gives about 1.15:1, which clears my 1:1 floor and my stated condition for re-entering tech.",
+  "why_exited": "snap-back (RSI2 59)"
+ },
+ {
+  "time": "2026-10-21T12:07:04-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "MSFT",
+   "META"
+  ],
+  "aggression": "stand_down",
+  "why": "Only about $42 is settled cash, so there's almost no buying power left today, and the midday tape is choppy with most names failing to show clean setups. I'm standing down, with SPY, MSFT, and META kept on watch in case a clean VWAP reclaim appears before the close."
  }
 ]
