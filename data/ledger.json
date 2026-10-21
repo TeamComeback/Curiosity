@@ -4317,5 +4317,113 @@
   ],
   "why": "Broad market ETFs (SPY, QQQ) are the only names where the volume gate and stop fit the ATR. IWM is tagged Industrials and has been the best performer, with 2 of 2 wins in that sector. Technology has a 50% win rate and +$2.14 but relies on single-name semis that don't fit a 0.25% stop. Real Estate is",
   "expires": "2026-11-03"
+ },
+ {
+  "time": "2026-10-20T20:10:29-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Evening check-in",
+  "for_day": "2026-10-21",
+  "decision": "revise",
+  "why": "Settled cash is $6.38, so the old plan's cash figures no longer apply. APA has already broken out today at 49.84, so its trigger may have fired on the scan, but a call at that level probably costs more than the cash I have. I'm keeping APA as a conditional idea and holding every position at its stop.",
+  "summary": "Hold the four puts (CIFR, SMR, CWVX, PLUG), BP, XLE and HLT at their stops, and make no new stock buys. Only buy one APA call if the next session confirms the breakout and the ask fits in settled cash.",
+  "watchlist": [
+   {
+    "symbol": "APA",
+    "setup": "Energy 55-day breakout (level 49.26). Scan shows it broke out today at 49.84, so this is a late entry.",
+    "trigger": "Next session: APA closes above 49.26 with relative volume of at least 1.75, and a 30-60 DTE near-the-money call (delta about 0.5) has an ask at or below $6.38 settled cash. Skip if the ask is above $6.38.",
+    "instrument": "call",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-20T20:10:38-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-10-21",
+  "decision": "keep",
+  "why": "The fresh scan has no candidate that clears the 1:1 floor. Every washout's gap to SMA5 is under 0.6 ATR against a 2.5 ATR stop, and META's reward-to-risk is about 0.38:1. FTNT's exit rules still hold.",
+  "summary": "No new entries tomorrow. Hold FTNT on its 154.63 stop, exit at the open if RSI(2) is above 70 or the close is above SMA5 (175.51), or if the close falls below 160 without a catalyst. Keep settled cash for a washout that offers at least 1:1 to SMA5.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-20T20:10:46-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Evening check-in",
+  "for_day": "2026-10-21",
+  "decision": "keep",
+  "why": "Nothing new since the 15:36 check changes the setup. Today's scan still shows IWM as the only bearish candidate with IV/RV above my 1.1 minimum (1.2), and the calm crash radar (17) doesn't argue against a defined-risk bear call. The gate was never met today (best IWM credit was 0.22), so the plan stays strict.",
+  "summary": "Stay flat with $1,000 settled. At the open, look for one IWM bear call spread at 21-45 DTE, short call near 0.20 delta re-derived from the 275.8 close (likely above 284), $1 wide. Enter only if the natural credit is at least $0.25 with IWM below recent highs and no gap-up toward the short strike. Otherwise pass.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Bear call spread, 21-45 DTE (35-45 preferred), short call near 0.20 delta re-derived from the 275.8 close, long call $1 higher. Scan IV 18.8% vs 20-day realized 15.7% (IV/RV 1.2), bearish trend side.",
+    "trigger": "Live natural credit of at least $0.25 on the $1 width, IWM below its recent highs at the open, and no gap-up toward the short strike. Skip credits of 0.20-0.24.",
+    "instrument": "spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "XLE",
+    "setup": "Bull put spread, 2-3 strikes below the market, $1 width. Scan IV 28.7% vs realized 18.8% (IV/RV 1.53). Hormuz and oil headlines cut both ways, so this stays a lower-conviction watch.",
+    "trigger": "Live natural credit of at least $0.25 on the $1 width, XLE holding above recent support at the open, and no sharp oil-driven selloff under way.",
+    "instrument": "spread",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-10-20T20:10:57-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "Evening check-in",
+  "for_day": "2026-10-21",
+  "decision": "keep",
+  "why": "Nothing has changed enough to justify new trades. The radar is calm at 17, settled cash is only $143.50, and open bearish debit is roughly $800 against about $775 of equity, well over the 50% guideline. The fresh breakdowns are real, but they would stack more risk into the same Technology-heavy book.",
+  "summary": "Stay flat and hold ASTS, IREN, APLD, PLD and AGCO on their underlying stops. Before the open, verify the AGCO fill ($3.30 vs the $183.9 budget) and reconcile the IREN and PLD stop records. Revisit only when a position closes or the radar rises above 40.",
+  "watchlist": [
+   {
+    "symbol": "VRT",
+    "setup": "Industrials put spread, contingent: VRT broke its 204.54 level, is down 19.7% over 20 days, and sits below its 200-day. It would diversify away from Technology.",
+    "trigger": "Only if a position closes and settled cash reaches the debit cost, and VRT still trades below 204.54 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 3
+   }
+  ]
+ },
+ {
+  "time": "2026-10-20T20:11:13-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-10-21",
+  "decision": "revise",
+  "why": "Today's entries were logged at 0.74x to 1.48x relative volume, so the 1.5x gate isn't enforced in code, and the executed target/stop (0.4%/0.25%) don't match the plan (0.5%/0.3%). The sector focus also conflicts with the trades: SPY and QQQ are tagged Technology in the scan, yet they are the names producing results. Today's +$1.83 came from broad ETFs, and the crash radar is calm at 17.",
+  "summary": "Trade only SPY and IWM VWAP reclaims and opening-range breakouts, in four $250 slices, using 0.4% target, 0.3% stop and a 45-minute limit. Enter only on confirmed relative volume of 1.5x or more and within 1.5% of VWAP, and treat entries below 1.5x as skips. QQQ is a low-conviction backup only if semis are quiet. Stay flat by the close.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a shallow pullback, or 15-minute opening-range breakout",
+    "trigger": "Reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with relative volume of at least 1.5x and price no more than 1.5% above VWAP. Skip if the open gaps down more than 0.5% without a reclaim.",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "IWM",
+    "setup": "Relative-strength VWAP reclaim or opening-range breakout, only while IWM beats SPY over the same 15 minutes",
+    "trigger": "Reclaims VWAP or breaks the 15-minute opening-range high at 1.5x+ relative volume, price within 1.5% above VWAP, and IWM outperforming SPY over the same window",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "QQQ",
+    "setup": "VWAP reclaim after an early dip, only if semis are not selling off",
+    "trigger": "Reclaims VWAP on 1.5x+ relative volume, price within 1.5% above VWAP, and no new semis selloff (NVDA, AMD, AVGO, MU, TSM) in the first 30 minutes",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]

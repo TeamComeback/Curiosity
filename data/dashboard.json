@@ -689,6 +689,41 @@
  ],
  "journal": [
   {
+   "time": "2026-10-20T20:11:13-04:00",
+   "type": "plan",
+   "agent": "scalper",
+   "note": "Evening check-in: revise. Today's entries were logged at 0.74x to 1.48x relative volume, so the 1.5x gate isn't enforced in code, and the executed target/stop (0.4%/0.25%) don't match the plan (0.5%/0.3%). The sector focus also conflicts with the trades: SPY and QQQ are tagged Technology in the scan, yet they are the names producing results. Today's +$1.83 came from broad ETFs, and the crash radar is calm at 17.",
+   "symbol": "SPY, IWM, QQQ"
+  },
+  {
+   "time": "2026-10-20T20:10:57-04:00",
+   "type": "plan",
+   "agent": "blackswan",
+   "note": "Evening check-in: keep. Nothing has changed enough to justify new trades. The radar is calm at 17, settled cash is only $143.50, and open bearish debit is roughly $800 against about $775 of equity, well over the 50% guideline. The fresh breakdowns are real, but they would stack more risk into the same Technology-heavy book.",
+   "symbol": "VRT"
+  },
+  {
+   "time": "2026-10-20T20:10:46-04:00",
+   "type": "plan",
+   "agent": "volsell",
+   "note": "Evening check-in: keep. Nothing new since the 15:36 check changes the setup. Today's scan still shows IWM as the only bearish candidate with IV/RV above my 1.1 minimum (1.2), and the calm crash radar (17) doesn't argue against a defined-risk bear call. The gate was never met today (best IWM credit was 0.22), so the plan stays strict.",
+   "symbol": "IWM, XLE"
+  },
+  {
+   "time": "2026-10-20T20:10:38-04:00",
+   "type": "plan",
+   "agent": "meanrev",
+   "note": "Evening check-in: keep. The fresh scan has no candidate that clears the 1:1 floor. Every washout's gap to SMA5 is under 0.6 ATR against a 2.5 ATR stop, and META's reward-to-risk is about 0.38:1. FTNT's exit rules still hold.",
+   "symbol": ""
+  },
+  {
+   "time": "2026-10-20T20:10:29-04:00",
+   "type": "plan",
+   "agent": "trend",
+   "note": "Evening check-in: revise. Settled cash is $6.38, so the old plan's cash figures no longer apply. APA has already broken out today at 49.84, so its trigger may have fired on the scan, but a call at that level probably costs more than the cash I have. I'm keeping APA as a conditional idea and holding every position at its stop.",
+   "symbol": "APA"
+  },
+  {
    "time": "2026-10-20T16:41:19-04:00",
    "type": "plan",
    "agent": "scalper",
@@ -1194,67 +1229,6 @@
    "opened": "2026-10-14T11:16:27-04:00",
    "confidence": 3,
    "thesis": "STT RSI(2) washout (0.5) while still 2.6% above its 200-day; the stop is about 5.1% away against a roughly 7% snap-back target, so reward-to-risk is about 1.4:1, the best of the candidates."
-  },
-  {
-   "time": "2026-10-20T10:06:04-04:00",
-   "type": "exit_unfilled",
-   "agent": "trend",
-   "symbol": "CIFR261106P00010000",
-   "note": "option target (+127%)"
-  },
-  {
-   "time": "2026-10-20T10:02:08-04:00",
-   "type": "open",
-   "agent": "hyper",
-   "symbol": "NVDA",
-   "instrument": "stock",
-   "qty": 0.4665,
-   "price": 214.694,
-   "cost": 100.15,
-   "stop": 214.06,
-   "thesis": "VWAP pullback bounce on NVDA: 0.5x volume, +0.26% vs VWAP; target +0.6%, stop -0.3%",
-   "confidence": 3
-  },
-  {
-   "time": "2026-10-20T10:02:08-04:00",
-   "type": "close",
-   "agent": "hyper",
-   "symbol": "MU",
-   "qty": 0.1121,
-   "entry": 893.878,
-   "exit": 901.048,
-   "pnl": 0.81,
-   "note": "target hit (+0.82%)",
-   "opened": "2026-10-20T09:53:46-04:00",
-   "confidence": 3,
-   "thesis": "VWAP pullback bounce on MU: 0.6x volume, +0.54% vs VWAP; target +0.6%, stop -0.3%"
-  },
-  {
-   "time": "2026-10-20T10:02:07-04:00",
-   "type": "close",
-   "agent": "hyper",
-   "symbol": "TSLA",
-   "qty": 0.2719,
-   "entry": 368.4,
-   "exit": 371.426,
-   "pnl": 0.82,
-   "note": "target hit (+0.84%)",
-   "opened": "2026-10-20T09:51:44-04:00",
-   "confidence": 3,
-   "thesis": "VWAP pullback bounce on TSLA: 0.63x volume, +0.54% vs VWAP; target +0.6%, stop -0.3%"
-  },
-  {
-   "time": "2026-10-20T10:00:05-04:00",
-   "type": "open",
-   "agent": "hyper",
-   "symbol": "UNH",
-   "instrument": "stock",
-   "qty": 0.2412,
-   "price": 415.092,
-   "cost": 100.12,
-   "stop": 413.95,
-   "thesis": "VWAP pullback bounce on UNH: 0.69x volume, +0.36% vs VWAP; target +0.6%, stop -0.3%",
-   "confidence": 3
   }
  ],
  "reviews": [
@@ -1542,56 +1516,56 @@
  "plans": {
   "trend": {
    "for_day": "2026-10-21",
-   "made_at": "2026-10-20T16:40-04:00",
-   "session": "After-close review",
+   "made_at": "2026-10-20T20:10-04:00",
+   "session": "Evening check-in",
    "decision": "revise",
-   "why": "The old plan assumed cash that isn't there: settled cash is $6.38, so no share purchase is possible. APA has already broken out, so the only realistic way in is a small option, and that needs a live premium quote before acting.",
-   "summary": "Hold all seven positions at their current stops. Make no stock entries. If APA closes above 49.26 on relative volume of at least 1.75 and a 30-60 DTE near-the-money call costs no more than the settled cash, buy one call and nothing else.",
+   "why": "Settled cash is $6.38, so the old plan's cash figures no longer apply. APA has already broken out today at 49.84, so its trigger may have fired on the scan, but a call at that level probably costs more than the cash I have. I'm keeping APA as a conditional idea and holding every position at its stop.",
+   "summary": "Hold the four puts (CIFR, SMR, CWVX, PLUG), BP, XLE and HLT at their stops, and make no new stock buys. Only buy one APA call if the next session confirms the breakout and the ask fits in settled cash.",
    "watchlist": [
     {
      "symbol": "APA",
-     "setup": "Energy 55-day breakout (level 49.26, roc20 about +14-18%). The fresh scan shows it broke out today at 49.84, so this is a late entry.",
-     "trigger": "Close above 49.26 on relative volume of at least 1.75, and a 30-60 DTE call with delta near 0.5 whose ask is at or below settled cash. Do not chase if the call ask is above $6.38.",
+     "setup": "Energy 55-day breakout (level 49.26). Scan shows it broke out today at 49.84, so this is a late entry.",
+     "trigger": "Next session: APA closes above 49.26 with relative volume of at least 1.75, and a 30-60 DTE near-the-money call (delta about 0.5) has an ask at or below $6.38 settled cash. Skip if the ask is above $6.38.",
      "instrument": "call",
      "max_dollars": 5.5,
-     "conviction": 3
+     "conviction": 2
     }
    ],
    "position_plans": [
     {
      "symbol": "CIFR261106P00010000",
-     "plan": "Hold. Exit if CIFR closes above 12.81. The stop listed as 12.01 is on a different scale from the underlying-price exit, so use the underlying close for the exit decision."
+     "plan": "Hold. Exit if the CIFR underlying closes above 12.81. Use the underlying close, not the option-scale stop of 12.01."
     },
     {
      "symbol": "SMR261106P00006000",
-     "plan": "Hold. Exit if SMR closes above 6.94. Barclays cut the target to $5 and the stock hit a new low, which supports the thesis."
+     "plan": "Hold. Exit if the SMR underlying closes above 6.94. Barclays cut its target to $5 and the stock hit a new low, which supports the put."
     },
     {
      "symbol": "CWVX261120P00008000",
-     "plan": "Hold. Exit if CWVX closes above 10.76."
+     "plan": "Hold. Exit if the CWVX underlying closes above 10.76."
     },
     {
      "symbol": "PLUG261106P00001500",
-     "plan": "Hold. Exit if PLUG closes above 1.63. Premium is small."
+     "plan": "Hold. Exit if the PLUG underlying closes above 1.63. Premium is small."
     },
     {
      "symbol": "BP",
-     "plan": "Hold 1.013 shares with stop 47.12. Trail to 3 ATR below the highest close once it closes above 51.00. Analyst support is modest (TD Cowen hold, target $49), so do not add."
+     "plan": "Hold 1.013 shares with stop 47.12. Trail to 3 ATR below the highest close once it closes above 51.00. Do not add: TD Cowen's hold target is $49, and the stock is near its breakout level."
     },
     {
      "symbol": "XLE",
-     "plan": "Hold 4.8287 shares with stop 65.77. Exit at the open if it closes below 65.77. XLE closed at 67.96, back under the 68.29 breakout level, so treat that as a warning. Do not add."
+     "plan": "Hold 4.8287 shares with stop 65.77. Exit at the open if it closes below 65.77. It closed at 67.96, back under the 68.29 breakout, which is a warning. Do not add."
     }
    ],
    "avoid": [
-    "APA, CNQ, OVV, CVX, XOM, SU, COP, EOG, XLE as stock buys: share prices exceed settled cash ($6.38).",
-    "SMR as a fresh long: the Barclays downgrade and new lows are a bearish catalyst, so do not buy into it.",
+    "Energy names as stock buys (APA, CNQ, OVV, CVX, XOM, SU, COP, EOG, XLE): share prices far exceed $6.38 settled cash.",
+    "SMR as a fresh long: the Barclays downgrade and new lows are a bearish catalyst.",
     "SLN: roc20 +60% on a news spike and extended from its breakout level.",
     "CLF: the breakout is unclear and the news is mixed.",
-    "EYPT, MDXH, REVB, HAIN, FFAI: sub-$1, halted, thin liquidity, or bankruptcy risk.",
+    "EYPT, MDXH, REVB, HAIN, FFAI: sub-$1, halted, thin liquidity or bankruptcy risk.",
     "Technology and Consumer Staples: negative closed results (-$59 and -$16.88)."
    ],
-   "brainstorm": "Test whether low-premium calls (delta about 0.5, 30-60 DTE) on energy breakouts can be bought within $6 of cash. That would let me act on breakouts without waiting for settled cash to rise. Record the premium and the outcome before repeating it.",
+   "brainstorm": "Test whether a 30-60 DTE call on a low-priced breakout name (PFE, AVTR, EOSE-type setups under about $30) fits settled cash, since sub-$6 premiums are the only affordable option size right now.",
    "revisions": [
     {
      "at": "2026-10-20T16:40-04:00",
@@ -1605,30 +1579,43 @@
        "setup": "Energy 55-day breakout (level 49.26, roc20 about +14-18%). The fresh scan shows "
       }
      ]
+    },
+    {
+     "at": "2026-10-20T20:10-04:00",
+     "session": "Evening check-in",
+     "decision": "revise",
+     "why": "Settled cash is $6.38, so the old plan's cash figures no longer apply. APA has already broken out today at 49.84, so its trigger may have fired on the scan, but a call at that level probably costs more than the cash I have. I'm keeping APA as a conditional idea and holding every position at its stop.",
+     "watch": [
+      {
+       "symbol": "APA",
+       "instrument": "call",
+       "setup": "Energy 55-day breakout (level 49.26). Scan shows it broke out today at 49.84, so"
+      }
+     ]
     }
    ]
   },
   "meanrev": {
    "for_day": "2026-10-21",
-   "made_at": "2026-10-20T16:40-04:00",
-   "session": "After-close review",
+   "made_at": "2026-10-20T20:10-04:00",
+   "session": "Evening check-in",
    "decision": "keep",
-   "why": "No new setup clears the 1:1 floor; every fresh-scan washout has its SMA5 target well under 1 ATR of stop distance. FTNT's thesis still holds: RSI(2) is 21.4, the close (170.95) is below SMA5 (175.51), and the Truist target raise is a mild positive, so the stop and exit rules stay as they are.",
-   "summary": "No new entries. Hold FTNT on its 154.63 stop. Exit at the next open if RSI(2) goes above 70 or the close clears SMA5, or if the close falls below 160 without a catalyst. Keep cash settled (about $543 available, $207 settling) for a washout that offers at least 1:1 to SMA5.",
+   "why": "The fresh scan has no candidate that clears the 1:1 floor. Every washout's gap to SMA5 is under 0.6 ATR against a 2.5 ATR stop, and META's reward-to-risk is about 0.38:1. FTNT's exit rules still hold.",
+   "summary": "No new entries tomorrow. Hold FTNT on its 154.63 stop, exit at the open if RSI(2) is above 70 or the close is above SMA5 (175.51), or if the close falls below 160 without a catalyst. Keep settled cash for a washout that offers at least 1:1 to SMA5.",
    "watchlist": [],
    "position_plans": [
     {
      "symbol": "FTNT",
-     "plan": "Hold with stop 154.63. Exit at the next open if RSI(2) goes above 70 or the close is above SMA5 (175.51). Exit at the open if the close falls below 160 without a catalyst. Do not add on the Truist headline."
+     "plan": "Hold with stop 154.63. Exit at the open if RSI(2) is above 70 or the prior close is above SMA5 (175.51). Exit at the open if the close falls below 160 without a catalyst. Max hold 7 days. Do not add on the Truist price-target headline."
     }
    ],
    "avoid": [
-    "META: target 716 vs stop about 630 is roughly 0.4:1, below the 1:1 floor, and Technology is on the avoid list.",
-    "AAPL, DHR, ABT, FCX, U, UUP, RWM, EMR: SMA5 gaps of 0.2-1.3 ATR against a 2.5 ATR stop, so reward-to-risk is under 0.3:1.",
-    "VLO: the SMA5 gap is about 9 against a roughly 41 stop, about 0.23:1.",
-    "CRWV and MSFT/AI-debt headlines: AI-financing stress ahead of hyperscaler earnings argues against buying tech dips."
+    "META: target about 716 vs stop about 630 is roughly 0.4:1, below the 1:1 floor, and Technology is on the avoid list.",
+    "AAPL, DHR, ABT, FCX, U, UUP, RWM, EMR: SMA5 gaps of 0.2-0.5 ATR against a 2.5 ATR stop, so reward-to-risk is well under 1:1.",
+    "VLO: SMA5 gap of about 9.4 against a roughly 41 stop, about 0.23:1.",
+    "CRWV and MSFT/AI-financing headlines: AI-debt stress ahead of hyperscaler earnings argues against buying tech dips."
    ],
-   "brainstorm": "Test a fixed-ATR target (about 1.5 ATR above entry) in place of the SMA5 target for washouts that are still above SMA200. That would let sharp dips qualify even when SMA5 sits close to the close. Paper-test on the next two qualifying setups before changing the rule.",
+   "brainstorm": "Test a snap-back target at SMA20 instead of SMA5 for washouts that are still above their 200-day by 10% or more. That would widen reward on names like VLO and FTNT, but only if the stop stays at 2.5 ATR.",
    "revisions": [
     {
      "at": "2026-10-20T16:40-04:00",
@@ -1636,20 +1623,27 @@
      "decision": "keep",
      "why": "No new setup clears the 1:1 floor; every fresh-scan washout has its SMA5 target well under 1 ATR of stop distance. FTNT's thesis still holds: RSI(2) is 21.4, the close (170.95) is below SMA5 (175.51), and the Truist target raise is a mild positive, so the stop and exit rules stay as they are.",
      "watch": []
+    },
+    {
+     "at": "2026-10-20T20:10-04:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "The fresh scan has no candidate that clears the 1:1 floor. Every washout's gap to SMA5 is under 0.6 ATR against a 2.5 ATR stop, and META's reward-to-risk is about 0.38:1. FTNT's exit rules still hold.",
+     "watch": []
     }
    ]
   },
   "volsell": {
    "for_day": "2026-10-21",
-   "made_at": "2026-10-20T16:40-04:00",
-   "session": "After-close review",
+   "made_at": "2026-10-20T20:10-04:00",
+   "session": "Evening check-in",
    "decision": "keep",
-   "why": "The IWM bear call setup still holds, but the price has moved: the fresh scan shows IWM closed at 275.8, not the 271.3 in my pre-market note, so the short-strike zone should be re-derived from live quotes. Today's credits never reached the 0.25 gate (best was 0.22), so the plan stays a conditional pass until a live quote clears it.",
-   "summary": "Stay flat with $1,000 settled. At the open, check IWM bear call spreads at 21-45 DTE with the short call near 0.20 delta (recompute from the 275.8 close, likely above 284) and a $1 width. Enter one contract only if the natural credit is at least $0.25 with IWM below its recent highs and no gap-up toward the short strike. Otherwise pass.",
+   "why": "Nothing new since the 15:36 check changes the setup. Today's scan still shows IWM as the only bearish candidate with IV/RV above my 1.1 minimum (1.2), and the calm crash radar (17) doesn't argue against a defined-risk bear call. The gate was never met today (best IWM credit was 0.22), so the plan stays strict.",
+   "summary": "Stay flat with $1,000 settled. At the open, look for one IWM bear call spread at 21-45 DTE, short call near 0.20 delta re-derived from the 275.8 close (likely above 284), $1 wide. Enter only if the natural credit is at least $0.25 with IWM below recent highs and no gap-up toward the short strike. Otherwise pass.",
    "watchlist": [
     {
      "symbol": "IWM",
-     "setup": "Bear call spread, 21-45 DTE (35-45 preferred), short call near 0.20 delta re-derived from the 275.8 close, long call $1 higher. Scan IV 19.2% vs 20-day realized 15.7% (IV/RV 1.23), bearish trend side.",
+     "setup": "Bear call spread, 21-45 DTE (35-45 preferred), short call near 0.20 delta re-derived from the 275.8 close, long call $1 higher. Scan IV 18.8% vs 20-day realized 15.7% (IV/RV 1.2), bearish trend side.",
      "trigger": "Live natural credit of at least $0.25 on the $1 width, IWM below its recent highs at the open, and no gap-up toward the short strike. Skip credits of 0.20-0.24.",
      "instrument": "spread",
      "max_dollars": 75,
@@ -1657,7 +1651,7 @@
     },
     {
      "symbol": "XLE",
-     "setup": "Bull put spread, 2-3 strikes below the market, $1 width. Scan IV 28.3% vs realized 18.8% (IV/RV 1.51). Oil and Hormuz headlines cut both ways, so this stays a lower-conviction watch.",
+     "setup": "Bull put spread, 2-3 strikes below the market, $1 width. Scan IV 28.7% vs realized 18.8% (IV/RV 1.53). Hormuz and oil headlines cut both ways, so this stays a lower-conviction watch.",
      "trigger": "Live natural credit of at least $0.25 on the $1 width, XLE holding above recent support at the open, and no sharp oil-driven selloff under way.",
      "instrument": "spread",
      "max_dollars": 75,
@@ -1668,11 +1662,12 @@
    "avoid": [
     "SPY bull put spreads: live credits have run 6-17% of width all day, which doesn't pay for the risk.",
     "QQQ bull put spreads: no clear trend, and oil, Fed and PPI headlines add gap-down risk on the put side.",
-    "GDX, SLV, EEM: IV/RV at or below 1.2 (SLV 0.84), so no volatility edge.",
+    "GDX, SLV, EEM: IV/RV at or below 1.27 with no clear edge (SLV 0.81, GDX 1.01).",
     "TLT bear call spreads: yields cooling runs against a bear call, and live credits have been thin.",
-    "Any spread whose max loss exceeds about $100 (10% of the account). One contract of a $1-wide spread is the cap."
+    "Any spread whose max loss exceeds about $100 (10% of the account). One contract of a $1-wide spread is the cap.",
+    "Chasing credits below the 0.25 gate: my scorecard is 2 of 5 right-way, so I should not loosen the gate to force a trade."
    ],
-   "brainstorm": "If IWM credits stay under 0.25 for two more sessions, test a 0.20 gate on XLE bull puts only when IV/RV is above 1.5 and the trend side is confirmed, instead of waiting on IWM alone.",
+   "brainstorm": "Test whether IWM bear call credits improve when entered 15-30 minutes after the open rather than at the open, since spreads have been thinnest in the afternoon. Only test it on paper, and only with the same 0.25 gate.",
    "revisions": [
     {
      "at": "2026-10-20T16:40-04:00",
@@ -1691,25 +1686,52 @@
        "setup": "Bull put spread, 2-3 strikes below the market, $1 width. Scan IV 28.3% vs realiz"
       }
      ]
+    },
+    {
+     "at": "2026-10-20T20:10-04:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Nothing new since the 15:36 check changes the setup. Today's scan still shows IWM as the only bearish candidate with IV/RV above my 1.1 minimum (1.2), and the calm crash radar (17) doesn't argue against a defined-risk bear call. The gate was never met today (best IWM credit was 0.22), so the plan stays strict.",
+     "watch": [
+      {
+       "symbol": "IWM",
+       "instrument": "spread",
+       "setup": "Bear call spread, 21-45 DTE (35-45 preferred), short call near 0.20 delta re-der"
+      },
+      {
+       "symbol": "XLE",
+       "instrument": "spread",
+       "setup": "Bull put spread, 2-3 strikes below the market, $1 width. Scan IV 28.7% vs realiz"
+      }
+     ]
     }
    ]
   },
   "blackswan": {
    "for_day": "2026-10-21",
-   "made_at": "2026-10-20T16:41-04:00",
-   "session": "After-close review",
+   "made_at": "2026-10-20T20:10-04:00",
+   "session": "Evening check-in",
    "decision": "keep",
-   "why": "The book is still over-allocated: open bearish debit is roughly 80% of equity against a 50% guideline, and only $143.50 is settled. The radar is calm at 17, and the stop and fill records conflict, so the plan should be cleaned up, not expanded.",
-   "summary": "Hold ASTS, IREN, APLD, PLD and AGCO on their underlying stops and add nothing. Before the open, confirm the AGCO fill ($3.30 vs the $183.9 budget) and reconcile the IREN and PLD stop records. Revisit only when a position closes or the radar rises above 40.",
-   "watchlist": [],
+   "why": "Nothing has changed enough to justify new trades. The radar is calm at 17, settled cash is only $143.50, and open bearish debit is roughly $800 against about $775 of equity, well over the 50% guideline. The fresh breakdowns are real, but they would stack more risk into the same Technology-heavy book.",
+   "summary": "Stay flat and hold ASTS, IREN, APLD, PLD and AGCO on their underlying stops. Before the open, verify the AGCO fill ($3.30 vs the $183.9 budget) and reconcile the IREN and PLD stop records. Revisit only when a position closes or the radar rises above 40.",
+   "watchlist": [
+    {
+     "symbol": "VRT",
+     "setup": "Industrials put spread, contingent: VRT broke its 204.54 level, is down 19.7% over 20 days, and sits below its 200-day. It would diversify away from Technology.",
+     "trigger": "Only if a position closes and settled cash reaches the debit cost, and VRT still trades below 204.54 at the open.",
+     "instrument": "debit_spread",
+     "max_dollars": 90,
+     "conviction": 3
+    }
+   ],
    "position_plans": [
     {
      "symbol": "ASTS",
-     "plan": "Hold. Underlying stop 51.35. Confirm the live price first, since the file shows 41.135 and the older plan cited 41.88. Exit at open if it closes above 51.35, or above 46.26 for two consecutive sessions. No adds."
+     "plan": "Hold. Underlying stop 51.35. Exit at open if it closes above 51.35, or above 46.26 for two consecutive sessions. No adds, and the European spectrum news works against the thesis."
     },
     {
      "symbol": "IREN",
-     "plan": "Hold. Reconcile the stop: the position record says 33.11 and the plan says 34.09. Use the tighter 33.11 until corrected. Exit at open if IREN closes above 33.11, or above 32.71 for two sessions. No adds."
+     "plan": "Hold. Use the tighter stop of 33.11 until the record is reconciled with the 34.09 in the plan. Exit at open if IREN closes above 33.11, or above 32.71 for two sessions. No adds."
     },
     {
      "symbol": "APLD",
@@ -1717,22 +1739,22 @@
     },
     {
      "symbol": "PLD",
-     "plan": "Hold. Underlying stop 130.31 (the old 131.8 reference is stale; correct the record). Exit at open if PLD closes above 130.31. No adds."
+     "plan": "Hold. Underlying stop 130.31, and correct the stale 131.8 reference in the record. Exit at open if PLD closes above 130.31. No adds."
     },
     {
      "symbol": "AGCO",
-     "plan": "Verify the fill first. The record shows $330 cost (3.30 \u00d7 100) against a $183.9 budget, so either the fill or the budget entry is wrong. Hold the 111.61 underlying stop and do not sell just to match the budget. Exit at open if AGCO closes above 111.61. No additional AGCO exposure."
+     "plan": "Verify the fill first. The record shows a $330 cost against a $183.9 budget. Hold the 111.61 underlying stop and do not sell just to match the budget. Exit at open if AGCO closes above 111.61. No additional exposure."
     }
    ],
    "avoid": [
-    "Any new bearish debit while open debit is about 80% of equity: it breaches the 50% guideline and stacks Technology risk.",
+    "Any new bearish debit while open debit is above the 50% guideline, because it stacks Technology risk.",
     "AAOI, AVGO, SMH, FN, CIEN, ORCL, MKSI, AKAM, GLW, CLS: real breakdowns, but correlated with existing Technology shorts and unfundable with $143.50 settled.",
-    "CMG, VRT, JNK, USHY, XLC, IWM, SPY, XLI, BKLN, JPST, HWM: breakdown or near-breakdown setups with no sizing room while the radar is at 17.",
+    "CMG, JNK, USHY, XLC, IWM, SPY, XLI, BKLN, JPST, HWM: breakdown or near-breakdown setups with no sizing room while the radar is at 17.",
     "AGG, BND, VCIT, VCSH, SPIB: safe-haven bond funds, not breakdown shorts.",
     "ASTS adds: the European spectrum news is bullish and works against the thesis.",
     "COIN and CRWV: already broken down or driven by hot news, and there is no settled cash to size them."
    ],
-   "brainstorm": "When the next spread closes, test redeploying the freed cash into one small Industrials or Real Estate breakdown put spread (for example VRT or PLD-style setups) to diversify away from Technology. Also test whether AGCO's fill error means the book needs a budget reset before any new trade.",
+   "brainstorm": "Once a position closes, test one Industrials breakdown (VRT) to diversify the book. Track whether it fills and pays before widening the Industrials focus.",
    "revisions": [
     {
      "at": "2026-10-20T16:41-04:00",
@@ -1740,21 +1762,34 @@
      "decision": "keep",
      "why": "The book is still over-allocated: open bearish debit is roughly 80% of equity against a 50% guideline, and only $143.50 is settled. The radar is calm at 17, and the stop and fill records conflict, so the plan should be cleaned up, not expanded.",
      "watch": []
+    },
+    {
+     "at": "2026-10-20T20:10-04:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Nothing has changed enough to justify new trades. The radar is calm at 17, settled cash is only $143.50, and open bearish debit is roughly $800 against about $775 of equity, well over the 50% guideline. The fresh breakdowns are real, but they would stack more risk into the same Technology-heavy book.",
+     "watch": [
+      {
+       "symbol": "VRT",
+       "instrument": "debit_spread",
+       "setup": "Industrials put spread, contingent: VRT broke its 204.54 level, is down 19.7% ov"
+      }
+     ]
     }
    ]
   },
   "scalper": {
    "for_day": "2026-10-21",
-   "made_at": "2026-10-20T16:41-04:00",
-   "session": "After-close review",
+   "made_at": "2026-10-20T20:11-04:00",
+   "session": "Evening check-in",
    "decision": "revise",
-   "why": "The pre-market plan's 1.5x relative-volume gate was not enforced: today's entries ran at 0.74x to 1.3x and produced 2 of 4 losses. The plan's 0.5%/0.3% target and stop also don't match the 0.4%/0.25% the code actually traded. SPY and IWM still show clean VWAP bounces with a calm crash radar, so the setups hold, but the playbook needs the gate and the exit levels written down as they actually run.",
-   "summary": "Trade only SPY and IWM VWAP reclaims and opening-range breakouts, four $250 slices, with entries only when logged relative volume is at least 1.5x and price is within 1.5% of VWAP. Use 0.4% target and 0.25% stop, 45-minute limit, flat by the close. QQQ only as a low-conviction third setup, and only after the semis selling stops.",
+   "why": "Today's entries were logged at 0.74x to 1.48x relative volume, so the 1.5x gate isn't enforced in code, and the executed target/stop (0.4%/0.25%) don't match the plan (0.5%/0.3%). The sector focus also conflicts with the trades: SPY and QQQ are tagged Technology in the scan, yet they are the names producing results. Today's +$1.83 came from broad ETFs, and the crash radar is calm at 17.",
+   "summary": "Trade only SPY and IWM VWAP reclaims and opening-range breakouts, in four $250 slices, using 0.4% target, 0.3% stop and a 45-minute limit. Enter only on confirmed relative volume of 1.5x or more and within 1.5% of VWAP, and treat entries below 1.5x as skips. QQQ is a low-conviction backup only if semis are quiet. Stay flat by the close.",
    "watchlist": [
     {
      "symbol": "SPY",
      "setup": "VWAP reclaim after a shallow pullback, or 15-minute opening-range breakout",
-     "trigger": "Reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars at 1.5x+ relative volume, price no more than 1.5% above VWAP. Skip if the open gaps down more than 0.5% without a reclaim.",
+     "trigger": "Reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with relative volume of at least 1.5x and price no more than 1.5% above VWAP. Skip if the open gaps down more than 0.5% without a reclaim.",
      "instrument": "stock",
      "max_dollars": 250,
      "conviction": 3
@@ -1765,12 +1800,12 @@
      "trigger": "Reclaims VWAP or breaks the 15-minute opening-range high at 1.5x+ relative volume, price within 1.5% above VWAP, and IWM outperforming SPY over the same window",
      "instrument": "stock",
      "max_dollars": 250,
-     "conviction": 2
+     "conviction": 3
     },
     {
      "symbol": "QQQ",
-     "setup": "VWAP reclaim after an early dip, only once the AI-chip and Iran-headline selling has stopped",
-     "trigger": "Reclaims VWAP on 1.5x+ relative volume, price within 1.5% above VWAP, and no new semis selloff in the first 30 minutes",
+     "setup": "VWAP reclaim after an early dip, only if semis are not selling off",
+     "trigger": "Reclaims VWAP on 1.5x+ relative volume, price within 1.5% above VWAP, and no new semis selloff (NVDA, AMD, AVGO, MU, TSM) in the first 30 minutes",
      "instrument": "stock",
      "max_dollars": 250,
      "conviction": 1
@@ -1778,13 +1813,14 @@
    ],
    "position_plans": [],
    "avoid": [
-    "Any entry logged below 1.5x relative volume, even if the bounce looks clean (today's 0.74x to 1.3x entries lost 2 of 4)",
-    "Single names (AAPL, MSFT, TSLA, AVGO, MU, AMZN, GOOGL, META) until the relative-volume gate is verified in code",
-    "Semis and AI names (NVDA, AMD, INTC, MU, SNDK, AVGO, TSM, SPCX): ATRs of 2.5% to 6.5% make a 0.25% stop noise, and they are trading on the CoreWeave AI-debt warning and Nvidia customer-concentration concern",
-    "TSLA and SPCX around SpaceX and Tesla merger and earnings headlines (gap risk)",
+    "Any entry below 1.5x relative volume: the gate isn't enforced in code yet, so skip manually if the logged figure is under 1.5x",
+    "Semis and AI single names (NVDA, AMD, INTC, MU, SNDK, AVGO, TSM): ATRs of 2.5% to 6.5% make a 0.25-0.3% stop noise, plus CoreWeave and Nvidia concentration worries",
+    "TSLA and SPCX around the SpaceX/Tesla merger talk and earnings headlines (gap risk)",
+    "Other single names (AAPL, MSFT, AMZN, GOOGL, META) until the relative-volume gate is verified in code",
+    "Real Estate (LQD): one trade, -$0.06, and it is a bond ETF that doesn't fit the setup",
     "Any open with a Strait of Hormuz or undersea-cable escalation headline in the first 15 minutes: wait for a VWAP reclaim before entering"
    ],
-   "brainstorm": "Test a 0.4%/0.25% exit set with a 30-minute limit against the current 45 minutes: today's two time-limit losses both came near 30 minutes and the winners hit target quickly. Also log the relative-volume value at entry so the gate can be audited.",
+   "brainstorm": "Test a two-slice variant: 15-minute opening-range breakouts only on SPY and IWM, with 0.5% target and 0.35% stop to absorb the observed slippage on stops. Compare hit rate against the VWAP-reclaim setup over the next 10 sessions before changing the parameters.",
    "revisions": [
     {
      "at": "2026-10-20T16:41-04:00",
@@ -1806,6 +1842,29 @@
        "symbol": "QQQ",
        "instrument": "stock",
        "setup": "VWAP reclaim after an early dip, only once the AI-chip and Iran-headline selling"
+      }
+     ]
+    },
+    {
+     "at": "2026-10-20T20:11-04:00",
+     "session": "Evening check-in",
+     "decision": "revise",
+     "why": "Today's entries were logged at 0.74x to 1.48x relative volume, so the 1.5x gate isn't enforced in code, and the executed target/stop (0.4%/0.25%) don't match the plan (0.5%/0.3%). The sector focus also conflicts with the trades: SPY and QQQ are tagged Technology in the scan, yet they are the names producing results. Today's +$1.83 came from broad ETFs, and the crash radar is calm at 17.",
+     "watch": [
+      {
+       "symbol": "SPY",
+       "instrument": "stock",
+       "setup": "VWAP reclaim after a shallow pullback, or 15-minute opening-range breakout"
+      },
+      {
+       "symbol": "IWM",
+       "instrument": "stock",
+       "setup": "Relative-strength VWAP reclaim or opening-range breakout, only while IWM beats S"
+      },
+      {
+       "symbol": "QQQ",
+       "instrument": "stock",
+       "setup": "VWAP reclaim after an early dip, only if semis are not selling off"
       }
      ]
     }
@@ -2191,8 +2250,8 @@
     "Technology",
     "Consumer Staples"
    ],
-   "why": "Energy has 8 breakout or near-breakout names in the scan, and BP and XLE are working. Technology (-$59) and Consumer Staples (-$16.88) are negative on closed trades. Energy has no closed trades yet, so the lean rests mostly on the scan. Renew only after an energy trade closes.",
-   "set_at": "2026-10-20T16:40-04:00",
+   "why": "Energy has 8 breakout or near-breakout names in the scan, and BP is up slightly. XLE is slipping back under its breakout, and I have no closed Energy trades yet, so the lean rests mostly on the scan. Health Care (XLV, UNH, BIIB, PFE) also shows breakouts, but I have no results there. Renew Energy on",
+   "set_at": "2026-10-20T20:10-04:00",
    "expires": "2026-11-03"
   },
   "meanrev": {
@@ -2200,8 +2259,8 @@
    "avoid": [
     "Technology"
    ],
-   "why": "Evidence is thin: Technology is 1 trade (-$6.10) and Financials is 1 trade (+$6.78), so neither justifies a lean-in. Keep the Technology avoid, which runs to Nov 3, and revisit once there are about 5 closed trades per sector.",
-   "set_at": "2026-10-20T16:40-04:00",
+   "why": "Evidence is still thin: Technology is 1 trade (-$6.10) and Financials is 1 trade (+$6.78), so neither justifies a lean-in. Keep the Technology avoid, which runs to Nov 3, and revisit once each sector has about 5 closed trades.",
+   "set_at": "2026-10-20T20:10-04:00",
    "expires": "2026-11-03"
   },
   "volsell": {
@@ -2211,8 +2270,8 @@
    "avoid": [
     "Materials"
    ],
-   "why": "Broad market (IWM) is the only bearish setup with IV/RV above 1.2 in today's scan. My own results are too thin to judge (one scored pick, which missed). Materials (GDX, SLV) has IV/RV at or below 1.02, so there is no volatility edge there.",
-   "set_at": "2026-10-20T16:40-04:00",
+   "why": "Broad market (IWM) is the only bearish setup with IV/RV above 1.1 in today's scan. My own results are too thin to judge (one scored pick, which missed). Materials (GDX, SLV) shows no volatility edge (IV/RV 1.01 and 0.81).",
+   "set_at": "2026-10-20T20:10-04:00",
    "expires": "2026-11-03"
   },
   "blackswan": {
@@ -2220,8 +2279,8 @@
     "Technology"
    ],
    "avoid": [],
-   "why": "Technology has the most confirmed breakdowns in today's scan and the AI-debt news supports it, but my results by sector are still empty and the book is already Technology-heavy. The focus stays review-only, with no new Technology risk until a trade closes or bearish debit falls below the guideline.",
-   "set_at": "2026-10-20T16:41-04:00",
+   "why": "Technology has the most confirmed breakdowns in today's scan, but there are still no sector results to prove the focus works, and the book is already Technology-heavy. Keep the focus review-only with no new Technology risk until a trade closes or bearish debit falls below the guideline.",
+   "set_at": "2026-10-20T20:10-04:00",
    "expires": "2026-11-03"
   },
   "scalper": {
@@ -2233,8 +2292,8 @@
     "Technology",
     "Real Estate"
    ],
-   "why": "Broad market ETFs (SPY, QQQ) are the only names where the volume gate and stop fit the ATR. IWM is tagged Industrials and has been the best performer, with 2 of 2 wins in that sector. Technology has a 50% win rate and +$2.14 but relies on single-name semis that don't fit a 0.25% stop. Real Estate is",
-   "set_at": "2026-10-20T16:41-04:00",
+   "why": "Broad-market ETFs and IWM (Industrials) account for today's +$1.83 and have the cleanest volume and ATR fit. Technology single names have a 50% win rate and don't fit a 0.25-0.3% stop. Caveat: SPY and QQQ are tagged Technology in the scan, so the Technology avoid would block the ETFs that are workin",
+   "set_at": "2026-10-20T20:11-04:00",
    "expires": "2026-11-03"
   }
  },
@@ -2349,5 +2408,5 @@
   "pool_size": 7351,
   "core_size": 500
  },
- "plans_updated": "2026-10-20T16:41-04:00"
+ "plans_updated": "2026-10-20T20:11-04:00"
 }
