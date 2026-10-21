@@ -5111,5 +5111,57 @@
   "opened": "2026-10-21T10:29:06-04:00",
   "why_entered": "VWAP pullback bounce on META: 1.07x volume, +0.40% vs VWAP; target +0.7%, stop -0.35%",
   "why_exited": "time limit, 22 min (+0.44%)"
+ },
+ {
+  "time": "2026-10-21T10:59:02-04:00",
+  "type": "trade_closed",
+  "agent": "scalper",
+  "position_id": "pos-6797822e75",
+  "symbol": "META",
+  "underlying": "META",
+  "sector": "Communication Services",
+  "instrument": "stock",
+  "entry": 707.496,
+  "exit": 711.168,
+  "pnl": 0.86,
+  "return_pct": 0.5,
+  "opened": "2026-10-21T10:29:04-04:00",
+  "why_entered": "VWAP pullback bounce on META: 1.07x volume, +0.40% vs VWAP; target +0.5%, stop -0.3%",
+  "why_exited": "target hit (+0.57%)"
+ },
+ {
+  "time": "2026-10-21T11:06:31-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "MSFT",
+   "META",
+   "NVDA",
+   "AAPL"
+  ],
+  "aggression": "defensive",
+  "why": "Tape is still choppy and only a few names have clean setups, so I'm keeping half-size VWAP bounces with 3 slices. I'm dropping IWM and QQQ, since IWM has already stopped out once and QQQ's setup conflicts with the overnight plan. SPY and MSFT are already working, META is above its opening range, and"
+ },
+ {
+  "time": "2026-10-21T11:06:35-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "watch": [
+   "SOXL",
+   "TQQQ",
+   "SNDK",
+   "CRWV",
+   "MU",
+   "META",
+   "NVDA",
+   "TSLA",
+   "QQQ",
+   "STX",
+   "XLE",
+   "SMH"
+  ],
+  "aggression": "aggressive",
+  "why": "Settled cash is about $0.04 with $1,006 unsettled, so new entries are effectively blocked until tomorrow's settlement; this sets up the watchlist for then. I kept the 0.7% target and widened the stop to 0.4% because the recent 0.35% stops filled past their levels, and the 20-minute hold limits expos"
  }
 ]
