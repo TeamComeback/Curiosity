@@ -3183,5 +3183,26 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. The stop is too tight for observed fills: stops filled at -0.34% to -0.36% against a 0.3% setting, and the rel-volume gate still isn't enforced in code. Broad-market ETFs and IWM are the only setups with clean volume and ATR fit, so I'm narrowing to them and tightening the sector focus so the Technology avoid doesn't block SPY and QQQ.",
   "symbol": "SPY, IWM"
+ },
+ {
+  "time": "2026-10-21T09:36:07-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-66%)"
+ },
+ {
+  "time": "2026-10-21T09:36:31-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, IWM",
+  "note": "defensive: Most candidates are trending down on thin ranges and SPY's day range is only 0.19%, so I'm limiting trades to the overnight plan's SPY and IWM setups at half size. Stand down further if the Hormuz/undersea-cable headline is still live or if relative volume stays under 1.5x."
+ },
+ {
+  "time": "2026-10-21T09:36:37-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "symbol": "META, NFLX, SPCX, SNDK, MU",
+  "note": "aggressive: Crash radar is calm and SPY is above its 200-day SMA, so I'm running full size. I'm watching the highest-volatility, most-liquid names, with META as the only one above its opening range. Ten slices give more shots at roughly $100 each, and the 0.6% target against a 0.3% stop keeps the reward-to-risk"
  }
 ]

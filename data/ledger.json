@@ -4555,5 +4555,37 @@
   ],
   "why": "Broad-market ETFs and IWM (Industrials) produced most of the recent P&L with the cleanest volume and ATR fit: IWM +1.66% yesterday and 2 of 2 Industrials trades won. Technology single names are at a 50% hit rate with only +0.15 average P&L, so they are excluded by the playbook rather than by a secto",
   "expires": "2026-11-04"
+ },
+ {
+  "time": "2026-10-21T09:36:31-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "IWM"
+  ],
+  "aggression": "defensive",
+  "why": "Most candidates are trending down on thin ranges and SPY's day range is only 0.19%, so I'm limiting trades to the overnight plan's SPY and IWM setups at half size. Stand down further if the Hormuz/undersea-cable headline is still live or if relative volume stays under 1.5x."
+ },
+ {
+  "time": "2026-10-21T09:36:37-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "watch": [
+   "META",
+   "NFLX",
+   "SPCX",
+   "SNDK",
+   "MU",
+   "NVDA",
+   "AMD",
+   "TSLA",
+   "SOXL",
+   "TQQQ",
+   "CRWV",
+   "STX"
+  ],
+  "aggression": "aggressive",
+  "why": "Crash radar is calm and SPY is above its 200-day SMA, so I'm running full size. I'm watching the highest-volatility, most-liquid names, with META as the only one above its opening range. Ten slices give more shots at roughly $100 each, and the 0.6% target against a 0.3% stop keeps the reward-to-risk"
  }
 ]
