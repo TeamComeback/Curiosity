@@ -5396,5 +5396,133 @@
   ],
   "aggression": "stand_down",
   "why": "Only about 14 minutes remain before the 3:50 PM flat cutoff and only $42 is settled, so a new trade has little time to resolve and almost no dollar upside. Today's VWAP bounces mostly time-stopped near zero, so I'm standing down and will reassess tomorrow."
+ },
+ {
+  "time": "2026-10-21T16:40:33-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-10-22",
+  "decision": "keep",
+  "why": "Settled cash is still $6.38, so nothing in the scan is affordable as a stock and the plan's entry conditions are unchanged. All open positions remain above or below their stops as planned, and XLE's close at 67.96 is still above its 65.77 stop.",
+  "summary": "No new entries unless settled cash rises. Hold the four puts and the BP, XLE and HLT longs at their stops. Act on APA only if it closes above 49.84 on at least 1.75x relative volume and a 30-60 DTE near-the-money call fits in settled cash.",
+  "watchlist": [
+   {
+    "symbol": "APA",
+    "setup": "Energy breakout printed at 49.84; needs a confirmed close above it, not an intraday break.",
+    "trigger": "Next session closes above 49.84 with relative volume at or above 1.75, and a 30-60 DTE near-the-money call's ask is at or below settled cash. Skip if the ask does not fit.",
+    "instrument": "call",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-21T16:40:44-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-10-22",
+  "decision": "keep",
+  "why": "The fresh scan adds no candidate that clears the plan's 1:1 reward-to-risk floor. DXCM is the only name with RSI(2) under the 10 entry threshold (4.6), but its SMA5 target sits about 0.87:1 from entry against a 2.5 ATR stop, so the plan still holds.",
+  "summary": "No new entries. Stay in settled cash ($750.33) and wait for an RSI(2) washout of 10 or lower whose SMA5 target is at least as far as its 2.5 ATR stop. No open positions to manage.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-21T16:40:55-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-10-22",
+  "decision": "revise",
+  "why": "The fresh scan puts IWM at 276.46 with IV/RV 1.31, so the 284-285 short-strike guide from the 275.8 close is too close to the money. A 0.20-delta call is nearer 289-291, which is where the live credits have been, and they have stayed at 0.19-0.21, below the 0.25 gate. The gate stays unchanged. Today's notes say I 'took' a spread, but there are no open positions or today's trades and the balance is",
+  "summary": "Stay flat with $1,000 settled. At the open, look for one IWM bear call spread at 35-45 DTE, short call around 289-291 (about 0.20 delta from 276.46), $1 wide, entered only at a natural credit of at least $0.25. Otherwise pass again.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Bear call spread, 35-45 DTE, short call near 0.20 delta (about 289-291 from the 276.46 close), long call $1 higher. IV about 19% vs 20-day realized 14.5% (IV/RV 1.31), bearish trend side, crash radar calm at 15.",
+    "trigger": "Natural credit of at least $0.25 on the $1 width, IWM below its recent highs at the open, and no gap-up toward the short strike. Skip credits of 0.20-0.24.",
+    "instrument": "spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "XLE",
+    "setup": "Bull put spread, about 2-3 strikes below the market, $1 width. IV about 27% vs realized 18.7% (IV/RV 1.45). Oil headlines are two-sided, and diplomacy-driven oil weakness is the main risk to the put side.",
+    "trigger": "Natural credit of at least $0.25 on the $1 width, XLE holding above recent support at the open, and no sharp oil-driven selloff under way. Drop the idea if diplomacy headlines push oil lower at the open.",
+    "instrument": "spread",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-10-21T16:41:11-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "After-close review",
+  "for_day": "2026-10-22",
+  "decision": "keep",
+  "why": "Nothing has closed and cash is still $143.50 settled, so bearish debit remains about 80% of equity against the 50% guideline. Today's fresh breakdowns are mostly in Communication Services, which gives a new idea for when cash frees up, but it doesn't justify new risk now.",
+  "summary": "Stay flat and hold ASTS, IREN, APLD, PLD and AGCO on their underlying stops. Fix the record discrepancies before the open. Add nothing until a position closes or the radar rises above 40. If cash frees, the first candidate is NFLX, a Communication Services breakdown.",
+  "watchlist": [
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services put spread, contingent. NFLX broke down today to 66.54, is down 8.9% over 20 days, sits below its 200-day, and has had several price-target cuts.",
+    "trigger": "Only after a position closes or the radar rises above 40, and settled cash covers the debit. NFLX must still trade below 66.54 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 3
+   },
+   {
+    "symbol": "VRT",
+    "setup": "Industrials put spread, contingent. VRT broke its 204.54 level, is down 19.7% over 20 days and sits below its 200-day. It diversifies away from the Technology book.",
+    "trigger": "Only if a position closes and settled cash covers the debit, and VRT still trades below 204.54 at the open. Do not fund it while bearish debit is above the 50% guideline.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-21T16:41:11-04:00",
+  "type": "focus",
+  "agent": "blackswan",
+  "lean_in": [
+   "Communication Services"
+  ],
+  "avoid": [
+   "Technology"
+  ],
+  "why": "Communication Services has the freshest confirmed breakdowns today (NFLX, XLC, T, plus UBER near breakdown), while Technology is already overweight in open shorts with no closed results to prove the focus. Avoid Technology for new setups until bearish debit falls below the 50% guideline or a positio",
+  "expires": "2026-11-04"
+ },
+ {
+  "time": "2026-10-21T16:41:26-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-10-22",
+  "decision": "revise",
+  "why": "Today's entries broke the plan's own 1.5x volume gate: IWM went in at 1.2x and 1.09x and both lost (-0.68, -0.28), and NVDA and MSFT were traded despite being on the avoid list. The gate isn't enforced in code, so I'm narrowing to one ticker and dropping IWM until a gated sample proves itself. Technology is the largest P&L contributor (+2.85 over 17 trades) even though Industrials and IWM are the ",
+  "summary": "Tomorrow, trade only SPY: VWAP reclaim or 15-minute opening-range breakout, entering only at 1.5x+ relative volume and no more than 1.5% above VWAP, one $250 slice. Stand aside at the open if SPY gaps down more than 0.5% without a VWAP reclaim, and stay out of META, TSLA and other single names around their earnings gaps.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a shallow pullback, or 15-minute opening-range breakout",
+    "trigger": "Reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with logged relative volume at least 1.5x (manual check; skip if the log shows below 1.5x) and price no more than 1.5% above VWAP. Skip if the open gaps down more than 0.5% without a reclaim.",
+    "instrument": "stock",
+    "conviction": 3
+   }
+  ]
+ },
+ {
+  "time": "2026-10-21T16:41:26-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Broad market / other",
+   "Technology"
+  ],
+  "avoid": [
+   "Real Estate"
+  ],
+  "why": "Technology is my largest P&L sector (+2.85 over 17 trades, 59% win rate), and SPY, the most reliable name in my log, is tagged Technology in the scan. Industrials is flat (+0.01 over 4 trades) and its only evidence comes from IWM entries that broke the volume gate, so I'm dropping it. Real Estate lo",
+  "expires": "2026-11-04"
  }
 ]
