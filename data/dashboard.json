@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T15:36-04:00",
+ "updated": "2026-10-22T09:36-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,9 +10,9 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 6.5,
-  "spy_roc20_pct": -0.6,
-  "crash_radar": 16
+  "spy_vs_sma200_pct": 5.6,
+  "spy_roc20_pct": 0.7,
+  "crash_radar": 23
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -38,20 +38,24 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 1048.13,
+   "equity": 1151.44,
    "cash": 6.38,
    "available": 6.38,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.05,
-   "progress_pct": 10.48,
+   "multiple": 1.15,
+   "progress_pct": 11.51,
    "open": 7,
    "closed": 2,
    "win_rate": 0.0,
    "max_dd_pct": 13.6,
-   "risk_adj": 0.35,
+   "risk_adj": 1.11,
    "notes": [
+    {
+     "date": "2026-10-22",
+     "note": "Settled cash is $6.38, below the cheapest viable entry (SPOT stock is about $579/share, and no 30-60 DTE call fits $6.38). Holding all positions at their stops. Reassess once settled cash rises after a position closes."
+    },
     {
      "date": "2026-10-21",
      "note": "Settled cash is $6.38, below the cost of every candidate, so no entries. Holding all positions at their stops and rechecking settled cash next session."
@@ -59,10 +63,6 @@
     {
      "date": "2026-10-21",
      "note": "Settled cash is $6.38, below the cost of every candidate, so no entries. Hold all positions at existing stops and recheck settled cash next session."
-    },
-    {
-     "date": "2026-10-21",
-     "note": "Settled cash is $6.38, below the cost of every candidate, so no entries. Holding all positions at existing stops and rechecking settled cash next session."
     }
    ]
   },
@@ -74,8 +74,8 @@
    "reached_goal": null,
    "equity": 1008.22,
    "cash": 1008.22,
-   "available": 750.33,
-   "settling": 257.89,
+   "available": 1008.22,
+   "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.01,
@@ -87,16 +87,16 @@
    "risk_adj": 0.16,
    "notes": [
     {
+     "date": "2026-10-22",
+     "note": "No candidate clears the 1:1 reward-to-risk floor: FCX ~0.45:1, DXCM ~0.79:1, META ~0.6:1 (and tech is on the avoid list), GME ~0.14:1. Stay in cash and wait for a washout whose snap-back target is at least as far as its stop."
+    },
+    {
      "date": "2026-10-21",
      "note": "Passing again: DXCM is about 0.82:1 (target 85.31 vs stop 75.82) and FCX about 0.12:1, both under my 1:1 floor. Keep settled cash and wait for a washout whose snap-back target clears its stop."
     },
     {
      "date": "2026-10-21",
      "note": "Pass on FCX (~0.2:1) and DXCM (~0.7:1): both fail the 1:1 reward-to-risk floor. Hold settled cash for a washout whose snap-back target clears its stop."
-    },
-    {
-     "date": "2026-10-21",
-     "note": "Passed DXCM: reward-to-risk is about 0.7:1 (target 85.44 vs stop 76.48), below my 1:1 floor. Stay in settled cash and wait for a washout whose snap-back target clears its stop."
     }
    ]
   },
@@ -121,16 +121,16 @@
    "risk_adj": 0.0,
    "notes": [
     {
+     "date": "2026-10-22",
+     "note": "09:36 pass: best live credits are XLF 53.5/52.5 put at 0.23, IWM 291/292 call at 0.16, XLE 64/63 put at 0.12 and TLT 78/77 put at 0.10, all below my 0.25 credit-to-width gate. Stay flat with $1,000 settled and recheck IWM and XLE at the open for 0.25+."
+    },
+    {
      "date": "2026-10-21",
      "note": "15:36 pass: best live credits are IWM 290/291 call at 0.19, XLE 64/63 put at 0.16, EEM 67.5/68.5 call at 0.17 and SPY 745/744 put at 0.06, all below my 0.25 credit-to-width gate. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for 0.25+ next session."
     },
     {
      "date": "2026-10-21",
      "note": "15:06 pass: all live credits are below my 0.25 credit-to-width gate (SPY 743/742 put 0.04, IWM 289/290 call 0.20, XLE 64.5/63.5 put 0.15, EEM 67.5/68.5 call 0.12). Stay flat with $1,000 settled and recheck IWM 21-45 DTE for 0.25+ next session."
-    },
-    {
-     "date": "2026-10-21",
-     "note": "Took the first live spread that met the 0.25 credit-to-width gate, one contract capped at $75 max loss. This overrides the overnight avoid on QQQ, so I'll watch the open for gap-down risk from oil, Fed and PPI headlines."
     }
    ]
   },
@@ -140,19 +140,19 @@
    "competing": false,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 999.81,
+   "equity": 992.16,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.0,
-   "progress_pct": 10.0,
+   "multiple": 0.99,
+   "progress_pct": 9.92,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 1.5,
-   "risk_adj": -0.0,
+   "risk_adj": -0.16,
    "notes": []
   },
   {
@@ -182,20 +182,24 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 704.5,
+   "equity": 680.5,
    "cash": 143.5,
    "available": 143.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.7,
-   "progress_pct": 7.04,
+   "multiple": 0.68,
+   "progress_pct": 6.8,
    "open": 5,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 34.4,
-   "risk_adj": -0.86,
+   "risk_adj": -0.93,
    "notes": [
+    {
+     "date": "2026-10-22",
+     "note": "Staying flat: open bearish debit is well above the 50% guideline, only $143.50 is settled, and the radar is calm at 23. Reconcile the AGCO fill ($330 vs $183.9 budget) and the IREN stop (33.11 vs 34.09) before adding risk. Reassess when a position closes or the radar rises above 40."
+    },
     {
      "date": "2026-10-21",
      "note": "Stay flat: bearish debit is about 80% of equity against the 50% guideline, the radar is calm at 16, and only $143.50 is settled. Reconcile the AGCO fill ($330 vs $183.9 budget) and the IREN/PLD stop records, then reassess when a position closes or the radar rises above 40."
@@ -203,10 +207,6 @@
     {
      "date": "2026-10-21",
      "note": "Stay flat: bearish debit is about 80% of equity against the 50% guideline, only $143.50 is settled, and the radar is calm at 16. Reassess when a position closes or the radar rises above 40. Reconcile the AGCO fill ($330 vs $183.9 budget) and the IREN/PLD stop records before adding anything."
-    },
-    {
-     "date": "2026-10-21",
-     "note": "Stay flat. Bearish debit is about 80% of equity against the 50% guideline, the radar is calm at 15, and only $143.50 is settled. Reconcile the AGCO fill ($330 vs $183.9 budget) and the IREN/PLD stop records before adding anything. Reassess when a position closes or the radar rises above 40."
     }
    ]
   },
@@ -218,8 +218,8 @@
    "reached_goal": null,
    "equity": 1005.76,
    "cash": 1005.76,
-   "available": 41.95,
-   "settling": 963.81,
+   "available": 1005.76,
+   "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.01,
@@ -244,8 +244,8 @@
    "reached_goal": null,
    "equity": 1006.45,
    "cash": 1006.45,
-   "available": 0.04,
-   "settling": 1006.41,
+   "available": 1006.45,
+   "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.01,
@@ -344,6 +344,19 @@
     "scalper": 1005.76,
     "hyper": 1006.45
    }
+  },
+  {
+   "date": "2026-10-22",
+   "agents": {
+    "trend": 1151.44,
+    "meanrev": 1008.22,
+    "volsell": 1000.0,
+    "baseline": 992.16,
+    "monkey": 983.68,
+    "blackswan": 680.5,
+    "scalper": 1005.76,
+    "hyper": 1006.45
+   }
   }
  ],
  "positions": [
@@ -358,7 +371,7 @@
    "qty": 1,
    "entry": 0.96,
    "last": null,
-   "mark": 1.44,
+   "mark": 1.85,
    "stop": 12.01,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:38-04:00",
@@ -380,7 +393,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.75,
+   "mark": 0.9,
    "stop": 6.92,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -402,7 +415,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 2.17,
+   "mark": 2.48,
    "stop": 10.15,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -445,7 +458,7 @@
    "opt_type": null,
    "qty": 1.013,
    "entry": 49.36,
-   "last": 49.81,
+   "last": 50.23,
    "mark": null,
    "stop": 47.12,
    "expiry": null,
@@ -467,7 +480,7 @@
    "opt_type": null,
    "qty": 4.8287,
    "entry": 68.38,
-   "last": 68.165,
+   "last": 68.36,
    "mark": null,
    "stop": 65.77,
    "expiry": null,
@@ -489,7 +502,7 @@
    "opt_type": null,
    "qty": 0.1964,
    "entry": 354.11,
-   "last": 362.25,
+   "last": 361.96,
    "mark": null,
    "stop": 345.94,
    "expiry": null,
@@ -511,7 +524,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 773.13,
+   "last": 767.185,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -533,7 +546,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 773.13,
+   "last": 767.185,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -555,7 +568,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 773.13,
+   "last": 767.185,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -578,7 +591,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 1.21,
+   "mark": 1.26,
    "stop": 51.35,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -600,7 +613,7 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.46,
+   "mark": 1.21,
    "stop": 33.11,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
@@ -622,7 +635,7 @@
    "qty": 1,
    "entry": 0.86,
    "last": null,
-   "mark": 0.64,
+   "mark": 0.68,
    "stop": 22.38,
    "expiry": "2027-01-15",
    "opened": "2026-10-15T13:07:01-04:00",
@@ -644,7 +657,7 @@
    "qty": 1,
    "entry": 1.5,
    "last": null,
-   "mark": 1.14,
+   "mark": 1.04,
    "stop": 130.31,
    "expiry": "2027-01-15",
    "opened": "2026-10-16T10:06:17-04:00",
@@ -666,7 +679,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 1.16,
+   "mark": 1.18,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -679,6 +692,27 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-22T09:36:48-04:00",
+   "type": "playbook",
+   "agent": "hyper",
+   "symbol": "META, NFLX, AAL, CRWV, SOXL",
+   "note": "aggressive: SPY is trending up with a calm crash radar, so I'm favoring the highest-range names (META, NFLX, AAL, CRWV) plus leveraged SOXL/TQQQ for quick momentum and VWAP bounces. Twelve slices give the most shots with a tight stop and a 20-minute hold."
+  },
+  {
+   "time": "2026-10-22T09:36:43-04:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "META, SPY, QQQ, NVDA, TSLA",
+   "note": "defensive: It's only 9:36, so opening ranges are still forming and most names are flat with thin dollar volume. SPY is in a calm uptrend, so I'll keep trading small with VWAP bounces at half size on the most liquid names, and leave the weaker, lower-volume names out."
+  },
+  {
+   "time": "2026-10-22T09:36:20-04:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-64%)"
+  },
   {
    "time": "2026-10-21T20:11:05-04:00",
    "type": "plan",
@@ -1170,33 +1204,6 @@
    "agent": "hyper",
    "symbol": "SOXL, TQQQ, SNDK, CRWV, MU",
    "note": "aggressive: Six scalps are already open and settled cash is nearly zero, so the 10 slices stay as they are. I widened the stop to 0.4% because the MU stop filled at -0.48% against a 0.35% stop, and kept the 0.7% target for reward-to-risk above 1.7:1."
-  },
-  {
-   "time": "2026-10-21T10:36:28-04:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "SPY, META, MSFT, IWM",
-   "note": "defensive: Tape is still choppy and most candidates have no setup, so I'm staying defensive at half size with 3 slices. SPY and META are already open and carry the clearest VWAP structure, MSFT has a live VWAP bounce, and IWM stays on only for relative-strength setups; I'm dropping NFLX (below VWAP) and QQQ pe"
-  },
-  {
-   "time": "2026-10-21T10:36:03-04:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-58%)"
-  },
-  {
-   "time": "2026-10-21T10:33:14-04:00",
-   "type": "open",
-   "agent": "hyper",
-   "symbol": "SOXL",
-   "instrument": "stock",
-   "qty": 0.99,
-   "price": 101.846,
-   "cost": 100.83,
-   "stop": 101.52,
-   "thesis": "VWAP pullback bounce on SOXL: 0.75x volume, +0.59% vs VWAP; target +0.7%, stop -0.35%",
-   "confidence": 3
   }
  ],
  "reviews": [
@@ -2065,44 +2072,49 @@
    "date": "2026-11-11",
    "open": "09:30",
    "close": "16:00"
+  },
+  {
+   "date": "2026-11-12",
+   "open": "09:30",
+   "close": "16:00"
   }
  ],
  "radar": {
   "now": {
-   "score": 16,
+   "score": 23,
    "tier": "calm",
-   "market_score": 19,
-   "economy_score": 6,
+   "market_score": 28,
+   "economy_score": 7,
    "parts": {
-    "trend": 0,
-    "drawdown": 7,
+    "trend": 35,
+    "drawdown": 12,
     "volatility": 0,
-    "breadth": 44,
-    "credit": 59,
+    "breadth": 48,
+    "credit": 62,
     "safety": 0,
-    "economy": 6
+    "economy": 7
    },
    "facts": {
-    "spy_vs_sma50_pct": 0.6,
-    "spy_vs_sma200_pct": 6.5,
-    "spy_off_high_pct": 1.1,
-    "spy_iv_pct": 13.8,
-    "spy_realized_vol_pct": 9.0,
-    "pct_above_50d": 47.3,
-    "breadth_sample": 507,
-    "junk_vs_treasuries_20d_pct": -1.35,
-    "havens_vs_spy_20d_pct": -3.2
+    "spy_vs_sma50_pct": -0.1,
+    "spy_vs_sma200_pct": 5.6,
+    "spy_off_high_pct": 1.8,
+    "spy_iv_pct": 13.2,
+    "spy_realized_vol_pct": 8.8,
+    "pct_above_50d": 45.7,
+    "breadth_sample": 506,
+    "junk_vs_treasuries_20d_pct": -1.48,
+    "havens_vs_spy_20d_pct": -2.6
    },
    "economy": {
     "status": "on",
-    "as_of": "2026-10-21",
-    "yield_curve_10y_2y": 0.33,
-    "jobless_claims_4wk": 198500,
-    "claims_vs_1yr_low_pct": 0.1,
-    "junk_bond_spread_pct": 3.29,
+    "as_of": "2026-10-22",
+    "yield_curve_10y_2y": 0.32,
+    "jobless_claims_4wk": 197750,
+    "claims_vs_1yr_low_pct": 0.0,
+    "junk_bond_spread_pct": 3.33,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-21T15:35-04:00"
+   "at": "2026-10-22T09:35-04:00"
   },
   "history": [
    {
@@ -2137,7 +2149,12 @@
    },
    {
     "date": "2026-10-21",
-    "score": 16,
+    "score": 15,
+    "tier": "calm"
+   },
+   {
+    "date": "2026-10-22",
+    "score": 23,
     "tier": "calm"
    }
   ],
@@ -2152,47 +2169,50 @@
   }
  },
  "compliance_today": {
-  "approved": 18,
+  "approved": 0,
   "denied": 0,
   "last_denied": null
  },
  "playbooks": {
   "scalper": {
-   "date": "2026-10-21",
-   "made_at": "2026-10-21T15:36-04:00",
+   "date": "2026-10-22",
+   "made_at": "2026-10-22T09:36-04:00",
    "watch": [
+    "META",
     "SPY",
-    "IWM"
+    "QQQ",
+    "NVDA",
+    "TSLA"
    ],
-   "aggression": "stand_down",
-   "why": "Only about 14 minutes remain before the 3:50 PM flat cutoff and only $42 is settled, so a new trade has little time to resolve and almost no dollar upside. Today's VWAP bounces mostly time-stopped near zero, so I'm standing down and will reassess tomorrow.",
-   "slices": 1,
+   "aggression": "defensive",
+   "why": "It's only 9:36, so opening ranges are still forming and most names are flat with thin dollar volume. SPY is in a calm uptrend, so I'll keep trading small with VWAP bounces at half size on the most liquid names, and leave the weaker, lower-volume names out.",
+   "slices": 4,
    "target_pct": 0.5,
    "stop_pct": 0.3,
-   "max_hold_min": 10
+   "max_hold_min": 45
   },
   "hyper": {
-   "date": "2026-10-21",
-   "made_at": "2026-10-21T15:36-04:00",
+   "date": "2026-10-22",
+   "made_at": "2026-10-22T09:36-04:00",
    "watch": [
-    "TQQQ",
-    "SNDK",
-    "CRWV",
-    "MU",
     "META",
-    "TSLA",
-    "NVDA",
-    "AMD",
-    "SPCX",
-    "STX",
     "NFLX",
-    "SMH"
+    "AAL",
+    "CRWV",
+    "SOXL",
+    "TQQQ",
+    "SPCX",
+    "MU",
+    "TSLA",
+    "AMD",
+    "IWM",
+    "SNDK"
    ],
    "aggression": "aggressive",
-   "why": "Settled cash is essentially zero, so nothing trades today and this only sets tomorrow's playbook. Today's 0.3-0.35% stops were too tight and got clipped by noise, so I'm keeping the wider 0.5% stop with a 0.8% target and 12 slices on the fastest movers.",
+   "why": "SPY is trending up with a calm crash radar, so I'm favoring the highest-range names (META, NFLX, AAL, CRWV) plus leveraged SOXL/TQQQ for quick momentum and VWAP bounces. Twelve slices give the most shots with a tight stop and a 20-minute hold.",
    "slices": 12,
-   "target_pct": 0.8,
-   "stop_pct": 0.5,
+   "target_pct": 0.6,
+   "stop_pct": 0.3,
    "max_hold_min": 20
   }
  },
@@ -2392,7 +2412,5 @@
   "built": "2026-10-20T07:40-04:00",
   "pool_size": 7351,
   "core_size": 500
- },
- "recap_updated": "2026-10-21T16:40-04:00",
- "plans_updated": "2026-10-21T20:11-04:00"
+ }
 }
