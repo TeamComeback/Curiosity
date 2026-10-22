@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T15:06-04:00",
+ "updated": "2026-10-22T15:36-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,9 +10,9 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 4.9,
+  "spy_vs_sma200_pct": 5.0,
   "spy_roc20_pct": 0.7,
-  "crash_radar": 23
+  "crash_radar": 22
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -38,20 +38,24 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 1203.8,
+   "equity": 1172.84,
    "cash": 186.88,
    "available": 6.38,
    "settling": 180.5,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.2,
-   "progress_pct": 12.04,
+   "multiple": 1.17,
+   "progress_pct": 11.73,
    "open": 6,
    "closed": 3,
    "win_rate": 33.3,
    "max_dd_pct": 13.6,
-   "risk_adj": 1.5,
+   "risk_adj": 1.27,
    "notes": [
+    {
+     "date": "2026-10-22",
+     "note": "Settled cash is $6.38, below every candidate's cost and any 30-60 DTE option premium. Holding the SMR, CWVX, and PLUG puts and the BP, XLE, and HLT longs at their stops. Reassess when CIFR proceeds settle and check whether the APA trigger fires."
+    },
     {
      "date": "2026-10-22",
      "note": "Settled cash is $6.38, below every candidate's cost and any 30-60 DTE option premium, so no entries. Reassess when CIFR proceeds settle next session."
@@ -59,10 +63,6 @@
     {
      "date": "2026-10-22",
      "note": "Settled cash is $6.38, below the cost of every candidate and of any option contract, so no entries. Hold all positions at their stops and reassess when the CIFR proceeds settle."
-    },
-    {
-     "date": "2026-10-22",
-     "note": "Settled cash is $6.38, below the cost of every candidate and any option contract. Holding the SMR, CWVX, and PLUG puts and the BP, XLE, and HLT longs at their stops. Reassess when the CIFR put proceeds settle next session."
     }
    ]
   },
@@ -72,20 +72,24 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 1008.59,
+   "equity": 1007.41,
    "cash": 758.11,
    "available": 758.11,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.01,
-   "progress_pct": 10.09,
+   "progress_pct": 10.07,
    "open": 1,
    "closed": 3,
    "win_rate": 66.7,
    "max_dd_pct": 0.7,
-   "risk_adj": 0.17,
+   "risk_adj": 0.15,
    "notes": [
+    {
+     "date": "2026-10-22",
+     "note": "Passed again. Live reward-to-risk is GME 0.40, MPC 0.31, META 0.78 (RSI 4.1, so the RSI<3 exception doesn't apply), PSX 0.31, NEM 0.49. DXCM is already held and not added to. Keeping settled cash for a washout with a closer stop or a farther target."
+    },
     {
      "date": "2026-10-22",
      "note": "Passed on all candidates. AME (RSI(2) 9.2, reward-to-risk about 0.97:1) misses the 1:1 floor and the RSI<3 exception. DXCM is already held and not added to. Keep $758 settled cash."
@@ -93,10 +97,6 @@
     {
      "date": "2026-10-22",
      "note": "No candidate clears the 1:1 floor (best fresh setup META ~0.80:1, RSI 4 so it misses even the loosened 0.95 rule). DXCM is already held, so I'm not adding. Staying in settled cash."
-    },
-    {
-     "date": "2026-10-22",
-     "note": "Stopped passing on every candidate. I'm loosening the floor slightly to 0.95:1 for deep RSI(2) washouts (under 3) above the 200-day, using live target_hint, and keeping the default 2.5-ATR stop."
     }
    ]
   },
@@ -122,15 +122,15 @@
    "notes": [
     {
      "date": "2026-10-22",
+     "note": "15:36 pass: every live credit is below my 0.25 gate (IWM 0.15, XLE 0.24, XLF 0.14, EEM 0.23, TLT 0.12). XLE failed to fill at 0.25 and 0.26 earlier today, so I won't resubmit. Stay flat with $1,000 settled and recheck IWM and XLE at 21-45 DTE next session."
+    },
+    {
+     "date": "2026-10-22",
      "note": "15:06 pass: IWM 291/292 call is 0.16 and XLF 0.10, both below the 0.25 gate. XLE 63/62 put shows 0.25 again, but it already failed to fill at 0.25 and 0.26, and conviction is only 1 on two-way oil risk, so I won't resubmit. Stay flat and recheck IWM and XLE 21-45 DTE at the 0.25 gate next session."
     },
     {
      "date": "2026-10-22",
      "note": "14:36 pass: IWM 291/292 call is 0.24 (below the 0.25 gate). XLE 63/62 put is 0.26 and meets the gate, but it has already failed to fill twice today at 0.25 and 0.26, so I won't resubmit the same order. Stay flat and recheck IWM/XLE at the 21-45 DTE gate next session."
-    },
-    {
-     "date": "2026-10-22",
-     "note": "Took the gated XLE 63/62 put only at 0.26 credit with a 74 max loss; skipping IWM at 0.23 since it is still under the gate, and the 13:06 'took' note conflicts with the flat account, so I'm treating positions as the source of truth."
     }
    ]
   },
@@ -140,19 +140,19 @@
    "competing": false,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 985.27,
+   "equity": 986.0,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.99,
-   "progress_pct": 9.85,
+   "progress_pct": 9.86,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 1.6,
-   "risk_adj": -0.29,
+   "risk_adj": -0.28,
    "notes": []
   },
   {
@@ -182,20 +182,24 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 694.5,
+   "equity": 690.5,
    "cash": 143.5,
    "available": 143.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.69,
-   "progress_pct": 6.94,
+   "progress_pct": 6.91,
    "open": 5,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 34.4,
-   "risk_adj": -0.89,
+   "risk_adj": -0.9,
    "notes": [
+    {
+     "date": "2026-10-22",
+     "note": "Staying flat: open bearish debit is far above the 50% guideline, only $143.50 is settled, and the radar is calm at 22. Reconcile the AGCO fill ($330 vs $183.9 budget) and the IREN stop before any new sizing, and reassess after a close or if the radar rises above 40."
+    },
     {
      "date": "2026-10-22",
      "note": "Open bearish debit (~$811 at cost) now exceeds equity ($694.50), and the AGCO fill ($330 vs the $183.9 budget) needs reconciling. With $143.50 settled and the radar at 23, adding XLC would stack correlated downside. Stay flat and reassess after a close or if the radar rises above 40."
@@ -203,10 +207,6 @@
     {
      "date": "2026-10-22",
      "note": "Stay flat: open bearish debit is about 78% of equity against the 50% guideline, only $143.50 is settled, and the radar is calm at 23. XLC would use nearly all settled cash and stack correlated downside. Reassess after a close or if the radar rises above 40, and reconcile the AGCO fill before sizing "
-    },
-    {
-     "date": "2026-10-22",
-     "note": "Staying flat: open bearish debit is about 80% of equity against the 50% guideline, only $143.50 is settled, and the radar is calm at 23. XLC (~$136) would use nearly all settled cash and stack correlated downside. Reconcile the AGCO fill ($330 vs $183.9 budget) and keep sizing within the guideline. "
     }
    ]
   },
@@ -348,12 +348,12 @@
   {
    "date": "2026-10-22",
    "agents": {
-    "trend": 1203.8,
-    "meanrev": 1008.59,
+    "trend": 1172.84,
+    "meanrev": 1007.41,
     "volsell": 1000.0,
-    "baseline": 985.27,
+    "baseline": 986.0,
     "monkey": 983.68,
-    "blackswan": 694.5,
+    "blackswan": 690.5,
     "scalper": 1004.75,
     "hyper": 1003.76
    }
@@ -371,7 +371,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.87,
+   "mark": 0.83,
    "stop": 6.8,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -393,7 +393,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 3.06,
+   "mark": 3.03,
    "stop": 9.55,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -415,7 +415,7 @@
    "qty": 5,
    "entry": 0.14,
    "last": null,
-   "mark": 0.18,
+   "mark": 0.14,
    "stop": 1.61,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T12:10:38-04:00",
@@ -436,7 +436,7 @@
    "opt_type": null,
    "qty": 1.013,
    "entry": 49.36,
-   "last": 50.16,
+   "last": 50.08,
    "mark": null,
    "stop": 47.12,
    "expiry": null,
@@ -458,7 +458,7 @@
    "opt_type": null,
    "qty": 4.8287,
    "entry": 68.38,
-   "last": 67.515,
+   "last": 67.545,
    "mark": null,
    "stop": 65.77,
    "expiry": null,
@@ -480,7 +480,7 @@
    "opt_type": null,
    "qty": 0.1964,
    "entry": 354.11,
-   "last": 356.9,
+   "last": 356.8,
    "mark": null,
    "stop": 345.94,
    "expiry": null,
@@ -502,7 +502,7 @@
    "opt_type": null,
    "qty": 3.2201,
    "entry": 77.67,
-   "last": 77.785,
+   "last": 77.42,
    "mark": null,
    "stop": 71.98,
    "expiry": null,
@@ -524,7 +524,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 761.83,
+   "last": 762.4,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -546,7 +546,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 761.83,
+   "last": 762.4,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -568,7 +568,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 761.83,
+   "last": 762.4,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -591,7 +591,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 0.93,
+   "mark": 1.21,
    "stop": 50.8,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -613,7 +613,7 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.6,
+   "mark": 1.37,
    "stop": 32.39,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
@@ -635,7 +635,7 @@
    "qty": 1,
    "entry": 0.86,
    "last": null,
-   "mark": 0.84,
+   "mark": 0.87,
    "stop": 22.38,
    "expiry": "2027-01-15",
    "opened": "2026-10-15T13:07:01-04:00",
@@ -657,7 +657,7 @@
    "qty": 1,
    "entry": 1.5,
    "last": null,
-   "mark": 1.4,
+   "mark": 1.3,
    "stop": 130.31,
    "expiry": "2027-01-15",
    "opened": "2026-10-16T10:06:17-04:00",
@@ -679,7 +679,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 0.74,
+   "mark": 0.72,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -692,6 +692,20 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-22T15:36:48-04:00",
+   "type": "playbook",
+   "agent": "hyper",
+   "symbol": "SOXL, TQQQ, NFLX, TSLA, AMZN",
+   "note": "aggressive: Only about 14 minutes remain before the 3:50 flatten and $41.85 is spendable, so I'm cutting to 4 slices for slightly larger shots and a short 10-minute hold. The watch list favors names with a clear trend (NFLX, TSLA, AMZN, SNDK) and oversold 3x ETFs (SOXL, TQQQ) that could bounce off VWAP."
+  },
+  {
+   "time": "2026-10-22T15:36:16-04:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-78%)"
+  },
   {
    "time": "2026-10-22T15:06:06-04:00",
    "type": "exit_unfilled",
@@ -1305,32 +1319,6 @@
    "cost": 125.69,
    "stop": 711.99,
    "thesis": "VWAP pullback bounce on QQQ: 1.17x volume, +0.12% vs VWAP; target +0.5%, stop -0.3%",
-   "confidence": 3
-  },
-  {
-   "time": "2026-10-22T09:55:07-04:00",
-   "type": "open",
-   "agent": "hyper",
-   "symbol": "MU",
-   "instrument": "stock",
-   "qty": 0.093,
-   "price": 902.132,
-   "cost": 83.9,
-   "stop": 898.3,
-   "thesis": "VWAP pullback bounce on MU: 0.74x volume, +0.98% vs VWAP; target +0.6%, stop -0.3%",
-   "confidence": 3
-  },
-  {
-   "time": "2026-10-22T09:55:07-04:00",
-   "type": "open",
-   "agent": "hyper",
-   "symbol": "AMD",
-   "instrument": "stock",
-   "qty": 0.1591,
-   "price": 527.714,
-   "cost": 83.96,
-   "stop": 525.27,
-   "thesis": "VWAP pullback bounce on AMD: 0.89x volume, +0.62% vs VWAP; target +0.6%, stop -0.3%",
    "confidence": 3
   }
  ],
@@ -2209,26 +2197,26 @@
  ],
  "radar": {
   "now": {
-   "score": 23,
+   "score": 22,
    "tier": "calm",
-   "market_score": 28,
+   "market_score": 27,
    "economy_score": 7,
    "parts": {
     "trend": 35,
-    "drawdown": 17,
+    "drawdown": 16,
     "volatility": 0,
-    "breadth": 45,
+    "breadth": 43,
     "credit": 62,
     "safety": 0,
     "economy": 7
    },
    "facts": {
     "spy_vs_sma50_pct": -0.8,
-    "spy_vs_sma200_pct": 4.9,
+    "spy_vs_sma200_pct": 5.0,
     "spy_off_high_pct": 2.5,
     "spy_iv_pct": 13.2,
     "spy_realized_vol_pct": 8.8,
-    "pct_above_50d": 47.0,
+    "pct_above_50d": 47.6,
     "breadth_sample": 506,
     "junk_vs_treasuries_20d_pct": -1.48,
     "havens_vs_spy_20d_pct": -2.6
@@ -2242,7 +2230,7 @@
     "junk_bond_spread_pct": 3.33,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-22T15:05-04:00"
+   "at": "2026-10-22T15:35-04:00"
   },
   "history": [
    {
@@ -2282,7 +2270,7 @@
    },
    {
     "date": "2026-10-22",
-    "score": 23,
+    "score": 22,
     "tier": "calm"
    }
   ],
@@ -2304,12 +2292,12 @@
  "playbooks": {
   "scalper": {
    "date": "2026-10-22",
-   "made_at": "2026-10-22T15:06-04:00",
+   "made_at": "2026-10-22T15:36-04:00",
    "watch": [
     "SPY"
    ],
    "aggression": "stand_down",
-   "why": "Five VWAP bounces today lost about $1 net, and with only 44 minutes before the 3:50 flat deadline most names are red and below VWAP. Standing down keeps the remaining cash safe, and SPY stays on watch for tomorrow's VWAP-reclaim plan.",
+   "why": "With about 14 minutes until the 3:50 flat deadline, a new entry has almost no room to reach target. Today's VWAP bounces lost money overall, and most candidates are red and below VWAP, so I'm keeping the book flat and SPY on watch for tomorrow's reclaim plan.",
    "slices": 1,
    "target_pct": 0.6,
    "stop_pct": 0.4,
@@ -2317,23 +2305,22 @@
   },
   "hyper": {
    "date": "2026-10-22",
-   "made_at": "2026-10-22T13:06-04:00",
+   "made_at": "2026-10-22T15:36-04:00",
    "watch": [
-    "NFLX",
-    "XLE",
-    "TSLA",
-    "TQQQ",
     "SOXL",
+    "TQQQ",
+    "NFLX",
+    "TSLA",
+    "AMZN",
     "SNDK",
-    "STX",
-    "NVDA"
+    "XLE"
    ],
    "aggression": "aggressive",
-   "why": "Only $41.85 is spendable, so I'm cutting to 6 slices for slightly larger shots. NFLX is the one name above its opening range with an uptrend, XLE has a live VWAP bounce, and the 3x ETFs and high-range names (SOXL, TQQQ, TSLL, SNDK, STX) offer the fastest moves. I'm keeping 0.8% target and 0.5% stop ",
-   "slices": 6,
-   "target_pct": 0.8,
-   "stop_pct": 0.5,
-   "max_hold_min": 15
+   "why": "Only about 14 minutes remain before the 3:50 flatten and $41.85 is spendable, so I'm cutting to 4 slices for slightly larger shots and a short 10-minute hold. The watch list favors names with a clear trend (NFLX, TSLA, AMZN, SNDK) and oversold 3x ETFs (SOXL, TQQQ) that could bounce off VWAP.",
+   "slices": 4,
+   "target_pct": 0.6,
+   "stop_pct": 0.4,
+   "max_hold_min": 10
   }
  },
  "focus": {

@@ -28,7 +28,7 @@
      "opt_type": "put",
      "qty": 2,
      "entry": 0.55,
-     "mark": 0.87,
+     "mark": 0.83,
      "expiry": "2026-11-06",
      "strike": 6.0,
      "delta": -0.46,
@@ -47,7 +47,7 @@
      },
      "sector": "Technology",
      "low_water": 5.315,
-     "exit_half_spread": 0.02
+     "exit_half_spread": 0.015
     },
     "pos-bf6606febd": {
      "kind": "option",
@@ -56,7 +56,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.75,
-     "mark": 3.06,
+     "mark": 3.03,
      "expiry": "2026-11-20",
      "strike": 8.0,
      "delta": -0.38,
@@ -75,7 +75,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 5.52,
-     "exit_half_spread": 0.185
+     "exit_half_spread": 0.15
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -84,7 +84,7 @@
      "opt_type": "put",
      "qty": 5,
      "entry": 0.14,
-     "mark": 0.18,
+     "mark": 0.14,
      "expiry": "2026-11-06",
      "strike": 1.5,
      "delta": -0.5,
@@ -103,7 +103,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 1.35,
-     "exit_half_spread": 0.01
+     "exit_half_spread": 0.015
     },
     "pos-2ce62f642c": {
      "kind": "stock",
@@ -124,7 +124,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 50.16,
+     "last": 50.08,
      "high_water": 50.23
     },
     "pos-e9580fb11e": {
@@ -146,7 +146,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 67.515,
+     "last": 67.545,
      "high_water": 68.53
     },
     "pos-47b298eed1": {
@@ -168,7 +168,7 @@
       "pct_vs_sma200": 11.9
      },
      "sector": "Broad market / other",
-     "last": 356.9,
+     "last": 356.8,
      "high_water": 364.25
     }
    },
@@ -180,10 +180,6 @@
    "peak": 1208.6,
    "max_dd": 0.136,
    "notes": [
-    {
-     "date": "2026-10-20",
-     "note": "Settled cash is only $6.38, so no new entry is affordable. Holding all positions and stops, and verifying settled cash before acting on any game plan."
-    },
     {
      "date": "2026-10-20",
      "note": "Settled cash is $6.38, so no entry is affordable. Hold all positions and stops, and check settled cash before acting on any game plan."
@@ -339,6 +335,10 @@
     {
      "date": "2026-10-22",
      "note": "Settled cash is $6.38, below every candidate's cost and any 30-60 DTE option premium, so no entries. Reassess when CIFR proceeds settle next session."
+    },
+    {
+     "date": "2026-10-22",
+     "note": "Settled cash is $6.38, below every candidate's cost and any 30-60 DTE option premium. Holding the SMR, CWVX, and PLUG puts and the BP, XLE, and HLT longs at their stops. Reassess when CIFR proceeds settle and check whether the APA trigger fires."
     }
    ],
    "last_exits": {
@@ -583,7 +583,7 @@
       "pct_vs_sma5": -6.6
      },
      "sector": "Consumer Discretionary",
-     "last": 77.785
+     "last": 77.42
     }
    },
    "status": "active",
@@ -594,10 +594,6 @@
    "peak": 1008.59,
    "max_dd": 0.0072,
    "notes": [
-    {
-     "date": "2026-10-20",
-     "note": "No candidate reaches my 1:1 reward-to-risk floor (META ~0.5:1, GME ~0.4:1, EMR ~0.3:1). Hold FTNT on its stop (154.63) and keep cash settled for a washout with a snap-back target wider than its stop."
-    },
     {
      "date": "2026-10-20",
      "note": "No candidate reaches the 1:1 reward-to-risk floor (META ~0.39:1, VLO ~0.37:1, EMR ~0.16:1). Hold STT and FTNT on their stops and keep settled cash for a washout whose snap-back target is wider than its stop."
@@ -753,6 +749,10 @@
     {
      "date": "2026-10-22",
      "note": "Passed on all candidates. AME (RSI(2) 9.2, reward-to-risk about 0.97:1) misses the 1:1 floor and the RSI<3 exception. DXCM is already held and not added to. Keep $758 settled cash."
+    },
+    {
+     "date": "2026-10-22",
+     "note": "Passed again. Live reward-to-risk is GME 0.40, MPC 0.31, META 0.78 (RSI 4.1, so the RSI<3 exception doesn't apply), PSX 0.31, NEM 0.49. DXCM is already held and not added to. Keeping settled cash for a washout with a closer stop or a farther target."
     }
    ],
    "last_exits": {
@@ -877,10 +877,6 @@
    "peak": 1000.0,
    "max_dd": 0.0,
    "notes": [
-    {
-     "date": "2026-10-20",
-     "note": "Pass: the best live credit is IWM 287/288 bear call at 0.20 (20% of width), below my 0.25 trigger. XLE 0.14, EEM 0.15 and TLT 0.13 are too thin. Stay flat with $1,000 settled and recheck IWM at 21-45 DTE for 0.25+."
-    },
     {
      "date": "2026-10-20",
      "note": "Pass again: best live credits are IWM 289/290 call at 0.18 (18% of width), XLE 63/62 put at 0.20, EEM 0.17 and SPY 742/741 put at 0.09, all below my 0.25 credit-to-width trigger. Stay flat with $1,000 settled and recheck IWM at 21-45 DTE for 0.25+."
@@ -1036,6 +1032,10 @@
     {
      "date": "2026-10-22",
      "note": "15:06 pass: IWM 291/292 call is 0.16 and XLF 0.10, both below the 0.25 gate. XLE 63/62 put shows 0.25 again, but it already failed to fill at 0.25 and 0.26, and conviction is only 1 on two-way oil risk, so I won't resubmit. Stay flat and recheck IWM and XLE 21-45 DTE at the 0.25 gate next session."
+    },
+    {
+     "date": "2026-10-22",
+     "note": "15:36 pass: every live credit is below my 0.25 gate (IWM 0.15, XLE 0.24, XLF 0.14, EEM 0.23, TLT 0.12). XLE failed to fill at 0.25 and 0.26 earlier today, so I won't resubmit. Stay flat with $1,000 settled and recheck IWM and XLE at 21-45 DTE next session."
     }
    ],
    "last_exits": {},
@@ -1113,7 +1113,7 @@
      }
     ]
    },
-   "min_trade_seen": 75.0,
+   "min_trade_seen": 76.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -1246,7 +1246,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 761.83
+     "last": 762.4
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1262,7 +1262,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 761.83
+     "last": 762.4
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1278,7 +1278,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 761.83
+     "last": 762.4
     }
    },
    "status": "active",
@@ -1336,7 +1336,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 0.93,
+     "mark": 1.21,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -1356,7 +1356,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.595,
+     "exit_half_spread": 0.265,
      "peak_mark": 1.36,
      "low_water": 37.94
     },
@@ -1382,7 +1382,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.6,
+     "mark": 1.37,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
@@ -1402,7 +1402,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.16,
+     "exit_half_spread": 0.315,
      "peak_mark": 1.6,
      "low_water": 25.095
     },
@@ -1428,7 +1428,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 0.84,
+     "mark": 0.87,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -1448,7 +1448,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.075,
+     "exit_half_spread": 0.105,
      "peak_mark": 0.92,
      "low_water": 17.965
     },
@@ -1474,7 +1474,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 1.4,
+     "mark": 1.3,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -1494,7 +1494,7 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.43,
+     "exit_half_spread": 0.354,
      "peak_mark": 1.62,
      "low_water": 123.49
     },
@@ -1520,7 +1520,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.74,
+     "mark": 0.72,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -1540,7 +1540,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.445,
+     "exit_half_spread": 2.34,
      "peak_mark": 1.9
     }
    },
@@ -1552,10 +1552,6 @@
    "peak": 1000.0,
    "max_dd": 0.3435,
    "notes": [
-    {
-     "date": "2026-10-20",
-     "note": "Stay flat: calm radar (23), only $143.50 settled, and open bearish debit is far above the 50% guideline. Verify the AGCO fill: the position shows a $330 cost against a $183.9 budget. Revisit when a position closes or the radar rises above 40."
-    },
     {
      "date": "2026-10-20",
      "note": "Stay flat. Radar is calm (16), settled cash is only $143.50, and open bearish debit is far above the 50% guideline. Verify the AGCO fill ($3.30 cost vs $183.9 budget) and the PLD stop record (130.31) before the next review. Revisit when a position closes or the radar rises above 40."
@@ -1711,6 +1707,10 @@
     {
      "date": "2026-10-22",
      "note": "Open bearish debit (~$811 at cost) now exceeds equity ($694.50), and the AGCO fill ($330 vs the $183.9 budget) needs reconciling. With $143.50 settled and the radar at 23, adding XLC would stack correlated downside. Stay flat and reassess after a close or if the radar rises above 40."
+    },
+    {
+     "date": "2026-10-22",
+     "note": "Staying flat: open bearish debit is far above the 50% guideline, only $143.50 is settled, and the radar is calm at 22. Reconcile the AGCO fill ($330 vs $183.9 budget) and the IREN stop before any new sizing, and reassess after a close or if the radar rises above 40."
     }
    ],
    "last_exits": {},
@@ -1986,12 +1986,12 @@
    ],
    "playbook": {
     "date": "2026-10-22",
-    "made_at": "2026-10-22T15:06-04:00",
+    "made_at": "2026-10-22T15:36-04:00",
     "watch": [
      "SPY"
     ],
     "aggression": "stand_down",
-    "why": "Five VWAP bounces today lost about $1 net, and with only 44 minutes before the 3:50 flat deadline most names are red and below VWAP. Standing down keeps the remaining cash safe, and SPY stays on watch for tomorrow's VWAP-reclaim plan.",
+    "why": "With about 14 minutes until the 3:50 flat deadline, a new entry has almost no room to reach target. Today's VWAP bounces lost money overall, and most candidates are red and below VWAP, so I'm keeping the book flat and SPY on watch for tomorrow's reclaim plan.",
     "slices": 1,
     "target_pct": 0.6,
     "stop_pct": 0.4,
@@ -2314,23 +2314,22 @@
    ],
    "playbook": {
     "date": "2026-10-22",
-    "made_at": "2026-10-22T13:06-04:00",
+    "made_at": "2026-10-22T15:36-04:00",
     "watch": [
-     "NFLX",
-     "XLE",
-     "TSLA",
-     "TQQQ",
      "SOXL",
+     "TQQQ",
+     "NFLX",
+     "TSLA",
+     "AMZN",
      "SNDK",
-     "STX",
-     "NVDA"
+     "XLE"
     ],
     "aggression": "aggressive",
-    "why": "Only $41.85 is spendable, so I'm cutting to 6 slices for slightly larger shots. NFLX is the one name above its opening range with an uptrend, XLE has a live VWAP bounce, and the 3x ETFs and high-range names (SOXL, TQQQ, TSLL, SNDK, STX) offer the fastest moves. I'm keeping 0.8% target and 0.5% stop ",
-    "slices": 6,
-    "target_pct": 0.8,
-    "stop_pct": 0.5,
-    "max_hold_min": 15
+    "why": "Only about 14 minutes remain before the 3:50 flatten and $41.85 is spendable, so I'm cutting to 4 slices for slightly larger shots and a short 10-minute hold. The watch list favors names with a clear trend (NFLX, TSLA, AMZN, SNDK) and oversold 3x ETFs (SOXL, TQQQ) that could bounce off VWAP.",
+    "slices": 4,
+    "target_pct": 0.6,
+    "stop_pct": 0.4,
+    "max_hold_min": 10
    },
    "scalp_day": {
     "date": "2026-10-22",
