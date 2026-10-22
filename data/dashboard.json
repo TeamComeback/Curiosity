@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T12:08-04:00",
+ "updated": "2026-10-22T12:23-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -38,7 +38,7 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 1169.0,
+   "equity": 1169.29,
    "cash": 186.88,
    "available": 6.38,
    "settling": 180.5,
@@ -140,19 +140,19 @@
    "competing": false,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 989.35,
+   "equity": 990.0,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.99,
-   "progress_pct": 9.89,
+   "progress_pct": 9.9,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 1.5,
-   "risk_adj": -0.21,
+   "risk_adj": -0.2,
    "notes": []
   },
   {
@@ -216,19 +216,19 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 1004.6,
-   "cash": 753.07,
+   "equity": 1004.75,
+   "cash": 1004.75,
    "available": 125.8,
-   "settling": 627.27,
+   "settling": 878.95,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
    "progress_pct": 10.05,
-   "open": 1,
-   "closed": 32,
-   "win_rate": 53.1,
+   "open": 0,
+   "closed": 33,
+   "win_rate": 54.5,
    "max_dd_pct": 0.2,
-   "risk_adj": 0.09,
+   "risk_adj": 0.1,
    "notes": [
     {
      "date": "2026-10-16",
@@ -348,13 +348,13 @@
   {
    "date": "2026-10-22",
    "agents": {
-    "trend": 1169.0,
+    "trend": 1169.29,
     "meanrev": 1008.22,
     "volsell": 1000.0,
-    "baseline": 989.35,
+    "baseline": 990.0,
     "monkey": 983.68,
     "blackswan": 778.5,
-    "scalper": 1004.6,
+    "scalper": 1004.75,
     "hyper": 1003.76
    }
   }
@@ -436,7 +436,7 @@
    "opt_type": null,
    "qty": 1.013,
    "entry": 49.36,
-   "last": 49.6,
+   "last": 49.63,
    "mark": null,
    "stop": 47.12,
    "expiry": null,
@@ -458,7 +458,7 @@
    "opt_type": null,
    "qty": 4.8287,
    "entry": 68.38,
-   "last": 66.84,
+   "last": 66.89,
    "mark": null,
    "stop": 65.77,
    "expiry": null,
@@ -480,7 +480,7 @@
    "opt_type": null,
    "qty": 0.1964,
    "entry": 354.11,
-   "last": 357.065,
+   "last": 357.14,
    "mark": null,
    "stop": 345.94,
    "expiry": null,
@@ -502,7 +502,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 765.0,
+   "last": 765.51,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -524,7 +524,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 765.0,
+   "last": 765.51,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -546,7 +546,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 765.0,
+   "last": 765.51,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -667,31 +667,23 @@
    "realized": null,
    "play": "weak_stock",
    "width": 5.0
-  },
-  {
-   "agent": "scalper",
-   "position_id": "pos-606c93bc63",
-   "kind": "stock",
-   "symbol": "SPY",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 0.3288,
-   "entry": 764.686,
-   "last": 765.0,
-   "mark": null,
-   "stop": 761.62,
-   "expiry": null,
-   "opened": "2026-10-22T11:57:06-04:00",
-   "thesis": "VWAP pullback bounce on SPY: 0.76x volume, +0.02% vs VWAP; target +0.6%, stop -0.4%",
-   "confidence": 3,
-   "cost": 251.43,
-   "realized": null,
-   "play": "scalp",
-   "width": null
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-22T12:23:07-04:00",
+   "type": "close",
+   "agent": "scalper",
+   "symbol": "SPY",
+   "qty": 0.3288,
+   "entry": 764.686,
+   "exit": 765.464,
+   "pnl": 0.25,
+   "note": "time limit, 26 min (+0.11%)",
+   "opened": "2026-10-22T11:57:06-04:00",
+   "confidence": 3,
+   "thesis": "VWAP pullback bounce on SPY: 0.76x volume, +0.02% vs VWAP; target +0.6%, stop -0.4%"
+  },
   {
    "time": "2026-10-22T12:08:55-04:00",
    "type": "close",
@@ -1308,12 +1300,6 @@
    "agent": "volsell",
    "note": "After-close review: revise. The fresh scan puts IWM at 276.46 with IV/RV 1.31, so the 284-285 short-strike guide from the 275.8 close is too close to the money. A 0.20-delta call is nearer 289-291, which is where the live credits have been, and they have stayed at 0.19-0.21, below the 0.25 gate. The gate stays unchanged. Today's notes say I 'took' a spread, but there are no open positions or today's trades and the balance is",
    "symbol": "IWM, XLE"
-  },
-  {
-   "time": "2026-10-21T16:40:44-04:00",
-   "type": "scorecard",
-   "agent": "volsell",
-   "note": "Plan graded: 1 of 2 picks moved the planned way, avg +0.02%"
   }
  ],
  "reviews": [
@@ -2433,10 +2419,10 @@
   "blackswan": {},
   "scalper": {
    "Technology": {
-    "trades": 19,
-    "wins": 10,
-    "pnl": 2.01,
-    "win_rate_pct": 53,
+    "trades": 20,
+    "wins": 11,
+    "pnl": 2.26,
+    "win_rate_pct": 55,
     "avg_pnl": 0.11
    },
    "Consumer Staples": {
