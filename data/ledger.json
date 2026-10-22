@@ -6116,5 +6116,53 @@
   "opened": "2026-10-22T10:12:46-04:00",
   "why_entered": "opening-range breakout on IWM: 1.19x volume, +0.11% vs VWAP; target +0.8%, stop -0.4%",
   "why_exited": "lost VWAP: setup failed (-0.39%)"
+ },
+ {
+  "time": "2026-10-22T10:35:35-04:00",
+  "type": "trade_closed",
+  "agent": "trend",
+  "position_id": "pos-a3a860ab78",
+  "symbol": "CIFR261106P00010000",
+  "underlying": "CIFR",
+  "sector": "Technology",
+  "instrument": "option",
+  "entry": 0.96,
+  "exit": 1.94,
+  "pnl": 82.5,
+  "return_pct": 84.2,
+  "opened": "2026-10-14T11:35:38-04:00",
+  "why_entered": "CIFR broke below its 55-day low at 10.70 on 2.9x volume and is 43% below its 200-day SMA, so the downtrend is established; the stop at 12.81 sits above the breakdown level.",
+  "why_exited": "option target (+114%)"
+ },
+ {
+  "time": "2026-10-22T10:36:31-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "TSLA",
+   "SPY",
+   "QQQ"
+  ],
+  "aggression": "stand_down",
+  "why": "All three VWAP bounces stopped out and most candidates are trading below VWAP with 1-minute trends down, so the tape is choppy and hostile to bounces. TSLA is the only clean name (above its opening range, up 3.25%, real volume), so I'll watch it and re-enable trades only if the broad market stabiliz"
+ },
+ {
+  "time": "2026-10-22T10:36:37-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "watch": [
+   "TSLL",
+   "TSLA",
+   "SOXL",
+   "TQQQ",
+   "MU",
+   "META",
+   "NFLX",
+   "CRWV",
+   "SNDK",
+   "AMD"
+  ],
+  "aggression": "aggressive",
+  "why": "TSLL and TSLA are the only fast movers above their opening ranges with uptrends, and SOXL/TQQQ still offer the volatility we want. Keeping the wider 0.4% stop and 0.8% target because the tighter stops were hit on noise, and I'm dropping IWM and SPCX, which have been weak."
  }
 ]
