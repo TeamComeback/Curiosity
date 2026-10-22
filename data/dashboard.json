@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T10:36-04:00",
+ "updated": "2026-10-22T10:56-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -38,19 +38,19 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 1133.76,
+   "equity": 1132.38,
    "cash": 186.88,
    "available": 6.38,
    "settling": 180.5,
    "status": "active",
    "status_reason": "",
    "multiple": 1.13,
-   "progress_pct": 11.34,
+   "progress_pct": 11.32,
    "open": 6,
    "closed": 3,
    "win_rate": 33.3,
    "max_dd_pct": 13.6,
-   "risk_adj": 0.98,
+   "risk_adj": 0.97,
    "notes": [
     {
      "date": "2026-10-22",
@@ -140,7 +140,7 @@
    "competing": false,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 986.13,
+   "equity": 986.27,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
@@ -152,7 +152,7 @@
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 1.5,
-   "risk_adj": -0.28,
+   "risk_adj": -0.27,
    "notes": []
   },
   {
@@ -242,15 +242,15 @@
    "competing": false,
    "exhibition": true,
    "reached_goal": null,
-   "equity": 1003.73,
-   "cash": 1003.73,
-   "available": 251.58,
+   "equity": 1003.67,
+   "cash": 919.81,
+   "available": 167.66,
    "settling": 752.15,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
    "progress_pct": 10.04,
-   "open": 0,
+   "open": 1,
    "closed": 41,
    "win_rate": 48.8,
    "max_dd_pct": 0.5,
@@ -348,14 +348,14 @@
   {
    "date": "2026-10-22",
    "agents": {
-    "trend": 1133.76,
+    "trend": 1132.38,
     "meanrev": 1008.22,
     "volsell": 1000.0,
-    "baseline": 986.13,
+    "baseline": 986.27,
     "monkey": 983.68,
     "blackswan": 711.5,
     "scalper": 1003.99,
-    "hyper": 1003.73
+    "hyper": 1003.67
    }
   }
  ],
@@ -436,7 +436,7 @@
    "opt_type": null,
    "qty": 1.013,
    "entry": 49.36,
-   "last": 49.7,
+   "last": 49.525,
    "mark": null,
    "stop": 47.12,
    "expiry": null,
@@ -458,7 +458,7 @@
    "opt_type": null,
    "qty": 4.8287,
    "entry": 68.38,
-   "last": 66.93,
+   "last": 66.76,
    "mark": null,
    "stop": 65.77,
    "expiry": null,
@@ -480,7 +480,7 @@
    "opt_type": null,
    "qty": 0.1964,
    "entry": 354.11,
-   "last": 358.2,
+   "last": 356.24,
    "mark": null,
    "stop": 345.94,
    "expiry": null,
@@ -502,7 +502,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 762.5,
+   "last": 762.61,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -524,7 +524,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 762.5,
+   "last": 762.61,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -546,7 +546,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 762.5,
+   "last": 762.61,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -667,9 +667,44 @@
    "realized": null,
    "play": "weak_stock",
    "width": 5.0
+  },
+  {
+   "agent": "hyper",
+   "position_id": "pos-121db5c002",
+   "kind": "stock",
+   "symbol": "NFLX",
+   "underlying": null,
+   "structure": null,
+   "opt_type": null,
+   "qty": 1.2635,
+   "entry": 66.42,
+   "last": 66.375,
+   "mark": null,
+   "stop": 66.11,
+   "expiry": null,
+   "opened": "2026-10-22T10:56:54-04:00",
+   "thesis": "VWAP pullback bounce on NFLX: 0.55x volume, +0.09% vs VWAP; target +0.8%, stop -0.4%",
+   "confidence": 3,
+   "cost": 83.92,
+   "realized": null,
+   "play": "scalp",
+   "width": null
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-22T10:56:54-04:00",
+   "type": "open",
+   "agent": "hyper",
+   "symbol": "NFLX",
+   "instrument": "stock",
+   "qty": 1.2635,
+   "price": 66.42,
+   "cost": 83.92,
+   "stop": 66.11,
+   "thesis": "VWAP pullback bounce on NFLX: 0.55x volume, +0.09% vs VWAP; target +0.8%, stop -0.4%",
+   "confidence": 3
+  },
   {
    "time": "2026-10-22T10:36:37-04:00",
    "type": "playbook",
@@ -1236,13 +1271,6 @@
    "agent": "blackswan",
    "symbol": "AGCO",
    "note": "spread stop (-62%)"
-  },
-  {
-   "time": "2026-10-21T13:36:20-04:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "SPY, IWM",
-   "note": "defensive: Only about $42 is settled, so one small slice is all we can use today, and the midday tape is choppy with most VWAP bounces stalling. I'll keep SPY and IWM only, with VWAP bounces at half size, so we take only a clean reclaim with volume and IWM relative strength."
   }
  ],
  "reviews": [
@@ -2208,7 +2236,7 @@
   }
  },
  "compliance_today": {
-  "approved": 12,
+  "approved": 13,
   "denied": 0,
   "last_denied": null
  },
