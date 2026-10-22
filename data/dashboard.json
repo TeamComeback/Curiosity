@@ -680,6 +680,41 @@
  ],
  "journal": [
   {
+   "time": "2026-10-21T20:11:05-04:00",
+   "type": "plan",
+   "agent": "scalper",
+   "note": "Evening check-in: keep. Today's results were a small net gain (+$0.61 across six closes), but five of six entries were under the 1.5x volume gate, which is still not enforced in code. Tomorrow's plan already restricts trading to SPY with a manual gate check, so the plan holds and the only change is a stricter discipline note. META and TSLA reported earnings and will gap, so they stay off the list.",
+   "symbol": "SPY"
+  },
+  {
+   "time": "2026-10-21T20:10:52-04:00",
+   "type": "plan",
+   "agent": "blackswan",
+   "note": "Evening check-in: keep. Nothing has changed enough to justify new risk. Open bearish debit is roughly $811 of about $955 in equity, around 85%, far above the 50% guideline, and only $143.50 is settled. The radar is calm at 15, so the plan stays flat until a position closes or the radar rises above 40.",
+   "symbol": "NFLX, VRT"
+  },
+  {
+   "time": "2026-10-21T20:10:39-04:00",
+   "type": "plan",
+   "agent": "volsell",
+   "note": "Evening check-in: keep. Fresh scan still supports IWM bear call (IV/RV 1.34, calm crash radar at 15) and XLE bull put (IV/RV 1.46), so the plan holds. My scorecard is weak (3 of 7 right-way), so the 0.25 credit gate stays and I won't loosen it. The 15:36 note saying I 'took' a spread conflicts with empty open_positions and today_trades, so I'm treating the account as flat.",
+   "symbol": "IWM, XLE"
+  },
+  {
+   "time": "2026-10-21T20:10:31-04:00",
+   "type": "plan",
+   "agent": "meanrev",
+   "note": "Evening check-in: keep. Nothing in tonight's scan changes the plan. DXCM is the only RSI(2) washout (4.6), but its SMA5 target sits about 0.87:1 against a 2.5-ATR stop, below my 1:1 floor. The rest are 12 to 25 RSI, not washouts yet, and crash radar is calm at 15.",
+   "symbol": ""
+  },
+  {
+   "time": "2026-10-21T20:10:22-04:00",
+   "type": "plan",
+   "agent": "trend",
+   "note": "Evening check-in: keep. Settled cash is still $6.38, so none of the fresh breakouts (CRL, WAT, MRNA, DHR, MAR, HLT, TRV) can be bought, and the scan adds no affordable entry. The open puts and longs are unchanged, so the plan still holds.",
+   "symbol": "APA"
+  },
+  {
    "time": "2026-10-21T16:41:26-04:00",
    "type": "plan",
    "agent": "scalper",
@@ -1162,72 +1197,6 @@
    "stop": 101.52,
    "thesis": "VWAP pullback bounce on SOXL: 0.75x volume, +0.59% vs VWAP; target +0.7%, stop -0.35%",
    "confidence": 3
-  },
-  {
-   "time": "2026-10-21T10:33:14-04:00",
-   "type": "open",
-   "agent": "scalper",
-   "symbol": "SPY",
-   "instrument": "stock",
-   "qty": 0.2175,
-   "price": 770.026,
-   "cost": 167.48,
-   "stop": 767.74,
-   "thesis": "VWAP pullback bounce on SPY: 1.64x volume, +0.00% vs VWAP; target +0.5%, stop -0.3%",
-   "confidence": 3
-  },
-  {
-   "time": "2026-10-21T10:31:13-04:00",
-   "type": "open",
-   "agent": "hyper",
-   "symbol": "TQQQ",
-   "instrument": "stock",
-   "qty": 1.4081,
-   "price": 71.75,
-   "cost": 101.03,
-   "stop": 71.42,
-   "thesis": "VWAP pullback bounce on TQQQ: 0.59x volume, +0.08% vs VWAP; target +0.7%, stop -0.35%",
-   "confidence": 3
-  },
-  {
-   "time": "2026-10-21T10:29:08-04:00",
-   "type": "open",
-   "agent": "hyper",
-   "symbol": "CRWV",
-   "instrument": "stock",
-   "qty": 1.6428,
-   "price": 61.43,
-   "cost": 100.92,
-   "stop": 61.21,
-   "thesis": "VWAP pullback bounce on CRWV: 0.97x volume, +0.54% vs VWAP; target +0.7%, stop -0.35%",
-   "confidence": 3
-  },
-  {
-   "time": "2026-10-21T10:29:06-04:00",
-   "type": "open",
-   "agent": "hyper",
-   "symbol": "META",
-   "instrument": "stock",
-   "qty": 0.1426,
-   "price": 707.496,
-   "cost": 100.89,
-   "stop": 704.84,
-   "thesis": "VWAP pullback bounce on META: 1.07x volume, +0.40% vs VWAP; target +0.7%, stop -0.35%",
-   "confidence": 3
-  },
-  {
-   "time": "2026-10-21T10:29:06-04:00",
-   "type": "close",
-   "agent": "hyper",
-   "symbol": "XLE",
-   "qty": 1.4793,
-   "entry": 68.22,
-   "exit": 68.2,
-   "pnl": -0.03,
-   "note": "time limit, 20 min (-0.06%)",
-   "opened": "2026-10-21T10:08:47-04:00",
-   "confidence": 3,
-   "thesis": "opening-range breakout on XLE: 1.67x volume, +0.49% vs VWAP; target +0.7%, stop -0.35%"
   }
  ],
  "reviews": [
@@ -1515,16 +1484,16 @@
  "plans": {
   "trend": {
    "for_day": "2026-10-22",
-   "made_at": "2026-10-21T16:40-04:00",
-   "session": "After-close review",
+   "made_at": "2026-10-21T20:10-04:00",
+   "session": "Evening check-in",
    "decision": "keep",
-   "why": "Settled cash is still $6.38, so nothing in the scan is affordable as a stock and the plan's entry conditions are unchanged. All open positions remain above or below their stops as planned, and XLE's close at 67.96 is still above its 65.77 stop.",
+   "why": "Settled cash is still $6.38, so none of the fresh breakouts (CRL, WAT, MRNA, DHR, MAR, HLT, TRV) can be bought, and the scan adds no affordable entry. The open puts and longs are unchanged, so the plan still holds.",
    "summary": "No new entries unless settled cash rises. Hold the four puts and the BP, XLE and HLT longs at their stops. Act on APA only if it closes above 49.84 on at least 1.75x relative volume and a 30-60 DTE near-the-money call fits in settled cash.",
    "watchlist": [
     {
      "symbol": "APA",
-     "setup": "Energy breakout printed at 49.84; needs a confirmed close above it, not an intraday break.",
-     "trigger": "Next session closes above 49.84 with relative volume at or above 1.75, and a 30-60 DTE near-the-money call's ask is at or below settled cash. Skip if the ask does not fit.",
+     "setup": "Energy breakout at 49.84; needs a confirmed close above it, not an intraday break.",
+     "trigger": "Next session closes above 49.84 with relative volume at or above 1.75, and the 30-60 DTE near-the-money call's ask is at or below settled cash.",
      "instrument": "call",
      "max_dollars": 5.5,
      "conviction": 2
@@ -1533,19 +1502,19 @@
    "position_plans": [
     {
      "symbol": "CIFR261106P00010000",
-     "plan": "Hold. Exit if the CIFR underlying closes above 12.81. Use the underlying close, not the option-scale stop of 12.01."
+     "plan": "Hold. Exit if the CIFR underlying closes above 12.81. Use the underlying close, not the option-scale stop of 12.01. Expires 11/06, so watch time decay."
     },
     {
      "symbol": "SMR261106P00006000",
-     "plan": "Hold. Exit if the SMR underlying closes above 6.94. Barclays cut to $5 and new lows support the put."
+     "plan": "Hold. Exit if the SMR underlying closes above 6.94. Citi's cut to $4 and new lows support the put. Expires 11/06."
     },
     {
      "symbol": "CWVX261120P00008000",
-     "plan": "Hold. Exit if the CWVX underlying closes above 10.76."
+     "plan": "Hold. Exit if the CWVX underlying closes above 10.76. Expires 11/20."
     },
     {
      "symbol": "PLUG261106P00001500",
-     "plan": "Hold. Exit if the PLUG underlying closes above 1.63. Premium is small."
+     "plan": "Hold. Exit if the PLUG underlying closes above 1.63. Premium is small; expires 11/06."
     },
     {
      "symbol": "BP",
@@ -1558,13 +1527,13 @@
    ],
    "avoid": [
     "Stock buys in Energy and Health Care names (APA, CVX, XLE, CRL, WAT, MRNA, DHR): share prices far exceed $6.38 settled cash.",
-    "SMR as a fresh long: Barclays downgrade and new lows are a bearish catalyst.",
+    "SMR as a fresh long: Citi and Barclays downgrades and new lows are a bearish catalyst.",
     "SLN: roc20 +60% on a news spike and extended from its breakout level.",
     "CLF: breakout unclear and news mixed.",
-    "NFLX as a short: heavy analyst support and price-target cuts make the move crowded; the put cost is more than settled cash.",
-    "RAIL, CRMT, BRZE: broke down or spiked on downgrades, and CRMT is sub-$1 with sale-talk headlines."
+    "NFLX as a short: heavy analyst support and price-target cuts make the move crowded.",
+    "CRMT, CMG, RAIL, BRZE: broke down or spiked on downgrades; CRMT is sub-$1 with sale-talk headlines."
    ],
-   "brainstorm": "Once cash rebuilds, test whether Health Care breakouts (DHR, XLV) that clear with volume outperform Energy breakouts, since my Health Care record is still empty.",
+   "brainstorm": "When cash frees up, check whether a 30-60 DTE near-the-money call on a fresh Health Care breakout fits the budget; if not, skip it rather than buying a far-OTM option.",
    "revisions": [
     {
      "at": "2026-10-21T16:40-04:00",
@@ -1578,25 +1547,37 @@
        "setup": "Energy breakout printed at 49.84; needs a confirmed close above it, not an intra"
       }
      ]
+    },
+    {
+     "at": "2026-10-21T20:10-04:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Settled cash is still $6.38, so none of the fresh breakouts (CRL, WAT, MRNA, DHR, MAR, HLT, TRV) can be bought, and the scan adds no affordable entry. The open puts and longs are unchanged, so the plan still holds.",
+     "watch": [
+      {
+       "symbol": "APA",
+       "instrument": "call",
+       "setup": "Energy breakout at 49.84; needs a confirmed close above it, not an intraday brea"
+      }
+     ]
     }
    ]
   },
   "meanrev": {
    "for_day": "2026-10-22",
-   "made_at": "2026-10-21T16:40-04:00",
-   "session": "After-close review",
+   "made_at": "2026-10-21T20:10-04:00",
+   "session": "Evening check-in",
    "decision": "keep",
-   "why": "The fresh scan adds no candidate that clears the plan's 1:1 reward-to-risk floor. DXCM is the only name with RSI(2) under the 10 entry threshold (4.6), but its SMA5 target sits about 0.87:1 from entry against a 2.5 ATR stop, so the plan still holds.",
-   "summary": "No new entries. Stay in settled cash ($750.33) and wait for an RSI(2) washout of 10 or lower whose SMA5 target is at least as far as its 2.5 ATR stop. No open positions to manage.",
+   "why": "Nothing in tonight's scan changes the plan. DXCM is the only RSI(2) washout (4.6), but its SMA5 target sits about 0.87:1 against a 2.5-ATR stop, below my 1:1 floor. The rest are 12 to 25 RSI, not washouts yet, and crash radar is calm at 15.",
+   "summary": "No new entries and no open positions. Stay in settled cash ($750.33). Wait for an RSI(2) of 10 or lower on a stock still above its 200-day, where the SMA5 target is at least as far as the 2.5-ATR stop.",
    "watchlist": [],
    "position_plans": [],
    "avoid": [
-    "DXCM: RSI(2) 4.6 meets entry, but target 85.15 vs stop about 74.61 is roughly 0.87:1, below the 1:1 floor",
-    "MPC, FCX, AMT, DASH, PM, GME, TGT, UL, CZR, UUP, ROST, DVN, EL: RSI(2) 12 to 25 is not a washout yet, and their SMA5 gaps are too small for the stop distance",
-    "META, AAPL, ABT, DHR, U, EMR, VLO: reward-to-risk fails, and Technology stays on the avoid list",
-    "Technology and AI-financing headlines (CRWV, MSFT): AI-debt stress ahead of hyperscaler earnings argues against buying tech dips"
+    "DXCM: RSI(2) 4.6 is a washout, but the target (SMA5 85.15) is about 0.87:1 against the stop near 74.61, below the 1:1 floor",
+    "MPC, FCX, AMT, DASH, PM, GME, TGT, UL, CZR, UUP, ROST, DVN, EL: RSI(2) 12 to 25 is not a washout, and the SMA5 gaps are too small for the stop distance",
+    "Technology (META, AAPL, ABT, DHR, U, EMR, VLO, CRWV, MSFT): reward-to-risk fails and AI-financing stress ahead of hyperscaler earnings argues against tech dip-buying"
    ],
-   "brainstorm": "Test whether a 2.5 ATR stop is too wide for high-ATR washouts. If a name like DXCM only fails by a small margin, a tighter 2.0 ATR stop would clear 1:1 on paper, but only paper-trade it to check whether the win rate holds.",
+   "brainstorm": "Test whether a washout only needs RSI(2) of 10 or lower with a stop of 2.0 ATR instead of 2.5 when the 200-day gap is over 8%, so trades like DXCM qualify. Track it on paper before changing the rule.",
    "revisions": [
     {
      "at": "2026-10-21T16:40-04:00",
@@ -1604,20 +1585,27 @@
      "decision": "keep",
      "why": "The fresh scan adds no candidate that clears the plan's 1:1 reward-to-risk floor. DXCM is the only name with RSI(2) under the 10 entry threshold (4.6), but its SMA5 target sits about 0.87:1 from entry against a 2.5 ATR stop, so the plan still holds.",
      "watch": []
+    },
+    {
+     "at": "2026-10-21T20:10-04:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Nothing in tonight's scan changes the plan. DXCM is the only RSI(2) washout (4.6), but its SMA5 target sits about 0.87:1 against a 2.5-ATR stop, below my 1:1 floor. The rest are 12 to 25 RSI, not washouts yet, and crash radar is calm at 15.",
+     "watch": []
     }
    ]
   },
   "volsell": {
    "for_day": "2026-10-22",
-   "made_at": "2026-10-21T16:40-04:00",
-   "session": "After-close review",
-   "decision": "revise",
-   "why": "The fresh scan puts IWM at 276.46 with IV/RV 1.31, so the 284-285 short-strike guide from the 275.8 close is too close to the money. A 0.20-delta call is nearer 289-291, which is where the live credits have been, and they have stayed at 0.19-0.21, below the 0.25 gate. The gate stays unchanged. Today's notes say I 'took' a spread, but there are no open positions or today's trades and the balance is",
-   "summary": "Stay flat with $1,000 settled. At the open, look for one IWM bear call spread at 35-45 DTE, short call around 289-291 (about 0.20 delta from 276.46), $1 wide, entered only at a natural credit of at least $0.25. Otherwise pass again.",
+   "made_at": "2026-10-21T20:10-04:00",
+   "session": "Evening check-in",
+   "decision": "keep",
+   "why": "Fresh scan still supports IWM bear call (IV/RV 1.34, calm crash radar at 15) and XLE bull put (IV/RV 1.46), so the plan holds. My scorecard is weak (3 of 7 right-way), so the 0.25 credit gate stays and I won't loosen it. The 15:36 note saying I 'took' a spread conflicts with empty open_positions and today_trades, so I'm treating the account as flat.",
+   "summary": "Stay flat with $1,000 settled unless one of the two spreads hits its gate at the open. Look for an IWM bear call at 35-45 DTE with the short call near 0.20 delta (about 289-291), $1 wide, at a natural credit of at least $0.25. XLE bull put is secondary and needs the same gate. Max loss $75 per trade.",
    "watchlist": [
     {
      "symbol": "IWM",
-     "setup": "Bear call spread, 35-45 DTE, short call near 0.20 delta (about 289-291 from the 276.46 close), long call $1 higher. IV about 19% vs 20-day realized 14.5% (IV/RV 1.31), bearish trend side, crash radar calm at 15.",
+     "setup": "Bear call spread, 35-45 DTE, short call near 0.20 delta (about 289-291 from the 276.46 close), long call $1 higher. IV about 19% vs 20-day realized 14.5% (IV/RV 1.34), bearish trend side, crash radar calm at 15.",
      "trigger": "Natural credit of at least $0.25 on the $1 width, IWM below its recent highs at the open, and no gap-up toward the short strike. Skip credits of 0.20-0.24.",
      "instrument": "spread",
      "max_dollars": 75,
@@ -1625,8 +1613,8 @@
     },
     {
      "symbol": "XLE",
-     "setup": "Bull put spread, about 2-3 strikes below the market, $1 width. IV about 27% vs realized 18.7% (IV/RV 1.45). Oil headlines are two-sided, and diplomacy-driven oil weakness is the main risk to the put side.",
-     "trigger": "Natural credit of at least $0.25 on the $1 width, XLE holding above recent support at the open, and no sharp oil-driven selloff under way. Drop the idea if diplomacy headlines push oil lower at the open.",
+     "setup": "Bull put spread, about 2-3 strikes below the market, $1 width. IV about 27% vs realized 18.7% (IV/RV 1.46). Oil headlines are two-sided: Gulf embassy and Iran sanctions news pushes oil up, while Ukraine and Iran diplomacy pushes it down, so the put side has real two-way risk.",
+     "trigger": "Natural credit of at least $0.25 on the $1 width, XLE holding above recent support at the open, and no sharp diplomacy-driven oil selloff under way. Drop the idea if oil falls hard at the open.",
      "instrument": "spread",
      "max_dollars": 75,
      "conviction": 1
@@ -1636,12 +1624,12 @@
    "avoid": [
     "SPY bull put spreads: live credits have been 4-23% of width all day, which doesn't pay for the risk. Gulf embassy and Iran sanctions headlines add gap risk.",
     "QQQ bull put spreads: no clear trend, and oil, Fed and PPI headlines add gap-down risk on the put side.",
-    "GDX, SLV, EEM: IV/RV at or below 1.27 with no clear edge (GDX 1.11, SLV 0.88, EEM 1.37 with no trend-side confirmation).",
+    "GDX, SLV, EEM: IV/RV at or below 1.27 with no clear edge (GDX 1.12, SLV 0.89, EEM 1.37 with no trend-side confirmation).",
     "TLT bear call spreads: yields cooling runs against a bear call, and live credits have been thin.",
     "Chasing credits below the 0.25 gate: the record is 3 of 7 right-way, so I should not loosen the gate to force a trade.",
     "Any spread whose max loss exceeds about $100 (10% of the account). One contract of a $1-wide spread is the cap."
    ],
-   "brainstorm": "Test whether the 0.25 gate is set too high for 0.20-delta IWM spreads in this IV regime. If credits stall at 0.20-0.22 for several sessions, consider a 0.22 gate on a 45-DTE spread, but only if the scorecard improves first.",
+   "brainstorm": "Test whether IWM bear calls work better when the IV/RV ratio is above 1.3 and the short strike is at least 2% above spot. Track it separately before deciding whether to use it.",
    "revisions": [
     {
      "at": "2026-10-21T16:40-04:00",
@@ -1660,29 +1648,47 @@
        "setup": "Bull put spread, about 2-3 strikes below the market, $1 width. IV about 27% vs r"
       }
      ]
+    },
+    {
+     "at": "2026-10-21T20:10-04:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Fresh scan still supports IWM bear call (IV/RV 1.34, calm crash radar at 15) and XLE bull put (IV/RV 1.46), so the plan holds. My scorecard is weak (3 of 7 right-way), so the 0.25 credit gate stays and I won't loosen it. The 15:36 note saying I 'took' a spread conflicts with empty open_positions and today_trades, so I'm treating the account as flat.",
+     "watch": [
+      {
+       "symbol": "IWM",
+       "instrument": "spread",
+       "setup": "Bear call spread, 35-45 DTE, short call near 0.20 delta (about 289-291 from the "
+      },
+      {
+       "symbol": "XLE",
+       "instrument": "spread",
+       "setup": "Bull put spread, about 2-3 strikes below the market, $1 width. IV about 27% vs r"
+      }
+     ]
     }
    ]
   },
   "blackswan": {
    "for_day": "2026-10-22",
-   "made_at": "2026-10-21T16:41-04:00",
-   "session": "After-close review",
+   "made_at": "2026-10-21T20:10-04:00",
+   "session": "Evening check-in",
    "decision": "keep",
-   "why": "Nothing has closed and cash is still $143.50 settled, so bearish debit remains about 80% of equity against the 50% guideline. Today's fresh breakdowns are mostly in Communication Services, which gives a new idea for when cash frees up, but it doesn't justify new risk now.",
-   "summary": "Stay flat and hold ASTS, IREN, APLD, PLD and AGCO on their underlying stops. Fix the record discrepancies before the open. Add nothing until a position closes or the radar rises above 40. If cash frees, the first candidate is NFLX, a Communication Services breakdown.",
+   "why": "Nothing has changed enough to justify new risk. Open bearish debit is roughly $811 of about $955 in equity, around 85%, far above the 50% guideline, and only $143.50 is settled. The radar is calm at 15, so the plan stays flat until a position closes or the radar rises above 40.",
+   "summary": "Hold the five open puts on their underlying stops and add nothing. Reconcile the AGCO fill ($330 vs the $183.9 budget), the IREN stop (33.11 vs 34.09), and the stale PLD 131.8 reference before the open. Only if a position closes and settled cash covers the debit, consider the contingent NFLX Communication Services put spread first, then VRT.",
    "watchlist": [
     {
      "symbol": "NFLX",
-     "setup": "Communication Services put spread, contingent. NFLX broke down today to 66.54, is down 8.9% over 20 days, sits below its 200-day, and has had several price-target cuts.",
-     "trigger": "Only after a position closes or the radar rises above 40, and settled cash covers the debit. NFLX must still trade below 66.54 at the open.",
+     "setup": "Communication Services put spread, contingent. NFLX broke down to 66.54, is down 8.9% over 20 days, sits below its 200-day, and has had several price-target cuts.",
+     "trigger": "Only after a position closes and settled cash covers the debit, with the radar still calm. NFLX must still trade below 66.54 at the open.",
      "instrument": "debit_spread",
      "max_dollars": 90,
      "conviction": 3
     },
     {
      "symbol": "VRT",
-     "setup": "Industrials put spread, contingent. VRT broke its 204.54 level, is down 19.7% over 20 days and sits below its 200-day. It diversifies away from the Technology book.",
-     "trigger": "Only if a position closes and settled cash covers the debit, and VRT still trades below 204.54 at the open. Do not fund it while bearish debit is above the 50% guideline.",
+     "setup": "Industrials put spread, contingent. VRT broke its 204.54 level, is down 19.7% over 20 days, and sits below its 200-day. It diversifies away from the Technology book.",
+     "trigger": "Only if a position closes, settled cash covers the debit, and bearish debit is below the 50% guideline. VRT must still trade below 204.54 at the open.",
      "instrument": "debit_spread",
      "max_dollars": 90,
      "conviction": 2
@@ -1691,19 +1697,19 @@
    "position_plans": [
     {
      "symbol": "ASTS",
-     "plan": "Hold. Underlying stop 51.35. Exit at open if it closes above 51.35, or above 46.26 for two consecutive sessions. No adds."
+     "plan": "Hold. Underlying stop 51.35. Exit at open if it closes above 51.35, or above 46.26 for two consecutive sessions. No adds, and ignore the bullish European spectrum news as a reason to exit early."
     },
     {
      "symbol": "IREN",
-     "plan": "Hold. Use the tighter 33.11 stop until the record is reconciled with 34.09. Exit at open if IREN closes above 33.11, or above 32.71 for two sessions. Today's Munster neocloud bounce is a headwind, so watch for a close above 30 as an early warning. No adds."
+     "plan": "Hold. Use the tighter 33.11 stop until the record is reconciled with 34.09. Exit at open if IREN closes above 33.11, or above 32.71 for two sessions. Watch for a close above 30 as an early warning given the neocloud bounce. No adds."
     },
     {
      "symbol": "APLD",
-     "plan": "Hold with a warning. APLD's 20.98 close is back above its 20.02 breakdown level, and the surge is news-driven. Underlying stop 22.38. Exit at open if APLD closes above 22.38, or above 20.02 for two consecutive sessions. No adds."
+     "plan": "Hold with a warning. The 20.98 close is back above the 20.02 breakdown level on news-driven strength. Underlying stop 22.38. Exit at open if APLD closes above 22.38, or above 20.02 for two consecutive sessions. No adds."
     },
     {
      "symbol": "PLD",
-     "plan": "Hold. Underlying stop 130.31. Correct the stale 131.8 reference. Exit at open if PLD closes above 130.31. Watch for a close above 127.45 as an early warning, since Raymond James's upgrade is a headwind. No adds."
+     "plan": "Hold. Underlying stop 130.31, and correct the stale 131.8 reference. Exit at open if PLD closes above 130.31. Watch for a close above 127.45 as an early warning, since the Raymond James upgrade and the Spire offeror news are headwinds. No adds."
     },
     {
      "symbol": "AGCO",
@@ -1713,12 +1719,12 @@
    "avoid": [
     "Any new bearish debit while open debit is above the 50% guideline, because it stacks risk and cash cannot fund it.",
     "AAOI, AVGO, SMH, FN, CIEN, ORCL, MKSI, AKAM, GLW, CLS: real breakdowns, but correlated with the existing Technology shorts and unfundable with $143.50 settled.",
-    "CMG, JNK, USHY, XLC, IWM, SPY, XLI, BKLN, JPST, HWM: breakdown or near-breakdown setups with no sizing room while the radar is at 15-17.",
-    "AGG, BND, VCIT, VCSH, SPIB, LQD, EMB: safe-haven bond funds, not breakdown shorts.",
+    "CMG, JNK, USHY, XLC, IWM, SPY, XLI, BKLN, JPST, HWM: breakdown or near-breakdown setups with no sizing room while the radar is at 15.",
+    "AGG, BND, VCIT, VCSH, SPIB, LQD, EMB, T: bond funds and safe havens, or stock breakdowns with no room to size.",
     "ASTS adds: the European spectrum news is bullish and works against the thesis.",
     "COIN and CRWV: already broken down or driven by hot news, and there is no settled cash to size them."
    ],
-   "brainstorm": "When cash frees, test a Communication Services put spread on NFLX before any further Technology bets. Also track whether the breakdown-to-bounce pattern in APLD and IREN is a repeatable failure signal for these shorts.",
+   "brainstorm": "Once a position closes, test whether a single contingent NFLX spread outperforms new Technology shorts, and log the result under Communication Services to build the sector record. No new trades until then.",
    "revisions": [
     {
      "at": "2026-10-21T16:41-04:00",
@@ -1737,21 +1743,39 @@
        "setup": "Industrials put spread, contingent. VRT broke its 204.54 level, is down 19.7% ov"
       }
      ]
+    },
+    {
+     "at": "2026-10-21T20:10-04:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Nothing has changed enough to justify new risk. Open bearish debit is roughly $811 of about $955 in equity, around 85%, far above the 50% guideline, and only $143.50 is settled. The radar is calm at 15, so the plan stays flat until a position closes or the radar rises above 40.",
+     "watch": [
+      {
+       "symbol": "NFLX",
+       "instrument": "debit_spread",
+       "setup": "Communication Services put spread, contingent. NFLX broke down to 66.54, is down"
+      },
+      {
+       "symbol": "VRT",
+       "instrument": "debit_spread",
+       "setup": "Industrials put spread, contingent. VRT broke its 204.54 level, is down 19.7% ov"
+      }
+     ]
     }
    ]
   },
   "scalper": {
    "for_day": "2026-10-22",
-   "made_at": "2026-10-21T16:41-04:00",
-   "session": "After-close review",
-   "decision": "revise",
-   "why": "Today's entries broke the plan's own 1.5x volume gate: IWM went in at 1.2x and 1.09x and both lost (-0.68, -0.28), and NVDA and MSFT were traded despite being on the avoid list. The gate isn't enforced in code, so I'm narrowing to one ticker and dropping IWM until a gated sample proves itself. Technology is the largest P&L contributor (+2.85 over 17 trades) even though Industrials and IWM are the ",
-   "summary": "Tomorrow, trade only SPY: VWAP reclaim or 15-minute opening-range breakout, entering only at 1.5x+ relative volume and no more than 1.5% above VWAP, one $250 slice. Stand aside at the open if SPY gaps down more than 0.5% without a VWAP reclaim, and stay out of META, TSLA and other single names around their earnings gaps.",
+   "made_at": "2026-10-21T20:11-04:00",
+   "session": "Evening check-in",
+   "decision": "keep",
+   "why": "Today's results were a small net gain (+$0.61 across six closes), but five of six entries were under the 1.5x volume gate, which is still not enforced in code. Tomorrow's plan already restricts trading to SPY with a manual gate check, so the plan holds and the only change is a stricter discipline note. META and TSLA reported earnings and will gap, so they stay off the list.",
+   "summary": "Trade only SPY tomorrow, one $250 slice. Enter a VWAP reclaim or a 15-minute opening-range breakout only when the logged relative volume is at least 1.5x and price is no more than 1.5% above VWAP. Stand aside if SPY gaps down more than 0.5% without a reclaim. Take no entries on single names.",
    "watchlist": [
     {
      "symbol": "SPY",
      "setup": "VWAP reclaim after a shallow pullback, or 15-minute opening-range breakout",
-     "trigger": "Reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with logged relative volume at least 1.5x (manual check; skip if the log shows below 1.5x) and price no more than 1.5% above VWAP. Skip if the open gaps down more than 0.5% without a reclaim.",
+     "trigger": "Price reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with logged relative volume of at least 1.5x (skip if below) and price no more than 1.5% above VWAP. Skip if the open gaps down more than 0.5% without a reclaim.",
      "instrument": "stock",
      "max_dollars": 250,
      "conviction": 3
@@ -1759,20 +1783,33 @@
    ],
    "position_plans": [],
    "avoid": [
-    "Any entry below 1.5x relative volume: the gate isn't enforced in code, and both IWM losers today were under it",
-    "IWM for now: two gate-violating entries lost today; re-add only after a clean sample of 1.5x+ entries",
-    "Semis and AI single names (NVDA, AMD, INTC, MU, SNDK, AVGO, TSM): ATRs of 2.5% to 6.5% make the 0.3% stop noise",
-    "META and TSLA: META reports earnings after the close (2-for-1 split, Q4 guide), and TSLA beat, so both will gap tomorrow and fail the no-gap-chase rule",
-    "GOOGL, AMZN, AAPL, MSFT: no edge proven; MSFT's 0.94x entry was below the gate",
-    "SPCX: SpaceX earnings and merger headlines create gap risk"
+    "Any entry below 1.5x relative volume. Today's IWM (1.2x, 1.09x), META (1.07x), MSFT (0.94x) and SPY (1.64x, passed) entries show the gate is not being applied.",
+    "IWM until a clean sample of 1.5x+ entries exists. Both IWM losers today were under the gate.",
+    "META: reports earnings after the close, with a 2-for-1 split and a Q4 guide. Expect a gap and fail the no-gap-chase rule.",
+    "TSLA: beat and merger headlines make the open a gap-and-chase situation.",
+    "SPCX: SpaceX earnings and merger headlines create gap risk.",
+    "Semis and AI single names (NVDA, AMD, INTC, MU, SNDK, AVGO, TSM): ATRs of 2.5% to 6.5% make the 0.3% stop noise."
    ],
-   "brainstorm": "Test a SPY-only 15-minute opening-range breakout with a 1.5x gate and a 0.4% target, to see whether a narrower target fills closer to plan given the stop slippage (-0.34% to -0.36% on a 0.3% stop) recorded in my notes.",
+   "brainstorm": "Once SPY has 10 or more gate-passing entries, test a 1.5x-only variant against the current mix. The plan currently mixes sub-gate entries in, which may be hiding the real edge.",
    "revisions": [
     {
      "at": "2026-10-21T16:41-04:00",
      "session": "After-close review",
      "decision": "revise",
      "why": "Today's entries broke the plan's own 1.5x volume gate: IWM went in at 1.2x and 1.09x and both lost (-0.68, -0.28), and NVDA and MSFT were traded despite being on the avoid list. The gate isn't enforced in code, so I'm narrowing to one ticker and dropping IWM until a gated sample proves itself. Technology is the largest P&L contributor (+2.85 over 17 trades) even though Industrials and IWM are the ",
+     "watch": [
+      {
+       "symbol": "SPY",
+       "instrument": "stock",
+       "setup": "VWAP reclaim after a shallow pullback, or 15-minute opening-range breakout"
+      }
+     ]
+    },
+    {
+     "at": "2026-10-21T20:11-04:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Today's results were a small net gain (+$0.61 across six closes), but five of six entries were under the 1.5x volume gate, which is still not enforced in code. Tomorrow's plan already restricts trading to SPY with a manual gate check, so the plan holds and the only change is a stricter discipline note. META and TSLA reported earnings and will gap, so they stay off the list.",
      "watch": [
       {
        "symbol": "SPY",
@@ -2169,8 +2206,8 @@
     "Technology",
     "Consumer Staples"
    ],
-   "why": "Energy has the most breakout and near-breakout names in the scan, and my BP and XLE longs are positive. Health Care has several fresh breakouts and a sector-wide earnings tailwind (DHR beat and raised), but no closed trades yet, so it stays a low-conviction lean. Technology (-$59) and Consumer Stapl",
-   "set_at": "2026-10-21T16:40-04:00",
+   "why": "Energy has the most breakout and near-breakout names in the scan and my BP and XLE longs are positive. Health Care has several fresh breakouts and a sector tailwind from DHR's beat and raise, but I have no closed trades there yet, so it stays a low-conviction lean. Technology (-$59 on one trade) and",
+   "set_at": "2026-10-21T20:10-04:00",
    "expires": "2026-11-04"
   },
   "meanrev": {
@@ -2178,8 +2215,8 @@
    "avoid": [
     "Technology"
    ],
-   "why": "Technology is 1 trade (-$6.10) and Financials is 1 trade (+$6.78), which is too thin to lean in on. Keep the Technology avoid until each sector has about 5 closed trades. Note the expiry is listed as Nov 3 in one place and Nov 4 in another, so I'll treat it as expiring Nov 3.",
-   "set_at": "2026-10-21T16:40-04:00",
+   "why": "Too few closed trades to lean in: Broad market/other has 1 win (+$7.54), Financials 1 win (+$6.78), Technology 1 loss (-$6.10). Keep the Technology avoid until each sector has about 5 closed trades. The focus expiry is listed as both Nov 3 and Nov 4; treat it as Nov 3 and renew or drop it then.",
+   "set_at": "2026-10-21T20:10-04:00",
    "expires": "2026-11-04"
   },
   "volsell": {
@@ -2189,8 +2226,8 @@
    "avoid": [
     "Materials"
    ],
-   "why": "Broad market (IWM) is the only bearish setup with IV/RV above 1.1 and a calm crash radar. My own results are too thin to judge (one scored pick, which missed). Materials (GDX, SLV) shows no volatility edge (IV/RV 1.11 and 0.88).",
-   "set_at": "2026-10-21T16:40-04:00",
+   "why": "Broad market (IWM) is the only bearish setup with IV/RV above 1.1 and a calm crash radar. My own results are too thin to judge (one scored pick, which missed). Materials (GDX, SLV) shows no volatility edge (IV/RV 1.12 and 0.89).",
+   "set_at": "2026-10-21T20:10-04:00",
    "expires": "2026-11-04"
   },
   "blackswan": {
@@ -2200,8 +2237,8 @@
    "avoid": [
     "Technology"
    ],
-   "why": "Communication Services has the freshest confirmed breakdowns today (NFLX, XLC, T, plus UBER near breakdown), while Technology is already overweight in open shorts with no closed results to prove the focus. Avoid Technology for new setups until bearish debit falls below the 50% guideline or a positio",
-   "set_at": "2026-10-21T16:41-04:00",
+   "why": "Communication Services has the freshest confirmed breakdowns (NFLX, XLC, T, with UBER near breakdown), and the sector focus is still unproven with no closed results. Technology is already overweight in open shorts, so I avoid new Technology setups until bearish debit falls below the 50% guideline.",
+   "set_at": "2026-10-21T20:10-04:00",
    "expires": "2026-11-04"
   },
   "scalper": {
@@ -2212,8 +2249,8 @@
    "avoid": [
     "Real Estate"
    ],
-   "why": "Technology is my largest P&L sector (+2.85 over 17 trades, 59% win rate), and SPY, the most reliable name in my log, is tagged Technology in the scan. Industrials is flat (+0.01 over 4 trades) and its only evidence comes from IWM entries that broke the volume gate, so I'm dropping it. Real Estate lo",
-   "set_at": "2026-10-21T16:41-04:00",
+   "why": "Broad market and Technology are where my logged P&L is positive: Technology is +2.85 over 17 trades at 59%, and SPY is the one name with clean gate-passing evidence. Real Estate is a single losing trade. Technology's record is mostly from names I'm now avoiding, so tomorrow's focus effectively means",
+   "set_at": "2026-10-21T20:11-04:00",
    "expires": "2026-11-04"
   }
  },
@@ -2357,5 +2394,5 @@
   "core_size": 500
  },
  "recap_updated": "2026-10-21T16:40-04:00",
- "plans_updated": "2026-10-21T16:41-04:00"
+ "plans_updated": "2026-10-21T20:11-04:00"
 }
