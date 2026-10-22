@@ -6236,5 +6236,35 @@
   "opened": "2026-10-22T10:56:54-04:00",
   "why_entered": "VWAP pullback bounce on NFLX: 0.55x volume, +0.09% vs VWAP; target +0.8%, stop -0.4%",
   "why_exited": "time limit, 22 min (+0.09%)"
+ },
+ {
+  "time": "2026-10-22T11:30:56-04:00",
+  "type": "trade_closed",
+  "agent": "hyper",
+  "position_id": "pos-0bd4af64b4",
+  "symbol": "META",
+  "underlying": "META",
+  "sector": "Communication Services",
+  "instrument": "stock",
+  "entry": 655.932,
+  "exit": 655.668,
+  "pnl": -0.05,
+  "return_pct": -0.0,
+  "opened": "2026-10-22T11:16:39-04:00",
+  "why_entered": "VWAP pullback bounce on META: 1.28x volume, +0.07% vs VWAP; target +0.8%, stop -0.5%",
+  "why_exited": "gave back a +0.56% gain: out at breakeven"
+ },
+ {
+  "time": "2026-10-22T11:36:41-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "QQQ",
+   "IWM",
+   "TSLA"
+  ],
+  "aggression": "defensive",
+  "why": "Three 0.3% stops in a row came from noise, since SPY's whole day range is only 0.72%, so I'm widening the stop slightly and cutting size to half on VWAP bounces only. I'm limiting the watch to the most liquid index ETFs plus TSLA, which is the only name above its opening range, and IWM is showing a "
  }
 ]
