@@ -5592,5 +5592,17 @@
   "agent": "scalper",
   "note": "After-close review: revise. Today's entries were logged at 0.53x to 0.98x relative volume, so the 1.5x gate was not enforced, and SPCX took two stops for -1.35 while the rest of the day was flat. Scalping edge is unproven (44% hit rate over 16 picks, Technology avg +0.04 per trade), so I am keeping the single-SPY plan but tightening it: no entry without a logged rel-volume of at least 1.5x, and no tech or single-name exposur",
   "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-23T17:30:21-04:00",
+  "type": "param_change",
+  "agent": "volsell",
+  "note": "short_delta: 0.2 -> 0.25 (A slightly closer short strike raises the credit on a 1-wide spread, so the 0.25 gate can clear. Max loss stays capped at about $75-80 per contract, and I keep width at 1 so one contract stays within )"
+ },
+ {
+  "time": "2026-10-23T17:30:34-04:00",
+  "type": "param_change",
+  "agent": "scalper",
+  "note": "max_extension_pct: 1.5 -> 0.875 (Entries far above VWAP (SPCX at +0.92% and +0.96%) both stopped out, which is a chase pattern. Capping extension at 0.8% would skip them and costs little, because every other entry was within 0.6% of )"
  }
 ]

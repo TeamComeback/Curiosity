@@ -383,6 +383,10 @@
     {
      "date": "2026-10-23",
      "note": "Live settled cash is $17.13, so no candidate is fundable (RBRK needs about $129 per share, and the puts exceed the cash). Ignoring the game plan's $186.88 figure. Holding all positions at their stops and reassessing when CIFR proceeds settle."
+    },
+    {
+     "date": "2026-10-23",
+     "note": "[weekly] Three trades is noise, so don't retune on it. The real constraint is liquidity: settled cash sat at $17 for days, which blocked every entry. Size positions so some settled cash stays free, and avoid piling into one sector (Energy). Let winners run to targets and keep cutting failed breakouts quickly"
     }
    ],
    "last_exits": {
@@ -807,6 +811,10 @@
     {
      "date": "2026-10-23",
      "note": "No candidate clears the 1:1 reward-to-risk floor (META ~0.54:1, COR ~0.43:1, GME ~0.35:1, MPC/PSX/VLO ~0.25-0.3:1). Holding DXCM under its 71.98 stop and SMA5/RSI70/7-day time plan, keeping $758 settled cash."
+    },
+    {
+     "date": "2026-10-23",
+     "note": "[weekly] With 3 closed trades, the gap between confidence 2 ($7.54) and confidence 3 ($0.34) is noise, not a signal. Don't retune on it. The 1:1 reward-to-risk floor kept me out of poor setups, and the only trades taken were ones that cleared it. Revisit stop_atr (2.5) only after about 15-20 closed trades, a"
     }
    ],
    "last_exits": {
@@ -1115,6 +1123,10 @@
     {
      "date": "2026-10-23",
      "note": "15:36 pass: IWM 291/292 bear call credit is 0.21, below my 0.25 gate. TLT and EEM remain excluded. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for a credit of at least 0.25."
+    },
+    {
+     "date": "2026-10-23",
+     "note": "[weekly] Zero trades in a week means the filters are too strict for the account size, not that the market is bad. Fix the bottleneck with one small, defined-risk change (delta) rather than widening the spread or loosening the IV/RV edge, then review actual fills next week."
     }
    ],
    "last_exits": {},
@@ -1806,6 +1818,10 @@
     {
      "date": "2026-10-23",
      "note": "Pass on XLC: a ~$136 debit would leave about $7 of settled cash with open bearish debit above the 50% guideline. Reconcile the AGCO fill ($330 vs $183.9 budget) and reassess when a position settles or if the radar rises above 40."
+    },
+    {
+     "date": "2026-10-23",
+     "note": "[weekly] No closed trades this week, so there is nothing to tune from. Retuning on noise would be overfitting. The real issue is oversized open debit (~$811 vs ~$737 equity) and the AGCO fill ($330 vs $183.9 budget), which needs reconciling. Keep new positions within budget, and wait for closes to settle or "
     }
    ],
    "last_exits": {},
@@ -2064,6 +2080,10 @@
     {
      "date": "2026-10-16",
      "note": "[weekly] Sample of 9 trades is too small to tune on. Entries logged rel volume below the 1.5 minimum (0.44x-0.99x), so check whether min_rel_volume is actually enforced for VWAP pullbacks before relying on it. Stops filled at -0.34% to -0.36% against a 0.3% setting, so slippage is real. Revisit after 20 or m"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "[weekly] The edge is thin (about +$0.10 per trade, 36 trades), so avoid over-tuning. min_rel_volume=1.5 does not appear to be enforced on VWAP pullbacks, since many entries logged 0.5-0.99x, so changing it is likely a no-op until that is verified. Trades with rel volume of 1.5 or more showed no clear advanta"
     }
    ],
    "last_exits": {

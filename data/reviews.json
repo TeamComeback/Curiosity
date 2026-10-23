@@ -219,5 +219,408 @@
     }
    }
   }
+ },
+ {
+  "date": "2026-10-23",
+  "agents": {
+   "trend": {
+    "summary": "Equity rose from 1054.98 to 1201.84 this week, but closed-trade P&L was only +6.62 across 3 trades: one +82.5 option winner (CIFR) against two losers (SOFI put -59, ETSY -16.88). The 33% win rate with a roughly 2.2:1 win/loss ratio is still positive expectancy, and the ETSY failed-breakout exit cut a loss early as intended. Three trades is too small a sample to justify retuning, and the 13.6% drawdown is acceptable, so I'm leaving parameters unchanged.",
+    "applied": [],
+    "stats": {
+     "equity_now": 1201.84,
+     "equity_week_ago": 1054.98,
+     "closed_trades": 3,
+     "closed_this_week": 3,
+     "week_pnl": 6.62,
+     "win_rate": 33.3,
+     "avg_win": 82.5,
+     "avg_loss": -37.94,
+     "max_drawdown_pct": 13.6,
+     "avg_pnl_by_confidence": {
+      "3": 2.21
+     },
+     "this_week_trades": [
+      {
+       "symbol": "SOFI261127P00014500",
+       "pnl": -59.0,
+       "note": "trailing stop on underlying",
+       "thesis": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level.",
+       "confidence": 3
+      },
+      {
+       "symbol": "ETSY",
+       "pnl": -16.88,
+       "note": "agent: Failed breakout: ETSY is at 85.30, below the 87.35 breakout level that was the entry thesis. Exiting now instead of wait",
+       "thesis": "ETSY broke above its 55-day high at 87.35 on 2.4x relative volume with a 16% gap above its 50-day SMA, a fresh uncorrelated breakout; 4 shares fit the cash, and the 83.87 stop risks about $22.",
+       "confidence": 3
+      },
+      {
+       "symbol": "CIFR261106P00010000",
+       "pnl": 82.5,
+       "note": "option target (+114%)",
+       "thesis": "CIFR broke below its 55-day low at 10.70 on 2.9x volume and is 43% below its 200-day SMA, so the downtrend is established; the stop at 12.81 sits above the breakdown level.",
+       "confidence": 3
+      }
+     ]
+    }
+   },
+   "meanrev": {
+    "summary": "Equity rose from $999.37 to $1010.79 (+$14.32 on 2 closed trades, 0.7% max drawdown). Win rate is 66.7% with an average win of $7.16 against an average loss of $6.10. That is only 3 closed trades in total, so it is too small a sample to tune on.",
+    "applied": [],
+    "stats": {
+     "equity_now": 1010.79,
+     "equity_week_ago": 999.37,
+     "closed_trades": 3,
+     "closed_this_week": 2,
+     "week_pnl": 14.32,
+     "win_rate": 66.7,
+     "avg_win": 7.16,
+     "avg_loss": -6.1,
+     "max_drawdown_pct": 0.7,
+     "avg_pnl_by_confidence": {
+      "2": 7.54,
+      "3": 0.34
+     },
+     "this_week_trades": [
+      {
+       "symbol": "STT",
+       "pnl": 6.78,
+       "note": "snap-back (RSI2 58)",
+       "thesis": "STT RSI(2) washout (0.5) while still 2.6% above its 200-day; the stop is about 5.1% away against a roughly 7% snap-back target, so reward-to-risk is about 1.4:1, the best of the candidates.",
+       "confidence": 3
+      },
+      {
+       "symbol": "FTNT",
+       "pnl": 7.54,
+       "note": "snap-back (RSI2 59)",
+       "thesis": "FTNT RSI(2) of 1.2 washout still 36% above its 200-day in a calm regime (crash radar 24, SPY above 200-day); target 183.53 vs stop 154.63 gives about 1.15:1, which clears my 1:1 floor and my stated condition for re-entering tech.",
+       "confidence": 2
+      }
+     ]
+    }
+   },
+   "volsell": {
+    "summary": "No closed trades and flat equity at $1,000 this week. I passed on every scan because 1-wide IWM and TLT credit spreads paid only 0.13-0.23, under my 0.25 credit gate. With no trade data there is nothing to learn from P&L, but the entry filter is clearly too tight, and standing flat does not compound.",
+    "applied": [
+     {
+      "agent": "volsell",
+      "param": "short_delta",
+      "old": 0.2,
+      "new": 0.25,
+      "reason": "A slightly closer short strike raises the credit on a 1-wide spread, so the 0.25 gate can clear. Max loss stays capped at about $75-80 per contract, and I keep width at 1 so one contract stays within "
+     }
+    ],
+    "stats": {
+     "equity_now": 1000.0,
+     "equity_week_ago": 1000.0,
+     "closed_trades": 0,
+     "closed_this_week": 0,
+     "week_pnl": 0,
+     "win_rate": null,
+     "avg_win": null,
+     "avg_loss": null,
+     "max_drawdown_pct": 0.0,
+     "avg_pnl_by_confidence": {},
+     "this_week_trades": []
+    }
+   },
+   "blackswan": {
+    "summary": "Equity slipped from $749.50 to $737.50 this week with no closed trades, so there is no win-rate or per-trade data to learn from. Max drawdown is 34.4% and open bearish debit (~$811) already exceeds equity, so the constraint is capital concentration and settled cash, not the signal parameters. With no evidence to support a change, I'm leaving all parameters as they are.",
+    "applied": [],
+    "stats": {
+     "equity_now": 737.5,
+     "equity_week_ago": 749.5,
+     "closed_trades": 0,
+     "closed_this_week": 0,
+     "week_pnl": 0,
+     "win_rate": null,
+     "avg_win": null,
+     "avg_loss": null,
+     "max_drawdown_pct": 34.4,
+     "avg_pnl_by_confidence": {},
+     "this_week_trades": []
+    }
+   },
+   "scalper": {
+    "summary": "Equity rose from about $1000.02 to $1003.60 (+$3.94 on 36 trades) with only 0.3% max drawdown. The 50% win rate with +0.52 average win against -0.33 average loss gives a thin edge of about +$0.10 per trade. Most exits come from the time limit rather than the target, and stops fill 0.05-0.1% worse than set. The only clear loser pattern is the two SPCX entries, which were about 0.9% above VWAP and both stopped out for -$1.35 combined.",
+    "applied": [
+     {
+      "agent": "scalper",
+      "param": "max_extension_pct",
+      "old": 1.5,
+      "new": 0.875,
+      "reason": "Entries far above VWAP (SPCX at +0.92% and +0.96%) both stopped out, which is a chase pattern. Capping extension at 0.8% would skip them and costs little, because every other entry was within 0.6% of "
+     }
+    ],
+    "stats": {
+     "equity_now": 1003.6,
+     "equity_week_ago": 1000.02,
+     "closed_trades": 38,
+     "closed_this_week": 36,
+     "week_pnl": 3.94,
+     "win_rate": 50.0,
+     "avg_win": 0.52,
+     "avg_loss": -0.33,
+     "max_drawdown_pct": 0.3,
+     "avg_pnl_by_confidence": {
+      "3": 0.09
+     },
+     "this_week_trades": [
+      {
+       "symbol": "TSLA",
+       "pnl": -0.41,
+       "note": "stop (-0.34%)",
+       "thesis": "VWAP pullback bounce on TSLA: 1.46x volume, +0.40% vs VWAP; target +0.6%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "AVGO",
+       "pnl": -0.15,
+       "note": "lost VWAP: setup failed (-0.12%)",
+       "thesis": "VWAP pullback bounce on AVGO: 0.99x volume, +0.02% vs VWAP; target +0.6%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "NVDA",
+       "pnl": 0.84,
+       "note": "target hit (+0.68%)",
+       "thesis": "VWAP pullback bounce on NVDA: 0.8x volume, +0.25% vs VWAP; target +0.6%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SMH",
+       "pnl": 0.31,
+       "note": "time limit, 30 min (+0.30%)",
+       "thesis": "VWAP pullback bounce on SMH: 0.61x volume, +0.21% vs VWAP; target +0.6%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "AVGO",
+       "pnl": -0.42,
+       "note": "stop (-0.36%)",
+       "thesis": "VWAP pullback bounce on AVGO: 1.31x volume, +0.31% vs VWAP; target +0.6%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "TLT",
+       "pnl": -0.06,
+       "note": "time limit, 27 min (-0.03%)",
+       "thesis": "VWAP pullback bounce on TLT: 4.19x volume, +0.19% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "NVDA",
+       "pnl": 0.25,
+       "note": "time limit, 26 min (+0.16%)",
+       "thesis": "VWAP pullback bounce on NVDA: 1.25x volume, +0.28% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "TSLA",
+       "pnl": 0.89,
+       "note": "target hit (+0.72%)",
+       "thesis": "VWAP pullback bounce on TSLA: 0.72x volume, +0.57% vs VWAP; target +0.6%, stop -0.4%",
+       "confidence": 3
+      },
+      {
+       "symbol": "AAPL",
+       "pnl": 1.12,
+       "note": "time limit, 30 min (+0.44%)",
+       "thesis": "VWAP pullback bounce on AAPL: 0.57x volume, +0.26% vs VWAP; target +0.6%, stop -0.4%",
+       "confidence": 3
+      },
+      {
+       "symbol": "MSFT",
+       "pnl": 0.83,
+       "note": "time limit, 30 min (+0.34%)",
+       "thesis": "VWAP pullback bounce on MSFT: 0.96x volume, +0.13% vs VWAP; target +0.6%, stop -0.4%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPY",
+       "pnl": -0.03,
+       "note": "time limit, 32 min (-0.02%)",
+       "thesis": "VWAP pullback bounce on SPY: 0.53x volume, +0.19% vs VWAP; target +0.6%, stop -0.4%",
+       "confidence": 3
+      },
+      {
+       "symbol": "AVGO",
+       "pnl": 0.28,
+       "note": "time limit, 30 min (+0.23%)",
+       "thesis": "VWAP pullback bounce on AVGO: 0.6x volume, +0.26% vs VWAP; target +0.6%, stop -0.4%",
+       "confidence": 3
+      },
+      {
+       "symbol": "MU",
+       "pnl": 0.48,
+       "note": "time limit, 30 min (+0.33%)",
+       "thesis": "VWAP pullback bounce on MU: 0.75x volume, +0.44% vs VWAP; target +0.6%, stop -0.4%",
+       "confidence": 3
+      },
+      {
+       "symbol": "QQQ",
+       "pnl": 0.7,
+       "note": "target hit (+0.58%)",
+       "thesis": "VWAP pullback bounce on QQQ: 0.74x volume, +0.19% vs VWAP; target +0.4%, stop -0.25%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPY",
+       "pnl": 0.5,
+       "note": "target hit (+0.40%)",
+       "thesis": "VWAP pullback bounce on SPY: 1.45x volume, +0.17% vs VWAP; target +0.4%, stop -0.25%",
+       "confidence": 3
+      },
+      {
+       "symbol": "IWM",
+       "pnl": 0.7,
+       "note": "target hit (+0.56%)",
+       "thesis": "VWAP pullback bounce on IWM: 1.48x volume, +0.33% vs VWAP; target +0.4%, stop -0.25%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPY",
+       "pnl": -0.15,
+       "note": "time limit, 32 min (-0.12%)",
+       "thesis": "VWAP pullback bounce on SPY: 0.83x volume, +0.07% vs VWAP; target +0.4%, stop -0.25%",
+       "confidence": 3
+      },
+      {
+       "symbol": "QQQ",
+       "pnl": -0.3,
+       "note": "stop (-0.25%)",
+       "thesis": "VWAP pullback bounce on QQQ: 1.3x volume, +0.30% vs VWAP; target +0.4%, stop -0.25%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPY",
+       "pnl": -0.16,
+       "note": "time limit, 30 min (-0.10%)",
+       "thesis": "VWAP pullback bounce on SPY: 0.74x volume, +0.10% vs VWAP; target +0.4%, stop -0.25%",
+       "confidence": 3
+      },
+      {
+       "symbol": "IWM",
+       "pnl": 0.27,
+       "note": "time limit, 32 min (+0.14%)",
+       "thesis": "VWAP pullback bounce on IWM: 1.17x volume, +0.20% vs VWAP; target +0.4%, stop -0.25%",
+       "confidence": 3
+      },
+      {
+       "symbol": "IWM",
+       "pnl": -0.68,
+       "note": "stop (-0.42%)",
+       "thesis": "VWAP pullback bounce on IWM: 1.2x volume, +0.08% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "META",
+       "pnl": 0.86,
+       "note": "target hit (+0.57%)",
+       "thesis": "VWAP pullback bounce on META: 1.07x volume, +0.40% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPY",
+       "pnl": 0.31,
+       "note": "time limit, 41 min (+0.18%)",
+       "thesis": "VWAP pullback bounce on SPY: 1.64x volume, +0.00% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "IWM",
+       "pnl": -0.28,
+       "note": "time limit, 40 min (-0.16%)",
+       "thesis": "VWAP pullback bounce on IWM: 1.09x volume, +0.08% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "MSFT",
+       "pnl": 0.39,
+       "note": "time limit, 40 min (+0.24%)",
+       "thesis": "VWAP pullback bounce on MSFT: 0.94x volume, +0.14% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "NVDA",
+       "pnl": 0.01,
+       "note": "time limit, 40 min (+0.01%)",
+       "thesis": "VWAP pullback bounce on NVDA: 3.29x volume, +0.28% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "META",
+       "pnl": -0.93,
+       "note": "stop (-0.43%)",
+       "thesis": "VWAP pullback bounce on META: 0.83x volume, +0.44% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "QQQ",
+       "pnl": -0.42,
+       "note": "stop (-0.33%)",
+       "thesis": "VWAP pullback bounce on QQQ: 1.17x volume, +0.12% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPY",
+       "pnl": -0.42,
+       "note": "stop (-0.32%)",
+       "thesis": "VWAP pullback bounce on SPY: 0.64x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "IWM",
+       "pnl": 0.51,
+       "note": "time limit, 26 min (+0.20%)",
+       "thesis": "VWAP pullback bounce on IWM: 2.27x volume, +0.06% vs VWAP; target +0.6%, stop -0.4%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPY",
+       "pnl": 0.25,
+       "note": "time limit, 26 min (+0.11%)",
+       "thesis": "VWAP pullback bounce on SPY: 0.76x volume, +0.02% vs VWAP; target +0.6%, stop -0.4%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPCX",
+       "pnl": -0.53,
+       "note": "stop (-0.38%)",
+       "thesis": "VWAP pullback bounce on SPCX: 0.53x volume, +0.92% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPCX",
+       "pnl": -0.82,
+       "note": "stop (-0.51%)",
+       "thesis": "VWAP pullback bounce on SPCX: 0.56x volume, +0.96% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "NVDA",
+       "pnl": -0.16,
+       "note": "gave back a +0.31% gain: out at breakeven",
+       "thesis": "VWAP pullback bounce on NVDA: 0.96x volume, +0.37% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPY",
+       "pnl": -0.02,
+       "note": "time limit, 32 min (+0.00%)",
+       "thesis": "VWAP pullback bounce on SPY: 0.73x volume, +0.04% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "QQQ",
+       "pnl": 0.38,
+       "note": "time limit, 30 min (+0.15%)",
+       "thesis": "VWAP pullback bounce on QQQ: 0.98x volume, +0.35% vs VWAP; target +0.6%, stop -0.4%",
+       "confidence": 3
+      }
+     ]
+    }
+   }
+  }
  }
 ]
