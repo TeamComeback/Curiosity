@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T13:07-04:00",
+ "updated": "2026-10-23T13:37-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,9 +10,9 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 4.8,
+  "spy_vs_sma200_pct": 4.6,
   "spy_roc20_pct": -0.4,
-  "crash_radar": 26
+  "crash_radar": 27
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -38,20 +38,24 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 1219.32,
+   "equity": 1203.86,
    "cash": 17.13,
    "available": 17.13,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 1.22,
-   "progress_pct": 12.19,
+   "multiple": 1.2,
+   "progress_pct": 12.04,
    "open": 8,
    "closed": 3,
    "win_rate": 33.3,
    "max_dd_pct": 13.6,
-   "risk_adj": 1.61,
+   "risk_adj": 1.5,
    "notes": [
+    {
+     "date": "2026-10-23",
+     "note": "Settled cash is $17.13, too small for any candidate's put premium (the MERC put is already blocked), so no entries. Hold all positions at their stops and reassess when CIFR proceeds settle."
+    },
     {
      "date": "2026-10-23",
      "note": "Settled cash is $17.13, too small for any candidate's put premium (MERC was already blocked) or any share price. Hold all positions at their stops and reassess when CIFR proceeds settle. Energy stays concentrated, so no adds."
@@ -59,10 +63,6 @@
     {
      "date": "2026-10-23",
      "note": "Settled cash is $17.13, which can't fund any candidate (MERC put blocked, others need far more premium or share cost). Holding all positions at their stops; no new Energy adds given concentration. Reassess when CIFR and other sale proceeds settle."
-    },
-    {
-     "date": "2026-10-23",
-     "note": "Settled cash is $17.13, below any candidate's put premium or share cost, so no entries. Hold all positions at their stops and reassess when CIFR and other sale proceeds settle."
     }
    ]
   },
@@ -72,7 +72,7 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 1010.6,
+   "equity": 1011.15,
    "cash": 758.11,
    "available": 758.11,
    "settling": 0,
@@ -84,8 +84,12 @@
    "closed": 3,
    "win_rate": 66.7,
    "max_dd_pct": 0.7,
-   "risk_adj": 0.21,
+   "risk_adj": 0.22,
    "notes": [
+    {
+     "date": "2026-10-23",
+     "note": "No candidate clears the 1:1 reward-to-risk floor (META ~0.54:1, AMZN ~0.53:1, COR ~0.3:1, GME ~0.25:1, MPC ~0.2:1). Hold DXCM under its stop (71.98) and SMA5/RSI exit plan, and keep $758 settled cash for a washout whose target is at least as far as its stop."
+    },
     {
      "date": "2026-10-23",
      "note": "No candidate clears the 1:1 reward-to-risk floor (META ~0.54:1, COR ~0.36:1, GME ~0.2:1, DXCM already held). Hold DXCM under its stop and time-stop plan, and keep settled cash for a washout whose target is at least as far as its stop."
@@ -93,10 +97,6 @@
     {
      "date": "2026-10-23",
      "note": "No candidate clears the 1:1 reward-to-risk floor (META ~0.54:1, COR ~0.30:1). Holding DXCM under its existing stop (71.98) and SMA5 target plan; keeping $758 settled cash for a washout whose target is at least as far as its stop."
-    },
-    {
-     "date": "2026-10-23",
-     "note": "No candidate clears the 1:1 reward-to-risk floor: META is about 0.54:1 (target 678.18 vs stop 582.52) and COR about 0.30:1. Holding DXCM under its existing stop, SMA5 target and time stop, and keeping $758 settled cash for a washout whose target is at least as far as its stop."
     }
    ]
   },
@@ -122,15 +122,15 @@
    "notes": [
     {
      "date": "2026-10-23",
+     "note": "13:36 pass: IWM 290/291 bear call mid is 0.22, still below my 0.25 credit gate. TLT and EEM remain excluded. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for a natural of at least 0.25."
+    },
+    {
+     "date": "2026-10-23",
      "note": "13:06 pass: IWM 290/291 bear call is at 0.17 and TLT 77.5/78.5 bull put at 0.16, both below my 0.25 credit gate. EEM is excluded (IV/RV 1.32 with no edge per plan). Stay flat with $1,000 settled and recheck IWM 21-45 DTE for a natural of at least 0.25."
     },
     {
      "date": "2026-10-23",
      "note": "12:39 pass: IWM 291/292 bear call is at 0.19 and TLT 79/78 bull put is at 0.15, both below my 0.25 credit gate. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for a natural of at least 0.25."
-    },
-    {
-     "date": "2026-10-23",
-     "note": "12:37 pass: IWM 291/292 bear call is at 0.23 and TLT 79/78 bull put is at 0.17, both below my 0.25 credit gate, and the natural will be lower than mid. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for a natural of at least 0.25."
     }
    ]
   },
@@ -140,19 +140,19 @@
    "competing": false,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 984.56,
+   "equity": 983.39,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.98,
-   "progress_pct": 9.85,
+   "progress_pct": 9.83,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 1.9,
-   "risk_adj": -0.31,
+   "risk_adj": -0.33,
    "notes": []
   },
   {
@@ -182,20 +182,24 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 711.5,
+   "equity": 725.5,
    "cash": 143.5,
    "available": 143.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.71,
-   "progress_pct": 7.12,
+   "multiple": 0.73,
+   "progress_pct": 7.26,
    "open": 5,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 34.4,
-   "risk_adj": -0.84,
+   "risk_adj": -0.8,
    "notes": [
+    {
+     "date": "2026-10-23",
+     "note": "Pass on XLC: a ~$136 debit would consume nearly all of the $143.50 settled cash, leaving no dry powder and stacking correlated sector downside on open bearish debit. Radar is calm at 27. Reconcile the AGCO fill ($330 vs $183.9 budget), and reassess once positions close and settle or if the radar exc"
+    },
     {
      "date": "2026-10-23",
      "note": "Staying flat: open bearish debit (~$811 at cost) exceeds equity, only $143.50 is settled, and the radar is calm at 26. XLC would consume nearly all settled cash and stack correlated downside. Reassess after positions close and settle, or if the radar rises above 40 with a fresh breakdown outside Tec"
@@ -203,10 +207,6 @@
     {
      "date": "2026-10-23",
      "note": "Passed on XLC: the $143.50 settled cash would fund a debit that leaves almost no dry powder, and open bearish debit (~$811 at cost) is still far above the 50% guideline. Next: reconcile the AGCO fill ($330 vs $183.9 budget) and reassess once a position closes and settles, or if the radar rises above"
-    },
-    {
-     "date": "2026-10-23",
-     "note": "Passing on XLC: $143.50 settled cash can't fund a debit without leaving the account nearly unable to trade, and open bearish debit (~$811) is already over the 50% guideline. Reassess when settled cash rises or the radar exceeds 40, and reconcile the AGCO fill ($330 vs $183.9 budget)."
     }
    ]
   },
@@ -361,12 +361,12 @@
   {
    "date": "2026-10-23",
    "agents": {
-    "trend": 1219.32,
-    "meanrev": 1010.6,
+    "trend": 1203.86,
+    "meanrev": 1011.15,
     "volsell": 1000.0,
-    "baseline": 984.56,
+    "baseline": 983.39,
     "monkey": 983.68,
-    "blackswan": 711.5,
+    "blackswan": 725.5,
     "scalper": 1003.6,
     "hyper": 1005.65
    }
@@ -384,7 +384,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.84,
+   "mark": 0.82,
    "stop": 6.71,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -406,7 +406,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 3.19,
+   "mark": 3.13,
    "stop": 9.42,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -428,7 +428,7 @@
    "qty": 5,
    "entry": 0.14,
    "last": null,
-   "mark": 0.18,
+   "mark": 0.17,
    "stop": 1.61,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T12:10:38-04:00",
@@ -449,7 +449,7 @@
    "opt_type": null,
    "qty": 1.013,
    "entry": 49.36,
-   "last": 51.285,
+   "last": 51.21,
    "mark": null,
    "stop": 48.11,
    "expiry": null,
@@ -471,7 +471,7 @@
    "opt_type": null,
    "qty": 4.8287,
    "entry": 68.38,
-   "last": 69.405,
+   "last": 69.285,
    "mark": null,
    "stop": 65.82,
    "expiry": null,
@@ -493,7 +493,7 @@
    "opt_type": null,
    "qty": 0.1964,
    "entry": 354.11,
-   "last": 352.56,
+   "last": 352.35,
    "mark": null,
    "stop": 345.94,
    "expiry": null,
@@ -515,7 +515,7 @@
    "opt_type": null,
    "qty": 3.8095,
    "entry": 26.2,
-   "last": 25.865,
+   "last": 25.94,
    "mark": null,
    "stop": 24.74,
    "expiry": null,
@@ -537,7 +537,7 @@
    "opt_type": null,
    "qty": 1.4421,
    "entry": 48.5,
-   "last": 48.77,
+   "last": 48.73,
    "mark": null,
    "stop": 46.15,
    "expiry": null,
@@ -559,7 +559,7 @@
    "opt_type": null,
    "qty": 3.2201,
    "entry": 77.67,
-   "last": 78.41,
+   "last": 78.58,
    "mark": null,
    "stop": 71.98,
    "expiry": null,
@@ -581,7 +581,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 761.28,
+   "last": 760.375,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -603,7 +603,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 761.28,
+   "last": 760.375,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -625,7 +625,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 761.28,
+   "last": 760.375,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -648,7 +648,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 1.07,
+   "mark": 1.23,
    "stop": 49.7,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -670,7 +670,7 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.36,
+   "mark": 1.32,
    "stop": 32.39,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
@@ -692,7 +692,7 @@
    "qty": 1,
    "entry": 0.86,
    "last": null,
-   "mark": 0.91,
+   "mark": 0.86,
    "stop": 22.38,
    "expiry": "2027-01-15",
    "opened": "2026-10-15T13:07:01-04:00",
@@ -714,7 +714,7 @@
    "qty": 1,
    "entry": 1.5,
    "last": null,
-   "mark": 1.37,
+   "mark": 1.33,
    "stop": 130.31,
    "expiry": "2027-01-15",
    "opened": "2026-10-16T10:06:17-04:00",
@@ -736,7 +736,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 0.97,
+   "mark": 1.08,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -749,6 +749,20 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-23T13:37:05-04:00",
+   "type": "playbook",
+   "agent": "hyper",
+   "symbol": "SOXL, STX, MU, NVDA, AMD",
+   "note": "aggressive: Settled cash is only $0.16, so no new entries can fire until tomorrow's settlement; this playbook is for the next session. I'm keeping the 0.6% target and 0.35% stop because they've produced mostly small wins, and focusing on the fastest movers (SOXL, TQQQ, STX, MU) plus liquid semis and QQQ."
+  },
+  {
+   "time": "2026-10-23T13:36:35-04:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-67%)"
+  },
   {
    "time": "2026-10-23T13:07:13-04:00",
    "type": "playbook",
@@ -1374,20 +1388,6 @@
    "agent": "blackswan",
    "note": "Pre-market call: keep. The Crash Radar is still calm at 23, only $143.50 is settled, and open bearish debit ($811 at cost) is far above the 50% guideline, so new risk can't be funded or sized responsibly. Today's scan adds more Technology breakdowns, but those names are already overweight in my open shorts and sit in my avoid sector.",
    "symbol": "NFLX"
-  },
-  {
-   "time": "2026-10-23T07:41:04-04:00",
-   "type": "plan",
-   "agent": "volsell",
-   "note": "Pre-market call: keep. The IWM bear call setup still matches the plan: IV/RV is 1.30 (above the 1.1 minimum), the trend side is bearish, and crash radar is calm at 23. IV/RV has slipped from 1.44, so the 0.25 credit gate may be harder to reach, but the plan's rules still hold.",
-   "symbol": "IWM"
-  },
-  {
-   "time": "2026-10-23T07:40:56-04:00",
-   "type": "plan",
-   "agent": "meanrev",
-   "note": "Pre-market call: keep. Fresh scan shows no new candidate that clears the 1:1 floor: SMA5 targets sit only 0.35 to 0.80 ATR-stop-equivalents away (CVE ~0.35, NEM ~0.35, AMZN ~0.45, META ~0.68, PSX ~0.25, MPC ~0.29, GME ~0.32). DXCM's SMA5 target (83.27) is still about 0.78:1 from 78.34, so the hold stands on its own plan but is not a new entry.",
-   "symbol": ""
   }
  ],
  "reviews": [
@@ -2309,26 +2309,26 @@
  ],
  "radar": {
   "now": {
-   "score": 26,
+   "score": 27,
    "tier": "calm",
-   "market_score": 32,
+   "market_score": 33,
    "economy_score": 8,
    "parts": {
     "trend": 35,
-    "drawdown": 17,
+    "drawdown": 18,
     "volatility": 0,
-    "breadth": 45,
+    "breadth": 47,
     "credit": 92,
     "safety": 0,
     "economy": 8
    },
    "facts": {
-    "spy_vs_sma50_pct": -0.9,
-    "spy_vs_sma200_pct": 4.8,
-    "spy_off_high_pct": 2.6,
+    "spy_vs_sma50_pct": -1.0,
+    "spy_vs_sma200_pct": 4.6,
+    "spy_off_high_pct": 2.7,
     "spy_iv_pct": 13.9,
     "spy_realized_vol_pct": 9.8,
-    "pct_above_50d": 46.9,
+    "pct_above_50d": 46.1,
     "breadth_sample": 510,
     "junk_vs_treasuries_20d_pct": -2.67,
     "havens_vs_spy_20d_pct": -1.0
@@ -2342,7 +2342,7 @@
     "junk_bond_spread_pct": 3.4,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-23T13:06-04:00"
+   "at": "2026-10-23T13:36-04:00"
   },
   "history": [
    {
@@ -2387,7 +2387,7 @@
    },
    {
     "date": "2026-10-23",
-    "score": 26,
+    "score": 27,
     "tier": "calm"
    }
   ],
@@ -2409,37 +2409,35 @@
  "playbooks": {
   "scalper": {
    "date": "2026-10-23",
-   "made_at": "2026-10-23T13:07-04:00",
+   "made_at": "2026-10-23T13:36-04:00",
    "watch": [
-    "MSFT",
     "SPY",
-    "QQQ"
+    "QQQ",
+    "MSFT"
    ],
    "aggression": "defensive",
-   "why": "Only $83.52 is settled, so one defensive slice is the right size. MSFT is the only liquid name with an up 1-minute trend, above its opening range and VWAP, and SPY and QQQ are kept for VWAP bounces despite their down 1-minute trends. Most of today's scalps were stopped out, so half-size VWAP bounces",
+   "why": "Today's scalps are net negative and most liquid names are trending down, so I'm keeping only one half-size slice for VWAP bounces in SPY, QQQ and MSFT. I'm tightening the target, stop and hold time because the afternoon looks choppy; HYG is excluded because its 0.19% range can't support the target.",
    "slices": 1,
-   "target_pct": 0.6,
-   "stop_pct": 0.4,
-   "max_hold_min": 30
+   "target_pct": 0.5,
+   "stop_pct": 0.3,
+   "max_hold_min": 20
   },
   "hyper": {
    "date": "2026-10-23",
-   "made_at": "2026-10-23T13:07-04:00",
+   "made_at": "2026-10-23T13:37-04:00",
    "watch": [
     "SOXL",
     "STX",
     "MU",
-    "SMH",
     "NVDA",
     "AMD",
     "QQQ",
-    "TSM",
-    "INTC",
+    "SMH",
     "META",
-    "MSFT"
+    "TSM"
    ],
    "aggression": "aggressive",
-   "why": "Settled cash is only $0.16, so new entries stay blocked until tomorrow's settlement. The 0.6% target and 0.35% stop are still producing mostly small wins, so I'm keeping them and focusing the watchlist on the fastest movers (SOXL, TQQQ, STX, MU) plus liquid semis and QQQ.",
+   "why": "Settled cash is only $0.16, so no new entries can fire until tomorrow's settlement; this playbook is for the next session. I'm keeping the 0.6% target and 0.35% stop because they've produced mostly small wins, and focusing on the fastest movers (SOXL, TQQQ, STX, MU) plus liquid semis and QQQ.",
    "slices": 12,
    "target_pct": 0.6,
    "stop_pct": 0.35,
