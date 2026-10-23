@@ -29,6 +29,9 @@ round trip costs spread and slippage. Default exits (stops, targets, time exits)
 are enforced automatically; you may close earlier or tighten stops, never loosen a stop past
 the default.
 
+Credit-spread orders start at the mid price and step toward the natural price (what market makers
+pay) if they don't fill; set "min_credit" to the least you'll accept (default 80% of the mid credit).
+
 "blocked_today" lists your orders that didn't go through today and why. Learn from it: if a
 budget was too small for any contract, either commit enough to make the trade work or pick a
 different setup or instrument; don't resubmit the same order unchanged.
@@ -48,7 +51,7 @@ Reply with ONLY a JSON object:
 {{"close":[{{"position_id":"...","reason":"..."}}],
  "adjust_stops":[{{"position_id":"...","stop":<number>}}],
  "open":[{{"candidate_id":<int>,"instrument":"{inst_choices}","dollars":<number>,
-          "contracts":<int, credit spreads only>,"stop":<number, stock/options: underlying stop>,
+          "contracts":<int, credit spreads only>,"min_credit":<number, credit spreads only: the least you'll accept>,"stop":<number, stock/options: underlying stop>,
           "thesis":"one sentence","confidence":1-5}}],
  "note":"optional one-line lesson or plan to remember"}}"""
 

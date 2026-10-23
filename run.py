@@ -197,19 +197,35 @@ def open_trade(b, state, aid, cand, order, ctx):
         ok, why = governor.check_order(state, aid, cand, inst, cand["max_loss_per"] * n)
         if not ok:
             return store.journal({"type": "rule_block", "agent": aid, "symbol": cand["symbol"], "note": why})
-        try:  # Alpaca writes net credits as a negative limit price; fall back if rejected
-            sub = b.submit_mleg(cand["legs"], n, -cand["credit"], cid(aid))
-        except AlpacaError as e:
-            if "limit" not in str(e).lower():
-                raise
-            sub = b.submit_mleg(cand["legs"], n, cand["credit"], cid(aid))
-        o = _fill(b, sub, 30)
+        # Work the order like a trader: start at the middle of the bid-ask, then step toward the price a
+        # market maker will actually pay, never accepting less than the firm's minimum credit.
+        mid_credit = cand["credit"]
+        natural = max(round(mid_credit - cand.get("half_spread", 0), 2), 0.01)
+        floor = round(max(float(order.get("min_credit") or 0) or mid_credit * 0.8, 0.01), 2)
+        ladder = []
+        for f in (0.0, 0.34, 0.67, 1.0):
+            px = round(mid_credit - f * (mid_credit - natural), 2)
+            if px >= floor and px not in ladder:
+                ladder.append(px)
+        o, tried = None, []
+        for px in ladder or [mid_credit]:
+            tried.append(px)
+            try:  # Alpaca writes net credits as a negative limit price; fall back if rejected
+                sub = b.submit_mleg(cand["legs"], n, -px, cid(aid))
+            except AlpacaError as e:
+                if "limit" not in str(e).lower():
+                    raise
+                sub = b.submit_mleg(cand["legs"], n, px, cid(aid))
+            o = _fill(b, sub, 20)
+            if o:
+                break
         if not o:
             governor.outcome(aid, cand["symbol"], "not filled")
             return store.journal({"type": "unfilled", "agent": aid, "symbol": cand["symbol"],
-                                  "note": f"credit {cand['credit']} not filled"})
+                                  "note": f"credit not filled at {', '.join(f'{x:.2f}' for x in tried)} "
+                                          f"(mid {mid_credit:.2f}, natural {natural:.2f}, floor {floor:.2f})"})
         n = int(float(o["filled_qty"]))
-        credit = abs(float(o.get("filled_avg_price") or cand["credit"]))
+        credit = abs(float(o.get("filled_avg_price") or tried[-1]))
         slip = round(min(cand["half_spread"], 0.10) * 100 * n, 2) if SLIP else 0
         cost = round(-(credit * 100 * n) + slip, 2)       # negative cost = cash received
         agent["reserved"] = round(agent["reserved"] + cand["width"] * 100 * n, 2)
