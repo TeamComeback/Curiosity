@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T15:07-04:00",
+ "updated": "2026-10-23T15:36-04:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,7 +10,7 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 4.7,
+  "spy_vs_sma200_pct": 4.6,
   "spy_roc20_pct": -0.4,
   "crash_radar": 26
  },
@@ -38,20 +38,24 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 1199.01,
+   "equity": 1201.84,
    "cash": 17.13,
    "available": 17.13,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.2,
-   "progress_pct": 11.99,
+   "progress_pct": 12.02,
    "open": 8,
    "closed": 3,
    "win_rate": 33.3,
    "max_dd_pct": 13.6,
-   "risk_adj": 1.46,
+   "risk_adj": 1.48,
    "notes": [
+    {
+     "date": "2026-10-23",
+     "note": "Live settled cash is $17.13, so no candidate is fundable (RBRK needs about $129 per share, and the puts exceed the cash). Ignoring the game plan's $186.88 figure. Holding all positions at their stops and reassessing when CIFR proceeds settle."
+    },
     {
      "date": "2026-10-23",
      "note": "Live settled cash is $17.13, not the plan's $186.88, so no candidate is fundable: the XLV and UNH entries need far more than $17, and the candidate puts cost more than that. Holding all positions at their stops; reassess when sale proceeds settle."
@@ -59,10 +63,6 @@
     {
      "date": "2026-10-23",
      "note": "Live settled cash is $17.13, not the plan's $186.88, so no candidate is fundable. Hold all positions at their stops and reassess when CIFR and other sale proceeds settle."
-    },
-    {
-     "date": "2026-10-23",
-     "note": "Settled cash is $17.13, which can't fund any candidate's put premium or share price, so I'm holding all positions at their stops. Reassess once CIFR and other sale proceeds actually settle, and don't let the game plan's $186.88 cash figure override live cash."
     }
    ]
   },
@@ -72,20 +72,24 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 1011.77,
+   "equity": 1010.79,
    "cash": 758.11,
    "available": 758.11,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.01,
-   "progress_pct": 10.12,
+   "progress_pct": 10.11,
    "open": 1,
    "closed": 3,
    "win_rate": 66.7,
    "max_dd_pct": 0.7,
-   "risk_adj": 0.24,
+   "risk_adj": 0.22,
    "notes": [
+    {
+     "date": "2026-10-23",
+     "note": "No candidate clears the 1:1 reward-to-risk floor (META ~0.54:1, COR ~0.43:1, GME ~0.35:1, MPC/PSX/VLO ~0.25-0.3:1). Holding DXCM under its 71.98 stop and SMA5/RSI70/7-day time plan, keeping $758 settled cash."
+    },
     {
      "date": "2026-10-23",
      "note": "No candidate reaches the 1:1 reward-to-risk floor (META ~0.54:1, COR ~0.36:1, VLO ~0.25:1, GME ~0.27:1, MPC ~0.24:1, PSX ~0.22:1). Hold DXCM under its 71.98 stop and SMA5/RSI70/time-stop plan, and keep $758 settled cash for a washout whose target is at least as far as its stop."
@@ -93,10 +97,6 @@
     {
      "date": "2026-10-23",
      "note": "No candidate reaches the 1:1 reward-to-risk floor (MPC ~0.27:1, GME ~0.29:1, PSX ~0.25:1, VLO ~0.30:1, META ~0.55:1). Hold DXCM under its stop (71.98) and SMA5/RSI exit plan, and keep $758 settled cash for a qualifying washout."
-    },
-    {
-     "date": "2026-10-23",
-     "note": "No candidate offered at least 1:1 reward-to-risk (target distance vs stop distance), so I passed. Holding DXCM under its stop and time-stop plan with $758 settled cash kept for a qualifying washout."
     }
    ]
   },
@@ -122,15 +122,15 @@
    "notes": [
     {
      "date": "2026-10-23",
+     "note": "15:36 pass: IWM 291/292 bear call credit is 0.21, below my 0.25 gate. TLT and EEM remain excluded. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for a credit of at least 0.25."
+    },
+    {
+     "date": "2026-10-23",
      "note": "15:06 pass: IWM 290/291 bear call mid is 0.19 and TLT 79/78 bull put is 0.19, both below my 0.25 credit gate, and EEM stays excluded on IV/RV with no edge. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for a natural of at least 0.25."
     },
     {
      "date": "2026-10-23",
      "note": "Gate-based entry: take IWM bear call only when the credit clears 0.25; keep one-contract sizing so max loss stays within the per-trade cap."
-    },
-    {
-     "date": "2026-10-23",
-     "note": "14:07 pass: IWM 290/291 bear call mid is 0.19 and TLT 79/78 bull put is 0.13, both below my 0.25 credit gate, and a min_credit above mid cannot fill. EEM stays excluded. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for a credit of at least 0.25."
     }
    ]
   },
@@ -140,14 +140,14 @@
    "competing": false,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 983.54,
+   "equity": 983.43,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.98,
-   "progress_pct": 9.84,
+   "progress_pct": 9.83,
    "open": 3,
    "closed": 0,
    "win_rate": null,
@@ -182,20 +182,24 @@
    "competing": true,
    "exhibition": false,
    "reached_goal": null,
-   "equity": 714.5,
+   "equity": 737.5,
    "cash": 143.5,
    "available": 143.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.71,
-   "progress_pct": 7.14,
+   "multiple": 0.74,
+   "progress_pct": 7.38,
    "open": 5,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 34.4,
-   "risk_adj": -0.83,
+   "risk_adj": -0.76,
    "notes": [
+    {
+     "date": "2026-10-23",
+     "note": "Pass on XLC: a ~$136 debit would leave about $7 of settled cash with open bearish debit above the 50% guideline. Reconcile the AGCO fill ($330 vs $183.9 budget) and reassess when a position settles or if the radar rises above 40."
+    },
     {
      "date": "2026-10-23",
      "note": "Passing on XLC: a ~$136 debit would leave about $7 of dry powder against $143.50 settled, and open bearish debit already exceeds the 50% guideline. Reconcile the AGCO fill ($330 vs $183.9 budget) and reassess once a position settles or if the radar rises above 40."
@@ -203,10 +207,6 @@
     {
      "date": "2026-10-23",
      "note": "Staying flat with $143.50 settled against about $811 of open bearish debit. XLC would consume nearly all settled cash, so I'm passing. Reassess once a position closes and settles, or if the radar rises above 40. Reconcile the AGCO fill ($330 vs $183.9 budget) before any new sizing."
-    },
-    {
-     "date": "2026-10-23",
-     "note": "Staying flat with $143.50 settled against about $811 of open bearish debit. Reconcile the AGCO fill ($330 entry vs the $183.9 budget) before any new sizing, and reassess when a position closes and settles or if the radar rises above 40."
     }
    ]
   },
@@ -361,12 +361,12 @@
   {
    "date": "2026-10-23",
    "agents": {
-    "trend": 1199.01,
-    "meanrev": 1011.77,
+    "trend": 1201.84,
+    "meanrev": 1010.79,
     "volsell": 1000.0,
-    "baseline": 983.54,
+    "baseline": 983.43,
     "monkey": 983.68,
-    "blackswan": 714.5,
+    "blackswan": 737.5,
     "scalper": 1003.6,
     "hyper": 1005.65
    }
@@ -384,7 +384,7 @@
    "qty": 2,
    "entry": 0.55,
    "last": null,
-   "mark": 0.77,
+   "mark": 0.78,
    "stop": 6.71,
    "expiry": "2026-11-06",
    "opened": "2026-10-14T11:35:39-04:00",
@@ -406,7 +406,7 @@
    "qty": 1,
    "entry": 1.75,
    "last": null,
-   "mark": 3.12,
+   "mark": 3.13,
    "stop": 9.42,
    "expiry": "2026-11-20",
    "opened": "2026-10-14T12:10:37-04:00",
@@ -449,7 +449,7 @@
    "opt_type": null,
    "qty": 1.013,
    "entry": 49.36,
-   "last": 51.22,
+   "last": 51.205,
    "mark": null,
    "stop": 48.11,
    "expiry": null,
@@ -471,7 +471,7 @@
    "opt_type": null,
    "qty": 4.8287,
    "entry": 68.38,
-   "last": 69.345,
+   "last": 69.34,
    "mark": null,
    "stop": 65.82,
    "expiry": null,
@@ -493,7 +493,7 @@
    "opt_type": null,
    "qty": 0.1964,
    "entry": 354.11,
-   "last": 351.45,
+   "last": 350.61,
    "mark": null,
    "stop": 345.94,
    "expiry": null,
@@ -515,7 +515,7 @@
    "opt_type": null,
    "qty": 3.8095,
    "entry": 26.2,
-   "last": 26.14,
+   "last": 26.19,
    "mark": null,
    "stop": 24.74,
    "expiry": null,
@@ -537,7 +537,7 @@
    "opt_type": null,
    "qty": 1.4421,
    "entry": 48.5,
-   "last": 48.92,
+   "last": 48.805,
    "mark": null,
    "stop": 46.15,
    "expiry": null,
@@ -559,7 +559,7 @@
    "opt_type": null,
    "qty": 3.2201,
    "entry": 77.67,
-   "last": 78.775,
+   "last": 78.47,
    "mark": null,
    "stop": 71.98,
    "expiry": null,
@@ -581,7 +581,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 760.49,
+   "last": 760.4,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -603,7 +603,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 760.49,
+   "last": 760.4,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -625,7 +625,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 760.49,
+   "last": 760.4,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -648,7 +648,7 @@
    "qty": 1,
    "entry": 1.25,
    "last": null,
-   "mark": 1.08,
+   "mark": 1.27,
    "stop": 49.7,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:06:32-04:00",
@@ -670,7 +670,7 @@
    "qty": 1,
    "entry": 1.2,
    "last": null,
-   "mark": 1.47,
+   "mark": 1.52,
    "stop": 32.39,
    "expiry": "2027-01-15",
    "opened": "2026-10-14T12:10:57-04:00",
@@ -692,7 +692,7 @@
    "qty": 1,
    "entry": 0.86,
    "last": null,
-   "mark": 0.89,
+   "mark": 0.88,
    "stop": 22.38,
    "expiry": "2027-01-15",
    "opened": "2026-10-15T13:07:01-04:00",
@@ -714,7 +714,7 @@
    "qty": 1,
    "entry": 1.5,
    "last": null,
-   "mark": 1.25,
+   "mark": 1.29,
    "stop": 130.31,
    "expiry": "2027-01-15",
    "opened": "2026-10-16T10:06:17-04:00",
@@ -736,7 +736,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 1.02,
+   "mark": 0.98,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -749,6 +749,20 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-10-23T15:36:52-04:00",
+   "type": "playbook",
+   "agent": "hyper",
+   "symbol": "STX, MU, SNDK, SPCX, NVDA",
+   "note": "aggressive: Today's 0.6%/0.35% bands got stopped out on the fastest names (SOXL, which took a -0.58% stop), while the 0.9%/0.5% bands fit the 3-5% daily-range names and 3x ETFs better. Twelve slices give the most shots on tomorrow's roughly $1,005 settlement, and the watchlist focuses on the highest-volume move"
+  },
+  {
+   "time": "2026-10-23T15:36:25-04:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-70%)"
+  },
   {
    "time": "2026-10-23T15:07:09-04:00",
    "type": "playbook",
@@ -1349,33 +1363,6 @@
    "stop": 83.11,
    "thesis": "VWAP pullback bounce on SOXL: 1.33x volume, +0.53% vs VWAP; target +0.6%, stop -0.35%",
    "confidence": 3
-  },
-  {
-   "time": "2026-10-23T09:58:10-04:00",
-   "type": "open",
-   "agent": "scalper",
-   "symbol": "NVDA",
-   "instrument": "stock",
-   "qty": 0.7887,
-   "price": 212.36,
-   "cost": 167.49,
-   "stop": 211.68,
-   "thesis": "VWAP pullback bounce on NVDA: 0.96x volume, +0.37% vs VWAP; target +0.5%, stop -0.3%",
-   "confidence": 3
-  },
-  {
-   "time": "2026-10-23T09:58:10-04:00",
-   "type": "close",
-   "agent": "scalper",
-   "symbol": "SPCX",
-   "qty": 1.1339,
-   "entry": 147.69,
-   "exit": 147.23,
-   "pnl": -0.53,
-   "note": "stop (-0.38%)",
-   "opened": "2026-10-23T09:54:03-04:00",
-   "confidence": 3,
-   "thesis": "VWAP pullback bounce on SPCX: 0.53x volume, +0.92% vs VWAP; target +0.5%, stop -0.3%"
   }
  ],
  "reviews": [
@@ -2305,18 +2292,18 @@
     "trend": 35,
     "drawdown": 18,
     "volatility": 0,
-    "breadth": 45,
+    "breadth": 44,
     "credit": 92,
     "safety": 0,
     "economy": 8
    },
    "facts": {
     "spy_vs_sma50_pct": -1.0,
-    "spy_vs_sma200_pct": 4.7,
+    "spy_vs_sma200_pct": 4.6,
     "spy_off_high_pct": 2.7,
     "spy_iv_pct": 13.9,
     "spy_realized_vol_pct": 9.8,
-    "pct_above_50d": 47.1,
+    "pct_above_50d": 47.3,
     "breadth_sample": 510,
     "junk_vs_treasuries_20d_pct": -2.67,
     "havens_vs_spy_20d_pct": -1.0
@@ -2330,7 +2317,7 @@
     "junk_bond_spread_pct": 3.4,
     "sahm_indicator": 0.0
    },
-   "at": "2026-10-23T15:06-04:00"
+   "at": "2026-10-23T15:35-04:00"
   },
   "history": [
    {
@@ -2397,13 +2384,13 @@
  "playbooks": {
   "scalper": {
    "date": "2026-10-23",
-   "made_at": "2026-10-23T15:07-04:00",
+   "made_at": "2026-10-23T15:36-04:00",
    "watch": [
     "SPY",
     "QQQ"
    ],
    "aggression": "stand_down",
-   "why": "Today's scalps are net negative (about -$1.1 realized across 7 trades), and it's 3:06 PM with only $83.52 settled, so there's little room for a meaningful trade. Most candidates are in 1-minute downtrends or sitting at VWAP, and SPY/QQQ are the only names with a clean enough structure to revisit tom",
+   "why": "It's 3:36 PM with under 15 minutes before the 3:50 flat cutoff and only $83.52 settled, so a new trade can't get a fair run. Today's scalps are net negative, and most names are in 1-minute downtrends. Keep SPY and QQQ as the only watch names for tomorrow's open, with the overnight SPY-only rules.",
    "slices": 1,
    "target_pct": 0.5,
    "stop_pct": 0.3,
@@ -2411,19 +2398,21 @@
   },
   "hyper": {
    "date": "2026-10-23",
-   "made_at": "2026-10-23T15:07-04:00",
+   "made_at": "2026-10-23T15:36-04:00",
    "watch": [
     "STX",
     "MU",
+    "SNDK",
+    "SPCX",
     "NVDA",
     "AMD",
+    "INTC",
+    "TSLA",
     "QQQ",
-    "SMH",
-    "TSM",
-    "META"
+    "SMH"
    ],
    "aggression": "aggressive",
-   "why": "Only $0.16 is settled, so nothing fires again today; this playbook is for tomorrow's roughly $1,005 settlement. Keeping the widened 0.9%/0.5% bands and 20-minute holds, which fit the 3x ETFs and high-range semis better than the old 0.6%/0.35% stops.",
+   "why": "Today's 0.6%/0.35% bands got stopped out on the fastest names (SOXL, which took a -0.58% stop), while the 0.9%/0.5% bands fit the 3-5% daily-range names and 3x ETFs better. Twelve slices give the most shots on tomorrow's roughly $1,005 settlement, and the watchlist focuses on the highest-volume move",
    "slices": 12,
    "target_pct": 0.9,
    "stop_pct": 0.5,
