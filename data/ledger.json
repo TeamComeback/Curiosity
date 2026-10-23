@@ -7320,5 +7320,72 @@
   "confidence": 3,
   "signals": {},
   "from_plan": false
+ },
+ {
+  "time": "2026-10-23T10:29:56-04:00",
+  "type": "trade_opened",
+  "agent": "hyper",
+  "position_id": "pos-423576355e",
+  "symbol": "TQQQ",
+  "underlying": "TQQQ",
+  "sector": "Technology",
+  "instrument": "stock",
+  "qty": 1.2597,
+  "price": 66.41,
+  "cost": 83.66,
+  "stop": 66.17,
+  "why": "opening-range breakout on TQQQ: 1.08x volume, +0.40% vs VWAP; target +0.6%, stop -0.35%",
+  "confidence": 3,
+  "signals": {},
+  "from_plan": false
+ },
+ {
+  "time": "2026-10-23T10:31:59-04:00",
+  "type": "trade_opened",
+  "agent": "hyper",
+  "position_id": "pos-debab8e24b",
+  "symbol": "SOXL",
+  "underlying": "SOXL",
+  "sector": "Technology",
+  "instrument": "stock",
+  "qty": 0.7922,
+  "price": 84.528,
+  "cost": 66.96,
+  "stop": 84.42,
+  "why": "VWAP pullback bounce on SOXL: 0.84x volume, +1.83% vs VWAP; target +0.6%, stop -0.35%",
+  "confidence": 3,
+  "signals": {},
+  "from_plan": false
+ },
+ {
+  "time": "2026-10-23T10:34:02-04:00",
+  "type": "trade_closed",
+  "agent": "hyper",
+  "position_id": "pos-debab8e24b",
+  "symbol": "SOXL",
+  "underlying": "SOXL",
+  "sector": "Technology",
+  "instrument": "stock",
+  "entry": 84.528,
+  "exit": 84.102,
+  "pnl": -0.33,
+  "return_pct": -0.5,
+  "opened": "2026-10-23T10:31:59-04:00",
+  "why_entered": "VWAP pullback bounce on SOXL: 0.84x volume, +1.83% vs VWAP; target +0.6%, stop -0.35%",
+  "why_exited": "stop (-0.58%)"
+ },
+ {
+  "time": "2026-10-23T10:36:58-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "QQQ",
+   "MU",
+   "NVDA",
+   "SPCX"
+  ],
+  "aggression": "defensive",
+  "why": "Three of four VWAP-bounce closes were stopped or scratched on normal noise with a 0.3% stop in a calm tape, so I'm widening the stop to 0.4% and the target to 0.6%, cutting to 2 slices, and keeping defensive size. Focus stays on the liquid, trending names with real range (SPY, QQQ, MU, NVDA, SPCX)."
  }
 ]
