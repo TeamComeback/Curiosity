@@ -10,7 +10,10 @@
  },
  "entries": {
   "date": "2026-10-23",
-  "counts": {}
+  "counts": {
+   "scalper": 2,
+   "hyper": 3
+  }
  },
  "agents": {
   "trend": {
@@ -120,7 +123,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 50.705,
+     "last": 51.16,
      "high_water": 50.705
     },
     "pos-e9580fb11e": {
@@ -142,7 +145,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 68.07,
+     "last": 68.855,
      "high_water": 68.53
     },
     "pos-47b298eed1": {
@@ -164,7 +167,7 @@
       "pct_vs_sma200": 11.9
      },
      "sector": "Broad market / other",
-     "last": 352.15,
+     "last": 353.88,
      "high_water": 364.25
     }
    },
@@ -173,7 +176,7 @@
    "status_at": null,
    "closed": 3,
    "wins": 1,
-   "peak": 1219.1,
+   "peak": 1223.69,
    "max_dd": 0.136,
    "notes": [
     {
@@ -613,7 +616,7 @@
       "pct_vs_sma5": -6.6
      },
      "sector": "Consumer Discretionary",
-     "last": 78.78
+     "last": 78.58
     }
    },
    "status": "active",
@@ -1327,7 +1330,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 759.52
+     "last": 760.79
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1343,7 +1346,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 759.52
+     "last": 760.79
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1359,7 +1362,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 759.52
+     "last": 760.79
     }
    },
    "status": "active",
@@ -2031,13 +2034,35 @@
    ]
   },
   "scalper": {
-   "cash": 1004.75,
+   "cash": 836.73,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-d7cc4f5837": {
+     "kind": "stock",
+     "symbol": "NVDA",
+     "qty": 0.7887,
+     "entry": 212.36,
+     "cost": 167.49,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 211.68,
+     "atr": 0,
+     "opened": "2026-10-23T09:58:10-04:00",
+     "thesis": "VWAP pullback bounce on NVDA: 0.96x volume, +0.37% vs VWAP; target +0.5%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.5,
+     "stop_pct": 0.3,
+     "max_hold_min": 30,
+     "last": 212.37
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 33,
+   "closed": 34,
    "wins": 18,
    "peak": 1006.08,
    "max_dd": 0.0021,
@@ -2059,10 +2084,17 @@
     "SPY": "2026-10-22",
     "MU": "2026-10-19",
     "QQQ": "2026-10-22",
-    "META": "2026-10-22"
+    "META": "2026-10-22",
+    "SPCX": "2026-10-23"
    },
    "joined": "2026-10-14T12:09:57-04:00",
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 166.94,
+     "settles": "2026-10-26",
+     "note": "sold SPCX"
+    }
+   ],
    "playbook": {
     "date": "2026-10-23",
     "made_at": "2026-10-23T09:37-04:00",
@@ -2337,9 +2369,74 @@
    ]
   },
   "hyper": {
-   "cash": 1003.76,
+   "cash": 702.56,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-bda131af97": {
+     "kind": "stock",
+     "symbol": "SPCX",
+     "qty": 0.6798,
+     "entry": 147.664,
+     "cost": 100.38,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 147.13,
+     "atr": 0,
+     "opened": "2026-10-23T09:54:05-04:00",
+     "thesis": "VWAP pullback bounce on SPCX: 0.53x volume, +0.90% vs VWAP; target +0.6%, stop -0.35%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.35,
+     "max_hold_min": 15,
+     "last": 147.31,
+     "peak_gain": -0.2397334489110281
+    },
+    "pos-200fd1540b": {
+     "kind": "stock",
+     "symbol": "SOXL",
+     "qty": 1.2035,
+     "entry": 83.46,
+     "cost": 100.44,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 83.11,
+     "atr": 0,
+     "opened": "2026-10-23T09:58:13-04:00",
+     "thesis": "VWAP pullback bounce on SOXL: 1.33x volume, +0.53% vs VWAP; target +0.6%, stop -0.35%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.35,
+     "max_hold_min": 15,
+     "last": 83.53
+    },
+    "pos-28f26a1302": {
+     "kind": "stock",
+     "symbol": "NVDA",
+     "qty": 0.4726,
+     "entry": 212.408,
+     "cost": 100.38,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 211.62,
+     "atr": 0,
+     "opened": "2026-10-23T09:58:13-04:00",
+     "thesis": "VWAP pullback bounce on NVDA: 0.96x volume, +0.39% vs VWAP; target +0.6%, stop -0.35%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.35,
+     "max_hold_min": 15,
+     "last": 212.37
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
