@@ -7704,5 +7704,104 @@
   ],
   "aggression": "aggressive",
   "why": "Today's 0.6%/0.35% bands got stopped out on the fastest names (SOXL, which took a -0.58% stop), while the 0.9%/0.5% bands fit the 3-5% daily-range names and 3x ETFs better. Twelve slices give the most shots on tomorrow's roughly $1,005 settlement, and the watchlist focuses on the highest-volume move"
+ },
+ {
+  "time": "2026-10-23T16:40:46-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-10-26",
+  "decision": "revise",
+  "why": "Live settled cash is $17.13, not the $186.88 the plan assumed, so the XLV and UNH entries (and every put candidate) are unfundable and are dropped. The plan also said XLE is back under its 68.29 breakout, but the position data shows 69.32, so the energy thesis still holds.",
+  "summary": "No new entries tomorrow because the $17.13 settled cash cannot fund any share or put candidate. Hold all eight positions at their stops, keep Energy as the lean, and reassess once sale proceeds settle.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-23T16:40:46-04:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Energy"
+  ],
+  "avoid": [
+   "Consumer Staples"
+  ],
+  "why": "Energy is the only sector with live evidence: BP, XLE, PBR and EQNR are all above their breakouts, and today's fresh scan shows 8 energy breakouts (EQNR, APA, COP, EOG, CVX, BP, XOM, SHEL). Health Care is dropped because the scan shows no confirmed Health Care breakout and I have no closed trades th",
+  "expires": "2026-11-06"
+ },
+ {
+  "time": "2026-10-23T16:40:56-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-10-26",
+  "decision": "keep",
+  "why": "The fresh after-close scan changes nothing. Every washout still fails the 1:1 floor: META about 0.59:1, AMZN about 0.57:1, COR about 0.46:1, and the Energy names and GME are all well below 0.3:1. DXCM is still valid at its 71.98 stop, with RSI(2) at 2.4 and the regime calm.",
+  "summary": "Stay in settled cash ($758.11) and take no new entries. Hold DXCM under its 71.98 stop and time-stop, and enter only a washout whose SMA5 target is at least as far from the close as its 2.5-ATR stop.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-23T16:41:05-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-10-26",
+  "decision": "keep",
+  "why": "The fresh scan doesn't change the IWM setup: IV/RV is still about 1.45 with a bearish trend side, and crash radar is calm at 26. The only open question is the 0.25 credit gate, which fills have not reached all day, so I'm holding the gate rather than loosening it.",
+  "summary": "Stay flat with $1,000 settled. Tomorrow, check only the IWM bear call spread at 21-45 DTE: short call near 0.20 delta (about 289-291), long call $1 higher, one contract. Enter only at a natural credit of at least $0.25; otherwise pass.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Bear call spread, 21-45 DTE, short call near 0.20 delta (about 289-291), long call $1 higher. IV about 21% vs 20-day realized 14.5% (IV/RV about 1.45). Bearish trend side. Crash radar calm at 26. Last close 275.72.",
+    "trigger": "Natural credit of at least $0.25 on the $1 width, IWM not gapping up toward the short strike, and no Iran or oil headline spike at the open. Skip credits of 0.20-0.24 and do not resubmit a failed order.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-23T16:41:18-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "After-close review",
+  "for_day": "2026-10-26",
+  "decision": "keep",
+  "why": "Nothing has changed enough to justify new trades. The radar is calm at 26, but open bearish debit (about $811 at cost) is far above the 50% guideline against $143.50 settled cash, so any new debit would stack risk I can't fund. The fresh Communication Services breakdowns (T, TMUS, UBER, APP) are real, so I'll keep them on the watchlist for when cash frees up.",
+  "summary": "Hold all five open put spreads and add nothing today. Use the recorded underlying stops and reconcile the ASTS and AGCO records before acting on them. Reassess only after a position closes and settles, or if the radar rises above 40.",
+  "watchlist": [
+   {
+    "symbol": "T",
+    "setup": "Communication Services put spread on a fresh breakdown. T closed near 21.79 support, is down 17.6% over 20 days, and sits below its 200-day. The SpaceX cell-site news is a live catalyst.",
+    "trigger": "Act only after a position closes and settled cash covers the debit with the open book back under the 50% guideline, the radar stays under 40, and T still trades below 21.79 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services put spread, contingent. NFLX closed near 66.54 after a Wolfe downgrade and sits below its 200-day. Buybacks and revised guidance argue against chasing it.",
+    "trigger": "Only after a position closes, settled cash covers the debit, the radar stays under 40, and NFLX still trades below 66.54 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-23T16:41:27-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-10-26",
+  "decision": "revise",
+  "why": "Today's entries were logged at 0.53x to 0.98x relative volume, so the 1.5x gate was not enforced, and SPCX took two stops for -1.35 while the rest of the day was flat. Scalping edge is unproven (44% hit rate over 16 picks, Technology avg +0.04 per trade), so I am keeping the single-SPY plan but tightening it: no entry without a logged rel-volume of at least 1.5x, and no tech or single-name exposur",
+  "summary": "Trade SPY only, one $125 slice, and only on a VWAP reclaim or a 15-minute opening-range breakout that holds for 2 bars. Each entry needs a logged rel-volume of at least 1.5x and a price no more than 1.5% above VWAP. Stand aside if SPY opens more than 0.5% lower without reclaiming VWAP, and skip the session entirely if the META earnings gap spills into the broad market.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a shallow pullback, or 15-minute opening-range breakout, with volume confirmation",
+    "trigger": "Price reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with logged relative volume at least 1.5x and price no more than 1.5% above VWAP. No entry if the open gaps down more than 0.5% without a reclaim.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
  }
 ]
