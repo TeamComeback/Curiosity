@@ -7919,5 +7919,106 @@
   ],
   "why": "Broad market is the only area with gate-compliant evidence, from SPY. Technology has +1.11 P&L over 25 trades but averages only +0.04 per trade at a 48% win rate, and most of that gain came from blocked single names. Communication Services is negative (-0.07 over 2 trades), and META's earnings gap a",
   "expires": "2026-11-08"
+ },
+ {
+  "time": "2026-10-26T07:40:29-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-10-26",
+  "decision": "revise",
+  "why": "HLT has lost its breakout: it closed at 349.66, back below the 350.87 level it cleared, so the thesis has failed and the trend-follower rule is to cut it. Energy breakouts are still confirming, so I'm adding two capped energy watch items while keeping the other stops in place.",
+  "summary": "Sell all HLT at the open because the breakout failed. Hold the energy longs (XLE, EQNR, BP) and the three underlying-level puts, with PBR on a tighter stop. Buy APA or SHEL only on a close above their breakout levels with at least 1.75x volume, each capped at $8 and funded from settled cash.",
+  "watchlist": [
+   {
+    "symbol": "APA",
+    "setup": "Energy breakout 2.7% below its 55-day high at 50.49, roc20 +21.4%, ATR 1.58",
+    "trigger": "Close above 50.49 on at least 1.75x relative volume. Buy fractional stock, capped at $8.",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "SHEL",
+    "setup": "Energy breakout 1.4% below its 55-day high at 106.67, roc20 +12.9%, ATR 1.87",
+    "trigger": "Close above 106.67 on at least 1.75x relative volume. Buy fractional stock, capped at $8.",
+    "instrument": "stock",
+    "conviction": 3
+   }
+  ]
+ },
+ {
+  "time": "2026-10-26T07:40:42-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-10-26",
+  "decision": "keep",
+  "why": "The fresh scan changes nothing: DXCM is still the only open name, and no washout clears the 1:1 floor. The best reward-to-risk ratios are about 0.6 (DXCM), 0.59 (META) and 0.57 (AMZN), so cash stays settled for a qualifying setup.",
+  "summary": "No new entries. Hold DXCM under its 71.98 stop and manage it to the SMA5 target (about 81.65), the RSI(2) above 70 exit, and the Oct 30 time stop. Keep $758 settled cash for a washout whose SMA5 target is at least as far from the close as its 2.5-ATR stop.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-26T07:40:51-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-10-26",
+  "decision": "keep",
+  "why": "The fresh scan still shows IWM as the only bearish setup with IV/RV of about 1.49, a bearish trend, and calm crash radar at 27. Nothing new justifies changing the 0.25 credit gate, and no live chain data is available yet to test it.",
+  "summary": "Stay flat unless the IWM bear call spread can be sold at a natural credit of at least $0.25 on the $1 width, with the short call near 0.25 delta (about 287-288) and the long call $1 higher, 21-45 DTE, one contract. If the credit is below 0.25, the strike is closer than 287, or IWM gaps up toward the short strike, pass.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Bear call spread, 21-45 DTE, short call near 0.25 delta (about 287-288), long call $1 higher. One contract. IV about 21.7% vs 20-day realized 14.5% (IV/RV about 1.49). Bearish trend side. Crash radar calm at 27. Last close 275.72.",
+    "trigger": "Natural credit of at least $0.25 on the $1 width, IWM not gapping up toward the short strike at the open, and no Iran or oil headline spike. Skip credits of 0.20-0.24 and do not resubmit a failed order.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-26T07:41:06-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "Pre-market call",
+  "for_day": "2026-10-26",
+  "decision": "keep",
+  "why": "Nothing changed enough to justify trading. The radar is still calm at 27, but the open bearish debit (about $811) is still well above equity (about $737) and the 50% guideline, and settled cash is only $143.50. Today's fresh breakdowns are mostly Technology and Industrials, which I'm avoiding, or Communication Services names I can't fund yet.",
+  "summary": "Hold all five open put spreads and add nothing. Keep the T and NFLX Communication Services setups as contingent watchlist items that can only be funded after a position closes and settles. Reconcile the AGCO fill ($330 recorded vs $183.9 budget) and the ASTS stop (49.7 vs 50.8) before any sizing.",
+  "watchlist": [
+   {
+    "symbol": "T",
+    "setup": "Communication Services put spread on a fresh breakdown below its 21.79 support, down 17.6% over 20 days and below its 200-day, with a SpaceX cell-site catalyst. It broke down today, so it is the freshest name in the lean-in sector.",
+    "trigger": "Act only after a position closes and settles, the open bearish book is under the 50% guideline, the radar stays under 40, and T still trades below 21.79 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services put spread, contingent. Engagement reports and a Wolfe downgrade put it below its 200-day near 66.54. Buybacks and revised guidance argue against chasing.",
+    "trigger": "Only after a position closes and settles, the book is under the 50% guideline, the radar stays under 40, and NFLX still trades below 66.54 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-26T07:41:15-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-10-26",
+  "decision": "keep",
+  "why": "Crash radar is calm at 27, the account is flat with $1,003.60 settled, and SPY is the only instrument with gate-compliant evidence. Today's news flow (META's $95B offering and split, SPCX/TSLA headlines, semis in correction) argues against widening the universe, so the narrow SPY-only plan still holds.",
+  "summary": "Trade one SPY slice capped at $80, only on a VWAP reclaim or a 15-minute opening-range breakout that holds for 2 bars, with logged relative volume of at least 1.5x and no entry if the open gaps down more than 0.5% without reclaiming VWAP. Stand aside on any gap that spills from META's offering into the broad market, and skip entirely if crash radar reaches 40.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a shallow pullback, or 15-minute opening-range breakout with volume confirmation",
+    "trigger": "Price reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with logged relative volume of at least 1.5x and price no more than 1.5% above VWAP. No entry if the open gaps down more than 0.5% without a reclaim.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
  }
 ]
