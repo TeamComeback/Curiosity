@@ -9016,5 +9016,26 @@
   ],
   "aggression": "aggressive",
   "why": "Only $0.19 is settled today, so no meaningful trades can fire until about $1,000 settles tomorrow; this sets up tomorrow's session. Stops at 0.4% were getting hit by normal noise, so I'm widening to 0.6% and trimming the target to 1.0% for a better payoff ratio, with the fastest movers (SOXL, CRWV, "
+ },
+ {
+  "time": "2026-10-26T14:06:30-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "watch": [
+   "SOXL",
+   "CRWV",
+   "EWZ",
+   "INTC",
+   "STX",
+   "NU",
+   "MU",
+   "TSLA",
+   "SNDK",
+   "AMD",
+   "NVDA",
+   "SPCX"
+  ],
+  "aggression": "aggressive",
+  "why": "Only $0.19 is settled today, so nothing can fire until tomorrow's cash settles; this sets up that session. The 0.6% stop gives the fastest movers (SOXL, CRWV, EWZ, INTC, STX, NU) room past the noise that stopped out 0.4% stops today, and 12 slices maximize shots."
  }
 ]
