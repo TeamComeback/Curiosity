@@ -1,7 +1,11 @@
-# Agent Race: three AI traders, $100 each, first to $5,000 wins
+# Agent Race: AI trading firms, $1,000 each, first to $10,000 wins
 
-Three AI agents each get **$100** of paper money in a shared Alpaca paper account and race to
-**$5,000**. Each sticks to its specialty but has full control of its own balance: which setups to
+Five racing AI firms (Trend Co., Snapback Partners, Premium House, Black Swan & Co., Rapid Fire
+Trading) each get **$1,000** of paper money in a shared Alpaca paper account and race to
+**$10,000**, with exhibition and benchmark firms alongside.
+
+> The stakes live in one place: `RACE` in `config.py` (currently $1,000 start, $10,000 goal,
+> eliminated below $10). If this README and `config.py` ever disagree, `config.py` wins. Each sticks to its specialty but has full control of its own balance: which setups to
 take, how many dollars, which instrument, where the stop goes, and when to get out.
 
 | Agent | Specialty | Instruments |
@@ -9,7 +13,7 @@ take, how many dollars, which instrument, where the stop goes, and when to get o
 | **Trend agent** | Breakouts to new highs in uptrends; breakdowns via puts | Fractional shares, long calls, long puts |
 | **Mean-reversion agent** | RSI(2) washouts in stocks above their 200-day | Fractional shares, long calls |
 | **Vol-selling agent** | Credit spreads on SPY/QQQ/IWM when implied vol is rich | $1-wide credit spreads |
-| **SPY benchmark** | Not racing. $100 in SPY, held | Fractional shares |
+| **SPY benchmark** | Not racing. $1,000 in SPY, held | Fractional shares |
 
 ## Rules of the race (the only things agents can't decide)
 
@@ -21,7 +25,7 @@ take, how many dollars, which instrument, where the stop goes, and when to get o
   +100% target, time exits, spread profit/loss limits) always run; agents may exit earlier.
 - **Failing:** below **$10** = eliminated (positions closed). Unable to afford its smallest trade
   with nothing open = failed. Failed agents are frozen, not deleted.
-- **Finish:** the first agent to **$5,000** wins. All positions are then closed and every agent,
+- **Finish:** the first agent to **$10,000** wins. All positions are then closed and every agent,
   including failed ones, gets a written post-mortem.
 - Options results include a **slippage haircut** of half the bid-ask spread, so paper fills
   aren't flattering.
@@ -56,7 +60,7 @@ Set a monthly spend limit in the Claude Console to be safe. You can change model
 ## Setup (all from your iPhone)
 
 1. **Alpaca paper keys.** Sign up at alpaca.markets, open the paper account, and generate API
-   keys. The paper account's own balance doesn't matter; each agent keeps its own $100 ledger.
+   keys. The paper account's own balance doesn't matter; each agent keeps its own $1,000 ledger.
 2. **Anthropic API key.** Create one at console.anthropic.com, add billing, and set a spend limit.
 3. **Create a public GitHub repo** and upload every file from the zip, keeping the folders
    (including `.github/workflows/agent.yml`).
@@ -79,9 +83,9 @@ Keys live only in GitHub Secrets. The public repo shows paper trades and agent n
 ## Things to know
 
 - **The vol-selling agent starts at a disadvantage.** A $1-wide spread can lose ~$80–95 per
-  contract, so one bad trade can sink a $100 account. That's the real math of small-account
+  contract, so one bad trade costs close to a tenth of a $1,000 account. That's the real math of small-account
   premium selling, and part of what the race will show.
-- **Watch the risk-adjusted score as well as the standings.** Getting from $100 to $5,000 (50×) usually
+- **Watch the risk-adjusted score as well as the standings.** Getting from $1,000 to $10,000 (10×) usually
   rewards the boldest bets. The "Risk-adj" number (return ÷ max drawdown) helps separate skill from luck.
 - **Paper fills are approximate.** The free data feeds are delayed or indicative, and GitHub Actions schedules can drift a few minutes.
 - All three agents share one Alpaca account, so two agents can't hold shares of the same stock at
