@@ -1,6 +1,12 @@
 """Vol-selling agent's scanner: defined-risk credit spreads on index ETFs when implied
 vol is rich versus realized. Bull put spreads in uptrends, bear call spreads in
-downtrends. Default exits: profit target, loss stop, days-to-expiry cutoff."""
+downtrends. Default exits: profit target, loss stop, days-to-expiry cutoff.
+
+Calm-uptrend rule (Oct 2026): the rich-vol test almost never passes when the market is calm
+and rising, so the firm sat at zero trades. When the Crash Radar reads calm and the ETF is
+above both its 50- and 200-day averages, it may also sell a further-out bull put spread
+(short delta about 0.12, $2 wide) as long as implied vol is at least realized vol. These are
+scored below rich-vol setups so they only fill when nothing better shows up."""
 from datetime import date, timedelta
 
 import store
@@ -29,6 +35,7 @@ def entries(ctx):
     b = ctx["broker"]
     out = []
     today = store.now_et().date()
+    calm = ((ctx.get("radar") or {}).get("tier") == "calm")
     for und in ctx["vol_underlyings"]:
         df = ctx["bars"].get(und)
         price = ctx["prices"].get(und)
@@ -72,14 +79,17 @@ def entries(ctx):
         ratio = iv / rv if rv > 0 else 0
         rank = iv_rank(ivs)
         rich = (rank is not None and rank >= 50) or (rank is None and ratio >= p["min_iv_rv"])
-        if not rich:
+        calm_play = (not rich and calm and side == "put" and price > last["sma200"] and ratio >= 1.0)
+        if not rich and not calm_play:
             continue
+        short_delta = 0.12 if calm_play else p["short_delta"]
+        width_want = max(2, p["width"]) if calm_play else p["width"]
         otm = [r for r in rows if r["delta"] is not None and
                ((side == "put" and r["strike"] < price) or (side == "call" and r["strike"] > price))]
         if not otm:
             continue
-        short = min(otm, key=lambda r: abs(abs(r["delta"]) - p["short_delta"]))
-        want = short["strike"] - p["width"] if side == "put" else short["strike"] + p["width"]
+        short = min(otm, key=lambda r: abs(abs(r["delta"]) - short_delta))
+        want = short["strike"] - width_want if side == "put" else short["strike"] + width_want
         further = [r for r in rows if (r["strike"] <= want if side == "put" else r["strike"] >= want)]
         if not further:
             continue
@@ -101,9 +111,10 @@ def entries(ctx):
             "signals": {"iv": round(iv, 3), "rv20": round(rv, 3), "iv_rv": round(ratio, 2),
                         "iv_rank": None if rank is None else round(rank), "short_delta": round(short["delta"], 2),
                         "dte": (expiry - today).days},
-            "rule_thesis": f"IV {iv:.0%} vs realized {rv:.0%} (x{ratio:.2f}); sell {short['strike']:g}/{long['strike']:g} "
+            "play": "calm_uptrend" if calm_play else "rich_vol",
+            "rule_thesis": ("Calm uptrend: " if calm_play else "") + f"IV {iv:.0%} vs realized {rv:.0%} (x{ratio:.2f}); sell {short['strike']:g}/{long['strike']:g} "
                            f"{side}s for {credit:.2f} credit, {(expiry - today).days} DTE",
-            "score": ratio,
+            "score": ratio * (0.5 if calm_play else 1.0),
         })
     return out
 
