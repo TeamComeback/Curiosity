@@ -6514,5 +6514,74 @@
   "agent": "hyper",
   "symbol": "SOXL, EWZ, INTC, STX, NU",
   "note": "aggressive: Only $0.19 is settled today, so no trades can fire until tomorrow's cash clears. I'm keeping the wider 0.6% stop since 0.4% stops kept getting shaken out, with 12 slices for more shots and high-volatility liquid names as the watchlist."
+ },
+ {
+  "time": "2026-10-26T16:40:22-04:00",
+  "type": "recap",
+  "note": "A quiet, slightly negative day: 21 trades closed with 7 wins and 14 losses for -$19.83 realized, and Trend Co.'s PBR stop-out accounted for most of it. Black Swan & Co. gained $62 (+8.41%) on its open positions without trading, and the radar read calm at 25."
+ },
+ {
+  "time": "2026-10-26T16:40:22-04:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 0 of 2 picks moved the planned way, avg -0.80%"
+ },
+ {
+  "time": "2026-10-26T16:40:58-04:00",
+  "type": "plan_error",
+  "agent": "trend",
+  "note": "After-close review failed (JSONDecodeError); kept the previous plan"
+ },
+ {
+  "time": "2026-10-26T16:40:58-04:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 0 of 0 picks moved the planned way"
+ },
+ {
+  "time": "2026-10-26T16:41:10-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: keep. Nothing in the fresh scan clears the 1:1 floor: MRK is about 0.53:1, XYZ about 0.50:1, PINS about 0.63:1 and EBAY about 0.33:1. Both open positions still hold their stops, and the Brazil selloff is a reason to watch PBR closely, not to add to it.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-26T16:41:10-04:00",
+  "type": "scorecard",
+  "agent": "volsell",
+  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -0.45%"
+ },
+ {
+  "time": "2026-10-26T16:41:20-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "After-close review: revise. The IWM setup still has the best IV/RV (1.38 to 1.49) and a bearish trend side, but the reference levels are stale. IWM closed at 276.95, up from 275.72, which moves the 0.25-delta short call to roughly 288-289. The credit gate is unchanged because it was never met today.",
+  "symbol": "IWM"
+ },
+ {
+  "time": "2026-10-26T16:41:20-04:00",
+  "type": "scorecard",
+  "agent": "blackswan",
+  "note": "Plan graded: 2 of 2 picks moved the planned way, avg +1.68%"
+ },
+ {
+  "time": "2026-10-26T16:41:33-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "note": "After-close review: revise. The open bearish book (about $811 cost against roughly $800 equity) is still above the 50% guideline, and settled cash is only $143.50, so nothing new can be funded. The change is reconciling conflicting stop levels to the tighter recorded values (ASTS 49.7, IREN 31.26, APLD 22.31) so exits are not delayed by stale notes.",
+  "symbol": "T, NFLX"
+ },
+ {
+  "time": "2026-10-26T16:41:33-04:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 1 of 1 picks moved the planned way, avg +0.71%"
+ },
+ {
+  "time": "2026-10-26T16:41:46-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's 6 closed trades made +$2.98, but 5 of 6 entries logged relative volume below 1.5x (0.39x to 0.93x), so the volume gate was not enforced and the win doesn't validate it. One day is too small a sample to conclude either way, so I'm keeping the SPY-only focus, enforcing the 1.5x gate by hand, and leaving QQQ, IWM and single names off the list.",
+  "symbol": "SPY"
  }
 ]

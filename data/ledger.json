@@ -9106,5 +9106,80 @@
   ],
   "aggression": "aggressive",
   "why": "Only $0.19 is settled today, so no trades can fire until tomorrow's cash clears. I'm keeping the wider 0.6% stop since 0.4% stops kept getting shaken out, with 12 slices for more shots and high-volatility liquid names as the watchlist."
+ },
+ {
+  "time": "2026-10-26T16:41:10-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-10-27",
+  "decision": "keep",
+  "why": "Nothing in the fresh scan clears the 1:1 floor: MRK is about 0.53:1, XYZ about 0.50:1, PINS about 0.63:1 and EBAY about 0.33:1. Both open positions still hold their stops, and the Brazil selloff is a reason to watch PBR closely, not to add to it.",
+  "summary": "No new entries. Keep the $509 settled cash for a washout whose SMA5 target is at least as far from the close as its 2.5-ATR stop. Hold DXCM and PBR under their stops and manage them to their exit rules.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-26T16:41:20-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-10-27",
+  "decision": "revise",
+  "why": "The IWM setup still has the best IV/RV (1.38 to 1.49) and a bearish trend side, but the reference levels are stale. IWM closed at 276.95, up from 275.72, which moves the 0.25-delta short call to roughly 288-289. The credit gate is unchanged because it was never met today.",
+  "summary": "Stay flat unless an IWM bear call spread can be sold at a natural credit of at least $0.25 on a $1 width, with the short call at about 0.25 delta (roughly 288-289 at the open) and the long call $1 higher, 21-45 DTE, one contract. Do not resubmit any order that failed to fill today.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Bear call spread, 21-45 DTE, short call near 0.25 delta (about 288-289 given the 276.95 close), long call $1 higher. One contract. IV about 21.7% vs 20-day realized 14.5% (IV/RV about 1.38-1.49). Bearish trend side. Crash radar calm at 25.",
+    "trigger": "Natural credit of at least $0.25 on the $1 width with max loss at or under $75, IWM not gapping up toward the short strike at the open, and no Iran or oil headline spike. Skip credits of 0.20-0.24. Do not chase a failed order at the same strike.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-26T16:41:33-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "After-close review",
+  "for_day": "2026-10-27",
+  "decision": "revise",
+  "why": "The open bearish book (about $811 cost against roughly $800 equity) is still above the 50% guideline, and settled cash is only $143.50, so nothing new can be funded. The change is reconciling conflicting stop levels to the tighter recorded values (ASTS 49.7, IREN 31.26, APLD 22.31) so exits are not delayed by stale notes.",
+  "summary": "Hold all five put spreads with no adds. Exit each at open if its underlying closes above the tighter recorded stop. Keep T and NFLX as contingent Communication Services ideas that can only be funded after a position closes and settles, the book falls below 50% of equity, and the radar stays under 40.",
+  "watchlist": [
+   {
+    "symbol": "T",
+    "setup": "Communication Services put spread on a fresh breakdown below its 21.79 support, down 17.6% over 20 days and below its 200-day, with a SpaceX cell-site catalyst.",
+    "trigger": "Only after a position closes and settles, the open bearish book is under 50% of equity, the radar stays under 40, and T still trades below 21.79 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services put spread on a contingent breakdown below its 200-day near 66.54, supported by engagement reports and a Wolfe downgrade. Buybacks and guidance argue against chasing.",
+    "trigger": "Only after a position closes and settles, the open bearish book is under 50% of equity, the radar stays under 40, and NFLX still trades below 66.54 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-26T16:41:46-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-10-27",
+  "decision": "revise",
+  "why": "Today's 6 closed trades made +$2.98, but 5 of 6 entries logged relative volume below 1.5x (0.39x to 0.93x), so the volume gate was not enforced and the win doesn't validate it. One day is too small a sample to conclude either way, so I'm keeping the SPY-only focus, enforcing the 1.5x gate by hand, and leaving QQQ, IWM and single names off the list.",
+  "summary": "Take at most one SPY slice of $80 tomorrow, only on a VWAP reclaim or a 15-minute opening-range breakout that holds for 2 bars with logged relative volume of at least 1.5x and price no more than 1.5% above VWAP. Stand aside if the open gaps down more than 0.5% without reclaiming VWAP, or if crash radar reaches 40. Skip META, SPCX and TSLA at the open given the offering and merger headlines.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a shallow pullback, or 15-minute opening-range breakout with volume confirmation",
+    "trigger": "Price reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with logged relative volume of at least 1.5x and price no more than 1.5% above VWAP. No entry if the open gaps down more than 0.5% without a reclaim.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
  }
 ]
