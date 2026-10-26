@@ -9,16 +9,14 @@
   "start_balance": 1000.0
  },
  "entries": {
-  "date": "2026-10-23",
+  "date": "2026-10-26",
   "counts": {
-   "scalper": 5,
-   "hyper": 11,
-   "trend": 2
+   "meanrev": 1
   }
  },
  "agents": {
   "trend": {
-   "cash": 17.13,
+   "cash": 169.26,
    "reserved": 0.0,
    "positions": {
     "pos-ea0031af4c": {
@@ -28,7 +26,7 @@
      "opt_type": "put",
      "qty": 2,
      "entry": 0.55,
-     "mark": 0.78,
+     "mark": 0.85,
      "expiry": "2026-11-06",
      "strike": 6.0,
      "delta": -0.46,
@@ -47,7 +45,7 @@
      },
      "sector": "Technology",
      "low_water": 5.225,
-     "exit_half_spread": 0.035
+     "exit_half_spread": 0.235
     },
     "pos-bf6606febd": {
      "kind": "option",
@@ -56,13 +54,13 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.75,
-     "mark": 3.13,
+     "mark": 3.46,
      "expiry": "2026-11-20",
      "strike": 8.0,
      "delta": -0.38,
      "cost": 182.0,
      "direction": "short",
-     "stop": 9.42,
+     "stop": 8.9,
      "atr": 1.344,
      "opened": "2026-10-14T12:10:37-04:00",
      "thesis": "CWVX broke below its 55-day low at 8.87 on 13.8x relative volume and sits 69% below its 200-day SMA, a strong, high-conviction breakdown; the 10.76 stop sits above the breakdown level.",
@@ -74,8 +72,8 @@
       "pct_vs_sma200": -68.6
      },
      "sector": "Broad market / other",
-     "low_water": 5.39,
-     "exit_half_spread": 0.15
+     "low_water": 4.87,
+     "exit_half_spread": 0.41
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -84,7 +82,7 @@
      "opt_type": "put",
      "qty": 5,
      "entry": 0.14,
-     "mark": 0.18,
+     "mark": 0.17,
      "expiry": "2026-11-06",
      "strike": 1.5,
      "delta": -0.5,
@@ -103,7 +101,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 1.35,
-     "exit_half_spread": 0.005
+     "exit_half_spread": 0.045
     },
     "pos-2ce62f642c": {
      "kind": "stock",
@@ -124,7 +122,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 51.205,
+     "last": 50.575,
      "high_water": 51.465
     },
     "pos-e9580fb11e": {
@@ -146,52 +144,8 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 69.34,
+     "last": 68.975,
      "high_water": 69.68
-    },
-    "pos-47b298eed1": {
-     "kind": "stock",
-     "symbol": "HLT",
-     "qty": 0.1964,
-     "entry": 354.11,
-     "cost": 69.55,
-     "direction": "long",
-     "stop": 345.94,
-     "atr": 6.102,
-     "opened": "2026-10-20T09:37:00-04:00",
-     "thesis": "HLT cleared its 55-day high at 350.87 on 2.9x relative volume with a 12.7% 20-day rate of change, and it sits 11.9% above its 200-day SMA; the 344.04 stop risks about 3.4% under the breakout level.",
-     "confidence": 3,
-     "signals": {
-      "rel_volume": 2.88,
-      "roc20_pct": 12.7,
-      "pct_vs_sma50": 11.5,
-      "pct_vs_sma200": 11.9
-     },
-     "sector": "Broad market / other",
-     "last": 350.61,
-     "high_water": 364.25
-    },
-    "pos-f743b48256": {
-     "kind": "stock",
-     "symbol": "PBR",
-     "qty": 3.8095,
-     "entry": 26.2,
-     "cost": 99.81,
-     "direction": "long",
-     "stop": 24.74,
-     "atr": 0.757,
-     "opened": "2026-10-23T10:06:50-04:00",
-     "thesis": "PBR closed right at its 55-day breakout (26.11) on 1.9x volume with roc20 +22.9%, a fresh trend entry with a tight 1.51/share risk to the 24.74 stop.",
-     "confidence": 3,
-     "signals": {
-      "rel_volume": 1.86,
-      "roc20_pct": 22.9,
-      "pct_vs_sma50": 22.4,
-      "pct_vs_sma200": 39.5
-     },
-     "sector": "Energy",
-     "last": 26.19,
-     "high_water": 26.22
     },
     "pos-c5110eb879": {
      "kind": "stock",
@@ -212,26 +166,18 @@
       "pct_vs_sma200": 31.7
      },
      "sector": "Energy",
-     "last": 48.805,
+     "last": 47.9,
      "high_water": 49.03
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 3,
+   "closed": 5,
    "wins": 1,
    "peak": 1229.4,
    "max_dd": 0.136,
    "notes": [
-    {
-     "date": "2026-10-21",
-     "note": "Settled cash is $6.38, too small for any candidate put or stock, so I'm holding all positions at their existing stops. Recheck settled cash before acting on any setup."
-    },
-    {
-     "date": "2026-10-21",
-     "note": "Settled cash is $6.38, too small for any candidate. Holding all positions at their existing stops and rechecking settled cash before acting on any setup."
-    },
     {
      "date": "2026-10-21",
      "note": "Settled cash is $6.38, too small for any candidate. Holding all positions at their existing stops and rechecking settled cash before acting."
@@ -387,12 +333,18 @@
     {
      "date": "2026-10-23",
      "note": "[weekly] Three trades is noise, so don't retune on it. The real constraint is liquidity: settled cash sat at $17 for days, which blocked every entry. Size positions so some settled cash stays free, and avoid piling into one sector (Energy). Let winners run to targets and keep cutting failed breakouts quickly"
+    },
+    {
+     "date": "2026-10-26",
+     "note": "Settled cash is $17.13, too small for the NU put candidate, so I'm passing. Cut failed breakouts quickly and keep some settled cash free. Energy stays concentrated, so no new energy adds."
     }
    ],
    "last_exits": {
     "SOFI": "2026-10-16",
     "ETSY": "2026-10-16",
-    "CIFR": "2026-10-22"
+    "CIFR": "2026-10-22",
+    "PBR": "2026-10-26",
+    "HLT": "2026-10-26"
    },
    "plan": {
     "for_day": "2026-10-26",
@@ -500,7 +452,18 @@
      }
     ]
    },
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 82.95,
+     "settles": "2026-10-27",
+     "note": "sold PBR"
+    },
+    {
+     "amount": 69.18,
+     "settles": "2026-10-27",
+     "note": "sold HLT"
+    }
+   ],
    "focus": {
     "lean_in": [
      "Energy"
@@ -673,7 +636,7 @@
    ]
   },
   "meanrev": {
-   "cash": 758.11,
+   "cash": 509.37,
    "reserved": 0.0,
    "positions": {
     "pos-ca62d7fe24": {
@@ -694,7 +657,27 @@
       "pct_vs_sma5": -6.6
      },
      "sector": "Consumer Discretionary",
-     "last": 78.47
+     "last": 76.97
+    },
+    "pos-63e0644f50": {
+     "kind": "stock",
+     "symbol": "PBR",
+     "qty": 11.4626,
+     "entry": 21.7,
+     "cost": 248.74,
+     "direction": "long",
+     "stop": 19.9,
+     "atr": 0.762,
+     "opened": "2026-10-26T09:36:43-04:00",
+     "thesis": "PBR RSI(2) 6 washout 15.5% above its 200-day in a calm regime (crash radar 26, SPY above its 200-day); the 25.00 target versus the 19.90 stop is about 1.67:1, the only candidate that clears my 1:1 floor today.",
+     "confidence": 3,
+     "signals": {
+      "rsi2": 6.2,
+      "pct_vs_sma200": 15.5,
+      "pct_vs_sma5": -12.8
+     },
+     "sector": "Energy",
+     "last": 21.81
     }
    },
    "status": "active",
@@ -705,14 +688,6 @@
    "peak": 1012.77,
    "max_dd": 0.0072,
    "notes": [
-    {
-     "date": "2026-10-21",
-     "note": "No candidate clears the 1:1 reward-to-risk floor (FCX ~0.2:1, DXCM ~0.5:1). Hold FTNT on its 154.63 stop and keep cash for a washout with a wider snap-back target."
-    },
-    {
-     "date": "2026-10-21",
-     "note": "No candidate reaches the 1:1 reward-to-risk floor (FCX ~0.2:1, DXCM ~0.5:1). Hold FTNT on its 154.63 stop, keep cash for a washout with a wider snap-back target, and exit FTNT per the game plan if RSI(2) exceeds 70 or the close falls below 160."
-    },
     {
      "date": "2026-10-21",
      "note": "DXCM (about 0.86:1: target 85.26 vs stop 75.57) and FCX (about 0.2:1) both fail the 1:1 floor. Hold FTNT on its 154.63 stop and stay in settled cash."
@@ -868,6 +843,10 @@
     {
      "date": "2026-10-23",
      "note": "[weekly] With 3 closed trades, the gap between confidence 2 ($7.54) and confidence 3 ($0.34) is noise, not a signal. Don't retune on it. The 1:1 reward-to-risk floor kept me out of poor setups, and the only trades taken were ones that cleared it. Revisit stop_atr (2.5) only after about 15-20 closed trades, a"
+    },
+    {
+     "date": "2026-10-26",
+     "note": "Passed on SNAP, PINS, MRNA, EBAY and DXCM (DXCM already held) for reward-to-risk under 1:1. PBR is the only new setup that clears the floor, so I sized it at about a third of settled cash."
     }
    ],
    "last_exits": {
@@ -1033,14 +1012,6 @@
    "notes": [
     {
      "date": "2026-10-21",
-     "note": "Pass 10:36: best live credits are SPY 742/741 put at 0.10, IWM 290/291 call at 0.15, XLE 64.5/63.5 put at 0.20 and EEM 67.5/68.5 call at 0.17, all below the 0.25 credit-to-width gate. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for 0.25+."
-    },
-    {
-     "date": "2026-10-21",
-     "note": "Pass 11:06: best live credits are IWM 290/291 call at 0.19, XLE 64/63 put at 0.15, SPY 744/743 put at 0.15 and EEM 67.5/68.5 call at 0.10, all below my 0.25 credit-to-width gate. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for 0.25+."
-    },
-    {
-     "date": "2026-10-21",
      "note": "11:36 pass: best live credits are SPY 745/744 put at 0.21, IWM 290/291 call at 0.17, XLE 64/63 put at 0.20 and EEM 67.5/68.5 call at 0.10, all below my 0.25 credit-to-width gate. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for 0.25+ at the next session."
     },
     {
@@ -1194,6 +1165,10 @@
     {
      "date": "2026-10-23",
      "note": "[weekly] Zero trades in a week means the filters are too strict for the account size, not that the market is bad. Fix the bottleneck with one small, defined-risk change (delta) rather than widening the spread or loosening the IV/RV edge, then review actual fills next week."
+    },
+    {
+     "date": "2026-10-26",
+     "note": "Pass 10/26 09:36: IWM 288/289 bear call mid is 0.23, below the 0.25 credit gate in the game plan. EEM and TLT stay excluded. Stay flat with $1,000 settled and recheck IWM 21-45 DTE for a natural of at least 0.25."
     }
    ],
    "last_exits": {},
@@ -1266,7 +1241,7 @@
      }
     ]
    },
-   "min_trade_seen": 79.0,
+   "min_trade_seen": 77.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -1446,7 +1421,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 760.4
+     "last": 762.91
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1462,7 +1437,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 760.4
+     "last": 762.91
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1478,7 +1453,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 760.4
+     "last": 762.91
     }
    },
    "status": "active",
@@ -1536,7 +1511,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.27,
+     "mark": 1.07,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -1556,7 +1531,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.2,
+     "exit_half_spread": 0.93,
      "peak_mark": 1.36,
      "low_water": 36.84
     },
@@ -1582,14 +1557,14 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.52,
+     "mark": 1.24,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
      "cost": 130.0,
      "play": "weak_stock",
      "direction": "short",
-     "stop": 32.39,
+     "stop": 31.26,
      "atr": 2.431,
      "opened": "2026-10-14T12:10:57-04:00",
      "thesis": "IREN broke its 20-day low at 32.71, is down 16% over 20 days and sits below its 200-day in a calm radar (15), so a bear put spread capped at $150 targets the breakdown.",
@@ -1602,9 +1577,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.175,
+     "exit_half_spread": 0.29,
      "peak_mark": 1.6,
-     "low_water": 25.095
+     "low_water": 23.97
     },
     "pos-ebf1f3ff74": {
      "kind": "debit_spread",
@@ -1628,14 +1603,14 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 0.88,
+     "mark": 0.98,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
      "cost": 91.5,
      "play": "weak_stock",
      "direction": "short",
-     "stop": 22.38,
+     "stop": 22.36,
      "atr": 1.585,
      "opened": "2026-10-15T13:07:01-04:00",
      "thesis": "APLD closed through its 20.02 breakdown level at 19.21, down 16.7% over 20 days and 40% below its 200-day, so a smaller $90 bear put spread keeps Technology exposure sized down while the radar is calm.",
@@ -1648,9 +1623,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.105,
-     "peak_mark": 0.92,
-     "low_water": 17.965
+     "exit_half_spread": 0.135,
+     "peak_mark": 0.98,
+     "low_water": 17.6
     },
     "pos-d7a488bc5f": {
      "kind": "debit_spread",
@@ -1674,7 +1649,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 1.29,
+     "mark": 1.25,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -1694,7 +1669,7 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.355,
+     "exit_half_spread": 0.99,
      "peak_mark": 1.62,
      "low_water": 123.49
     },
@@ -1720,7 +1695,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.98,
+     "mark": 1.28,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -1740,7 +1715,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 0.88,
+     "exit_half_spread": 1.695,
      "peak_mark": 1.9
     }
    },
@@ -1752,14 +1727,6 @@
    "peak": 1000.0,
    "max_dd": 0.3435,
    "notes": [
-    {
-     "date": "2026-10-21",
-     "note": "Stay flat. Bearish debit is about 80% of equity against a 50% guideline, the Technology focus blocks new tech risk, and only $143.50 is settled. Reassess when a position closes or the radar rises above 40. Reconcile the AGCO fill ($330 vs $183.9 budget) and the IREN/PLD stop records before the next "
-    },
-    {
-     "date": "2026-10-21",
-     "note": "Stay flat. Open bearish debit is about 80% of equity against the 50% guideline, the Technology focus blocks new tech risk, and the SPY insurance and CMG/XLC/ORCL setups would add correlated bearish exposure. Reassess when a position closes or the radar rises above 40. Reconcile the AGCO fill ($330 v"
-    },
     {
      "date": "2026-10-21",
      "note": "Stay flat: bearish debit is about 80% of equity against a 50% guideline, the radar is calm at 16, and settled cash is only $143.50. CMG, T, BABA, XLC and SPY insurance would add correlated short risk. Reassess after a position closes or the radar rises above 40."
@@ -1915,6 +1882,10 @@
     {
      "date": "2026-10-23",
      "note": "[weekly] No closed trades this week, so there is nothing to tune from. Retuning on noise would be overfitting. The real issue is oversized open debit (~$811 vs ~$737 equity) and the AGCO fill ($330 vs $183.9 budget), which needs reconciling. Keep new positions within budget, and wait for closes to settle or "
+    },
+    {
+     "date": "2026-10-26",
+     "note": "Passing on XLC again. The debit would consume nearly all of the $143.50 settled cash, and open bearish debit (~$811 at cost, ~$582 marked) is still above the 50% guideline. Reconcile the AGCO $330 vs $183.9 fill and reassess when a position closes and settles, or if the radar rises above 40."
     }
    ],
    "last_exits": {},
@@ -2233,18 +2204,24 @@
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [],
    "playbook": {
-    "date": "2026-10-23",
-    "made_at": "2026-10-23T15:36-04:00",
+    "date": "2026-10-26",
+    "made_at": "2026-10-26T09:36-04:00",
     "watch": [
      "SPY",
-     "QQQ"
+     "QQQ",
+     "NVDA",
+     "TSLA",
+     "MU",
+     "SMH",
+     "EWZ",
+     "SPCX"
     ],
-    "aggression": "stand_down",
-    "why": "It's 3:36 PM with under 15 minutes before the 3:50 flat cutoff and only $83.52 settled, so a new trade can't get a fair run. Today's scalps are net negative, and most names are in 1-minute downtrends. Keep SPY and QQQ as the only watch names for tomorrow's open, with the overnight SPY-only rules.",
-    "slices": 1,
+    "aggression": "defensive",
+    "why": "Market is calm (crash radar 26) but the opening is mixed, with most names trending down and small ranges, so I'm keeping size reduced and taking only VWAP bounces. I'm focusing on the liquid names with clean up-trends and volume, and I'm keeping the overnight SPY plan's 1.5x relative-volume and gap-",
+    "slices": 4,
     "target_pct": 0.5,
     "stop_pct": 0.3,
-    "max_hold_min": 20
+    "max_hold_min": 45
    },
    "scalp_day": {
     "date": "2026-10-23",
@@ -2561,83 +2538,29 @@
     "QQQ": "2026-10-23"
    },
    "joined": "2026-10-19T11:05:03-04:00",
-   "unsettled": [
-    {
-     "amount": 100.78,
-     "settles": "2026-10-26",
-     "note": "sold SOXL"
-    },
-    {
-     "amount": 99.48,
-     "settles": "2026-10-26",
-     "note": "sold SOXL"
-    },
-    {
-     "amount": 100.92,
-     "settles": "2026-10-26",
-     "note": "sold SPCX"
-    },
-    {
-     "amount": 100.49,
-     "settles": "2026-10-26",
-     "note": "sold NVDA"
-    },
-    {
-     "amount": 100.16,
-     "settles": "2026-10-26",
-     "note": "sold AMD"
-    },
-    {
-     "amount": 101.14,
-     "settles": "2026-10-26",
-     "note": "sold STX"
-    },
-    {
-     "amount": 66.63,
-     "settles": "2026-10-26",
-     "note": "sold SOXL"
-    },
-    {
-     "amount": 83.73,
-     "settles": "2026-10-26",
-     "note": "sold QQQ"
-    },
-    {
-     "amount": 83.87,
-     "settles": "2026-10-26",
-     "note": "sold NVDA"
-    },
-    {
-     "amount": 83.99,
-     "settles": "2026-10-26",
-     "note": "sold AMD"
-    },
-    {
-     "amount": 84.3,
-     "settles": "2026-10-26",
-     "note": "sold TQQQ"
-    }
-   ],
+   "unsettled": [],
    "playbook": {
-    "date": "2026-10-23",
-    "made_at": "2026-10-23T15:36-04:00",
+    "date": "2026-10-26",
+    "made_at": "2026-10-26T09:37-04:00",
     "watch": [
-     "STX",
-     "MU",
-     "SNDK",
-     "SPCX",
-     "NVDA",
-     "AMD",
-     "INTC",
+     "SOXL",
+     "TQQQ",
+     "TSLL",
      "TSLA",
-     "QQQ",
-     "SMH"
+     "NVDA",
+     "MU",
+     "SPCX",
+     "EWZ",
+     "NU",
+     "SMH",
+     "TSM",
+     "SNDK"
     ],
     "aggression": "aggressive",
-    "why": "Today's 0.6%/0.35% bands got stopped out on the fastest names (SOXL, which took a -0.58% stop), while the 0.9%/0.5% bands fit the 3-5% daily-range names and 3x ETFs better. Twelve slices give the most shots on tomorrow's roughly $1,005 settlement, and the watchlist focuses on the highest-volume move",
+    "why": "Calm regime with SPY above its 200-day SMA, so run full size on the fastest movers: leveraged ETFs SOXL/TQQQ/TSLL plus high-range names TSLA, NVDA, MU, and SPCX. Twelve slices give the most shots, and the 0.7% target against a 0.35% stop keeps the reward-to-risk at 2:1.",
     "slices": 12,
-    "target_pct": 0.9,
-    "stop_pct": 0.5,
+    "target_pct": 0.7,
+    "stop_pct": 0.35,
     "max_hold_min": 20
    },
    "scalp_day": {

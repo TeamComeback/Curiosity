@@ -8020,5 +8020,99 @@
     "conviction": 2
    }
   ]
+ },
+ {
+  "time": "2026-10-26T09:35:55-04:00",
+  "type": "trade_closed",
+  "agent": "trend",
+  "position_id": "pos-f743b48256",
+  "symbol": "PBR",
+  "underlying": "PBR",
+  "sector": "Energy",
+  "instrument": "stock",
+  "entry": 26.2,
+  "exit": 21.77575,
+  "pnl": -16.86,
+  "return_pct": -16.9,
+  "opened": "2026-10-23T10:06:50-04:00",
+  "why_entered": "PBR closed right at its 55-day breakout (26.11) on 1.9x volume with roc20 +22.9%, a fresh trend entry with a tight 1.51/share risk to the 24.74 stop.",
+  "why_exited": "trailing stop on underlying"
+ },
+ {
+  "time": "2026-10-26T09:36:33-04:00",
+  "type": "trade_closed",
+  "agent": "trend",
+  "position_id": "pos-47b298eed1",
+  "symbol": "HLT",
+  "underlying": "HLT",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "entry": 354.11,
+  "exit": 352.234,
+  "pnl": -0.37,
+  "return_pct": -0.5,
+  "opened": "2026-10-20T09:37:00-04:00",
+  "why_entered": "HLT cleared its 55-day high at 350.87 on 2.9x relative volume with a 12.7% 20-day rate of change, and it sits 11.9% above its 200-day SMA; the 344.04 stop risks about 3.4% under the breakout level.",
+  "why_exited": "agent: Failed breakout: HLT is back below its 350.87 breakout level (about 349.66), so the trend thesis is broken. Cutting now "
+ },
+ {
+  "time": "2026-10-26T09:36:43-04:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-63e0644f50",
+  "symbol": "PBR",
+  "underlying": "PBR",
+  "sector": "Energy",
+  "instrument": "stock",
+  "qty": 11.4626,
+  "price": 21.7,
+  "cost": 248.74,
+  "stop": 19.9,
+  "why": "PBR RSI(2) 6 washout 15.5% above its 200-day in a calm regime (crash radar 26, SPY above its 200-day); the 25.00 target versus the 19.90 stop is about 1.67:1, the only candidate that clears my 1:1 floor today.",
+  "confidence": 3,
+  "signals": {
+   "rsi2": 6.2,
+   "pct_vs_sma200": 15.5,
+   "pct_vs_sma5": -12.8
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-10-26T09:36:58-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "QQQ",
+   "NVDA",
+   "TSLA",
+   "MU",
+   "SMH",
+   "EWZ",
+   "SPCX"
+  ],
+  "aggression": "defensive",
+  "why": "Market is calm (crash radar 26) but the opening is mixed, with most names trending down and small ranges, so I'm keeping size reduced and taking only VWAP bounces. I'm focusing on the liquid names with clean up-trends and volume, and I'm keeping the overnight SPY plan's 1.5x relative-volume and gap-"
+ },
+ {
+  "time": "2026-10-26T09:37:02-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "watch": [
+   "SOXL",
+   "TQQQ",
+   "TSLL",
+   "TSLA",
+   "NVDA",
+   "MU",
+   "SPCX",
+   "EWZ",
+   "NU",
+   "SMH",
+   "TSM",
+   "SNDK"
+  ],
+  "aggression": "aggressive",
+  "why": "Calm regime with SPY above its 200-day SMA, so run full size on the fastest movers: leveraged ETFs SOXL/TQQQ/TSLL plus high-range names TSLA, NVDA, MU, and SPCX. Twelve slices give the most shots, and the 0.7% target against a 0.35% stop keeps the reward-to-risk at 2:1."
  }
 ]
