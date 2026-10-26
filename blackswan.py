@@ -7,8 +7,9 @@
   any level       safe havens (TLT, GLD, UUP) when money is clearly running to safety
 
 Its own guardrails (code, not AI): the most it can put on one trade grows with the radar
-(20% of equity when calm, 35% in warning, 60% in stress), and insurance is capped at a small
-slice of equity. Exits take profits in stages, sell options before time decay speeds up, and
+(12% of equity when calm, 20% in warning, 35% in stress), and insurance is capped at a small
+slice of equity. A drawdown guard halves that cap while equity sits more than 20% below the
+starting balance, and quarters it below 40%, so a losing streak can't sink the firm. Exits take profits in stages, sell options before time decay speeds up, and
 get out when a breakdown fails."""
 from datetime import date
 
@@ -19,7 +20,18 @@ import universe
 from common import debit_spread_mark, manage_long_option, mid, split_today
 from indicators import enrich, realized_vol
 
-SIZE_CAP = {"calm": 0.20, "warning": 0.35, "stress": 0.60, "unknown": 0.20}
+SIZE_CAP = {"calm": 0.12, "warning": 0.20, "stress": 0.35, "unknown": 0.12}
+# Drawdown guard (Oct 2026, after a 31% drawdown): shrink new bets while the firm is under water.
+DRAWDOWN_STEPS = [(0.60, 0.25), (0.80, 0.50)]   # (equity / start below this, multiply cap by this)
+
+
+def _drawdown_mult(equity):
+    start = float(config.RACE.get("start_balance") or 0) or equity
+    ratio = equity / start if start else 1.0
+    for floor, mult in DRAWDOWN_STEPS:
+        if ratio < floor:
+            return mult
+    return 1.0
 SECTOR_ETFS = list(universe.SECTOR_ETFS) + ["SMH", "KRE", "XHB", "XRT", "IYT"]
 INDEXES = ["SPY", "QQQ", "IWM", "DIA"]
 NOT_STOCKS = set(config.BEAR_SYMBOLS) | set(SECTOR_ETFS) | set(config.VOL_UNDERLYINGS) | {"DIA"}
@@ -92,7 +104,8 @@ def entries(ctx):
     lvl, score = r.get("tier", "unknown"), r.get("score") or 0
     parts = r.get("parts", {})
     agent = ctx["state"]["agents"]["blackswan"]
-    cap = round(_equity(ctx) * SIZE_CAP.get(lvl, 0.2), 2)
+    eq = _equity(ctx)
+    cap = round(eq * SIZE_CAP.get(lvl, 0.12) * _drawdown_mult(eq), 2)
     out = []
 
     # 1) weakest stocks breaking down (any level)
@@ -132,7 +145,7 @@ def entries(ctx):
             price = ctx["prices"].get("SPY") or float(spy["close"].iloc[-1])
             insurance.append({"agent": "blackswan", "symbol": "SPY", "price": price, "direction": "short", "play": "insurance",
                               "atr": 0, "stop": 0, "suggested_instrument": "debit_spread",
-                              "max_dollars": round(_equity(ctx) * p["insurance_pct"], 2),
+                              "max_dollars": round(_equity(ctx) * p["insurance_pct"] * _drawdown_mult(_equity(ctx)), 2),
                               "opt": {"opt_delta": 0.20, "opt_min_dte": 75, "opt_max_dte": 150, "spread_width_pct": 0.05},
                               "signals": {"spy_realized_vol_pct": round(rv * 100, 1), "radar": score},
                               "score": 1, "rule_thesis": f"Insurance while it's cheap: SPY realized vol only {rv:.0%}; a far-out "
