@@ -8869,5 +8869,35 @@
   "opened": "2026-10-26T10:41:22-04:00",
   "why_entered": "VWAP pullback bounce on QQQ: 1.4x volume, +0.43% vs VWAP; target +0.6%, stop -0.4%",
   "why_exited": "time limit, 46 min (+0.46%)"
+ },
+ {
+  "time": "2026-10-26T11:36:31-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "QQQ"
+  ],
+  "aggression": "stand_down",
+  "why": "Only $42 is settled cash today, with $964 still settling until tomorrow, so any trade would be tiny. Today's seven round trips have mostly been small, and follow-through is thin. Stand down and reassess once proceeds settle."
+ },
+ {
+  "time": "2026-10-26T11:36:36-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "watch": [
+   "SOXL",
+   "CRWV",
+   "EWZ",
+   "TSLL",
+   "NU",
+   "SPCX",
+   "MU",
+   "SMH",
+   "AVGO",
+   "TSM"
+  ],
+  "aggression": "aggressive",
+  "why": "Semis and high-beta leaders (SOXL, CRWV, EWZ, TSLL) show the strongest VWAP premiums and volume, with SPY still in an uptrend. Recent stops clustered around 0.4%, so I'm widening the stop to 0.45% and the target to 0.9% to keep roughly 2:1, though settled cash is only $0.19 so few trades can fire un"
  }
 ]
