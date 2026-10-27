@@ -1,26 +1,5 @@
 [
  {
-  "time": "2026-10-13T18:19:03-04:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "After-close review: keep. The SMH position is already open with its stop at 552.5 and the thesis still holds: RSI(2) is still deeply oversold and the stock is well above its 200-day. Cash is $0.07, so the only real choice is how to manage the existing SMH position, and the plan's exit rules still apply.",
-  "symbol": ""
- },
- {
-  "time": "2026-10-13T18:20:35-04:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "After-close review: revise. The IV/RV gate now passes on fresh data (SPY 1.30, QQQ 1.24, IWM 1.71), but the scan has no expiry, DTE, strikes, or credit quotes, so the edge is not yet tradable. A $1-wide spread also ties up roughly $70-80 of a $100 account, and the Iran operation and hawkish Fed headlines make put-side gap risk the main threat.",
-  "symbol": "IWM"
- },
- {
-  "time": "2026-10-13T18:47:49-04:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Evening check-in: keep. XLE is still 1.14% below its 66.42 trigger, so the breakout is unconfirmed, and the energy news flow (oil-rally commentary, Iran operation reports, Guyana/Exxon supply talk) still supports the setup. Nothing else in the scan is affordable with $100 cash, so the plan stays as written.",
-  "symbol": "XLE"
- },
- {
   "time": "2026-10-13T18:47:54-04:00",
   "type": "plan",
   "agent": "meanrev",
@@ -7394,5 +7373,26 @@
   "agent": "hyper",
   "symbol": "SOXL, WDC, CRWV, SNDK, BE",
   "note": "aggressive: Settled cash is only $0.47, so no entries are possible until tomorrow's settlement. Keep the 0.5% stop, which avoided the noise stops that hit the 0.4% stops today, and use the 0.9% target with a 20-minute hold on the highest-volume movers (SOXL, TQQQ, WDC, CRWV, SNDK) plus BE, AMD, SPCX, SMH, TSLA,"
+ },
+ {
+  "time": "2026-10-27T15:36:02-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-62%)"
+ },
+ {
+  "time": "2026-10-27T15:36:24-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, IWM",
+  "note": "stand_down: Settled cash is $0 and today's sale proceeds settle tomorrow, so no new round trip is possible before the 3:50 flatten. Keep SPY and IWM on watch for the next session, when the crash radar is calm and SPY is trending up."
+ },
+ {
+  "time": "2026-10-27T15:36:30-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "symbol": "SOXL, TQQQ, WDC, CRWV, SNDK",
+  "note": "aggressive: Settled cash is only $0.47, so no entries are possible until tomorrow's settlement. Today's 0.4% stops were mostly noise, and the 0.5% stop with a 0.8% target and 20-minute hold is a reasonable middle ground for the highest-volume movers, including the 3x ETFs."
  }
 ]
