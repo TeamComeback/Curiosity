@@ -233,8 +233,20 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
             store.journal({"type": "plan_error", "agent": aid, "note": f"{SESSIONS[session]} failed ({err}); kept the previous plan"})
             return None
     d["watchlist"] = [w for w in (d.get("watchlist") or []) if isinstance(w, dict) and w.get("symbol")][:8]
+    # Clamp every planned dollar amount to the settled cash the firm actually has right now.
+    # Plans were being written against stale budgets (e.g. $186.88 planned vs $17.13 settled),
+    # which wasted runs on orders the governor then had to shrink or refuse.
+    settled = max(0.0, float(view["balance"]["available_settled"] or 0))
+    clamped = 0
     for w in d["watchlist"]:
         w["symbol"] = str(w["symbol"]).upper().strip()[:12]
+        try:
+            md = float(w.get("max_dollars")) if w.get("max_dollars") is not None else None
+        except (TypeError, ValueError):
+            md = None
+        if md is None or md > settled:
+            w["max_dollars"] = round(settled, 2)
+            clamped += md is not None and md > settled
     revisions = list(current.get("revisions", [])) if current.get("for_day") == next_trading_day(store.now_et()) else []
     revisions.append({"at": store.now_et().isoformat(timespec="minutes"), "session": SESSIONS[session],
                       "decision": d.get("decision", "revise"), "why": str(d.get("why", ""))[:400],
@@ -245,7 +257,8 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
             "summary": str(d.get("summary", ""))[:600], "watchlist": d["watchlist"],
             "position_plans": (d.get("position_plans") or [])[:6], "avoid": (d.get("avoid") or [])[:6],
             "brainstorm": str(d.get("brainstorm", ""))[:300], "revisions": revisions[-6:],
-            "_sector_focus": d.get("sector_focus")}
+            "_sector_focus": d.get("sector_focus"),
+            "settled_cash_at_plan": round(settled, 2), "budgets_clamped": int(clamped)}
     return plan
 
 
