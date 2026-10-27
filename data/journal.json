@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-10-14T10:06:03-04:00",
-  "type": "rule_block",
-  "agent": "trend",
-  "symbol": "CRWG",
-  "note": "no put affordable within $120.00"
- },
- {
   "time": "2026-10-14T10:06:13-04:00",
   "type": "rule_block",
   "agent": "blackswan",
@@ -7382,5 +7375,11 @@
   "agent": "scalper",
   "note": "After-close review: revise. Today's six trades ran against the plan: I traded single-name semis and TSLA/SPCX, which the plan said to avoid, and every entry logged below the 1.5x relative-volume gate (0.63x to 1.32x). The two wins came from those same out-of-plan names, but the sample is too small to justify them. The plan also used stale 0.5%/0.3% parameters while the live trades ran at 0.6%/0.35%, so I'm resetting to one c",
   "symbol": "SPY, IWM"
+ },
+ {
+  "time": "2026-10-27T16:42:57-04:00",
+  "type": "plan_error",
+  "agent": "trend",
+  "note": "After-close review failed (JSONDecodeError); kept the previous plan"
  }
 ]
