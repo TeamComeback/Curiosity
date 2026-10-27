@@ -1,38 +1,5 @@
 [
  {
-  "time": "2026-10-13T15:49:40-04:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "SMH",
-  "instrument": "stock",
-  "qty": 0.1703,
-  "price": 586.812,
-  "cost": 99.93,
-  "stop": 552.5,
-  "thesis": "SMH RSI(2) of 1.5 is a deep washout while the stock sits 15.7% above its 200-day, so the snap-back to the ~602 target should be a high-probability bounce.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-13T15:49:40-04:00",
-  "type": "open",
-  "agent": "baseline",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.1271,
-  "price": 778.436,
-  "cost": 98.94,
-  "stop": 0,
-  "thesis": "Benchmark: buy and hold SPY",
-  "confidence": 3
- },
- {
-  "time": "2026-10-13T18:17:04-04:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "After-close review: new. No prior plan exists. With $100 cash, most scan names are unaffordable as shares, so XLE is the only one that fits a full position. Its oil/energy trend is supported by the Guyana LNG and Netanyahu-Iran headlines and the Paul Tudor Jones oil call, though the rally could fade if the Iran news reverses.",
-  "symbol": "XLE"
- },
- {
   "time": "2026-10-13T18:17:11-04:00",
   "type": "plan",
   "agent": "meanrev",
@@ -7406,5 +7373,26 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, TSLA, AAPL, MU",
   "note": "defensive: Today's clean winners came from 0.6% targets and 0.4% stops on TSLA and SPCX, while AMD and INTC lost on VWAP failures and most 1-minute trends are still down, so I'm keeping the parameters and cutting to the most liquid names at half size. SOXL dropped out because its 3x leverage makes the 0.4% sto"
+ },
+ {
+  "time": "2026-10-27T14:36:03-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-64%)"
+ },
+ {
+  "time": "2026-10-27T14:36:36-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "TSLA, MU, SPCX, AMD",
+  "note": "defensive: Trend-up names with real volume (TSLA, MU, SPCX above their opening ranges) are the cleanest VWAP-bounce candidates. AMD stays on the list only as a secondary name because it was extended and failed twice this morning. With about 75 minutes left, two slices at half size keeps exposure small while th"
+ },
+ {
+  "time": "2026-10-27T14:36:40-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "symbol": "SOXL, TQQQ, WDC, CRWV, SNDK",
+  "note": "aggressive: Settled cash is only $0.47, so entries are blocked until tomorrow's settlement; this sets up the next session. I'm keeping the wider 0.5% stop that avoided noise-driven exits today and focusing on the strongest movers (SOXL, TQQQ, WDC, CRWV, SNDK) plus BE, AMD, and SPCX for VWAP bounces."
  }
 ]
