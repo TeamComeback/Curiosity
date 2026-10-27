@@ -9463,5 +9463,58 @@
   ],
   "why": "Broad market (SPY) is the only gate-compliant evidence so far. Industrials has 6 trades at a 67% win rate and +$0.99, but the sample is small. Consumer Staples (2 wins, AAPL) is dropped from lean-in because it is too small to act on. Technology has 30 trades at 50% and +$0.06 per trade, so it is neu",
   "expires": "2026-11-10"
+ },
+ {
+  "time": "2026-10-27T09:35:56-04:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-ca62d7fe24",
+  "symbol": "DXCM",
+  "underlying": "DXCM",
+  "sector": "Consumer Discretionary",
+  "instrument": "stock",
+  "entry": 77.67,
+  "exit": 78.72,
+  "pnl": 3.38,
+  "return_pct": 1.4,
+  "opened": "2026-10-22T14:06:31-04:00",
+  "why_entered": "DXCM RSI(2) 2.5 washout 4.6% above its 200-day; live target 83.13 vs stop 71.98 is about 0.97:1, near my 1:1 floor, and the calm regime supports a snap-back.",
+  "why_exited": "snap-back (RSI2 52)"
+ },
+ {
+  "time": "2026-10-27T09:37:15-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "AVGO",
+   "AMD",
+   "TSLA",
+   "INTC",
+   "QQQ",
+   "SPY"
+  ],
+  "aggression": "defensive",
+  "why": "SPY is flat with a tiny range and thin volume, so the index setups are weak. I'd rather trade uptrending liquid names near VWAP (AVGO above its opening range, AMD, TSLA, INTC) at half size, with fewer slices and tighter limits. I skipped BE and WDC because they are too extended above VWAP for a safe"
+ },
+ {
+  "time": "2026-10-27T09:37:20-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "watch": [
+   "BE",
+   "WDC",
+   "AMD",
+   "TSLA",
+   "INTC",
+   "SOXL",
+   "TQQQ",
+   "TSLL",
+   "AVGO",
+   "SPCX",
+   "CRWV",
+   "NVDA"
+  ],
+  "aggression": "aggressive",
+  "why": "BE and WDC lead on strength and sit well above VWAP with wide ranges, and AMD, TSLA, and INTC are trending up with rising relative volume. The 3x ETFs (SOXL, TQQQ, TSLL) give fast moves, and 12 slices maximize the number of shots on about $1,000."
  }
 ]

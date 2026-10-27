@@ -6677,5 +6677,47 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. Crash radar is calm at 24 and today has no open positions, so the VWAP-reclaim plan still applies. I'm tightening it because the 1.5x relative-volume gate has not been enforced on VWAP pullbacks, and the edge is about +$0.10 per trade, so I'm dropping AAPL and keeping only the two most liquid index names.",
   "symbol": "SPY, IWM"
+ },
+ {
+  "time": "2026-10-27T09:35:56-04:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "DXCM",
+  "qty": 3.2201,
+  "entry": 77.67,
+  "exit": 78.72,
+  "pnl": 3.38,
+  "note": "snap-back (RSI2 52)",
+  "opened": "2026-10-22T14:06:31-04:00",
+  "confidence": 3,
+  "thesis": "DXCM RSI(2) 2.5 washout 4.6% above its 200-day; live target 83.13 vs stop 71.98 is about 0.97:1, near my 1:1 floor, and the calm regime supports a snap-back."
+ },
+ {
+  "time": "2026-10-27T09:36:28-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-69%)"
+ },
+ {
+  "time": "2026-10-27T09:37:02-04:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "IWM",
+  "note": "credit not filled at 0.26 (mid 0.26, natural 0.17, floor 0.25)"
+ },
+ {
+  "time": "2026-10-27T09:37:15-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AVGO, AMD, TSLA, INTC, QQQ",
+  "note": "defensive: SPY is flat with a tiny range and thin volume, so the index setups are weak. I'd rather trade uptrending liquid names near VWAP (AVGO above its opening range, AMD, TSLA, INTC) at half size, with fewer slices and tighter limits. I skipped BE and WDC because they are too extended above VWAP for a safe"
+ },
+ {
+  "time": "2026-10-27T09:37:20-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "symbol": "BE, WDC, AMD, TSLA, INTC",
+  "note": "aggressive: BE and WDC lead on strength and sit well above VWAP with wide ranges, and AMD, TSLA, and INTC are trending up with rising relative volume. The 3x ETFs (SOXL, TQQQ, TSLL) give fast moves, and 12 slices maximize the number of shots on about $1,000."
  }
 ]
