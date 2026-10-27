@@ -9319,5 +9319,149 @@
   ],
   "why": "Broad market (SPY) is the only gate-compliant evidence so far. Consumer Staples (2 trades, both wins, AAPL) and Industrials (6 trades, 67% win rate, +$0.99) look positive but are small samples. Technology has 30 trades at 50% and +$0.06 per trade, so it is not a lean-in sector, but I'm not banning i",
   "expires": "2026-11-09"
+ },
+ {
+  "time": "2026-10-27T07:40:38-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-10-27",
+  "decision": "revise",
+  "why": "The old plan assumed about $17 of settled cash and waiting for ~$152 of proceeds. Proceeds have now settled, leaving $169.26 available, and the energy breakouts in the fresh scan are real. The old triggers are still valid, but the sizing needs to change.",
+  "summary": "Buy small on confirmed closes above breakout levels: XOM above 183.70, DVN above 51.70, and CNQ above 55.49, each on at least 1.75x volume, with no chasing gaps above 1 ATR. Keep about $54 unspent. Hold the three puts and three energy longs on their stops.",
+  "watchlist": [
+   {
+    "symbol": "XOM",
+    "setup": "Energy breakout flagged today at 183.70, roc20 +13.5%, ATR 3.6, CNBC coverage",
+    "trigger": "Close above 183.70 on at least 1.75x relative volume, then buy the next morning. Skip if the open is more than 1 ATR (3.6) above 183.70.",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "DVN",
+    "setup": "Energy near-breakout, 0.14% below its 55-day high at 51.70, roc20 +10.5%, ATR 1.34",
+    "trigger": "Close above 51.70 on at least 1.75x relative volume, then buy the next morning. Skip if the open is more than 1 ATR (1.34) above 51.70.",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "CNQ",
+    "setup": "Energy near-breakout, 0.71% below its 55-day high at 55.49, roc20 +15.8%, ATR 1.31",
+    "trigger": "Close above 55.49 on at least 1.75x relative volume, then buy the next morning. Skip if the open is more than 1 ATR (1.31) above 55.49.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-27T07:40:38-04:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Energy",
+   "Technology"
+  ],
+  "avoid": [
+   "Consumer Staples"
+  ],
+  "why": "Energy has the most breakouts and near-breakouts in today's scan, and my energy P&L is only -$16.86 from one PBR trade, so the sample is small. Technology is +$23.50 on 2 trades and has an RBRK breakout in the scan. Consumer Staples has one losing trade and no fresh setups. Energy exposure is alread",
+  "expires": "2026-11-10"
+ },
+ {
+  "time": "2026-10-27T07:40:49-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-10-27",
+  "decision": "keep",
+  "why": "Nothing in the fresh scan clears the 1:1 reward-to-risk floor. Every washout's SMA5 target sits well inside its 2.5-ATR stop (MRK ~0.5:1, XYZ ~0.5:1, MCK ~0.34:1, MOH ~0.4:1, CNC ~0.4:1). CNC's earnings beat is real, but its RSI(2) of 12.5 is not a washout trigger and its reward is too small. The existing DXCM and PBR holds remain valid under their stops.",
+  "summary": "No new entries. Hold DXCM (stop 71.98) and PBR (stop 19.90) under their existing rules, and keep the $509 settled cash for a washout whose SMA5 target is at least as far as its 2.5-ATR stop.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-27T07:40:58-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-10-27",
+  "decision": "revise",
+  "why": "IWM's IV rose to 21.4% (IV/RV 1.48) from 20.2%, which may lift the credit toward the 0.25 gate, but the Fed decision is due in the window and the Iran and China AI headlines add gap risk. Keep the same gate and sizing, with added caution on the FOMC timing.",
+  "summary": "Stay flat unless the IWM 288/289 or 289/290 bear call (21-45 DTE, one contract) fills at a natural credit of at least $0.25 with max loss at or under $75, IWM isn't gapping toward the short strike at the open, and no Iran or oil headline spike appears. If the Fed statement lands during the session and IWM moves more than about 1% against the short side, skip new entries.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Bear call spread, 21-45 DTE, short call near 0.25 delta (about 288 given the 276.95 close, roughly +1 SD at 21.4% IV over 30 days is about 17 points), long call $1 higher. IV/RV 1.48, bearish trend side, crash radar calm at 24.",
+    "trigger": "Natural credit of at least $0.25 on the $1 width (max loss at or under $75), IWM not gapping up toward the short strike at the open, no Iran or oil headline spike, and no sharp rally after the Fed statement. Skip credits of 0.20-0.24. Do not resubmit a failed order at the same strike.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-27T07:41:09-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "Pre-market call",
+  "for_day": "2026-10-27",
+  "decision": "keep",
+  "why": "The fresh scan adds more Communication Services and Technology breakdowns, but none can be funded: settled cash is $143.50 and the open bearish book (about $811 cost) still exceeds equity, so the 50% guideline blocks new bearish debit. The radar is calm at 24, so the plan's stance is unchanged.",
+  "summary": "Hold the five open put spreads to their underlying stops with no adds, and reconcile the AGCO fill and the IREN/APLD/PLD stop discrepancies at the open. T and NFLX stay contingent and unfunded until a position settles and the open bearish book falls below 50% of equity with the radar under 40.",
+  "watchlist": [
+   {
+    "symbol": "T",
+    "setup": "Communication Services put spread on a breakdown below its 21.79 support. Down 17.6% over 20 days and below its 200-day, and the scan shows a breakdown at 20.92.",
+    "trigger": "Only after a position closes and settles, the open bearish book is under 50% of equity, the radar stays under 40, and T still trades below 21.79 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services put spread on a contingent breakdown below its 200-day near 66.54, with a Wolfe downgrade. The scan shows a breakdown at 64.14.",
+    "trigger": "Only after a position closes and settles, the open bearish book is under 50% of equity, the radar stays under 40, and NFLX still trades below 66.54 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-27T07:41:20-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-10-27",
+  "decision": "revise",
+  "why": "Crash radar is calm at 24 and today has no open positions, so the VWAP-reclaim plan still applies. I'm tightening it because the 1.5x relative-volume gate has not been enforced on VWAP pullbacks, and the edge is about +$0.10 per trade, so I'm dropping AAPL and keeping only the two most liquid index names.",
+  "summary": "Trade at most two small VWAP-reclaim or 15-minute opening-range breakout slices, SPY first and IWM second, at $40 each. Enter only if logged relative volume is at least 1.5x and the price is no more than 1.5% above VWAP. Stand aside if crash radar reaches 40 or if the open gaps down more than 0.5% without reclaiming VWAP. Tuesday is day one of the Fed meeting, so the policy decision is Wednesday, not today.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a shallow pullback, or 15-minute opening-range breakout with volume confirmation",
+    "trigger": "Price reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with logged relative volume of at least 1.5x (checked by hand) and price no more than 1.5% above VWAP. No entry on a gap down >0.5% without a reclaim.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IWM",
+    "setup": "VWAP pullback bounce with a tight stop, similar to the earlier time-limit winner",
+    "trigger": "Price reclaims VWAP after a shallow pullback with logged relative volume of at least 1.5x (checked by hand). Target +0.6%, stop -0.4%, 45-minute time limit.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-10-27T07:41:20-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Broad market / other",
+   "Industrials"
+  ],
+  "avoid": [
+   "Real Estate",
+   "Communication Services"
+  ],
+  "why": "Broad market (SPY) is the only gate-compliant evidence so far. Industrials has 6 trades at a 67% win rate and +$0.99, but the sample is small. Consumer Staples (2 wins, AAPL) is dropped from lean-in because it is too small to act on. Technology has 30 trades at 50% and +$0.06 per trade, so it is neu",
+  "expires": "2026-11-10"
  }
 ]
