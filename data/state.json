@@ -10,7 +10,10 @@
  },
  "entries": {
   "date": "2026-10-27",
-  "counts": {}
+  "counts": {
+   "scalper": 1,
+   "hyper": 2
+  }
  },
  "agents": {
   "trend": {
@@ -120,7 +123,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 50.12,
+     "last": 49.885,
      "high_water": 51.465
     },
     "pos-e9580fb11e": {
@@ -142,7 +145,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 69.465,
+     "last": 69.165,
      "high_water": 69.735
     },
     "pos-c5110eb879": {
@@ -164,7 +167,7 @@
       "pct_vs_sma200": 31.7
      },
      "sector": "Energy",
-     "last": 48.03,
+     "last": 47.76,
      "high_water": 49.03
     }
    },
@@ -681,7 +684,7 @@
       "pct_vs_sma5": -12.8
      },
      "sector": "Energy",
-     "last": 22.625
+     "last": 22.75
     }
    },
    "status": "active",
@@ -689,7 +692,7 @@
    "status_at": null,
    "closed": 4,
    "wins": 3,
-   "peak": 1022.2,
+   "peak": 1023.63,
    "max_dd": 0.0072,
    "notes": [
     {
@@ -1470,7 +1473,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 767.195
+     "last": 766.1
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1486,7 +1489,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 767.195
+     "last": 766.1
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1502,7 +1505,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 767.195
+     "last": 766.1
     }
    },
    "status": "active",
@@ -2240,9 +2243,32 @@
    ]
   },
   "scalper": {
-   "cash": 1005.69,
+   "cash": 838.17,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-3b3a642ec6": {
+     "kind": "stock",
+     "symbol": "AMD",
+     "qty": 0.3052,
+     "entry": 548.89,
+     "cost": 167.52,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 547.24,
+     "atr": 0,
+     "opened": "2026-10-27T09:55:37-04:00",
+     "thesis": "VWAP pullback bounce on AMD: 1.32x volume, +0.09% vs VWAP; target +0.6%, stop -0.35%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.6,
+     "stop_pct": 0.35,
+     "max_hold_min": 40,
+     "last": 547.445,
+     "peak_gain": -0.2632585763996276
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
@@ -2619,9 +2645,54 @@
    ]
   },
   "hyper": {
-   "cash": 1000.96,
+   "cash": 834.26,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-434ec28260": {
+     "kind": "stock",
+     "symbol": "AMD",
+     "qty": 0.1518,
+     "entry": 548.878,
+     "cost": 83.32,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 546.96,
+     "atr": 0,
+     "opened": "2026-10-27T09:55:38-04:00",
+     "thesis": "VWAP pullback bounce on AMD: 1.32x volume, +0.09% vs VWAP; target +0.8%, stop -0.4%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.8,
+     "stop_pct": 0.4,
+     "max_hold_min": 25,
+     "last": 547.445,
+     "peak_gain": -0.2610780537751545
+    },
+    "pos-78b575bc44": {
+     "kind": "stock",
+     "symbol": "SPCX",
+     "qty": 0.5597,
+     "entry": 148.976,
+     "cost": 83.38,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 148.4,
+     "atr": 0,
+     "opened": "2026-10-27T09:55:38-04:00",
+     "thesis": "VWAP pullback bounce on SPCX: 0.62x volume, +0.46% vs VWAP; target +0.8%, stop -0.4%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.8,
+     "stop_pct": 0.4,
+     "max_hold_min": 25,
+     "last": 148.85,
+     "peak_gain": -0.08457738159166617
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
