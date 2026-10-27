@@ -1,92 +1,5 @@
 [
  {
-  "time": "2026-10-13T18:47:54-04:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Evening check-in: keep. Cash is $0.07 and the SMH position is still the only exposure, so nothing new can be funded. The scan's SMH read (RSI(2) 1.6, close 588.19 vs 5-day SMA 602.81) matches the thesis, and the stop at 552.5 is still the right risk line.",
-  "symbol": ""
- },
- {
-  "time": "2026-10-13T18:48:02-04:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "Evening check-in: keep. The plan still holds: IWM has the richest IV/RV (1.75), and the hawkish Fed comments (Collins, Goolsbee on AI-driven inflation) lean toward downside or range-bound risk that favors bear call spreads. The Iran operation headlines add gap-down risk to the put side, which reinforces skipping SPY and QQQ bull put spreads.",
-  "symbol": "IWM"
- },
- {
-  "time": "2026-10-13T19:21:59-04:00",
-  "type": "topup",
-  "note": "Every firm's starting balance raised to $500 (+$400 cash each; open positions unchanged)."
- },
- {
-  "time": "2026-10-13T22:01:53-04:00",
-  "type": "focus",
-  "agent": "blackswan",
-  "note": "Leaning into Technology. Only one day of evidence: Technology has the most real breakdowns in the scan (ASTS, SMR, IONQ, CIFR, APLD, CRWV), and the chip selloff and analyst downgrade support it. I have no results yet, so I'll keep sizing small and drop the focus if these setups don't pay."
- },
- {
-  "time": "2026-10-13T22:01:53-04:00",
-  "type": "plan",
-  "agent": "blackswan",
-  "note": "Evening check-in: new. No plan or positions existed, and the market is calm (Crash Radar 11). The scan's clearest breakdowns are in Technology, with chip weakness and the KOSPI plunge in the news, so I can start a small, targeted plan. Most other breakdowns are penny stocks or warrants that I'll avoid.",
-  "symbol": "ASTS, SMR, IONQ, SPY"
- },
- {
-  "time": "2026-10-14T10:02:04-04:00",
-  "type": "rule_block",
-  "agent": "trend",
-  "symbol": "CRWG",
-  "note": "no put affordable within $150.00"
- },
- {
-  "time": "2026-10-14T10:02:06-04:00",
-  "type": "open",
-  "agent": "baseline",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.5132,
-  "price": 773.586,
-  "cost": 397.0,
-  "stop": 0,
-  "thesis": "Benchmark: buy and hold SPY",
-  "confidence": 3
- },
- {
-  "time": "2026-10-14T10:02:16-04:00",
-  "type": "error",
-  "agent": "blackswan",
-  "symbol": "ASTS",
-  "note": "GET https://data.alpaca.markets/v1beta1/options/snapshots/ASTS -> 400: {\"message\":\"rpc error: code = Unavailable desc = name resolver error: lookup marketcache-indicative.marketdata on 10.62.16.10:53:"
- },
- {
-  "time": "2026-10-14T10:02:20-04:00",
-  "type": "error",
-  "agent": "blackswan",
-  "symbol": "APP",
-  "note": "GET https://data.alpaca.markets/v1beta1/options/snapshots/APP -> 400: {\"message\":\"rpc error: code = Unavailable desc = name resolver error: lookup marketcache-indicative.marketdata on 10.62.16.10:53: "
- },
- {
-  "time": "2026-10-14T10:04:37-04:00",
-  "type": "rule_block",
-  "agent": "trend",
-  "symbol": "CRWG",
-  "note": "no put affordable within $75.00"
- },
- {
-  "time": "2026-10-14T10:04:47-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "ASTS",
-  "note": "no put spread affordable within $60.00"
- },
- {
-  "time": "2026-10-14T10:04:47-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "IREN",
-  "note": "no put spread affordable within $50.00"
- },
- {
   "time": "2026-10-14T10:06:03-04:00",
   "type": "rule_block",
   "agent": "trend",
@@ -7394,5 +7307,80 @@
   "agent": "hyper",
   "symbol": "SOXL, TQQQ, WDC, CRWV, SNDK",
   "note": "aggressive: Settled cash is only $0.47, so no entries are possible until tomorrow's settlement. Today's 0.4% stops were mostly noise, and the 0.5% stop with a 0.8% target and 20-minute hold is a reasonable middle ground for the highest-volume movers, including the 3x ETFs."
+ },
+ {
+  "time": "2026-10-27T16:40:23-04:00",
+  "type": "recap",
+  "note": "19 trades opened and 19 closed (8 winners), realized +$3.74. Best day among the racers: Rapid Fire Trading (+1.17)."
+ },
+ {
+  "time": "2026-10-27T16:40:23-04:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 0 of 3 picks moved the planned way, avg -1.73%"
+ },
+ {
+  "time": "2026-10-27T16:41:00-04:00",
+  "type": "plan_error",
+  "agent": "trend",
+  "note": "After-close review failed (JSONDecodeError); kept the previous plan"
+ },
+ {
+  "time": "2026-10-27T16:41:00-04:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 0 of 0 picks moved the planned way"
+ },
+ {
+  "time": "2026-10-27T16:41:14-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: revise. DXCM closed today at +3.38, so its position plan is stale. My recomputed reward-to-risk (SMA5 target versus 2.5-ATR stop) is still below 1:1 for every washout in the fresh scan: VLO ~0.72, MCK ~0.57, MOH ~0.45, HCA ~0.41, and the rest lower, so no new entries.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-27T16:41:14-04:00",
+  "type": "scorecard",
+  "agent": "volsell",
+  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -1.17%"
+ },
+ {
+  "time": "2026-10-27T16:41:24-04:00",
+  "type": "focus",
+  "agent": "volsell",
+  "note": "Leaning into no sector; avoiding Energy, Materials. I have no results by sector yet. Energy has failed fills and two-way oil headline risk. Materials has no volatility edge in the fresh scan. Broad market is no longer supported because IWM lost its trend side. No sector has evidence of working, so I am leaning in nowhere until a setup proves itself."
+ },
+ {
+  "time": "2026-10-27T16:41:24-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "After-close review: revise. The fresh scan now marks IWM as 'stand aside (no clear trend)', so the bearish trend side that justified the bear call is gone. The old plan's 276.95 reference is also stale against today's 280.18 close. Credits have failed the 0.25 gate all day, and the scorecard shows no edge yet.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-27T16:41:24-04:00",
+  "type": "scorecard",
+  "agent": "blackswan",
+  "note": "Plan graded: 1 of 2 picks moved the planned way, avg +0.86%"
+ },
+ {
+  "time": "2026-10-27T16:41:40-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "note": "After-close review: keep. Cash is still $143.50 settled against about $660 equity, so the open bearish book (roughly 78%) blocks any new debit under our own 50% guideline, and the scan's new breakdowns (BA, BURL, BKNG, NFLX) can't be funded today. The radar is calm at 17, so the stops and reconciliations still matter more than new entries.",
+  "symbol": "T, NFLX, BA"
+ },
+ {
+  "time": "2026-10-27T16:41:40-04:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 2 of 2 picks moved the planned way, avg +0.88%"
+ },
+ {
+  "time": "2026-10-27T16:41:54-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's six trades ran against the plan: I traded single-name semis and TSLA/SPCX, which the plan said to avoid, and every entry logged below the 1.5x relative-volume gate (0.63x to 1.32x). The two wins came from those same out-of-plan names, but the sample is too small to justify them. The plan also used stale 0.5%/0.3% parameters while the live trades ran at 0.6%/0.35%, so I'm resetting to one c",
+  "symbol": "SPY, IWM"
  }
 ]

@@ -10464,5 +10464,98 @@
   ],
   "aggression": "aggressive",
   "why": "Settled cash is only $0.47, so no entries are possible until tomorrow's settlement. Today's 0.4% stops were mostly noise, and the 0.5% stop with a 0.8% target and 20-minute hold is a reasonable middle ground for the highest-volume movers, including the 3x ETFs."
+ },
+ {
+  "time": "2026-10-27T16:41:14-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-10-28",
+  "decision": "revise",
+  "why": "DXCM closed today at +3.38, so its position plan is stale. My recomputed reward-to-risk (SMA5 target versus 2.5-ATR stop) is still below 1:1 for every washout in the fresh scan: VLO ~0.72, MCK ~0.57, MOH ~0.45, HCA ~0.41, and the rest lower, so no new entries.",
+  "summary": "No new entries. Hold PBR (11.4626 sh, stop 19.90) toward its SMA5 target near 24.45-25.00, and keep the $509 settled cash idle until a washout offers a target at least as far as its 2.5-ATR stop.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-27T16:41:24-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-10-28",
+  "decision": "revise",
+  "why": "The fresh scan now marks IWM as 'stand aside (no clear trend)', so the bearish trend side that justified the bear call is gone. The old plan's 276.95 reference is also stale against today's 280.18 close. Credits have failed the 0.25 gate all day, and the scorecard shows no edge yet.",
+  "summary": "Stay flat. No candidate meets trend side, IV/RV, and natural-credit gates together, so the watchlist is empty. Recheck only if a symbol shows a clear trend, IV/RV of at least 1.25, and a natural credit of at least 0.25 on $1 width with max loss under $75.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-27T16:41:24-04:00",
+  "type": "focus",
+  "agent": "volsell",
+  "lean_in": [],
+  "avoid": [
+   "Energy",
+   "Materials"
+  ],
+  "why": "I have no results by sector yet. Energy has failed fills and two-way oil headline risk. Materials has no volatility edge in the fresh scan. Broad market is no longer supported because IWM lost its trend side. No sector has evidence of working, so I am leaning in nowhere until a setup proves itself.",
+  "expires": "2026-11-10"
+ },
+ {
+  "time": "2026-10-27T16:41:40-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "After-close review",
+  "for_day": "2026-10-28",
+  "decision": "keep",
+  "why": "Cash is still $143.50 settled against about $660 equity, so the open bearish book (roughly 78%) blocks any new debit under our own 50% guideline, and the scan's new breakdowns (BA, BURL, BKNG, NFLX) can't be funded today. The radar is calm at 17, so the stops and reconciliations still matter more than new entries.",
+  "summary": "Hold the five open put spreads to their underlying stops with no adds. At the open, reconcile the AGCO $330 vs $183.9 fill and the IREN and APLD stop discrepancies, and check PLD's offer-period disclosure. T and NFLX stay contingent until a position settles and frees cash.",
+  "watchlist": [
+   {
+    "symbol": "T",
+    "setup": "Communication Services put spread on a breakdown below its 21.79 support. Down 17.6% over 20 days and below its 200-day, with a scan breakdown level at 20.66.",
+    "trigger": "Only after a position closes and settles, the open bearish book is under 50% of equity, the radar stays under 40, and T still trades below 21.79 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services put spread on a contingent breakdown below its 200-day near 66.54, with a Wolfe downgrade. Scan breakdown level at 62.87.",
+    "trigger": "Only after a position closes and settles, the open bearish book is under 50% of equity, the radar stays under 40, and NFLX still trades below 66.54 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "BA",
+    "setup": "Industrials put spread, contingent. Broke down 7.9% below its 182.5 level after a roughly 10% drop on supplier shortages, 777-8 delayed to 2030, and 777X and 737 rate guidance that says recovery runs into 2027. Industrials is on the avoid list, so this needs a strong trigger.",
+    "trigger": "Only after cash frees and the open bearish book is under 50%, and BA closes below 182.5 with a follow-through day. Skip it if the stock rebounds above 190.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-27T16:41:54-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-10-28",
+  "decision": "revise",
+  "why": "Today's six trades ran against the plan: I traded single-name semis and TSLA/SPCX, which the plan said to avoid, and every entry logged below the 1.5x relative-volume gate (0.63x to 1.32x). The two wins came from those same out-of-plan names, but the sample is too small to justify them. The plan also used stale 0.5%/0.3% parameters while the live trades ran at 0.6%/0.35%, so I'm resetting to one c",
+  "summary": "Tomorrow, trade only SPY and IWM VWAP reclaims in $40 slices, and only when I have verified relative volume of at least 1.5x by hand. Use a 0.5% target and a 0.35% stop with a 30-minute time limit. Stand aside on single-name semis and TSLA/SPCX, and stay flat before Wednesday's Fed decision.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a shallow pullback, or a 15-minute opening-range breakout that holds",
+    "trigger": "Price reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with hand-verified relative volume of at least 1.5x and price no more than 0.875% above VWAP. No entry after a gap down of more than 0.5% unless VWAP is reclaimed.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IWM",
+    "setup": "VWAP pullback bounce, shallow pullback and reclaim",
+    "trigger": "Price reclaims VWAP after a shallow pullback with hand-verified relative volume of at least 1.5x. Target +0.5%, stop -0.35%, 30-minute time limit.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
  }
 ]
