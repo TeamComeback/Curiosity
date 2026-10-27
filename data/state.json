@@ -12,7 +12,7 @@
   "date": "2026-10-27",
   "counts": {
    "scalper": 1,
-   "hyper": 4
+   "hyper": 5
   }
  },
  "agents": {
@@ -145,7 +145,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 69.01,
+     "last": 68.93,
      "high_water": 69.735
     },
     "pos-c5110eb879": {
@@ -167,7 +167,7 @@
       "pct_vs_sma200": 31.7
      },
      "sector": "Energy",
-     "last": 47.86,
+     "last": 47.92,
      "high_water": 49.03
     }
    },
@@ -684,7 +684,7 @@
       "pct_vs_sma5": -12.8
      },
      "sector": "Energy",
-     "last": 22.64
+     "last": 22.77
     }
    },
    "status": "active",
@@ -692,7 +692,7 @@
    "status_at": null,
    "closed": 4,
    "wins": 3,
-   "peak": 1023.63,
+   "peak": 1025.01,
    "max_dd": 0.0072,
    "notes": [
     {
@@ -1473,7 +1473,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 766.01
+     "last": 765.46
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1489,7 +1489,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 766.01
+     "last": 765.46
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1505,7 +1505,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 766.01
+     "last": 765.46
     }
    },
    "status": "active",
@@ -2243,36 +2243,13 @@
    ]
   },
   "scalper": {
-   "cash": 838.17,
+   "cash": 1005.25,
    "reserved": 0.0,
-   "positions": {
-    "pos-3b3a642ec6": {
-     "kind": "stock",
-     "symbol": "AMD",
-     "qty": 0.3052,
-     "entry": 548.89,
-     "cost": 167.52,
-     "play": "scalp",
-     "direction": "long",
-     "stop": 547.24,
-     "atr": 0,
-     "opened": "2026-10-27T09:55:37-04:00",
-     "thesis": "VWAP pullback bounce on AMD: 1.32x volume, +0.09% vs VWAP; target +0.6%, stop -0.35%",
-     "confidence": 3,
-     "signals": {},
-     "sector": "Technology",
-     "setup": "VWAP pullback bounce",
-     "target_pct": 0.6,
-     "stop_pct": 0.35,
-     "max_hold_min": 40,
-     "last": 548.96,
-     "peak_gain": 0.27145694037056245
-    }
-   },
+   "positions": {},
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 45,
+   "closed": 46,
    "wins": 24,
    "peak": 1006.15,
    "max_dd": 0.0037,
@@ -2299,10 +2276,17 @@
     "MU": "2026-10-26",
     "QQQ": "2026-10-26",
     "META": "2026-10-22",
-    "SPCX": "2026-10-23"
+    "SPCX": "2026-10-23",
+    "AMD": "2026-10-27"
    },
    "joined": "2026-10-14T12:09:57-04:00",
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 167.08,
+     "settles": "2026-10-28",
+     "note": "sold AMD"
+    }
+   ],
    "playbook": {
     "date": "2026-10-27",
     "made_at": "2026-10-27T10:07-04:00",
@@ -2644,109 +2628,20 @@
    ]
   },
   "hyper": {
-   "cash": 667.33,
+   "cash": 998.59,
    "reserved": 0.0,
-   "positions": {
-    "pos-434ec28260": {
-     "kind": "stock",
-     "symbol": "AMD",
-     "qty": 0.1518,
-     "entry": 548.878,
-     "cost": 83.32,
-     "play": "scalp",
-     "direction": "long",
-     "stop": 546.96,
-     "atr": 0,
-     "opened": "2026-10-27T09:55:38-04:00",
-     "thesis": "VWAP pullback bounce on AMD: 1.32x volume, +0.09% vs VWAP; target +0.8%, stop -0.4%",
-     "confidence": 3,
-     "signals": {},
-     "sector": "Technology",
-     "setup": "VWAP pullback bounce",
-     "target_pct": 0.8,
-     "stop_pct": 0.4,
-     "max_hold_min": 25,
-     "last": 548.96,
-     "peak_gain": 0.27364915336376416
-    },
-    "pos-78b575bc44": {
-     "kind": "stock",
-     "symbol": "SPCX",
-     "qty": 0.5597,
-     "entry": 148.976,
-     "cost": 83.38,
-     "play": "scalp",
-     "direction": "long",
-     "stop": 148.4,
-     "atr": 0,
-     "opened": "2026-10-27T09:55:38-04:00",
-     "thesis": "VWAP pullback bounce on SPCX: 0.62x volume, +0.46% vs VWAP; target +0.8%, stop -0.4%",
-     "confidence": 3,
-     "signals": {},
-     "sector": "Technology",
-     "setup": "VWAP pullback bounce",
-     "target_pct": 0.8,
-     "stop_pct": 0.4,
-     "max_hold_min": 25,
-     "last": 149.19,
-     "peak_gain": 0.37858446998173534
-    },
-    "pos-01a0ec5fb0": {
-     "kind": "stock",
-     "symbol": "WDC",
-     "qty": 0.2194,
-     "entry": 380.43,
-     "cost": 83.47,
-     "play": "scalp",
-     "direction": "long",
-     "stop": 378.59,
-     "atr": 0,
-     "opened": "2026-10-27T09:59:43-04:00",
-     "thesis": "opening-range breakout on WDC: 1.41x volume, +1.34% vs VWAP; target +0.8%, stop -0.4%",
-     "confidence": 3,
-     "signals": {},
-     "sector": "Technology",
-     "setup": "opening-range breakout",
-     "target_pct": 0.8,
-     "stop_pct": 0.4,
-     "max_hold_min": 25,
-     "last": 380.43,
-     "peak_gain": 0.09725836553373668
-    },
-    "pos-146cad1b9a": {
-     "kind": "stock",
-     "symbol": "BE",
-     "qty": 0.3797,
-     "entry": 219.81,
-     "cost": 83.46,
-     "play": "scalp",
-     "direction": "long",
-     "stop": 218.74,
-     "atr": 0,
-     "opened": "2026-10-27T10:03:48-04:00",
-     "thesis": "VWAP pullback bounce on BE: 0.67x volume, +0.20% vs VWAP; target +0.8%, stop -0.4%",
-     "confidence": 3,
-     "signals": {},
-     "sector": "Technology",
-     "setup": "VWAP pullback bounce",
-     "target_pct": 0.8,
-     "stop_pct": 0.4,
-     "max_hold_min": 25,
-     "last": 219.945,
-     "peak_gain": 0.06141667804011597
-    }
-   },
+   "positions": {},
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 66,
+   "closed": 71,
    "wins": 31,
    "peak": 1009.18,
-   "max_dd": 0.0081,
+   "max_dd": 0.0105,
    "notes": [],
    "last_exits": {
     "SOXL": "2026-10-26",
-    "AMD": "2026-10-23",
+    "AMD": "2026-10-27",
     "SPY": "2026-10-19",
     "NVDA": "2026-10-26",
     "LITE": "2026-10-19",
@@ -2764,16 +2659,44 @@
     "META": "2026-10-22",
     "NFLX": "2026-10-22",
     "IWM": "2026-10-26",
-    "SPCX": "2026-10-23",
+    "SPCX": "2026-10-27",
     "STX": "2026-10-23",
     "QQQ": "2026-10-23",
     "TSM": "2026-10-26",
     "TSLL": "2026-10-26",
     "NU": "2026-10-26",
-    "VZ": "2026-10-26"
+    "VZ": "2026-10-26",
+    "WDC": "2026-10-27",
+    "BE": "2026-10-27"
    },
    "joined": "2026-10-19T11:05:03-04:00",
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 82.82,
+     "settles": "2026-10-28",
+     "note": "sold WDC"
+    },
+    {
+     "amount": 82.73,
+     "settles": "2026-10-28",
+     "note": "sold SPCX"
+    },
+    {
+     "amount": 83.04,
+     "settles": "2026-10-28",
+     "note": "sold BE"
+    },
+    {
+     "amount": 82.98,
+     "settles": "2026-10-28",
+     "note": "sold AMD"
+    },
+    {
+     "amount": 83.15,
+     "settles": "2026-10-28",
+     "note": "sold BE"
+    }
+   ],
    "playbook": {
     "date": "2026-10-27",
     "made_at": "2026-10-27T10:07-04:00",
