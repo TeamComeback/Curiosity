@@ -1,18 +1,5 @@
 [
  {
-  "time": "2026-10-15T14:06:25-04:00",
-  "type": "unfilled",
-  "agent": "trend",
-  "symbol": "FMC261120P00005000"
- },
- {
-  "time": "2026-10-15T14:36:23-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "MTZ",
-  "note": "no put spread affordable within $60.00"
- },
- {
   "time": "2026-10-15T14:36:32-04:00",
   "type": "playbook",
   "agent": "scalper",
@@ -7497,5 +7484,33 @@
   "agent": "hyper",
   "symbol": "WDC, BE, SNDK, GEV, SOXL",
   "note": "aggressive: Calm tape with SPY trending up favors quick VWAP bounces and breakouts. WDC and BE are already working above VWAP, and I'm widening the stop to 0.5% because 0.45% stops were getting hit by normal noise on names like MU, SOXL, and BE."
+ },
+ {
+  "time": "2026-10-28T11:21:01-04:00",
+  "type": "close",
+  "agent": "hyper",
+  "symbol": "WDC",
+  "qty": 0.2151,
+  "entry": 387.276,
+  "exit": 391.868,
+  "pnl": 0.99,
+  "note": "target hit (+1.22%)",
+  "opened": "2026-10-28T10:59:18-04:00",
+  "confidence": 3,
+  "thesis": "opening-range breakout on WDC: 1.25x volume, +1.23% vs VWAP; target +1.0%, stop -0.45%"
+ },
+ {
+  "time": "2026-10-28T11:25:05-04:00",
+  "type": "close",
+  "agent": "hyper",
+  "symbol": "BE",
+  "qty": 0.3728,
+  "entry": 223.652,
+  "exit": 224.424,
+  "pnl": 0.29,
+  "note": "time limit, 22 min (+0.35%)",
+  "opened": "2026-10-28T11:03:23-04:00",
+  "confidence": 3,
+  "thesis": "momentum burst on BE: 2.07x volume, +0.01% vs VWAP; target +1.0%, stop -0.45%"
  }
 ]
