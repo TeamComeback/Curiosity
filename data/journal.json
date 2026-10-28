@@ -1,79 +1,5 @@
 [
  {
-  "time": "2026-10-15T12:44:50-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "IWM, SPY, QQQ, MSFT, NVDA",
-  "note": "defensive: SPY trend is up and IWM has a live VWAP bounce, but midday volume is thinning and most names sit below their opening ranges, so I'm limiting trades to half size on liquid names with quick targets. Shorter holds and tighter stops suit a midday tape that can chop."
- },
- {
-  "time": "2026-10-15T12:46:53-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "IWM",
-  "instrument": "stock",
-  "qty": 0.6097,
-  "price": 273.238,
-  "cost": 166.59,
-  "stop": 272.57,
-  "thesis": "VWAP pullback bounce on IWM: 0.44x volume, +0.11% vs VWAP; target +0.5%, stop -0.25%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-15T13:06:08-04:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "ETSY",
-  "instrument": "stock",
-  "qty": 4.0,
-  "price": 89.48,
-  "cost": 357.92,
-  "stop": 83.87,
-  "thesis": "ETSY broke above its 55-day high at 87.35 on 2.4x relative volume with a 16% gap above its 50-day SMA, a fresh uncorrelated breakout; 4 shares fit the cash, and the 83.87 stop risks about $22.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-15T13:07:00-04:00",
-  "type": "unfilled",
-  "agent": "blackswan",
-  "symbol": "CRWV",
-  "note": "debit 1.55 not filled"
- },
- {
-  "time": "2026-10-15T13:07:01-04:00",
-  "type": "open",
-  "agent": "blackswan",
-  "symbol": "APLD",
-  "instrument": "debit_spread",
-  "qty": 1,
-  "price": 0.86,
-  "cost": 91.5,
-  "stop": 22.38,
-  "thesis": "APLD closed through its 20.02 breakdown level at 19.21, down 16.7% over 20 days and 40% below its 200-day, so a smaller $90 bear put spread keeps Technology exposure sized down while the radar is calm.",
-  "confidence": 2
- },
- {
-  "time": "2026-10-15T13:17:15-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "IWM",
-  "qty": 0.6097,
-  "entry": 273.238,
-  "exit": 273.212,
-  "pnl": -0.01,
-  "note": "time limit, 30 min (-0.03%)",
-  "opened": "2026-10-15T12:46:53-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on IWM: 0.44x volume, +0.11% vs VWAP; target +0.5%, stop -0.25%"
- },
- {
-  "time": "2026-10-15T13:36:14-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, NVDA, MSFT, AMD",
-  "note": "defensive: The regime is calm and SPY is up on the day, but most 1-minute trends are down and midday volume is thin, so I'm limiting the watchlist to liquid leaders and keeping half-size VWAP bounces. MSFT is the only live setup, and the IWM loss is small, so I'm keeping the current targets and stops and not a"
- },
- {
   "time": "2026-10-15T14:06:25-04:00",
   "type": "unfilled",
   "agent": "trend",
@@ -7497,5 +7423,79 @@
   "opened": "2026-10-28T10:25:01-04:00",
   "confidence": 3,
   "thesis": "VWAP pullback bounce on SMH: 0.41x volume, +0.28% vs VWAP; target +0.8%, stop -0.4%"
+ },
+ {
+  "time": "2026-10-28T10:59:18-04:00",
+  "type": "open",
+  "agent": "hyper",
+  "symbol": "WDC",
+  "instrument": "stock",
+  "qty": 0.2151,
+  "price": 387.276,
+  "cost": 83.3,
+  "stop": 385.61,
+  "thesis": "opening-range breakout on WDC: 1.25x volume, +1.23% vs VWAP; target +1.0%, stop -0.45%",
+  "confidence": 3
+ },
+ {
+  "time": "2026-10-28T11:01:20-04:00",
+  "type": "close",
+  "agent": "scalper",
+  "symbol": "SPY",
+  "qty": 0.1632,
+  "entry": 771.054,
+  "exit": 770.326,
+  "pnl": -0.12,
+  "note": "time limit, 47 min (-0.09%)",
+  "opened": "2026-10-28T10:14:46-04:00",
+  "confidence": 3,
+  "thesis": "VWAP pullback bounce on SPY: 0.7x volume, +0.06% vs VWAP; target +0.5%, stop -0.3%"
+ },
+ {
+  "time": "2026-10-28T11:03:23-04:00",
+  "type": "open",
+  "agent": "hyper",
+  "symbol": "BE",
+  "instrument": "stock",
+  "qty": 0.3728,
+  "price": 223.652,
+  "cost": 83.38,
+  "stop": 222.52,
+  "thesis": "momentum burst on BE: 2.07x volume, +0.01% vs VWAP; target +1.0%, stop -0.45%",
+  "confidence": 3
+ },
+ {
+  "time": "2026-10-28T11:06:14-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-65%)"
+ },
+ {
+  "time": "2026-10-28T11:06:21-04:00",
+  "type": "open",
+  "agent": "trend",
+  "symbol": "AEYE",
+  "instrument": "stock",
+  "qty": 3.3573,
+  "price": 10.45,
+  "cost": 35.08,
+  "stop": 9.64,
+  "thesis": "AEYE is 1.9% above its 55-day breakout at 10.23 on 6.7x relative volume, so this is a fresh breakout, but it is extended (roc20 +52%), so I'm sizing small with the 9.64 stop limiting risk to about $2.7.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-10-28T11:06:40-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, STX, WDC",
+  "note": "stand_down: Today's entries are chopping in 0.3-0.7% ranges and four of five stopped out, so the 0.5% target and 0.3% stop are not paying. I'm standing down, but I'm keeping SPY and QQQ on watch for a clean VWAP reclaim and STX/WDC for a true opening-range hold."
+ },
+ {
+  "time": "2026-10-28T11:06:47-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "symbol": "WDC, BE, SNDK, GEV, SOXL",
+  "note": "aggressive: Calm tape with SPY trending up favors quick VWAP bounces and breakouts. WDC and BE are already working above VWAP, and I'm widening the stop to 0.5% because 0.45% stops were getting hit by normal noise on names like MU, SOXL, and BE."
  }
 ]
