@@ -1,38 +1,5 @@
 [
  {
-  "time": "2026-10-14T11:16:33-04:00",
-  "type": "open",
-  "agent": "baseline",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.6464,
-  "price": 772.036,
-  "cost": 499.04,
-  "stop": 0,
-  "thesis": "Benchmark: buy and hold SPY",
-  "confidence": 3
- },
- {
-  "time": "2026-10-14T11:17:11-04:00",
-  "type": "unfilled",
-  "agent": "blackswan",
-  "symbol": "ASTS",
-  "note": "debit 1.02 not filled"
- },
- {
-  "time": "2026-10-14T11:35:38-04:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "CIFR261106P00010000",
-  "instrument": "put",
-  "qty": 1,
-  "price": 0.96,
-  "cost": 98.0,
-  "stop": 12.81,
-  "thesis": "CIFR broke below its 55-day low at 10.70 on 2.9x volume and is 43% below its 200-day SMA, so the downtrend is established; the stop at 12.81 sits above the breakdown level.",
-  "confidence": 3
- },
- {
   "time": "2026-10-14T11:35:39-04:00",
   "type": "open",
   "agent": "trend",
@@ -7369,5 +7336,26 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. Yesterday's edge is thin (about +$0.10 per trade over 36 trades), and the 1.5x relative-volume gate has not been enforced on VWAP pullbacks, so I'm keeping only the two index setups and sizing them to the actual cash. Today is Fed day with crash radar calm at 17, so I'm trading only before the 2pm statement.",
   "symbol": "SPY, IWM"
+ },
+ {
+  "time": "2026-10-28T09:36:30-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-56%)"
+ },
+ {
+  "time": "2026-10-28T09:36:54-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, IWM, MU, SNDK",
+  "note": "defensive: SPY is up on a calm regime but its range is nearly flat, so I'm starting defensive with VWAP bounces at half size. I'm watching the liquid names with clean 1-minute uptrends (MU, SNDK, MSFT, AVGO, SOFI) plus the index ETFs, and will step up to normal once SPY and QQQ show real volume expansion."
+ },
+ {
+  "time": "2026-10-28T09:36:59-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "symbol": "SOFI, SNDK, MU, WDC, GEV",
+  "note": "aggressive: SOFI is leading above its opening range on volume, and SNDK, MU, and WDC show the most intraday range among large names. Going aggressive with 12 slices and a 0.8% target / 0.4% stop suits the fast movers, with 3x ETFs SOXL and TQQQ as higher-volatility plays."
  }
 ]
