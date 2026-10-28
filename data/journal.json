@@ -1,26 +1,5 @@
 [
  {
-  "time": "2026-10-15T14:36:32-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "NVDA, SPY, QQQ, MSFT, META",
-  "note": "normal: The regime is calm with SPY and most megacap tech in clean 1-minute uptrends, so I'm moving from defensive to normal for the afternoon. I'm keeping the 0.5% target, 0.25% stop, 30-minute limit, and 3 slices, and AMD stays on the list only because the code enforces its extension cap."
- },
- {
-  "time": "2026-10-15T15:06:15-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "MTZ",
-  "note": "no put spread affordable within $100.00"
- },
- {
-  "time": "2026-10-15T15:36:41-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "QQQ",
-  "note": "credit 0.29 not filled"
- },
- {
   "time": "2026-10-15T15:36:56-04:00",
   "type": "playbook",
   "agent": "scalper",
@@ -7512,5 +7491,26 @@
   "opened": "2026-10-28T11:03:23-04:00",
   "confidence": 3,
   "thesis": "momentum burst on BE: 2.07x volume, +0.01% vs VWAP; target +1.0%, stop -0.45%"
+ },
+ {
+  "time": "2026-10-28T11:36:13-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-65%)"
+ },
+ {
+  "time": "2026-10-28T11:36:41-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "STX, WDC, SPY, IWM",
+  "note": "stand_down: Today's VWAP bounces are chopping inside 0.3-0.7% ranges and four of five hit the 0.3% stop, so I'm not paying for more of these in a tape this tight. I'll keep STX and WDC on watch for a clean opening-range hold, where their 4-9% ranges give room, and SPY/IWM for a real VWAP reclaim on volume."
+ },
+ {
+  "time": "2026-10-28T11:36:47-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "symbol": "WDC, BE, SOXL, GEV, SNDK",
+  "note": "aggressive: Only $0.02 is settled, so new entries are effectively blocked until the ~$999.69 settles tomorrow; the watch list keeps the fastest movers and the strongest above-VWAP names (WDC, BE, SOXL, GEV) ready for when cash frees up. Keeping the 0.5% stop because the earlier 0.45% stops were hit by normal no"
  }
 ]
