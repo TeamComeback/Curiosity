@@ -66,8 +66,36 @@ def _call(model, system, user, max_tokens=1500, timeout=90):
         timeout=timeout,
     )
     r.raise_for_status()
-    text = "".join(b.get("text", "") for b in r.json().get("content", []))
-    return json.loads(re.search(r"\{.*\}", text, re.S).group(0))
+    body = r.json()
+    text = "".join(b.get("text", "") for b in body.get("content", []))
+    try:
+        return _parse_json(text)
+    except ValueError as e:
+        # Say why, so the journal shows "cut off" vs "bad JSON" instead of a bare JSONDecodeError.
+        cut = body.get("stop_reason") == "max_tokens"
+        raise ValueError(("reply cut off at max_tokens" if cut else "reply was not valid JSON") + f": {e}") from e
+
+
+def _parse_json(text):
+    """Pull the first JSON object out of a model reply, tolerating code fences, prose around it,
+    and trailing commas. Raises ValueError if nothing usable is there."""
+    t = re.sub(r"```(?:json)?", "", text)
+    start = t.find("{")
+    if start < 0:
+        raise ValueError("no JSON object in reply")
+    dec = json.JSONDecoder()
+    try:
+        obj, _ = dec.raw_decode(t[start:])
+        return obj
+    except json.JSONDecodeError:
+        pass
+    end = t.rfind("}")
+    chunk = t[start:end + 1] if end > start else t[start:]
+    chunk = re.sub(r",\s*([}\]])", r"\1", chunk)          # trailing commas
+    try:
+        return json.loads(chunk)
+    except json.JSONDecodeError as e:
+        raise ValueError(str(e)) from e
 
 
 def _rules_default(aid, view):
