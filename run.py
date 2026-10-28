@@ -412,12 +412,41 @@ def agent_view(state, aid, cands, ctx, can_open, standings):
 
 
 # ---------------- reporting ----------------
+REVIEW_SESSIONS = 20
+
+
+def thesis_reviews(curve):
+    """Flag any racing firm that has trailed SPY on every one of the last 20 sessions.
+
+    Compares each firm's return since the race start with the SPY benchmark's on each
+    session's closing equity. The flag clears itself the first session the firm is back
+    at or above SPY. Needs 20 sessions of history before it can fire."""
+    start = config.RACE["start_balance"]
+    rows = [r for r in curve if "baseline" in r.get("agents", {})][-REVIEW_SESSIONS:]
+    out = {}
+    if len(rows) < REVIEW_SESSIONS:
+        return out
+    for aid, cfg in config.AGENTS.items():
+        if not cfg.get("competing"):
+            continue
+        gaps = []
+        for r in rows:
+            eq = r["agents"].get(aid)
+            if eq is None:
+                break
+            gaps.append((eq / start - 1) - (r["agents"]["baseline"] / start - 1))
+        if len(gaps) == REVIEW_SESSIONS and all(g < 0 for g in gaps):
+            out[aid] = {"due": True, "gap_pts": round(gaps[-1] * 100, 2), "since": rows[0]["date"]}
+    return out
+
+
 def write_dashboard(state, regime, equities):
     curve = store.load("equity.json", [])
     stamp = store.now_et().strftime("%Y-%m-%d")
     curve = [r for r in curve if r["date"] != stamp] + [{"date": stamp, "agents": equities}]
     store.save("equity.json", curve)
     agents = []
+    review = thesis_reviews(curve)
     for aid, a in state["agents"].items():
         eq = equities.get(aid, a["cash"])
         a["peak"] = max(a.get("peak", eq), eq)
@@ -433,7 +462,8 @@ def write_dashboard(state, regime, equities):
                        "win_rate": round(100 * a["wins"] / a["closed"], 1) if a["closed"] else None,
                        "max_dd_pct": round(a["max_dd"] * 100, 1),
                        "risk_adj": round(ret / max(a["max_dd"], 0.05), 2),
-                       "notes": a["notes"][-3:][::-1]})
+                       "notes": a["notes"][-3:][::-1],
+                       "thesis_review": review.get(aid)})
     positions = [{"agent": aid, "position_id": pid, **{k: p.get(k) for k in (
         "kind", "symbol", "underlying", "structure", "opt_type", "qty", "entry", "last", "mark", "stop",
         "expiry", "opened", "thesis", "confidence", "cost", "realized", "play", "width")}}
