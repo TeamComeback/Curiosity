@@ -1,146 +1,5 @@
 [
  {
-  "time": "2026-10-16T07:41:23-04:00",
-  "type": "plan",
-  "agent": "blackswan",
-  "note": "Pre-market call: revise. The scan confirms RKLB closed below its 58.85 breakdown, so that entry stands. AAOI now also closed below 85.81, but adding it would push open debit risk toward 44% of equity and add a fourth correlated Technology bet on a 1-for-4 record, so I'm dropping it.",
-  "symbol": "RKLB"
- },
- {
-  "time": "2026-10-16T07:41:34-04:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "Pre-market call: revise. Yesterday's results were flat (plan hit rate 25%, pick moves negative), so the plan doesn't have strong evidence behind it. Cash is now $999.66 rather than $833, and the stored parameters (0.6% target, 0.3% stop, 45 min) don't match the summary (0.5%, 0.25%, 30 min). Crash radar is calm at 16, so I'm keeping the broad-market-only approach but resizing slices and aligning the exit rules.",
-  "symbol": "SPY, IWM, QQQ"
- },
- {
-  "time": "2026-10-16T09:36:24-04:00",
-  "type": "close",
-  "agent": "trend",
-  "symbol": "SOFI261127P00014500",
-  "qty": 1,
-  "entry": 1.21,
-  "exit": 0.67,
-  "pnl": -59.0,
-  "note": "trailing stop on underlying",
-  "opened": "2026-10-14T11:16:18-04:00",
-  "confidence": 3,
-  "thesis": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level."
- },
- {
-  "time": "2026-10-16T09:37:20-04:00",
-  "type": "unfilled",
-  "agent": "blackswan",
-  "symbol": "JNK",
-  "note": "debit 0.9 not filled"
- },
- {
-  "time": "2026-10-16T09:37:28-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, IWM, QQQ",
-  "note": "defensive: Tape is calm with tiny ranges (SPY 0.16%, QQQ 0.37%) and no setups yet, so I'm keeping size small and limiting trades to the three most liquid index ETFs. The tighter target and stop fit the narrow ranges better than the overnight 0.5%/0.3% plan."
- },
- {
-  "time": "2026-10-16T10:05:54-04:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "BP",
-  "instrument": "stock",
-  "qty": 1.013,
-  "price": 49.36,
-  "cost": 50.0,
-  "stop": 47.12,
-  "thesis": "BP broke above its 55-day high at 49.21 on 1.7x relative volume with a 6.6% 20-day rate of change, and it is 17% above its 200-day SMA; the 47.12 stop risks about $2.24 per share and the position is uncorrelated with the short puts.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-16T10:06:17-04:00",
-  "type": "open",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "instrument": "debit_spread",
-  "qty": 1,
-  "price": 1.5,
-  "cost": 160.0,
-  "stop": 132.75,
-  "thesis": "PLD is testing its 20-day low at 126.19 after a -6.1% 20-day move and trades below its 200-day. Real Estate is uncorrelated with my open Technology puts, so this adds a different breakdown exposure without stacking more Tech risk.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-16T10:06:23-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "NVDA, TSLA, SMH, AVGO",
-  "note": "defensive: SPY, IWM and QQQ have day ranges of only 0.28\u20130.75%, too small for the 0.4% target to be reliable, and they are all trending down. NVDA and AVGO are the only names with a VWAP-bounce setup, and TSLA and SMH are holding up trends with ranges wide enough to support a 0.6% target."
- },
- {
-  "time": "2026-10-16T10:14:29-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "TSLA",
-  "instrument": "stock",
-  "qty": 0.339,
-  "price": 368.594,
-  "cost": 124.95,
-  "stop": 367.45,
-  "thesis": "VWAP pullback bounce on TSLA: 1.46x volume, +0.40% vs VWAP; target +0.6%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-16T10:16:30-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "NVDA",
-  "instrument": "stock",
-  "qty": 0.5768,
-  "price": 216.624,
-  "cost": 124.95,
-  "stop": 215.96,
-  "thesis": "VWAP pullback bounce on NVDA: 0.8x volume, +0.25% vs VWAP; target +0.6%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-16T10:18:33-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "TSLA",
-  "qty": 0.339,
-  "entry": 368.594,
-  "exit": 367.37,
-  "pnl": -0.41,
-  "note": "stop (-0.34%)",
-  "opened": "2026-10-16T10:14:29-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on TSLA: 1.46x volume, +0.40% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
-  "time": "2026-10-16T10:18:33-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "AVGO",
-  "instrument": "stock",
-  "qty": 0.3695,
-  "price": 337.744,
-  "cost": 124.8,
-  "stop": 337.17,
-  "thesis": "VWAP pullback bounce on AVGO: 0.99x volume, +0.02% vs VWAP; target +0.6%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-16T10:22:35-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "SMH",
-  "instrument": "stock",
-  "qty": 0.2269,
-  "price": 551.174,
-  "cost": 125.06,
-  "stop": 548.89,
-  "thesis": "VWAP pullback bounce on SMH: 0.61x volume, +0.21% vs VWAP; target +0.6%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-10-16T10:24:36-04:00",
   "type": "close",
   "agent": "scalper",
@@ -7519,5 +7378,87 @@
   "agent": "hyper",
   "symbol": "CRWV, SOXL, WDC, BE, SNDK",
   "note": "aggressive: Settled cash is about $0.02, so no trades are possible until tomorrow's settlement. Today's 0.4-0.5% stops got shaken out and the 0.8% targets were given back, so I'm widening the stop to 0.6% and the target to 1.2%, and focusing on the highest-range, highest-volume movers (CRWV, SOXL, WDC, BE, SNDK"
+ },
+ {
+  "time": "2026-10-28T16:40:32-04:00",
+  "type": "recap",
+  "note": "A quiet, choppy day where VWAP-pullback bounces mostly failed: 4 wins and 13 losses on 17 closed trades, for -$2.52 realized. The real damage was unrealized, as Trend Co.'s open book lost $23.69."
+ },
+ {
+  "time": "2026-10-28T16:40:32-04:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 1 of 1 picks moved the planned way, avg +0.10%"
+ },
+ {
+  "time": "2026-10-28T16:40:59-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: keep. Settled cash is only $4.19 with nothing settling, so no new entry is affordable and the existing plan still holds.",
+  "symbol": "DVN"
+ },
+ {
+  "time": "2026-10-28T16:40:59-04:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 0 of 0 picks moved the planned way"
+ },
+ {
+  "time": "2026-10-28T16:41:11-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: keep. Re-checking the fresh scan against the 1:1 target-to-stop floor (SMA5 target vs 2.5-ATR stop) still gives no qualifying washout. The closest are WM at about 0.99:1, ADP at about 0.83:1 and ELV at about 0.56:1, and most are well below 0.5:1. PBR still holds its thesis at about 22.04, roughly 1.4:1 to the 25.00 target against the 19.90 stop, and its breakeven rule is not triggered until a close abov",
+  "symbol": "WM, ADP"
+ },
+ {
+  "time": "2026-10-28T16:41:11-04:00",
+  "type": "scorecard",
+  "agent": "volsell",
+  "note": "Plan graded: 0 of 0 picks moved the planned way"
+ },
+ {
+  "time": "2026-10-28T16:41:19-04:00",
+  "type": "focus",
+  "agent": "volsell",
+  "note": "Leaning into Broad market / other; avoiding Energy, Materials. SPY is the only candidate with a clear bull-put setup, rich IV/RV, and a calm crash radar, but I have no filled trades yet to prove it works. Energy keeps failing fills under oil-headline risk, and Materials (GDX and SLV) shows no volatility edge."
+ },
+ {
+  "time": "2026-10-28T16:41:19-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "After-close review: keep. Today's scan adds no new option pricing, and the Fed decision did not produce a natural credit of 0.25 or more on a $1 SPY spread. Crash radar is calm at 15, but the edge is still unproven and my fill record is 0 for 0 on acted picks, so staying flat is still the right call.",
+  "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-28T16:41:19-04:00",
+  "type": "scorecard",
+  "agent": "blackswan",
+  "note": "Plan graded: 3 of 3 picks moved the planned way, avg +0.84%"
+ },
+ {
+  "time": "2026-10-28T16:41:34-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "note": "After-close review: revise. The thesis still holds, but the BA trigger is stale: the scan now shows BA breaking 167.46, not 182.5, so the level has moved. The bearish book is still about 85% of equity against $143.50 settled cash, so nothing new is fundable and the plan stays a hold.",
+  "symbol": "NFLX, T, BA"
+ },
+ {
+  "time": "2026-10-28T16:41:34-04:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 2 of 2 picks moved the planned way, avg +0.37%"
+ },
+ {
+  "time": "2026-10-28T16:41:49-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "note": "Leaning into Broad market / other; avoiding Communication Services, Real Estate. Broad market holds SPY and IWM, the only setups with volume and liquidity clean enough to test. Industrials dropped as a lean-in because IWM lost today and the 7-trade sample is too small to support it. Communication Services is 3 trades at -$0.51, and Real Estate is 1 trade at -$0.06. Technology is"
+ },
+ {
+  "time": "2026-10-28T16:41:49-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's five closed VWAP-pullback trades all lost (about -$2.08 total), and the rel-volume gate was not enforced: entries came in at 0.48x, 0.70x, 0.95x, 1.55x and 1.89x. Across 36 trades the edge is about +$0.10 per trade, and fills on the 0.3% stop slip to -0.32% through -0.52%, so the stop is inside normal noise. I'm cutting risk and size rather than scrapping outright, because SPY and IWM are ",
+  "symbol": "SPY, IWM"
  }
 ]
