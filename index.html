@@ -379,7 +379,7 @@ function standRow(a, rank){
   const tag = a.competing ? (st !== "active" ? STATUS[st] || st : "") : a.exhibition ? (a.reached_goal ? "🏁 Exhibition" : "Exhibition") : a.id === "monkey" ? "Control" : "Benchmark";
   return `<div class="srow" data-x tabindex="0">
     <span class="rank">${rank ? "#" + rank : ""}</span>
-    <div class="nm"><span class="sw" style="background:${COLOR[a.id]}"></span><span class="t">${esc(a.name)}${tag ? `<div class="sub">${esc(tag)}</div>` : ""}</span></div>
+    <div class="nm"><span class="sw" style="background:${COLOR[a.id]}"></span><span class="t">${esc(a.name)}${tag ? `<div class="sub">${esc(tag)}</div>` : ""}${a.thesis_review && a.thesis_review.due ? `<div class="sub" style="color:#e0892b" title="Trailed SPY on each of the last 20 sessions">Thesis review due · ${a.thesis_review.gap_pts} pts behind SPY</div>` : ""}</span></div>
     <div><div class="eqv">${money(a.equity)}</div><div class="chg"><span class="${cls(dc)}">${dc == null ? "" : `${signed$(dc)} today · `}</span><span class="${cls(ret)}">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div></div>
     ${a.competing || a.exhibition ? `<div class="bar" role="progressbar" aria-label="Progress to ${money0(GOAL)}" aria-valuenow="${a.equity}"><i style="width:${logPct(a.equity)}%;background:${COLOR[a.id]}"></i></div>` : ""}
     <div class="more-info" hidden>
