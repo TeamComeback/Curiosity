@@ -10,7 +10,10 @@
  },
  "entries": {
   "date": "2026-10-28",
-  "counts": {}
+  "counts": {
+   "scalper": 2,
+   "hyper": 2
+  }
  },
  "agents": {
   "trend": {
@@ -120,7 +123,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 49.33,
+     "last": 49.36,
      "high_water": 51.465
     },
     "pos-e9580fb11e": {
@@ -142,7 +145,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 68.445,
+     "last": 68.17,
      "high_water": 69.735
     },
     "pos-c5110eb879": {
@@ -164,7 +167,7 @@
       "pct_vs_sma200": 31.7
      },
      "sector": "Energy",
-     "last": 47.69,
+     "last": 47.6,
      "high_water": 49.03
     },
     "pos-caf474ebf0": {
@@ -700,7 +703,7 @@
       "pct_vs_sma5": -12.8
      },
      "sector": "Energy",
-     "last": 22.3
+     "last": 22.25
     }
    },
    "status": "active",
@@ -1479,7 +1482,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 771.285
+     "last": 770.32
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1495,7 +1498,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.285
+     "last": 770.32
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1511,7 +1514,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 771.285
+     "last": 770.32
     }
    },
    "status": "active",
@@ -2295,15 +2298,38 @@
    ]
   },
   "scalper": {
-   "cash": 1006.86,
+   "cash": 880.49,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-4b216c16c2": {
+     "kind": "stock",
+     "symbol": "IWM",
+     "qty": 0.448,
+     "entry": 280.946,
+     "cost": 125.86,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 280.07,
+     "atr": 0,
+     "opened": "2026-10-28T09:55:23-04:00",
+     "thesis": "VWAP pullback bounce on IWM: 1.89x volume, +0.16% vs VWAP; target +0.5%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Industrials",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.5,
+     "stop_pct": 0.3,
+     "max_hold_min": 45,
+     "last": 281.19,
+     "peak_gain": 0.08684943013959057
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 51,
+   "closed": 52,
    "wins": 27,
-   "peak": 1006.86,
+   "peak": 1006.9,
    "max_dd": 0.0037,
    "notes": [
     {
@@ -2330,10 +2356,17 @@
     "META": "2026-10-22",
     "SPCX": "2026-10-27",
     "AMD": "2026-10-27",
-    "INTC": "2026-10-27"
+    "INTC": "2026-10-27",
+    "SOFI": "2026-10-28"
    },
    "joined": "2026-10-14T12:09:57-04:00",
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 125.53,
+     "settles": "2026-10-29",
+     "note": "sold SOFI"
+    }
+   ],
    "playbook": {
     "date": "2026-10-28",
     "made_at": "2026-10-28T09:36-04:00",
@@ -2701,13 +2734,36 @@
    ]
   },
   "hyper": {
-   "cash": 1000.15,
+   "cash": 916.37,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-cbc39bc3d2": {
+     "kind": "stock",
+     "symbol": "WDC",
+     "qty": 0.2181,
+     "entry": 382.348,
+     "cost": 83.39,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 380.47,
+     "atr": 0,
+     "opened": "2026-10-28T09:55:25-04:00",
+     "thesis": "VWAP pullback bounce on WDC: 0.56x volume, +0.92% vs VWAP; target +0.8%, stop -0.4%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.8,
+     "stop_pct": 0.4,
+     "max_hold_min": 20,
+     "last": 382.745,
+     "peak_gain": 0.10383211106113066
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 78,
+   "closed": 79,
    "wins": 35,
    "peak": 1009.18,
    "max_dd": 0.0105,
@@ -2740,10 +2796,17 @@
     "NU": "2026-10-26",
     "VZ": "2026-10-26",
     "WDC": "2026-10-27",
-    "BE": "2026-10-27"
+    "BE": "2026-10-27",
+    "SOFI": "2026-10-28"
    },
    "joined": "2026-10-19T11:05:03-04:00",
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 82.98,
+     "settles": "2026-10-29",
+     "note": "sold SOFI"
+    }
+   ],
    "playbook": {
     "date": "2026-10-28",
     "made_at": "2026-10-28T09:36-04:00",
