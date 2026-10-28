@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-10-14T11:05:44-04:00",
-  "type": "error",
-  "agent": "meanrev",
-  "symbol": "TDACW",
-  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"code\":40310000,\"message\":\"asset \\\"TDACW\\\" is not fractionable\"}"
- },
- {
   "time": "2026-10-14T11:05:56-04:00",
   "type": "rule_block",
   "agent": "blackswan",
@@ -7379,5 +7372,12 @@
   "type": "plan_error",
   "agent": "trend",
   "note": "Evening check-in failed (JSONDecodeError); kept the previous plan"
+ },
+ {
+  "time": "2026-10-27T21:28:23-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Evening check-in: revise. The pre-market energy triggers are stale: DVN's breakout level is now 51.96 in the fresh scan (not 51.70), and XOM and CNQ are absent from it. Fresh breakouts in the scan are mostly priced above my $89 settled cash, so the actionable list shrinks to DVN and a few cheap names.",
+  "symbol": "DVN"
  }
 ]
