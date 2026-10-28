@@ -1,50 +1,5 @@
 [
  {
-  "time": "2026-10-14T11:05:56-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "ASTS",
-  "note": "no put spread affordable within $60.00"
- },
- {
-  "time": "2026-10-14T11:05:56-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "IREN",
-  "note": "no put spread affordable within $50.00"
- },
- {
-  "time": "2026-10-14T11:15:50-04:00",
-  "type": "topup",
-  "note": "Every firm's starting balance raised to $1,000 (+$500 cash each; open positions unchanged). Goal is now $10,000."
- },
- {
-  "time": "2026-10-14T11:16:18-04:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "SOFI261127P00014500",
-  "instrument": "put",
-  "qty": 1,
-  "price": 1.21,
-  "cost": 123.5,
-  "stop": 15.2,
-  "thesis": "SOFI broke below its 55-day low at 14.88 on 4.3x volume, and it is 18% below its 50-day SMA, so the downtrend is established; the stop at 15.2 is just above the breakdown level.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-14T11:16:27-04:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "STT",
-  "instrument": "stock",
-  "qty": 1.2448,
-  "price": 160.74,
-  "cost": 200.09,
-  "stop": 152.41,
-  "thesis": "STT RSI(2) washout (0.5) while still 2.6% above its 200-day; the stop is about 5.1% away against a roughly 7% snap-back target, so reward-to-risk is about 1.4:1, the best of the candidates.",
-  "confidence": 3
- },
- {
   "time": "2026-10-14T11:16:33-04:00",
   "type": "open",
   "agent": "baseline",
@@ -7379,5 +7334,40 @@
   "agent": "trend",
   "note": "Evening check-in: revise. The pre-market energy triggers are stale: DVN's breakout level is now 51.96 in the fresh scan (not 51.70), and XOM and CNQ are absent from it. Fresh breakouts in the scan are mostly priced above my $89 settled cash, so the actionable list shrinks to DVN and a few cheap names.",
   "symbol": "DVN"
+ },
+ {
+  "time": "2026-10-28T07:40:23-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: keep. Nothing in the new scan changes the setup. DVN is still 1.42% below its 55-day high at 51.96 without a confirmed close, the other breakouts (LNG, TRGP, RBRK, TXN, ADI) remain unaffordable on $89 settled cash, and the current stops are still valid.",
+  "symbol": "DVN"
+ },
+ {
+  "time": "2026-10-28T07:40:34-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: keep. Nothing in today's scan clears the 1:1 floor: the SMA5 targets sit only 0.3-0.7 ATR-stops away for every washout, and the refiners (VLO, PSX) are oversold on a policy shock rather than a snap-back setup. PBR still has room to its 25.00 target, and the crash radar is calm at 17.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-28T07:40:41-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: keep. Today's scan adds no tradeable quote. SPY and TLT still show rich IV/RV, but my own fills have failed at the 0.25 natural gate, and the Fed decision lands today, so waiting for a fresh quote after the event is the better use of this session.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-28T07:40:55-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "note": "Pre-market call: keep. Today's fresh scan adds several breakdowns (BA, BURL, BKNG, NFLX, T, GOOG), but settled cash is only $143.50 against an open bearish book of about 78% of the $660.50 equity, above the firm's 50% guideline, so nothing new is fundable without breaking that rule. The radar is calm at 17, so the existing plan holds, with only the contingent watchlist refreshed.",
+  "symbol": "T, NFLX, BA"
+ },
+ {
+  "time": "2026-10-28T07:41:06-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: revise. Yesterday's edge is thin (about +$0.10 per trade over 36 trades), and the 1.5x relative-volume gate has not been enforced on VWAP pullbacks, so I'm keeping only the two index setups and sizing them to the actual cash. Today is Fed day with crash radar calm at 17, so I'm trading only before the 2pm statement.",
+  "symbol": "SPY, IWM"
  }
 ]

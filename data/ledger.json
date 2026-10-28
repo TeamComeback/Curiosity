@@ -10657,5 +10657,105 @@
     "conviction": 3
    }
   ]
+ },
+ {
+  "time": "2026-10-28T07:40:23-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-10-28",
+  "decision": "keep",
+  "why": "Nothing in the new scan changes the setup. DVN is still 1.42% below its 55-day high at 51.96 without a confirmed close, the other breakouts (LNG, TRGP, RBRK, TXN, ADI) remain unaffordable on $89 settled cash, and the current stops are still valid.",
+  "summary": "Hold all open positions and do not add. Buy at most $52 of DVN stock if it closes above 51.96 on at least 1.75x relative volume and the next open is within 1 ATR (1.34) of that level. Keep the remaining cash in reserve.",
+  "watchlist": [
+   {
+    "symbol": "DVN",
+    "setup": "Energy near-breakout, 1.42% below its 55-day high at 51.96, roc20 +9.9%, ATR 1.34",
+    "trigger": "Close above 51.96 on at least 1.75x relative volume, then buy at the next open if that open is no more than 1 ATR (1.34) above 51.96.",
+    "instrument": "stock",
+    "conviction": 3
+   }
+  ]
+ },
+ {
+  "time": "2026-10-28T07:40:34-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-10-28",
+  "decision": "keep",
+  "why": "Nothing in today's scan clears the 1:1 floor: the SMA5 targets sit only 0.3-0.7 ATR-stops away for every washout, and the refiners (VLO, PSX) are oversold on a policy shock rather than a snap-back setup. PBR still has room to its 25.00 target, and the crash radar is calm at 17.",
+  "summary": "Hold PBR (11.4626 sh, stop 19.90) toward 24.45-25.00 with no adds. Enter nothing new unless a washout offers a target at least as far as its 2.5-ATR stop. Keep the $762.86 settled cash idle.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-28T07:40:41-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-10-28",
+  "decision": "keep",
+  "why": "Today's scan adds no tradeable quote. SPY and TLT still show rich IV/RV, but my own fills have failed at the 0.25 natural gate, and the Fed decision lands today, so waiting for a fresh quote after the event is the better use of this session.",
+  "summary": "Stay flat into the Fed decision. Re-screen SPY bull put and TLT only after the announcement, and act only if a natural credit of at least 0.25 on a $1 width with max loss under $75 is available within the 21-45 DTE window.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-10-28T07:40:55-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "session": "Pre-market call",
+  "for_day": "2026-10-28",
+  "decision": "keep",
+  "why": "Today's fresh scan adds several breakdowns (BA, BURL, BKNG, NFLX, T, GOOG), but settled cash is only $143.50 against an open bearish book of about 78% of the $660.50 equity, above the firm's 50% guideline, so nothing new is fundable without breaking that rule. The radar is calm at 17, so the existing plan holds, with only the contingent watchlist refreshed.",
+  "summary": "Hold the five open put spreads to their underlying stops and place no new orders at the open. Reconcile the AGCO $330 vs $183.9 fill and the IREN and APLD stop discrepancies first. T, NFLX, and BA stay contingent on the bearish book dropping below 50% of equity after a position settles.",
+  "watchlist": [
+   {
+    "symbol": "T",
+    "setup": "Communication Services put spread on a breakdown below 21.79 support. Down 17.6% over 20 days and below its 200-day; scan breakdown level 20.66.",
+    "trigger": "Only after a position settles and the open bearish book is under 50% of equity, the radar stays under 40, and T trades below 21.79 at the open.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services put spread on a breakdown below its 200-day near 66.54, with a Wolfe downgrade. Scan breakdown level 62.87; broke down today.",
+    "trigger": "Only after a position settles and the open bearish book is under 50% of equity, the radar stays under 40, and NFLX trades below 66.54 at the open. Skip if it reclaims 66.54 on a close.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   },
+   {
+    "symbol": "BA",
+    "setup": "Industrials put spread, contingent. Broke down 7.9% below 182.5 after a roughly 10% drop on supplier shortages, the 777-8 delay to 2030, and recovery guidance into 2027. Morgan Stanley cut its target to $195. Industrials is on the avoid list, so this needs a strong trigger.",
+    "trigger": "Only after cash frees and the open bearish book is under 50%, and BA closes below 182.5 with a follow-through day. Skip it if it rebounds above 190.",
+    "instrument": "debit_spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-28T07:41:06-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-10-28",
+  "decision": "revise",
+  "why": "Yesterday's edge is thin (about +$0.10 per trade over 36 trades), and the 1.5x relative-volume gate has not been enforced on VWAP pullbacks, so I'm keeping only the two index setups and sizing them to the actual cash. Today is Fed day with crash radar calm at 17, so I'm trading only before the 2pm statement.",
+  "summary": "Trade only SPY and IWM VWAP reclaims, one round trip per slice, using about $250 per slice. Verify relative volume of at least 1.5x by hand before every entry, use a 0.5% target, 0.3% stop and 45-minute time limit, and take no new entries from 1:45pm to 2:30pm ET around the Fed decision. Stand aside on single-name semis, TSLA, SPCX, META and AAPL.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a shallow pullback, or a 15-minute opening-range breakout that holds",
+    "trigger": "Price reclaims VWAP or holds above the 15-minute opening-range high for 2 consecutive 2-minute bars, with hand-verified relative volume of at least 1.5x and price no more than 0.875% above VWAP. Entries only before 1:45pm ET. No entry after a gap down of more than 0.5% unless VWAP is reclaimed.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IWM",
+    "setup": "VWAP pullback bounce, shallow pullback and reclaim",
+    "trigger": "Price reclaims VWAP after a shallow pullback with hand-verified relative volume of at least 1.5x. Entries only before 1:45pm ET. Target +0.5%, stop -0.3%, 45-minute time limit.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
  }
 ]
