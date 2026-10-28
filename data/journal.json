@@ -1,40 +1,5 @@
 [
  {
-  "time": "2026-10-14T10:06:13-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "ASTS",
-  "note": "no put spread affordable within $60.00"
- },
- {
-  "time": "2026-10-14T10:06:13-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "APP",
-  "note": "no put spread affordable within $50.00"
- },
- {
-  "time": "2026-10-14T10:35:50-04:00",
-  "type": "rule_block",
-  "agent": "trend",
-  "symbol": "CRWG",
-  "note": "no put affordable within $80.00"
- },
- {
-  "time": "2026-10-14T10:36:02-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "ASTS",
-  "note": "no put spread affordable within $60.00"
- },
- {
-  "time": "2026-10-14T10:36:02-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "IREN",
-  "note": "no put spread affordable within $50.00"
- },
- {
   "time": "2026-10-14T11:05:35-04:00",
   "type": "rule_block",
   "agent": "trend",
@@ -7381,5 +7346,39 @@
   "type": "plan_error",
   "agent": "trend",
   "note": "After-close review failed (JSONDecodeError); kept the previous plan"
+ },
+ {
+  "time": "2026-10-27T20:10:47-04:00",
+  "type": "plan_error",
+  "agent": "trend",
+  "note": "Evening check-in failed (JSONDecodeError); kept the previous plan"
+ },
+ {
+  "time": "2026-10-27T20:10:57-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Evening check-in: keep. Re-checking today's fresh scan against the SMA5 target and a 2.5-ATR stop, every washout still lands below 1:1 (VLO ~0.72, MCK ~0.57, MOH ~0.45, HCA ~0.41, AIG ~0.54, CVS ~0.36). PBR still clears the floor from its 21.70 entry, so the plan holds.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-27T20:11:05-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Evening check-in: keep. Today's scan shows IV/RV improving on SPY (1.4) and XLF (1.25), but I still have no live natural-credit evidence for either, and my SPY bull put fills were thin (natural about 0.15 or less). The 0.25 natural-credit gate with max loss under $75 has not been met on any candidate, so staying flat still holds.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-27T20:11:18-04:00",
+  "type": "plan",
+  "agent": "blackswan",
+  "note": "Evening check-in: keep. The fresh scan adds new breakdowns (BA, BURL, BKNG, NFLX, T, XLC, UBER) but none can be funded: settled cash is $143.50 and the open bearish book is about 78% of equity, above the 50% guideline. The radar is calm at 17, so the existing stops and the Communication Services lean still hold.",
+  "symbol": "T, NFLX, BA"
+ },
+ {
+  "time": "2026-10-27T20:11:29-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Evening check-in: revise. Today's net was +$1.17 across six trades, but the wins came from a 1.03x volume TSLA entry and a 1.1x SPCX entry, so the volume gate isn't doing its job. The fresh scan shows calm stress (17) and SPY/IWM are the cleanest verifiable setups, but the 0.30% stop filled at -0.34% to -0.36% and the edge is about +$0.10 per trade, so I'm tightening the stop to match real fills and cutting slice size.",
+  "symbol": "SPY, IWM"
  }
 ]
