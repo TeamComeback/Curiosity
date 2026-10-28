@@ -222,12 +222,14 @@ def session_for(aid, session, state, scan_rows, news, prices, b):
                                     inst_choices="|".join(a["instruments"]),
                                     n_firms=sum(1 for x in config.AGENTS.values() if x["competing"]))
         d, err = None, None
-        for attempt in range(2):                # one retry: long answers occasionally get cut off
+        for attempt in range(2):                # retry once with more room and a request to stay compact
             try:
-                d = brain._call(config.PLAN_MODEL, system, json.dumps(view, default=str), 3500, 150)
+                sys_msg = system if attempt == 0 else system + ("\n\nYour last answer was cut off or was not valid JSON. "
+                    "Reply with the JSON object only, keep every text field to one short sentence, and list at most 5 watchlist items.")
+                d = brain._call(config.PLAN_MODEL, sys_msg, json.dumps(view, default=str), 3500 if attempt == 0 else 6000, 180)
                 break
             except Exception as e:  # noqa: BLE001
-                err = type(e).__name__
+                err = f"{type(e).__name__}: {str(e)[:120]}"
         if d is None:                           # keep the old plan if the session fails
             print(f"[plan:{aid}] session failed: {err}")
             store.journal({"type": "plan_error", "agent": aid, "note": f"{SESSIONS[session]} failed ({err}); kept the previous plan"})
