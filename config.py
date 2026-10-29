@@ -71,7 +71,11 @@ AGENTS = {
                          "Cash account: proceeds settle next day, so the day's cash is split into slices and each slice "
                          "gets one round trip a day. You set the playbook (which stocks, how aggressive, how many slices, "
                          "targets and stops); code executes it every 2 minutes."},
-    "hyper": {"name": "Full Throttle Trading", "competing": False, "exhibition": True, "instruments": ["stock"],
+    # Oct 29 2026: retired. Rapid Fire and Full Throttle ran the same fast-trade playbook
+    # (+0.36% on 38 trades vs +0.56% on 54, inside the noise), so only Rapid Fire keeps racing.
+    # Open scalps still close by its own exits; it takes nothing new and costs no AI calls.
+    "hyper": {"name": "Full Throttle Trading", "competing": False, "exhibition": True, "no_new_entries": True,
+              "paused_reason": "Retired Oct 29: merged into Rapid Fire. History stays; no new trades.", "instruments": ["stock"],
               "style": "Aggressive intraday scalper (exhibition: not racing). Same rules and cash as everyone, "
                        "always in attack mode: more, smaller cash slices, up to two new trades per check, the fastest "
                        "movers including 3x ETFs held for minutes, and always flat by the close."},
