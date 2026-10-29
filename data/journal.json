@@ -1,17 +1,5 @@
 [
  {
-  "time": "2026-10-16T17:30:04-04:00",
-  "type": "param_change",
-  "agent": "trend",
-  "note": "min_rel_volume: 1.2 -> 1.75 (Require stronger volume confirmation to reduce failed breakouts and avoid spending scarce settled cash on marginal setups.)"
- },
- {
-  "time": "2026-10-16T17:30:04-04:00",
-  "type": "param_change",
-  "agent": "trend",
-  "note": "opt_min_dte: 21 -> 30 (The SOFI put was stopped out on an underlying trail, and more time value cushions option decay and noise on small positions.)"
- },
- {
   "time": "2026-10-16T17:30:19-04:00",
   "type": "param_change",
   "agent": "blackswan",
@@ -7452,5 +7440,19 @@
   "agent": "blackswan",
   "symbol": "AGCO",
   "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-10-29T14:06:33-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-99%)"
+ },
+ {
+  "time": "2026-10-29T14:06:55-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, AAPL, META, MSFT",
+  "note": "stand_down: Only $0.11 is settled and $1,004 settles tomorrow, so no new entries are possible today, and the 1:45-2:30 PM headline window is off-limits anyway. Keep the liquid watchlist ready for tomorrow's VWAP bounces, using defensive size only if volume confirms."
  }
 ]
