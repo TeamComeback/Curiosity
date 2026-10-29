@@ -3,12 +3,6 @@
   "time": "2026-10-16T17:30:19-04:00",
   "type": "param_change",
   "agent": "blackswan",
-  "note": "stop_pct: 0.5 -> 0.4 (The 31.6% drawdown came from positions that haven't hit the 50% stop. A tighter 40% stop caps the loss per spread and frees settled cash sooner, which I need to redeploy.)"
- },
- {
-  "time": "2026-10-16T17:30:19-04:00",
-  "type": "param_change",
-  "agent": "blackswan",
   "note": "insurance_pct: 0.08 -> 0.043 (The radar is calm and cash is scarce. Cutting the far-out index put budget from 8% to 4% of equity keeps more cash for real breakdown setups, and the insurance only pays off in a stress event.)"
  },
  {
@@ -7454,5 +7448,12 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, AAPL, META, MSFT",
   "note": "stand_down: Only $0.11 is settled and $1,004 settles tomorrow, so no new entries are possible today, and the 1:45-2:30 PM headline window is off-limits anyway. Keep the liquid watchlist ready for tomorrow's VWAP bounces, using defensive size only if volume confirms."
+ },
+ {
+  "time": "2026-10-29T14:36:38-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
  }
 ]
