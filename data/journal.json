@@ -1,60 +1,5 @@
 [
  {
-  "time": "2026-10-16T11:36:17-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "no put spread affordable within $100.00"
- },
- {
-  "time": "2026-10-16T11:36:27-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "NVDA, TSM, SMH, TLT",
-  "note": "defensive: SPY, QQQ and IWM are all weak and below VWAP with small ranges, so I'm keeping size at defensive. Only about $42 is settled cash, so I'm cutting to 2 slices and watching the few names with live VWAP setups (NVDA is already open, TSM is set up now, and TLT and SMH are showing bounces)."
- },
- {
-  "time": "2026-10-16T11:58:47-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "NVDA",
-  "qty": 0.7671,
-  "entry": 217.166,
-  "exit": 217.498,
-  "pnl": 0.25,
-  "note": "time limit, 26 min (+0.16%)",
-  "opened": "2026-10-16T11:32:47-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on NVDA: 1.25x volume, +0.28% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-10-16T12:06:30-04:00",
-  "type": "rule_block",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "no put spread affordable within $120.00"
- },
- {
-  "time": "2026-10-16T12:06:39-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "NVDA, SMH, TSM, TLT",
-  "note": "stand_down: Only about $42 is settled cash, too little for meaningful size, and the tape is weak: SPY, QQQ, IWM and most leaders are red and below VWAP. The overnight plan's IWM strength is stale, since IWM is now -1.24%. Stand down and keep NVDA, SMH, TSM and TLT on watch for a clean reclaim once cash settles."
- },
- {
-  "time": "2026-10-16T12:36:10-04:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "FTNT",
-  "instrument": "stock",
-  "qty": 1.4876,
-  "price": 168.29,
-  "cost": 250.35,
-  "stop": 154.63,
-  "thesis": "FTNT RSI(2) of 1.2 washout still 36% above its 200-day in a calm regime (crash radar 24, SPY above 200-day); target 183.53 vs stop 154.63 gives about 1.15:1, which clears my 1:1 floor and my stated condition for re-entering tech.",
-  "confidence": 2
- },
- {
   "time": "2026-10-16T12:37:54-04:00",
   "type": "playbook",
   "agent": "scalper",
@@ -7406,5 +7351,60 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. The old plan's 1.5x volume gate is not enforced by code, and every low-volume entry lost, so the gate has to be checked by hand before each entry. The scorecard is also weak (avg pick move -0.1%), so I'm keeping exposure to one small SPY setup and making the stand-aside rule explicit.",
   "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-29T09:36:55-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-65%)"
+ },
+ {
+  "time": "2026-10-29T09:37:03-04:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "MANH",
+  "qty": 0.2024,
+  "entry": 247.002,
+  "exit": 236.764,
+  "pnl": -2.07,
+  "note": "agent: Failed breakout: MANH closed at 239.93, below its 242.56 breakout level, and now trades at 234.74, under the 247 entry. ",
+  "opened": "2026-10-28T10:36:26-04:00",
+  "confidence": 3,
+  "thesis": "MANH is 1.8% above its 55-day breakout at 242.56 on 2.4x volume with roc20 +16.8%, and it isn't extended (15% above its 50-day SMA), so this is a clean trend entry. Fractional sizing (~0.2 shares) keeps the 233.93 stop risk to about $2.6, and technology is a lean-in sector."
+ },
+ {
+  "time": "2026-10-29T09:37:34-04:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "SPY",
+  "note": "credit not filled at 0.25 (mid 0.25, natural 0.20, floor 0.25)"
+ },
+ {
+  "time": "2026-10-29T09:37:35-04:00",
+  "type": "open",
+  "agent": "monkey",
+  "symbol": "QQQ",
+  "instrument": "stock",
+  "qty": 0.4021,
+  "price": 712.76,
+  "cost": 286.6,
+  "stop": 690.16,
+  "thesis": "Dart landed on QQQ",
+  "confidence": 0
+ },
+ {
+  "time": "2026-10-29T09:37:50-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, MSFT",
+  "note": "stand_down: Most megacaps and the index ETFs are trending down with tight SPY range (0.24%) and no confirmed setups, so this is choppy tape rather than a clean uptrend. I'm standing down and will watch SPY, QQQ and MSFT for a VWAP reclaim before reconsidering, since the overnight plan's conditions aren't met ye"
+ },
+ {
+  "time": "2026-10-29T09:38:01-04:00",
+  "type": "playbook",
+  "agent": "hyper",
+  "symbol": "AMD, GEV, BE, TQQQ, SOXL",
+  "note": "aggressive: SPY is up on the daily regime (5.5% above its 200-day) but intraday is flat, so I want the fastest movers with volume. AMD is above its opening range on heavy dollar volume, GEV and BE are rising, and the 3x semis plus the high-range megacaps give the most chances for quick scalps."
  }
 ]
