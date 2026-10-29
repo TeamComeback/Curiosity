@@ -12385,5 +12385,139 @@
   ],
   "aggression": "stand_down",
   "why": "It's 3:36 PM with the new-entry cutoff at 1:45 PM already passed, and only $0.11 is settled cash, so no new round trip can finish before the 3:50 flat. Stand down and keep the watchlist small for the next session's setup check."
+ },
+ {
+  "time": "2026-10-29T16:41:01-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-10-30",
+  "decision": "revise",
+  "why": "MANH has already closed and its $47.92 settles tomorrow, so about $52 becomes usable, and the fresh scan moved the TRGP and TXN breakout levels, so the watchlist needs updating.",
+  "summary": "Tomorrow, only act on energy or tech breakouts that close above their levels on at least 1.75x volume, buying at the next open with the full settled cash, one position at a time. Hold all open stops.",
+  "watchlist": [
+   {
+    "symbol": "LNG",
+    "setup": "Energy breakout level 304.40, roc20 +17.1%, about 4.5% below the level today",
+    "trigger": "Close above 304.40 on at least 1.75x relative volume, then buy at the next open if it is within 1 ATR (8.06) of 304.40.",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "TRGP",
+    "setup": "Energy near-breakout, level 308.37 per today's scan (the plan's 307.09 is stale), roc20 +11.9%",
+    "trigger": "Close above 308.37 on at least 1.75x relative volume, then buy at the next open if it is within 1 ATR (7.17).",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "DVN",
+    "setup": "Energy near-breakout at 51.96 (carried from the plan)",
+    "trigger": "Close above 51.96 on at least 1.75x relative volume, then buy at the next open if it is within 1 ATR (1.34).",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "TXN",
+    "setup": "Technology breakout, level 309.97 per today's scan (the plan's 309.4 is stale), roc20 +11.3%",
+    "trigger": "Close above 309.97 on at least 1.75x relative volume, then buy fractional shares at the next open; stop 2 ATR below entry.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "ADI",
+    "setup": "Technology breakout level 429.62 from today's scan, roc20 +7.1%, about 0.8% below the level",
+    "trigger": "Close above 429.62 on at least 1.75x relative volume, then buy fractional shares at the next open.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-29T16:41:18-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-10-30",
+  "decision": "revise",
+  "why": "The scan still has no washout at my 1:1 floor (TEAM ~0.71, CTSH ~0.66, WDAY ~0.59 on a 2.5-ATR stop), so the no-trade call holds. I'm revising only the watchlist, converting vague triggers into price levels that would clear 1:1.",
+  "summary": "Hold PBR (11.4626 sh, stop 19.90) with no adds. Keep $762.86 settled cash idle unless TEAM, CTSH or WDAY trades down to its trigger price, and then size at no more than $250 per name.",
+  "watchlist": [
+   {
+    "symbol": "TEAM",
+    "setup": "RSI(2) 4.5 washout, 73.7% above its 200-day. Target SMA5 218.90; ATR 8.42 gives a 2.5-ATR stop of about 21.05 points.",
+    "trigger": "Act only if TEAM trades at or below about 197.80 (about 3% under the 204.06 close) with the SMA5 target still near 218.90. That puts target-to-stop at 1:1.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "CTSH",
+    "setup": "RSI(2) 4.6 washout, only 5.9% above its 200-day. Target SMA5 67.00; ATR 2.68 gives a stop distance of about 6.70.",
+    "trigger": "Act only if CTSH trades at or below about 60.30 (about 3.6% under the 62.55 close). Target-to-stop reaches 1:1 there.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "WDAY",
+    "setup": "RSI(2) 2.9 washout, 25.6% above its 200-day. Target SMA5 204.76; ATR 6.37 gives a stop distance of about 15.93.",
+    "trigger": "Act only if WDAY trades at or below about 188.80 (about 3.4% under the 195.43 close). Target-to-stop reaches 1:1 there. Post-earnings selloff risk means I would not chase below that level.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-29T16:41:27-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-10-30",
+  "decision": "revise",
+  "why": "SPY closed at 769.49, down from the 772.28 used in the pre-market plan, so the 750 short strike is stale. The fresh IV/RV of 1.35 still clears the 1.1 edge and the crash radar is calm at 12, so the setup holds, but the strikes need to move to about 748/747.",
+  "summary": "Stay flat unless SPY's live bull put spread can be sold with the short put near 748 (about 0.25 delta, roughly 2.8% below the 769.49 close) and the long put $1 lower, 21-45 DTE. Enter only at a natural credit of at least 0.25 on the $1 width with max loss under $75. Otherwise pass.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "Bull put spread, short put about 0.25 delta near 748, long put at 747, 21-45 DTE. IV/RV 1.35, uptrend (close 0.2% above SMA50, 5.7% above SMA200), crash radar calm at 12.",
+    "trigger": "Live natural credit of at least 0.25 on the $1 width with max loss under $75. Re-derive strikes from the live price before entry. Mid near 0.23 does not qualify, and a blocked or unfilled order is a pass.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-29T16:41:39-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-10-30",
+  "decision": "revise",
+  "why": "Today's four VWAP pullback entries ran at 0.57x to 1.25x relative volume, so the 1.5x gate was not enforced and the setup lost $0.25 net. Stops also filled past the 0.3% setting again, and the tech names I was trading have 2.5% to 6.5% ATR, which makes a 0.3% stop noise.",
+  "summary": "Stand aside by default. Only trade SPY, and only if it pulls back to VWAP, reclaims it on two consecutive closed 2-minute bars, hand-verified relative volume is at least 1.5x, and entry comes before 1:45pm ET. Use a 0.4% stop and 0.6% target, a 45-minute time limit, and one $100 slice. Stay out of the 1:45-2:30pm Fed/Iran headline window.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a shallow pullback, with hand-verified relative volume of at least 1.5x",
+    "trigger": "Price touches VWAP, then two consecutive closed 2-minute bars close above VWAP with price no more than 0.875% above VWAP, and relative volume is confirmed at 1.5x or higher before entry. Entries only before 1:45pm ET.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-10-29T16:41:39-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Consumer Discretionary",
+   "Consumer Staples"
+  ],
+  "avoid": [
+   "Technology",
+   "Communication Services",
+   "Real Estate"
+  ],
+  "why": "Consumer Discretionary is 6 trades at +$1.78 and Consumer Staples is 2 trades at +$1.96, though both samples are small. Technology is the largest sample at 38 trades but averages only +$0.01 and its ATR is too high for these stops. Communication Services is negative and carries headline gap risk, an",
+  "expires": "2026-11-12"
  }
 ]
