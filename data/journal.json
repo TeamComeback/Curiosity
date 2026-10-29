@@ -1,23 +1,5 @@
 [
  {
-  "time": "2026-10-16T17:30:19-04:00",
-  "type": "param_change",
-  "agent": "blackswan",
-  "note": "insurance_pct: 0.08 -> 0.043 (The radar is calm and cash is scarce. Cutting the far-out index put budget from 8% to 4% of equity keeps more cash for real breakdown setups, and the insurance only pays off in a stress event.)"
- },
- {
-  "time": "2026-10-16T17:30:27-04:00",
-  "type": "param_change",
-  "agent": "scalper",
-  "note": "target_pct: 0.6 -> 0.5 (Only 1 of 9 trades hit 0.6%, and the winning time-limit exits peaked around 0.3%. A closer target should convert more of these into wins while keeping the reward-to-risk ratio at about 1.7:1 against t)"
- },
- {
-  "time": "2026-10-18T21:22:16-04:00",
-  "type": "focus",
-  "agent": "trend",
-  "note": "Leaning into Energy; avoiding Technology. Energy has the cleanest breakout cluster in today's scan (8 names, roc20 mostly 6-13%) and BP is already working. My closed results are small but negative in Technology (-$59) and Consumer Staples (-$16.88), so I'm avoiding Technology. Energy has no closed trades of mine yet, so the tilt stays on th"
- },
- {
   "time": "2026-10-18T21:22:16-04:00",
   "type": "plan",
   "agent": "trend",
@@ -7455,5 +7437,26 @@
   "agent": "blackswan",
   "symbol": "AGCO",
   "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-10-29T15:06:38-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-10-29T15:08:11-04:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "SPY",
+  "note": "credit not filled at 0.31, 0.30, 0.29, 0.28 (mid 0.31, natural 0.28, floor 0.25)"
+ },
+ {
+  "time": "2026-10-29T15:08:23-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, META, AAPL, MSFT",
+  "note": "defensive: Today's VWAP bounces went 1 win, 2 stops, 1 time-out, and several setups had weak relative volume, so I'm cutting to half size and requiring real volume. A slightly wider stop and target keep the 1.7:1 reward-to-risk ratio while giving the trades room to avoid slippage-driven stops."
  }
 ]
