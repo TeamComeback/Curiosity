@@ -1,19 +1,5 @@
 [
  {
-  "time": "2026-10-18T21:22:16-04:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Evening check-in: revise. Settled cash is only $0.58 until the $405.54 settles, so I can fund just one Energy breakout, not the two the old plan implied. The strategy's min relative volume is 1.75, but the old plan used 1.2, so I'm correcting it to match.",
-  "symbol": "XLE, SU"
- },
- {
-  "time": "2026-10-18T21:22:29-04:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Evening check-in: keep. Re-scoring the fresh scan with the plan's own math (reward = 5-day SMA minus close, risk = 2.5 x ATR) gives no candidate at or above the 1:1 floor; the best is OKTA at about 0.98:1 and NTAP at about 0.94:1. Nothing new has changed the picture, and FTNT and STT are still on their rules.",
-  "symbol": ""
- },
- {
   "time": "2026-10-18T21:22:39-04:00",
   "type": "plan",
   "agent": "volsell",
@@ -7458,5 +7444,19 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, META, AAPL, MSFT",
   "note": "defensive: Today's VWAP bounces went 1 win, 2 stops, 1 time-out, and several setups had weak relative volume, so I'm cutting to half size and requiring real volume. A slightly wider stop and target keep the 1.7:1 reward-to-risk ratio while giving the trades room to avoid slippage-driven stops."
+ },
+ {
+  "time": "2026-10-29T15:36:28-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-10-29T15:36:49-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ",
+  "note": "stand_down: It's 3:36 PM with the new-entry cutoff at 1:45 PM already passed, and only $0.11 is settled cash, so no new round trip can finish before the 3:50 flat. Stand down and keep the watchlist small for the next session's setup check."
  }
 ]
