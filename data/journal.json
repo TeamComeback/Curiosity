@@ -1,74 +1,5 @@
 [
  {
-  "time": "2026-10-16T10:24:36-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "AVGO",
-  "qty": 0.3695,
-  "entry": 337.744,
-  "exit": 337.348,
-  "pnl": -0.15,
-  "note": "lost VWAP: setup failed (-0.12%)",
-  "opened": "2026-10-16T10:18:33-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on AVGO: 0.99x volume, +0.02% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
-  "time": "2026-10-16T10:35:50-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "NVDA",
-  "qty": 0.5768,
-  "entry": 216.624,
-  "exit": 218.082,
-  "pnl": 0.84,
-  "note": "target hit (+0.68%)",
-  "opened": "2026-10-16T10:16:30-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on NVDA: 0.8x volume, +0.25% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
-  "time": "2026-10-16T10:38:25-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "AVGO",
-  "instrument": "stock",
-  "qty": 0.3685,
-  "price": 339.09,
-  "cost": 124.95,
-  "stop": 338.04,
-  "thesis": "VWAP pullback bounce on AVGO: 1.31x volume, +0.31% vs VWAP; target +0.6%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-16T10:52:35-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "SMH",
-  "qty": 0.2269,
-  "entry": 551.174,
-  "exit": 552.528,
-  "pnl": 0.31,
-  "note": "time limit, 30 min (+0.30%)",
-  "opened": "2026-10-16T10:22:35-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SMH: 0.61x volume, +0.21% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
-  "time": "2026-10-16T11:00:41-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "AVGO",
-  "qty": 0.3685,
-  "entry": 339.09,
-  "exit": 337.93,
-  "pnl": -0.42,
-  "note": "stop (-0.36%)",
-  "opened": "2026-10-16T10:38:25-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on AVGO: 1.31x volume, +0.31% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
   "time": "2026-10-16T11:06:24-04:00",
   "type": "playbook",
   "agent": "scalper",
@@ -7460,5 +7391,39 @@
   "agent": "scalper",
   "note": "After-close review: revise. Today's five closed VWAP-pullback trades all lost (about -$2.08 total), and the rel-volume gate was not enforced: entries came in at 0.48x, 0.70x, 0.95x, 1.55x and 1.89x. Across 36 trades the edge is about +$0.10 per trade, and fills on the 0.3% stop slip to -0.32% through -0.52%, so the stop is inside normal noise. I'm cutting risk and size rather than scrapping outright, because SPY and IWM are ",
   "symbol": "SPY, IWM"
+ },
+ {
+  "time": "2026-10-28T20:10:30-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Evening check-in: revise. MANH has failed its breakout: it closed at 239.93, below the 242.56 breakout level and under the 247 entry, so the thesis no longer holds. EQNR now has its own explicit stop, and AEYE's stop is set at 10.91 so the plan matches the position.",
+  "symbol": "DVN"
+ },
+ {
+  "time": "2026-10-28T20:10:41-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Evening check-in: keep. Re-running the fresh scan with the plan's own math (SMA5 target vs 2.5-ATR stop) gives the same result: nothing clears the 1:1 floor. The closest is WM at about 0.99:1, and ADP is about 0.83:1. Nothing has changed enough to justify a new entry.",
+  "symbol": "WM, ADP"
+ },
+ {
+  "time": "2026-10-28T20:10:49-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Evening check-in: keep. Nothing has changed enough to justify a new plan. SPY still has the strongest setup (IV/RV 1.39, bullish trend, calm crash radar at 15), the Fed held without a policy surprise, and no position is open. The 0.25 natural-credit gate still stands.",
+  "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-28T20:11:02-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "note": "Leaning into no sector; avoiding Communication Services, Real Estate. No sector has enough evidence to lean in. Technology is 37 trades at +$1.02 (avg +$0.03), a weak edge that the plan doesn't trade anyway. Consumer Discretionary (6 trades, +$1.78) and Consumer Staples (2 trades, +$1.96) look good but are too small a sample to act on. Communication Services is 3 trad"
+ },
+ {
+  "time": "2026-10-28T20:11:02-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Evening check-in: revise. Today's 5 closed trades lost about $2.08 combined (SOFI, MU, IWM, GOOGL, SPY), with IWM losing even at 1.89x volume, so the 1.5x gate isn't protecting us. The 0.3% stop sits inside normal 2-minute noise on these names, and the rolling edge (about +$0.03 to +$0.10 per trade) is too thin to justify the current size.",
+  "symbol": "SPY"
  }
 ]
