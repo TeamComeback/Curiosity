@@ -292,6 +292,8 @@ def tick(b, state, aid="scalper"):
             traded = True
 
     mult = AGGRESSION.get(prof["forced_aggression"] or pb.get("aggression", "normal"), 1.0)
+    if config.AGENTS.get(aid, {}).get("no_new_entries"):
+        mult = 0                     # retired firm: manage what's open, take nothing new
     if hhmm < prof["first_entry"] or hhmm > prof["no_new_after"] or mult == 0:
         return traded
     slice_dollars = round(day["equity"] / max(int(p["slices"]), 1) * mult, 2)

@@ -587,6 +587,8 @@ def main(force=False, broker=None):
         if agent["status"] != "active":
             continue
         if aid in scalper.PROFILES:          # the AI sets the scalpers' playbooks; the 2-minute loop trades them
+            if config.AGENTS[aid].get("no_new_entries"):
+                continue                     # retired: no playbook, no AI call
             try:
                 scalper.update_playbook({**ctx, "equity": agent_equity(agent, prices)}, state, b, aid)
             except Exception as e:  # noqa: BLE001
