@@ -454,6 +454,7 @@ def write_dashboard(state, regime, equities):
         ret = eq / config.RACE["start_balance"] - 1
         agents.append({"id": aid, "name": config.AGENTS[aid]["name"], "competing": config.AGENTS[aid]["competing"],
                        "exhibition": bool(config.AGENTS[aid].get("exhibition")), "reached_goal": a.get("reached_goal"),
+                       "paused_reason": config.AGENTS[aid].get("paused_reason"),
                        "equity": eq, "cash": a["cash"], "available": governor.available(a),
                        "settling": store.unsettled(a), "status": a["status"],
                        "status_reason": a["status_reason"], "multiple": round(eq / config.RACE["start_balance"], 2),
@@ -592,7 +593,10 @@ def main(force=False, broker=None):
                 print(f"[scalper] playbook failed: {type(e).__name__}")
             continue
         ok, why = governor.can_trade_today(state, aid)
-        can_open = ok and in_window(aid)
+        paused = config.AGENTS[aid].get("no_new_entries")
+        can_open = ok and in_window(aid) and not paused
+        if paused:
+            why = config.AGENTS[aid].get("paused_reason", "no new entries")
         try:
             found = focus.rank(REGISTRY[aid].entries(ctx), agent, limit=8 if aid == "blackswan" else 6) if can_open else []
         except AlpacaError as e:
@@ -602,7 +606,7 @@ def main(force=False, broker=None):
             agent["min_trade_seen"] = min(c["max_loss_per"] for c in found)
         if not found and not agent["positions"]:
             continue
-        view = agent_view(state, aid, found, ctx, True if can_open else (why if not ok else "outside entry window"), standings)
+        view = agent_view(state, aid, found, ctx, True if can_open else (why if (not ok or paused) else "outside entry window"), standings)
         d = brain.decide(aid, view)
         for c in d.get("close", []):
             pid = c.get("position_id")
