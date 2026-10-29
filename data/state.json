@@ -422,55 +422,79 @@
    },
    "plan": {
     "for_day": "2026-10-29",
-    "made_at": "2026-10-28T20:10-04:00",
-    "session": "Evening check-in",
+    "made_at": "2026-10-29T07:40-04:00",
+    "session": "Pre-market call",
     "decision": "revise",
-    "why": "MANH has failed its breakout: it closed at 239.93, below the 242.56 breakout level and under the 247 entry, so the thesis no longer holds. EQNR now has its own explicit stop, and AEYE's stop is set at 10.91 so the plan matches the position.",
-    "summary": "Hold the energy and put positions and their stops. Exit MANH at the open if it closes below 242.56, which frees cash for T+1. Wait for DVN to close above 51.96 on 1.75x volume, and buy only with settled cash.",
+    "why": "MANH closed at 239.93, below its 242.56 breakout level, so the failed-breakout exit is triggered and the sale frees cash for Friday.",
+    "summary": "Sell MANH at the open to free about $48.50 settling Friday. Buy fractional TRGP or DVN only on a confirmed close above the breakout level with \u22651.75x volume, using settled cash. Hold all other positions to their stops.",
     "watchlist": [
      {
-      "symbol": "DVN",
-      "setup": "Energy near-breakout, about 1.4% below its 55-day high at 51.96",
-      "trigger": "Close above 51.96 on at least 1.75x relative volume, then buy at the next open only if the open is within 1 ATR (1.34) of 51.96 and settled cash covers the fractional size.",
+      "symbol": "TRGP",
+      "setup": "Energy near-breakout, 0.4% below its 55-day high at 307.09, roc20 +13%",
+      "trigger": "Close above 307.09 on at least 1.75x relative volume, then buy fractional shares at the next open if it is within 1 ATR (7.33) of 307.09 and settled cash covers it.",
       "instrument": "stock",
       "max_dollars": 4.19,
       "conviction": 3
+     },
+     {
+      "symbol": "DVN",
+      "setup": "Energy near-breakout, about 1.4% below its 55-day high at 51.96",
+      "trigger": "Close above 51.96 on at least 1.75x relative volume, then buy at the next open only if the open is within 1 ATR (1.34) of 51.96 and settled cash covers it.",
+      "instrument": "stock",
+      "max_dollars": 4.19,
+      "conviction": 3
+     },
+     {
+      "symbol": "TXN",
+      "setup": "Technology breakout today at 309.4, roc20 +10.6%",
+      "trigger": "Hold above 309.4 on a close with at least 1.75x volume, then buy fractional shares at the next open if settled cash allows, stop 2 ATR below entry.",
+      "instrument": "stock",
+      "max_dollars": 4.19,
+      "conviction": 2
+     },
+     {
+      "symbol": "RBRK",
+      "setup": "Technology near-breakout at 137.28, roc20 +18.9%, Morgan Stanley initiation at Overweight with $155 target",
+      "trigger": "Close above 137.28 on at least 1.75x volume, then buy fractional shares at the next open if settled cash allows.",
+      "instrument": "stock",
+      "max_dollars": 4.19,
+      "conviction": 2
      }
     ],
     "position_plans": [
      {
       "symbol": "MANH",
-      "plan": "Exit at the open if it closes below 242.56 (failed breakout, now below entry 247). Otherwise hold to the 233.93 stop. Do not add."
+      "plan": "Exit at the open: closed 239.93, below the 242.56 breakout level and under the 247 entry. Do not re-enter until it reclaims 242.56 on 1.75x volume."
      },
      {
       "symbol": "AEYE",
-      "plan": "Hold 3.3573 shares; stop 10.91 (above the 10.45 entry, locks in gains). Exit at the open if it closes below 10.91. Do not add; extended at roc20 +52%."
+      "plan": "Hold 3.3573 shares; exit at the open if it closes below 10.91. Do not add; extended at roc20 +52%."
+     },
+     {
+      "symbol": "XLE",
+      "plan": "Hold 4.8287 shares; stop 65.87 (the recorded 65.87 is used, not the 65.77 in the thesis)."
+     },
+     {
+      "symbol": "BP",
+      "plan": "Hold 1.013 shares; stop 48.11 as recorded, which is tighter than the 47.12 in the thesis."
+     },
+     {
+      "symbol": "EQNR",
+      "plan": "Hold 1.4421 shares; stop 46.15. Watch the 47.01 breakout level as support."
      },
      {
       "symbol": "SMR261106P00006000",
       "plan": "Hold; exit if SMR closes above 6.94 (expires 11/06)."
-     },
-     {
-      "symbol": "CWVX261120P00008000",
-      "plan": "Hold; exit if CWVX closes above 10.76 (expires 11/20)."
-     },
-     {
-      "symbol": "PLUG261106P00001500",
-      "plan": "Hold; exit if PLUG closes above 1.63 (expires 11/06)."
-     },
-     {
-      "symbol": "VALE261218P00012000",
-      "plan": "Hold; exit if VALE closes above 12.52 (expires 12/18). No second put."
      }
     ],
     "avoid": [
      "SGRY: roc20 +62%, too extended to chase.",
-     "BA: put premium exceeds settled cash and news flow is volatile.",
      "GMAB: extended after a 60% roc20 move.",
      "SMR as a fresh long: analyst target cuts and new lows.",
-     "Single-share names with fresh breakouts (ADI, TXN, WAT, EMR, CRL, NDAQ): the $4.19 cash cannot size them meaningfully."
+     "BA: put premium exceeds settled cash and news flow is volatile.",
+     "Consumer Staples: lost $16.88 on its only trade and has no fresh setups."
     ],
-    "brainstorm": "When a stop triggers, sell the same day and redeploy into the strongest fresh breakout at the next open, since proceeds settle T+1. Test whether fractional entries of under $10 are worth taking at all, or whether cash should wait for a full position size.",
+    "brainstorm": "Test size limits: with a 28% hit rate, fewer, higher-conviction entries may beat spreading small fractional bets.",
     "revisions": [
      {
       "at": "2026-10-28T16:40-04:00",
@@ -497,10 +521,38 @@
         "setup": "Energy near-breakout, about 1.4% below its 55-day high at 51.96"
        }
       ]
+     },
+     {
+      "at": "2026-10-29T07:40-04:00",
+      "session": "Pre-market call",
+      "decision": "revise",
+      "why": "MANH closed at 239.93, below its 242.56 breakout level, so the failed-breakout exit is triggered and the sale frees cash for Friday.",
+      "watch": [
+       {
+        "symbol": "TRGP",
+        "instrument": "stock",
+        "setup": "Energy near-breakout, 0.4% below its 55-day high at 307.09, roc20 +13%"
+       },
+       {
+        "symbol": "DVN",
+        "instrument": "stock",
+        "setup": "Energy near-breakout, about 1.4% below its 55-day high at 51.96"
+       },
+       {
+        "symbol": "TXN",
+        "instrument": "stock",
+        "setup": "Technology breakout today at 309.4, roc20 +10.6%"
+       },
+       {
+        "symbol": "RBRK",
+        "instrument": "stock",
+        "setup": "Technology near-breakout at 137.28, roc20 +18.9%, Morgan Stanley initiation at O"
+       }
+      ]
      }
     ],
     "settled_cash_at_plan": 4.19,
-    "budgets_clamped": 0
+    "budgets_clamped": 4
    },
    "unsettled": [],
    "focus": {
@@ -511,9 +563,9 @@
     "avoid": [
      "Consumer Staples"
     ],
-    "why": "Open energy positions (XLE, BP, EQNR) are working on unrealized gains, although realized Energy P&L is -$16.86 on one trade. Technology is +$23.50 on two trades, a small sample. Consumer Staples lost $16.88 on one trade and has no fresh setups.",
-    "set_at": "2026-10-28T20:10-04:00",
-    "expires": "2026-11-11"
+    "why": "Energy has open unrealized gains and several fresh breakouts, though realized Energy P&L is -$16.86. Technology is +$23.50 on two trades, a small sample. Staples lost money with no setups.",
+    "set_at": "2026-10-29T07:40-04:00",
+    "expires": "2026-11-12"
    },
    "scorecard": [
     {
@@ -946,23 +998,23 @@
    },
    "plan": {
     "for_day": "2026-10-29",
-    "made_at": "2026-10-28T20:10-04:00",
-    "session": "Evening check-in",
+    "made_at": "2026-10-29T07:40-04:00",
+    "session": "Pre-market call",
     "decision": "keep",
-    "why": "Re-running the fresh scan with the plan's own math (SMA5 target vs 2.5-ATR stop) gives the same result: nothing clears the 1:1 floor. The closest is WM at about 0.99:1, and ADP is about 0.83:1. Nothing has changed enough to justify a new entry.",
-    "summary": "Hold PBR (11.4626 sh, stop 19.90) toward its SMA5 target of about 24.45-25.00 with no adds. Enter nothing new, and keep the $762.86 settled cash idle unless a washout reaches at least 1:1 to target.",
+    "why": "The fresh scan confirms the thesis without new reasons to act: no washout reaches 1:1 target-to-stop (WM ~0.99 is closest, ADP ~0.83). PBR closed at 22.04, still 2.14 above its 19.90 stop, and its SMA5 target has compressed to 23.72, which still gives about 1.1:1 to the 24.45 low end of my target range.",
+    "summary": "Hold PBR (11.4626 sh, stop 19.90) with no adds. Keep the $762.86 settled cash idle, and act only on a washout that reaches at least 1:1 from its close to SMA5 against a 2.5-ATR stop. WM and ADP are the closest names to watch.",
     "watchlist": [
      {
       "symbol": "WM",
-      "setup": "RSI(2) 8.2 washout about 0.1% above its 200-day. Target-to-stop is about 0.99:1 (SMA5 236.08 vs stop about 210.8).",
-      "trigger": "Act only if the target-to-stop reaches at least 1:1, for example from a lower ATR or a bounce that narrows the gap. Otherwise pass.",
+      "setup": "RSI(2) 8.2 washout 0.1% above its 200-day; SMA5 236.08 vs close 225.23 gives ~0.99:1 to a 2.5-ATR stop of ~210.8.",
+      "trigger": "Act only if the target-to-stop reaches 1:1, for example from a lower ATR or a bounce that narrows the gap. Otherwise pass.",
       "instrument": "stock",
       "max_dollars": 0,
       "conviction": 1
      },
      {
       "symbol": "ADP",
-      "setup": "RSI(2) 7.3 washout after an earnings beat and guidance raise. Target-to-stop is about 0.83:1.",
+      "setup": "RSI(2) 7.3 washout after an earnings beat and guidance raise; SMA5 298.35 vs close 285.37 gives ~0.83:1.",
       "trigger": "Act only if price falls far enough that the SMA5 target clears 1:1 against the 2.5-ATR stop. Passing at current levels.",
       "instrument": "stock",
       "max_dollars": 0,
@@ -972,16 +1024,16 @@
     "position_plans": [
      {
       "symbol": "PBR",
-      "plan": "Hold 11.4626 sh with stop 19.90. Move stop to breakeven 21.70 on a close above 23.00. Exit at the SMA5 target (about 24.45-25.00) or when RSI(2) closes above 70. Exit at the open if it trades below 19.90 or if Petrobras or Brazil political news turns company-specific and negative. Time stop at the Nov 3 close. No adds."
+      "plan": "Hold 11.4626 sh, stop 19.90. Move stop to breakeven 21.70 on a close above 23.00. Take profit at the SMA5 target (about 24.45 to 25.00) or when RSI(2) closes above 70. Exit at the open if it trades below 19.90, or if Petrobras or Brazil political news turns company-specific and negative. Time stop at the Nov 3 close. No adds."
      }
     ],
     "avoid": [
-     "PBR adds: political shock risk, and the position is already close to its stop distance.",
-     "MCK (~0.47:1), ABNB (~0.48:1), MOH (~0.34:1), CVS (~0.46:1), DIS (~0.42:1), ELV (~0.56:1), COST (~0.46:1), UL (~0.56:1), CI (~0.52:1), NOW (~0.40:1), MUSA (~0.42:1), ROKU (~0.51:1), FOXA (~0.48:1), HUM (~0.13:1), all below the 1:1 floor.",
+     "PBR adds: political shock risk, and the stop is only about 2.1 below the current price.",
+     "MCK (~0.47:1), ABNB (~0.48:1), MOH (~0.34:1), CVS (~0.46:1; drug-middleman transparency rules and estradiol shortage news), DIS (~0.42:1), ELV (~0.56:1; shelf filing), COST (~0.46:1), UL (~0.56:1), CI (~0.52:1; same PBM news), NOW (~0.40:1), MUSA (~0.42:1; a beat-driven dip, not a washout), ROKU (~0.51:1), FOXA (~0.48:1), HUM (~0.13:1), all below the 1:1 floor.",
      "PFE, EXPE, CAH: 'getting oversold' only, not washouts yet and below the floor.",
      "PSX and VLO: refiner policy-driven selloff, so washouts may keep going."
     ],
-    "brainstorm": "Test whether a midpoint target (halfway from the RSI(2) close to the SMA5) on a 2.0-ATR stop would produce enough setups to trade. Paper-test only, and keep the 1:1 floor for real entries until the sample supports a change.",
+    "brainstorm": "Paper-test whether a 2.0-ATR stop (instead of 2.5) lifts ADP and WM above 1:1 without adding meaningful stop-outs. Log it as a tagged shadow test, not a live rule change.",
     "revisions": [
      {
       "at": "2026-10-28T16:41-04:00",
@@ -1018,6 +1070,24 @@
         "setup": "RSI(2) 7.3 washout after an earnings beat and guidance raise. Target-to-stop is "
        }
       ]
+     },
+     {
+      "at": "2026-10-29T07:40-04:00",
+      "session": "Pre-market call",
+      "decision": "keep",
+      "why": "The fresh scan confirms the thesis without new reasons to act: no washout reaches 1:1 target-to-stop (WM ~0.99 is closest, ADP ~0.83). PBR closed at 22.04, still 2.14 above its 19.90 stop, and its SMA5 target has compressed to 23.72, which still gives about 1.1:1 to the 24.45 low end of my target range.",
+      "watch": [
+       {
+        "symbol": "WM",
+        "instrument": "stock",
+        "setup": "RSI(2) 8.2 washout 0.1% above its 200-day; SMA5 236.08 vs close 225.23 gives ~0."
+       },
+       {
+        "symbol": "ADP",
+        "instrument": "stock",
+        "setup": "RSI(2) 7.3 washout after an earnings beat and guidance raise; SMA5 298.35 vs clo"
+       }
+      ]
      }
     ],
     "settled_cash_at_plan": 762.86,
@@ -1029,9 +1099,9 @@
     "avoid": [
      "Technology"
     ],
-    "why": "Closed-trade evidence is too thin to lean in: Broad market/other, Financials and Consumer Discretionary are each 1-for-1, and Technology is 0-for-1. Today's scan has no sector clearing the floor. Keep the Technology avoid, which runs to about Nov 9-11, and do not lean in anywhere.",
-    "set_at": "2026-10-28T20:10-04:00",
-    "expires": "2026-11-11"
+    "why": "Closed-trade evidence is still too thin (each sector has 1 trade, and Technology is 0-for-1). Today's scan has no sector clearing the 1:1 floor, so there is no basis to lean in. Keep the Technology avoid, which runs to about Nov 11.",
+    "set_at": "2026-10-29T07:40-04:00",
+    "expires": "2026-11-12"
    },
    "scorecard": [
     {
@@ -1332,16 +1402,16 @@
    "last_exits": {},
    "plan": {
     "for_day": "2026-10-29",
-    "made_at": "2026-10-28T20:10-04:00",
-    "session": "Evening check-in",
-    "decision": "keep",
-    "why": "Nothing has changed enough to justify a new plan. SPY still has the strongest setup (IV/RV 1.39, bullish trend, calm crash radar at 15), the Fed held without a policy surprise, and no position is open. The 0.25 natural-credit gate still stands.",
-    "summary": "Stay flat unless the SPY bull put spread (short 750 put, long 749 put, 21-45 DTE) can be filled at a natural credit of at least 0.25 on a $1 width, with max loss under $75. If it can't, pass. Do not chase a mid price below the gate.",
+    "made_at": "2026-10-29T07:41-04:00",
+    "session": "Pre-market call",
+    "decision": "revise",
+    "why": "The fresh scan puts SPY's IV/RV at 1.28, down from the 1.39 in my plan, but it is still above my 1.1 edge. Crash radar is calm at 15, and the Fed hold with hawkish dissent doesn't change the SPY bull-put setup. The plan's strikes came from an earlier session, so they need a live refresh.",
+    "summary": "Stay flat unless SPY can be sold as a bull put spread with the short put near 750 (about 0.25 delta, roughly 2.8% below the 772.28 close) and the long put $1 lower, 21-45 DTE. Enter only at a natural credit of at least 0.25 on the $1 width with max loss under $75. If the natural is below that, pass.",
     "watchlist": [
      {
       "symbol": "SPY",
-      "setup": "Bull put spread, short put about 0.25 delta (near 750, roughly 2.8% below the 772.28 close), long put $1 lower, 21-45 DTE. IV/RV 1.39 and the trend is up.",
-      "trigger": "Natural credit of at least 0.25 on the $1 width, with max loss under $75. Mid around 0.23 does not qualify. Re-check the strikes against the live price before entry, since the plan's 749/750 strikes came from an earlier session.",
+      "setup": "Bull put spread, short put about 0.25 delta near 750, long put $1 lower, 21-45 DTE. IV/RV 1.28 (above the 1.1 edge), uptrend, crash radar calm at 15.",
+      "trigger": "Live natural credit of at least 0.25 on the $1 width with max loss under $75. Re-derive the strikes from the live price first. Mid around 0.23 does not qualify.",
       "instrument": "spread",
       "max_dollars": 75,
       "conviction": 2
@@ -1353,10 +1423,10 @@
      "QQQ: no clear trend, with AI-credit and tech-selloff headlines adding gap risk.",
      "TLT: falling yields work against a bear call, and a bull put is not justified while the macro picture is unsettled.",
      "IWM: neutral trend, and IV/RV has not produced fills.",
-     "XLF: IV/RV is rich, but the credit is thin (about 0.10 to 0.22) and fails the gate.",
+     "XLF: IV/RV of 1.81 is rich, but the credit has been thin (about 0.10 to 0.22) and fails the gate.",
      "EEM: on the avoid list, with a credit of about 0.06."
     ],
-    "brainstorm": "Test whether a 0.25 gate on a $1 width is simply too strict for SPY. If the natural stays under 0.25 for several sessions, consider a $2 width at a 0.50 credit gate, which keeps max loss near $150 but requires cash I don't have to spare.",
+    "brainstorm": "I have never filled a trade, and the 0.25 natural gate may be too strict for the SPY credits seen so far. Test a limit at the natural price for one 21-45 DTE SPY bull put, and track whether a 0.20 natural with max loss under $80 would have filled and held. Do not loosen the gate without that evidenc",
     "revisions": [
      {
       "at": "2026-10-28T16:41-04:00",
@@ -1383,6 +1453,19 @@
         "setup": "Bull put spread, short put about 0.25 delta (near 750, roughly 2.8% below the 77"
        }
       ]
+     },
+     {
+      "at": "2026-10-29T07:41-04:00",
+      "session": "Pre-market call",
+      "decision": "revise",
+      "why": "The fresh scan puts SPY's IV/RV at 1.28, down from the 1.39 in my plan, but it is still above my 1.1 edge. Crash radar is calm at 15, and the Fed hold with hawkish dissent doesn't change the SPY bull-put setup. The plan's strikes came from an earlier session, so they need a live refresh.",
+      "watch": [
+       {
+        "symbol": "SPY",
+        "instrument": "spread",
+        "setup": "Bull put spread, short put about 0.25 delta near 750, long put $1 lower, 21-45 D"
+       }
+      ]
      }
     ],
     "settled_cash_at_plan": 1000.0,
@@ -1398,9 +1481,9 @@
      "Energy",
      "Materials"
     ],
-    "why": "SPY is the only candidate with a clear bull-put setup and rich IV/RV, and the crash radar is calm. I have no filled trades yet, so the evidence is the scan only. Energy keeps failing fills under oil-headline risk, and Materials (GDX, SLV) shows no volatility edge.",
-    "set_at": "2026-10-28T20:10-04:00",
-    "expires": "2026-11-11"
+    "why": "SPY is still the only candidate with a clear bull-put setup and rich IV/RV, and the crash radar is calm. I have no filled trades yet, so the evidence is the scan alone. Energy keeps failing fills under oil-headline risk, and Materials shows no volatility edge. Financials looks rich on IV/RV but fail",
+    "set_at": "2026-10-29T07:41-04:00",
+    "expires": "2026-11-12"
    },
    "scorecard": [
     {
@@ -2454,33 +2537,7 @@
     "GOOGL": "2026-10-28"
    },
    "joined": "2026-10-14T12:09:57-04:00",
-   "unsettled": [
-    {
-     "amount": 125.53,
-     "settles": "2026-10-29",
-     "note": "sold SOFI"
-    },
-    {
-     "amount": 125.29,
-     "settles": "2026-10-29",
-     "note": "sold MU"
-    },
-    {
-     "amount": 125.46,
-     "settles": "2026-10-29",
-     "note": "sold IWM"
-    },
-    {
-     "amount": 125.41,
-     "settles": "2026-10-29",
-     "note": "sold GOOGL"
-    },
-    {
-     "amount": 125.72,
-     "settles": "2026-10-29",
-     "note": "sold SPY"
-    }
-   ],
+   "unsettled": [],
    "playbook": {
     "date": "2026-10-28",
     "made_at": "2026-10-28T15:36-04:00",
@@ -2501,16 +2558,16 @@
    },
    "plan": {
     "for_day": "2026-10-29",
-    "made_at": "2026-10-28T20:11-04:00",
-    "session": "Evening check-in",
+    "made_at": "2026-10-29T07:41-04:00",
+    "session": "Pre-market call",
     "decision": "revise",
-    "why": "Today's 5 closed trades lost about $2.08 combined (SOFI, MU, IWM, GOOGL, SPY), with IWM losing even at 1.89x volume, so the 1.5x gate isn't protecting us. The 0.3% stop sits inside normal 2-minute noise on these names, and the rolling edge (about +$0.03 to +$0.10 per trade) is too thin to justify the current size.",
-    "summary": "Trade at most one SPY VWAP-reclaim test, at $100 per slice, and only when relative volume is hand-verified at 1.5x or higher and the reclaim is confirmed. Otherwise stand aside. No entries after 1:45pm ET, no single-name semis or AI names, and no GOOGL/META/TSLA.",
+    "why": "The old plan's 1.5x volume gate is not enforced by code, and every low-volume entry lost, so the gate has to be checked by hand before each entry. The scorecard is also weak (avg pick move -0.1%), so I'm keeping exposure to one small SPY setup and making the stand-aside rule explicit.",
+    "summary": "Stand aside unless SPY pulls back to VWAP, reclaims it on two consecutive closed 2-minute bars, and hand-verified relative volume is at least 1.5x. If so, buy one $100 slice with a 0.5% target, a stop tighter than 0.3% to allow for the observed slippage, and a 45-minute time limit. No entries after 1:45pm ET, and no trades in the 1:45-2:30pm Fed/Warsh and Iran headline window.",
     "watchlist": [
      {
       "symbol": "SPY",
-      "setup": "VWAP reclaim after a shallow pullback, only with hand-verified relative volume of at least 1.5x",
-      "trigger": "Two consecutive closed 2-minute bars above VWAP after touching it, price no more than 0.5% above VWAP, and relative volume checked by hand at 1.5x or higher. Entries only before 1:45pm ET.",
+      "setup": "VWAP reclaim after a shallow pullback, only when hand-verified relative volume is at least 1.5x",
+      "trigger": "Price touches VWAP, then two consecutive closed 2-minute bars close above VWAP with price no more than 0.5% above VWAP, and relative volume is confirmed at 1.5x or higher before entry. Entries only before 1:45pm ET.",
       "instrument": "stock",
       "max_dollars": 100,
       "conviction": 1
@@ -2518,14 +2575,13 @@
     ],
     "position_plans": [],
     "avoid": [
-     "Any entry with relative volume below 1.5x or unverified. Code does not enforce the gate, and today's 0.48x to 1.55x entries all lost.",
-     "IWM for now: 1.89x volume still lost, so the index-ETF VWAP setup needs more evidence before it returns.",
+     "Any entry without a hand-verified relative volume of at least 1.5x. The code does not enforce this gate, and entries at 0.48x to 1.55x volume lost.",
      "Single-name semis and AI names (NVDA, AMD, INTC, MU, SNDK, AVGO, TSM, SMH, SPCX, MSFT): 2.5% to 6.5% ATR makes a 0.3% stop noise, and MU lost today.",
-     "TSLA, META, GOOGL, GOOG: fresh earnings and headline gap risk. GOOGL lost today at 1.55x volume.",
-     "SOFI: 0.48x volume entry lost at the stop. Low-volume names are not tradable under this plan.",
-     "Any trade in the 1:45pm to 2:30pm ET window around the Fed/Warsh remarks and Iran headlines."
+     "TSLA, META, GOOGL, GOOG: fresh earnings and headline gap risk. GOOGL is down sharply on a Waymo/Q3 loss headline.",
+     "IWM and low-volume names (SOFI at 0.48x): the setup needs more evidence before it returns.",
+     "Any trade in the 1:45-2:30pm ET window around the Fed/Warsh remarks and Iran headlines."
     ],
-    "brainstorm": "Test a wider stop on SPY only, such as 0.5% stop with 0.5% target and a 30-minute limit, to see whether the 0.3% stop is the main cause of losses. Only test this if the plan keeps the 1.5x volume gate.",
+    "brainstorm": "Test whether SPY VWAP reclaims perform better in the first 90 minutes (9:45-11:15am) than in the afternoon, and log hand-checked relative volume for every candidate, including rejected ones, so the volume gate can be validated.",
     "revisions": [
      {
       "at": "2026-10-28T16:41-04:00",
@@ -2557,9 +2613,22 @@
         "setup": "VWAP reclaim after a shallow pullback, only with hand-verified relative volume o"
        }
       ]
+     },
+     {
+      "at": "2026-10-29T07:41-04:00",
+      "session": "Pre-market call",
+      "decision": "revise",
+      "why": "The old plan's 1.5x volume gate is not enforced by code, and every low-volume entry lost, so the gate has to be checked by hand before each entry. The scorecard is also weak (avg pick move -0.1%), so I'm keeping exposure to one small SPY setup and making the stand-aside rule explicit.",
+      "watch": [
+       {
+        "symbol": "SPY",
+        "instrument": "stock",
+        "setup": "VWAP reclaim after a shallow pullback, only when hand-verified relative volume i"
+       }
+      ]
      }
     ],
-    "settled_cash_at_plan": 377.37,
+    "settled_cash_at_plan": 1004.78,
     "budgets_clamped": 0
    },
    "focus": {
@@ -2568,9 +2637,9 @@
      "Communication Services",
      "Real Estate"
     ],
-    "why": "No sector has enough evidence to lean in. Technology is 37 trades at +$1.02 (avg +$0.03), a weak edge that the plan doesn't trade anyway. Consumer Discretionary (6 trades, +$1.78) and Consumer Staples (2 trades, +$1.96) look good but are too small a sample to act on. Communication Services is 3 trad",
-    "set_at": "2026-10-28T20:11-04:00",
-    "expires": "2026-11-11"
+    "why": "No sector has enough evidence to lean in. Technology is 37 trades at +$1.02 (avg +$0.03), a weak edge. Consumer Discretionary (6 trades, +$1.78) and Consumer Staples (2 trades, +$1.96) look good but are too small a sample. Communication Services is 3 trades at -$0.51 and Real Estate is 1 trade at -$",
+    "set_at": "2026-10-29T07:41-04:00",
+    "expires": "2026-11-12"
    },
    "scorecard": [
     {

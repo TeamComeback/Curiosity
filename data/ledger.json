@@ -11979,5 +11979,109 @@
   ],
   "why": "No sector has enough evidence to lean in. Technology is 37 trades at +$1.02 (avg +$0.03), a weak edge that the plan doesn't trade anyway. Consumer Discretionary (6 trades, +$1.78) and Consumer Staples (2 trades, +$1.96) look good but are too small a sample to act on. Communication Services is 3 trad",
   "expires": "2026-11-11"
+ },
+ {
+  "time": "2026-10-29T07:40:42-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-10-29",
+  "decision": "revise",
+  "why": "MANH closed at 239.93, below its 242.56 breakout level, so the failed-breakout exit is triggered and the sale frees cash for Friday.",
+  "summary": "Sell MANH at the open to free about $48.50 settling Friday. Buy fractional TRGP or DVN only on a confirmed close above the breakout level with \u22651.75x volume, using settled cash. Hold all other positions to their stops.",
+  "watchlist": [
+   {
+    "symbol": "TRGP",
+    "setup": "Energy near-breakout, 0.4% below its 55-day high at 307.09, roc20 +13%",
+    "trigger": "Close above 307.09 on at least 1.75x relative volume, then buy fractional shares at the next open if it is within 1 ATR (7.33) of 307.09 and settled cash covers it.",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "DVN",
+    "setup": "Energy near-breakout, about 1.4% below its 55-day high at 51.96",
+    "trigger": "Close above 51.96 on at least 1.75x relative volume, then buy at the next open only if the open is within 1 ATR (1.34) of 51.96 and settled cash covers it.",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "TXN",
+    "setup": "Technology breakout today at 309.4, roc20 +10.6%",
+    "trigger": "Hold above 309.4 on a close with at least 1.75x volume, then buy fractional shares at the next open if settled cash allows, stop 2 ATR below entry.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "RBRK",
+    "setup": "Technology near-breakout at 137.28, roc20 +18.9%, Morgan Stanley initiation at Overweight with $155 target",
+    "trigger": "Close above 137.28 on at least 1.75x volume, then buy fractional shares at the next open if settled cash allows.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-29T07:40:56-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-10-29",
+  "decision": "keep",
+  "why": "The fresh scan confirms the thesis without new reasons to act: no washout reaches 1:1 target-to-stop (WM ~0.99 is closest, ADP ~0.83). PBR closed at 22.04, still 2.14 above its 19.90 stop, and its SMA5 target has compressed to 23.72, which still gives about 1.1:1 to the 24.45 low end of my target range.",
+  "summary": "Hold PBR (11.4626 sh, stop 19.90) with no adds. Keep the $762.86 settled cash idle, and act only on a washout that reaches at least 1:1 from its close to SMA5 against a 2.5-ATR stop. WM and ADP are the closest names to watch.",
+  "watchlist": [
+   {
+    "symbol": "WM",
+    "setup": "RSI(2) 8.2 washout 0.1% above its 200-day; SMA5 236.08 vs close 225.23 gives ~0.99:1 to a 2.5-ATR stop of ~210.8.",
+    "trigger": "Act only if the target-to-stop reaches 1:1, for example from a lower ATR or a bounce that narrows the gap. Otherwise pass.",
+    "instrument": "stock",
+    "conviction": 1
+   },
+   {
+    "symbol": "ADP",
+    "setup": "RSI(2) 7.3 washout after an earnings beat and guidance raise; SMA5 298.35 vs close 285.37 gives ~0.83:1.",
+    "trigger": "Act only if price falls far enough that the SMA5 target clears 1:1 against the 2.5-ATR stop. Passing at current levels.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-10-29T07:41:04-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-10-29",
+  "decision": "revise",
+  "why": "The fresh scan puts SPY's IV/RV at 1.28, down from the 1.39 in my plan, but it is still above my 1.1 edge. Crash radar is calm at 15, and the Fed hold with hawkish dissent doesn't change the SPY bull-put setup. The plan's strikes came from an earlier session, so they need a live refresh.",
+  "summary": "Stay flat unless SPY can be sold as a bull put spread with the short put near 750 (about 0.25 delta, roughly 2.8% below the 772.28 close) and the long put $1 lower, 21-45 DTE. Enter only at a natural credit of at least 0.25 on the $1 width with max loss under $75. If the natural is below that, pass.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "Bull put spread, short put about 0.25 delta near 750, long put $1 lower, 21-45 DTE. IV/RV 1.28 (above the 1.1 edge), uptrend, crash radar calm at 15.",
+    "trigger": "Live natural credit of at least 0.25 on the $1 width with max loss under $75. Re-derive the strikes from the live price first. Mid around 0.23 does not qualify.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-10-29T07:41:14-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-10-29",
+  "decision": "revise",
+  "why": "The old plan's 1.5x volume gate is not enforced by code, and every low-volume entry lost, so the gate has to be checked by hand before each entry. The scorecard is also weak (avg pick move -0.1%), so I'm keeping exposure to one small SPY setup and making the stand-aside rule explicit.",
+  "summary": "Stand aside unless SPY pulls back to VWAP, reclaims it on two consecutive closed 2-minute bars, and hand-verified relative volume is at least 1.5x. If so, buy one $100 slice with a 0.5% target, a stop tighter than 0.3% to allow for the observed slippage, and a 45-minute time limit. No entries after 1:45pm ET, and no trades in the 1:45-2:30pm Fed/Warsh and Iran headline window.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a shallow pullback, only when hand-verified relative volume is at least 1.5x",
+    "trigger": "Price touches VWAP, then two consecutive closed 2-minute bars close above VWAP with price no more than 0.5% above VWAP, and relative volume is confirmed at 1.5x or higher before entry. Entries only before 1:45pm ET.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]

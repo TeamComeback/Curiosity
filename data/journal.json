@@ -1,52 +1,5 @@
 [
  {
-  "time": "2026-10-16T11:06:24-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "TLT, SOXS, NVDA, SMH",
-  "note": "defensive: SPY, IWM and QQQ are all down with ranges under 1%, too small for a reliable target, and the overnight IWM and SPY plan no longer matches the live tape. TLT and SOXS are the only names with a live VWAP-bounce setup, and only 3 slices are actually settled cash today, so I'm using defensive size with "
- },
- {
-  "time": "2026-10-16T11:08:29-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "TLT",
-  "instrument": "stock",
-  "qty": 2.077,
-  "price": 80.22,
-  "cost": 166.62,
-  "stop": 79.97,
-  "thesis": "VWAP pullback bounce on TLT: 4.19x volume, +0.19% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-16T11:32:47-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "NVDA",
-  "instrument": "stock",
-  "qty": 0.7671,
-  "price": 217.166,
-  "cost": 166.59,
-  "stop": 216.52,
-  "thesis": "VWAP pullback bounce on NVDA: 1.25x volume, +0.28% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-16T11:35:51-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "TLT",
-  "qty": 2.077,
-  "entry": 80.22,
-  "exit": 80.194815,
-  "pnl": -0.06,
-  "note": "time limit, 27 min (-0.03%)",
-  "opened": "2026-10-16T11:08:29-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on TLT: 4.19x volume, +0.19% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
   "time": "2026-10-16T11:36:17-04:00",
   "type": "rule_block",
   "agent": "blackswan",
@@ -7424,6 +7377,34 @@
   "type": "plan",
   "agent": "scalper",
   "note": "Evening check-in: revise. Today's 5 closed trades lost about $2.08 combined (SOFI, MU, IWM, GOOGL, SPY), with IWM losing even at 1.89x volume, so the 1.5x gate isn't protecting us. The 0.3% stop sits inside normal 2-minute noise on these names, and the rolling edge (about +$0.03 to +$0.10 per trade) is too thin to justify the current size.",
+  "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-29T07:40:42-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. MANH closed at 239.93, below its 242.56 breakout level, so the failed-breakout exit is triggered and the sale frees cash for Friday.",
+  "symbol": "TRGP, DVN, TXN, RBRK"
+ },
+ {
+  "time": "2026-10-29T07:40:56-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: keep. The fresh scan confirms the thesis without new reasons to act: no washout reaches 1:1 target-to-stop (WM ~0.99 is closest, ADP ~0.83). PBR closed at 22.04, still 2.14 above its 19.90 stop, and its SMA5 target has compressed to 23.72, which still gives about 1.1:1 to the 24.45 low end of my target range.",
+  "symbol": "WM, ADP"
+ },
+ {
+  "time": "2026-10-29T07:41:04-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: revise. The fresh scan puts SPY's IV/RV at 1.28, down from the 1.39 in my plan, but it is still above my 1.1 edge. Crash radar is calm at 15, and the Fed hold with hawkish dissent doesn't change the SPY bull-put setup. The plan's strikes came from an earlier session, so they need a live refresh.",
+  "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-29T07:41:14-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: revise. The old plan's 1.5x volume gate is not enforced by code, and every low-volume entry lost, so the gate has to be checked by hand before each entry. The scorecard is also weak (avg pick move -0.1%), so I'm keeping exposure to one small SPY setup and making the stand-aside rule explicit.",
   "symbol": "SPY"
  }
 ]
