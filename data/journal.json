@@ -1,65 +1,5 @@
 [
  {
-  "time": "2026-10-19T10:06:23-04:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "XLE",
-  "instrument": "stock",
-  "qty": 4.8287,
-  "price": 68.38,
-  "cost": 330.19,
-  "stop": 65.77,
-  "thesis": "XLE is trading at 68.34, above its 55-day high of 68.29, on 3.03x relative volume with roc20 +6.1% and price 18.6% above its 200-day SMA, so this is a valid energy breakout; the 65.77 stop is about 2 ATR below entry.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-19T10:06:46-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AAPL, MSFT, UNH, TSLA, SPY",
-  "note": "defensive: Most of the market is drifting lower, so I'm cutting new entries to half-size VWAP bounces and keeping the list to the few names trending up (AAPL, MSFT, UNH, TSLA) plus SPY for context. The open AAPL and MSFT scalps keep their original 0.6%/0.4% levels."
- },
- {
-  "time": "2026-10-19T10:10:51-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "TSLA",
-  "instrument": "stock",
-  "qty": 0.3449,
-  "price": 362.404,
-  "cost": 124.99,
-  "stop": 360.94,
-  "thesis": "VWAP pullback bounce on TSLA: 0.72x volume, +0.57% vs VWAP; target +0.6%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-19T10:14:53-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.1626,
-  "price": 768.286,
-  "cost": 124.92,
-  "stop": 765.24,
-  "thesis": "VWAP pullback bounce on SPY: 0.53x volume, +0.19% vs VWAP; target +0.6%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-19T10:18:58-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "TSLA",
-  "qty": 0.3449,
-  "entry": 362.404,
-  "exit": 364.974,
-  "pnl": 0.89,
-  "note": "target hit (+0.72%)",
-  "opened": "2026-10-19T10:10:51-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on TSLA: 0.72x volume, +0.57% vs VWAP; target +0.6%, stop -0.4%"
- },
- {
   "time": "2026-10-19T10:25:02-04:00",
   "type": "close",
   "agent": "scalper",
@@ -7439,6 +7379,40 @@
   "type": "plan",
   "agent": "scalper",
   "note": "Evening check-in: revise. Today's four VWAP pullback entries were taken at 0.57x to 1.25x relative volume, below the 1.5x minimum, and the code does not enforce that gate. The net result was -$0.25, and the notes already flag the minimum as unenforced. Consumer Discretionary and Staples look better on paper, but both samples are tiny and the scan has few clean names in those sectors, so I'm narrowing the plan to one hand-c",
+  "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-30T07:40:40-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. Cash is now settled at $52.11, so one small breakout entry is affordable. The old plan's triggers referenced $4.19 and stale MANH/ICLR levels, so I'm replacing them with current scan levels.",
+  "symbol": "TRGP, TXN, ADI, XOM"
+ },
+ {
+  "time": "2026-10-30T07:40:55-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: keep. The fresh scan confirms the plan: the only names clearing the 1:1 target-to-stop floor are the three stated triggers (TEAM, CTSH, WDAY), which still sit at their trigger prices. New names like IOVA (1.36:1 on paper) look like news-driven collapses rather than clean washouts, so I'm avoiding them.",
+  "symbol": "TEAM, CTSH, WDAY"
+ },
+ {
+  "time": "2026-10-30T07:41:03-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: revise. The fresh scan shows SPY IV/RV at 1.09, below my 1.10 minimum, so the 1.54 ratio in the overnight plan is stale and the setup no longer passes my own gate. My scorecard is also weak (31% hit rate, 0 of 13 picks acted on), so I should not force a trade.",
+  "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-30T07:41:15-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "note": "Leaning into no sector; avoiding Technology, Communication Services. Technology is the largest sample (38 trades) and averages +$0.01, with the scan showing an ongoing chip selloff. Communication Services is 4 trades at +$0.20 average but carries live headline risk. Consumer Discretionary's +$0.30 average over 6 trades is too small to lean on, and today's clean names"
+ },
+ {
+  "time": "2026-10-30T07:41:15-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: revise. The old plan's 0.3% stop sits inside observed slippage (fills at -0.34% to -0.36%) and inside Technology's 1.6% to 6.6% ATR, and its 1.5x volume gate is not enforced by code. Today's scan is a chip selloff (MU -4.9%, INTC -3.6%, SNDK -5.2%) with GOOGL -12.9% on headlines, so the only clean structure is SPY, where ATR is 0.9%.",
   "symbol": "SPY"
  }
 ]
