@@ -57,7 +57,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.75,
-     "mark": 3.21,
+     "mark": 3.2,
      "expiry": "2026-11-20",
      "strike": 8.0,
      "delta": -0.38,
@@ -76,7 +76,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 4.87,
-     "exit_half_spread": 0.27
+     "exit_half_spread": 0.175
     },
     "pos-0dc0b9229c": {
      "kind": "option",
@@ -103,8 +103,8 @@
       "pct_vs_sma200": -40.8
      },
      "sector": "Broad market / other",
-     "low_water": 1.35,
-     "exit_half_spread": 0.005
+     "low_water": 1.345,
+     "exit_half_spread": 0.01
     },
     "pos-2ce62f642c": {
      "kind": "stock",
@@ -125,7 +125,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 50.76,
+     "last": 50.56,
      "high_water": 51.465
     },
     "pos-e9580fb11e": {
@@ -147,7 +147,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 69.815,
+     "last": 69.615,
      "high_water": 69.91
     },
     "pos-c5110eb879": {
@@ -169,7 +169,7 @@
       "pct_vs_sma200": 31.7
      },
      "sector": "Energy",
-     "last": 48.83,
+     "last": 48.675,
      "high_water": 49.03
     },
     "pos-caf474ebf0": {
@@ -198,7 +198,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 11.16,
-     "exit_half_spread": 0.12
+     "exit_half_spread": 0.115
     },
     "pos-85270bdc25": {
      "kind": "stock",
@@ -219,7 +219,7 @@
       "pct_vs_sma200": 47.5
      },
      "sector": "Broad market / other",
-     "last": 13.33,
+     "last": 13.135,
      "high_water": 14.065
     },
     "pos-68c56672f2": {
@@ -241,7 +241,7 @@
       "pct_vs_sma200": 25.0
      },
      "sector": "Health Care",
-     "last": 910.53,
+     "last": 912.26,
      "high_water": 917.375
     }
    },
@@ -253,10 +253,6 @@
    "peak": 1229.58,
    "max_dd": 0.2141,
    "notes": [
-    {
-     "date": "2026-10-27",
-     "note": "Hold all stops. BA puts exceed the $89 settled cash, and VALE is already held from 14:06, so a second VALE put would double the same breakdown. Check the XOM/DVN/CNQ closes at the open tomorrow and buy only on confirmed closes with 1.75x+ volume."
-    },
     {
      "date": "2026-10-27",
      "note": "BA put (candidate 0) is unaffordable on $89.26 settled cash, and VALE is already held from 14:06, so no duplicate. Hold existing stops and reassess at the open."
@@ -412,6 +408,10 @@
     {
      "date": "2026-10-30",
      "note": "Settled cash is $2.01, below any candidate's cost, so no entries. The game plan's $52.11 settled-cash figure conflicts with live balance data, and live numbers win. Holding all stops; AEYE stays at 12.89 because the planned 12.65 would loosen it. Reassess TRGP/TXN/ADI/XOM/LNG triggers once MANH proc"
+    },
+    {
+     "date": "2026-10-30",
+     "note": "Settled cash is $2.01, below any candidate's cost, so no entries. Holding all stops; AEYE stays at 12.89 because the planned 12.65 would loosen it. Reassess TRGP/TXN/ADI once proceeds settle."
     }
    ],
    "last_exits": {
@@ -906,7 +906,7 @@
       "pct_vs_sma5": -10.0
      },
      "sector": "Broad market / other",
-     "last": 28.81
+     "last": 28.415
     },
     "pos-b807f1a689": {
      "kind": "stock",
@@ -926,7 +926,7 @@
       "pct_vs_sma5": -17.9
      },
      "sector": "Broad market / other",
-     "last": 199.57
+     "last": 203.175
     }
    },
    "status": "active",
@@ -1415,7 +1415,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-04",
      "credit": 0.21,
-     "mark": 0.24,
+     "mark": 0.26,
      "entry": 0.21,
      "width": 1.0,
      "short_strike": 79.5,
@@ -1437,7 +1437,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.02
+     "exit_half_spread": 0.035
     },
     "pos-1422e3aa6b": {
      "kind": "spread",
@@ -1461,7 +1461,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-04",
      "credit": 0.12,
-     "mark": 0.18,
+     "mark": 0.2,
      "entry": 0.12,
      "width": 1.0,
      "short_strike": 55.0,
@@ -1483,7 +1483,7 @@
       "dte": 35
      },
      "sector": "Financials",
-     "exit_half_spread": 0.05
+     "exit_half_spread": 0.1
     },
     "pos-cc8ae4018f": {
      "kind": "spread",
@@ -1507,7 +1507,7 @@
      "structure": "bear call spread",
      "expiry": "2026-12-04",
      "credit": 0.22,
-     "mark": 0.22,
+     "mark": 0.26,
      "entry": 0.22,
      "width": 1.0,
      "short_strike": 290.0,
@@ -1528,7 +1528,8 @@
       "short_delta": 0.26,
       "dte": 35
      },
-     "sector": "Industrials"
+     "sector": "Industrials",
+     "exit_half_spread": 0.095
     }
    },
    "status": "active",
@@ -1537,12 +1538,8 @@
    "closed": 0,
    "wins": 0,
    "peak": 1000.0,
-   "max_dd": 0.032,
+   "max_dd": 0.04,
    "notes": [
-    {
-     "date": "2026-10-27",
-     "note": "Pass at 14:36: EEM bear call (0.22 credit, $78 max loss) fails the 0.25 gate and sits on the avoid list. TLT bull put (0.28 mid, $72 max loss) clears the credit gate, but the short 80 strike is only about 2% below 81.6, and TLT is on the avoid list for thin credits and falling-yield risk. The edge i"
-    },
     {
      "date": "2026-10-27",
      "note": "Pass at 15:06: SPY 748/747 credit is 0.05 (far below the 0.25 gate), EEM 66/67 at 0.23 is on the avoid list with failed fills, and TLT 80/79 at 0.26 is on the avoid list with its short strike only about 2% below spot. IWM isn't in today's candidates, so I stay flat and recheck IWM for a natural of a"
@@ -1698,6 +1695,10 @@
     {
      "date": "2026-10-30",
      "note": "Passing on XLF, TLT, EEM and SLV: XLF and TLT are already open and I won't add to them, EEM fills are illiquid, and SLV is Materials-linked. Filling only at the 0.15 floor and keeping max loss near $75 per trade."
+    },
+    {
+     "date": "2026-10-30",
+     "note": "Pass: the only fillable candidate left is SLV (0.18 credit, Materials-linked and on the avoid list, with reward-to-risk near 0.22). EEM is illiquid and XLF/IWM/TLT are already open, so I'm holding the 700 available and waiting for a clean setup."
     }
    ],
    "last_exits": {},
@@ -2034,7 +2035,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 754.73
+     "last": 753.605
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2050,7 +2051,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 754.73
+     "last": 753.605
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2066,7 +2067,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 754.73
+     "last": 753.605
     }
    },
    "status": "active",
@@ -2075,7 +2076,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1001.41,
-   "max_dd": 0.0252,
+   "max_dd": 0.0267,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -2131,7 +2132,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 0.93,
+     "mark": 1.16,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2151,7 +2152,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.23,
+     "exit_half_spread": 0.295,
      "peak_mark": 1.42,
      "low_water": 36.84
     },
@@ -2177,14 +2178,14 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.75,
+     "mark": 1.08,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
      "cost": 130.0,
      "play": "weak_stock",
      "direction": "short",
-     "stop": 31.0,
+     "stop": 30.59,
      "atr": 2.431,
      "opened": "2026-10-14T12:10:57-04:00",
      "thesis": "IREN broke its 20-day low at 32.71, is down 16% over 20 days and sits below its 200-day in a calm radar (15), so a bear put spread capped at $150 targets the breakdown.",
@@ -2197,9 +2198,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.18,
+     "exit_half_spread": 0.19,
      "peak_mark": 1.69,
-     "low_water": 23.71
+     "low_water": 23.295
     },
     "pos-ebf1f3ff74": {
      "kind": "debit_spread",
@@ -2223,14 +2224,14 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 0.99,
+     "mark": 0.95,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
      "cost": 91.5,
      "play": "weak_stock",
      "direction": "short",
-     "stop": 22.07,
+     "stop": 22.02,
      "atr": 1.585,
      "opened": "2026-10-15T13:07:01-04:00",
      "thesis": "APLD closed through its 20.02 breakdown level at 19.21, down 16.7% over 20 days and 40% below its 200-day, so a smaller $90 bear put spread keeps Technology exposure sized down while the radar is calm.",
@@ -2243,9 +2244,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.075,
+     "exit_half_spread": 0.085,
      "peak_mark": 1.02,
-     "low_water": 17.32
+     "low_water": 17.27
     },
     "pos-d7a488bc5f": {
      "kind": "debit_spread",
@@ -2269,7 +2270,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 0.93,
+     "mark": 0.94,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2289,7 +2290,7 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.38,
+     "exit_half_spread": 0.4,
      "peak_mark": 1.62,
      "low_water": 123.49
     },
@@ -2335,7 +2336,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.57,
+     "exit_half_spread": 1.575,
      "peak_mark": 1.9
     }
    },
@@ -2347,10 +2348,6 @@
    "peak": 1000.0,
    "max_dd": 0.4615,
    "notes": [
-    {
-     "date": "2026-10-27",
-     "note": "Pass: settled cash is $143.50, the open bearish book is about 78% of equity (above the 50% guideline), and the T, XLC, and LKQ caps (~$42) are too small for 45-120 DTE spreads. Hold the five put spreads to their underlying stops, reconcile the AGCO fill, and revisit T or NFLX only after a position s"
-    },
     {
      "date": "2026-10-27",
      "note": "Pass: the T, XLC, and LKQ caps (~$42) are too small for 45-120 DTE bear put spreads, and the open bearish book is about 78% of equity. Hold the five positions to their underlying stops, reconcile the AGCO $330 vs $183.9 fill, and revisit T or NFLX only after a position settles and frees cash."
@@ -2506,6 +2503,10 @@
     {
      "date": "2026-10-30",
      "note": "Exhibition mode: no entries. Holding the five bear put spreads to their underlying stops. Reconcile the AGCO fill ($330 vs $183.9 budget) and its mark (feed 0 vs notes 0.02-0.50) before any future sizing, and keep the bearish book under 50% of equity."
+    },
+    {
+     "date": "2026-10-30",
+     "note": "Exhibition mode blocks entries, so I'm holding all five bear put spreads to their underlying stops. Reconcile the AGCO fill ($330 vs $183.9 budget) and its mark before any future sizing, and keep the bearish book under 50% of equity."
     }
    ],
    "last_exits": {},
@@ -2904,20 +2905,19 @@
    ],
    "playbook": {
     "date": "2026-10-30",
-    "made_at": "2026-10-30T13:38-04:00",
+    "made_at": "2026-10-30T14:07-04:00",
     "watch": [
      "AMZN",
      "TSLA",
      "SPY",
-     "QQQ",
-     "META"
+     "QQQ"
     ],
-    "aggression": "defensive",
-    "why": "Settled cash is about zero today, so nothing can execute before tomorrow's settlement. Today's three stopped-out bounces and most names trading below VWAP argue for half-size defense, with AMZN and TSLA as the only names holding above their opening range.",
+    "aggression": "stand_down",
+    "why": "Settled cash is about zero, so nothing can execute today, and it is past the 1:45 PM entry cutoff anyway. Most names are below VWAP and today's bounces were stopped out, so I'm standing down and reviewing AMZN and TSLA (the only names above their opening range) and SPY/QQQ for a defensive restart to",
     "slices": 2,
     "target_pct": 0.8,
-    "stop_pct": 0.5,
-    "max_hold_min": 45
+    "stop_pct": 0.6,
+    "max_hold_min": 30
    },
    "scalp_day": {
     "date": "2026-10-30",
