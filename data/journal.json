@@ -1,82 +1,5 @@
 [
  {
-  "time": "2026-10-19T12:38:30-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "TSLA, AMZN, TQQQ, SOXL, MRVL",
-  "note": "aggressive: Only $0.22 is settled, so entries stay blocked until tomorrow's settlement; this keeps the strongest movers armed. TSLA and AMZN lead on momentum and sit above VWAP, and the 0.7% target with 0.35% stop has outperformed tighter settings today."
- },
- {
-  "time": "2026-10-19T13:05:56-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-58%)"
- },
- {
-  "time": "2026-10-19T13:06:23-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, MSFT, TSLA, AAPL",
-  "note": "defensive: Settled cash is only $0.20 today, so no new trades can be funded until tomorrow's settlement. Today's VWAP bounces mostly timed out at small gains, so tomorrow I'd use a tighter 0.5% target with defensive sizing on the most liquid names, which keeps the setup active without forcing trades in choppy "
- },
- {
-  "time": "2026-10-19T13:36:02-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-49%)"
- },
- {
-  "time": "2026-10-19T13:36:29-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, MSFT, AAPL",
-  "note": "defensive: Settled cash is only $0.20 today, so this playbook applies to tomorrow after the $1,003 settles. Today's VWAP bounces mostly timed out at small gains, so I'm keeping sizing defensive and limiting the watchlist to the most liquid, cleanest names, with a tighter 0.5% target and 25-minute limit."
- },
- {
-  "time": "2026-10-19T13:36:33-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "TSLA, AMZN, MSFT, TQQQ, SOXL",
-  "note": "aggressive: Only $0.22 is settled, so no new entries can fire until tomorrow's settlement; the watchlist stays armed for the first settled dollars. The 0.7%/0.35%/20-minute setup remains the most productive today, and the 3x names and high-range leaders still give the fastest setups."
- },
- {
-  "time": "2026-10-19T14:06:05-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-58%)"
- },
- {
-  "time": "2026-10-19T14:06:36-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, MSFT, AAPL, TSLA",
-  "note": "defensive: Only $0.20 is settled today, so nothing new trades until the $1,003 settles tomorrow. Today's VWAP bounces mostly timed out at small gains, so I'm keeping sizing defensive and sticking to the most liquid, cleanest trenders; the 0.6% target keeps a 1.5:1 reward-to-risk against the 0.4% stop."
- },
- {
-  "time": "2026-10-19T14:06:43-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "TQQQ, SOXL, LITE, MRVL, SNDK",
-  "note": "aggressive: Only $0.22 is settled, so no entries can fire until tomorrow's settlement; the list stays armed for the first settled dollars. Recent 0.35% stops were hit by noise on fast names, so I'm widening the stop to 0.45% and the target to 0.8% to keep the reward-to-risk ratio."
- },
- {
-  "time": "2026-10-19T14:36:07-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-59%)"
- },
- {
-  "time": "2026-10-19T14:36:36-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, AAPL, MSFT, TSLA",
-  "note": "stand_down: Only $0.20 is settled, so no new trades are possible today, and today's VWAP bounces mostly timed out at small gains with no clean trend. I'm standing down and keeping the liquid trend names on watch for tomorrow, when the $1,003 settles."
- },
- {
   "time": "2026-10-19T14:36:41-04:00",
   "type": "playbook",
   "agent": "hyper",
@@ -7313,5 +7236,74 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, AMZN, TSLA, AAPL",
   "note": "defensive: Today's VWAP bounces stopped out 3 of 4 times in choppy tape, so I'm cutting size to half and keeping only the most liquid names with clean trends. SPY is above its 200-day SMA with calm crash-radar readings, which supports small, tight-stop bounces tomorrow."
+ },
+ {
+  "time": "2026-10-30T16:40:40-04:00",
+  "type": "recap",
+  "note": "Trend Co. made nearly all of the day's gains, up $135.58 (+13.2%) on open positions while SPY fell 1.9%. Realized P&L across all firms was -$5.51, with 2 wins and 4 losses on 6 closed trades, and the crash radar stayed calm at 20."
+ },
+ {
+  "time": "2026-10-30T16:40:40-04:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 3 of 5 picks moved the planned way, avg -0.16%"
+ },
+ {
+  "time": "2026-10-30T16:41:14-04:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Energy, Health Care; avoiding Consumer Staples. Energy has six breakouts in today's scan and open gains on XLE, EQNR and BP, though realized Energy P&L is -$16.86. Health Care has multiple breakouts (REGN, GILD, LLY, ABBV) but no realized trades yet. Technology dropped from focus after the Nasdaq selloff. Staples lost money with no setups."
+ },
+ {
+  "time": "2026-10-30T16:41:14-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: revise. Settled cash is only $2.01, so the $52 entries are unfundable, and Nasdaq fell 3% with chip names sinking, which undercuts the Technology breakouts (TXN -3.8%, ADI -3.7% last session).",
+  "symbol": "TRGP, XOM, LNG, GILD"
+ },
+ {
+  "time": "2026-10-30T16:41:14-04:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 2 of 3 picks moved the planned way, avg -0.26%"
+ },
+ {
+  "time": "2026-10-30T16:41:46-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: revise. The pre-market plan's PBR position and its TEAM, CTSH and WDAY triggers are stale, and the fresh scan shows no name clearing the 1:1 floor with the Technology avoid in force.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-30T16:41:46-04:00",
+  "type": "scorecard",
+  "agent": "volsell",
+  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -1.79%"
+ },
+ {
+  "time": "2026-10-30T16:41:57-04:00",
+  "type": "focus",
+  "agent": "volsell",
+  "note": "Leaning into Broad market / other; avoiding Energy, Materials, Technology. I have no filled trades and no sector results yet, so the evidence is the scan alone. Broad-market and index IV/RV is elevated but the trend is unclear, so I am keeping the focus narrow. Energy and Materials fail on fills or lack a volatility edge, and Technology carries AI-credit gap risk after the"
+ },
+ {
+  "time": "2026-10-30T16:41:57-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "After-close review: revise. SPY fell about 1.8% to 755.72, well below the 769.49 reference, and is now below its 50-day average with the trend flagged as stand-aside. Nasdaq dropped over 3%, more than 60% of S&P 500 components are in bear territory, and Hormuz and Fed headlines add two-way risk. The pre-market SPY bull put thesis no longer holds, even though IV/RV is now 1.34 and the crash radar reads a calm 20.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-10-30T16:41:57-04:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -1.79%"
+ },
+ {
+  "time": "2026-10-30T16:42:08-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's four VWAP-pullback trades netted about -$1.48, with three stops on 0.51x to 0.93x relative volume, so the 1.5x gate is still not being enforced and the stops are inside normal noise. The SPY plan rests on the same unverified setup in a session with an active chip selloff and Iran headline risk, so I'm standing aside.",
+  "symbol": ""
  }
 ]
