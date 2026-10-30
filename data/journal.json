@@ -1,52 +1,5 @@
 [
  {
-  "time": "2026-10-19T09:36:12-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-58%)"
- },
- {
-  "time": "2026-10-19T09:36:41-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AAPL, MSFT, SPY, IWM",
-  "note": "normal: SPY is in an uptrend (5.8% above its 200-day average) with a calm crash radar, but most of the market is drifting lower, so I'm keeping size normal and limiting the watchlist to the names showing clean strength: AAPL and MSFT are trending up and above their opening ranges, with SPY and IWM as broad-"
- },
- {
-  "time": "2026-10-19T09:54:54-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "AAPL",
-  "instrument": "stock",
-  "qty": 0.7266,
-  "price": 344.074,
-  "cost": 250.0,
-  "stop": 342.69,
-  "thesis": "VWAP pullback bounce on AAPL: 0.57x volume, +0.26% vs VWAP; target +0.6%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-19T09:56:55-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "MSFT",
-  "instrument": "stock",
-  "qty": 0.47,
-  "price": 531.826,
-  "cost": 249.96,
-  "stop": 529.72,
-  "thesis": "VWAP pullback bounce on MSFT: 0.96x volume, +0.13% vs VWAP; target +0.6%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-19T10:06:14-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-58%)"
- },
- {
   "time": "2026-10-19T10:06:23-04:00",
   "type": "open",
   "agent": "trend",
@@ -7452,6 +7405,40 @@
   "type": "plan",
   "agent": "scalper",
   "note": "After-close review: revise. Today's four VWAP pullback entries ran at 0.57x to 1.25x relative volume, so the 1.5x gate was not enforced and the setup lost $0.25 net. Stops also filled past the 0.3% setting again, and the tech names I was trading have 2.5% to 6.5% ATR, which makes a 0.3% stop noise.",
+  "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-29T20:10:43-04:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Evening check-in: revise. Today's scan updated the breakout levels for TRGP, TXN and ADI, and MANH's $47.92 settles tomorrow, so about $52 should be usable at the open.",
+  "symbol": "LNG, TRGP, XOM, TXN"
+ },
+ {
+  "time": "2026-10-29T20:10:59-04:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Evening check-in: keep. Today's scan is unchanged in substance: no washout clears the 1:1 target-to-stop floor, and the after-hours AMZN and TWLO news only adds whipsaw risk to names I'm already avoiding. PBR still has its thesis and stop, and the three conditional candidates still have valid triggers.",
+  "symbol": "TEAM, CTSH, WDAY"
+ },
+ {
+  "time": "2026-10-29T20:11:06-04:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Evening check-in: keep. The fresh scan still shows SPY in an uptrend with IV/RV rising to 1.54 and a calm crash radar at 12, so the bull put idea holds. Nothing new justifies changing the gate: the scan has no option quotes, and the Iran strike headlines and the Alphabet selloff add risk rather than resolving it.",
+  "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-29T20:11:17-04:00",
+  "type": "focus",
+  "agent": "scalper",
+  "note": "Leaning into Consumer Discretionary; avoiding Technology, Communication Services, Real Estate. Consumer Discretionary is 6 trades at +$1.78 (50% win rate, small sample), and the scan has few clean names there, so this is a weak lean. Technology is the largest sample at 38 trades but averages +$0.01 and has ATR too high for these stops. Communication Services is negative and carries headline g"
+ },
+ {
+  "time": "2026-10-29T20:11:17-04:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Evening check-in: revise. Today's four VWAP pullback entries were taken at 0.57x to 1.25x relative volume, below the 1.5x minimum, and the code does not enforce that gate. The net result was -$0.25, and the notes already flag the minimum as unenforced. Consumer Discretionary and Staples look better on paper, but both samples are tiny and the scan has few clean names in those sectors, so I'm narrowing the plan to one hand-c",
   "symbol": "SPY"
  }
 ]
