@@ -1,25 +1,5 @@
 [
  {
-  "time": "2026-10-19T11:36:36-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "TQQQ, SOXL, TSLA, AMZN, MU",
-  "note": "aggressive: SPY is trending up with a calm crash radar, so I'm staying in full attack mode on the fastest movers and 3x ETFs. Target widens slightly to 0.7% to capture the larger ranges in TQQQ/SOXL/LITE/MU while keeping the 0.35% stop and 20-minute hold."
- },
- {
-  "time": "2026-10-19T11:38:40-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "AMD",
-  "instrument": "stock",
-  "qty": 0.1504,
-  "price": 554.224,
-  "cost": 83.36,
-  "stop": 552.09,
-  "thesis": "opening-range breakout on AMD: 1.45x volume, +0.96% vs VWAP; target +0.7%, stop -0.35%",
-  "confidence": 3
- },
- {
   "time": "2026-10-19T11:38:41-04:00",
   "type": "open",
   "agent": "hyper",
@@ -7361,5 +7341,25 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, AMZN, META, TSLA",
   "note": "stand_down: Settled cash is about zero with the single slice already used, so no entries are possible today; stand down. For tomorrow, I'd widen the stop to 0.5% because today's 0.4% stops were hit by noise, and use two slices with liquid names that are above VWAP and trending up."
+ },
+ {
+  "time": "2026-10-30T12:40:33-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-10-30T12:41:12-04:00",
+  "type": "open",
+  "agent": "volsell",
+  "symbol": "XLF",
+  "instrument": "spread",
+  "qty": 1,
+  "price": 0.12,
+  "cost": -4.5,
+  "stop": 0,
+  "thesis": "XLF IV 16.8% vs realized 12.2% (1.38x) with the crash radar calm at 20 and SPY above its 200-day; a 55/54 bull put collects about 0.15 credit against $85 max loss over 35 DTE.",
+  "confidence": 3
  }
 ]
