@@ -12,7 +12,8 @@
   "date": "2026-10-30",
   "counts": {
    "trend": 1,
-   "meanrev": 1
+   "meanrev": 1,
+   "scalper": 3
   }
  },
  "agents": {
@@ -123,7 +124,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 50.185,
+     "last": 50.68,
      "high_water": 51.465
     },
     "pos-e9580fb11e": {
@@ -145,7 +146,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 69.73,
+     "last": 70.07,
      "high_water": 69.735
     },
     "pos-c5110eb879": {
@@ -167,7 +168,7 @@
       "pct_vs_sma200": 31.7
      },
      "sector": "Energy",
-     "last": 48.59,
+     "last": 48.83,
      "high_water": 49.03
     },
     "pos-caf474ebf0": {
@@ -217,7 +218,7 @@
       "pct_vs_sma200": 47.5
      },
      "sector": "Broad market / other",
-     "last": 13.955,
+     "last": 14.035,
      "high_water": 13.955
     },
     "pos-68c56672f2": {
@@ -239,7 +240,7 @@
       "pct_vs_sma200": 25.0
      },
      "sector": "Health Care",
-     "last": 921.07
+     "last": 925.725
     }
    },
    "status": "active",
@@ -903,7 +904,7 @@
       "pct_vs_sma5": -12.8
      },
      "sector": "Energy",
-     "last": 22.075
+     "last": 22.325
     },
     "pos-c0db87c0b4": {
      "kind": "stock",
@@ -923,7 +924,7 @@
       "pct_vs_sma5": -10.0
      },
      "sector": "Broad market / other",
-     "last": 28.98
+     "last": 28.86
     }
    },
    "status": "active",
@@ -1870,7 +1871,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 759.79
+     "last": 760.585
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1886,7 +1887,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 759.79
+     "last": 760.585
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1902,7 +1903,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 759.79
+     "last": 760.585
     }
    },
    "status": "active",
@@ -1935,7 +1936,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 694.92
+     "last": 696.74
     }
    },
    "status": "active",
@@ -2686,9 +2687,75 @@
    ]
   },
   "scalper": {
-   "cash": 1004.53,
+   "cash": 251.13,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-02150d7793": {
+     "kind": "stock",
+     "symbol": "MU",
+     "qty": 0.2803,
+     "entry": 895.68,
+     "cost": 251.06,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 892.05,
+     "atr": 0,
+     "opened": "2026-10-30T09:52:00-04:00",
+     "thesis": "VWAP pullback bounce on MU: 0.84x volume, +0.53% vs VWAP; target +0.8%, stop -0.4%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.8,
+     "stop_pct": 0.4,
+     "max_hold_min": 45,
+     "last": 900.61,
+     "peak_gain": 0.719006788138632
+    },
+    "pos-00dc14eb41": {
+     "kind": "stock",
+     "symbol": "SPCX",
+     "qty": 1.8178,
+     "entry": 138.19,
+     "cost": 251.2,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 137.6,
+     "atr": 0,
+     "opened": "2026-10-30T09:54:04-04:00",
+     "thesis": "VWAP pullback bounce on SPCX: 0.8x volume, +0.47% vs VWAP; target +0.8%, stop -0.4%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.8,
+     "stop_pct": 0.4,
+     "max_hold_min": 45,
+     "last": 137.64,
+     "peak_gain": -0.1845285476517855
+    },
+    "pos-5cbfc284e2": {
+     "kind": "stock",
+     "symbol": "TSM",
+     "qty": 0.6023,
+     "entry": 416.974,
+     "cost": 251.14,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 415.28,
+     "atr": 0,
+     "opened": "2026-10-30T09:58:08-04:00",
+     "thesis": "VWAP pullback bounce on TSM: 0.51x volume, +0.20% vs VWAP; target +0.8%, stop -0.4%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.8,
+     "stop_pct": 0.4,
+     "max_hold_min": 45,
+     "last": 416.95
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
