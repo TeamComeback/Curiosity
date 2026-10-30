@@ -5,7 +5,7 @@ downtrends. Default exits: profit target, loss stop, days-to-expiry cutoff.
 Calm-uptrend rule (Oct 2026): the rich-vol test almost never passes when the market is calm
 and rising, so the firm sat at zero trades. When the Crash Radar reads calm and the ETF is
 above both its 50- and 200-day averages, it may also sell a further-out bull put spread
-(short delta about 0.12, $2 wide) as long as implied vol is at least realized vol. These are
+(short delta about 0.20, $1 wide) as long as implied vol is at least about 0.9x realized vol. These are
 scored below rich-vol setups so they only fill when nothing better shows up."""
 from datetime import date, timedelta
 
@@ -28,6 +28,9 @@ def iv_rank(series):
         return None
     lo, hi = min(series), max(series)
     return 100 * (series[-1] - lo) / (hi - lo) if hi > lo else 50.0
+
+
+MIN_CREDIT = 0.15      # smallest credit worth selling; the firm may not demand more than this (see brain prompt)
 
 
 def entries(ctx):
@@ -79,11 +82,11 @@ def entries(ctx):
         ratio = iv / rv if rv > 0 else 0
         rank = iv_rank(ivs)
         rich = (rank is not None and rank >= 50) or (rank is None and ratio >= p["min_iv_rv"])
-        calm_play = (not rich and calm and side == "put" and price > last["sma200"] and ratio >= 1.0)
+        calm_play = (not rich and calm and side == "put" and price > last["sma200"] and ratio >= 0.9)
         if not rich and not calm_play:
             continue
-        short_delta = 0.12 if calm_play else p["short_delta"]
-        width_want = max(2, p["width"]) if calm_play else p["width"]
+        short_delta = 0.20 if calm_play else p["short_delta"]
+        width_want = p["width"]
         otm = [r for r in rows if r["delta"] is not None and
                ((side == "put" and r["strike"] < price) or (side == "call" and r["strike"] > price))]
         if not otm:
@@ -96,7 +99,7 @@ def entries(ctx):
         long = min(further, key=lambda r: abs(r["strike"] - want))
         width = abs(short["strike"] - long["strike"])
         credit = round(short["mid"] - long["mid"], 2)
-        if width <= 0 or credit <= 0.03 or credit >= width:
+        if width <= 0 or credit < MIN_CREDIT or credit >= width:
             continue
         out.append({
             "agent": "volsell", "kind": "spread", "direction": "short_vol", "symbol": und, "underlying": und, "price": price,
@@ -107,7 +110,7 @@ def entries(ctx):
             ],
             "short_strike": short["strike"], "long_strike": long["strike"], "expiry": expiry.isoformat(),
             "credit": credit, "width": width, "max_loss_per": round((width - credit) * 100, 2),
-            "half_spread": round((short["spread"] + long["spread"]) / 2, 3),
+            "half_spread": round((short["spread"] + long["spread"]) / 2, 3), "suggested_min_credit": MIN_CREDIT,
             "signals": {"iv": round(iv, 3), "rv20": round(rv, 3), "iv_rv": round(ratio, 2),
                         "iv_rank": None if rank is None else round(rank), "short_delta": round(short["delta"], 2),
                         "dte": (expiry - today).days},

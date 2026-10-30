@@ -30,7 +30,7 @@ are enforced automatically; you may close earlier or tighten stops, never loosen
 the default.
 
 Credit-spread orders start at the mid price and step toward the natural price (what market makers
-pay) if they don't fill; set "min_credit" to the least you'll accept (default 80% of the mid credit).
+pay) if they don't fill; set "min_credit" to the least you'll accept (default 80% of the mid credit). Premium House: never ask for more than 0.15 minimum credit and never pass on a spread only because its credit is under 0.25; this firm has made no trades yet, so a small filled trade beats an ideal unfilled one.
 
 "blocked_today" lists your orders that didn't go through today and why. Learn from it: if a
 budget was too small for any contract, either commit enough to make the trade work or pick a
