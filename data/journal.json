@@ -1,46 +1,5 @@
 [
  {
-  "time": "2026-10-19T11:38:41-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "TQQQ",
-  "instrument": "stock",
-  "qty": 1.1509,
-  "price": 72.43,
-  "cost": 83.36,
-  "stop": 72.15,
-  "thesis": "momentum burst on TQQQ: 1.87x volume, +1.78% vs VWAP; target +0.7%, stop -0.35%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-19T11:42:45-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "MRVL",
-  "qty": 0.3406,
-  "entry": 244.782,
-  "exit": 246.32,
-  "pnl": 0.53,
-  "note": "target hit (+0.70%)",
-  "opened": "2026-10-19T11:23:25-04:00",
-  "confidence": 3,
-  "thesis": "momentum burst on MRVL: 2.42x volume, +2.06% vs VWAP; target +0.6%, stop -0.35%"
- },
- {
-  "time": "2026-10-19T11:44:47-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "SOXL",
-  "qty": 0.7987,
-  "entry": 104.308,
-  "exit": 104.808,
-  "pnl": 0.4,
-  "note": "time limit, 21 min (+0.48%)",
-  "opened": "2026-10-19T11:23:25-04:00",
-  "confidence": 3,
-  "thesis": "opening-range breakout on SOXL: 1.64x volume, +2.48% vs VWAP; target +0.6%, stop -0.35%"
- },
- {
   "time": "2026-10-19T11:46:50-04:00",
   "type": "close",
   "agent": "hyper",
@@ -7361,5 +7320,26 @@
   "stop": 0,
   "thesis": "XLF IV 16.8% vs realized 12.2% (1.38x) with the crash radar calm at 20 and SPY above its 200-day; a 55/54 bull put collects about 0.15 credit against $85 max loss over 35 DTE.",
   "confidence": 3
+ },
+ {
+  "time": "2026-10-30T13:06:46-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-10-30T13:08:26-04:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "IWM",
+  "note": "credit not filled at 0.29, 0.27, 0.25, 0.23 (mid 0.29, natural 0.23, floor 0.15)"
+ },
+ {
+  "time": "2026-10-30T13:08:36-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, META, AMZN, TSLA",
+  "note": "defensive: Settled cash is about zero today, so no new entries can execute before tomorrow's settlement. For tomorrow I'm keeping the wider 0.5% stop, since today's 0.4% stops were hit by noise, and running defensive with two slices because the tape has been choppy and most names are trading below VWAP."
  }
 ]
