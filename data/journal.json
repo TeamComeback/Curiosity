@@ -1,46 +1,5 @@
 [
  {
-  "time": "2026-10-19T11:31:36-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "LITE",
-  "qty": 0.0968,
-  "entry": 860.106,
-  "exit": 870.292,
-  "pnl": 0.98,
-  "note": "target hit (+1.22%)",
-  "opened": "2026-10-19T11:21:23-04:00",
-  "confidence": 3,
-  "thesis": "momentum burst on LITE: 1.73x volume, +1.13% vs VWAP; target +0.6%, stop -0.35%"
- },
- {
-  "time": "2026-10-19T11:33:39-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "LITE",
-  "instrument": "stock",
-  "qty": 0.0958,
-  "price": 869.69,
-  "cost": 83.32,
-  "stop": 866.01,
-  "thesis": "momentum burst on LITE: 2.01x volume, +2.00% vs VWAP; target +0.6%, stop -0.35%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-19T11:36:06-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-62%)"
- },
- {
-  "time": "2026-10-19T11:36:30-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, MSFT",
-  "note": "stand_down: Only $0.20 is settled cash, and the $1,003.39 from today's sales won't settle until tomorrow, so no new round trips can be funded this session. Standing down keeps the watch list ready for tomorrow's slices, when the SPY uptrend and the 0.6%/0.4% VWAP-bounce parameters can be reassessed."
- },
- {
   "time": "2026-10-19T11:36:36-04:00",
   "type": "playbook",
   "agent": "hyper",
@@ -7374,5 +7333,33 @@
   "agent": "volsell",
   "symbol": "EEM",
   "note": "credit not filled at 0.30, 0.20 (mid 0.30, natural 0.01, floor 0.15)"
+ },
+ {
+  "time": "2026-10-30T12:36:55-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-10-30T12:37:52-04:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "XLF",
+  "note": "credit not filled at 0.17, 0.15 (mid 0.17, natural 0.12, floor 0.15)"
+ },
+ {
+  "time": "2026-10-30T12:38:34-04:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "EEM",
+  "note": "credit not filled at 0.26, 0.17 (mid 0.26, natural 0.01, floor 0.15)"
+ },
+ {
+  "time": "2026-10-30T12:38:44-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, AMZN, META, TSLA",
+  "note": "stand_down: Settled cash is about zero with the single slice already used, so no entries are possible today; stand down. For tomorrow, I'd widen the stop to 0.5% because today's 0.4% stops were hit by noise, and use two slices with liquid names that are above VWAP and trending up."
  }
 ]
