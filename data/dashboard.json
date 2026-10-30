@@ -1460,6 +1460,357 @@
  ],
  "reviews": [
   {
+   "date": "2026-10-30",
+   "agents": {
+    "trend": {
+     "summary": "Equity slipped from 1201.84 to 1165.7 (-19.3 on closed trades) with a 21.4% max drawdown. All 3 closed trades this week were small losses from breakouts that failed quickly (PBR, HLT, MANH), which is the strategy cutting losers as designed. The sample is only 4 closed trades, and the one win (avg +82.5) outweighs the losses (avg -6.43), so the edge is intact. The most visible problem is that settled cash was stuck near $2, which is a capital-liquidity issue and not a parameter issue. I'll make one small tweak to cut false breakouts and leave the rest alone.",
+     "applied": [
+      {
+       "agent": "trend",
+       "param": "min_rel_volume",
+       "old": 1.75,
+       "new": 2.0,
+       "reason": "Fewer, higher-conviction breakouts should reduce quick failures. The failed entries came on 1.9x-2.9x volume, so a modest raise filters the weakest setups without starving entries on a small account."
+      }
+     ],
+     "stats": {
+      "equity_now": 1165.7,
+      "equity_week_ago": 1201.84,
+      "closed_trades": 4,
+      "closed_this_week": 3,
+      "week_pnl": -19.3,
+      "win_rate": 25.0,
+      "avg_win": 82.5,
+      "avg_loss": -6.43,
+      "max_drawdown_pct": 21.4,
+      "avg_pnl_by_confidence": {
+       "3": 15.8
+      },
+      "this_week_trades": [
+       {
+        "symbol": "PBR",
+        "pnl": -16.86,
+        "note": "trailing stop on underlying",
+        "thesis": "PBR closed right at its 55-day breakout (26.11) on 1.9x volume with roc20 +22.9%, a fresh trend entry with a tight 1.51/share risk to the 24.74 stop.",
+        "confidence": 3
+       },
+       {
+        "symbol": "HLT",
+        "pnl": -0.37,
+        "note": "agent: Failed breakout: HLT is back below its 350.87 breakout level (about 349.66), so the trend thesis is broken. Cutting now ",
+        "thesis": "HLT cleared its 55-day high at 350.87 on 2.9x relative volume with a 12.7% 20-day rate of change, and it sits 11.9% above its 200-day SMA; the 344.04 stop risks about 3.4% under the breakout level.",
+        "confidence": 3
+       },
+       {
+        "symbol": "MANH",
+        "pnl": -2.07,
+        "note": "agent: Failed breakout: MANH closed at 239.93, below its 242.56 breakout level, and now trades at 234.74, under the 247 entry. ",
+        "thesis": "MANH is 1.8% above its 55-day breakout at 242.56 on 2.4x volume with roc20 +16.8%, and it isn't extended (15% above its 50-day SMA), so this is a clean trend entry. Fractional sizing (~0.2 shares) keeps the 233.93 stop risk to about $2.6, and technology is a lean-in sector.",
+        "confidence": 3
+       }
+      ]
+     }
+    },
+    "meanrev": {
+     "summary": "The week was +$9.22 (+0.9%) on 2 closed trades, both wins, with max drawdown of 1.5%. The sample is only 4 trades, so the 100% win rate says little. The real drag is idle cash: many washout candidates (TEAM, DT, SHOP) missed my 1:1 reward/risk floor by small margins, so I'm barely deployed.",
+     "applied": [
+      {
+       "agent": "meanrev",
+       "param": "stop_atr",
+       "old": 2.5,
+       "new": 2.0,
+       "reason": "A modestly tighter stop lifts reward/risk on near-miss setups like TEAM at ~0.99:1 above the 1:1 floor, so I deploy cash more often. It stays well inside the bounds and keeps per-trade loss small, so "
+      }
+     ],
+     "stats": {
+      "equity_now": 1019.51,
+      "equity_week_ago": 1010.79,
+      "closed_trades": 4,
+      "closed_this_week": 2,
+      "week_pnl": 9.22,
+      "win_rate": 100.0,
+      "avg_win": 5.88,
+      "avg_loss": null,
+      "max_drawdown_pct": 1.5,
+      "avg_pnl_by_confidence": {
+       "2": 7.54,
+       "3": 5.33
+      },
+      "this_week_trades": [
+       {
+        "symbol": "DXCM",
+        "pnl": 3.38,
+        "note": "snap-back (RSI2 52)",
+        "thesis": "DXCM RSI(2) 2.5 washout 4.6% above its 200-day; live target 83.13 vs stop 71.98 is about 0.97:1, near my 1:1 floor, and the calm regime supports a snap-back.",
+        "confidence": 3
+       },
+       {
+        "symbol": "PBR",
+        "pnl": 5.84,
+        "note": "snap-back (RSI2 47)",
+        "thesis": "PBR RSI(2) 6 washout 15.5% above its 200-day in a calm regime (crash radar 26, SPY above its 200-day); the 25.00 target versus the 19.90 stop is about 1.67:1, the only candidate that clears my 1:1 floor today.",
+        "confidence": 3
+       }
+      ]
+     }
+    },
+    "volsell": {
+     "summary": "Equity fell from $1000 to $964 (-3.6%, max drawdown 4.2%) with no closed trades this week, so the loss is mark-to-market on open spreads (XLF near its 2x stop, plus TLT and IWM). With zero closed trades there is no win rate or avg win/loss to learn from, so any retune would be guesswork. I'm holding parameters unchanged and keeping risk small.",
+     "applied": [],
+     "stats": {
+      "equity_now": 964.0,
+      "equity_week_ago": 1000.0,
+      "closed_trades": 0,
+      "closed_this_week": 0,
+      "week_pnl": 0,
+      "win_rate": null,
+      "avg_win": null,
+      "avg_loss": null,
+      "max_drawdown_pct": 4.2,
+      "avg_pnl_by_confidence": {},
+      "this_week_trades": []
+     }
+    },
+    "scalper": {
+     "summary": "Review failed (ValueError).",
+     "applied": [],
+     "stats": {
+      "equity_now": 1003.05,
+      "equity_week_ago": 1003.6,
+      "closed_trades": 49,
+      "closed_this_week": 31,
+      "week_pnl": -1.7,
+      "win_rate": 42.9,
+      "avg_win": 0.68,
+      "avg_loss": -0.53,
+      "max_drawdown_pct": 0.4,
+      "avg_pnl_by_confidence": {
+       "3": -0.01
+      },
+      "this_week_trades": [
+       {
+        "symbol": "SPCX",
+        "pnl": -0.53,
+        "note": "stop (-0.38%)",
+        "thesis": "VWAP pullback bounce on SPCX: 0.53x volume, +0.92% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SPCX",
+        "pnl": -0.82,
+        "note": "stop (-0.51%)",
+        "thesis": "VWAP pullback bounce on SPCX: 0.56x volume, +0.96% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "NVDA",
+        "pnl": -0.16,
+        "note": "gave back a +0.31% gain: out at breakeven",
+        "thesis": "VWAP pullback bounce on NVDA: 0.96x volume, +0.37% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SPY",
+        "pnl": -0.02,
+        "note": "time limit, 32 min (+0.00%)",
+        "thesis": "VWAP pullback bounce on SPY: 0.73x volume, +0.04% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "QQQ",
+        "pnl": 0.38,
+        "note": "time limit, 30 min (+0.15%)",
+        "thesis": "VWAP pullback bounce on QQQ: 0.98x volume, +0.35% vs VWAP; target +0.6%, stop -0.4%",
+        "confidence": 3
+       },
+       {
+        "symbol": "MU",
+        "pnl": -0.89,
+        "note": "stop (-0.72%)",
+        "thesis": "VWAP pullback bounce on MU: 0.82x volume, +0.43% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "TSLA",
+        "pnl": -0.49,
+        "note": "stop (-0.38%)",
+        "thesis": "VWAP pullback bounce on TSLA: 0.93x volume, +0.83% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SPY",
+        "pnl": 0.24,
+        "note": "time limit, 46 min (+0.19%)",
+        "thesis": "VWAP pullback bounce on SPY: 0.46x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "AAPL",
+        "pnl": 0.84,
+        "note": "target hit (+0.68%)",
+        "thesis": "VWAP pullback bounce on AAPL: 0.83x volume, +0.18% vs VWAP; target +0.6%, stop -0.4%",
+        "confidence": 3
+       },
+       {
+        "symbol": "NVDA",
+        "pnl": 1.1,
+        "note": "target hit (+0.65%)",
+        "thesis": "VWAP pullback bounce on NVDA: 0.85x volume, +0.25% vs VWAP; target +0.6%, stop -0.4%",
+        "confidence": 3
+       },
+       {
+        "symbol": "IWM",
+        "pnl": 0.47,
+        "note": "time limit, 47 min (+0.40%)",
+        "thesis": "VWAP pullback bounce on IWM: 0.39x volume, +0.20% vs VWAP; target +0.6%, stop -0.4%",
+        "confidence": 3
+       },
+       {
+        "symbol": "QQQ",
+        "pnl": 0.82,
+        "note": "time limit, 46 min (+0.46%)",
+        "thesis": "VWAP pullback bounce on QQQ: 1.4x volume, +0.43% vs VWAP; target +0.6%, stop -0.4%",
+        "confidence": 3
+       },
+       {
+        "symbol": "AMD",
+        "pnl": -0.44,
+        "note": "lost VWAP: setup failed (-0.27%)",
+        "thesis": "VWAP pullback bounce on AMD: 1.32x volume, +0.09% vs VWAP; target +0.6%, stop -0.35%",
+        "confidence": 3
+       },
+       {
+        "symbol": "INTC",
+        "pnl": -0.71,
+        "note": "stop (-0.43%)",
+        "thesis": "VWAP pullback bounce on INTC: 0.64x volume, +0.39% vs VWAP; target +0.6%, stop -0.35%",
+        "confidence": 3
+       },
+       {
+        "symbol": "AMD",
+        "pnl": -0.14,
+        "note": "gave back a +0.48% gain: out at breakeven",
+        "thesis": "VWAP pullback bounce on AMD: 0.63x volume, +0.33% vs VWAP; target +0.6%, stop -0.35%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SPCX",
+        "pnl": 0.95,
+        "note": "target hit (+0.61%)",
+        "thesis": "VWAP pullback bounce on SPCX: 1.1x volume, +0.40% vs VWAP; target +0.6%, stop -0.35%",
+        "confidence": 3
+       },
+       {
+        "symbol": "TSLA",
+        "pnl": 1.31,
+        "note": "target hit (+0.77%)",
+        "thesis": "VWAP pullback bounce on TSLA: 1.03x volume, +0.25% vs VWAP; target +0.6%, stop -0.35%",
+        "confidence": 3
+       },
+       {
+        "symbol": "INTC",
+        "pnl": 0.2,
+        "note": "time limit, 42 min (+0.09%)",
+        "thesis": "VWAP pullback bounce on INTC: 1.23x volume, +0.24% vs VWAP; target +0.6%, stop -0.35%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SOFI",
+        "pnl": -0.51,
+        "note": "stop (-0.38%)",
+        "thesis": "VWAP pullback bounce on SOFI: 0.48x volume, +0.39% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "MU",
+        "pnl": -0.61,
+        "note": "stop (-0.52%)",
+        "thesis": "VWAP pullback bounce on MU: 0.95x volume, +0.14% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "IWM",
+        "pnl": -0.4,
+        "note": "stop (-0.32%)",
+        "thesis": "VWAP pullback bounce on IWM: 1.89x volume, +0.16% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "GOOGL",
+        "pnl": -0.44,
+        "note": "stop (-0.36%)",
+        "thesis": "VWAP pullback bounce on GOOGL: 1.55x volume, +0.13% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SPY",
+        "pnl": -0.12,
+        "note": "time limit, 47 min (-0.09%)",
+        "thesis": "VWAP pullback bounce on SPY: 0.7x volume, +0.06% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "AAPL",
+        "pnl": -0.73,
+        "note": "stop (-0.30%)",
+        "thesis": "VWAP pullback bounce on AAPL: 1.21x volume, +0.25% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "QQQ",
+        "pnl": -0.78,
+        "note": "stop (-0.32%)",
+        "thesis": "VWAP pullback bounce on QQQ: 0.65x volume, +0.09% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "META",
+        "pnl": 1.31,
+        "note": "target hit (+0.52%)",
+        "thesis": "VWAP pullback bounce on META: 1.25x volume, +0.42% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "IWM",
+        "pnl": -0.05,
+        "note": "time limit, 46 min (-0.03%)",
+        "thesis": "VWAP pullback bounce on IWM: 0.57x volume, +0.21% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "MU",
+        "pnl": 2.23,
+        "note": "target hit (+0.88%)",
+        "thesis": "VWAP pullback bounce on MU: 0.84x volume, +0.53% vs VWAP; target +0.8%, stop -0.4%",
+        "confidence": 3
+       },
+       {
+        "symbol": "TSM",
+        "pnl": -1.22,
+        "note": "stop (-0.51%)",
+        "thesis": "VWAP pullback bounce on TSM: 0.51x volume, +0.20% vs VWAP; target +0.8%, stop -0.4%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SPCX",
+        "pnl": -1.58,
+        "note": "stop (-0.59%)",
+        "thesis": "VWAP pullback bounce on SPCX: 0.8x volume, +0.47% vs VWAP; target +0.8%, stop -0.4%",
+        "confidence": 3
+       },
+       {
+        "symbol": "AMD",
+        "pnl": -0.91,
+        "note": "stop (-0.41%)",
+        "thesis": "VWAP pullback bounce on AMD: 0.93x volume, +0.55% vs VWAP; target +0.8%, stop -0.4%",
+        "confidence": 3
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
    "date": "2026-10-23",
    "agents": {
     "trend": {
@@ -2089,7 +2440,7 @@
    "breakout_lookback": 55,
    "stop_atr": 2.0,
    "trail_atr": 3.0,
-   "min_rel_volume": 1.75,
+   "min_rel_volume": 2.0,
    "opt_min_dte": 30,
    "opt_max_dte": 60,
    "opt_delta": 0.5
@@ -2097,7 +2448,7 @@
   "meanrev": {
    "rsi_entry": 10,
    "rsi_exit": 70,
-   "stop_atr": 2.5,
+   "stop_atr": 2.0,
    "max_hold_days": 7,
    "opt_min_dte": 14,
    "opt_max_dte": 45,

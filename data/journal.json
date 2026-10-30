@@ -1,19 +1,5 @@
 [
  {
-  "time": "2026-10-19T14:36:41-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "TQQQ, SOXL, LITE, MRVL, MU",
-  "note": "aggressive: Only $0.22 is settled, so nothing can trade until tomorrow's settlement; I'm keeping the list armed on the fastest movers and the widened 0.45% stop. Today's 0.35% stops got clipped by noise, and the 0.8% target keeps reward-to-risk near 1.8:1."
- },
- {
-  "time": "2026-10-19T15:06:07-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-61%)"
- },
- {
   "time": "2026-10-19T15:36:02-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -7305,5 +7291,17 @@
   "agent": "scalper",
   "note": "After-close review: revise. Today's four VWAP-pullback trades netted about -$1.48, with three stops on 0.51x to 0.93x relative volume, so the 1.5x gate is still not being enforced and the stops are inside normal noise. The SPY plan rests on the same unverified setup in a session with an active chip selloff and Iran headline risk, so I'm standing aside.",
   "symbol": ""
+ },
+ {
+  "time": "2026-10-30T17:30:05-04:00",
+  "type": "param_change",
+  "agent": "trend",
+  "note": "min_rel_volume: 1.75 -> 2.0 (Fewer, higher-conviction breakouts should reduce quick failures. The failed entries came on 1.9x-2.9x volume, so a modest raise filters the weakest setups without starving entries on a small account.)"
+ },
+ {
+  "time": "2026-10-30T17:30:13-04:00",
+  "type": "param_change",
+  "agent": "meanrev",
+  "note": "stop_atr: 2.5 -> 2.0 (A modestly tighter stop lifts reward/risk on near-miss setups like TEAM at ~0.99:1 above the 1:1 floor, so I deploy cash more often. It stays well inside the bounds and keeps per-trade loss small, so )"
  }
 ]
