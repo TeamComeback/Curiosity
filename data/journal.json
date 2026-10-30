@@ -1,60 +1,5 @@
 [
  {
-  "time": "2026-10-19T11:46:50-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "MU",
-  "qty": 0.0899,
-  "entry": 926.7,
-  "exit": 924.372,
-  "pnl": -0.21,
-  "note": "time limit, 21 min (-0.22%)",
-  "opened": "2026-10-19T11:25:27-04:00",
-  "confidence": 3,
-  "thesis": "momentum burst on MU: 1.58x volume, +1.44% vs VWAP; target +0.6%, stop -0.35%"
- },
- {
-  "time": "2026-10-19T11:48:55-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "AMD",
-  "qty": 0.1504,
-  "entry": 554.224,
-  "exit": 552.068,
-  "pnl": -0.33,
-  "note": "stop (-0.39%)",
-  "opened": "2026-10-19T11:38:40-04:00",
-  "confidence": 3,
-  "thesis": "opening-range breakout on AMD: 1.45x volume, +0.96% vs VWAP; target +0.7%, stop -0.35%"
- },
- {
-  "time": "2026-10-19T11:48:56-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "TQQQ",
-  "qty": 1.1509,
-  "entry": 72.43,
-  "exit": 72.15,
-  "pnl": -0.32,
-  "note": "stop (-0.37%)",
-  "opened": "2026-10-19T11:38:41-04:00",
-  "confidence": 3,
-  "thesis": "momentum burst on TQQQ: 1.87x volume, +1.78% vs VWAP; target +0.7%, stop -0.35%"
- },
- {
-  "time": "2026-10-19T11:50:59-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "SNDK",
-  "instrument": "stock",
-  "qty": 0.0594,
-  "price": 1400.802,
-  "cost": 83.21,
-  "stop": 1395.65,
-  "thesis": "momentum burst on SNDK: 1.78x volume, +0.94% vs VWAP; target +0.7%, stop -0.35%",
-  "confidence": 3
- },
- {
   "time": "2026-10-19T11:55:03-04:00",
   "type": "close",
   "agent": "hyper",
@@ -7341,5 +7286,46 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, META, AMZN, TSLA",
   "note": "defensive: Settled cash is about zero today, so no new entries can execute before tomorrow's settlement. For tomorrow I'm keeping the wider 0.5% stop, since today's 0.4% stops were hit by noise, and running defensive with two slices because the tape has been choppy and most names are trading below VWAP."
+ },
+ {
+  "time": "2026-10-30T13:36:26-04:00",
+  "type": "close",
+  "agent": "monkey",
+  "symbol": "QQQ",
+  "qty": 0.4021,
+  "entry": 712.76,
+  "exit": 688.222,
+  "pnl": -9.87,
+  "note": "stop loss",
+  "opened": "2026-10-29T09:37:35-04:00",
+  "confidence": 0,
+  "thesis": "Dart landed on QQQ"
+ },
+ {
+  "time": "2026-10-30T13:36:57-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "IREN",
+  "note": "near max value (1.75 of 2 wide)"
+ },
+ {
+  "time": "2026-10-30T13:37:29-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-10-30T13:38:33-04:00",
+  "type": "open",
+  "agent": "volsell",
+  "symbol": "IWM",
+  "instrument": "spread",
+  "qty": 1,
+  "price": 0.22,
+  "cost": -12.0,
+  "stop": 0,
+  "thesis": "IWM IV 21% vs realized 15% (1.36x) with the crash radar calm at 20 and SPY above its 200-day; a 290/291 bear call at the 0.15 floor collects premium against $72 max loss over 35 DTE, and IWM is a broad-market name rather than an avoided sector.",
+  "confidence": 3
  }
 ]
