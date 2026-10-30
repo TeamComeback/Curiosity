@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-10-19T10:25:02-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "AAPL",
-  "qty": 0.7266,
-  "entry": 344.074,
-  "exit": 345.604,
-  "pnl": 1.12,
-  "note": "time limit, 30 min (+0.44%)",
-  "opened": "2026-10-19T09:54:54-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on AAPL: 0.57x volume, +0.26% vs VWAP; target +0.6%, stop -0.4%"
- },
- {
-  "time": "2026-10-19T10:27:04-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "MSFT",
-  "qty": 0.47,
-  "entry": 531.826,
-  "exit": 533.588,
-  "pnl": 0.83,
-  "note": "time limit, 30 min (+0.34%)",
-  "opened": "2026-10-19T09:56:55-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on MSFT: 0.96x volume, +0.13% vs VWAP; target +0.6%, stop -0.4%"
- },
- {
-  "time": "2026-10-19T10:36:12-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-56%)"
- },
- {
-  "time": "2026-10-19T10:36:41-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "TSLA, AMZN, MSFT, MU, AVGO",
-  "note": "defensive: SPY is in an uptrend with a calm crash radar, but the broad tape is mixed, so I'm keeping half-size VWAP bounces. TSLA and AMZN are holding above their opening ranges, and MSFT, MU and AVGO are showing clean VWAP-bounce setups, which is where the trades should come from. The 0.6% target and 0.4% sto"
- },
- {
   "time": "2026-10-19T10:40:46-04:00",
   "type": "open",
   "agent": "scalper",
@@ -7414,5 +7372,45 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. The old plan's 0.3% stop sits inside observed slippage (fills at -0.34% to -0.36%) and inside Technology's 1.6% to 6.6% ATR, and its 1.5x volume gate is not enforced by code. Today's scan is a chip selloff (MU -4.9%, INTC -3.6%, SNDK -5.2%) with GOOGL -12.9% on headlines, so the only clean structure is SPY, where ATR is 0.9%.",
   "symbol": "SPY"
+ },
+ {
+  "time": "2026-10-30T09:37:12-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-85%)"
+ },
+ {
+  "time": "2026-10-30T09:37:19-04:00",
+  "type": "open",
+  "agent": "trend",
+  "symbol": "REGN",
+  "instrument": "stock",
+  "qty": 0.0542,
+  "price": 924.44,
+  "cost": 50.1,
+  "stop": 884.48,
+  "thesis": "REGN cleared its 55-day high at 858.17 on 3.1x relative volume with roc20 +11.3%, and it sits 25% above its 200-day SMA; the 884.48 stop limits risk to about 4% of the position.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-10-30T09:37:27-04:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "HPQ",
+  "instrument": "stock",
+  "qty": 6.9013,
+  "price": 29.03,
+  "cost": 200.34,
+  "stop": 25.99,
+  "thesis": "HPQ RSI(2) 2.0 washout 18.3% above its 200-day in a calm regime; target 32.19 vs stop 25.99 is about 1.07:1, the only live candidate clearing my 1:1 floor, so I'm taking a small $200 starter despite the game plan's stale avoid.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-10-30T09:37:43-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AMZN, AMD, MU, TSM, GEV",
+  "note": "normal: Calm regime with SPY trending up, and these liquid names are above their opening ranges and VWAP with up 1-minute trends, so breakouts and VWAP pullbacks have a clean bias. I'm skipping the weak, choppy names (INTC, MSFT, NVDA) and the thin ones (BE, SOXL), and using a 2:1 target-to-stop ratio with "
  }
 ]

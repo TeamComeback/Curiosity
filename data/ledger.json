@@ -12782,5 +12782,65 @@
   ],
   "why": "Technology is the largest sample (38 trades) and averages +$0.01, with the scan showing an ongoing chip selloff. Communication Services is 4 trades at +$0.20 average but carries live headline risk. Consumer Discretionary's +$0.30 average over 6 trades is too small to lean on, and today's clean names",
   "expires": "2026-11-13"
+ },
+ {
+  "time": "2026-10-30T09:37:19-04:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-68c56672f2",
+  "symbol": "REGN",
+  "underlying": "REGN",
+  "sector": "Health Care",
+  "instrument": "stock",
+  "qty": 0.0542,
+  "price": 924.44,
+  "cost": 50.1,
+  "stop": 884.48,
+  "why": "REGN cleared its 55-day high at 858.17 on 3.1x relative volume with roc20 +11.3%, and it sits 25% above its 200-day SMA; the 884.48 stop limits risk to about 4% of the position.",
+  "confidence": 3,
+  "signals": {
+   "rel_volume": 3.09,
+   "roc20_pct": 11.3,
+   "pct_vs_sma50": 16.4,
+   "pct_vs_sma200": 25.0
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-10-30T09:37:27-04:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-c0db87c0b4",
+  "symbol": "HPQ",
+  "underlying": "HPQ",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "qty": 6.9013,
+  "price": 29.03,
+  "cost": 200.34,
+  "stop": 25.99,
+  "why": "HPQ RSI(2) 2.0 washout 18.3% above its 200-day in a calm regime; target 32.19 vs stop 25.99 is about 1.07:1, the only live candidate clearing my 1:1 floor, so I'm taking a small $200 starter despite the game plan's stale avoid.",
+  "confidence": 2,
+  "signals": {
+   "rsi2": 2.0,
+   "pct_vs_sma200": 18.3,
+   "pct_vs_sma5": -10.0
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-10-30T09:37:43-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "AMZN",
+   "AMD",
+   "MU",
+   "TSM",
+   "GEV",
+   "SPCX"
+  ],
+  "aggression": "normal",
+  "why": "Calm regime with SPY trending up, and these liquid names are above their opening ranges and VWAP with up 1-minute trends, so breakouts and VWAP pullbacks have a clean bias. I'm skipping the weak, choppy names (INTC, MSFT, NVDA) and the thin ones (BE, SOXL), and using a 2:1 target-to-stop ratio with "
  }
 ]
