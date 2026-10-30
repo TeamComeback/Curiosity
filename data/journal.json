@@ -1,44 +1,5 @@
 [
  {
-  "time": "2026-10-19T11:23:25-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "SOXL",
-  "instrument": "stock",
-  "qty": 0.7987,
-  "price": 104.308,
-  "cost": 83.31,
-  "stop": 103.96,
-  "thesis": "opening-range breakout on SOXL: 1.64x volume, +2.48% vs VWAP; target +0.6%, stop -0.35%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-19T11:23:25-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "MRVL",
-  "instrument": "stock",
-  "qty": 0.3406,
-  "price": 244.782,
-  "cost": 83.37,
-  "stop": 243.73,
-  "thesis": "momentum burst on MRVL: 2.42x volume, +2.06% vs VWAP; target +0.6%, stop -0.35%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-19T11:25:27-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "MU",
-  "instrument": "stock",
-  "qty": 0.0899,
-  "price": 926.7,
-  "cost": 83.31,
-  "stop": 923.35,
-  "thesis": "momentum burst on MU: 1.58x volume, +1.44% vs VWAP; target +0.6%, stop -0.35%",
-  "confidence": 3
- },
- {
   "time": "2026-10-19T11:29:32-04:00",
   "type": "close",
   "agent": "hyper",
@@ -7407,5 +7368,32 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, MU",
   "note": "stand_down: Three VWAP bounces on sub-1x volume all hit stops, and settled cash is about zero with all four slices used, so new entries aren't possible anyway. Standing down avoids low-conviction bounces until volume confirms a trend."
+ },
+ {
+  "time": "2026-10-30T11:06:56-04:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-86%)"
+ },
+ {
+  "time": "2026-10-30T11:07:35-04:00",
+  "type": "open",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "instrument": "spread",
+  "qty": 1,
+  "price": 0.21,
+  "cost": -15.5,
+  "stop": 0,
+  "thesis": "TLT IV 16.1% vs realized 10.7% (1.50x) with the SPY trend up and crash radar calm at 19; a 79.5/78.5 bull put collects 0.23 credit against $77 max loss over 35 DTE.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-10-30T11:07:47-04:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, AMZN",
+  "note": "stand_down: All four round trips and the slice budget are used, and settled cash is about zero, so no new entries are possible today. The three VWAP bounces on sub-1x volume all stopped out, so I'm keeping entries off and watching SPY, QQQ, and AMZN (above its opening range on volume) for a cleaner setup tomorr"
  }
 ]
