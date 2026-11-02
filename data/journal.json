@@ -1,74 +1,5 @@
 [
  {
-  "time": "2026-10-20T10:09:11-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "SNDK",
-  "qty": 0.0737,
-  "entry": 1358.882,
-  "exit": 1375.234,
-  "pnl": 1.2,
-  "note": "target hit (+1.14%)",
-  "opened": "2026-10-20T09:57:53-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SNDK: 0.75x volume, +0.75% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
-  "time": "2026-10-20T10:09:12-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "IREN",
-  "qty": 3.8276,
-  "entry": 26.17,
-  "exit": 26.61,
-  "pnl": 1.68,
-  "note": "target hit (+1.72%)",
-  "opened": "2026-10-20T10:00:05-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on IREN: 1.48x volume, +0.37% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
-  "time": "2026-10-20T10:09:12-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "NVDA",
-  "qty": 0.4665,
-  "entry": 214.694,
-  "exit": 216.104,
-  "pnl": 0.66,
-  "note": "target hit (+0.65%)",
-  "opened": "2026-10-20T10:02:08-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on NVDA: 0.5x volume, +0.26% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
-  "time": "2026-10-20T10:09:12-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "AMD",
-  "instrument": "stock",
-  "qty": 0.1546,
-  "price": 539.598,
-  "cost": 83.42,
-  "stop": 538.2,
-  "thesis": "momentum burst on AMD: 2.04x volume, +1.53% vs VWAP; target +0.6%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-20T10:15:24-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "UNH",
-  "qty": 0.2412,
-  "entry": 415.092,
-  "exit": 416.1,
-  "pnl": 0.24,
-  "note": "time limit, 15 min (+0.24%)",
-  "opened": "2026-10-20T10:00:05-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on UNH: 0.69x volume, +0.36% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
   "time": "2026-10-20T10:19:31-04:00",
   "type": "close",
   "agent": "scalper",
@@ -7267,5 +7198,40 @@
   "agent": "blackswan",
   "symbol": "AGCO",
   "note": "spread stop (-98%)"
+ },
+ {
+  "time": "2026-11-02T14:05:57-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CWVX261120P00008000",
+  "note": "option target (+101%)"
+ },
+ {
+  "time": "2026-11-02T14:06:28-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "IREN",
+  "note": "near max value (1.92 of 2 wide)"
+ },
+ {
+  "time": "2026-11-02T14:07:00-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "PLD",
+  "note": "spread stop (-55%)"
+ },
+ {
+  "time": "2026-11-02T14:07:31-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-97%)"
+ },
+ {
+  "time": "2026-11-02T14:07:55-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "XLP, KO, KRE, SPY, QQQ",
+  "note": "defensive: Only $0.16 is settled, so nothing can be funded until tomorrow. Defensive mode lets the code take only half-size VWAP bounces in XLP, KO, and KRE, the names trading above VWAP and their opening range on 1-minute uptrends, while the broad market and tech stay below VWAP on downtrends."
  }
 ]

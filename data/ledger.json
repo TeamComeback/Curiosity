@@ -13832,5 +13832,19 @@
   ],
   "aggression": "stand_down",
   "why": "Only $0.16 is settled, so no new trade can be funded today, and the last two VWAP bounces (XLP, GLD) stopped out. Hold the 4-slice, 0.5% target, 0.3% stop setup for tomorrow when the $1,003 settles."
+ },
+ {
+  "time": "2026-11-02T14:07:55-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "XLP",
+   "KO",
+   "KRE",
+   "SPY",
+   "QQQ"
+  ],
+  "aggression": "defensive",
+  "why": "Only $0.16 is settled, so nothing can be funded until tomorrow. Defensive mode lets the code take only half-size VWAP bounces in XLP, KO, and KRE, the names trading above VWAP and their opening range on 1-minute uptrends, while the broad market and tech stay below VWAP on downtrends."
  }
 ]
