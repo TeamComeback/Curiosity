@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-10-20T10:06:06-04:00",
-  "type": "close",
-  "agent": "meanrev",
-  "symbol": "STT",
-  "qty": 1.2448,
-  "entry": 160.74,
-  "exit": 166.19,
-  "pnl": 6.78,
-  "note": "snap-back (RSI2 58)",
-  "opened": "2026-10-14T11:16:27-04:00",
-  "confidence": 3,
-  "thesis": "STT RSI(2) washout (0.5) while still 2.6% above its 200-day; the stop is about 5.1% away against a roughly 7% snap-back target, so reward-to-risk is about 1.4:1, the best of the candidates."
- },
- {
-  "time": "2026-10-20T10:06:37-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-85%)"
- },
- {
-  "time": "2026-10-20T10:06:39-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "INTC",
-  "qty": 1.1095,
-  "entry": 90.33,
-  "exit": 91.35,
-  "pnl": 1.13,
-  "note": "target hit (+0.91%)",
-  "opened": "2026-10-20T09:57:53-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on INTC: 0.81x volume, +0.81% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
-  "time": "2026-10-20T10:07:01-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, IWM, QQQ",
-  "note": "defensive: SPY, IWM and QQQ are the only liquid names with clean uptrends and open positions already running, and the crash radar is calm. Single names are mixed and semis are volatile, so I'm keeping the index ETFs only at half size with the current target, stop and hold."
- },
- {
   "time": "2026-10-20T10:07:07-04:00",
   "type": "playbook",
   "agent": "hyper",
@@ -7281,5 +7239,40 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, NVDA, MSFT, AAPL",
   "note": "stand_down: Only $0.16 is settled today, so no new trade can be funded, and SPY is below VWAP with no confirmed reclaim. Recent VWAP bounces stopped out, so stay flat and keep the 4-slice setup for when the $1,003 settles tomorrow."
+ },
+ {
+  "time": "2026-11-02T13:05:38-05:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "BP",
+  "qty": 1.013,
+  "entry": 49.36,
+  "exit": 47.94,
+  "pnl": -1.44,
+  "note": "trailing stop on underlying",
+  "opened": "2026-10-16T10:05:54-04:00",
+  "confidence": 3,
+  "thesis": "BP broke above its 55-day high at 49.21 on 1.7x relative volume with a 6.6% 20-day rate of change, and it is 17% above its 200-day SMA; the 47.12 stop risks about $2.24 per share and the position is uncorrelated with the short puts."
+ },
+ {
+  "time": "2026-11-02T13:06:10-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "PLD",
+  "note": "spread stop (-52%)"
+ },
+ {
+  "time": "2026-11-02T13:06:41-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-97%)"
+ },
+ {
+  "time": "2026-11-02T13:07:02-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, NVDA, AAPL, KRE",
+  "note": "stand_down: Only $0.16 is settled, so no new trade can be funded today, and the last two VWAP bounces (XLP, GLD) stopped out. Hold the 4-slice, 0.5% target, 0.3% stop setup for tomorrow when the $1,003 settles."
  }
 ]
