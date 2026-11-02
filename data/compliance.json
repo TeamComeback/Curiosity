@@ -2288,8 +2288,30 @@
     "settled_cash": 250.91,
     "reason": "ok",
     "outcome": "filled: 3.4242 at 73.23"
+   },
+   {
+    "time": "2026-11-02T14:37:05-05:00",
+    "agent": "meanrev",
+    "symbol": "CHKP",
+    "instrument": "stock",
+    "side": "buy",
+    "amount": 100.0,
+    "settled_cash": 364.56,
+    "reason": "ok",
+    "outcome": "filled: 0.7014 at 142.776"
    }
   ],
-  "denied": []
+  "denied": [
+   {
+    "time": "2026-11-02T14:37:11-05:00",
+    "agent": "volsell",
+    "symbol": "TLT",
+    "instrument": "spread",
+    "side": "buy",
+    "amount": 78.0,
+    "settled_cash": 732.0,
+    "reason": "already holding TLT"
+   }
+  ]
  }
 }
