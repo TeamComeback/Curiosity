@@ -67,7 +67,7 @@
       "pct_vs_sma200": 17.0
      },
      "sector": "Energy",
-     "last": 48.28,
+     "last": 48.215,
      "high_water": 51.465
     },
     "pos-e9580fb11e": {
@@ -89,7 +89,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 68.225,
+     "last": 68.1,
      "high_water": 69.91
     },
     "pos-caf474ebf0": {
@@ -99,7 +99,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.76,
-     "mark": 0.84,
+     "mark": 0.86,
      "expiry": "2026-12-18",
      "strike": 12.0,
      "delta": -0.5,
@@ -118,7 +118,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 11.16,
-     "exit_half_spread": 0.01
+     "exit_half_spread": 0.03
     },
     "pos-85270bdc25": {
      "kind": "stock",
@@ -139,7 +139,7 @@
       "pct_vs_sma200": 47.5
      },
      "sector": "Broad market / other",
-     "last": 13.47,
+     "last": 13.34,
      "high_water": 14.065
     },
     "pos-68c56672f2": {
@@ -161,7 +161,7 @@
       "pct_vs_sma200": 25.0
      },
      "sector": "Health Care",
-     "last": 969.35,
+     "last": 969.3,
      "high_water": 969.39
     }
    },
@@ -173,10 +173,6 @@
    "peak": 1229.58,
    "max_dd": 0.2141,
    "notes": [
-    {
-     "date": "2026-10-28",
-     "note": "Only $4.19 is settled, too little for a meaningful breakout entry. Hold all stops, and reassess DVN and new breakouts once T+1 sale proceeds settle."
-    },
     {
      "date": "2026-10-28",
      "note": "Only $4.19 is settled, so no entry is affordable. Hold all positions and their stops, and reassess DVN or new breakouts once T+1 sale proceeds settle."
@@ -332,6 +328,10 @@
     {
      "date": "2026-11-02",
      "note": "Available cash is $2.01, so no candidate is affordable. Hold all live stops (REGN stays at 914.50, not the planned 884.48). Next session, use the ~$180 settled cash for an XOM or COP breakout only if the trigger fires."
+    },
+    {
+     "date": "2026-11-02",
+     "note": "Available cash is $2.01 with $180.50 settling T+1, so no candidate is affordable. Holding all live stops (REGN stays at 914.50). Next session, reassess the Energy triggers (XOM above 184.84, COP above 152.72) on ~$180 settled cash, and only enter on a confirmed close with at least 2x volume."
     }
    ],
    "last_exits": {
@@ -816,7 +816,7 @@
       "pct_vs_sma5": -10.0
      },
      "sector": "Broad market / other",
-     "last": 28.535
+     "last": 28.645
     },
     "pos-b807f1a689": {
      "kind": "stock",
@@ -836,7 +836,7 @@
       "pct_vs_sma5": -17.9
      },
      "sector": "Broad market / other",
-     "last": 210.74
+     "last": 211.565
     },
     "pos-4861098649": {
      "kind": "stock",
@@ -856,7 +856,7 @@
       "pct_vs_sma5": -13.1
      },
      "sector": "Broad market / other",
-     "last": 227.985
+     "last": 228.55
     },
     "pos-5986566ba0": {
      "kind": "stock",
@@ -876,7 +876,7 @@
       "pct_vs_sma5": -7.6
      },
      "sector": "Broad market / other",
-     "last": 56.69
+     "last": 56.335
     }
    },
    "status": "active",
@@ -887,10 +887,6 @@
    "peak": 1029.08,
    "max_dd": 0.0148,
    "notes": [
-    {
-     "date": "2026-10-28",
-     "note": "No candidate reaches the 1:1 target-to-stop floor (best ELV ~0.51, ABNB ~0.45, DIS ~0.40). Hold PBR to its 25.00 target or 19.90 stop, and keep the $762.86 settled cash idle until a washout offers a target at least as far as its stop."
-    },
     {
      "date": "2026-10-28",
      "note": "No washout reaches the 1:1 target-to-stop floor (ADP ~0.92 closest, ELV ~0.57, ABNB ~0.4). Hold PBR to its 25.00 target or 19.90 stop and keep the $762.86 settled cash idle."
@@ -1046,6 +1042,10 @@
     {
      "date": "2026-11-02",
      "note": "No new entries: every candidate misses the 1:1 target-to-stop floor on live prices (TEAM ~0.8, CHKP ~0.82, ZS ~0.62, MSFT ~0.33), and DT and HPQ are already held. Holding HPQ, TWLO, ILMN and DT to their default stops with cash idle."
+    },
+    {
+     "date": "2026-11-02",
+     "note": "No new entries: every live candidate misses the 1:1 target-to-stop floor (TEAM ~0.80, CHKP ~0.82, ZS ~0.61, MSFT ~0.32), and DT and HPQ are already held. Holding HPQ, TWLO, ILMN and DT to default stops with cash idle."
     }
    ],
    "last_exits": {
@@ -1337,7 +1337,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-04",
      "credit": 0.21,
-     "mark": 0.2,
+     "mark": 0.12,
      "entry": 0.21,
      "width": 1.0,
      "short_strike": 79.5,
@@ -1359,7 +1359,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.02
     },
     "pos-1422e3aa6b": {
      "kind": "spread",
@@ -1429,7 +1429,7 @@
      "structure": "bear call spread",
      "expiry": "2026-12-04",
      "credit": 0.22,
-     "mark": 0.29,
+     "mark": 0.34,
      "entry": 0.22,
      "width": 1.0,
      "short_strike": 290.0,
@@ -1451,7 +1451,7 @@
       "dte": 35
      },
      "sector": "Industrials",
-     "exit_half_spread": 0.035
+     "exit_half_spread": 0.11
     }
    },
    "status": "active",
@@ -1462,10 +1462,6 @@
    "peak": 1000.0,
    "max_dd": 0.042,
    "notes": [
-    {
-     "date": "2026-10-28",
-     "note": "Stay flat at 13:06. SPY 750/749 is 0.20, TLT 80/79 is 0.29 but on the avoid list, EEM is on the avoid list, and XLF is below the 1.1 IV/RV edge. Recheck SPY bull put after the Fed for a natural credit of at least 0.25 on $1 width with max loss under $75."
-    },
     {
      "date": "2026-10-28",
      "note": "Stay flat before the Fed. SPY 750/749 shows 0.27 mid but my plan requires a post-announcement natural of at least 0.25 on $1 width with max loss under $75; recheck after the decision."
@@ -1621,6 +1617,10 @@
     {
      "date": "2026-11-02",
      "note": "Passed on the XLF 55.5/54.5 and TLT 80/79 bull puts again because both duplicate open positions on the 12-04 expiry. Holding $732 settled cash for a non-duplicate setup at the 0.15 floor, and managing TLT, XLF and IWM against their 2x-mark exits."
+    },
+    {
+     "date": "2026-11-02",
+     "note": "Passed TLT 80/79 again: it duplicates the open TLT 79.5/78.5 on the 12-04 expiry and would double rate exposure. Keep the 732 settled cash for a non-duplicate setup at the 0.15 floor, and manage TLT, XLF and IWM against their 2x-mark exits."
     }
    ],
    "last_exits": {},
@@ -1681,7 +1681,7 @@
     "settled_cash_at_plan": 732.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 76.0,
+   "min_trade_seen": 84.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -1947,7 +1947,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 758.305
+     "last": 758.48
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -1963,7 +1963,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 758.305
+     "last": 758.48
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -1979,7 +1979,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 758.305
+     "last": 758.48
     }
    },
    "status": "active",
@@ -2038,7 +2038,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.02,
+     "mark": 0.98,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2058,7 +2058,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.46,
+     "exit_half_spread": 0.515,
      "peak_mark": 1.42,
      "low_water": 36.84
     },
@@ -2084,7 +2084,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.69,
+     "mark": 1.41,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
@@ -2104,7 +2104,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.13,
+     "exit_half_spread": 0.09,
      "peak_mark": 1.69,
      "low_water": 23.09
     },
@@ -2150,7 +2150,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.105,
+     "exit_half_spread": 0.06,
      "peak_mark": 1.05,
      "low_water": 17.08
     },
@@ -2176,7 +2176,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 0.67,
+     "mark": 0.62,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2196,7 +2196,7 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.48,
+     "exit_half_spread": 0.525,
      "peak_mark": 1.62,
      "low_water": 123.49
     },
@@ -2222,7 +2222,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.12,
+     "mark": 0.06,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2242,7 +2242,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.9,
+     "exit_half_spread": 2.89,
      "peak_mark": 1.9
     }
    },
@@ -2254,10 +2254,6 @@
    "peak": 1000.0,
    "max_dd": 0.4615,
    "notes": [
-    {
-     "date": "2026-10-28",
-     "note": "No new orders: settled cash is $143.50, the candidate caps (~$43.59) are below the cost of 45-120 DTE bear put spreads, and the open bearish book is about 80% of equity. Hold the five positions to their underlying stops and reconcile the AGCO fill ($330 entry vs $183.9 budget) before sizing anything"
-    },
     {
      "date": "2026-10-28",
      "note": "Pass: settled cash is $143.50, the T/XLC/LKQ caps (about $40.53) are below the cost of 45-120 DTE bear put spreads, and the open bearish book is about 80% of equity. Hold the five positions to their underlying stops and reconcile the AGCO fill before sizing anything new."
@@ -2413,6 +2409,10 @@
     {
      "date": "2026-11-02",
      "note": "Exhibition mode: no entries. Holding all five bear put spreads to their underlying stops. After the thesis review, reconcile the AGCO fill ($330 vs $183.9 budget) and its mark before any sizing, and keep the bearish book under 50% of equity."
+    },
+    {
+     "date": "2026-11-02",
+     "note": "Exhibition mode blocks entries. Holding all five bear put spreads to their underlying stops. After the thesis review, reconcile the AGCO fill ($330 vs $183.9 budget) and its mark (0.06 vs 0.47 feed) before any sizing, and keep the bearish book under 50% of equity."
     }
    ],
    "last_exits": {},
@@ -2814,14 +2814,19 @@
    ],
    "playbook": {
     "date": "2026-11-02",
-    "made_at": "2026-11-02T12:36-05:00",
+    "made_at": "2026-11-02T12:39-05:00",
     "watch": [
      "SPY",
-     "TSLA",
-     "KRE"
+     "QQQ",
+     "NVDA",
+     "MSFT",
+     "AAPL",
+     "KRE",
+     "XLP",
+     "TLT"
     ],
     "aggression": "stand_down",
-    "why": "Only $0.16 is settled, so no new trade can be funded today, and SPY is below VWAP and trending down with no confirmed reclaim. Recent VWAP bounces stopped out, so stay flat and keep the 4-slice setup for when the $1,003 settles tomorrow.",
+    "why": "Only $0.16 is settled today, so no new trade can be funded, and SPY is below VWAP with no confirmed reclaim. Recent VWAP bounces stopped out, so stay flat and keep the 4-slice setup for when the $1,003 settles tomorrow.",
     "slices": 4,
     "target_pct": 0.5,
     "stop_pct": 0.3,
