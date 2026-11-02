@@ -13399,5 +13399,92 @@
   "why": "The Technology selloff (INTC -28.6%, SNDK -13.4%, AMD -10.8%) and the Fed and Iran headline risk make the scan worse for scalping, not better. The 1.5x volume gate still isn't enforced in code, and the edge is about -$0.03 per trade in Technology, so standing aside still holds.",
   "summary": "Stand aside tomorrow with all cash held. Only re-engage if SPY reclaims VWAP on two closed 2-minute bars with hand-verified volume of at least 1.5x before 1:45pm ET, using a stop wide enough to clear recent noise. No entries in the 1:45-2:30pm window.",
   "watchlist": []
+ },
+ {
+  "time": "2026-11-02T07:40:22-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-11-02",
+  "decision": "revise",
+  "why": "Cash is $2.01, so none of the prior watchlist names (XOM about $185, COP about $153, GILD, ABBV) can be bought, and their max_dollars of $2.01 is not a real position size. Energy breakouts are still the strongest setups, but realized Energy P&L is negative, and Health Care has no realized trades yet.",
+  "summary": "No new entries until settled cash rises. Hold every open stop as set, and do not loosen any of them. Keep Energy as the only lean-in sector. If cash frees up, the first candidates are XOM (close above 184.84 on at least 2x volume) and COP (close above 152.72 on at least 2x volume), each sized to available cash.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-02T07:40:22-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Energy"
+  ],
+  "avoid": [
+   "Consumer Staples"
+  ],
+  "why": "Energy has the most breakouts in today's scan (XOM, LNG, COP, CNQ, APA), and both open Energy longs (XLE, EQNR) are green. Realized Energy P&L is still negative (-$16.86), so this focus is based on current setups, not proven results. I dropped Health Care because it has no realized trades yet, even ",
+  "expires": "2026-11-16"
+ },
+ {
+  "time": "2026-11-02T07:40:35-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-11-02",
+  "decision": "keep",
+  "why": "Fresh prices leave ILMN as the only scan name clearing my 1:1 floor (about 1.10:1 on SMA5 target vs 2\u00d7ATR stop, RSI(2) 7.0), so the plan holds. Every other washout misses on current levels, and TEAM's 1.12:1 stays blocked by the Technology avoid.",
+  "summary": "Hold HPQ and TWLO to their stops with no adds. Buy ILMN at the next open only if RSI(2) is still under 10 and the target-to-stop ratio is at least 1:1; otherwise keep cash idle.",
+  "watchlist": [
+   {
+    "symbol": "ILMN",
+    "setup": "RSI(2) 7.0 washout, 34% above its 200-day; trades as Health Care although the scan tags it Broad market. Target SMA5 ~272.96 vs stop ~202.3 (close 235.99 minus 2\u00d7ATR 16.83) is about 1.10:1.",
+    "trigger": "Next open with RSI(2) still under 10 and target-to-stop still at least 1:1 on the open price. Skip if it gaps so the ratio falls below 1:1.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-02T07:40:43-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-11-02",
+  "decision": "keep",
+  "why": "Nothing new has a fillable credit at the 0.15 floor, and the three open spreads are still well clear of their short strikes with crash radar calm at 20. The scorecard is weak (29% right-way, no closed trades), so I won't add risk on mark-to-market noise.",
+  "summary": "No new entries. Hold TLT, XLF and IWM with no adds, and manage each against its manual stop and 2x-mark exit. Keep the roughly $732 settled cash idle unless a new spread clears the 0.15 fill floor with max loss near $75.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-02T07:40:54-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-11-02",
+  "decision": "revise",
+  "why": "Today's scan shows the Nasdaq down over 700 points on a chip selloff, with tech names down 5-28%, so the tech avoid stands. Consumer Discretionary has a small positive record (+$1.78 over 6 trades), which justifies a modest lean-in, but its names carry headline risk, so I'm limiting it to conditional setups.",
+  "summary": "Stand aside in Technology and Communication Services. Only consider one SPY VWAP reclaim entry before 1:45pm ET, confirmed by two closed 2-minute bars and hand-verified relative volume of at least 1.5x. Keep the first slice at about $250 and skip the 1:45-2:30pm window around Fed and Iran headlines.",
+  "watchlist": [
+   {
+    "symbol": "SPY",
+    "setup": "VWAP reclaim after a morning flush, long only",
+    "trigger": "Two consecutive closed 2-minute bars above session VWAP before 1:45pm ET, with hand-verified relative volume of at least 1.5x. If either condition fails, do not enter.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-02T07:40:54-05:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Consumer Discretionary"
+  ],
+  "avoid": [
+   "Technology",
+   "Communication Services"
+  ],
+  "why": "Technology is 42 trades at -$1.24 with a 43% win rate, and today's chip selloff confirms it. Communication Services is headline-driven at +$0.80 over 4 trades, too small to lean on. Consumer Discretionary is +$1.78 over 6 trades, a modest but positive edge. Consumer Staples (+$1.96 over 2 trades) is",
+  "expires": "2026-11-16"
  }
 ]
