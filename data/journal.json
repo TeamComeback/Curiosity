@@ -1,19 +1,5 @@
 [
  {
-  "time": "2026-10-21T10:06:37-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "NFLX, META, SPY",
-  "note": "defensive: Most of the tape is choppy with thin ranges and the IWM scalp just hit its stop, so I'm keeping size at half and cutting slices to 3. NFLX and META are the cleanest up-trends above their opening ranges with real dollar volume, and SPY stays on as the market anchor."
- },
- {
-  "time": "2026-10-21T10:06:41-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SPCX, META, NFLX, SNDK, CRWV",
-  "note": "aggressive: SPCX, META, and NFLX are trading above their opening ranges with the crash radar calm and SPY above its 200-day SMA. I widened the stop to 0.35% because the MU stop filled at -0.48% against a 0.3% stop, and the 0.7% target keeps reward-to-risk above 2:1."
- },
- {
   "time": "2026-10-21T10:08:46-04:00",
   "type": "close",
   "agent": "hyper",
@@ -7221,5 +7207,19 @@
   "agent": "blackswan",
   "symbol": "AGCO",
   "note": "agent: Exit the AGCO bear put spread. Its mark is ~0 against a $183.9 budget and a $330 fill, so the position is effectively wo"
+ },
+ {
+  "time": "2026-11-03T12:38:56-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-03T12:39:47-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "agent: Clearing the stale AGCO record: the mark is about 0, the fill ($330) doesn't match the $183.9 budget, and my notes say i"
  }
 ]
