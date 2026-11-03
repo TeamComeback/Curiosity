@@ -41,7 +41,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 66.925,
+     "last": 66.845,
      "high_water": 69.91
     },
     "pos-caf474ebf0": {
@@ -51,13 +51,13 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.76,
-     "mark": 1.19,
+     "mark": 1.15,
      "expiry": "2026-12-18",
      "strike": 12.0,
      "delta": -0.5,
      "cost": 80.0,
      "direction": "short",
-     "stop": 12.11,
+     "stop": 12.09,
      "atr": 0.367,
      "opened": "2026-10-27T14:06:17-04:00",
      "thesis": "VALE closed below its 55-day low at 11.79 on 2.0x relative volume with roc20 at -11.8%, and it sits 23% below its 200-day SMA, so the breakdown is confirmed; the 12.52 stop sits above the breakdown level.",
@@ -69,7 +69,7 @@
       "pct_vs_sma200": -23.0
      },
      "sector": "Broad market / other",
-     "low_water": 11.005,
+     "low_water": 10.99,
      "exit_half_spread": 0.06
     },
     "pos-85270bdc25": {
@@ -91,7 +91,7 @@
       "pct_vs_sma200": 47.5
      },
      "sector": "Broad market / other",
-     "last": 13.27,
+     "last": 13.275,
      "high_water": 14.065
     },
     "pos-68c56672f2": {
@@ -113,7 +113,7 @@
       "pct_vs_sma200": 25.0
      },
      "sector": "Health Care",
-     "last": 974.18,
+     "last": 971.795,
      "high_water": 974.21
     },
     "pos-99f9520136": {
@@ -135,7 +135,7 @@
       "pct_vs_sma200": 51.3
      },
      "sector": "Broad market / other",
-     "last": 166.71,
+     "last": 166.515,
      "high_water": 170.06
     }
    },
@@ -147,10 +147,6 @@
    "peak": 1229.58,
    "max_dd": 0.2141,
    "notes": [
-    {
-     "date": "2026-10-30",
-     "note": "Settled cash is $2.01, below any candidate's cost, so no entries. Holding all stops; AEYE stays at 12.86 (the planned 12.65 would loosen it)."
-    },
     {
      "date": "2026-10-30",
      "note": "Settled cash is $2.01, below any candidate's cost, so no entries. Holding all stops; the planned AEYE stop of 12.65 would loosen the current 12.89, so it stays. Reassess TRGP/TXN/ADI triggers once cash settles."
@@ -306,6 +302,10 @@
     {
      "date": "2026-11-03",
      "note": "No entry: the only candidate (KPTI put) was blocked twice as unaffordable and illiquid, and the Financials watchlist has no candidate IDs. Holding XLE, AEYE, REGN, RVTY and VALE stops unchanged; REGN's live 919.32 stop is tighter than the plan's 914.50, so it stays."
+    },
+    {
+     "date": "2026-11-03",
+     "note": "No entry: the only candidate (KPTI put) was blocked twice as unaffordable, and the Financials watchlist has no delivered candidate IDs. Hold XLE, AEYE, REGN, RVTY and the VALE put on their live stops; enter only on a delivered breakout with at least 2x volume."
     }
    ],
    "last_exits": {
@@ -860,7 +860,7 @@
       "pct_vs_sma5": -10.0
      },
      "sector": "Broad market / other",
-     "last": 27.88
+     "last": 27.89
     },
     "pos-b807f1a689": {
      "kind": "stock",
@@ -880,7 +880,7 @@
       "pct_vs_sma5": -17.9
      },
      "sector": "Broad market / other",
-     "last": 214.41
+     "last": 214.66
     },
     "pos-4861098649": {
      "kind": "stock",
@@ -900,7 +900,7 @@
       "pct_vs_sma5": -13.1
      },
      "sector": "Broad market / other",
-     "last": 237.8
+     "last": 237.05
     },
     "pos-e6857da34f": {
      "kind": "stock",
@@ -920,7 +920,7 @@
       "pct_vs_sma5": -6.6
      },
      "sector": "Broad market / other",
-     "last": 140.9
+     "last": 142.05
     },
     "pos-f754fab9a5": {
      "kind": "stock",
@@ -940,7 +940,7 @@
       "pct_vs_sma5": -16.7
      },
      "sector": "Technology",
-     "last": 47.86
+     "last": 47.67
     },
     "pos-cadbcb9a81": {
      "kind": "stock",
@@ -960,7 +960,7 @@
       "pct_vs_sma5": -12.0
      },
      "sector": "Technology",
-     "last": 328.875
+     "last": 329.87
     },
     "pos-849a451620": {
      "kind": "stock",
@@ -980,7 +980,7 @@
       "pct_vs_sma5": -10.0
      },
      "sector": "Communication Services",
-     "last": 143.95
+     "last": 143.61
     }
    },
    "status": "active",
@@ -991,10 +991,6 @@
    "peak": 1029.08,
    "max_dd": 0.0324,
    "notes": [
-    {
-     "date": "2026-10-30",
-     "note": "Live target-to-stop beats the stale plan: check each candidate's live ratio before accepting a plan's avoid list, and keep starter sizes small on news-driven drops."
-    },
     {
      "date": "2026-10-30",
      "note": "Live target-to-stop beats stale plan avoids; on news-driven drops, size starters small (~$150) and keep the rest of settled cash idle."
@@ -1150,6 +1146,10 @@
     {
      "date": "2026-11-03",
      "note": "Only $4.09 is settled and no unheld candidate clears the 1:1 floor (PLTR is about 0.63:1 on live prices). Hold all seven positions to their stops and targets, and redeploy once T+1 proceeds settle."
+    },
+    {
+     "date": "2026-11-03",
+     "note": "Only $4.09 settled, so no entries; hold all seven positions to their live stops and targets and redeploy once T+1 proceeds settle."
     }
    ],
    "last_exits": {
@@ -1511,7 +1511,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-04",
      "credit": 0.21,
-     "mark": 0.24,
+     "mark": 0.27,
      "entry": 0.21,
      "width": 1.0,
      "short_strike": 79.5,
@@ -1533,7 +1533,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.02
+     "exit_half_spread": 0.015
     },
     "pos-1422e3aa6b": {
      "kind": "spread",
@@ -1557,7 +1557,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-04",
      "credit": 0.12,
-     "mark": 0.14,
+     "mark": 0.12,
      "entry": 0.12,
      "width": 1.0,
      "short_strike": 55.0,
@@ -1603,7 +1603,7 @@
      "structure": "bear call spread",
      "expiry": "2026-12-04",
      "credit": 0.22,
-     "mark": 0.27,
+     "mark": 0.33,
      "entry": 0.22,
      "width": 1.0,
      "short_strike": 290.0,
@@ -1625,7 +1625,7 @@
       "dte": 35
      },
      "sector": "Industrials",
-     "exit_half_spread": 0.05
+     "exit_half_spread": 0.09
     }
    },
    "status": "active",
@@ -1636,10 +1636,6 @@
    "peak": 1000.0,
    "max_dd": 0.057,
    "notes": [
-    {
-     "date": "2026-10-29",
-     "note": "Flat at 15:36. Today's candidates fail my gate: SPY 748/747 credit is 0.17 (max loss $83), XLF 0.15, EEM 0.18 on the avoid list, and TLT 0.23 with $77 max loss. Only enter SPY bull puts at a live natural of 0.25+ on the $1 width with max loss under $75."
-    },
     {
      "date": "2026-10-30",
      "note": "Flat at 9:37. No candidate clears my gates: XLF IV/RV 1.06 with a 0.07 credit, SLV in the avoid sector with a 0.18 credit, and TLT on the avoid list with a 0.23 credit and $77 max loss. Waiting for a live credit of 0.25+ on a $1 width with max loss under $75."
@@ -1795,6 +1791,10 @@
     {
      "date": "2026-11-03",
      "note": "No new entries: both candidates duplicate open 12-04 bull puts (XLF is already held and blocked; TLT would double the same expiry and underlying). Hold TLT, XLF and IWM to their 2x-mark and 50%-credit exits, and keep $732 settled for a non-duplicate setup at a 0.15 floor."
+    },
+    {
+     "date": "2026-11-03",
+     "note": "Passed TLT 79/78 bull put (0.19 credit, ~0.23 delta, about -EV and a duplicate of the open 12-04 TLT spread). Holding TLT, XLF and IWM to their exits; will take a non-duplicate, uncorrelated setup with at least 0.15 credit when one appears."
     }
    ],
    "last_exits": {},
@@ -1855,7 +1855,7 @@
     "settled_cash_at_plan": 732.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 79.0,
+   "min_trade_seen": 81.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -2133,7 +2133,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 753.83
+     "last": 754.03
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2149,7 +2149,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 753.83
+     "last": 754.03
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2165,7 +2165,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 753.83
+     "last": 754.03
     }
    },
    "status": "active",
@@ -2198,7 +2198,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 343.375
+     "last": 347.42
     },
     "pos-595fa17680": {
      "kind": "stock",
@@ -2215,7 +2215,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 102.935
+     "last": 102.98
     },
     "pos-dd647bc5db": {
      "kind": "stock",
@@ -2232,7 +2232,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Health Care",
-     "last": 286.81
+     "last": 285.35
     }
    },
    "status": "active",
@@ -2276,7 +2276,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.07,
+     "mark": 0.98,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2296,7 +2296,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.56,
+     "exit_half_spread": 0.365,
      "peak_mark": 1.6,
      "low_water": 36.35
     },
@@ -2322,7 +2322,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 1.01,
+     "mark": 0.92,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -2342,7 +2342,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.07,
+     "exit_half_spread": 0.09,
      "peak_mark": 1.09,
      "low_water": 16.29
     },
@@ -2368,7 +2368,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 1.01,
+     "mark": 1.05,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2388,7 +2388,7 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.51,
+     "exit_half_spread": 0.545,
      "peak_mark": 1.62,
      "low_water": 123.49
     },
@@ -2434,7 +2434,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.415,
+     "exit_half_spread": 1.43,
      "peak_mark": 1.9
     }
    },
@@ -2446,10 +2446,6 @@
    "peak": 1000.0,
    "max_dd": 0.4615,
    "notes": [
-    {
-     "date": "2026-10-30",
-     "note": "Exhibition mode blocks new entries, so I'm holding all five bear put spreads to their underlying stops (ASTS 49.7, IREN 31.26, APLD 22.31, PLD 130.31, AGCO 111.61). Still need to reconcile the AGCO fill ($330 vs $183.9 budget) and the AGCO mark (0.50 in the feed vs 0.02 in my notes) before sizing an"
-    },
     {
      "date": "2026-10-30",
      "note": "Exhibition mode blocks entries, so hold all five bear put spreads to their underlying stops (ASTS 49.7, IREN 31.26, APLD 22.31, PLD 130.31, AGCO 111.61). Reconcile the AGCO fill ($330 vs $183.9 budget) and the AGCO mark (feed 0.43-0.50 vs notes 0.02) before any sizing. Keep the bearish book under 50"
@@ -2605,6 +2601,10 @@
     {
      "date": "2026-11-03",
      "note": "Exhibition mode: no entries. Hold ASTS, APLD and PLD to their underlying stops, and reconcile fills against budgets before sizing any future trade."
+    },
+    {
+     "date": "2026-11-03",
+     "note": "Exhibition mode: no entries. Holding ASTS, APLD, PLD to their underlying stops. AGCO is marked at 0, so I'm not acting on it. Reconcile fills against budgets before any future sizing."
     }
    ],
    "last_exits": {
@@ -3005,14 +3005,14 @@
    ],
    "playbook": {
     "date": "2026-11-03",
-    "made_at": "2026-11-03T15:07-05:00",
+    "made_at": "2026-11-03T15:36-05:00",
     "watch": [
      "SPY",
      "QQQ",
      "IWM"
     ],
     "aggression": "stand_down",
-    "why": "Only $0.02 is settled, so no new trade can be funded before today's close, and both morning VWAP bounces faded to breakeven. Keep SPY, QQQ and IWM on watch for tomorrow, when the $1,003.54 settles, with one slice and the tight bracket.",
+    "why": "Only $0.02 is settled and the session ends in 24 minutes, so no trade can be funded or completed today. Both morning VWAP bounces went flat, and SPY is below VWAP with a down 1-minute trend. Keep the tight bracket and one slice for tomorrow's open, when the $1,003.54 settles.",
     "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,
