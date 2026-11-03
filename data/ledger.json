@@ -14323,5 +14323,100 @@
   "confidence": 3,
   "signals": {},
   "from_plan": false
+ },
+ {
+  "time": "2026-11-03T10:06:31-05:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-99f9520136",
+  "symbol": "RVTY",
+  "underlying": "RVTY",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "qty": 0.8843,
+  "price": 169.9,
+  "cost": 150.24,
+  "stop": 157.62,
+  "why": "RVTY is trading at 169.62, just above its 55-day breakout at 168.90, on 3.7x relative volume and 51% above its 200-day SMA; the 157.62 stop limits risk to about 7% of the position, and it is in the lean-in Broad market sector.",
+  "confidence": 3,
+  "signals": {
+   "rel_volume": 3.68,
+   "roc20_pct": -3.6,
+   "pct_vs_sma50": 17.0,
+   "pct_vs_sma200": 51.3
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-03T10:06:43-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-f754fab9a5",
+  "symbol": "DT",
+  "underlying": "DT",
+  "sector": "Technology",
+  "instrument": "stock",
+  "qty": 2.5364,
+  "price": 47.267885,
+  "cost": 119.89,
+  "stop": 42.87,
+  "why": "DT is a fresh RSI(2) 0.1 washout still 6% above its 200-day, with target 56.80 vs stop 42.87 at about 2.1:1 on the scan price; this is a new setup after yesterday's stop-out, not a re-run of the old trade.",
+  "confidence": 3,
+  "signals": {
+   "rsi2": 0.1,
+   "pct_vs_sma200": 6.2,
+   "pct_vs_sma5": -16.7
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-03T10:06:43-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-cadbcb9a81",
+  "symbol": "ZBRA",
+  "underlying": "ZBRA",
+  "sector": "Technology",
+  "instrument": "stock",
+  "qty": 0.3152,
+  "price": 318.36,
+  "cost": 100.35,
+  "stop": 294.68,
+  "why": "ZBRA is an RSI(2) 0.4 washout 13% above its 200-day, with target 360.24 vs stop 294.68 at about 1.9:1 on the scan price, clearing my 1:1 floor comfortably.",
+  "confidence": 3,
+  "signals": {
+   "rsi2": 0.4,
+   "pct_vs_sma200": 13.0,
+   "pct_vs_sma5": -12.0
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-03T10:06:49-05:00",
+  "type": "trade_opened",
+  "agent": "monkey",
+  "position_id": "pos-595fa17680",
+  "symbol": "CSCO",
+  "underlying": "CSCO",
+  "sector": "Technology",
+  "instrument": "stock",
+  "qty": 3.3534,
+  "price": 102.55,
+  "cost": 343.89,
+  "stop": 95.92,
+  "why": "Dart landed on CSCO",
+  "confidence": 0,
+  "signals": {},
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-03T10:06:57-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY"
+  ],
+  "aggression": "stand_down",
+  "why": "Settled cash is about $0.02 and the single slice is already used, so no new round trip can fund today; the open SPY and XLV scalps keep their existing exits. SPY is flat with a tiny range and a 1-minute downtrend, so there is no clean edge to add."
  }
 ]
