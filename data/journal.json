@@ -1,32 +1,5 @@
 [
  {
-  "time": "2026-10-21T09:36:31-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, IWM",
-  "note": "defensive: Most candidates are trending down on thin ranges and SPY's day range is only 0.19%, so I'm limiting trades to the overnight plan's SPY and IWM setups at half size. Stand down further if the Hormuz/undersea-cable headline is still live or if relative volume stays under 1.5x."
- },
- {
-  "time": "2026-10-21T09:36:37-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "META, NFLX, SPCX, SNDK, MU",
-  "note": "aggressive: Crash radar is calm and SPY is above its 200-day SMA, so I'm running full size. I'm watching the highest-volatility, most-liquid names, with META as the only one above its opening range. Ten slices give more shots at roughly $100 each, and the 0.6% target against a 0.3% stop keeps the reward-to-risk"
- },
- {
-  "time": "2026-10-21T09:56:56-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "IWM",
-  "instrument": "stock",
-  "qty": 0.453,
-  "price": 277.346,
-  "cost": 125.64,
-  "stop": 276.5,
-  "thesis": "VWAP pullback bounce on IWM: 1.2x volume, +0.08% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-10-21T10:03:05-04:00",
   "type": "open",
   "agent": "hyper",
@@ -7246,5 +7219,33 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, IWM",
   "note": "stand_down: Only about $0.02 is settled cash and the single slice has already been used, so no new round trip can be funded today. Both morning scalps have closed at their time limits with no open positions, so there is nothing to manage."
+ },
+ {
+  "time": "2026-11-03T11:36:06-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-03T11:37:03-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "agent: AGCO fill ($330) is far above the $183.9 budget and the marks conflict (0.00 to 0.14). The option is nearly worthless wi"
+ },
+ {
+  "time": "2026-11-03T11:37:04-05:00",
+  "type": "close",
+  "agent": "blackswan",
+  "symbol": "IREN",
+  "qty": 1,
+  "entry": 1.2,
+  "exit": 1.4,
+  "pnl": 1.0,
+  "note": "agent: Staged exit to cut bearish-book concentration toward my 50%-of-equity cap. IREN is the largest mark (about $192) and is ",
+  "opened": "2026-10-14T12:10:57-04:00",
+  "confidence": 3,
+  "thesis": "IREN broke its 20-day low at 32.71, is down 16% over 20 days and sits below its 200-day in a calm radar (15), so a bear put spread capped at $150 targets the breakdown."
  }
 ]
