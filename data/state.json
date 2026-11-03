@@ -11,10 +11,10 @@
  "entries": {
   "date": "2026-11-03",
   "counts": {
-   "monkey": 2,
+   "monkey": 3,
    "scalper": 2,
    "trend": 1,
-   "meanrev": 2
+   "meanrev": 3
   }
  },
  "agents": {
@@ -41,7 +41,7 @@
       "pct_vs_sma200": 18.6
      },
      "sector": "Energy",
-     "last": 66.73,
+     "last": 67.06,
      "high_water": 69.91
     },
     "pos-caf474ebf0": {
@@ -51,7 +51,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.76,
-     "mark": 1.12,
+     "mark": 1.1,
      "expiry": "2026-12-18",
      "strike": 12.0,
      "delta": -0.5,
@@ -70,7 +70,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 11.12,
-     "exit_half_spread": 0.055
+     "exit_half_spread": 0.07
     },
     "pos-85270bdc25": {
      "kind": "stock",
@@ -91,7 +91,7 @@
       "pct_vs_sma200": 47.5
      },
      "sector": "Broad market / other",
-     "last": 13.27,
+     "last": 13.49,
      "high_water": 14.065
     },
     "pos-68c56672f2": {
@@ -113,7 +113,7 @@
       "pct_vs_sma200": 25.0
      },
      "sector": "Health Care",
-     "last": 972.43,
+     "last": 970.69,
      "high_water": 972.43
     },
     "pos-99f9520136": {
@@ -135,7 +135,8 @@
       "pct_vs_sma200": 51.3
      },
      "sector": "Broad market / other",
-     "last": 169.615
+     "last": 168.53,
+     "high_water": 168.53
     }
    },
    "status": "active",
@@ -146,10 +147,6 @@
    "peak": 1229.58,
    "max_dd": 0.2141,
    "notes": [
-    {
-     "date": "2026-10-29",
-     "note": "Only $4.19 is settled, too small for a meaningful breakout entry. Hold all stops. MANH's $47.92 settles next session; then review LNG (above 304.40 on 2.3x+ volume) and ICLR (above 214.62 on 2.7x+ volume) if they still hold their levels."
-    },
     {
      "date": "2026-10-29",
      "note": "Only $4.19 is settled and $47.92 from MANH settles next session, so no meaningful entry is affordable today. Hold all stops. Next session, reassess LNG (above 304.40 on 2.3x+ volume) and ICLR (above 214.62 on 2.7x+ volume) once the proceeds are available."
@@ -305,6 +302,10 @@
     {
      "date": "2026-11-03",
      "note": "Sized at $150 with a 7% stop because roc20 is negative (-3.6%); no Financials candidates were delivered, so the planned Financials triggers stay on watch."
+    },
+    {
+     "date": "2026-11-03",
+     "note": "Penny-stock puts can be illiquid or unlisted, so the system may skip this order; Financials triggers stay on watch with the planned ~$110 sizing, and I'm holding the XLE, AEYE, REGN, and VALE put stops unchanged."
     }
    ],
    "last_exits": {
@@ -838,7 +839,7 @@
    ]
   },
   "meanrev": {
-   "cash": 173.36,
+   "cash": 133.27,
    "reserved": 0.0,
    "positions": {
     "pos-c0db87c0b4": {
@@ -859,7 +860,7 @@
       "pct_vs_sma5": -10.0
      },
      "sector": "Broad market / other",
-     "last": 28.03
+     "last": 28.15
     },
     "pos-b807f1a689": {
      "kind": "stock",
@@ -879,7 +880,7 @@
       "pct_vs_sma5": -17.9
      },
      "sector": "Broad market / other",
-     "last": 208.6
+     "last": 215.03
     },
     "pos-4861098649": {
      "kind": "stock",
@@ -899,7 +900,7 @@
       "pct_vs_sma5": -13.1
      },
      "sector": "Broad market / other",
-     "last": 236.065
+     "last": 240.36
     },
     "pos-e6857da34f": {
      "kind": "stock",
@@ -919,7 +920,7 @@
       "pct_vs_sma5": -6.6
      },
      "sector": "Broad market / other",
-     "last": 139.835
+     "last": 139.74
     },
     "pos-f754fab9a5": {
      "kind": "stock",
@@ -939,7 +940,7 @@
       "pct_vs_sma5": -16.7
      },
      "sector": "Technology",
-     "last": 47.31
+     "last": 46.695
     },
     "pos-cadbcb9a81": {
      "kind": "stock",
@@ -959,7 +960,27 @@
       "pct_vs_sma5": -12.0
      },
      "sector": "Technology",
-     "last": 317.16
+     "last": 326.88
+    },
+    "pos-849a451620": {
+     "kind": "stock",
+     "symbol": "SHOP",
+     "qty": 0.2806,
+     "entry": 142.872,
+     "cost": 40.09,
+     "direction": "long",
+     "stop": 127.83,
+     "atr": 7.359,
+     "opened": "2026-11-03T10:36:26-05:00",
+     "thesis": "SHOP RSI(2) 0.9 washout 9.8% above its 200-day in a calm regime (crash radar 32, SPY above its 200-day); target 158.31 vs stop 127.83 is about 1.07:1 on the scan price, clearing my 1:1 floor, so I'm taking a small starter with the $44 settled cash.",
+     "confidence": 2,
+     "signals": {
+      "rsi2": 0.9,
+      "pct_vs_sma200": 9.8,
+      "pct_vs_sma5": -10.0
+     },
+     "sector": "Communication Services",
+     "last": 142.55
     }
    },
    "status": "active",
@@ -970,10 +991,6 @@
    "peak": 1029.08,
    "max_dd": 0.0324,
    "notes": [
-    {
-     "date": "2026-10-29",
-     "note": "No candidate reaches the 1:1 target-to-stop floor (TEAM ~0.80, WDAY ~0.76, ADP ~0.59, CTSH ~0.63, DT ~0.49). Holding PBR to its 19.90 stop and 25.00 target, keeping $762.86 settled cash idle."
-    },
     {
      "date": "2026-10-29",
      "note": "No candidate reaches the 1:1 target-to-stop floor (TEAM ~0.86 closest, WDAY ~0.71, CTSH ~0.69, ADP ~0.60, DT ~0.45). Hold PBR to its 19.90 stop and 25.00 target, and keep $762.86 settled cash idle."
@@ -1129,6 +1146,10 @@
     {
      "date": "2026-11-03",
      "note": "Only DT and ZBRA clear the 1:1 floor on live scan prices (SHOP ~1.1 is marginal, PLTR/TEAM/CRM are below 1:1); keep about $44 settled cash for the next setup, and watch tech concentration with CHKP and ZBRA."
+    },
+    {
+     "date": "2026-11-03",
+     "note": "Only SHOP clears the 1:1 floor among fresh names; PLTR (~0.9:1) and TEAM (~0.7:1) fail, and DT/ZBRA/HPQ/TWLO/ILMN/CHKP stay held without adds."
     }
    ],
    "last_exits": {
@@ -1490,7 +1511,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-04",
      "credit": 0.21,
-     "mark": 0.23,
+     "mark": 0.29,
      "entry": 0.21,
      "width": 1.0,
      "short_strike": 79.5,
@@ -1512,7 +1533,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.035
+     "exit_half_spread": 0.02
     },
     "pos-1422e3aa6b": {
      "kind": "spread",
@@ -1536,7 +1557,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-04",
      "credit": 0.12,
-     "mark": 0.12,
+     "mark": 0.14,
      "entry": 0.12,
      "width": 1.0,
      "short_strike": 55.0,
@@ -1558,7 +1579,7 @@
       "dte": 35
      },
      "sector": "Financials",
-     "exit_half_spread": 0.08
+     "exit_half_spread": 0.09
     },
     "pos-cc8ae4018f": {
      "kind": "spread",
@@ -1604,7 +1625,7 @@
       "dte": 35
      },
      "sector": "Industrials",
-     "exit_half_spread": 0.115
+     "exit_half_spread": 0.065
     }
    },
    "status": "active",
@@ -1615,10 +1636,6 @@
    "peak": 1000.0,
    "max_dd": 0.057,
    "notes": [
-    {
-     "date": "2026-10-29",
-     "note": "Flat 10/29. SPY 750/749 natural is about 0.20 (blocked), below the 0.25 gate, and its max loss (~$95) breaks the $75 cap. XLF (0.20 mid, on avoid list), TLT (max loss $80, on avoid list), and EEM (avoid list, 0.17) also fail. Recheck SPY bull put only at a natural of 0.25+ with max loss under $75."
-    },
     {
      "date": "2026-10-29",
      "note": "Flat 10/29 11:06. SPY 749/748 is at 0.25 mid, but the last natural was 0.20, and the same order was blocked earlier, so I'm not resubmitting unchanged. Recheck only if a live natural reaches 0.25+ on the $1 width with max loss under $75."
@@ -1774,6 +1791,10 @@
     {
      "date": "2026-11-03",
      "note": "Passed both candidates. XLF 55.5/54.5 and TLT 79/78 duplicate open bull puts on the 12-04 expiry, and XLF at a 0.18 credit against $82 max loss has negative expected value at a 0.27 short delta. Holding the TLT, XLF and IWM spreads against their 2x-mark and 50%-credit exits, and keeping $732 settled"
+    },
+    {
+     "date": "2026-11-03",
+     "note": "Both candidates duplicate open 12-04 bull puts (XLF 55/54, TLT 79.5/78.5), so I'm passing them. Holding the TLT, XLF and IWM spreads against their 2x-mark and 50%-credit exits, and keeping $732 settled cash for a non-duplicate setup at a 0.15 floor."
     }
    ],
    "last_exits": {},
@@ -1834,7 +1855,7 @@
     "settled_cash_at_plan": 732.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 82.0,
+   "min_trade_seen": 77.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -2112,7 +2133,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 753.16
+     "last": 754.235
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2128,7 +2149,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 753.16
+     "last": 754.235
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2144,7 +2165,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 753.16
+     "last": 754.235
     }
    },
    "status": "active",
@@ -2159,7 +2180,7 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 257.79,
+   "cash": 132.29,
    "reserved": 0.0,
    "positions": {
     "pos-bbaf052d51": {
@@ -2177,7 +2198,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 352.78
+     "last": 351.45
     },
     "pos-595fa17680": {
      "kind": "stock",
@@ -2194,7 +2215,24 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 102.38
+     "last": 102.625
+    },
+    "pos-dd647bc5db": {
+     "kind": "stock",
+     "symbol": "ABBV",
+     "qty": 0.4336,
+     "entry": 289.448,
+     "cost": 125.5,
+     "hold_days": 2,
+     "direction": "long",
+     "stop": 275.55,
+     "atr": 6.807,
+     "opened": "2026-11-03T10:36:28-05:00",
+     "thesis": "Dart landed on ABBV",
+     "confidence": 0,
+     "signals": {},
+     "sector": "Health Care",
+     "last": 289.16
     }
    },
    "status": "active",
@@ -2203,7 +2241,7 @@
    "closed": 2,
    "wins": 0,
    "peak": 1000.67,
-   "max_dd": 0.031,
+   "max_dd": 0.0317,
    "notes": [],
    "last_exits": {
     "HUM": "2026-10-20",
@@ -2238,7 +2276,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.42,
+     "mark": 1.33,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2258,7 +2296,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.415,
+     "exit_half_spread": 0.125,
      "peak_mark": 1.6,
      "low_water": 36.35
     },
@@ -2284,7 +2322,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.2,
-     "mark": 1.59,
+     "mark": 1.65,
      "width": 2.0,
      "long_strike": 32.0,
      "short_strike": 30.0,
@@ -2304,7 +2342,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.265,
+     "exit_half_spread": 0.065,
      "peak_mark": 1.69,
      "low_water": 22.22
     },
@@ -2330,7 +2368,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 1.04,
+     "mark": 0.96,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -2350,7 +2388,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.215,
+     "exit_half_spread": 0.07,
      "peak_mark": 1.09,
      "low_water": 16.29
     },
@@ -2376,7 +2414,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 0.97,
+     "mark": 0.99,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2396,7 +2434,7 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.68,
+     "exit_half_spread": 0.7,
      "peak_mark": 1.62,
      "low_water": 123.49
     },
@@ -2422,7 +2460,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0,
+     "mark": 0.01,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2442,7 +2480,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.55,
+     "exit_half_spread": 1.57,
      "peak_mark": 1.9
     }
    },
@@ -2454,10 +2492,6 @@
    "peak": 1000.0,
    "max_dd": 0.4615,
    "notes": [
-    {
-     "date": "2026-10-29",
-     "note": "Exhibition mode blocks new entries. Hold all five bear put spreads to their underlying stops, and reconcile the AGCO $330 fill against the $183.9 budget before any future sizing."
-    },
     {
      "date": "2026-10-29",
      "note": "Exhibition mode blocks new entries, so I'm holding all five bear put spreads to their underlying stops. AGCO marks at 0.02 against a 3.3 entry, so closing it now would recover almost nothing; I'll let it run to its stop or expiry. Reconcile the AGCO $330 fill against the $183.9 budget and the IREN/A"
@@ -2613,6 +2647,10 @@
     {
      "date": "2026-11-03",
      "note": "Exhibition mode: no entries until the thesis review passes. Holding the five bear put spreads to their underlying stops. Reconcile the AGCO $330 fill against the $183.9 budget and its conflicting marks before any sizing, and keep the bearish book under 50% of equity."
+    },
+    {
+     "date": "2026-11-03",
+     "note": "Exhibition mode: no entries until the thesis review passes. Holding all five bear puts to their underlying stops. Reconcile the AGCO fill ($330 vs $183.9 budget, mark ~0.01) and bring the bearish book under 50% of equity (marks are roughly 79% of $637.5 equity now) before any new sizing."
     }
    ],
    "last_exits": {},
@@ -2946,31 +2984,9 @@
    ]
   },
   "scalper": {
-   "cash": 0.02,
+   "cash": 501.79,
    "reserved": 0.0,
    "positions": {
-    "pos-8a497f2b25": {
-     "kind": "stock",
-     "symbol": "SPY",
-     "qty": 0.6653,
-     "entry": 754.046,
-     "cost": 501.67,
-     "play": "scalp",
-     "direction": "long",
-     "stop": 751.82,
-     "atr": 0,
-     "opened": "2026-11-03T09:50:01-05:00",
-     "thesis": "VWAP pullback bounce on SPY: 0.78x volume, +0.07% vs VWAP; target +0.5%, stop -0.3%",
-     "confidence": 3,
-     "signals": {},
-     "sector": "Technology",
-     "setup": "VWAP pullback bounce",
-     "target_pct": 0.5,
-     "stop_pct": 0.3,
-     "max_hold_min": 45,
-     "last": 754.35,
-     "peak_gain": 0.06020852839216939
-    },
     "pos-a9aae6da89": {
      "kind": "stock",
      "symbol": "XLV",
@@ -2990,15 +3006,15 @@
      "target_pct": 0.5,
      "stop_pct": 0.3,
      "max_hold_min": 45,
-     "last": 185.05,
+     "last": 185.08,
      "peak_gain": 0.13845337676663405
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 68,
-   "wins": 31,
+   "closed": 69,
+   "wins": 32,
    "peak": 1006.98,
    "max_dd": 0.0053,
    "notes": [
@@ -3020,7 +3036,7 @@
     "TLT": "2026-10-16",
     "AAPL": "2026-10-29",
     "MSFT": "2026-10-21",
-    "SPY": "2026-11-02",
+    "SPY": "2026-11-03",
     "MU": "2026-10-30",
     "QQQ": "2026-10-29",
     "META": "2026-10-29",
@@ -3035,15 +3051,21 @@
     "KRE": "2026-11-02"
    },
    "joined": "2026-10-14T12:09:57-04:00",
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 501.77,
+     "settles": "2026-11-04",
+     "note": "sold SPY"
+    }
+   ],
    "playbook": {
     "date": "2026-11-03",
-    "made_at": "2026-11-03T10:06-05:00",
+    "made_at": "2026-11-03T10:36-05:00",
     "watch": [
-     "SPY"
+     "XLV"
     ],
     "aggression": "stand_down",
-    "why": "Settled cash is about $0.02 and the single slice is already used, so no new round trip can fund today; the open SPY and XLV scalps keep their existing exits. SPY is flat with a tiny range and a 1-minute downtrend, so there is no clean edge to add.",
+    "why": "Settled cash is about $0.02 and the only slice is used, so no new round trip can be funded today. The open XLV scalp keeps its existing exits and time limit.",
     "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,
