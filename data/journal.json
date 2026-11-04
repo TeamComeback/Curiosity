@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-10-21T14:36:43-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "QQQ",
-  "note": "credit 0.25 not filled"
- },
- {
-  "time": "2026-10-21T14:36:58-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "TQQQ, SNDK, CRWV, MU, META",
-  "note": "aggressive: Settled cash is $0.04, so nothing trades today and this sets up tomorrow. The 0.35% stops got hit on noise, so I'm widening to 0.5% with a 0.8% target to keep the reward-to-risk ratio, and swapping QQQ for NFLX to add a high-range name."
- },
- {
-  "time": "2026-10-21T15:05:58-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-64%)"
- },
- {
-  "time": "2026-10-21T15:36:02-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-65%)"
- },
- {
   "time": "2026-10-21T15:36:28-04:00",
   "type": "playbook",
   "agent": "scalper",
@@ -7103,5 +7075,40 @@
   "opened": "2026-11-04T09:56:24-05:00",
   "confidence": 3,
   "thesis": "VWAP pullback bounce on AMZN: 1.03x volume, +0.76% vs VWAP; target +0.5%, stop -0.3%"
+ },
+ {
+  "time": "2026-11-04T10:36:10-05:00",
+  "type": "error",
+  "agent": "trend",
+  "symbol": "XLE",
+  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
+ },
+ {
+  "time": "2026-11-04T10:36:10-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "CHKP",
+  "qty": 0.7014,
+  "entry": 142.776,
+  "exit": 148.094,
+  "pnl": 3.73,
+  "note": "snap-back (RSI2 68)",
+  "opened": "2026-11-02T14:37:05-05:00",
+  "confidence": 2,
+  "thesis": "CHKP RSI(2) 1.9 washout only 1.1% above its 200-day in a calm regime; live target 152.63 vs stop 133.52 is about 1.11:1, clearing my 1:1 floor, which the prior notes missed because they used stale prices and a Technology tag the scan doesn't show."
+ },
+ {
+  "time": "2026-11-04T10:36:40-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-04T10:37:15-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AAPL, TSLA, SPCX",
+  "note": "defensive: Most of the tape is trending down, so only the names printing up-trends above their opening range and VWAP (AAPL, TSLA, SPCX) are worth watching. Defensive size keeps exposure small with one slice of capacity left, and the 0.5%/0.3% bracket matches what has worked today."
  }
 ]

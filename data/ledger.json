@@ -14976,5 +14976,34 @@
   "opened": "2026-11-04T09:56:24-05:00",
   "why_entered": "VWAP pullback bounce on AMZN: 1.03x volume, +0.76% vs VWAP; target +0.5%, stop -0.3%",
   "why_exited": "gave back a +0.35% gain: out at breakeven"
+ },
+ {
+  "time": "2026-11-04T10:36:10-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-e6857da34f",
+  "symbol": "CHKP",
+  "underlying": "CHKP",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "entry": 142.776,
+  "exit": 148.094,
+  "pnl": 3.73,
+  "return_pct": 3.7,
+  "opened": "2026-11-02T14:37:05-05:00",
+  "why_entered": "CHKP RSI(2) 1.9 washout only 1.1% above its 200-day in a calm regime; live target 152.63 vs stop 133.52 is about 1.11:1, clearing my 1:1 floor, which the prior notes missed because they used stale prices and a Technology tag the scan doesn't show.",
+  "why_exited": "snap-back (RSI2 68)"
+ },
+ {
+  "time": "2026-11-04T10:37:15-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "AAPL",
+   "TSLA",
+   "SPCX"
+  ],
+  "aggression": "defensive",
+  "why": "Most of the tape is trending down, so only the names printing up-trends above their opening range and VWAP (AAPL, TSLA, SPCX) are worth watching. Defensive size keeps exposure small with one slice of capacity left, and the 0.5%/0.3% bracket matches what has worked today."
  }
 ]
