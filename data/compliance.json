@@ -2539,8 +2539,30 @@
     "settled_cash": 811.0,
     "reason": "ok",
     "outcome": "not filled"
+   },
+   {
+    "time": "2026-11-04T13:06:39-05:00",
+    "agent": "trend",
+    "symbol": "AAPL",
+    "instrument": "stock",
+    "side": "buy",
+    "amount": 95.0,
+    "settled_cash": 100.56,
+    "reason": "ok",
+    "outcome": "filled: 0.2682 at 354.122"
    }
   ],
-  "denied": []
+  "denied": [
+   {
+    "time": "2026-11-04T13:06:52-05:00",
+    "agent": "volsell",
+    "symbol": "IWM",
+    "instrument": "spread",
+    "side": "buy",
+    "amount": 81.0,
+    "settled_cash": 811.0,
+    "reason": "already holding IWM"
+   }
+  ]
  }
 }
