@@ -1,29 +1,5 @@
 [
  {
-  "time": "2026-10-21T16:40:20-04:00",
-  "type": "recap",
-  "note": "A quiet, calm-regime day (crash radar 16). Black Swan & Co. lost $70 (-9.04%) and is down 29.55% overall, while Trend Co. still leads the race at $1,048.13. Realized P&L across the 17 closed trades was +$5.42, with 7 wins and 10 losses."
- },
- {
-  "time": "2026-10-21T16:40:21-04:00",
-  "type": "scorecard",
-  "agent": "trend",
-  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -0.50%"
- },
- {
-  "time": "2026-10-21T16:40:33-04:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "After-close review: keep. Settled cash is still $6.38, so nothing in the scan is affordable as a stock and the plan's entry conditions are unchanged. All open positions remain above or below their stops as planned, and XLE's close at 67.96 is still above its 65.77 stop.",
-  "symbol": "APA"
- },
- {
-  "time": "2026-10-21T16:40:33-04:00",
-  "type": "scorecard",
-  "agent": "meanrev",
-  "note": "Plan graded: 0 of 0 picks moved the planned way"
- },
- {
   "time": "2026-10-21T16:40:44-04:00",
   "type": "plan",
   "agent": "meanrev",
@@ -7117,5 +7093,33 @@
   "opened": "2026-11-04T10:00:32-05:00",
   "confidence": 3,
   "thesis": "VWAP pullback bounce on SPY: 0.78x volume, +0.24% vs VWAP; target +0.5%, stop -0.3%"
+ },
+ {
+  "time": "2026-11-04T11:06:03-05:00",
+  "type": "error",
+  "agent": "trend",
+  "symbol": "XLE",
+  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
+ },
+ {
+  "time": "2026-11-04T11:06:34-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-04T11:08:22-05:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "XLF",
+  "note": "credit not filled at 0.20, 0.18, 0.17, 0.15 (mid 0.20, natural 0.15, floor 0.15)"
+ },
+ {
+  "time": "2026-11-04T11:08:31-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AAPL, TSLA",
+  "note": "stand_down: All three slices are already used by today's round trips (GOOGL, AMZN, SPY), so no new entries are possible. Most of the tape is trending down and SPY is below VWAP, so I'm standing down and keeping AAPL and TSLA on watch for the next session."
  }
 ]
