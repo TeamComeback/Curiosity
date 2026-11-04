@@ -1,31 +1,5 @@
 [
  {
-  "time": "2026-10-22T09:55:07-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "MU",
-  "instrument": "stock",
-  "qty": 0.093,
-  "price": 902.132,
-  "cost": 83.9,
-  "stop": 898.3,
-  "thesis": "VWAP pullback bounce on MU: 0.74x volume, +0.98% vs VWAP; target +0.6%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-22T09:57:08-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "QQQ",
-  "instrument": "stock",
-  "qty": 0.176,
-  "price": 714.134,
-  "cost": 125.69,
-  "stop": 711.99,
-  "thesis": "VWAP pullback bounce on QQQ: 1.17x volume, +0.12% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-10-22T09:57:09-04:00",
   "type": "open",
   "agent": "hyper",
@@ -7139,5 +7113,19 @@
   "agent": "scalper",
   "symbol": "SPY, TSLA",
   "note": "stand_down: All three of today's slices are already used by the GOOGL, AMZN, and SPY round trips, so no new entries are possible this session. I'm holding SPY and TSLA for the next session: SPY is above its opening range and TSLA is trading 1.45% above VWAP on an uptrend."
+ },
+ {
+  "time": "2026-11-04T13:35:48-05:00",
+  "type": "error",
+  "agent": "trend",
+  "symbol": "XLE",
+  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
+ },
+ {
+  "time": "2026-11-04T13:36:19-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
  }
 ]
