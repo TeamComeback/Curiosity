@@ -1,45 +1,5 @@
 [
  {
-  "time": "2026-10-22T10:01:21-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "CRWV",
-  "instrument": "stock",
-  "qty": 1.4018,
-  "price": 59.86,
-  "cost": 83.91,
-  "stop": 59.65,
-  "thesis": "VWAP pullback bounce on CRWV: 0.7x volume, +0.98% vs VWAP; target +0.6%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-22T10:03:22-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.1638,
-  "price": 767.438,
-  "cost": 125.71,
-  "stop": 765.15,
-  "thesis": "VWAP pullback bounce on SPY: 0.64x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-22T10:03:25-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "CRWV",
-  "qty": 1.4018,
-  "entry": 59.86,
-  "exit": 59.5,
-  "pnl": -0.5,
-  "note": "stop (-0.53%)",
-  "opened": "2026-10-22T10:01:21-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on CRWV: 0.7x volume, +0.98% vs VWAP; target +0.6%, stop -0.3%"
- },
- {
   "time": "2026-10-22T10:06:07-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -7092,6 +7052,27 @@
  },
  {
   "time": "2026-11-04T14:36:59-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-04T15:06:02-05:00",
+  "type": "error",
+  "agent": "trend",
+  "symbol": "XLE",
+  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
+ },
+ {
+  "time": "2026-11-04T15:06:33-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "PLD",
+  "note": "breakdown failed (underlying back above stop)"
+ },
+ {
+  "time": "2026-11-04T15:07:04-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
   "symbol": "AGCO",
