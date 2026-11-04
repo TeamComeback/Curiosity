@@ -15148,5 +15148,180 @@
   ],
   "aggression": "defensive",
   "why": "Today's three round trips netted about +$1, and the tape is mixed, with many names trading against their 1-minute trend and wide ranges. Defensive sizing on the most liquid index and mega-cap names, with the 1.5x relative-volume gate kept, is the disciplined way to test whether the VWAP-bounce edge "
+ },
+ {
+  "time": "2026-11-04T16:41:16-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-11-05",
+  "decision": "revise",
+  "why": "The plan is stale: XLE and AEYE are already closed, RVTY is sold, and REGN's 935 stop now sits above its 931.18 price. EW's earnings beat and MCK's guidance raise add Health Care and Broad market setups.",
+  "summary": "Exit REGN at the open since price is below its 935 stop. Hold MMM, XLV, AAPL and the VALE put on live stops. Buy only confirmed 2x-volume closes above trigger levels in Health Care and Broad market, with about $110 per entry.",
+  "watchlist": [
+   {
+    "symbol": "MCK",
+    "setup": "Earnings beat and FY guidance raise, breakout level 1030.05",
+    "trigger": "Close above 1030.05 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout after beat and raise, level 96.08",
+    "trigger": "Close above 96.08 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "EXEL",
+    "setup": "Health Care breakout candidate, roc20 +24%",
+    "trigger": "Close above 72.05 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "ULTA",
+    "setup": "Health Care breakout, level 656.00, roc20 +21%",
+    "trigger": "Close above 656.00 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-04T16:41:16-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Health Care",
+   "Broad market / other"
+  ],
+  "avoid": [
+   "Energy",
+   "Consumer Staples",
+   "Technology"
+  ],
+  "why": "Broad market / other has the only positive realized P&L (+$93). Health Care has strong live breakouts but no closed trades, so it stays on a short leash. Energy and Technology have lost money for me.",
+  "expires": "2026-11-18"
+ },
+ {
+  "time": "2026-11-04T16:41:51-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-11-05",
+  "decision": "revise",
+  "why": "HPQ and CHKP closed for gains, and today's scan now shows several energy washouts clearing 1:1 on scan prices, with about $321 settling by tomorrow.",
+  "summary": "At the open, use the settled cash (about $321) to buy up to four energy washouts that still clear 1:1 on live prices, and hold the six open positions to their stops and targets.",
+  "watchlist": [
+   {
+    "symbol": "CNQ",
+    "setup": "RSI(2) 3.6 washout, 7.2% above 200-day, about 1.3:1 to SMA5",
+    "trigger": "Buy at open if price is within 2% of 49.60 and the 2-ATR stop still gives at least 1:1 to 53.60",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "XLE",
+    "setup": "RSI(2) 4.5 washout, 7.7% above 200-day, about 1.2:1 to SMA5",
+    "trigger": "Buy at open if price is within 2% of 63.54 and the stop still gives at least 1:1 to 67.24",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "OXY",
+    "setup": "RSI(2) 3.4 washout, 1.8% above 200-day, about 1.1:1 to SMA5",
+    "trigger": "Buy at open only if price is within 1.5% of 57.33 and the stop still gives at least 1:1 to 61.09",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "XOP",
+    "setup": "RSI(2) 3.6 washout, 4.5% above 200-day, about 1.3:1 to SMA5",
+    "trigger": "Buy at open if price is within 2% of 179.26 and the stop still gives at least 1:1 to 193.52",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-04T16:41:51-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "lean_in": [
+   "Energy"
+  ],
+  "avoid": [
+   "Technology"
+  ],
+  "why": "Today's scan shows about 8 energy washouts clearing 1:1 versus very few tech setups, and Technology is currently 0-for-1 in my results (-6.10).",
+  "expires": "2026-11-18"
+ },
+ {
+  "time": "2026-11-04T16:42:03-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-11-05",
+  "decision": "revise",
+  "why": "The pre-market plan's XLF re-entry (56/55) never happened: XLF closed at a loss, and the fresh scan now shows XLF IV/RV at 0.89, below my 0.95 floor. The IWM put-spread notes conflict with the single IWM bear call in the positions list, and the scorecard is weak at 29%, so I'm cutting the watchlist to nothing and shrinking the sector lean.",
+  "summary": "No new entries tomorrow. Hold TLT 79.5/78.5 bull put and IWM 290/291 bear call to their exits, confirm with the broker what IWM positions actually exist, and keep the $811 settled cash idle until a non-duplicate spread clears IV/RV 0.95 with at least 0.15 credit.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-04T16:42:03-05:00",
+  "type": "focus",
+  "agent": "volsell",
+  "lean_in": [
+   "Broad market / other"
+  ],
+  "avoid": [
+   "Energy",
+   "Materials",
+   "Technology"
+  ],
+  "why": "Financials is dropped from lean-in: the only trade there lost $16.5 and XLF's fresh IV/RV of 0.89 fails my floor. Broad market is supported only by the IWM position and its scan IV/RV of 1.14, which is a thin signal. My scorecard hit rate of 29% over 14 picks argues against a broad focus.",
+  "expires": "2026-11-18"
+ },
+ {
+  "time": "2026-11-04T16:42:15-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-11-05",
+  "decision": "revise",
+  "why": "Today's VWAP entries were taken at 0.78x-1.03x relative volume, well under the 1.5x minimum, so the gate still isn't being enforced and the plan's core filter was never applied. Today's net was about +$1.00 on 3 round trips, but that is too small and too unfiltered to count as evidence, so I'm tightening entry conditions rather than widening them.",
+  "summary": "Trade only VWAP pullbacks in Consumer Discretionary or Communication Services names that show at least 1.5x relative volume and hold VWAP on the pullback, using one slice (about $125) per setup. Log the relative volume at entry for every trade, and stand aside on any setup that fails the gate.",
+  "watchlist": [
+   {
+    "symbol": "AMZN",
+    "setup": "VWAP pullback continuation after the +6% gap, only if the pullback is on declining volume and holds VWAP",
+    "trigger": "Relative volume at or above 1.5x on the morning impulse, then a pullback that holds VWAP and turns up. Enter on the reclaim, target +0.5%, stop -0.3%, 45-minute limit.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "GOOGL",
+    "setup": "VWAP pullback in Communication Services after the +3.25% move on Arm/GoogleBook news; the earlier win came from this setup",
+    "trigger": "Relative volume at or above 1.5x, and a pullback that holds VWAP. If the gate is not met, skip it.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-04T16:42:15-05:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Consumer Discretionary",
+   "Communication Services"
+  ],
+  "avoid": [
+   "Technology"
+  ],
+  "why": "Communication Services is +$2.24 over 5 trades (60% win rate), and Consumer Discretionary is +$1.82 over 7 trades (57%). Both are small samples, but they are the only sectors with positive P&L and a win rate above 50%. Technology is 45 trades at 44% with -$0.72, so it stays out.",
+  "expires": "2026-11-18"
  }
 ]
