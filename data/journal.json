@@ -1,44 +1,5 @@
 [
  {
-  "time": "2026-10-21T16:40:44-04:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "After-close review: keep. The fresh scan adds no candidate that clears the plan's 1:1 reward-to-risk floor. DXCM is the only name with RSI(2) under the 10 entry threshold (4.6), but its SMA5 target sits about 0.87:1 from entry against a 2.5 ATR stop, so the plan still holds.",
-  "symbol": ""
- },
- {
-  "time": "2026-10-21T16:40:44-04:00",
-  "type": "scorecard",
-  "agent": "volsell",
-  "note": "Plan graded: 1 of 2 picks moved the planned way, avg +0.02%"
- },
- {
-  "time": "2026-10-21T16:40:55-04:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "After-close review: revise. The fresh scan puts IWM at 276.46 with IV/RV 1.31, so the 284-285 short-strike guide from the 275.8 close is too close to the money. A 0.20-delta call is nearer 289-291, which is where the live credits have been, and they have stayed at 0.19-0.21, below the 0.25 gate. The gate stays unchanged. Today's notes say I 'took' a spread, but there are no open positions or today's trades and the balance is",
-  "symbol": "IWM, XLE"
- },
- {
-  "time": "2026-10-21T16:40:55-04:00",
-  "type": "scorecard",
-  "agent": "blackswan",
-  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -4.29%"
- },
- {
-  "time": "2026-10-21T16:41:11-04:00",
-  "type": "focus",
-  "agent": "blackswan",
-  "note": "Leaning into Communication Services; avoiding Technology. Communication Services has the freshest confirmed breakdowns today (NFLX, XLC, T, plus UBER near breakdown), while Technology is already overweight in open shorts with no closed results to prove the focus. Avoid Technology for new setups until bearish debit falls below the 50% guideline or a positio"
- },
- {
-  "time": "2026-10-21T16:41:11-04:00",
-  "type": "plan",
-  "agent": "blackswan",
-  "note": "After-close review: keep. Nothing has closed and cash is still $143.50 settled, so bearish debit remains about 80% of equity against the 50% guideline. Today's fresh breakdowns are mostly in Communication Services, which gives a new idea for when cash frees up, but it doesn't justify new risk now.",
-  "symbol": "NFLX, VRT"
- },
- {
   "time": "2026-10-21T16:41:11-04:00",
   "type": "scorecard",
   "agent": "scalper",
@@ -7121,5 +7082,60 @@
   "agent": "scalper",
   "symbol": "AAPL, TSLA",
   "note": "stand_down: All three slices are already used by today's round trips (GOOGL, AMZN, SPY), so no new entries are possible. Most of the tape is trending down and SPY is below VWAP, so I'm standing down and keeping AAPL and TSLA on watch for the next session."
+ },
+ {
+  "time": "2026-11-04T11:36:01-05:00",
+  "type": "error",
+  "agent": "trend",
+  "symbol": "XLE",
+  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
+ },
+ {
+  "time": "2026-11-04T11:36:04-05:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "AEYE",
+  "qty": 3.3573,
+  "entry": 10.45,
+  "exit": 12.4,
+  "pnl": 6.55,
+  "note": "trailing stop on underlying",
+  "opened": "2026-10-28T11:06:21-04:00",
+  "confidence": 3,
+  "thesis": "AEYE is 1.9% above its 55-day breakout at 10.23 on 6.7x relative volume, so this is a fresh breakout, but it is extended (roc20 +52%), so I'm sizing small with the 9.64 stop limiting risk to about $2.7."
+ },
+ {
+  "time": "2026-11-04T11:36:35-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-04T11:36:43-05:00",
+  "type": "open",
+  "agent": "trend",
+  "symbol": "XLV",
+  "instrument": "stock",
+  "qty": 0.5845,
+  "price": 188.296,
+  "cost": 110.06,
+  "stop": 181.99,
+  "thesis": "XLV is trading at 188.19, just above its 55-day breakout at 187.98, on 2.9x relative volume with roc20 +10.1% and 18.4% above its 200-day SMA. The 181.99 stop limits risk to about 3.3%, and Health Care is a lean-in sector with the cleanest breakout that doesn't depend on the unconfirmed EXEL/EW triggers.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-04T11:37:56-05:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "XLF",
+  "note": "credit not filled at 0.17, 0.16, 0.15 (mid 0.17, natural 0.14, floor 0.15)"
+ },
+ {
+  "time": "2026-11-04T11:38:07-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MSFT, TSLA",
+  "note": "stand_down: All three slices are used by today's round trips (GOOGL, AMZN, SPY), so no new entries are possible. Most of the tape is weak versus VWAP and SPY is below VWAP, so I'm standing down and holding MSFT (above its opening range, trending up) and TSLA (above its opening range) for the next session."
  }
 ]
