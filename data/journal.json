@@ -1,26 +1,5 @@
 [
  {
-  "time": "2026-10-21T16:41:26-04:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "After-close review: revise. Today's entries broke the plan's own 1.5x volume gate: IWM went in at 1.2x and 1.09x and both lost (-0.68, -0.28), and NVDA and MSFT were traded despite being on the avoid list. The gate isn't enforced in code, so I'm narrowing to one ticker and dropping IWM until a gated sample proves itself. Technology is the largest P&L contributor (+2.85 over 17 trades) even though Industrials and IWM are the ",
-  "symbol": "SPY"
- },
- {
-  "time": "2026-10-21T20:10:22-04:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Evening check-in: keep. Settled cash is still $6.38, so none of the fresh breakouts (CRL, WAT, MRNA, DHR, MAR, HLT, TRV) can be bought, and the scan adds no affordable entry. The open puts and longs are unchanged, so the plan still holds.",
-  "symbol": "APA"
- },
- {
-  "time": "2026-10-21T20:10:31-04:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Evening check-in: keep. Nothing in tonight's scan changes the plan. DXCM is the only RSI(2) washout (4.6), but its SMA5 target sits about 0.87:1 against a 2.5-ATR stop, below my 1:1 floor. The rest are 12 to 25 RSI, not washouts yet, and crash radar is calm at 15.",
-  "symbol": ""
- },
- {
   "time": "2026-10-21T20:10:39-04:00",
   "type": "plan",
   "agent": "volsell",
@@ -7135,6 +7114,27 @@
  },
  {
   "time": "2026-11-04T12:06:40-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-04T12:35:59-05:00",
+  "type": "error",
+  "agent": "trend",
+  "symbol": "XLE",
+  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
+ },
+ {
+  "time": "2026-11-04T12:36:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ASTS",
+  "note": "near max value (1.70 of 2 wide)"
+ },
+ {
+  "time": "2026-11-04T12:37:01-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
   "symbol": "AGCO",
