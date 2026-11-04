@@ -106,7 +106,23 @@ def agent_equity(agent, prices):
 # ---------------- execution ----------------
 def _fill(b, sub, seconds=20):
     o = b.wait_fill(sub["id"], seconds)
-    return o if o.get("status") == "filled" else None
+    if o.get("status") == "filled":
+        return o
+    # A partial fill that then got cancelled still moved real shares. Hand it back so the
+    # ledger books what filled; dropping it is how a firm's ledger drifts from the account.
+    try:
+        if float(o.get("filled_qty") or 0) > 0 and o.get("filled_avg_price"):
+            return o
+    except (TypeError, ValueError):
+        pass
+    return None
+
+
+def _available_qty(err):
+    """Alpaca's 'insufficient qty' 403 says how many shares are actually there."""
+    import re as _re
+    m = _re.search(r'"available"\s*:\s*"([0-9.]+)"', str(err))
+    return float(m.group(1)) if m and "40310000" in str(err) else None
 
 
 def open_trade(b, state, aid, cand, order, ctx):
@@ -273,11 +289,31 @@ def close_trade(b, state, aid, pid, reason, qty=None):
     if qty and pos["kind"] != "spread" and 0 < qty < pos["qty"]:
         nq = qty
     if pos["kind"] == "stock":
-        o = _fill(b, b.submit_stock(pos["symbol"], nq, "sell", cid("x" + aid)))
-        if not o:
+        missing = 0.0
+        try:
+            sub = b.submit_stock(pos["symbol"], nq, "sell", cid("x" + aid))
+        except AlpacaError as e:
+            avail = _available_qty(e)
+            if avail is None or avail >= nq:
+                raise
+            # The account holds fewer shares than the ledger: an earlier exit filled part-way
+            # and wasn't booked. Sell what's really there and book the gap at today's price.
+            missing = round(nq - avail, 4)
+            nq = avail
+            store.journal({"type": "reconcile", "agent": aid, "symbol": pos["symbol"],
+                           "note": f"ledger had {pos['qty']} shares, account had {avail}; "
+                                   f"booking {missing} as sold earlier at the current price"})
+            if nq <= 0:
+                sub = None
+            else:
+                sub = b.submit_stock(pos["symbol"], nq, "sell", cid("x" + aid))
+        o = _fill(b, sub) if sub else None
+        if not o and not missing:
             return store.journal({"type": "exit_unfilled", "agent": aid, "symbol": pos["symbol"], "note": reason})
-        exit_px = float(o["filled_avg_price"])
-        nq = float(o.get("filled_qty") or nq)
+        px_now = float(o["filled_avg_price"]) if o else float(b.latest_prices([pos["symbol"]]).get(pos["symbol"]) or pos["entry"])
+        filled = float(o.get("filled_qty") or nq) if o else 0.0
+        nq = round(filled + missing, 4)
+        exit_px = px_now
         proceeds = round(exit_px * nq, 2)
     elif pos["kind"] == "debit_spread":
         legs = [{"symbol": pos["legs"][0]["symbol"], "ratio_qty": "1", "side": "sell", "position_intent": "sell_to_close"},
