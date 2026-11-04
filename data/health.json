@@ -1,6 +1,6 @@
 {
- "time": "2026-11-04T11:35-05:00",
- "ok": true,
+ "time": "2026-11-04T12:06-05:00",
+ "ok": false,
  "checks": [
   {
    "name": "GitHub secrets",
@@ -33,5 +33,9 @@
    "detail": "Connected: the Crash Radar includes economy data."
   }
  ],
- "crash": null
+ "crash": {
+  "error": "AlpacaError: POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: 4.8287, available: 1.8287)\",\"symbol\":\"XLE\"}",
+  "where": "File \"/home/runner/work/Curiosity/Curiosity/broker.py\", line 34, in _req raise AlpacaError(f\"{method} {url} -> {r.status_code}: {r.text[:300]}\")",
+  "time": "2026-11-04T12:06-05:00"
+ }
 }
