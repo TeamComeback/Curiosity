@@ -323,24 +323,16 @@
    },
    "plan": {
     "for_day": "2026-11-04",
-    "made_at": "2026-11-03T16:40-05:00",
-    "session": "After-close review",
+    "made_at": "2026-11-03T20:10-05:00",
+    "session": "Evening check-in",
     "decision": "revise",
-    "why": "RVTY has slipped back to 163.64, below its 168.90 breakout level, so the breakout has failed and I'm exiting. Financials has no realized trades for me, and my last Financials picks all fell (avg -1.42%), so I'm dropping it from the lean-in list and leaning on Health Care, where REGN and EXEL are working.",
-    "summary": "Exit RVTY at the open because the breakout failed. Hold XLE, AEYE, REGN and the VALE put on their stops. Look for entries only on confirmed closes above trigger with at least 2x volume, at $110 or less each, starting with ICE, EXEL and EW.",
+    "why": "RVTY's breakout has failed (back below the 168.90 level at 163.64), so it exits at the open. REGN's stop moves up to lock in gains, and I'm dropping ICE because Financials has no realized edge for me and my last Financials picks fell.",
+    "summary": "Exit RVTY at the open and raise REGN's stop to 935. Hold XLE, AEYE and the VALE put on their live stops, with no adds. Look for new entries only in Health Care (EXEL, EW) on confirmed closes above trigger with at least 2x volume, sized at $110 or less.",
     "watchlist": [
      {
-      "symbol": "ICE",
-      "setup": "Financials near breakout, 0.8% below its 55-day high of 172.32",
-      "trigger": "Close above 172.32 on at least 2x relative volume",
-      "instrument": "stock",
-      "max_dollars": 110,
-      "conviction": 2
-     },
-     {
       "symbol": "EXEL",
-      "setup": "Health Care breakout today, 24% roc20, closed just above its 72.05 level",
-      "trigger": "Next-day close above today's high with at least 2x volume, or a hold of 72.05 on a pullback",
+      "setup": "Health Care breakout on the daily scan, roc20 +24%; the scan shows price just under the 72.05 level, so it needs a confirmed reclaim",
+      "trigger": "Next-day close above today's high with at least 2x relative volume, or a hold of 72.05 on a pullback",
       "instrument": "stock",
       "max_dollars": 110,
       "conviction": 3
@@ -357,34 +349,34 @@
     "position_plans": [
      {
       "symbol": "XLE",
-      "plan": "Hold 4.8287 shares; exit at open if XLE closes below the 66.05 stop."
+      "plan": "Hold 4.8287 shares on the live 66.05 stop; exit at the open if XLE closes below 66.05. Do not add to energy."
      },
      {
       "symbol": "AEYE",
-      "plan": "Hold 3.3573 shares; keep the 12.89 stop. Do not add while extended."
+      "plan": "Hold 3.3573 shares on the live 12.89 stop (the 9.64 figure in the thesis is stale). Do not add while extended."
      },
      {
       "symbol": "REGN",
-      "plan": "Hold 0.0542 shares; raise the stop from 919.32 to 935 to lock in gains. Use the live stop, not the plan's 914.50."
+      "plan": "Raise the stop from 919.32 to 935 to lock in gains on the 924.44 entry. Hold 0.0542 shares."
      },
      {
       "symbol": "RVTY",
-      "plan": "Exit the full 0.8843 shares at the open: the breakout failed, price is back below 168.90 and near 163.64."
+      "plan": "Exit the full 0.8843 shares at the open: the breakout failed and price is back below 168.90, near 163.64."
      },
      {
       "symbol": "VALE261218P00012000",
-      "plan": "Hold; exit if VALE closes above 11.79. The 12.26 figure is a premium value, not an underlying stop."
+      "plan": "Hold the put. Exit if VALE closes above 11.79 (the underlying breakdown level). The 12.09 stop is a premium value, not an underlying price."
      }
     ],
     "avoid": [
-     "KPTI: sub-$0.10 illiquid name, put blocked twice as unaffordable or unlisted",
+     "KPTI: sub-$0.10 illiquid underlying; the put was blocked twice as unaffordable or unlisted",
      "Energy new entries: 0 of 3 realized wins and oil is falling on peace hopes",
-     "Consumer Staples: losing history and no setups",
+     "Consumer Staples: losing history and no current setups",
+     "ICE: dropped from the watchlist; Financials is no longer a lean-in sector for me and my recent Financials picks fell",
      "APLD: broke down with roc20 -34%",
-     "IREN: Technology breakdown with negative realized results",
-     "SOXL and CAT: trend against longs; CAT needs to reclaim 679.88"
+     "IREN: Technology breakdown with negative realized results"
     ],
-    "brainstorm": "Test a 2 ATR trailing stop on REGN-style winners instead of a fixed stop, to see whether it gives back less after breakouts.",
+    "brainstorm": "Test whether a 2x-volume close above the 55-day high in Communication Services (DIS broke out today at 113.78) produces a better hit rate than the Health Care setups, before adding it to the lean-in list.",
     "revisions": [
      {
       "at": "2026-11-03T16:40-05:00",
@@ -408,6 +400,24 @@
         "setup": "Health Care near breakout, 0.5% below 95.72, roc20 +10%"
        }
       ]
+     },
+     {
+      "at": "2026-11-03T20:10-05:00",
+      "session": "Evening check-in",
+      "decision": "revise",
+      "why": "RVTY's breakout has failed (back below the 168.90 level at 163.64), so it exits at the open. REGN's stop moves up to lock in gains, and I'm dropping ICE because Financials has no realized edge for me and my last Financials picks fell.",
+      "watch": [
+       {
+        "symbol": "EXEL",
+        "instrument": "stock",
+        "setup": "Health Care breakout on the daily scan, roc20 +24%; the scan shows price just un"
+       },
+       {
+        "symbol": "EW",
+        "instrument": "stock",
+        "setup": "Health Care near breakout, 0.5% below 95.72, roc20 +10%"
+       }
+      ]
      }
     ],
     "settled_cash_at_plan": 390.83,
@@ -416,15 +426,15 @@
    "unsettled": [],
    "focus": {
     "lean_in": [
-     "Broad market / other",
-     "Health Care"
+     "Health Care",
+     "Broad market / other"
     ],
     "avoid": [
      "Energy",
      "Consumer Staples"
     ],
-    "why": "Broad market / other is the only sector with positive realized P&L (+$90.56). Health Care has the strongest current breakouts (REGN open gain, EXEL, EW). Financials has no realized trades for me and my last Financials picks all fell, so it is dropped from lean-in. Energy is 0 for 3 and oil is fallin",
-    "set_at": "2026-11-03T16:40-05:00",
+    "why": "Broad market / other is my only sector with positive realized P&L (+$90.56 over 4 trades). Health Care has the strongest current breakouts (REGN open gain, EXEL, EW) but no realized trades yet, so it stays on a short leash. Energy is 0 for 3 with oil falling, and Consumer Staples has losing history ",
+    "set_at": "2026-11-03T20:10-05:00",
     "expires": "2026-11-17"
    },
    "scorecard": [
@@ -1128,16 +1138,16 @@
    },
    "plan": {
     "for_day": "2026-11-04",
-    "made_at": "2026-11-03T16:41-05:00",
-    "session": "After-close review",
+    "made_at": "2026-11-03T20:10-05:00",
+    "session": "Evening check-in",
     "decision": "revise",
-    "why": "The old watchlist names (DDOG, OKTA, TEAM) are absent from today's fresh scan, so their levels are unverified, and no unheld name in the scan clears 1:1 on SMA5 target versus a 2-ATR stop.",
-    "summary": "Hold all seven open positions to their live stops and targets, and make no new entries until T+1 proceeds (about $129) settle. Only DVN is a conditional buy, if it opens at or below 47.48 with RSI(2) under 10.",
+    "why": "Today's stop on DT and new entries in DT, ZBRA and SHOP changed the book, so the old hold-seven plan is stale. Settled cash is only $4.09 until tomorrow's proceeds settle.",
+    "summary": "Hold all seven open positions to their live stops and targets, add no new trades until the $129 settles tomorrow, and consider DVN only if it opens at or below 47.48 with RSI(2) under 10.",
     "watchlist": [
      {
       "symbol": "DVN",
-      "setup": "RSI(2) 8.8 washout, 3.3% above 200-day; SMA5 target 50.17 vs 2-ATR stop about 44.78",
-      "trigger": "Buy at open only if price is at or below 47.48 (about 1:1) and RSI(2) is under 10",
+      "setup": "RSI(2) 8.8 washout, 3.3% above 200-day; SMA5 target 50.17 vs ~2-ATR stop near 44.78",
+      "trigger": "Buy at open only if price is at or below 47.48 and RSI(2) is under 10",
       "instrument": "stock",
       "max_dollars": 4.09,
       "conviction": 2
@@ -1166,18 +1176,18 @@
      },
      {
       "symbol": "ZBRA",
-      "plan": "Hold to stop 294.68 and target 360.24; exit at open if it closes below 294.68 or after 7 days."
+      "plan": "Hold to stop 294.68 and target 360.24; exit at open if it closes below 294.68 or after 7 days. Negative memory-price headline, so no adds."
      }
     ],
     "avoid": [
-     "PLTR (about 0.6:1 on SMA5 target vs 2-ATR stop)",
+     "PLTR (about 0.6:1 target-to-stop)",
      "CRM, PANW, EWJ (about 0.5:1 or worse)",
      "CSX, PBR, SLB, SAP, KMB, CDW, BP (below 1:1)",
-     "AAPL, EWT (about 0.75-0.9:1, below floor)",
-     "DDOG, OKTA, TEAM (not in fresh scan; levels unverified, dropped)",
+     "AAPL, EWT (below 1:1)",
+     "VEEV (only getting oversold, not a washout)",
      "Adding to any open position (no edge shown)"
     ],
-    "brainstorm": "Log live target-to-stop ratios for every scanned name each day to test whether the SMA5 target is too tight for the 1:1 floor.",
+    "brainstorm": "",
     "revisions": [
      {
       "at": "2026-11-03T16:41-05:00",
@@ -1191,10 +1201,23 @@
         "setup": "RSI(2) 8.8 washout, 3.3% above 200-day; SMA5 target 50.17 vs 2-ATR stop about 44"
        }
       ]
+     },
+     {
+      "at": "2026-11-03T20:10-05:00",
+      "session": "Evening check-in",
+      "decision": "revise",
+      "why": "Today's stop on DT and new entries in DT, ZBRA and SHOP changed the book, so the old hold-seven plan is stale. Settled cash is only $4.09 until tomorrow's proceeds settle.",
+      "watch": [
+       {
+        "symbol": "DVN",
+        "instrument": "stock",
+        "setup": "RSI(2) 8.8 washout, 3.3% above 200-day; SMA5 target 50.17 vs ~2-ATR stop near 44"
+       }
+      ]
      }
     ],
     "settled_cash_at_plan": 4.09,
-    "budgets_clamped": 1
+    "budgets_clamped": 0
    },
    "unsettled": [
     {
@@ -1206,8 +1229,8 @@
    "focus": {
     "lean_in": [],
     "avoid": [],
-    "why": "Only 6 closed trades with 1 per sector, and sector tags are inconsistent (DT is tagged both Technology and Broad market), so no focus is set.",
-    "set_at": "2026-11-03T16:41-05:00",
+    "why": "Only 7 closed trades spread across sectors, and sector tags conflict (DT is tagged both Technology and Broad market), so there is no reliable evidence for a focus.",
+    "set_at": "2026-11-03T20:10-05:00",
     "expires": "2026-11-17"
    },
    "scorecard": [
@@ -1747,16 +1770,16 @@
    "last_exits": {},
    "plan": {
     "for_day": "2026-11-04",
-    "made_at": "2026-11-03T16:41-05:00",
-    "session": "After-close review",
+    "made_at": "2026-11-03T20:11-05:00",
+    "session": "Evening check-in",
     "decision": "keep",
-    "why": "Nothing in tonight's scan produces a fillable, non-duplicate spread with enough credit to justify new risk. Today's only candidates are XLF (already held), TLT (duplicate expiry) and EEM (illiquid), and the expected value at about 0.25 delta and 0.15-0.19 credit on 1-wide spreads is negative.",
-    "summary": "No new entries. Hold TLT 79.5/78.5 bull put, XLF 55/54 bull put and IWM 290/291 bear call to their exits, and keep the $732 settled cash idle. Only add a non-duplicate, uncorrelated 1-wide spread at roughly 0.26 credit or better (about 1:3 or better reward-to-risk at the target delta).",
+    "why": "The fresh scan doesn't change the picture: the only bull-put candidates in the scan are already held (XLF, TLT), and the other IV/RV-rich names fail on liquidity (EEM) or poor payoff (XLE, GDX, SLV). Holding to exits is still the best use of the open risk.",
+    "summary": "No new entries. Hold the TLT 79.5/78.5 bull put, XLF 55/54 bull put and IWM 290/291 bear call to their exits at the 50%-credit, 2x-mark and stop-close levels, and keep the $732 settled cash idle for a non-duplicate setup at 0.15+ credit.",
     "watchlist": [],
     "position_plans": [
      {
       "symbol": "TLT",
-      "plan": "Hold the 79.5/78.5 bull put. TLT closed 81.08, roughly 2% above the short strike. Exit at open if TLT closes below 80.0 on a rising-yield day, if the spread marks at 2x entry (about 0.42), or buy back at 50% of credit (about 0.105). Confirm the actual quantity with the broker, since the position list shows one spread and the notes mention a possible second fill. Do not add."
+      "plan": "Hold the 79.5/78.5 bull put. TLT closed 81.08, about 2% above the short strike. Exit at open if TLT closes below 80.0 on a rising-yield day, if the spread marks at 2x entry (about 0.42), or buy back at 50% of credit (about 0.105). Confirm with the broker whether there is one spread or two, since the position list shows one but the notes mention a possible second fill. Do not add."
      },
      {
       "symbol": "XLF",
@@ -1764,24 +1787,31 @@
      },
      {
       "symbol": "IWM",
-      "plan": "Hold the 290/291 bear call. IWM closed 279.36, about 3.9% below the short strike. Exit at open if IWM closes above 287, if the spread marks at 2x entry (about 0.44), or buy back at 50% of credit (about 0.11). Do not add."
+      "plan": "Hold the 290/291 bear call. IWM closed about 279.4 (the scan shows 279.83, so use the broker mark), roughly 3.7% below the short strike. Exit at open if IWM closes above 287, if the spread marks at 2x entry (about 0.44), or buy back at 50% of credit (about 0.11). Do not add."
      }
     ],
     "avoid": [
-     "SPY: no clear trend, 1.7% below its 50-day, and no confirmed credit above the floor.",
-     "QQQ: stand-aside trend with AI-credit and tech-selloff gap risk; Technology is on the avoid list.",
-     "XLE: IV/RV of 1.07 does not pay for two-way Iran/Hormuz headline gap risk.",
+     "SPY: no clear trend, 1.7% below its 50-day, and IV/RV of 1.48 with no confirmed credit above the floor.",
+     "QQQ: stand-aside trend, IV/RV only 1.09, and Technology gap risk from AI-credit news.",
+     "XLE: IV/RV of about 1.09 does not pay for two-way Iran/Hormuz headline gap risk.",
      "GDX and SLV: IV/RV near 1.0 and bear-call credit around 0.15-0.18 on $85 max loss give poor payoff.",
-     "EEM: illiquid, so no reliable fill despite IV/RV 1.42.",
-     "TLT, XLF and IWM: already open, so no added exposure; duplicate 12-04 spreads add rate and financials risk."
+     "EEM: IV/RV 1.38 looks rich, but it is illiquid, so there is no reliable fill.",
+     "TLT, XLF and IWM: already open, so no added exposure; a duplicate 12-04 bull put adds rate and financials risk."
     ],
-    "brainstorm": "Test a credit-based entry gate instead of a delta-only gate: only sell 1-wide spreads when credit is at least 0.26 at a 0.25 short delta (breakeven at the target win rate). Track whether it shows positive expectancy before relaxing the 0.15 floor.",
+    "brainstorm": "Test a stricter entry filter: only take 1-wide spreads with at least 0.20 credit and IV/RV above 1.3, so the setup pays for its gap risk. Track it in the scorecard before loosening the 0.15 floor.",
     "revisions": [
      {
       "at": "2026-11-03T16:41-05:00",
       "session": "After-close review",
       "decision": "keep",
       "why": "Nothing in tonight's scan produces a fillable, non-duplicate spread with enough credit to justify new risk. Today's only candidates are XLF (already held), TLT (duplicate expiry) and EEM (illiquid), and the expected value at about 0.25 delta and 0.15-0.19 credit on 1-wide spreads is negative.",
+      "watch": []
+     },
+     {
+      "at": "2026-11-03T20:11-05:00",
+      "session": "Evening check-in",
+      "decision": "keep",
+      "why": "The fresh scan doesn't change the picture: the only bull-put candidates in the scan are already held (XLF, TLT), and the other IV/RV-rich names fail on liquidity (EEM) or poor payoff (XLE, GDX, SLV). Holding to exits is still the best use of the open risk.",
       "watch": []
      }
     ],
@@ -1800,8 +1830,8 @@
      "Materials",
      "Technology"
     ],
-    "why": "Today's scan shows XLF at IV/RV 1.30 with a bull-put trend, and IWM (broad market) at 1.34 with a filled spread. Energy has poor payoff and headline gap risk, Materials has poor credit, and Technology has AI-credit gap risk. My own sector results are empty, so this focus rests on scan evidence only.",
-    "set_at": "2026-11-03T16:41-05:00",
+    "why": "Scan evidence supports this: XLF IV/RV 1.32 with a bull-put trend, and IWM (broad market) IV/RV 1.37. My own sector results are empty and my scorecard hit rate is 29%, so this rests on scan evidence only. Energy has headline gap risk, Materials has poor credit, and Technology has AI-credit gap risk.",
+    "set_at": "2026-11-03T20:11-05:00",
     "expires": "2026-11-17"
    },
    "scorecard": [
@@ -2969,28 +2999,35 @@
    },
    "plan": {
     "for_day": "2026-11-04",
-    "made_at": "2026-11-03T16:41-05:00",
-    "session": "After-close review",
+    "made_at": "2026-11-03T20:11-05:00",
+    "session": "Evening check-in",
     "decision": "revise",
-    "why": "Today's SPY and XLV entries logged 0.78x and 0.72x relative volume, well under the 1.5x minimum in my plan, so the volume gate is not being enforced and my plan's main filter has never worked as written. Net result was +$0.15 on $0.16 of exposure, which is noise, and the 44 Technology trades at -$0.24 are still the largest negative sample.",
-    "summary": "Stand aside tomorrow. No live setups clear the plan's conditions: the volume gate can't be relied on, and the one candidate (SPY VWAP reclaim) is a 0.5%-target scalp on a $1,000 account. Do not act on any entry below 1.5x relative volume, and log every entry's relative volume so I can check whether the gate is actually enforced.",
+    "why": "Today's two entries (SPY at 0.78x and XLV at 0.72x relative volume) went through despite the 1.5x minimum, so the volume gate isn't being enforced. Both trades were flat time-limit exits. The fresh scan is dominated by AMD's post-earnings move and Technology headlines, which are event trades rather than scalp setups, so there is still nothing worth buying.",
+    "summary": "Stand aside again. No watchlist entries. Before any future entry, confirm in the logs that relative volume is at least 1.5x, and treat any entry below that as a bug to fix, not a trade to take.",
     "watchlist": [],
     "position_plans": [],
     "avoid": [
-     "Technology and chip names (AMD, SNDK, INTC, MU, AVGO, NVDA, SMH, QQQ, TSM, SPCX, LITE, MRVL): 44 trades at -$0.24 and a 45% win rate; AMD's post-earnings gap is an event move, not a scalp setup.",
-     "Communication Services (META, GOOGL): headline-driven, thin sample, 50% win rate.",
-     "Any SPY or XLV VWAP pullback below 1.5x relative volume: today's two entries at 0.72x and 0.78x show the gate is not enforced, and the pullbacks were flat.",
+     "Any VWAP pullback below 1.5x relative volume (today's SPY 0.78x and XLV 0.72x entries were flat; the gate is not being enforced in code).",
+     "AMD, SNDK, INTC, MU, AVGO, NVDA, SMH, QQQ, TSM, SPCX, LITE, MRVL: Technology has lost money over 44 trades (45% win rate) and AMD's earnings gap is an event move, not a scalp setup.",
+     "META, GOOGL: Communication Services is headline-driven with a thin, 50%-win-rate sample.",
      "Oversold bounces in names down 5% or more (INTC, SNDK, LITE): event-driven, not scalp setups.",
      "IWM and any ETF pullback without confirmed volume (IWM at 0.57x today).",
-     "TSLA, AMZN, MSFT while Iran, Fed and NATO headlines are live."
+     "TSLA, AMZN, MSFT while the Iran, Fed and NATO headlines are live."
     ],
-    "brainstorm": "Test an opening-range breakout on SPY only: a close above the first 15-minute high on at least 1.5x volume, with the same 0.5% target and 0.3% stop. Log every trigger, including ones I skip, so the test is measured rather than assumed.",
+    "brainstorm": "Make the 1.5x relative-volume gate a hard check in code, with a log line that records the rel-volume value at the moment of entry. Then compare the next 20 trades with and without the gate before tuning anything else.",
     "revisions": [
      {
       "at": "2026-11-03T16:41-05:00",
       "session": "After-close review",
       "decision": "revise",
       "why": "Today's SPY and XLV entries logged 0.78x and 0.72x relative volume, well under the 1.5x minimum in my plan, so the volume gate is not being enforced and my plan's main filter has never worked as written. Net result was +$0.15 on $0.16 of exposure, which is noise, and the 44 Technology trades at -$0.24 are still the largest negative sample.",
+      "watch": []
+     },
+     {
+      "at": "2026-11-03T20:11-05:00",
+      "session": "Evening check-in",
+      "decision": "revise",
+      "why": "Today's two entries (SPY at 0.78x and XLV at 0.72x relative volume) went through despite the 1.5x minimum, so the volume gate isn't being enforced. Both trades were flat time-limit exits. The fresh scan is dominated by AMD's post-earnings move and Technology headlines, which are event trades rather than scalp setups, so there is still nothing worth buying.",
       "watch": []
      }
     ],
@@ -3005,8 +3042,8 @@
      "Technology",
      "Communication Services"
     ],
-    "why": "Consumer Discretionary is +$1.78 over 6 trades (50% win rate), which is positive but too small to prove an edge. Technology is 44 trades at -$0.24 and Communication Services is headline-driven with a thin sample. Focus is kept only because the evidence is directionally better there, not because it i",
-    "set_at": "2026-11-03T16:41-05:00",
+    "why": "Consumer Discretionary is +$1.78 over 6 trades (50% win rate), which is directionally the best of my sectors but too small to call an edge. Technology is 44 trades at -$0.24 (45% win rate), and Communication Services is 4 trades with a 50% win rate and headline-driven moves. The lean-in is kept, not",
+    "set_at": "2026-11-03T20:11-05:00",
     "expires": "2026-11-17"
    },
    "scorecard": [
