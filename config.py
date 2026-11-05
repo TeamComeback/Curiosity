@@ -38,7 +38,7 @@ RACE = {
 
 # Competing agents (each keeps its specialty) + a non-competing benchmark.
 AGENTS = {
-    "trend":   {"name": "Trend Co.", "competing": True,
+    "trend":   {"name": "Trend Co.", "competing": True, "max_open_positions": 6,
                 "instruments": ["stock", "call", "put"],
                 "style": "Trend follower. Trades breakouts to new highs in established uptrends (or "
                          "breakdowns via puts), lets winners run with trailing stops, cuts losers fast."},

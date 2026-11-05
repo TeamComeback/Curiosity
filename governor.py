@@ -36,6 +36,9 @@ def can_trade_today(state, aid):
         return False, why
     if R.get("max_open_positions") and len(agent["positions"]) >= R["max_open_positions"]:
         return False, "max open positions"
+    cap = config.AGENTS.get(aid, {}).get("max_open_positions")
+    if cap and len(agent["positions"]) >= cap:
+        return False, f"at its {cap}-position cap: waiting for exits to free cash"
     return True, "ok"
 
 
@@ -74,6 +77,9 @@ def outcome(aid, symbol, result):
 def _check_order(state, aid, cand, instrument, cost):
     """Validate one agent order. cost = cash the trade consumes (premium, shares, or spread collateral)."""
     agent = state["agents"][aid]
+    cap = config.AGENTS[aid].get("max_open_positions")
+    if cap and len(agent["positions"]) >= cap:
+        return False, f"at its {cap}-position cap"
     if instrument not in config.AGENTS[aid]["instruments"]:
         return False, f"{instrument} is outside this agent's specialty"
     if instrument in ("call", "put", "spread", "debit_spread") and instrument not in R["options_allowed"]:
