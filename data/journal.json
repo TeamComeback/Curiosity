@@ -1,46 +1,5 @@
 [
  {
-  "time": "2026-10-22T14:06:16-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-73%)"
- },
- {
-  "time": "2026-10-22T14:06:31-04:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "DXCM",
-  "instrument": "stock",
-  "qty": 3.2201,
-  "price": 77.67,
-  "cost": 250.11,
-  "stop": 71.98,
-  "thesis": "DXCM RSI(2) 2.5 washout 4.6% above its 200-day; live target 83.13 vs stop 71.98 is about 0.97:1, near my 1:1 floor, and the calm regime supports a snap-back.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-22T14:07:06-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "XLE",
-  "note": "credit 0.26 not filled"
- },
- {
-  "time": "2026-10-22T14:36:05-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-78%)"
- },
- {
-  "time": "2026-10-22T15:06:06-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-78%)"
- },
- {
   "time": "2026-10-22T15:36:16-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6948,5 +6907,46 @@
   "agent": "volsell",
   "symbol": "XLF",
   "note": "credit not filled at 0.17 (mid 0.17, natural 0.06, floor 0.15)"
+ },
+ {
+  "time": "2026-11-05T11:36:24-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "PLD",
+  "note": "spread stop (-45%)"
+ },
+ {
+  "time": "2026-11-05T11:36:56-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-05T11:37:04-05:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "AAPL",
+  "qty": 0.2682,
+  "entry": 354.122,
+  "exit": 346.76,
+  "pnl": -1.98,
+  "note": "agent: AAPL closed back below its 351.68 breakout (mark 346.91), so the breakout thesis failed. Cutting the loss now, as the ga",
+  "opened": "2026-11-04T13:06:39-05:00",
+  "confidence": 3,
+  "thesis": "AAPL is breaking above its 55-day high at 351.68 (price 354.16) on 2.15x relative volume, 19% above its 200-day SMA in a calm, uptrending tape; the 340.76 stop caps risk near 3.8%, and Broad market is a lean-in sector."
+ },
+ {
+  "time": "2026-11-05T11:37:25-05:00",
+  "type": "unfilled",
+  "agent": "trend",
+  "symbol": "DJTU261218P00002000"
+ },
+ {
+  "time": "2026-11-05T11:37:48-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, MSFT, TSM, LQD",
+  "note": "defensive: The tape is broadly weak (SPY -2.6%, QQQ -3.2%, most megacaps red), so I'm staying defensive with half-size VWAP bounces only. I'm keeping the most liquid names that are holding near VWAP and trending up, and dropping the overnight GOOGL/META/AMZN premises, which the tape no longer supports."
  }
 ]
