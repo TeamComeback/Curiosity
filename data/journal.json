@@ -1,42 +1,5 @@
 [
  {
-  "time": "2026-10-22T15:36:48-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, TQQQ, NFLX, TSLA, AMZN",
-  "note": "aggressive: Only about 14 minutes remain before the 3:50 flatten and $41.85 is spendable, so I'm cutting to 4 slices for slightly larger shots and a short 10-minute hold. The watch list favors names with a clear trend (NFLX, TSLA, AMZN, SNDK) and oversold 3x ETFs (SOXL, TQQQ) that could bounce off VWAP."
- },
- {
-  "time": "2026-10-22T16:40:25-04:00",
-  "type": "recap",
-  "note": "Trend Co. carried the day: a CIFR put closed for +$82.50 and the firm finished up 11.9%, while the scalpers churned through 16 small trades and lost money. Of 17 closed trades, 5 won and 12 lost, for $78.80 realized, and the index (SPY) fell 1.4%."
- },
- {
-  "time": "2026-10-22T16:40:25-04:00",
-  "type": "scorecard",
-  "agent": "trend",
-  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -0.38%"
- },
- {
-  "time": "2026-10-22T16:41:00-04:00",
-  "type": "plan_error",
-  "agent": "trend",
-  "note": "After-close review failed (JSONDecodeError); kept the previous plan"
- },
- {
-  "time": "2026-10-22T16:41:00-04:00",
-  "type": "scorecard",
-  "agent": "meanrev",
-  "note": "Plan graded: 0 of 0 picks moved the planned way"
- },
- {
-  "time": "2026-10-22T16:41:10-04:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "After-close review: revise. I now hold DXCM, which the no-position plan didn't cover, so I need a management plan for it. Its live reward-to-risk has slipped to about 0.75:1 (about 0.96:1 at entry), but the stop is unchanged and the setup is still valid, so I'll hold it without adding. No new candidate clears the 1:1 floor or the 0.95 deep-washout exception.",
-  "symbol": ""
- },
- {
   "time": "2026-10-22T16:41:10-04:00",
   "type": "scorecard",
   "agent": "volsell",
@@ -6948,5 +6911,53 @@
   "agent": "scalper",
   "symbol": "LQD",
   "note": "VWAP pullback bounce skipped: 0.18x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-05T12:06:29-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "PLD",
+  "note": "spread stop (-43%)"
+ },
+ {
+  "time": "2026-11-05T12:07:00-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-05T12:07:08-05:00",
+  "type": "rule_block",
+  "agent": "trend",
+  "symbol": "KORU",
+  "note": "no put affordable within $120.00"
+ },
+ {
+  "time": "2026-11-05T12:07:17-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "XOP",
+  "instrument": "stock",
+  "qty": 0.507,
+  "price": 177.506,
+  "cost": 90.0,
+  "stop": 166.62,
+  "thesis": "XOP is an RSI(2) 2.9 washout 3.5% above its 200-day in a calm regime, sitting inside the game-plan trigger (177.48 vs 182.85 max); target 189.11 vs stop 166.62 is about 1.07:1, clearing my 1:1 floor.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-05T12:08:03-05:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "XLF",
+  "note": "credit not filled at 0.17, 0.15 (mid 0.17, natural 0.12, floor 0.15)"
+ },
+ {
+  "time": "2026-11-05T12:08:13-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AMZN, GOOGL, GOOG, META, MSFT",
+  "note": "defensive: The tape is still broadly red (SPY -3.3%, QQQ -4.1%), so I'm keeping half-size VWAP bounces only. AMZN and GOOGL/GOOG are holding at or above VWAP on an up 1-minute trend, META is above VWAP, and LQD is the only name above its opening range, so these are the few setups with some structure."
  }
 ]

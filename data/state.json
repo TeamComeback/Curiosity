@@ -10,7 +10,9 @@
  },
  "entries": {
   "date": "2026-11-05",
-  "counts": {}
+  "counts": {
+   "meanrev": 1
+  }
  },
  "agents": {
   "trend": {
@@ -24,7 +26,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.76,
-     "mark": 0.81,
+     "mark": 0.88,
      "expiry": "2026-12-18",
      "strike": 12.0,
      "delta": -0.5,
@@ -43,7 +45,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 10.99,
-     "exit_half_spread": 0.065
+     "exit_half_spread": 0.1
     },
     "pos-e2383464ac": {
      "kind": "stock",
@@ -64,7 +66,7 @@
       "pct_vs_sma200": 17.3
      },
      "sector": "Materials",
-     "last": 192.61,
+     "last": 191.47,
      "high_water": 195.445
     },
     "pos-6c2cb8d4ba": {
@@ -86,7 +88,7 @@
       "pct_vs_sma200": 18.4
      },
      "sector": "Health Care",
-     "last": 188.28,
+     "last": 187.385,
      "high_water": 191.93
     }
    },
@@ -98,10 +100,6 @@
    "peak": 1229.58,
    "max_dd": 0.2141,
    "notes": [
-    {
-     "date": "2026-10-30",
-     "note": "Settled cash is $2.01, below any candidate's cost, so no entries. The game plan's $52.11 settled-cash figure conflicts with live balance data, and live numbers win. Holding all stops; AEYE stays at 12.89 because the planned 12.65 would loosen it. Reassess TRGP/TXN/ADI/XOM/LNG triggers once MANH proc"
-    },
     {
      "date": "2026-10-30",
      "note": "Settled cash is $2.01, below any candidate's cost, so no entries. Holding all stops; AEYE stays at 12.89 because the planned 12.65 would loosen it. Reassess TRGP/TXN/ADI once proceeds settle."
@@ -257,6 +255,10 @@
     {
      "date": "2026-11-05",
      "note": "Cut AAPL on a failed breakout rather than waiting for the stop; keep most settled cash for confirmed 2x-volume breakdowns, since the MCK/EW/DIS watchlist has no delivered candidates."
+    },
+    {
+     "date": "2026-11-05",
+     "note": "Took the KORU put as a fresh 2x+ volume breakdown; DJTU was already blocked, so I didn't resubmit it. Keep reserve cash for confirmed breakdowns and avoid sub-$1 names like CIFG."
     }
    ],
    "last_exits": {
@@ -852,7 +854,7 @@
    ]
   },
   "meanrev": {
-   "cash": 321.38,
+   "cash": 231.38,
    "reserved": 0.0,
    "positions": {
     "pos-b807f1a689": {
@@ -873,7 +875,7 @@
       "pct_vs_sma5": -17.9
      },
      "sector": "Broad market / other",
-     "last": 203.45
+     "last": 199.88
     },
     "pos-4861098649": {
      "kind": "stock",
@@ -893,7 +895,7 @@
       "pct_vs_sma5": -13.1
      },
      "sector": "Broad market / other",
-     "last": 214.76
+     "last": 212.29
     },
     "pos-f754fab9a5": {
      "kind": "stock",
@@ -913,7 +915,7 @@
       "pct_vs_sma5": -16.7
      },
      "sector": "Technology",
-     "last": 45.56
+     "last": 44.91
     },
     "pos-cadbcb9a81": {
      "kind": "stock",
@@ -933,7 +935,7 @@
       "pct_vs_sma5": -12.0
      },
      "sector": "Technology",
-     "last": 334.83
+     "last": 328.175
     },
     "pos-849a451620": {
      "kind": "stock",
@@ -953,7 +955,7 @@
       "pct_vs_sma5": -10.0
      },
      "sector": "Communication Services",
-     "last": 144.27
+     "last": 143.84
     },
     "pos-44420269b9": {
      "kind": "stock",
@@ -973,7 +975,27 @@
       "pct_vs_sma5": -9.9
      },
      "sector": "Broad market / other",
-     "last": 82.04
+     "last": 80.54
+    },
+    "pos-a8d9355cb0": {
+     "kind": "stock",
+     "symbol": "XOP",
+     "qty": 0.507,
+     "entry": 177.506,
+     "cost": 90.0,
+     "direction": "long",
+     "stop": 166.62,
+     "atr": 5.429,
+     "opened": "2026-11-05T12:07:17-05:00",
+     "thesis": "XOP is an RSI(2) 2.9 washout 3.5% above its 200-day in a calm regime, sitting inside the game-plan trigger (177.48 vs 182.85 max); target 189.11 vs stop 166.62 is about 1.07:1, clearing my 1:1 floor.",
+     "confidence": 3,
+     "signals": {
+      "rsi2": 2.9,
+      "pct_vs_sma200": 3.5,
+      "pct_vs_sma5": -6.2
+     },
+     "sector": "Energy",
+     "last": 177.48
     }
    },
    "status": "active",
@@ -984,10 +1006,6 @@
    "peak": 1029.08,
    "max_dd": 0.0412,
    "notes": [
-    {
-     "date": "2026-10-30",
-     "note": "[weekly] Don't overfit to 4 wins. Idle cash at a strict 1:1 floor is what slows compounding, so adjust the stop distance a little and leave the entry RSI and sector-avoid discipline alone. Re-evaluate after about 10 closed trades."
-    },
     {
      "date": "2026-11-02",
      "note": "Only ILMN clears the 1:1 floor today; DT, TEAM, CHKP and ZS all sit near 0.6-0.84:1, so pass on them and keep the rest of the cash idle."
@@ -1143,6 +1161,10 @@
     {
      "date": "2026-11-05",
      "note": "No entries: no live candidate clears my 1:1 target-to-stop floor (SU ~0.64, PBR ~0.64, SU/PSX ~0.57, ZS ~0.53, URI ~0.75, MPC ~0.66). The game-plan energy names (CNQ, XOP, AR, OXY) aren't in today's candidate list, so their triggers can't fire. Hold the six open positions to their stops and targets."
+    },
+    {
+     "date": "2026-11-05",
+     "note": "Only XOP cleared 1:1 today (OXY ~0.82, BP ~0.74, MPC ~0.79, ZS ~0.63, URI ~0.98). Keep the remaining ~$231 settled for a fresh washout that clears 1:1 on live prices."
     }
    ],
    "last_exits": {
@@ -1597,7 +1619,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-04",
      "credit": 0.21,
-     "mark": 0.15,
+     "mark": 0.11,
      "entry": 0.21,
      "width": 1.0,
      "short_strike": 79.5,
@@ -1619,7 +1641,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.03
+     "exit_half_spread": 0.035
     },
     "pos-cc8ae4018f": {
      "kind": "spread",
@@ -1643,7 +1665,7 @@
      "structure": "bear call spread",
      "expiry": "2026-12-04",
      "credit": 0.22,
-     "mark": 0.27,
+     "mark": 0.12,
      "entry": 0.22,
      "width": 1.0,
      "short_strike": 290.0,
@@ -1665,7 +1687,7 @@
       "dte": 35
      },
      "sector": "Industrials",
-     "exit_half_spread": 0.06
+     "exit_half_spread": 0.055
     }
    },
    "status": "active",
@@ -1676,10 +1698,6 @@
    "peak": 1000.0,
    "max_dd": 0.057,
    "notes": [
-    {
-     "date": "2026-10-30",
-     "note": "Pass at 15:07: the only fresh candidates are EEM (natural about 0.01, illiquid, blocked twice) and IWM 290/291 and XLF 54.5/53.5, which duplicate open positions. Hold the 700 settled cash and don't double exposure to IWM, XLF or TLT."
-    },
     {
      "date": "2026-10-30",
      "note": "Pass at 15:37: SLV is a poor-payoff Materials trade ($0.15 credit on $85 max loss), EEM has no fillable credit, and IWM/TLT/XLF duplicate open positions. Hold the $700 settled cash and watch the XLF mark against its 2x stop."
@@ -1835,6 +1853,10 @@
     {
      "date": "2026-11-05",
      "note": "Passed XLF 56/55 bull put: 0.16 credit on 84 max loss is about 0.19 credit-to-risk at 25 delta, which is negative EV, and XLF fills have been failing. TLT and IWM are duplicates of open spreads, so they stay on their manual exits."
+    },
+    {
+     "date": "2026-11-05",
+     "note": "Skipped IWM 287/288 and TLT 80/79 as duplicate underlyings of open spreads; XLF is the only non-duplicate setup clearing the 0.15 credit floor, so it gets one contract."
     }
    ],
    "last_exits": {
@@ -1908,7 +1930,7 @@
     "settled_cash_at_plan": 811.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 77.0,
+   "min_trade_seen": 74.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -2209,7 +2231,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 745.85
+     "last": 740.16
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2225,7 +2247,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 745.85
+     "last": 740.16
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2241,7 +2263,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 745.85
+     "last": 740.16
     }
    },
    "status": "active",
@@ -2250,7 +2272,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1001.41,
-   "max_dd": 0.0439,
+   "max_dd": 0.044,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -2314,14 +2336,14 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.54,
+     "mark": 1.61,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
      "cost": 135.0,
      "play": "weak_stock",
      "direction": "short",
-     "stop": 43.68,
+     "stop": 43.21,
      "atr": 4.288,
      "opened": "2026-10-14T12:06:32-04:00",
      "thesis": "ASTS broke its 46.26 20-day low, sits below its 200-day after a Piper downgrade, and the radar is calm, so a bear put spread with a $150 cap is a targeted breakdown bet.",
@@ -2334,9 +2356,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.74,
+     "exit_half_spread": 0.76,
      "peak_mark": 1.62,
-     "low_water": 30.815
+     "low_water": 30.35
     },
     "pos-ebf1f3ff74": {
      "kind": "debit_spread",
@@ -2360,7 +2382,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 1.28,
+     "mark": 1.37,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -2380,7 +2402,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.225,
+     "exit_half_spread": 0.125,
      "peak_mark": 1.47,
      "low_water": 13.245
     },
@@ -2406,7 +2428,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 0.82,
+     "mark": 0.86,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2426,7 +2448,7 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.18,
+     "exit_half_spread": 0.355,
      "peak_mark": 1.62,
      "low_water": 123.49
     },
@@ -2472,7 +2494,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.42,
+     "exit_half_spread": 1.71,
      "peak_mark": 1.9
     }
    },
@@ -2484,10 +2506,6 @@
    "peak": 1000.0,
    "max_dd": 0.4615,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "Exhibition mode blocks new entries, so I'm holding all five bear put spreads to their underlying stops. Once the thesis review passes, reconcile the AGCO fill ($330 vs $183.9 budget) and its mark (feed 0.47 vs notes 0 to 0.50) before any sizing, and keep the bearish book under 50% of equity."
-    },
     {
      "date": "2026-11-02",
      "note": "Exhibition mode: no entries. Holding all five bear put spreads to their underlying stops. Once the thesis review passes, reconcile the AGCO fill ($330 vs $183.9 budget) and its mark before any sizing, and keep the bearish book under 50% of equity."
@@ -2643,6 +2661,10 @@
     {
      "date": "2026-11-05",
      "note": "Exhibition mode: no entries until the thesis review passes. Holding ASTS, APLD and PLD to their underlying stops. AGCO is marked at 0 with a fill of about $330 against a $183.9 budget, so size future trades to actual fills."
+    },
+    {
+     "date": "2026-11-05",
+     "note": "Exhibition mode, no entries. Holding ASTS, APLD, PLD to their underlying stops. Size future trades to actual fills; AGCO cost about $330 against a $183.9 budget."
     }
    ],
    "last_exits": {
@@ -3027,16 +3049,17 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-05",
-    "made_at": "2026-11-05T11:37-05:00",
+    "made_at": "2026-11-05T12:08-05:00",
     "watch": [
-     "SPY",
-     "QQQ",
+     "AMZN",
+     "GOOGL",
+     "GOOG",
+     "META",
      "MSFT",
-     "TSM",
      "LQD"
     ],
     "aggression": "defensive",
-    "why": "The tape is broadly weak (SPY -2.6%, QQQ -3.2%, most megacaps red), so I'm staying defensive with half-size VWAP bounces only. I'm keeping the most liquid names that are holding near VWAP and trending up, and dropping the overnight GOOGL/META/AMZN premises, which the tape no longer supports.",
+    "why": "The tape is still broadly red (SPY -3.3%, QQQ -4.1%), so I'm keeping half-size VWAP bounces only. AMZN and GOOGL/GOOG are holding at or above VWAP on an up 1-minute trend, META is above VWAP, and LQD is the only name above its opening range, so these are the few setups with some structure.",
     "slices": 2,
     "target_pct": 0.5,
     "stop_pct": 0.3,
