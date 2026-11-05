@@ -88,7 +88,7 @@ def intraday(d):
             "avgvol": d["volume"].rolling(20, min_periods=10).mean(), "orb_high": float(d["high"].iloc[:15].max())}
 
 
-def find_setup(sym, d, price, p, defensive=False, prof=PROF):
+def find_setup(sym, d, price, p, defensive=False, prof=PROF, skips=None):
     if d is None or len(d) < 20 or not price:
         return None
     ind = intraday(d)
@@ -103,7 +103,10 @@ def find_setup(sym, d, price, p, defensive=False, prof=PROF):
     up = ind["ema9"].iloc[-1] > ind["ema21"].iloc[-1]
     found = None
     if up and float(d["low"].iloc[-4:].min()) <= v * 1.0015 and price > float(d["high"].iloc[-2]):
-        found = ("VWAP pullback bounce", 2 + relv)
+        if relv >= p["min_rel_volume"]:          # hard volume gate, same bars as the entry
+            found = ("VWAP pullback bounce", 2 + relv)
+        elif skips is not None:
+            skips.append({"symbol": sym, "setup": "VWAP pullback bounce", "rel_volume": round(relv, 2)})
     elif not defensive and price > ind["orb_high"] and float(d["close"].iloc[-4:-1].max()) <= ind["orb_high"] * 1.001 \
             and relv >= p["min_rel_volume"]:
         found = ("opening-range breakout", 3 + relv)
@@ -297,9 +300,17 @@ def tick(b, state, aid="scalper"):
     if hhmm < prof["first_entry"] or hhmm > prof["no_new_after"] or mult == 0:
         return traded
     slice_dollars = round(day["equity"] / max(int(p["slices"]), 1) * mult, 2)
-    found = sorted([f for f in (find_setup(s, session(bars.get(s)), prices.get(s), p, prof=prof,
+    skips = []
+    found = sorted([f for f in (find_setup(s, session(bars.get(s)), prices.get(s), p, prof=prof, skips=skips,
                                            defensive=not prof["forced_aggression"] and pb.get("aggression") == "defensive")
                                 for s in watch_list(state, aid) if s not in held) if f], key=lambda f: -f["score"])
+    if skips:                                # log low-volume VWAP signals once per symbol per day
+        seen = day.setdefault("low_volume_skips", [])
+        for sk in skips:
+            if sk["symbol"] not in seen:
+                seen.append(sk["symbol"])
+                store.journal({"type": "skip", "agent": aid, "symbol": sk["symbol"],
+                               "note": f"{sk['setup']} skipped: {sk['rel_volume']}x volume < {p['min_rel_volume']}x"})
     for best in found[:prof["entries_per_tick"]]:
         avail = governor.available(agent)
         if avail < max(slice_dollars * 0.5, 20) or not governor.can_trade_today(state, aid)[0]:
