@@ -24,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.76,
-     "mark": 0.85,
+     "mark": 0.95,
      "expiry": "2026-12-18",
      "strike": 12.0,
      "delta": -0.5,
@@ -43,7 +43,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 10.99,
-     "exit_half_spread": 0.045
+     "exit_half_spread": 0.095
     },
     "pos-e2383464ac": {
      "kind": "stock",
@@ -64,7 +64,7 @@
       "pct_vs_sma200": 17.3
      },
      "sector": "Materials",
-     "last": 192.77,
+     "last": 191.6,
      "high_water": 195.445
     },
     "pos-6c2cb8d4ba": {
@@ -86,7 +86,7 @@
       "pct_vs_sma200": 18.4
      },
      "sector": "Health Care",
-     "last": 190.4,
+     "last": 189.8,
      "high_water": 191.93
     },
     "pos-251f69e184": {
@@ -108,7 +108,7 @@
       "pct_vs_sma200": 19.1
      },
      "sector": "Broad market / other",
-     "last": 349.12,
+     "last": 347.7,
      "high_water": 353.64
     }
    },
@@ -889,7 +889,7 @@
       "pct_vs_sma5": -17.9
      },
      "sector": "Broad market / other",
-     "last": 198.05
+     "last": 197.39
     },
     "pos-4861098649": {
      "kind": "stock",
@@ -909,7 +909,7 @@
       "pct_vs_sma5": -13.1
      },
      "sector": "Broad market / other",
-     "last": 210.14
+     "last": 208.47
     },
     "pos-f754fab9a5": {
      "kind": "stock",
@@ -929,7 +929,7 @@
       "pct_vs_sma5": -16.7
      },
      "sector": "Technology",
-     "last": 45.435
+     "last": 44.89
     },
     "pos-cadbcb9a81": {
      "kind": "stock",
@@ -949,7 +949,7 @@
       "pct_vs_sma5": -12.0
      },
      "sector": "Technology",
-     "last": 326.52
+     "last": 322.52
     },
     "pos-849a451620": {
      "kind": "stock",
@@ -969,7 +969,7 @@
       "pct_vs_sma5": -10.0
      },
      "sector": "Communication Services",
-     "last": 139.65
+     "last": 139.835
     },
     "pos-44420269b9": {
      "kind": "stock",
@@ -989,7 +989,7 @@
       "pct_vs_sma5": -9.9
      },
      "sector": "Broad market / other",
-     "last": 81.92
+     "last": 80.215
     }
    },
    "status": "active",
@@ -998,12 +998,8 @@
    "closed": 8,
    "wins": 6,
    "peak": 1029.08,
-   "max_dd": 0.0345,
+   "max_dd": 0.0412,
    "notes": [
-    {
-     "date": "2026-10-30",
-     "note": "Pass on TEAM: it is at about 1:1 and its trigger is hit, but Technology is on sector avoid through Nov 13. Hold HPQ and TWLO to their stops and keep $412 settled cash idle for a non-tech washout."
-    },
     {
      "date": "2026-10-30",
      "note": "No new entries at 15:37: DT (~0.83:1), SHOP (~0.49:1) and IOVA (news-driven collapse) miss my 1:1 floor, and TEAM is in the Technology sector avoid through Nov 13. Holding HPQ and TWLO to their default stops with $412 settled cash idle; the game_plan's PBR position is already closed, so its position"
@@ -1159,6 +1155,10 @@
     {
      "date": "2026-11-05",
      "note": "No entries: no live candidate clears my 1:1 target-to-stop floor (PBR ~0.60:1, MPC ~0.68:1, PSX ~0.52:1, ZS ~0.54:1, URI ~0.73:1; SWKS already held). The game-plan energy names (CNQ, XOP, AR, OXY) aren't in today's candidate list, so their triggers can't fire. Hold the six open positions to their st"
+    },
+    {
+     "date": "2026-11-05",
+     "note": "No entries: none of the live candidates clears my 1:1 target-to-stop floor (PBR ~0.63, MPC ~0.65, PSX ~0.52, ZS ~0.66, URI ~0.91; SWKS already held). The game-plan energy names (CNQ, XOP, AR, OXY) aren't in today's candidate list, so their triggers can't fire. Hold all six positions to their stops a"
     }
    ],
    "last_exits": {
@@ -1635,7 +1635,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.035
     },
     "pos-cc8ae4018f": {
      "kind": "spread",
@@ -1659,7 +1659,7 @@
      "structure": "bear call spread",
      "expiry": "2026-12-04",
      "credit": 0.22,
-     "mark": 0.25,
+     "mark": 0.21,
      "entry": 0.22,
      "width": 1.0,
      "short_strike": 290.0,
@@ -1681,7 +1681,7 @@
       "dte": 35
      },
      "sector": "Industrials",
-     "exit_half_spread": 0.01
+     "exit_half_spread": 0.055
     }
    },
    "status": "active",
@@ -1692,10 +1692,6 @@
    "peak": 1000.0,
    "max_dd": 0.057,
    "notes": [
-    {
-     "date": "2026-10-30",
-     "note": "Passing on XLF, TLT, EEM and SLV: XLF and TLT are already open and I won't add to them, EEM fills are illiquid, and SLV is Materials-linked. Filling only at the 0.15 floor and keeping max loss near $75 per trade."
-    },
     {
      "date": "2026-10-30",
      "note": "Pass: the only fillable candidate left is SLV (0.18 credit, Materials-linked and on the avoid list, with reward-to-risk near 0.22). EEM is illiquid and XLF/IWM/TLT are already open, so I'm holding the 700 available and waiting for a clean setup."
@@ -1851,6 +1847,10 @@
     {
      "date": "2026-11-05",
      "note": "Keep a single-contract size on thin credit-to-width setups, track TLT and IWM exits manually, and never double up on an underlying already open."
+    },
+    {
+     "date": "2026-11-05",
+     "note": "Single-contract XLF bull put on a 0.15 floor; keep TLT and IWM on their manual exits and never double up an underlying."
     }
    ],
    "last_exits": {
@@ -1924,7 +1924,7 @@
     "settled_cash_at_plan": 811.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 74.0,
+   "min_trade_seen": 73.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -2225,7 +2225,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 747.02
+     "last": 740.17
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2241,7 +2241,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 747.02
+     "last": 740.17
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2257,7 +2257,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 747.02
+     "last": 740.17
     }
    },
    "status": "active",
@@ -2266,7 +2266,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1001.41,
-   "max_dd": 0.0352,
+   "max_dd": 0.0439,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -2330,7 +2330,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.62,
+     "mark": 1.91,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2350,7 +2350,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.915,
+     "exit_half_spread": 1.075,
      "peak_mark": 1.62,
      "low_water": 30.825
     },
@@ -2376,14 +2376,14 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 1.3,
+     "mark": 1.47,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
      "cost": 91.5,
      "play": "weak_stock",
      "direction": "short",
-     "stop": 18.91,
+     "stop": 18.0,
      "atr": 1.585,
      "opened": "2026-10-15T13:07:01-04:00",
      "thesis": "APLD closed through its 20.02 breakdown level at 19.21, down 16.7% over 20 days and 40% below its 200-day, so a smaller $90 bear put spread keeps Technology exposure sized down while the radar is calm.",
@@ -2397,8 +2397,8 @@
      },
      "sector": "Technology",
      "exit_half_spread": 0.165,
-     "peak_mark": 1.32,
-     "low_water": 14.15
+     "peak_mark": 1.47,
+     "low_water": 13.245
     },
     "pos-d7a488bc5f": {
      "kind": "debit_spread",
@@ -2422,7 +2422,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.5,
-     "mark": 0.55,
+     "mark": 0.65,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2442,7 +2442,7 @@
       "downtrend": true
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.6,
+     "exit_half_spread": 0.605,
      "peak_mark": 1.62,
      "low_water": 123.49
     },
@@ -2488,7 +2488,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.39,
+     "exit_half_spread": 1.345,
      "peak_mark": 1.9
     }
    },
@@ -2500,10 +2500,6 @@
    "peak": 1000.0,
    "max_dd": 0.4615,
    "notes": [
-    {
-     "date": "2026-10-30",
-     "note": "Exhibition mode: no new entries until the thesis review passes. Holding the five bear put spreads to their underlying stops. Reconcile the AGCO $330 fill against the $183.9 budget and its mark (feed 0, notes 0.02 to 0.50), and keep the bearish book under 50% of equity before any future sizing."
-    },
     {
      "date": "2026-10-30",
      "note": "Exhibition mode: no entries. Holding the five bear put spreads to their underlying stops. Reconcile the AGCO $330 fill against the $183.9 budget and its 0 mark before any sizing, and keep the bearish book under 50% of equity."
@@ -2659,6 +2655,10 @@
     {
      "date": "2026-11-05",
      "note": "Exhibition mode: no entries until the thesis review passes. Holding ASTS, APLD and PLD to their underlying stops. Size future trades to actual fills (AGCO cost about $330 against a $183.9 budget)."
+    },
+    {
+     "date": "2026-11-05",
+     "note": "Exhibition mode: no entries until the thesis review passes. Holding ASTS, APLD, PLD to their underlying stops. AGCO is marked at 0 with a fill cost near $330 against a $183.9 budget, so size future trades to actual fills."
     }
    ],
    "last_exits": {
