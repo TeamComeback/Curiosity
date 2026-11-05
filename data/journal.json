@@ -1,54 +1,5 @@
 [
  {
-  "time": "2026-10-22T12:08:55-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "IWM",
-  "qty": 0.9115,
-  "entry": 275.856,
-  "exit": 276.414,
-  "pnl": 0.51,
-  "note": "time limit, 26 min (+0.20%)",
-  "opened": "2026-10-22T11:42:54-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on IWM: 2.27x volume, +0.06% vs VWAP; target +0.6%, stop -0.4%"
- },
- {
-  "time": "2026-10-22T12:23:07-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "qty": 0.3288,
-  "entry": 764.686,
-  "exit": 765.464,
-  "pnl": 0.25,
-  "note": "time limit, 26 min (+0.11%)",
-  "opened": "2026-10-22T11:57:06-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SPY: 0.76x volume, +0.02% vs VWAP; target +0.6%, stop -0.4%"
- },
- {
-  "time": "2026-10-22T12:36:14-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-50%)"
- },
- {
-  "time": "2026-10-22T12:36:45-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "TSLL, TSLA, TQQQ, SOXL, NFLX",
-  "note": "aggressive: Only $41.85 is settled, so the bigger constraint is cash, not setups. I'm keeping the 0.8% target and 0.5% stop, since the wider stop cut the noise stops, and focusing on the fastest movers. TSLL and TSLA are the names above their opening ranges, and SOXL and TQQQ offer the volatility we need."
- },
- {
-  "time": "2026-10-22T12:38:10-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-50%)"
- },
- {
   "time": "2026-10-22T12:38:41-04:00",
   "type": "playbook",
   "agent": "hyper",
@@ -6948,5 +6899,54 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, META, GOOGL, SOXS",
   "note": "stand_down: Nearly every candidate is red, trending down, and below VWAP, so long-only VWAP pullbacks lack an uptrend to work in. The overnight plan's premises (GOOGL +3.25%, META +1.45%, AMZN +6.15% gap) don't match current data, so I'm standing down and will reassess once a stock is trending up above VWAP on "
+ },
+ {
+  "time": "2026-11-05T10:07:11-05:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "REGN",
+  "qty": 0.0542,
+  "entry": 924.44,
+  "exit": 936.432,
+  "pnl": 0.65,
+  "note": "trailing stop on underlying",
+  "opened": "2026-10-30T09:37:19-04:00",
+  "confidence": 3,
+  "thesis": "REGN cleared its 55-day high at 858.17 on 3.1x relative volume with roc20 +11.3%, and it sits 25% above its 200-day SMA; the 884.48 stop limits risk to about 4% of the position."
+ },
+ {
+  "time": "2026-11-05T10:07:13-05:00",
+  "type": "close",
+  "agent": "monkey",
+  "symbol": "WDC",
+  "qty": 1.0447,
+  "entry": 356.21,
+  "exit": 283.71,
+  "pnl": -75.74,
+  "note": "stop loss",
+  "opened": "2026-11-03T09:37:39-05:00",
+  "confidence": 0,
+  "thesis": "Dart landed on WDC"
+ },
+ {
+  "time": "2026-11-05T10:07:44-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "PLD",
+  "note": "spread stop (-63%)"
+ },
+ {
+  "time": "2026-11-05T10:08:16-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-05T10:08:50-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "LLY, XLV, SOXS, SPY, QQQ",
+  "note": "defensive: Only LLY, XLV and SOXS are trending up above their opening range, so I'm moving from stand-down to defensive: VWAP bounces at half size only, with SPY and QQQ watched for a reclaim. The overnight GOOGL, META and AMZN premises no longer match the tape (all red and below VWAP), so I'm dropping them."
  }
 ]
