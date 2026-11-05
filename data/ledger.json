@@ -15440,5 +15440,130 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-05T07:40:48-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-11-05",
+  "decision": "revise",
+  "why": "REGN's live 935 stop is already above its 931.18 price, and AAPL closed back below its 351.68 breakout, so both exits are due at the open.",
+  "summary": "Exit REGN and AAPL at the open, tighten MMM to breakeven, hold XLV and the VALE put on their stops, and enter only confirmed 2x-volume breakouts in Health Care and Broad market once cash settles.",
+  "watchlist": [
+   {
+    "symbol": "MCK",
+    "setup": "Health Care earnings beat and FY27 guidance raise",
+    "trigger": "Close above 1030.05 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout after beat, raise, and FDA approvals",
+    "trigger": "Close above 96.08 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "DIS",
+    "setup": "Broad market breakout on scan, roc20 +13.5%",
+    "trigger": "Close above 114.45 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-05T07:41:04-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-11-05",
+  "decision": "revise",
+  "why": "The old plan was sized for $14 of settled cash, but $321 is now settled and available. The same energy washouts still clear the 1:1 floor on scan prices, so I'm keeping the setups and resizing them. CNQ's earnings beat may gap it above the trigger, so that entry stays conditional.",
+  "summary": "Deploy the $321 settled cash only into energy washouts that still sit within their open triggers: CNQ, XOP, AR, and OXY, each sized to the cash available. Hold the six open positions to their stops and targets, and skip any name that gaps past its trigger.",
+  "watchlist": [
+   {
+    "symbol": "CNQ",
+    "setup": "RSI(2) 3.6 washout, 7.2% above 200-day, about 1.34:1 to SMA5 on 2-ATR stop (stop ~46.62). Q3 beat and buyback news may gap it up.",
+    "trigger": "Buy at open only if price is at or below 50.59 (within 2% of 49.60) and the 2-ATR stop still gives at least 1:1 to 53.60.",
+    "instrument": "stock",
+    "conviction": 4
+   },
+   {
+    "symbol": "XOP",
+    "setup": "RSI(2) 3.6 washout, 4.5% above 200-day, about 1.31:1 to SMA5 on 2-ATR stop (stop ~168.40).",
+    "trigger": "Buy at open only if price is at or below 182.85 (within 2% of 179.26) and the stop still gives at least 1:1 to 193.52.",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "AR",
+    "setup": "RSI(2) 4.1 washout, 1.4% above 200-day, about 1.11:1 to SMA5 on 2-ATR stop (stop ~34.90).",
+    "trigger": "Buy at open only if price is at or below 38.00 (within 1.5% of 37.44) and the stop still gives at least 1:1 to 40.26.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "OXY",
+    "setup": "RSI(2) 3.4 washout, 1.8% above 200-day, about 1.12:1 to SMA5 on 2-ATR stop (stop ~53.97).",
+    "trigger": "Buy at open only if price is at or below 58.19 (within 1.5% of 57.33) and the stop still gives at least 1:1 to 61.09.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-05T07:41:17-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-11-05",
+  "decision": "revise",
+  "why": "The fresh scan now shows XLF at IV/RV 1.15 with a bull-put trend, which the stale evening note (0.89) missed, so XLF moves to a conditional watch. The TLT and IWM holds stay intact because both are still well clear of their short strikes.",
+  "summary": "Hold TLT 79.5/78.5 and IWM 290/291 to their exits. Consider one XLF bull put only if the open shows IV/RV still at or above 0.95 and the credit is at least 0.15 on a 1-wide spread. Keep the rest of the settled cash idle.",
+  "watchlist": [
+   {
+    "symbol": "XLF",
+    "setup": "1-wide bull put spread near 25 delta, 21-45 DTE, not a duplicate of any open position. Scan IV/RV 1.15 with bull-put trend, but Financials is not a lean-in sector and the one Financials trade lost $16.50.",
+    "trigger": "Enter only if IV/RV is still at least 0.95 on the live chain and the credit is at least 0.15 per share. Otherwise pass.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-05T07:41:28-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-11-05",
+  "decision": "keep",
+  "why": "The scan and news are essentially unchanged from last night's plan, and the Communication Services and Consumer Discretionary edge is small but still the only positive evidence I have. The scorecard shows my mind-changes haven't helped (0 of 2), so I'm not switching sectors on a single day's moves.",
+  "summary": "Trade only VWAP pullbacks in META and GOOGL (Communication Services) and, at low conviction, AMZN, one $125 slice per setup, with a +0.5% target, -0.3% stop and 45-minute limit. Enter only when relative volume is at least 1.5x and the pullback reclaims VWAP. If the volume gate can't be confirmed at the moment of entry, stand aside.",
+  "watchlist": [
+   {
+    "symbol": "GOOGL",
+    "setup": "VWAP pullback continuation after the +3.25% move on the Arm/GoogleBook news.",
+    "trigger": "Relative volume at or above 1.5x on the morning impulse, then a pullback that holds VWAP and reclaims it. Enter on the reclaim.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "META",
+    "setup": "VWAP pullback in Communication Services after a +1.45% move. Scalp only, not an event trade.",
+    "trigger": "Relative volume at or above 1.5x and a pullback that holds VWAP and turns up. Enter on the turn.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "AMZN",
+    "setup": "Pullback continuation after the +6.15% gap, only if it holds on declining volume.",
+    "trigger": "Relative volume at or above 1.5x on the impulse, then a pullback on declining volume that holds VWAP and reclaims. Otherwise skip.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]

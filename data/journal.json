@@ -1,53 +1,5 @@
 [
  {
-  "time": "2026-10-22T11:16:39-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "META",
-  "instrument": "stock",
-  "qty": 0.1918,
-  "price": 655.932,
-  "cost": 125.81,
-  "stop": 652.56,
-  "thesis": "VWAP pullback bounce on META: 1.28x volume, +0.07% vs VWAP; target +0.8%, stop -0.5%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-22T11:18:45-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "NFLX",
-  "qty": 1.2635,
-  "entry": 66.42,
-  "exit": 66.48,
-  "pnl": 0.08,
-  "note": "time limit, 22 min (+0.09%)",
-  "opened": "2026-10-22T10:56:54-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on NFLX: 0.55x volume, +0.09% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-22T11:30:56-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "META",
-  "qty": 0.1918,
-  "entry": 655.932,
-  "exit": 655.668,
-  "pnl": -0.05,
-  "note": "gave back a +0.56% gain: out at breakeven",
-  "opened": "2026-10-22T11:16:39-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on META: 1.28x volume, +0.07% vs VWAP; target +0.8%, stop -0.5%"
- },
- {
-  "time": "2026-10-22T11:36:12-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-53%)"
- },
- {
   "time": "2026-10-22T11:36:41-04:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6972,6 +6924,34 @@
   "type": "plan",
   "agent": "scalper",
   "note": "Evening check-in: revise. Today's three round trips netted about +$1.00, but the edge is thin and the 1.5x relative-volume gate has not been verified as enforced. Today's entries were at 0.78x to 1.03x, so the plan needs a stricter, explicit gate before any trade.",
+  "symbol": "GOOGL, META, AMZN"
+ },
+ {
+  "time": "2026-11-05T07:40:48-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. REGN's live 935 stop is already above its 931.18 price, and AAPL closed back below its 351.68 breakout, so both exits are due at the open.",
+  "symbol": "MCK, EW, DIS"
+ },
+ {
+  "time": "2026-11-05T07:41:04-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: revise. The old plan was sized for $14 of settled cash, but $321 is now settled and available. The same energy washouts still clear the 1:1 floor on scan prices, so I'm keeping the setups and resizing them. CNQ's earnings beat may gap it above the trigger, so that entry stays conditional.",
+  "symbol": "CNQ, XOP, AR, OXY"
+ },
+ {
+  "time": "2026-11-05T07:41:17-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: revise. The fresh scan now shows XLF at IV/RV 1.15 with a bull-put trend, which the stale evening note (0.89) missed, so XLF moves to a conditional watch. The TLT and IWM holds stay intact because both are still well clear of their short strikes.",
+  "symbol": "XLF"
+ },
+ {
+  "time": "2026-11-05T07:41:28-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: keep. The scan and news are essentially unchanged from last night's plan, and the Communication Services and Consumer Discretionary edge is small but still the only positive evidence I have. The scorecard shows my mind-changes haven't helped (0 of 2), so I'm not switching sectors on a single day's moves.",
   "symbol": "GOOGL, META, AMZN"
  }
 ]
