@@ -1,52 +1,5 @@
 [
  {
-  "time": "2026-10-22T11:36:41-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, IWM, TSLA",
-  "note": "defensive: Three 0.3% stops in a row came from noise, since SPY's whole day range is only 0.72%, so I'm widening the stop slightly and cutting size to half on VWAP bounces only. I'm limiting the watch to the most liquid index ETFs plus TSLA, which is the only name above its opening range, and IWM is showing a "
- },
- {
-  "time": "2026-10-22T11:42:54-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "IWM",
-  "instrument": "stock",
-  "qty": 0.9115,
-  "price": 275.856,
-  "cost": 251.44,
-  "stop": 274.75,
-  "thesis": "VWAP pullback bounce on IWM: 2.27x volume, +0.06% vs VWAP; target +0.6%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-22T11:57:06-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.3288,
-  "price": 764.686,
-  "cost": 251.43,
-  "stop": 761.62,
-  "thesis": "VWAP pullback bounce on SPY: 0.76x volume, +0.02% vs VWAP; target +0.6%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-22T12:06:20-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-52%)"
- },
- {
-  "time": "2026-10-22T12:06:43-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, IWM",
-  "note": "stand_down: Three stops in a row and most of the tape is red or choppy, with SPY's day range only 0.72%, so new entries have poor odds. I'm holding the two open SPY and IWM scalps to their existing exits and taking no new trades until a clean trend shows up on SPY or IWM."
- },
- {
   "time": "2026-10-22T12:08:55-04:00",
   "type": "close",
   "agent": "scalper",
@@ -6953,5 +6906,47 @@
   "agent": "scalper",
   "note": "Pre-market call: keep. The scan and news are essentially unchanged from last night's plan, and the Communication Services and Consumer Discretionary edge is small but still the only positive evidence I have. The scorecard shows my mind-changes haven't helped (0 of 2), so I'm not switching sectors on a single day's moves.",
   "symbol": "GOOGL, META, AMZN"
+ },
+ {
+  "time": "2026-11-05T09:37:09-05:00",
+  "type": "exit_unfilled",
+  "agent": "monkey",
+  "symbol": "WDC",
+  "note": "stop loss"
+ },
+ {
+  "time": "2026-11-05T09:37:09-05:00",
+  "type": "close",
+  "agent": "monkey",
+  "symbol": "ABBV",
+  "qty": 0.4336,
+  "entry": 289.448,
+  "exit": 297.042,
+  "pnl": 3.3,
+  "note": "random holding period over (2 days)",
+  "opened": "2026-11-03T10:36:28-05:00",
+  "confidence": 0,
+  "thesis": "Dart landed on ABBV"
+ },
+ {
+  "time": "2026-11-05T09:37:41-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "PLD",
+  "note": "spread stop (-60%)"
+ },
+ {
+  "time": "2026-11-05T09:38:12-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%)"
+ },
+ {
+  "time": "2026-11-05T09:38:44-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, META, GOOGL, SOXS",
+  "note": "stand_down: Nearly every candidate is red, trending down, and below VWAP, so long-only VWAP pullbacks lack an uptrend to work in. The overnight plan's premises (GOOGL +3.25%, META +1.45%, AMZN +6.15% gap) don't match current data, so I'm standing down and will reassess once a stock is trending up above VWAP on "
  }
 ]
