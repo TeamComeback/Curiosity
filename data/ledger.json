@@ -16049,5 +16049,100 @@
   ],
   "aggression": "stand_down",
   "why": "Both scalps stopped out within minutes, SPY is down about 4% with most candidates below VWAP, and only about 14 minutes remain before the 3:50 flat, too little room for a 30-minute hold. The overnight plan's AMZN gap thesis conflicts with today's -4.5% tape, so I'm protecting the account and watchin"
+ },
+ {
+  "time": "2026-11-05T16:41:18-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "REGN, AAPL and MMM already closed today, so the old open-exit plans are stale. XLV is now below its 187.98 breakout, so it exits at the open.",
+  "summary": "Exit XLV at the open. Hold the ALL stock and the VALE, CLSX and DJTU puts on their stops. Buy only confirmed 2x-volume breakouts in Health Care, Financials or Broad market, sized to fractional shares within the $111.79 settled cash, and add the $323 once it settles tomorrow.",
+  "watchlist": [
+   {
+    "symbol": "MCK",
+    "setup": "Health Care earnings beat, guidance raise and multiple price-target raises",
+    "trigger": "Close above 1030.05 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout after beat, raise and multiple PT raises",
+    "trigger": "Close above 96.08 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "ICE",
+    "setup": "Near 55-day breakout with 12% 20-day momentum",
+    "trigger": "Close above 175.05 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-05T16:41:32-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "The pre-market plan is stale: it assumed $321 of settled cash and four energy entries, but only $0.84 is settled and I hold nine positions. Settlement is T+1, so no new buys are possible until cash frees up. The main change is to manage the existing book, with SWKS as the only likely source of cash.",
+  "summary": "No new entries tomorrow because only $0.84 is settled cash. Hold each open position to its stop and target, and sell at the open if a stop is breached. Trim SWKS if it opens above 84, which frees cash for T+1 settlement and any washout that clears 1:1 on live prices.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-05T16:41:44-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "The pre-market plan is stale: the IWM 290/291 call was closed today, and the live IWM position is the 286/287 bear call opened after the close. The fresh scan also puts XLF IV/RV at 0.94, below the 0.95 trigger, and SPY is now 4.4% below its 50-day.",
+  "summary": "Hold TLT 79.5/78.5 bull put and IWM 286/287 bear call to their exits, with no new entries. Keep the remaining settled cash idle, since no candidate clears IV/RV 0.95 with a clean trend and credit.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-05T16:41:59-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "Both open-and-stopped trades today (AMZN -$0.88, META -$0.70) came from the VWAP-pullback setup, and stops are filling at about -0.34% against a -0.3% setting, which eats most of the +0.5% target edge. The sector stats are also weakening: Communication Services dropped from +$2.24 to +$1.54 and Consumer Discretionary from +$1.82 to +$0.94 after today's losses, and the broader tape is in an AI-led ",
+  "summary": "Tomorrow, take only VWAP reclaim setups in META and GOOGL at reduced size ($100 max each), entering only on a confirmed 1.5x+ relative-volume reading at entry. Skip AMZN and anything Technology or Consumer Discretionary. If the volume gate can't be confirmed in code at the moment of entry, stand aside.",
+  "watchlist": [
+   {
+    "symbol": "META",
+    "setup": "VWAP reclaim scalp after a pullback, but only if the tape isn't in a fresh AI-driven leg down. Today's META stop came on a 1.57x entry, so the volume gate alone isn't enough.",
+    "trigger": "Relative volume at or above 1.5x on the morning impulse, then a pullback that holds VWAP and turns back up. Enter on the reclaim, and skip if SPY is below its open or the AI names are breaking down.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "GOOGL",
+    "setup": "VWAP pullback continuation in Communication Services. Less exposed to the memory/AI-hardware selling than the Technology names, but still trades with the AI tape.",
+    "trigger": "Relative volume at or above 1.5x on the impulse, then a pullback that holds VWAP and reclaims it. Enter on the reclaim; skip if the impulse fades on declining volume.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-05T16:42:00-05:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Communication Services"
+  ],
+  "avoid": [
+   "Technology",
+   "Consumer Discretionary"
+  ],
+  "why": "Communication Services is still positive at +$1.54 over 6 trades (50%) after today's META loss, but the edge is shrinking and the sample is small. Consumer Discretionary fell to +$0.94 over 8 after the AMZN stop, and MSFT's tag there is misleading. Technology is 45 trades at 44% for -$0.72. Note tha",
+  "expires": "2026-11-19"
  }
 ]
