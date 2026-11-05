@@ -15935,5 +15935,98 @@
   "opened": "2026-11-05T14:15:27-05:00",
   "why_entered": "VWAP pullback bounce on META: 1.57x volume, +0.24% vs VWAP; target +0.5%, stop -0.3%",
   "why_exited": "stop (-0.33%)"
+ },
+ {
+  "time": "2026-11-05T14:36:43-05:00",
+  "type": "trade_closed",
+  "agent": "volsell",
+  "position_id": "pos-cc8ae4018f",
+  "symbol": "IWM",
+  "underlying": "IWM",
+  "sector": "Industrials",
+  "instrument": "spread",
+  "entry": 0.22,
+  "exit": 0.17,
+  "pnl": -10.5,
+  "return_pct": -87.5,
+  "opened": "2026-10-30T13:38:33-04:00",
+  "why_entered": "IWM IV 21% vs realized 15% (1.36x) with the crash radar calm at 20 and SPY above its 200-day; a 290/291 bear call at the 0.15 floor collects premium against $72 max loss over 35 DTE, and IWM is a broad-market name rather than an avoided sector.",
+  "why_exited": "profit target (50% of credit)"
+ },
+ {
+  "time": "2026-11-05T14:37:48-05:00",
+  "type": "trade_closed",
+  "agent": "blackswan",
+  "position_id": "pos-d7a488bc5f",
+  "symbol": "PLD",
+  "underlying": "PLD",
+  "sector": "Real Estate",
+  "instrument": "debit_spread",
+  "entry": 1.5,
+  "exit": 0.3,
+  "pnl": -140.0,
+  "return_pct": -87.5,
+  "opened": "2026-10-16T10:06:17-04:00",
+  "why_entered": "PLD is testing its 20-day low at 126.19 after a -6.1% 20-day move and trades below its 200-day. Real Estate is uncorrelated with my open Technology puts, so this adds a different breakdown exposure without stacking more Tech risk.",
+  "why_exited": "spread stop (-45%)"
+ },
+ {
+  "time": "2026-11-05T14:38:19-05:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-6edca16e0d",
+  "symbol": "ALL",
+  "underlying": "ALL",
+  "sector": "Financials",
+  "instrument": "stock",
+  "qty": 0.5536,
+  "price": 271.034,
+  "cost": 150.04,
+  "stop": 259.51,
+  "why": "ALL cleared its 55-day high at 270.62 on 2.2x relative volume with roc20 +20% and 18% above its 200-day SMA; the 259.51 stop caps risk near 4% of the position, and a stock entry avoids the option-fit problems that blocked the puts.",
+  "confidence": 3,
+  "signals": {
+   "rel_volume": 2.22,
+   "roc20_pct": 20.1,
+   "pct_vs_sma50": 10.2,
+   "pct_vs_sma200": 18.1
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-05T14:39:16-05:00",
+  "type": "trade_opened",
+  "agent": "volsell",
+  "position_id": "pos-c99ace43e6",
+  "symbol": "IWM",
+  "underlying": "IWM",
+  "sector": "Industrials",
+  "instrument": "spread",
+  "qty": 1,
+  "price": 0.2,
+  "cost": -13.5,
+  "stop": 0,
+  "why": "IWM IV 24% vs realized 16% (1.53x) with crash radar calm at 34 and SPY above its 200-day; a 286/287 bear call collects 0.25 credit against $75 max loss, and IWM is no longer open after today's close, so this is not a duplicate.",
+  "confidence": 3,
+  "signals": {
+   "iv": 0.243,
+   "rv20": 0.159,
+   "iv_rv": 1.53,
+   "iv_rank": null,
+   "short_delta": 0.24,
+   "dte": 36
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-05T14:39:25-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "GOOGL",
+   "META"
+  ],
+  "aggression": "stand_down",
+  "why": "Both VWAP scalps today hit the -0.3% stop within minutes, and SPY is down about 4% with most candidates below VWAP. With roughly 70 minutes left before the 3:50 flat, I'd rather preserve the $1,000 than force half-size trades into a choppy, red tape."
  }
 ]
