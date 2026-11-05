@@ -29,7 +29,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.76,
-     "mark": 0.86,
+     "mark": 0.85,
      "expiry": "2026-12-18",
      "strike": 12.0,
      "delta": -0.5,
@@ -48,7 +48,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 10.99,
-     "exit_half_spread": 0.065
+     "exit_half_spread": 0.05
     },
     "pos-6c2cb8d4ba": {
      "kind": "stock",
@@ -69,7 +69,7 @@
       "pct_vs_sma200": 18.4
      },
      "sector": "Health Care",
-     "last": 185.55,
+     "last": 185.19,
      "high_water": 191.93
     },
     "pos-3dac13e0ef": {
@@ -79,7 +79,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.62,
+     "mark": 0.6,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -98,7 +98,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.3
+     "exit_half_spread": 0.32
     },
     "pos-bd45b81ce0": {
      "kind": "option",
@@ -107,7 +107,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.85,
-     "mark": 0.67,
+     "mark": 0.65,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.39,
@@ -126,7 +126,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.015,
-     "exit_half_spread": 0.2
+     "exit_half_spread": 0.22
     },
     "pos-6edca16e0d": {
      "kind": "stock",
@@ -147,7 +147,7 @@
       "pct_vs_sma200": 18.1
      },
      "sector": "Financials",
-     "last": 269.665,
+     "last": 268.6,
      "high_water": 269.665
     }
    },
@@ -159,10 +159,6 @@
    "peak": 1229.58,
    "max_dd": 0.2756,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "Settled cash is $2.01, below any candidate's cost, so no entries. Holding all open stops unchanged and waiting for sale proceeds to settle before reassessing the Energy triggers (XOM, COP)."
-    },
     {
      "date": "2026-11-02",
      "note": "Available cash is $2.01, below every candidate's cost (REGN ~$965, VRTX ~$564, MAR ~$416), so no entries. Holding all open stops unchanged; reassess once sale proceeds settle."
@@ -318,6 +314,10 @@
     {
      "date": "2026-11-05",
      "note": "No trade: settled cash ($111.79) can't fund any affordable put. KORU and GLXU failed their budgets, GEV and XLI premiums are far too large, and DJTU and CLSX are already held. Wait for the $323 settling tomorrow before taking a confirmed 2x-volume breakdown."
+    },
+    {
+     "date": "2026-11-05",
+     "note": "No entry today: only $111.79 is settled, and no put fits the KORU ($120) or GLXU ($100/$125) budgets. Take confirmed 2x-volume breakdowns once the $323 settles, skipping names already held (CLSX, DJTU)."
     }
    ],
    "last_exits": {
@@ -940,7 +940,7 @@
       "pct_vs_sma5": -17.9
      },
      "sector": "Broad market / other",
-     "last": 203.9
+     "last": 202.115
     },
     "pos-4861098649": {
      "kind": "stock",
@@ -960,7 +960,7 @@
       "pct_vs_sma5": -13.1
      },
      "sector": "Broad market / other",
-     "last": 209.75
+     "last": 209.94
     },
     "pos-f754fab9a5": {
      "kind": "stock",
@@ -980,7 +980,7 @@
       "pct_vs_sma5": -16.7
      },
      "sector": "Technology",
-     "last": 44.04
+     "last": 43.83
     },
     "pos-cadbcb9a81": {
      "kind": "stock",
@@ -1000,7 +1000,7 @@
       "pct_vs_sma5": -12.0
      },
      "sector": "Technology",
-     "last": 327.93
+     "last": 324.42
     },
     "pos-849a451620": {
      "kind": "stock",
@@ -1020,7 +1020,7 @@
       "pct_vs_sma5": -10.0
      },
      "sector": "Communication Services",
-     "last": 144.2
+     "last": 143.79
     },
     "pos-44420269b9": {
      "kind": "stock",
@@ -1040,7 +1040,7 @@
       "pct_vs_sma5": -9.9
      },
      "sector": "Broad market / other",
-     "last": 81.19
+     "last": 80.86
     },
     "pos-a8d9355cb0": {
      "kind": "stock",
@@ -1060,7 +1060,7 @@
       "pct_vs_sma5": -6.2
      },
      "sector": "Energy",
-     "last": 176.745
+     "last": 175.915
     },
     "pos-7d03be29d6": {
      "kind": "stock",
@@ -1080,7 +1080,7 @@
       "pct_vs_sma5": -7.9
      },
      "sector": "Industrials",
-     "last": 1051.43
+     "last": 1046.01
     },
     "pos-3671552095": {
      "kind": "stock",
@@ -1100,7 +1100,7 @@
       "pct_vs_sma5": -5.9
      },
      "sector": "Energy",
-     "last": 49.26
+     "last": 49.425
     }
    },
    "status": "active",
@@ -1111,10 +1111,6 @@
    "peak": 1029.08,
    "max_dd": 0.0415,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "No new entries: every live candidate misses the 1:1 target-to-stop floor (TEAM ~0.80, CHKP ~0.82, ZS ~0.61, MSFT ~0.32), and DT and HPQ are already held. Holding HPQ, TWLO, ILMN and DT to default stops with cash idle."
-    },
     {
      "date": "2026-11-02",
      "note": "No live candidate clears the 1:1 target-to-stop floor (TEAM ~0.8, CHKP ~0.7, ZS ~0.6), so I'm holding HPQ, TWLO, ILMN and DT to their stops with cash idle."
@@ -1270,6 +1266,10 @@
     {
      "date": "2026-11-05",
      "note": "Cash is $0.84 settled, so no entries are possible. Hold all open positions to their stops and targets, and size new washouts only after T+1 settlements, with 1:1 checked on live prices."
+    },
+    {
+     "date": "2026-11-05",
+     "note": "Only $0.84 settled cash, so no entries are possible. Hold all open positions to their stops and targets, and size new washouts only after T+1 settlements, with 1:1 checked on live prices."
     }
    ],
    "last_exits": {
@@ -1724,7 +1724,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-04",
      "credit": 0.21,
-     "mark": 0.13,
+     "mark": 0.15,
      "entry": 0.21,
      "width": 1.0,
      "short_strike": 79.5,
@@ -1746,7 +1746,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.01
+     "exit_half_spread": 0.03
     },
     "pos-c99ace43e6": {
      "kind": "spread",
@@ -1770,7 +1770,7 @@
      "structure": "bear call spread",
      "expiry": "2026-12-11",
      "credit": 0.2,
-     "mark": 0.22,
+     "mark": 0.31,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 286.0,
@@ -1792,7 +1792,7 @@
       "dte": 36
      },
      "sector": "Industrials",
-     "exit_half_spread": 0.04
+     "exit_half_spread": 0.06
     }
    },
    "status": "active",
@@ -1803,10 +1803,6 @@
    "peak": 1000.0,
    "max_dd": 0.057,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "Passed on the XLF 55.5/54.5 and TLT 80/79 bull puts: both duplicate open XLF and TLT spreads on the 12-04 expiry. Holding 732 settled cash for a non-duplicate setup at the 0.15 floor, and managing the open TLT, XLF and IWM spreads against their 2x-mark exits."
-    },
     {
      "date": "2026-11-02",
      "note": "Passed on the XLF 55.5/54.5 and TLT 80/79 bull puts again because both duplicate open positions on the 12-04 expiry. Holding $732 settled cash for a non-duplicate setup at the 0.15 floor, and managing TLT, XLF and IWM against their 2x-mark exits."
@@ -1962,6 +1958,10 @@
     {
      "date": "2026-11-05",
      "note": "Both live candidates (IWM 286/287 bear call, TLT 80/79 bull put) duplicate open underlyings, so I pass. Hold TLT and IWM to their 50%-credit exits, and skip XLF since it isn't in the candidate list and its fills have failed repeatedly today."
+    },
+    {
+     "date": "2026-11-05",
+     "note": "Both live candidates duplicate open underlyings (IWM and TLT), which my rules bar. Holding the IWM and TLT spreads to their 50%-credit or 2x-entry exits and keeping settled cash for a non-duplicate setup."
     }
    ],
    "last_exits": {
@@ -2036,7 +2036,7 @@
     "settled_cash_at_plan": 811.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 72.0,
+   "min_trade_seen": 73.0,
    "unsettled": [
     {
      "amount": 13.5,
@@ -2343,7 +2343,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 736.96
+     "last": 735.08
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2359,7 +2359,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 736.96
+     "last": 735.08
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2375,7 +2375,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 736.96
+     "last": 735.08
     }
    },
    "status": "active",
@@ -2448,7 +2448,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.54,
+     "mark": 1.46,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2468,7 +2468,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.555,
+     "exit_half_spread": 1.08,
      "peak_mark": 1.65,
      "low_water": 29.855
     },
@@ -2494,7 +2494,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 1.33,
+     "mark": 1.23,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -2514,7 +2514,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.235,
+     "exit_half_spread": 0.155,
      "peak_mark": 1.47,
      "low_water": 13.245
     },
@@ -2560,7 +2560,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.88,
+     "exit_half_spread": 1.875,
      "peak_mark": 1.9
     }
    },
@@ -2572,10 +2572,6 @@
    "peak": 1000.0,
    "max_dd": 0.4615,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "Exhibition mode: no new entries until the thesis review passes. Holding the five bear put spreads to their underlying stops. After the review, reconcile the AGCO $330 fill against the $183.9 budget and its mark, and keep the bearish book under 50% of equity."
-    },
     {
      "date": "2026-11-02",
      "note": "Exhibition mode, no entries. Holding all five bear put spreads to their underlying stops. After the thesis review, reconcile the AGCO fill ($330 vs $183.9 budget) and its mark (0.07 here, conflicting feeds seen earlier) before any sizing, and keep the bearish book under 50% of equity."
@@ -2731,6 +2727,10 @@
     {
      "date": "2026-11-05",
      "note": "Exhibition mode with no candidates and no entries allowed. Holding ASTS and APLD to their underlying stops and AGCO to its expiry. Future trades should be sized to actual fills, since AGCO cost about $330 against a $183.9 budget."
+    },
+    {
+     "date": "2026-11-05",
+     "note": "Exhibition mode with no candidates and no entries allowed. Holding ASTS and APLD to their underlying stops and AGCO to expiry. Size future spreads to actual fills, since AGCO cost about $330 against a $183.9 budget."
     }
    ],
    "last_exits": {
@@ -3133,13 +3133,14 @@
    ],
    "playbook": {
     "date": "2026-11-05",
-    "made_at": "2026-11-05T15:06-05:00",
+    "made_at": "2026-11-05T15:36-05:00",
     "watch": [
-     "META"
+     "META",
+     "GOOGL"
     ],
     "aggression": "stand_down",
-    "why": "Both scalps hit the stop within minutes, SPY is down 3.7% on the day, and most candidates sit below VWAP, so the tape is hostile to long scalps. With about 44 minutes until the 3:50 flat, a 30-minute hold cap leaves little room, so I'd stand down and protect the $1,000 rather than force trades.",
-    "slices": 2,
+    "why": "Both scalps stopped out within minutes, SPY is down about 4% with most candidates below VWAP, and only about 14 minutes remain before the 3:50 flat, too little room for a 30-minute hold. The overnight plan's AMZN gap thesis conflicts with today's -4.5% tape, so I'm protecting the account and watchin",
+    "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,
     "max_hold_min": 30
