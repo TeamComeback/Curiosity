@@ -319,16 +319,40 @@ def close_trade(b, state, aid, pid, reason, qty=None):
         legs = [{"symbol": pos["legs"][0]["symbol"], "ratio_qty": "1", "side": "sell", "position_intent": "sell_to_close"},
                 {"symbol": pos["legs"][1]["symbol"], "ratio_qty": "1", "side": "buy", "position_intent": "buy_to_close"}]
         half = pos.get("exit_half_spread", 0.03)
-        limit = max(round(pos.get("mark", pos["entry"]) - min(max(half, 0.01), 0.05), 2), 0.01)
-        try:  # selling a spread is a net credit: Alpaca writes it as a negative limit price
-            sub = b.submit_mleg(legs, nq, -limit, cid("x" + aid))
-        except AlpacaError as e:
-            if "limit" not in str(e).lower():
-                raise
-            sub = b.submit_mleg(legs, nq, limit, cid("x" + aid))
-        o = _fill(b, sub, 30)
+        mark = pos.get("mark", pos["entry"])
+        first = max(round(mark - min(max(half, 0.01), 0.05), 2), 0.01)
+        # Walk the sell price from the mark down to what buyers actually pay (long leg's bid less short leg's ask).
+        # An exit that will not fill leaves the firm holding a loser or an un-banked winner, so be willing to give ground.
+        natural = None
+        try:
+            qs = b.option_quotes([l["symbol"] for l in pos["legs"]])
+            lq, sq = qs.get(pos["legs"][0]["symbol"]) or {}, qs.get(pos["legs"][1]["symbol"]) or {}
+            natural = round(float(lq.get("bp") or 0) - float(sq.get("ap") or 0), 2)
+        except Exception:  # noqa: BLE001 - quotes are only a hint; fall back to marks
+            pass
+        floor = 0.01
+        low = max(natural if natural is not None else first * 0.6, floor)
+        ladder = []
+        for f in (0.0, 0.34, 0.67, 1.0):
+            px = round(max(first - f * (first - min(low, first)), floor), 2)
+            if px not in ladder:
+                ladder.append(px)
+        if ladder[-1] > floor and ("stop" in reason or "failed" in reason or "time exit" in reason):
+            ladder.append(floor)          # a forced exit (stop / thesis failed / expiry near) accepts any bid
+        o, limit = None, ladder[0]
+        for limit in ladder:
+            try:  # selling a spread is a net credit: Alpaca writes it as a negative limit price
+                sub = b.submit_mleg(legs, nq, -limit, cid("x" + aid))
+            except AlpacaError as e:
+                if "limit" not in str(e).lower():
+                    raise
+                sub = b.submit_mleg(legs, nq, limit, cid("x" + aid))
+            o = _fill(b, sub, 20)
+            if o:
+                break
         if not o:
-            return store.journal({"type": "exit_unfilled", "agent": aid, "symbol": pos["symbol"], "note": reason})
+            return store.journal({"type": "exit_unfilled", "agent": aid, "symbol": pos["symbol"],
+                                  "note": f"{reason} (tried {', '.join(f'{x:.2f}' for x in ladder)}; mark {mark:.2f}, natural {natural})"})
         exit_px = min(abs(float(o.get("filled_avg_price") or limit)), pos["width"])
         slip = min(half, 0.10) * 100 * nq if SLIP else 0
         proceeds = round(max(exit_px * 100 * nq - slip, 0), 2)
