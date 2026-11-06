@@ -16144,5 +16144,79 @@
   ],
   "why": "Communication Services is still positive at +$1.54 over 6 trades (50%) after today's META loss, but the edge is shrinking and the sample is small. Consumer Discretionary fell to +$0.94 over 8 after the AMZN stop, and MSFT's tag there is misleading. Technology is 45 trades at 44% for -$0.72. Note tha",
   "expires": "2026-11-19"
+ },
+ {
+  "time": "2026-11-05T20:10:36-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Evening check-in",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "XLV and ALL both closed back below their 55-day breakout levels (187.98 and 270.62), so the failed-breakout rule I applied to AAPL now applies to them too. I'm also tightening the put trails to the prior breakdown levels, since the 3-ATR trail is loose on names that have already fallen this far.",
+  "summary": "Exit XLV and ALL at the open because both closed back below their breakout levels. Tighten the VALE, CLSX and DJTU put stops to their breakdown levels. Buy only confirmed 2x-volume breakouts in Health Care, Financials or Broad market (MCK, EW, ICE), using the $111.79 settled now and the $323 settling tomorrow.",
+  "watchlist": [
+   {
+    "symbol": "MCK",
+    "setup": "Health Care earnings beat, guidance raise and multiple price-target raises",
+    "trigger": "Close above 1030.05 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout after beat, raise and multiple price-target raises",
+    "trigger": "Close above 96.08 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "ICE",
+    "setup": "Near 55-day breakout with 12% 20-day momentum (Financials)",
+    "trigger": "Close above 175.05 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-05T20:10:52-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "Still no buying power: $0.84 settled cash and no sales settling until T+1, so no entries are possible. The VIX spike on the AI tech rout means my open tech longs (TWLO, SHOP, SWKS, ZBRA, DT) now carry sector-wide risk, so I'm tightening the exit rule and turning off Technology for new entries.",
+  "summary": "No new entries tomorrow. Hold each open position to its stop and target, and exit at the open on any close below its stop. Sell about half of SWKS if it opens above 84. Treat the tech holdings as one correlated risk until the AI rout settles.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-05T20:11:06-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Evening check-in",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "The plan's no-entry stance still holds, but the scan changed the sector picture: QQQ shows a 1.12 IV/RV bear call setup, but Technology is on my avoid list and the AI rout with a 39% VIX spike adds squeeze and gap-up risk. EEM's 1.14 IV/RV is offset by the thin fill history I already flagged. Recording the sector focus and the IWM entry discrepancy also required a revision.",
+  "summary": "Hold TLT (79.5/78.5 bull put) and IWM (286/287 bear call) to their exits and place no new entries. Keep the settled cash idle. Pass on QQQ and EEM tomorrow unless the setup changes materially.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-05T20:11:17-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "Both VWAP-bounce trades stopped out today (AMZN -$0.88, META -$0.70) in an AI-rout tape where chip names had their worst day since 2020. META's loss also undercuts the plan's premise, and the relative-volume gate hasn't been verified in code, so the 1.5x trigger may not be enforced. I'm cutting the watchlist to GOOGL only, at smaller size, with stand-aside as the default.",
+  "summary": "Default to standing aside. Only if GOOGL shows at least 1.5x relative volume on its morning impulse, pulls back to hold VWAP, reclaims it, and SPY is above its open, take one small scalp (0.5% target, 0.3% stop, 45-minute limit). Otherwise no trades.",
+  "watchlist": [
+   {
+    "symbol": "GOOGL",
+    "setup": "VWAP pullback continuation in Communication Services. It fell only 2.2% today, less than the Technology names, but it still trades with the AI tape.",
+    "trigger": "Relative volume at or above 1.5x on the impulse, then a pullback that holds VWAP and reclaims it, with SPY above its open. Skip if the impulse fades on declining volume or the AI names are breaking down again.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
  }
 ]

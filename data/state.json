@@ -341,11 +341,11 @@
    },
    "plan": {
     "for_day": "2026-11-06",
-    "made_at": "2026-11-05T16:41-05:00",
-    "session": "After-close review",
+    "made_at": "2026-11-05T20:10-05:00",
+    "session": "Evening check-in",
     "decision": "revise",
-    "why": "REGN, AAPL and MMM already closed today, so the old open-exit plans are stale. XLV is now below its 187.98 breakout, so it exits at the open.",
-    "summary": "Exit XLV at the open. Hold the ALL stock and the VALE, CLSX and DJTU puts on their stops. Buy only confirmed 2x-volume breakouts in Health Care, Financials or Broad market, sized to fractional shares within the $111.79 settled cash, and add the $323 once it settles tomorrow.",
+    "why": "XLV and ALL both closed back below their 55-day breakout levels (187.98 and 270.62), so the failed-breakout rule I applied to AAPL now applies to them too. I'm also tightening the put trails to the prior breakdown levels, since the 3-ATR trail is loose on names that have already fallen this far.",
+    "summary": "Exit XLV and ALL at the open because both closed back below their breakout levels. Tighten the VALE, CLSX and DJTU put stops to their breakdown levels. Buy only confirmed 2x-volume breakouts in Health Care, Financials or Broad market (MCK, EW, ICE), using the $111.79 settled now and the $323 settling tomorrow.",
     "watchlist": [
      {
       "symbol": "MCK",
@@ -357,7 +357,7 @@
      },
      {
       "symbol": "EW",
-      "setup": "Health Care breakout after beat, raise and multiple PT raises",
+      "setup": "Health Care breakout after beat, raise and multiple price-target raises",
       "trigger": "Close above 96.08 on at least 2x relative volume",
       "instrument": "stock",
       "max_dollars": 100,
@@ -365,7 +365,7 @@
      },
      {
       "symbol": "ICE",
-      "setup": "Near 55-day breakout with 12% 20-day momentum",
+      "setup": "Near 55-day breakout with 12% 20-day momentum (Financials)",
       "trigger": "Close above 175.05 on at least 2x relative volume",
       "instrument": "stock",
       "max_dollars": 100,
@@ -375,34 +375,34 @@
     "position_plans": [
      {
       "symbol": "XLV",
-      "plan": "Exit at the open; it trades at 184.99, below the 187.98 breakout."
+      "plan": "Exit at the open. It closed at 184.99, back below the 187.98 breakout, so the breakout failed. Note the thesis stop (181.99) conflicts with the recorded stop (182.64); the exit makes this moot."
      },
      {
       "symbol": "ALL",
-      "plan": "Hold on the 259.51 stop; exit at the open if it closes below 259.51, and treat a close back above 270.62 as confirmation."
+      "plan": "Exit at the open. It closed at 266.89, back below the 270.62 breakout, which is the same failed-breakout rule applied to AAPL and XLV. Re-enter only on a close above 270.62 with 2x volume."
      },
      {
       "symbol": "VALE261218P00012000",
-      "plan": "Hold the put; exit if VALE closes above 11.79."
+      "plan": "Tighten the stop to the 11.79 breakdown level. Exit if VALE closes above 11.79."
      },
      {
       "symbol": "CLSX261218P00002000",
-      "plan": "Hold the put; exit if the underlying closes above the 3.63 stop."
+      "plan": "Trail the stop to the 2.98 breakdown level (from 3.63). Exit if CLSX closes above 2.98. The put is well in profit with the underlying at 2.12."
      },
      {
       "symbol": "DJTU261218P00002000",
-      "plan": "Hold the put; exit if the underlying closes above the 3.03 stop."
+      "plan": "Trail the stop to the 2.29 breakdown level (from 3.03). Exit if DJTU closes above 2.29. The put is well in profit with the underlying at 1.82."
      }
     ],
     "avoid": [
-     "Energy: 0 wins in 4 trades (-$47) and oil is falling on peace hopes",
-     "Consumer Staples: losing history and no current setups",
-     "Technology: -$15.50 realized and weak sector momentum",
-     "Industrials index-style puts (GEV, XLI, EME, CMI, SPXC): premiums exceed the budget",
+     "ALL: exited on failed breakout; no new entry until a close above 270.62 on 2x volume",
      "KORU and GLXU puts: no contract fits their budgets",
-     "CIFG, ONDS, ASTS, APLD: sub-$6 or high-volatility breakdowns with weak trends"
+     "Industrials index-style puts (GEV, XLI, EME, CMI, SPXC): premiums exceed the budget",
+     "CIFG, ONDS, ASTS, APLD: sub-$6 or high-volatility breakdowns with weak trends",
+     "Energy: 0 wins in 4 trades (-$47) and oil is falling on peace hopes",
+     "Consumer Staples: losing history and no current setups"
     ],
-    "brainstorm": "Use fractional stock longs on confirmed breakouts instead of options to fit the small budget; test the same 2x-volume rule on Financials breakouts.",
+    "brainstorm": "Test a tighter trail for puts (stop at the prior breakdown level once the underlying is 15% or more below it) against the 3-ATR trail, and check whether it keeps more of the gains without getting shaken out.",
     "revisions": [
      {
       "at": "2026-11-05T16:41-05:00",
@@ -424,6 +424,29 @@
         "symbol": "ICE",
         "instrument": "stock",
         "setup": "Near 55-day breakout with 12% 20-day momentum"
+       }
+      ]
+     },
+     {
+      "at": "2026-11-05T20:10-05:00",
+      "session": "Evening check-in",
+      "decision": "revise",
+      "why": "XLV and ALL both closed back below their 55-day breakout levels (187.98 and 270.62), so the failed-breakout rule I applied to AAPL now applies to them too. I'm also tightening the put trails to the prior breakdown levels, since the 3-ATR trail is loose on names that have already fallen this far.",
+      "watch": [
+       {
+        "symbol": "MCK",
+        "instrument": "stock",
+        "setup": "Health Care earnings beat, guidance raise and multiple price-target raises"
+       },
+       {
+        "symbol": "EW",
+        "instrument": "stock",
+        "setup": "Health Care breakout after beat, raise and multiple price-target raises"
+       },
+       {
+        "symbol": "ICE",
+        "instrument": "stock",
+        "setup": "Near 55-day breakout with 12% 20-day momentum (Financials)"
        }
       ]
      }
@@ -458,8 +481,8 @@
      "Consumer Staples",
      "Technology"
     ],
-    "why": "Broad market is the only clearly positive realized sector (+$91 over 7 trades) and Health Care has strong live breakouts, though it has only one closed trade. Energy, Staples and Technology have losing records.",
-    "set_at": "2026-11-05T16:41-05:00",
+    "why": "Broad market is the only clearly positive realized sector (+$91 over 7 trades), and Health Care has live breakouts and multiple price-target raises, though it has only one closed trade. Energy, Staples and Technology have losing records. Financials (ICE) is a watch-only setup, not yet a lean-in.",
+    "set_at": "2026-11-05T20:10-05:00",
     "expires": "2026-11-19"
    },
    "scorecard": [
@@ -1270,53 +1293,60 @@
    },
    "plan": {
     "for_day": "2026-11-06",
-    "made_at": "2026-11-05T16:41-05:00",
-    "session": "After-close review",
+    "made_at": "2026-11-05T20:10-05:00",
+    "session": "Evening check-in",
     "decision": "revise",
-    "why": "The pre-market plan is stale: it assumed $321 of settled cash and four energy entries, but only $0.84 is settled and I hold nine positions. Settlement is T+1, so no new buys are possible until cash frees up. The main change is to manage the existing book, with SWKS as the only likely source of cash.",
-    "summary": "No new entries tomorrow because only $0.84 is settled cash. Hold each open position to its stop and target, and sell at the open if a stop is breached. Trim SWKS if it opens above 84, which frees cash for T+1 settlement and any washout that clears 1:1 on live prices.",
+    "why": "Still no buying power: $0.84 settled cash and no sales settling until T+1, so no entries are possible. The VIX spike on the AI tech rout means my open tech longs (TWLO, SHOP, SWKS, ZBRA, DT) now carry sector-wide risk, so I'm tightening the exit rule and turning off Technology for new entries.",
+    "summary": "No new entries tomorrow. Hold each open position to its stop and target, and exit at the open on any close below its stop. Sell about half of SWKS if it opens above 84. Treat the tech holdings as one correlated risk until the AI rout settles.",
     "watchlist": [],
     "position_plans": [
      {
       "symbol": "TWLO",
-      "plan": "Hold to stop 162.55 and target 242.85; exit at open if it closes below 162.55 or after 7 days."
+      "plan": "Hold to stop 162.55 and target 242.85; exit at open if it closes below 162.55 or after 7 days. Exposed to the AI tech rout, so no adds."
      },
      {
       "symbol": "ILMN",
-      "plan": "Hold to stop 196.33 and target 264.77; exit at open if it closes below 196.33; no adds. Price is about 5.6% above the stop."
+      "plan": "Hold to stop 196.33 and target 264.77; exit at open if it closes below 196.33. Royalty resumption news is supportive, but no adds."
      },
      {
       "symbol": "DT",
-      "plan": "Hold to stop 42.87 and target 56.80; exit at open if it closes below 42.87 or after 7 days; no adds. Price is only about 1.9% above the stop, and the analyst target cuts are a warning sign."
+      "plan": "Hold to stop 42.87 and target 56.80; exit at open if it closes below 42.87 or after 7 days. Only about 1.9% above the stop, with analyst target cuts and tech-rout exposure, so no adds."
      },
      {
       "symbol": "ZBRA",
-      "plan": "Hold to stop 294.68 and target 360.24; exit at open if it closes below 294.68 or after 7 days; no adds."
+      "plan": "Hold to stop 294.68 and target 360.24; exit at open if it closes below 294.68 or after 7 days. No adds."
      },
      {
       "symbol": "SHOP",
-      "plan": "Hold to stop 127.83 and target 158.31; exit at open if it closes below 127.83 or after 7 days; no adds."
+      "plan": "Hold to stop 127.83 and target 158.31; exit at open if it closes below 127.83 or after 7 days. Tech-rout exposure, so no adds."
      },
      {
       "symbol": "SWKS",
-      "plan": "Hold to stop 69.76 and target 84.73. If it opens above 84, sell about half into strength to lock in gains and free settled cash for tomorrow's T+1 settlement. Exit the rest at target or at open if it closes below 69.76. Barclays cut to Equal-Weight with a $79 target is a caution."
+      "plan": "Hold to stop 69.76 and target 84.73. If it opens above 84, sell about half to lock in gains and free cash for T+1. Exit the rest at target or at open if it closes below 69.76. Barclays cut to Equal-Weight with a $79 target is a caution."
      }
     ],
     "avoid": [
-     "No new entries until T+1 settlement frees cash; $0.84 is available now.",
-     "LMT (about 0.98:1 on 2-ATR stop, below my 1:1 floor)",
+     "ZS and BP (about 0.76:1 and 0.73:1 on live prices, below my 1:1 floor)",
+     "LMT (about 0.98:1 on a 2-ATR stop, below floor)",
      "TSLA (about 0.47:1 with merger headline noise)",
-     "MPC (too expensive for the cash and about 0.9:1)",
+     "MPC (too expensive for available cash, about 0.9:1)",
      "PBR (about 0.8:1 on scan stops)",
-     "BP and ZS (about 0.73 and 0.76:1 on live prices, below the 1:1 floor)"
+     "New Technology entries while the AI rout is unresolved (the sector is 0-for-1 for me and most of my tech longs are already exposed)"
     ],
-    "brainstorm": "Test a rule that pre-plans which position to sell to fund the next washout: when a held name reaches 80% of its target, sell it so the cash settles in time for the next 1:1 setup.",
+    "brainstorm": "Test a rule that caps total energy exposure at about 40% of the book once cash settles, since energy is the lean-in sector and XOP and CNQ are already held. Also test whether washouts with RSI(2) under 3 in calm regimes outperform those between 3 and 10.",
     "revisions": [
      {
       "at": "2026-11-05T16:41-05:00",
       "session": "After-close review",
       "decision": "revise",
       "why": "The pre-market plan is stale: it assumed $321 of settled cash and four energy entries, but only $0.84 is settled and I hold nine positions. Settlement is T+1, so no new buys are possible until cash frees up. The main change is to manage the existing book, with SWKS as the only likely source of cash.",
+      "watch": []
+     },
+     {
+      "at": "2026-11-05T20:10-05:00",
+      "session": "Evening check-in",
+      "decision": "revise",
+      "why": "Still no buying power: $0.84 settled cash and no sales settling until T+1, so no entries are possible. The VIX spike on the AI tech rout means my open tech longs (TWLO, SHOP, SWKS, ZBRA, DT) now carry sector-wide risk, so I'm tightening the exit rule and turning off Technology for new entries.",
       "watch": []
      }
     ],
@@ -1331,8 +1361,8 @@
     "avoid": [
      "Technology"
     ],
-    "why": "Energy is the only sector where several washouts clear 1:1 on the scan, and my one Energy trade was a win. The evidence is still thin, and most energy names fail the floor on live prices. Technology is 0-for-1 (-6.10). Broad market/other is 3-for-4 but net negative (-7.07), so I'm not leaning in the",
-    "set_at": "2026-11-05T16:41-05:00",
+    "why": "Energy is the only sector where several washouts clear 1:1 on the scan (XOP, CNQ, XLE, SU, PSX), and my one Energy trade was a win. The sample is still very small and most energy names fail the floor on live prices. Technology is 0-for-1 (-6.10), and the AI tech rout is a live risk. Broad market/oth",
+    "set_at": "2026-11-05T20:10-05:00",
     "expires": "2026-11-19"
    },
    "scorecard": [
@@ -1887,37 +1917,44 @@
    },
    "plan": {
     "for_day": "2026-11-06",
-    "made_at": "2026-11-05T16:41-05:00",
-    "session": "After-close review",
+    "made_at": "2026-11-05T20:11-05:00",
+    "session": "Evening check-in",
     "decision": "revise",
-    "why": "The pre-market plan is stale: the IWM 290/291 call was closed today, and the live IWM position is the 286/287 bear call opened after the close. The fresh scan also puts XLF IV/RV at 0.94, below the 0.95 trigger, and SPY is now 4.4% below its 50-day.",
-    "summary": "Hold TLT 79.5/78.5 bull put and IWM 286/287 bear call to their exits, with no new entries. Keep the remaining settled cash idle, since no candidate clears IV/RV 0.95 with a clean trend and credit.",
+    "why": "The plan's no-entry stance still holds, but the scan changed the sector picture: QQQ shows a 1.12 IV/RV bear call setup, but Technology is on my avoid list and the AI rout with a 39% VIX spike adds squeeze and gap-up risk. EEM's 1.14 IV/RV is offset by the thin fill history I already flagged. Recording the sector focus and the IWM entry discrepancy also required a revision.",
+    "summary": "Hold TLT (79.5/78.5 bull put) and IWM (286/287 bear call) to their exits and place no new entries. Keep the settled cash idle. Pass on QQQ and EEM tomorrow unless the setup changes materially.",
     "watchlist": [],
     "position_plans": [
      {
       "symbol": "TLT",
-      "plan": "Hold the 79.5/78.5 bull put (close 81.92, about 3% above the short strike). Exit at open if TLT closes below 80.0 on a rising-yield day, buy back at 2x entry (about 0.42), or buy back at 50% of credit (about 0.105). Track manually because the stop field reads 0. Do not add."
+      "plan": "Hold the 79.5/78.5 bull put (last 81.92, about 3% above the short strike). Exit at the open if TLT closes below 80.0 on a rising-yield day, buy back at 2x entry (about 0.42), or buy back at 50% of credit (about 0.105). Exit by about 10 DTE (around 2026-11-24) if still open. The stop field reads 0, so track these levels manually. Do not add."
      },
      {
       "symbol": "IWM",
-      "plan": "Hold the 286/287 bear call as the only IWM position; the 290/291 plan is void because that spread closed today. Exit at open if IWM closes above 286 (last close 271.01, so about 5.5% cushion), buy back at 2x entry, or buy back at 50% of credit. Reconcile the entry: the position list shows 0.20 but the thesis says 0.25 credit. Do not add or re-enter after an exit without a fresh scan signal."
+      "plan": "Hold the 286/287 bear call as the only IWM position (last 271.01, about 5.5% cushion to the short strike). Exit at the open if IWM closes above 286, buy back at 2x the confirmed entry, or buy back at 50% of the confirmed credit. Reconcile the entry first: the position list shows 0.20 but the thesis says 0.25. If the fill was 0.25, use a 0.50 stop and a 0.125 target. Exit by about 10 DTE (around 2026-12-01) if still open. Do not add or re-enter without a fresh scan signal."
      }
     ],
     "avoid": [
-     "SPY: trend is stand-aside, 4.4% below its 50-day, and IV/RV is about 1.06 with no clean credit.",
-     "QQQ: stand-aside trend and Technology gap risk after today's AI-stock rout and the 39% VIX spike.",
-     "XLF: fresh IV/RV is 0.94, below the 0.95 floor, and Financials is not a lean-in sector.",
-     "XLE, GDX, SLV: Energy headline risk (Iran/oil), and gold/silver realized vol of 48-54% makes bear calls thin relative to max loss.",
-     "EEM: IV/RV 1.14 looks tempting, but the thin fill history makes it unsuitable for a 1-wide spread.",
+     "QQQ: bear call IV/RV is 1.12, but Technology is on my avoid list, and the AI-stock rout and 39% VIX spike create rebound and gap-up risk for a short call.",
+     "EEM: IV/RV 1.14, but the thin fill history makes it unsuitable for a 1-wide spread.",
+     "SPY: stand-aside trend, 4.4% below its 50-day, and IV/RV about 1.09 with no clean credit.",
+     "XLF: fresh IV/RV 0.94 is below the 0.95 floor, and Financials is not a lean-in sector after its 0-for-1 result.",
+     "XLE, GDX, SLV: Energy headline risk (Iran/oil), and gold/silver realized vol of 45-54% makes bear calls thin relative to max loss.",
      "TLT and IWM: no duplicate entries while the open spreads are live."
     ],
-    "brainstorm": "Test a rule that skips new bear calls for 2 sessions after a sector-wide volatility spike, since the AI-led rout could extend, and compare fill quality on IWM versus TLT.",
+    "brainstorm": "Test a QQQ bear call only after a bounce fails at a visible resistance level, which would let me sell into rebound strength and capture the rich IV without buying a gap-up rebound. Track this as a paper idea only.",
     "revisions": [
      {
       "at": "2026-11-05T16:41-05:00",
       "session": "After-close review",
       "decision": "revise",
       "why": "The pre-market plan is stale: the IWM 290/291 call was closed today, and the live IWM position is the 286/287 bear call opened after the close. The fresh scan also puts XLF IV/RV at 0.94, below the 0.95 trigger, and SPY is now 4.4% below its 50-day.",
+      "watch": []
+     },
+     {
+      "at": "2026-11-05T20:11-05:00",
+      "session": "Evening check-in",
+      "decision": "revise",
+      "why": "The plan's no-entry stance still holds, but the scan changed the sector picture: QQQ shows a 1.12 IV/RV bear call setup, but Technology is on my avoid list and the AI rout with a 39% VIX spike adds squeeze and gap-up risk. EEM's 1.14 IV/RV is offset by the thin fill history I already flagged. Recording the sector focus and the IWM entry discrepancy also required a revision.",
       "watch": []
      }
     ],
@@ -1941,8 +1978,8 @@
      "Energy",
      "Materials"
     ],
-    "why": "Broad market is the only sector where my live positions and scan IV/RV (about 1.09 on IWM and 1.06 on SPY) support credit selling. Financials is not leaned into because its only trade lost $16.50 and XLF's IV/RV has slipped below 0.95. Technology carries AI-driven gap risk, and Energy and Materials ",
-    "set_at": "2026-11-05T16:41-05:00",
+    "why": "Broad market is the only sector where my live results and the scan (IWM IV/RV 1.13, SPY 1.09) support credit selling. My only Financials trade lost $16.50, and XLF's IV/RV is below 0.95. Technology carries AI-driven gap risk after today's rout, and Energy and Materials carry headline and realized-vo",
+    "set_at": "2026-11-05T20:11-05:00",
     "expires": "2026-11-19"
    },
    "scorecard": [
@@ -3063,38 +3100,31 @@
    },
    "plan": {
     "for_day": "2026-11-06",
-    "made_at": "2026-11-05T16:41-05:00",
-    "session": "After-close review",
+    "made_at": "2026-11-05T20:11-05:00",
+    "session": "Evening check-in",
     "decision": "revise",
-    "why": "Both open-and-stopped trades today (AMZN -$0.88, META -$0.70) came from the VWAP-pullback setup, and stops are filling at about -0.34% against a -0.3% setting, which eats most of the +0.5% target edge. The sector stats are also weakening: Communication Services dropped from +$2.24 to +$1.54 and Consumer Discretionary from +$1.82 to +$0.94 after today's losses, and the broader tape is in an AI-led ",
-    "summary": "Tomorrow, take only VWAP reclaim setups in META and GOOGL at reduced size ($100 max each), entering only on a confirmed 1.5x+ relative-volume reading at entry. Skip AMZN and anything Technology or Consumer Discretionary. If the volume gate can't be confirmed in code at the moment of entry, stand aside.",
+    "why": "Both VWAP-bounce trades stopped out today (AMZN -$0.88, META -$0.70) in an AI-rout tape where chip names had their worst day since 2020. META's loss also undercuts the plan's premise, and the relative-volume gate hasn't been verified in code, so the 1.5x trigger may not be enforced. I'm cutting the watchlist to GOOGL only, at smaller size, with stand-aside as the default.",
+    "summary": "Default to standing aside. Only if GOOGL shows at least 1.5x relative volume on its morning impulse, pulls back to hold VWAP, reclaims it, and SPY is above its open, take one small scalp (0.5% target, 0.3% stop, 45-minute limit). Otherwise no trades.",
     "watchlist": [
      {
-      "symbol": "META",
-      "setup": "VWAP reclaim scalp after a pullback, but only if the tape isn't in a fresh AI-driven leg down. Today's META stop came on a 1.57x entry, so the volume gate alone isn't enough.",
-      "trigger": "Relative volume at or above 1.5x on the morning impulse, then a pullback that holds VWAP and turns back up. Enter on the reclaim, and skip if SPY is below its open or the AI names are breaking down.",
-      "instrument": "stock",
-      "max_dollars": 100,
-      "conviction": 2
-     },
-     {
       "symbol": "GOOGL",
-      "setup": "VWAP pullback continuation in Communication Services. Less exposed to the memory/AI-hardware selling than the Technology names, but still trades with the AI tape.",
-      "trigger": "Relative volume at or above 1.5x on the impulse, then a pullback that holds VWAP and reclaims it. Enter on the reclaim; skip if the impulse fades on declining volume.",
+      "setup": "VWAP pullback continuation in Communication Services. It fell only 2.2% today, less than the Technology names, but it still trades with the AI tape.",
+      "trigger": "Relative volume at or above 1.5x on the impulse, then a pullback that holds VWAP and reclaims it, with SPY above its open. Skip if the impulse fades on declining volume or the AI names are breaking down again.",
       "instrument": "stock",
-      "max_dollars": 100,
+      "max_dollars": 75,
       "conviction": 2
      }
     ],
     "position_plans": [],
     "avoid": [
-     "AMZN: stopped today on a 1.89x entry after a -2% day in an AI-rout tape. Its gap story is the Anthropic IPO/AI-spending headlines, which aren't a scalp. Drop it until it shows a positive edge.",
-     "MSFT: tagged Consumer Discretionary in the scan, but it moved +6.8% on a gap; chasing it is an event trade, not a scalp.",
-     "TSLA: trading on election and SpaceX/Musk headlines, which don't suit a 0.5% target.",
-     "Technology (AMD, INTC, MU, SNDK, NVDA, SMH, QQQ, TSM, AVGO, LITE, SPCX, SOXX): 45 trades at 44% for -$0.72. Oversold bounces of 5%+ are event-driven.",
-     "Any entry under 1.5x relative volume, and any entry when the tape is falling into the afternoon. Stops fill at about -0.34%, so a 0.5% target nets only about +0.15% after slippage on a winner."
+     "META: stopped out today at 1.57x volume. Its tape is hostile (AI-rout headlines, youth social media lawsuit, Republican senator selling Magnificent Seven), so drop it until the sector stabilizes.",
+     "AMZN: stopped out today at 1.89x volume in an AI-rout tape. Its moves are driven by Anthropic IPO and AI-spending headlines, not scalp setups.",
+     "MSFT: a +6.8% gap is an event trade, not a scalp. Its Consumer Discretionary tag is misleading.",
+     "TSLA: trading on election, SpaceX and Musk headlines, which don't suit a 0.5% target.",
+     "SPCX, LITE, SNDK, MU, AMD, INTC, NVDA, AVGO, TSM, SMH, SOXX, QQQ: memory and AI-hardware names are down 5%+ and moving on event-driven selling. Technology is 45 trades at 44% for -$0.72.",
+     "Any entry under 1.5x relative volume, and any entry when the tape is falling into the afternoon. Stops fill around -0.34%, so a 0.5% target nets only about +0.15% after slippage."
     ],
-    "brainstorm": "Measure the real fill cost: compare stop fills against the 0.3% setting over the next 20 trades. If slippage is consistently about 0.04%, set the stop to 0.35% so the stop matches the fill and the target/stop ratio stays near 1.5:1.",
+    "brainstorm": "Before relying on the volume gate, log the relative volume at the moment of each entry in the trade record and confirm it is at least 1.5x. Separately, test a 0.7% target with a 0.4% stop, which keeps the reward-to-risk ratio after the observed slippage.",
     "revisions": [
      {
       "at": "2026-11-05T16:41-05:00",
@@ -3113,6 +3143,19 @@
         "setup": "VWAP pullback continuation in Communication Services. Less exposed to the memory"
        }
       ]
+     },
+     {
+      "at": "2026-11-05T20:11-05:00",
+      "session": "Evening check-in",
+      "decision": "revise",
+      "why": "Both VWAP-bounce trades stopped out today (AMZN -$0.88, META -$0.70) in an AI-rout tape where chip names had their worst day since 2020. META's loss also undercuts the plan's premise, and the relative-volume gate hasn't been verified in code, so the 1.5x trigger may not be enforced. I'm cutting the watchlist to GOOGL only, at smaller size, with stand-aside as the default.",
+      "watch": [
+       {
+        "symbol": "GOOGL",
+        "instrument": "stock",
+        "setup": "VWAP pullback continuation in Communication Services. It fell only 2.2% today, l"
+       }
+      ]
      }
     ],
     "settled_cash_at_plan": 502.16,
@@ -3126,8 +3169,8 @@
      "Technology",
      "Consumer Discretionary"
     ],
-    "why": "Communication Services is still positive at +$1.54 over 6 trades (50%) after today's META loss, but the edge is shrinking and the sample is small. Consumer Discretionary fell to +$0.94 over 8 after the AMZN stop, and MSFT's tag there is misleading. Technology is 45 trades at 44% for -$0.72. Note tha",
-    "set_at": "2026-11-05T16:42-05:00",
+    "why": "Communication Services is +$1.54 over 6 trades (50%), but the sample is small and the edge is shrinking after today's META stop. Technology is 45 trades at 44% for -$0.72, and Consumer Discretionary has faded to +$0.94 over 8 trades after the AMZN stop. Keep Communication Services only while it stay",
+    "set_at": "2026-11-05T20:11-05:00",
     "expires": "2026-11-19"
    },
    "scorecard": [
