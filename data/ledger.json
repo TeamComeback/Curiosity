@@ -16682,5 +16682,87 @@
   ],
   "aggression": "stand_down",
   "why": "Crash radar is at 42, most of the scan is below VWAP on down 1-minute trends, and the one slice has already been used today with two losing trades. With about 70 minutes before the 3:50 flatten, the edge is poor, so I'm standing down and only tracking GOOGL in case its plan trigger fires."
+ },
+ {
+  "time": "2026-11-06T16:41:01-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-11-09",
+  "decision": "revise",
+  "why": "XLV and ALL have already closed out as failed breakouts, and the fresh scan resets the breakout levels: EW now needs a close above 104.09 (not 100.24), CBOE above 355.9 (not 351.41), and ICE and MCK did not appear in the scan, so they drop out. JNJ is a new Health Care breakout candidate with a fresh FDA catalyst.",
+  "summary": "Hold the three breakdown puts with their stops at breakdown levels. Buy only on confirmed closes above scan breakout levels on at least 2x volume, in Health Care or Broad market: EW above 104.09, CBOE above 355.9, JNJ above 281.86. Keep at least $100 of settled cash unused unless one of these triggers fires.",
+  "watchlist": [
+   {
+    "symbol": "EW",
+    "setup": "Health Care 55-day breakout (scan level 104.09, roc20 +19.8%), multiple price-target raises",
+    "trigger": "Close above 104.09 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "CBOE",
+    "setup": "Broad market near-breakout (scan level 355.9, roc20 +15.9%)",
+    "trigger": "Close above 355.9 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "JNJ",
+    "setup": "Health Care near-breakout (level 281.86, roc20 +5.7%) with FDA accelerated approval for Rybrevant Faspro (catalyst is already public; a breakout on volume is the confirmation)",
+    "trigger": "Close above 281.86 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-06T16:41:32-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-11-09",
+  "decision": "revise",
+  "why": "The $193.51 settles tomorrow, so the no-entry plan no longer applies, but no current scan candidate clears my 1:1 floor with a 2-ATR stop and SMA5 target.",
+  "summary": "Hold the seven open positions to their stops and targets, avoid Technology, and re-screen at the open once the cash settles.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-06T16:41:47-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-11-09",
+  "decision": "revise",
+  "why": "The EEM candidate's inputs are stale: today's scan has EEM at 59.32 with IV/RV 1.09, not the 1.48 and 58.06 close in the pre-market plan, so the strike and edge need re-checking. The position basis is also unreconciled (TLT 0.16 vs 0.21, IWM 0.20 vs 0.25), so I'm using the position-list entries and resetting the exit levels. The 80-dollar cap was also too small for a 1-wide spread at 0.15 credit, ",
+  "summary": "Hold TLT (80/79 bull put) and IWM (286/287 bear call) to their exits and add nothing else. Only consider EEM 63/64 bear call if it fills at 0.15 or better with EEM still below the short strike; otherwise stay in settled cash.",
+  "watchlist": [
+   {
+    "symbol": "EEM",
+    "setup": "1-wide bear call spread, short strike near 25 delta (about 63/64 from the 59.32 close and ~32% IV), 21-45 DTE. Scan IV/RV 1.09 clears the 0.95 floor. Trend side is bear call. No open EEM position.",
+    "trigger": "Enter only if the spread fills at 0.15 credit or better and EEM is not trading above the short strike. Skip if the bid/ask is wide or the fill is thin.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-06T16:41:58-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-11-09",
+  "decision": "revise",
+  "why": "Both of today's VWAP-pullback trades lost (SPY stopped at -0.58%, MSFT timed out at -0.12%), and Technology remains 46 trades at -$2.17. The 0.3% stop is tight against roughly 0.34% slippage and a 3-4% ATR in the names being traded, so I'm narrowing the plan to one manually verified setup rather than keeping the broader scan.",
+  "summary": "Stand aside unless GOOGL meets all conditions: at least 1.5x relative volume on the morning impulse, a pullback that holds and reclaims VWAP, and SPY above its open. If it qualifies, take one $50 scalp with the existing 0.5% target, 0.3% stop and 45-minute limit. Otherwise no trades.",
+  "watchlist": [
+   {
+    "symbol": "GOOGL",
+    "setup": "VWAP pullback continuation in Communication Services, the only sector with positive results for me (+$1.54 over 6 trades). Stock is +0.73% today with a 3.7% ATR and is less damaged than the AI-hardware names.",
+    "trigger": "Relative volume of 1.5x or more on the impulse (checked manually, since the filter isn't verified), then a pullback that holds VWAP and reclaims it, with SPY above its open. Skip if the impulse fades on declining volume, or if NVDA, MU, AMD or AVGO break to new lows in the first hour.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
  }
 ]
