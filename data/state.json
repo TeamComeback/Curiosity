@@ -10,7 +10,9 @@
  },
  "entries": {
   "date": "2026-11-06",
-  "counts": {}
+  "counts": {
+   "blackswan": 1
+  }
  },
  "agents": {
   "trend": {
@@ -24,7 +26,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.76,
-     "mark": 0.82,
+     "mark": 0.76,
      "expiry": "2026-12-18",
      "strike": 12.0,
      "delta": -0.5,
@@ -52,7 +54,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.56,
+     "mark": 0.6,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -80,7 +82,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.85,
-     "mark": 0.59,
+     "mark": 0.57,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.39,
@@ -98,8 +100,8 @@
       "pct_vs_sma200": -86.7
      },
      "sector": "Broad market / other",
-     "low_water": 1.82,
-     "exit_half_spread": 0.275
+     "low_water": 1.795,
+     "exit_half_spread": 0.255
     }
    },
    "status": "active",
@@ -108,7 +110,7 @@
    "closed": 19,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.3409,
+   "max_dd": 0.3439,
    "notes": [
     {
      "date": "2026-11-02",
@@ -933,7 +935,7 @@
       "pct_vs_sma5": -13.1
      },
      "sector": "Broad market / other",
-     "last": 212.85
+     "last": 212.34
     },
     "pos-f754fab9a5": {
      "kind": "stock",
@@ -953,7 +955,7 @@
       "pct_vs_sma5": -16.7
      },
      "sector": "Technology",
-     "last": 44.285
+     "last": 43.89
     },
     "pos-cadbcb9a81": {
      "kind": "stock",
@@ -973,7 +975,7 @@
       "pct_vs_sma5": -12.0
      },
      "sector": "Technology",
-     "last": 325.58
+     "last": 322.85
     },
     "pos-849a451620": {
      "kind": "stock",
@@ -993,7 +995,7 @@
       "pct_vs_sma5": -10.0
      },
      "sector": "Communication Services",
-     "last": 146.74
+     "last": 147.33
     },
     "pos-44420269b9": {
      "kind": "stock",
@@ -1013,7 +1015,7 @@
       "pct_vs_sma5": -9.9
      },
      "sector": "Broad market / other",
-     "last": 82.01
+     "last": 81.65
     },
     "pos-a8d9355cb0": {
      "kind": "stock",
@@ -1033,7 +1035,7 @@
       "pct_vs_sma5": -6.2
      },
      "sector": "Energy",
-     "last": 175.02
+     "last": 174.25
     },
     "pos-7d03be29d6": {
      "kind": "stock",
@@ -1053,7 +1055,7 @@
       "pct_vs_sma5": -7.9
      },
      "sector": "Industrials",
-     "last": 1053.545
+     "last": 1042.01
     },
     "pos-3671552095": {
      "kind": "stock",
@@ -1073,7 +1075,7 @@
       "pct_vs_sma5": -5.9
      },
      "sector": "Energy",
-     "last": 48.85
+     "last": 48.69
     }
    },
    "status": "active",
@@ -1084,10 +1086,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "No entries: CHKP is the only near-1:1 name (about 1.01:1) and it is Technology under my sector avoid through Nov 16. TEAM (0.79), ZS (0.69) and MSFT (0.40) miss the floor. Holding HPQ, TWLO, ILMN and DT to their stops with cash idle."
-    },
     {
      "date": "2026-11-02",
      "note": "Re-check candidate sector tags against the scan before applying the sector avoid; a stale tag can block a valid 1:1 setup, and the 1:1 floor should be checked on live prices each time."
@@ -1243,6 +1241,10 @@
     {
      "date": "2026-11-06",
      "note": "Only $0.84 settled cash, so no entries are possible today. Hold all eight positions to their stops and targets. Once the $151.51 from the TWLO sale settles, size only setups that clear 1:1 on live prices and avoid Technology."
+    },
+    {
+     "date": "2026-11-06",
+     "note": "Only $0.84 settled cash, so no entries are possible. Hold all eight positions to their stops and targets, and size new washouts only after the $151.51 TWLO proceeds settle, checking 1:1 on live prices."
     }
    ],
    "last_exits": {
@@ -1649,7 +1651,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-04",
      "credit": 0.21,
-     "mark": 0.09,
+     "mark": 0.12,
      "entry": 0.21,
      "width": 1.0,
      "short_strike": 79.5,
@@ -1671,7 +1673,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.02
+     "exit_half_spread": 0.015
     },
     "pos-c99ace43e6": {
      "kind": "spread",
@@ -1695,7 +1697,7 @@
      "structure": "bear call spread",
      "expiry": "2026-12-11",
      "credit": 0.2,
-     "mark": 0.23,
+     "mark": 0.22,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 286.0,
@@ -1717,7 +1719,7 @@
       "dte": 36
      },
      "sector": "Industrials",
-     "exit_half_spread": 0.05
+     "exit_half_spread": 0.066
     }
    },
    "status": "active",
@@ -1728,10 +1730,6 @@
    "peak": 1000.0,
    "max_dd": 0.057,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "Passed both candidates because each duplicates an open bull put on the 12-04 expiry (XLF 56/55 vs open XLF 55/54; TLT 80/79 vs open TLT 79.5/78.5). Holding 732 settled cash for a non-duplicate setup at the 0.15 floor; manage TLT, XLF and IWM against their 2x-mark exits."
-    },
     {
      "date": "2026-11-02",
      "note": "Passed XLF 56/55: it adds a second XLF bull put on the same 12-04 expiry, and at a 0.16 credit against $84 max loss (delta 0.27) its expected value is roughly -$11 per contract. Keep the settled cash and wait for a non-duplicate setup with a credit near or above 0.20."
@@ -1887,6 +1885,10 @@
     {
      "date": "2026-11-06",
      "note": "No new trade: the only live candidate (TLT) duplicates an open underlying, and EEM isn't in today's candidates. Keep IWM with its 2x stop and hold settled cash for a non-duplicate setup."
+    },
+    {
+     "date": "2026-11-06",
+     "note": "No new trade: both candidates (IWM and TLT) duplicate open underlyings, which my rules bar, and EEM is not in today's candidates. Hold TLT and IWM to their 50%-credit and 2x-loss exits, and keep settled cash for a non-duplicate setup."
     }
    ],
    "last_exits": {
@@ -1961,7 +1963,7 @@
     "settled_cash_at_plan": 802.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 82.0,
+   "min_trade_seen": 69.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -2281,7 +2283,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 738.99
+     "last": 737.46
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2297,7 +2299,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 738.99
+     "last": 737.46
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2313,7 +2315,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 738.99
+     "last": 737.46
     }
    },
    "status": "active",
@@ -2350,7 +2352,7 @@
    "unsettled": []
   },
   "blackswan": {
-   "cash": 294.5,
+   "cash": 266.56,
    "reserved": 0.0,
    "positions": {
     "pos-25be894208": {
@@ -2375,7 +2377,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.72,
+     "mark": 1.4,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2395,7 +2397,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.45,
+     "exit_half_spread": 0.47,
      "peak_mark": 1.65,
      "low_water": 27.975
     },
@@ -2421,7 +2423,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 1.18,
+     "mark": 1.26,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -2441,7 +2443,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.355,
+     "exit_half_spread": 0.16,
      "peak_mark": 1.47,
      "low_water": 13.245
     },
@@ -2487,8 +2489,28 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.89,
+     "exit_half_spread": 1.825,
      "peak_mark": 1.9
+    },
+    "pos-9492f88301": {
+     "kind": "stock",
+     "symbol": "PSQ",
+     "qty": 1.0,
+     "entry": 27.94,
+     "cost": 27.94,
+     "play": "inverse",
+     "direction": "long",
+     "stop": 26.83,
+     "atr": 0.53,
+     "opened": "2026-11-06T10:37:06-05:00",
+     "thesis": "Radar is in warning at 42 with QQQ weakening (ROC20 -5.2% on SPY), so one share of PSQ as a small inverse hedge fits the $28.03 per-trade cap and has a tight stop at 26.83.",
+     "confidence": 2,
+     "signals": {
+      "roc20_pct": 15.0,
+      "pct_vs_sma50": 9.2
+     },
+     "sector": "Consumer Staples",
+     "last": 27.89
     }
    },
    "status": "active",
@@ -2499,10 +2521,6 @@
    "peak": 1000.0,
    "max_dd": 0.4645,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "Exhibition mode with no entries. Holding all five bear put spreads to their underlying stops. After the thesis review, reconcile the AGCO $330 fill against the $183.9 budget and its conflicting marks (0.06 to 0.14 across feeds), then keep the bearish book under 50% of equity."
-    },
     {
      "date": "2026-11-02",
      "note": "Exhibition mode: no entries. Holding all five bear put spreads to their underlying stops. After the thesis review, reconcile the AGCO fill ($330 vs $183.9 budget) against its conflicting marks, and bring the bearish book below 50% of equity (marks are about 70% of the $641.5 equity today) before any"
@@ -2658,6 +2676,10 @@
     {
      "date": "2026-11-06",
      "note": "Pass this cycle: per-trade cap is $29.23 (5% of equity), too small for a bear put spread on ALNY or XLE, and SH/TLT can't buy a whole share. Keep the 294.5 settled cash for a setup that fits the cap. Hold ASTS, APLD and AGCO to their stops and expiry."
+    },
+    {
+     "date": "2026-11-06",
+     "note": "Per-trade cap is about 5% of equity, so size to whole-share prices; skip havens like TLT that cost more than the cap, and keep the stop tight on small inverse positions."
     }
    ],
    "last_exits": {
@@ -3043,16 +3065,17 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-06",
-    "made_at": "2026-11-06T10:09-05:00",
+    "made_at": "2026-11-06T10:37-05:00",
     "watch": [
-     "LLY",
-     "GOOGL",
-     "XLV",
      "XLP",
-     "TSLA"
+     "XLV",
+     "AAPL",
+     "MSFT",
+     "LLY",
+     "GOOGL"
     ],
     "aggression": "defensive",
-    "why": "Breadth is still mixed: SPY is down on the 1-minute trend and the crash radar is at 42, so I'm keeping size small. LLY has a live VWAP-pullback bounce above its opening range, and XLV, XLP and TSLA are trending up and above their opening ranges, so those are the cleanest candidates; GOOGL stays on t",
+    "why": "SPY and most AI/semis are trending down and the crash radar is at 42, so I'm keeping size small and favoring defensive rotation. XLP and XLV are trending up above their opening ranges, AAPL and MSFT are up with volume, and LLY is up 2.3% on the day but has slipped to a 1-minute downtrend, so it need",
     "slices": 2,
     "target_pct": 0.5,
     "stop_pct": 0.3,

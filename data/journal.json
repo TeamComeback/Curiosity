@@ -1,26 +1,5 @@
 [
  {
-  "time": "2026-10-23T12:39:07-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-61%)"
- },
- {
-  "time": "2026-10-23T12:39:33-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, STX, MU, SMH, NVDA",
-  "note": "aggressive: Settled cash is only $0.16, so new entries stay blocked until tomorrow's settlement, but the 0.6% target, 0.35% stop, and 15-minute hold have produced mostly small wins. I'm keeping the parameters and focusing on the fastest movers (SOXL, TQQQ, STX, MU) plus liquid semis and QQQ."
- },
- {
-  "time": "2026-10-23T13:06:44-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-71%)"
- },
- {
   "time": "2026-10-23T13:07:07-04:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6844,5 +6823,32 @@
   "agent": "scalper",
   "symbol": "GOOGL",
   "note": "VWAP pullback bounce skipped: 0.5x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-06T10:36:41-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.95)"
+ },
+ {
+  "time": "2026-11-06T10:37:06-05:00",
+  "type": "open",
+  "agent": "blackswan",
+  "symbol": "PSQ",
+  "instrument": "stock",
+  "qty": 1.0,
+  "price": 27.94,
+  "cost": 27.94,
+  "stop": 26.83,
+  "thesis": "Radar is in warning at 42 with QQQ weakening (ROC20 -5.2% on SPY), so one share of PSQ as a small inverse hedge fits the $28.03 per-trade cap and has a tight stop at 26.83.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-11-06T10:37:14-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "XLP, XLV, AAPL, MSFT, LLY",
+  "note": "defensive: SPY and most AI/semis are trending down and the crash radar is at 42, so I'm keeping size small and favoring defensive rotation. XLP and XLV are trending up above their opening ranges, AAPL and MSFT are up with volume, and LLY is up 2.3% on the day but has slipped to a 1-minute downtrend, so it need"
  }
 ]
