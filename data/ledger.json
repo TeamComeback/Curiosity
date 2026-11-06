@@ -16218,5 +16218,110 @@
     "conviction": 2
    }
   ]
+ },
+ {
+  "time": "2026-11-06T07:40:51-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "XLV and ALL closed back below their breakout levels, which is a failed breakout, so I'm cutting them at the open. The fresh scan also puts EW's breakout level at 100.24, not the 96.08 in my old plan, so I'm updating that trigger.",
+  "summary": "Exit XLV and ALL at the open after failed breakouts. Tighten the VALE, CLSX and DJTU put stops to their breakdown levels. Buy only on closes above breakout levels on at least 2x volume in Health Care, Broad market or Financials.",
+  "watchlist": [
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout with multiple price-target raises",
+    "trigger": "Close above 100.24 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "CBOE",
+    "setup": "Broad market breakout with 19.7% 20-day momentum",
+    "trigger": "Close above 351.41 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "ICE",
+    "setup": "Near 55-day breakout with 12% 20-day momentum (Financials)",
+    "trigger": "Close above 175.05 on at least 2x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "MCK",
+    "setup": "Earnings beat, guidance raise and price-target raises, but not in today's scan",
+    "trigger": "Close above 1030.05 on at least 2x relative volume, confirmed in the scan first",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-06T07:41:17-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "Cash is only $0.84, so no new entries are possible; I'm tightening the position plans around the AI-rout exposure and the thin DT cushion.",
+  "summary": "No new buys with $0.84 settled cash. Hold open positions to their stops and targets, exit any position that closes below its stop, and reassess candidates only after sales settle.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-06T07:41:32-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "The fresh scan shows QQQ's IV/RV at 1.27, not the 1.12 in my old plan, but Technology is on my avoid list and the AI rout leaves rebound risk for a short call, so QQQ stays out. EEM's IV/RV of 1.48 now fits the Broad market / other lean-in, so I'll add it as a conditional, single-contract idea, subject to a real fill at or above my 0.15 credit floor.",
+  "summary": "Hold TLT and IWM to their exits and add nothing unless EEM fills cleanly. If EEM can be sold for at least 0.15 credit on a 1-wide bear call near 25 delta, take one contract, using settled cash only. Otherwise stay in cash.",
+  "watchlist": [
+   {
+    "symbol": "EEM",
+    "setup": "1-wide bear call spread, short strike near 25 delta (roughly 63/64 given the 58.06 close and ~42% IV), 21-45 DTE. IV/RV 1.48 on a Broad market / other ETF with no open EEM position.",
+    "trigger": "Enter only if the spread fills at or above 0.15 credit and EEM is not breaking higher through the short strike. Skip if fills are thin or the bid/ask is wide.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-06T07:41:32-05:00",
+  "type": "focus",
+  "agent": "volsell",
+  "lean_in": [
+   "Broad market / other"
+  ],
+  "avoid": [
+   "Technology",
+   "Energy",
+   "Materials",
+   "Financials"
+  ],
+  "why": "Broad market is the only sector where my results and today's scan support credit selling: IWM IV/RV is 1.22, EEM 1.48, and TLT and IWM are open. Financials lost my only trade and XLF's IV/RV is below the floor. Technology carries AI-driven gap risk after the rout, and Energy and Materials carry head",
+  "expires": "2026-11-20"
+ },
+ {
+  "time": "2026-11-06T07:41:42-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-11-06",
+  "decision": "revise",
+  "why": "The evening plan was made before Thursday's 5.5% Nasdaq wipeout and today's extreme-fear tape, so its assumptions about the AI tape are stale. Technology names are moving 5-20% on event selling, which makes 0.3% stops unreliable, and the scorecard shows my picks have a 46% hit rate. I'm keeping the GOOGL-only conditional idea and cutting its size, because it's the only Communication Services name ",
+  "summary": "Stand aside unless GOOGL shows at least 1.5x relative volume on its morning impulse, pulls back to hold VWAP, reclaims it, and SPY is above its open. If it qualifies, take one small scalp with a 0.5% target, 0.3% stop, and 45-minute limit, sized at $50. Otherwise no trades.",
+  "watchlist": [
+   {
+    "symbol": "GOOGL",
+    "setup": "VWAP pullback continuation in Communication Services. It is down only 2.2% and is the least-damaged large-cap AI-adjacent name in the scan.",
+    "trigger": "Relative volume at or above 1.5x on the impulse, then a pullback that holds VWAP and reclaims it, with SPY above its open. Skip if the impulse fades on declining volume, or if the AI names (NVDA, MU, AMD, AVGO) break to new lows in the first hour.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
  }
 ]

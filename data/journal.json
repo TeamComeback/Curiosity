@@ -1,53 +1,5 @@
 [
  {
-  "time": "2026-10-23T10:34:02-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "SOXL",
-  "qty": 0.7922,
-  "entry": 84.528,
-  "exit": 84.102,
-  "pnl": -0.33,
-  "note": "stop (-0.58%)",
-  "opened": "2026-10-23T10:31:59-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SOXL: 0.84x volume, +1.83% vs VWAP; target +0.6%, stop -0.35%"
- },
- {
-  "time": "2026-10-23T10:36:31-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-63%)"
- },
- {
-  "time": "2026-10-23T10:36:39-04:00",
-  "type": "rule_block",
-  "agent": "trend",
-  "symbol": "MERC",
-  "note": "no put affordable within $15.00"
- },
- {
-  "time": "2026-10-23T10:36:58-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, MU, NVDA, SPCX",
-  "note": "defensive: Three of four VWAP-bounce closes were stopped or scratched on normal noise with a 0.3% stop in a calm tape, so I'm widening the stop to 0.4% and the target to 0.6%, cutting to 2 slices, and keeping defensive size. Focus stays on the liquid, trending names with real range (SPY, QQQ, MU, NVDA, SPCX)."
- },
- {
-  "time": "2026-10-23T10:39:07-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "QQQ",
-  "instrument": "stock",
-  "qty": 0.3555,
-  "price": 706.562,
-  "cost": 251.18,
-  "stop": 703.72,
-  "thesis": "VWAP pullback bounce on QQQ: 0.98x volume, +0.35% vs VWAP; target +0.6%, stop -0.4%",
-  "confidence": 3
- },
- {
   "time": "2026-10-23T10:39:08-04:00",
   "type": "close",
   "agent": "hyper",
@@ -6879,6 +6831,40 @@
   "type": "plan",
   "agent": "scalper",
   "note": "Evening check-in: revise. Both VWAP-bounce trades stopped out today (AMZN -$0.88, META -$0.70) in an AI-rout tape where chip names had their worst day since 2020. META's loss also undercuts the plan's premise, and the relative-volume gate hasn't been verified in code, so the 1.5x trigger may not be enforced. I'm cutting the watchlist to GOOGL only, at smaller size, with stand-aside as the default.",
+  "symbol": "GOOGL"
+ },
+ {
+  "time": "2026-11-06T07:40:51-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. XLV and ALL closed back below their breakout levels, which is a failed breakout, so I'm cutting them at the open. The fresh scan also puts EW's breakout level at 100.24, not the 96.08 in my old plan, so I'm updating that trigger.",
+  "symbol": "EW, CBOE, ICE, MCK"
+ },
+ {
+  "time": "2026-11-06T07:41:17-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: revise. Cash is only $0.84, so no new entries are possible; I'm tightening the position plans around the AI-rout exposure and the thin DT cushion.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-06T07:41:32-05:00",
+  "type": "focus",
+  "agent": "volsell",
+  "note": "Leaning into Broad market / other; avoiding Technology, Energy, Materials, Financials. Broad market is the only sector where my results and today's scan support credit selling: IWM IV/RV is 1.22, EEM 1.48, and TLT and IWM are open. Financials lost my only trade and XLF's IV/RV is below the floor. Technology carries AI-driven gap risk after the rout, and Energy and Materials carry head"
+ },
+ {
+  "time": "2026-11-06T07:41:32-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: revise. The fresh scan shows QQQ's IV/RV at 1.27, not the 1.12 in my old plan, but Technology is on my avoid list and the AI rout leaves rebound risk for a short call, so QQQ stays out. EEM's IV/RV of 1.48 now fits the Broad market / other lean-in, so I'll add it as a conditional, single-contract idea, subject to a real fill at or above my 0.15 credit floor.",
+  "symbol": "EEM"
+ },
+ {
+  "time": "2026-11-06T07:41:42-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: revise. The evening plan was made before Thursday's 5.5% Nasdaq wipeout and today's extreme-fear tape, so its assumptions about the AI tape are stale. Technology names are moving 5-20% on event selling, which makes 0.3% stops unreliable, and the scorecard shows my picks have a 46% hit rate. I'm keeping the GOOGL-only conditional idea and cutting its size, because it's the only Communication Services name ",
   "symbol": "GOOGL"
  }
 ]
