@@ -1,6 +1,6 @@
 {
  "trend": {
-  "min_rel_volume": 2.0,
+  "min_rel_volume": 2.5,
   "opt_min_dte": 30
  },
  "blackswan": {
@@ -12,10 +12,12 @@
   "max_extension_pct": 0.875
  },
  "volsell": {
-  "short_delta": 0.25,
-  "min_iv_rv": 0.95
+  "short_delta": 0.3,
+  "min_iv_rv": 0.95,
+  "take_profit": 0.65
  },
  "meanrev": {
-  "stop_atr": 2.0
+  "stop_atr": 1.5,
+  "max_hold_days": 5
  }
 }

@@ -1,58 +1,5 @@
 [
  {
-  "time": "2026-10-26T09:36:43-04:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "PBR",
-  "instrument": "stock",
-  "qty": 11.4626,
-  "price": 21.7,
-  "cost": 248.74,
-  "stop": 19.9,
-  "thesis": "PBR RSI(2) 6 washout 15.5% above its 200-day in a calm regime (crash radar 26, SPY above its 200-day); the 25.00 target versus the 19.90 stop is about 1.67:1, the only candidate that clears my 1:1 floor today.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-26T09:36:58-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, NVDA, TSLA, MU",
-  "note": "defensive: Market is calm (crash radar 26) but the opening is mixed, with most names trending down and small ranges, so I'm keeping size reduced and taking only VWAP bounces. I'm focusing on the liquid names with clean up-trends and volume, and I'm keeping the overnight SPY plan's 1.5x relative-volume and gap-"
- },
- {
-  "time": "2026-10-26T09:37:02-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, TQQQ, TSLL, TSLA, NVDA",
-  "note": "aggressive: Calm regime with SPY above its 200-day SMA, so run full size on the fastest movers: leveraged ETFs SOXL/TQQQ/TSLL plus high-range names TSLA, NVDA, MU, and SPCX. Twelve slices give the most shots, and the 0.7% target against a 0.35% stop keeps the reward-to-risk at 2:1."
- },
- {
-  "time": "2026-10-26T09:51:17-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "MU",
-  "instrument": "stock",
-  "qty": 0.1389,
-  "price": 902.54,
-  "cost": 125.36,
-  "stop": 900.2,
-  "thesis": "VWAP pullback bounce on MU: 0.82x volume, +0.43% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-26T09:51:17-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "TSM",
-  "instrument": "stock",
-  "qty": 0.1983,
-  "price": 422.85,
-  "cost": 83.85,
-  "stop": 420.96,
-  "thesis": "VWAP pullback bounce on TSM: 1.08x volume, +0.16% vs VWAP; target +0.7%, stop -0.35%",
-  "confidence": 3
- },
- {
   "time": "2026-10-26T09:51:17-04:00",
   "type": "open",
   "agent": "hyper",
@@ -6887,5 +6834,35 @@
   "agent": "scalper",
   "note": "After-close review: revise. Both of today's VWAP-pullback trades lost (SPY stopped at -0.58%, MSFT timed out at -0.12%), and Technology remains 46 trades at -$2.17. The 0.3% stop is tight against roughly 0.34% slippage and a 3-4% ATR in the names being traded, so I'm narrowing the plan to one manually verified setup rather than keeping the broader scan.",
   "symbol": "GOOGL"
+ },
+ {
+  "time": "2026-11-06T17:30:09-05:00",
+  "type": "param_change",
+  "agent": "trend",
+  "note": "min_rel_volume: 2.0 -> 2.5 (Confidence-4 trades with extreme volume averaged +63.7, while confidence-3 trades at about 2-3x volume averaged -9.48 and were mostly failed breakouts. Raising the volume bar should cut marginal entri)"
+ },
+ {
+  "time": "2026-11-06T17:30:19-05:00",
+  "type": "param_change",
+  "agent": "meanrev",
+  "note": "stop_atr: 2.0 -> 1.5 (Cuts the size of each loss by about 25% to narrow the gap between the -21 average loss and the +3 average win. The stops I've been taking are very wide (DT, TWLO), and one stop-out shouldn't erase a w)"
+ },
+ {
+  "time": "2026-11-06T17:30:19-05:00",
+  "type": "param_change",
+  "agent": "meanrev",
+  "note": "max_hold_days: 7 -> 5 (Frees capital sooner so cash isn't stuck in stale positions. Washouts that haven't snapped back within about a week are losing their edge, and faster recycling helps compounding. The time-stop exit st)"
+ },
+ {
+  "time": "2026-11-06T17:30:29-05:00",
+  "type": "param_change",
+  "agent": "volsell",
+  "note": "take_profit: 0.5 -> 0.65 (Closing at 50% of a $15-23 credit nets too little after fees and slippage, so 'winners' book as losses. Holding to 70% lets gross profit clear friction, while theta is still fast with 21+ DTE and the )"
+ },
+ {
+  "time": "2026-11-06T17:30:29-05:00",
+  "type": "param_change",
+  "agent": "volsell",
+  "note": "short_delta: 0.25 -> 0.3 (Credits at 0.25 delta were near the 0.15 floor. A 0.30 delta short collects more premium per contract, improving the credit-to-friction ratio. Keeping width at 1 holds max loss near $80-100, about 10%)"
  }
 ]
