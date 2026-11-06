@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-10-23T13:07:13-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, STX, MU, SMH, NVDA",
-  "note": "aggressive: Settled cash is only $0.16, so new entries stay blocked until tomorrow's settlement. The 0.6% target and 0.35% stop are still producing mostly small wins, so I'm keeping them and focusing the watchlist on the fastest movers (SOXL, TQQQ, STX, MU) plus liquid semis and QQQ."
- },
- {
-  "time": "2026-10-23T13:36:35-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-67%)"
- },
- {
-  "time": "2026-10-23T13:37:05-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, STX, MU, NVDA, AMD",
-  "note": "aggressive: Settled cash is only $0.16, so no new entries can fire until tomorrow's settlement; this playbook is for the next session. I'm keeping the 0.6% target and 0.35% stop because they've produced mostly small wins, and focusing on the fastest movers (SOXL, TQQQ, STX, MU) plus liquid semis and QQQ."
- },
- {
-  "time": "2026-10-23T14:07:02-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-70%)"
- },
- {
   "time": "2026-10-23T14:07:28-04:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6850,5 +6822,33 @@
   "agent": "scalper",
   "symbol": "LLY",
   "note": "VWAP pullback bounce skipped: 0.9x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-06T11:06:55-05:00",
+  "type": "exit_unfilled",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "note": "profit target (50% of credit)"
+ },
+ {
+  "time": "2026-11-06T11:07:16-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.91)"
+ },
+ {
+  "time": "2026-11-06T11:08:04-05:00",
+  "type": "exit_unfilled",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "note": "agent: Mark is 0.07 against a 0.21 entry, so about 67% of the credit is captured and the 50% target is already met. Buying back"
+ },
+ {
+  "time": "2026-11-06T11:08:18-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "XLP, AAPL, MSFT, META, IWM",
+  "note": "defensive: Nothing has traded yet and the crash radar is at 42, with SPY, semis, and AI names trending down on the 1-minute chart. I'm keeping size at half with VWAP bounces only, limited to the names still trending up above their opening ranges (XLP, AAPL, MSFT, META, IWM, EFA). I dropped GOOGL and LLY, which"
  }
 ]
