@@ -50,11 +50,10 @@ AGENTS = {
                 "instruments": ["spread"],
                 "style": "Volatility seller. Sells defined-risk credit spreads on index ETFs when implied "
                          "volatility is rich versus realized, collecting premium as time passes."},
-    # Oct 28 2026: moved to exhibition after a ~31% drawdown dragged the racing pool below SPY.
-    # Open positions run to their stops; no new entries until a thesis review passes.
-    # To bring it back: set competing True and drop exhibition / no_new_entries.
-    "blackswan": {"name": "Black Swan & Co.", "competing": False, "exhibition": True, "no_new_entries": True,
-                  "paused_reason": "Exhibition until its thesis review passes: open bets run to their stops, no new entries.",
+    # Oct 28 2026: moved to exhibition (not racing) after a ~31% drawdown dragged the racing pool below SPY.
+    # Nov 6 2026: new-entry pause lifted; it trades freely again but stays out of the race.
+    # To put it back in the race: set competing True and drop exhibition.
+    "blackswan": {"name": "Black Swan & Co.", "competing": False, "exhibition": True,
                   "instruments": ["put", "debit_spread", "stock"],
                   "style": "Crash and downside specialist: only bets on prices FALLING. Uses the Crash Radar "
                            "(0-100 market stress score) to size up. Calm market: put spreads on the weakest stocks "
