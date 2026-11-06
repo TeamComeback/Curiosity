@@ -1,40 +1,5 @@
 [
  {
-  "time": "2026-10-23T11:36:25-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-58%)"
- },
- {
-  "time": "2026-10-23T11:36:55-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, TQQQ, STX, MU, NVDA",
-  "note": "aggressive: Settled cash is only $0.16, so entries stay capped until the $670 settles tomorrow. I'm keeping the 0.6% target, 0.35% stop, and 15-minute hold that have worked today, and focusing on the strongest movers (SOXL, TQQQ, STX, MU) plus liquid leaders."
- },
- {
-  "time": "2026-10-23T12:06:43-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-62%)"
- },
- {
-  "time": "2026-10-23T12:07:16-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, STX, MU, NVDA, AMD",
-  "note": "aggressive: Settled cash is only $0.16, so new entries are capped until settlement, but the setup is still strong: SOXL, TQQQ, STX and MU are the fastest movers, and the 0.6% target with 0.35% stop and 15-minute hold has been working. I'm keeping the parameters unchanged and adding INTC, META and TSM as liquid "
- },
- {
-  "time": "2026-10-23T12:36:53-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-60%)"
- },
- {
   "time": "2026-10-23T12:37:25-04:00",
   "type": "playbook",
   "agent": "hyper",
@@ -6844,5 +6809,40 @@
   "agent": "scalper",
   "symbol": "MSFT",
   "note": "VWAP pullback bounce skipped: 0.79x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-06T10:06:47-05:00",
+  "type": "exit_unfilled",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "note": "profit target (50% of credit)"
+ },
+ {
+  "time": "2026-11-06T10:08:09-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ASTS",
+  "note": "near max value (1.72 of 2 wide) (tried 1.67, 1.53, 1.40, 1.27; mark 1.72, natural 1.27)"
+ },
+ {
+  "time": "2026-11-06T10:08:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.99)"
+ },
+ {
+  "time": "2026-11-06T10:09:17-05:00",
+  "type": "exit_unfilled",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "note": "agent: TLT bull put has reached the 50%-of-credit target (mark 0.09 vs 0.105 target on the 0.21 basis). Locking in the gain per"
+ },
+ {
+  "time": "2026-11-06T10:09:31-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "LLY, GOOGL, XLV, XLP, TSLA",
+  "note": "defensive: Breadth is still mixed: SPY is down on the 1-minute trend and the crash radar is at 42, so I'm keeping size small. LLY has a live VWAP-pullback bounce above its opening range, and XLV, XLP and TSLA are trending up and above their opening ranges, so those are the cleanest candidates; GOOGL stays on t"
  }
 ]
