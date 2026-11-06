@@ -16502,5 +16502,61 @@
   "confidence": 3,
   "signals": {},
   "from_plan": false
+ },
+ {
+  "time": "2026-11-06T12:06:15-05:00",
+  "type": "trade_closed",
+  "agent": "volsell",
+  "position_id": "pos-d8bf2420b0",
+  "symbol": "TLT",
+  "underlying": "TLT",
+  "sector": "Real Estate",
+  "instrument": "spread",
+  "entry": 0.21,
+  "exit": 0.13,
+  "pnl": -1.0,
+  "return_pct": -6.5,
+  "opened": "2026-10-30T11:07:35-04:00",
+  "why_entered": "TLT IV 16.1% vs realized 10.7% (1.50x) with the SPY trend up and crash radar calm at 19; a 79.5/78.5 bull put collects 0.23 credit against $77 max loss over 35 DTE.",
+  "why_exited": "profit target (50% of credit)"
+ },
+ {
+  "time": "2026-11-06T12:06:53-05:00",
+  "type": "trade_opened",
+  "agent": "volsell",
+  "position_id": "pos-e1dccf4e05",
+  "symbol": "TLT",
+  "underlying": "TLT",
+  "sector": "Real Estate",
+  "instrument": "spread",
+  "qty": 1,
+  "price": 0.16,
+  "cost": -12.0,
+  "stop": 0,
+  "why": "TLT IV 13.8% vs realized 10.8% (1.27x) with SPY trend up and crash radar at 42 (warning but not stress); the 80/79 bull put collects 0.16 against $84 max loss over 35 DTE, and TLT is no longer open after the 12:06 close, so this is a fresh signal rather than a duplicate.",
+  "confidence": 3,
+  "signals": {
+   "iv": 0.138,
+   "rv20": 0.108,
+   "iv_rv": 1.27,
+   "iv_rank": null,
+   "short_delta": -0.23,
+   "dte": 35
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-06T12:07:05-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "MSFT",
+   "AAPL",
+   "TSLA",
+   "IWM"
+  ],
+  "aggression": "defensive",
+  "why": "Crash radar is at 42 and most AI and semis are breaking down, so I'm keeping size at half with VWAP bounces only. SPY is the only one with an open scalp, and I'm limiting the watch to liquid names above their opening ranges (MSFT, AAPL, TSLA, IWM) plus SPY."
  }
 ]

@@ -12,7 +12,8 @@
   "date": "2026-11-06",
   "counts": {
    "blackswan": 1,
-   "scalper": 1
+   "scalper": 1,
+   "volsell": 1
   }
  },
  "agents": {
@@ -27,7 +28,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.76,
-     "mark": 0.74,
+     "mark": 0.72,
      "expiry": "2026-12-18",
      "strike": 12.0,
      "delta": -0.5,
@@ -46,7 +47,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 10.99,
-     "exit_half_spread": 0.02
+     "exit_half_spread": 0.005
     },
     "pos-3dac13e0ef": {
      "kind": "option",
@@ -74,7 +75,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.505
+     "exit_half_spread": 0.545
     },
     "pos-bd45b81ce0": {
      "kind": "option",
@@ -83,7 +84,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.85,
-     "mark": 0.62,
+     "mark": 0.6,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.39,
@@ -102,7 +103,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 1.795,
-     "exit_half_spread": 0.245
+     "exit_half_spread": 0.225
     }
    },
    "status": "active",
@@ -111,12 +112,8 @@
    "closed": 19,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.3446,
+   "max_dd": 0.3461,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "Cash is $2.01 with $180.50 settling T+1, so no candidate is affordable. Holding all stops. REGN's live stop is 914.50, but the plan says 884.48; I'm keeping the live 914.50 and not loosening it. Next session, use the ~$180 settled cash for a small XOM or COP breakout only if the trigger fires."
-    },
     {
      "date": "2026-11-02",
      "note": "Available cash is $2.01, so no candidate is affordable. Hold all live stops (REGN stays at 914.50, not the planned 884.48). Next session, use the ~$180 settled cash for an XOM or COP breakout only if the trigger fires."
@@ -272,6 +269,10 @@
     {
      "date": "2026-11-06",
      "note": "Passed on WDC and MCHP puts: both are Technology (avoid list, 1 win in 3 trades), and we already hold three bearish puts. Keep settled cash for a confirmed 2x-volume close above a breakout level in Health Care or Broad market."
+    },
+    {
+     "date": "2026-11-06",
+     "note": "Pass on MCHP short: Technology is on the avoid list and three bearish puts are already open. Existing put stops (VALE 11.79, CLSX 2.98, DJTU 2.29) already sit at their breakdown levels. Hold settled cash for a confirmed 2x-volume close above a breakout in Health Care or Broad market."
     }
    ],
    "last_exits": {
@@ -936,7 +937,7 @@
       "pct_vs_sma5": -13.1
      },
      "sector": "Broad market / other",
-     "last": 212.725
+     "last": 212.57
     },
     "pos-f754fab9a5": {
      "kind": "stock",
@@ -956,7 +957,7 @@
       "pct_vs_sma5": -16.7
      },
      "sector": "Technology",
-     "last": 43.73
+     "last": 43.57
     },
     "pos-cadbcb9a81": {
      "kind": "stock",
@@ -976,7 +977,7 @@
       "pct_vs_sma5": -12.0
      },
      "sector": "Technology",
-     "last": 327.89
+     "last": 326.72
     },
     "pos-44420269b9": {
      "kind": "stock",
@@ -996,7 +997,7 @@
       "pct_vs_sma5": -9.9
      },
      "sector": "Broad market / other",
-     "last": 82.415
+     "last": 81.995
     },
     "pos-a8d9355cb0": {
      "kind": "stock",
@@ -1016,7 +1017,7 @@
       "pct_vs_sma5": -6.2
      },
      "sector": "Energy",
-     "last": 176.61
+     "last": 175.875
     },
     "pos-7d03be29d6": {
      "kind": "stock",
@@ -1036,7 +1037,7 @@
       "pct_vs_sma5": -7.9
      },
      "sector": "Industrials",
-     "last": 1047.54
+     "last": 1047.12
     },
     "pos-3671552095": {
      "kind": "stock",
@@ -1056,7 +1057,7 @@
       "pct_vs_sma5": -5.9
      },
      "sector": "Energy",
-     "last": 49.035
+     "last": 48.945
     }
    },
    "status": "active",
@@ -1067,10 +1068,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "No entries at 15:36: on the scan's own prices no fresh candidate clears 1:1 (TEAM ~0.96, ZS ~0.82, MSFT ~0.68), and the held names stay on their default stops. Re-check the sector tags against the scan before applying any avoid."
-    },
     {
      "date": "2026-11-03",
      "note": "Only DT and ZBRA clear the 1:1 floor on live scan prices (SHOP ~1.1 is marginal, PLTR/TEAM/CRM are below 1:1); keep about $44 settled cash for the next setup, and watch tech concentration with CHKP and ZBRA."
@@ -1226,6 +1223,10 @@
     {
      "date": "2026-11-06",
      "note": "Available settled cash is $0.84, so no entries are possible. Hold all eight positions to their stops and targets, and size new washouts only after the TWLO and SHOP proceeds settle, checking 1:1 on live prices and avoiding Technology."
+    },
+    {
+     "date": "2026-11-06",
+     "note": "Only $0.84 settled cash, so no entries are possible; hold all eight positions to their stops and targets and size new washouts only after the $193.51 settles, checking 1:1 on live prices and avoiding Technology."
     }
    ],
    "last_exits": {
@@ -1613,55 +1614,9 @@
    ]
   },
   "volsell": {
-   "cash": 1002.0,
+   "cash": 997.5,
    "reserved": 200.0,
    "positions": {
-    "pos-d8bf2420b0": {
-     "kind": "spread",
-     "symbol": "TLT",
-     "underlying": "TLT",
-     "qty": 1,
-     "legs": [
-      {
-       "symbol": "TLT261204P00079500",
-       "ratio_qty": "1",
-       "side": "sell",
-       "position_intent": "sell_to_open"
-      },
-      {
-       "symbol": "TLT261204P00078500",
-       "ratio_qty": "1",
-       "side": "buy",
-       "position_intent": "buy_to_open"
-      }
-     ],
-     "structure": "bull put spread",
-     "expiry": "2026-12-04",
-     "credit": 0.21,
-     "mark": 0.14,
-     "entry": 0.21,
-     "width": 1.0,
-     "short_strike": 79.5,
-     "long_strike": 78.5,
-     "cost": -15.5,
-     "play": "rich_vol",
-     "direction": "short_vol",
-     "stop": 0,
-     "atr": 0,
-     "opened": "2026-10-30T11:07:35-04:00",
-     "thesis": "TLT IV 16.1% vs realized 10.7% (1.50x) with the SPY trend up and crash radar calm at 19; a 79.5/78.5 bull put collects 0.23 credit against $77 max loss over 35 DTE.",
-     "confidence": 3,
-     "signals": {
-      "iv": 0.161,
-      "rv20": 0.107,
-      "iv_rv": 1.5,
-      "iv_rank": null,
-      "short_delta": -0.25,
-      "dte": 35
-     },
-     "sector": "Real Estate",
-     "exit_half_spread": 0.035
-    },
     "pos-c99ace43e6": {
      "kind": "spread",
      "symbol": "IWM",
@@ -1684,7 +1639,7 @@
      "structure": "bear call spread",
      "expiry": "2026-12-11",
      "credit": 0.2,
-     "mark": 0.33,
+     "mark": 0.26,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 286.0,
@@ -1706,21 +1661,62 @@
       "dte": 36
      },
      "sector": "Industrials",
-     "exit_half_spread": 0.065
+     "exit_half_spread": 0.095
+    },
+    "pos-e1dccf4e05": {
+     "kind": "spread",
+     "symbol": "TLT",
+     "underlying": "TLT",
+     "qty": 1,
+     "legs": [
+      {
+       "symbol": "TLT261211P00080000",
+       "ratio_qty": "1",
+       "side": "sell",
+       "position_intent": "sell_to_open"
+      },
+      {
+       "symbol": "TLT261211P00079000",
+       "ratio_qty": "1",
+       "side": "buy",
+       "position_intent": "buy_to_open"
+      }
+     ],
+     "structure": "bull put spread",
+     "expiry": "2026-12-11",
+     "credit": 0.16,
+     "mark": 0.16,
+     "entry": 0.16,
+     "width": 1.0,
+     "short_strike": 80.0,
+     "long_strike": 79.0,
+     "cost": -12.0,
+     "play": "rich_vol",
+     "direction": "short_vol",
+     "stop": 0,
+     "atr": 0,
+     "opened": "2026-11-06T12:06:53-05:00",
+     "thesis": "TLT IV 13.8% vs realized 10.8% (1.27x) with SPY trend up and crash radar at 42 (warning but not stress); the 80/79 bull put collects 0.16 against $84 max loss over 35 DTE, and TLT is no longer open after the 12:06 close, so this is a fresh signal rather than a duplicate.",
+     "confidence": 3,
+     "signals": {
+      "iv": 0.138,
+      "rv20": 0.108,
+      "iv_rv": 1.27,
+      "iv_rank": null,
+      "short_delta": -0.23,
+      "dte": 35
+     },
+     "sector": "Real Estate"
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 2,
+   "closed": 3,
    "wins": 0,
    "peak": 1000.0,
    "max_dd": 0.057,
    "notes": [
-    {
-     "date": "2026-11-02",
-     "note": "Repeated passes on TLT duplicates were becoming a loop; I'm taking one rich-vol add at a 0.15 floor, capping combined TLT risk near $155 (about 16% of equity), and will not add further TLT exposure."
-    },
     {
      "date": "2026-11-02",
      "note": "Duplicate-passing had become a loop. Took one TLT add at the 0.15 floor, capped combined TLT risk, and will not add further TLT exposure. Manage all TLT spreads together against the 2x-mark exits."
@@ -1876,11 +1872,16 @@
     {
      "date": "2026-11-06",
      "note": "No new spread: the only candidate (TLT 80/79 bull put) duplicates the open TLT position, and EEM isn't in today's candidates. Hold TLT and IWM to their exits. The notes say TLT was closed at 67% captured, but the position list still shows it open at 0.14 vs 0.21 entry (33% captured), so I'm treating"
+    },
+    {
+     "date": "2026-11-06",
+     "note": "Re-entering a same-day closed underlying is allowed only on a fresh scan signal; the overnight game plan is stale for TLT, so I sized to one contract at the 0.15 credit floor and stopped at the short strike."
     }
    ],
    "last_exits": {
     "XLF": "2026-11-04",
-    "IWM": "2026-11-05"
+    "IWM": "2026-11-05",
+    "TLT": "2026-11-06"
    },
    "plan": {
     "for_day": "2026-11-06",
@@ -1950,8 +1951,14 @@
     "settled_cash_at_plan": 802.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 80.0,
-   "unsettled": [],
+   "min_trade_seen": 84.0,
+   "unsettled": [
+    {
+     "amount": 12.0,
+     "settles": "2026-11-09",
+     "note": "credit TLT"
+    }
+   ],
    "focus": {
     "lean_in": [
      "Broad market / other"
@@ -2270,7 +2277,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 740.04
+     "last": 739.325
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2286,7 +2293,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 740.04
+     "last": 739.325
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2302,7 +2309,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 740.04
+     "last": 739.325
     }
    },
    "status": "active",
@@ -2364,7 +2371,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.34,
+     "mark": 1.64,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2384,7 +2391,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.275,
+     "exit_half_spread": 0.385,
      "peak_mark": 1.65,
      "low_water": 27.975
     },
@@ -2410,7 +2417,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 0.86,
-     "mark": 1.2,
+     "mark": 1.14,
      "width": 2.0,
      "long_strike": 17.0,
      "short_strike": 15.0,
@@ -2430,7 +2437,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.035,
+     "exit_half_spread": 0.09,
      "peak_mark": 1.47,
      "low_water": 13.245
     },
@@ -2476,7 +2483,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.86,
+     "exit_half_spread": 1.675,
      "peak_mark": 1.9
     },
     "pos-9492f88301": {
@@ -2497,7 +2504,7 @@
       "pct_vs_sma50": 9.2
      },
      "sector": "Consumer Staples",
-     "last": 27.74,
+     "last": 27.84,
      "high_water": 27.84
     }
    },
@@ -2509,10 +2516,6 @@
    "peak": 1000.0,
    "max_dd": 0.4645,
    "notes": [
-    {
-     "date": "2026-11-03",
-     "note": "Exhibition mode: no entries until the thesis review passes. Holding the five bear put spreads to their underlying stops. Reconcile the AGCO $330 fill against the $183.9 budget and its conflicting marks before any sizing, and keep the bearish book under 50% of equity."
-    },
     {
      "date": "2026-11-03",
      "note": "Exhibition mode: no entries until the thesis review passes. Holding the five bear put spreads to their underlying stops. Reconcile the AGCO $330 fill against the $183.9 budget and its conflicting marks before any sizing, and keep the bearish book under 50% of equity."
@@ -2668,6 +2671,10 @@
     {
      "date": "2026-11-06",
      "note": "No trade: the 27.41 per-trade cap is below the cost of any XLE or ALNY bear put spread and can't buy a whole share of SH or TLT. Radar is 42 (warning) and PSQ already hedges the book. Hold ASTS, APLD, PSQ and AGCO to their stops and expiries; size future spreads to actual fills, and wait for a setup"
+    },
+    {
+     "date": "2026-11-06",
+     "note": "Radar is at 42 (warning) and the book already holds PSQ as a hedge. The $28.62 per-trade cap is too small for an XLE bear put spread or a whole TLT share, so I'm passing. Keep settled cash for a setup that fits the cap, and size future spreads to actual fills."
     }
    ],
    "last_exits": {
@@ -3026,7 +3033,7 @@
      "target_pct": 0.5,
      "stop_pct": 0.3,
      "max_hold_min": 45,
-     "last": 740.48,
+     "last": 739.325,
      "peak_gain": 0.07783110649890457
     }
    },
@@ -3076,17 +3083,16 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-06",
-    "made_at": "2026-11-06T11:36-05:00",
+    "made_at": "2026-11-06T12:07-05:00",
     "watch": [
      "SPY",
-     "QQQ",
      "MSFT",
-     "AMZN",
+     "AAPL",
      "TSLA",
      "IWM"
     ],
     "aggression": "defensive",
-    "why": "No trades yet, the crash radar is at 42, and SPY's 20-day rate of change is -5.2%, so I'm keeping size at half with VWAP bounces only. I'm limiting the watch list to liquid names trading up above their opening ranges (MSFT, AMZN, TSLA, IWM) plus the index ETFs, and dropping AAPL and XLP, which have ",
+    "why": "Crash radar is at 42 and most AI and semis are breaking down, so I'm keeping size at half with VWAP bounces only. SPY is the only one with an open scalp, and I'm limiting the watch to liquid names above their opening ranges (MSFT, AAPL, TSLA, IWM) plus SPY.",
     "slices": 2,
     "target_pct": 0.5,
     "stop_pct": 0.3,

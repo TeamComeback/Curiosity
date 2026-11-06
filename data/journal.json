@@ -1,31 +1,5 @@
 [
  {
-  "time": "2026-10-23T15:07:09-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "STX, MU, NVDA, AMD, QQQ",
-  "note": "aggressive: Only $0.16 is settled, so nothing fires again today; this playbook is for tomorrow's roughly $1,005 settlement. Keeping the widened 0.9%/0.5% bands and 20-minute holds, which fit the 3x ETFs and high-range semis better than the old 0.6%/0.35% stops."
- },
- {
-  "time": "2026-10-23T15:36:25-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-70%)"
- },
- {
-  "time": "2026-10-23T15:36:52-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "STX, MU, SNDK, SPCX, NVDA",
-  "note": "aggressive: Today's 0.6%/0.35% bands got stopped out on the fastest names (SOXL, which took a -0.58% stop), while the 0.9%/0.5% bands fit the 3-5% daily-range names and 3x ETFs better. Twelve slices give the most shots on tomorrow's roughly $1,005 settlement, and the watchlist focuses on the highest-volume move"
- },
- {
-  "time": "2026-10-23T16:40:31-04:00",
-  "type": "recap",
-  "note": "18 trades opened and 16 closed (9 winners), realized +$0.74. Best day among the racers: Black Swan & Co. (+47.00)."
- },
- {
   "time": "2026-10-23T16:40:31-04:00",
   "type": "scorecard",
   "agent": "trend",
@@ -6863,5 +6837,46 @@
   "stop": 737.82,
   "thesis": "VWAP pullback bounce on SPY: 1.89x volume, +0.15% vs VWAP; target +0.5%, stop -0.3%",
   "confidence": 3
+ },
+ {
+  "time": "2026-11-06T12:06:15-05:00",
+  "type": "close",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "qty": 1,
+  "entry": 0.21,
+  "exit": 0.13,
+  "pnl": -1.0,
+  "note": "profit target (50% of credit)",
+  "opened": "2026-10-30T11:07:35-04:00",
+  "confidence": 3,
+  "thesis": "TLT IV 16.1% vs realized 10.7% (1.50x) with the SPY trend up and crash radar calm at 19; a 79.5/78.5 bull put collects 0.23 credit against $77 max loss over 35 DTE."
+ },
+ {
+  "time": "2026-11-06T12:06:36-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.01)"
+ },
+ {
+  "time": "2026-11-06T12:06:53-05:00",
+  "type": "open",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "instrument": "spread",
+  "qty": 1,
+  "price": 0.16,
+  "cost": -12.0,
+  "stop": 0,
+  "thesis": "TLT IV 13.8% vs realized 10.8% (1.27x) with SPY trend up and crash radar at 42 (warning but not stress); the 80/79 bull put collects 0.16 against $84 max loss over 35 DTE, and TLT is no longer open after the 12:06 close, so this is a fresh signal rather than a duplicate.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-06T12:07:05-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, MSFT, AAPL, TSLA, IWM",
+  "note": "defensive: Crash radar is at 42 and most AI and semis are breaking down, so I'm keeping size at half with VWAP bounces only. SPY is the only one with an open scalp, and I'm limiting the watch to liquid names above their opening ranges (MSFT, AAPL, TSLA, IWM) plus SPY."
  }
 ]
