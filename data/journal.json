@@ -1,24 +1,5 @@
 [
  {
-  "time": "2026-10-23T16:41:27-04:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "After-close review: revise. Today's entries were logged at 0.53x to 0.98x relative volume, so the 1.5x gate was not enforced, and SPCX took two stops for -1.35 while the rest of the day was flat. Scalping edge is unproven (44% hit rate over 16 picks, Technology avg +0.04 per trade), so I am keeping the single-SPY plan but tightening it: no entry without a logged rel-volume of at least 1.5x, and no tech or single-name exposur",
-  "symbol": "SPY"
- },
- {
-  "time": "2026-10-23T17:30:21-04:00",
-  "type": "param_change",
-  "agent": "volsell",
-  "note": "short_delta: 0.2 -> 0.25 (A slightly closer short strike raises the credit on a 1-wide spread, so the 0.25 gate can clear. Max loss stays capped at about $75-80 per contract, and I keep width at 1 so one contract stays within )"
- },
- {
-  "time": "2026-10-23T17:30:34-04:00",
-  "type": "param_change",
-  "agent": "scalper",
-  "note": "max_extension_pct: 1.5 -> 0.875 (Entries far above VWAP (SPCX at +0.92% and +0.96%) both stopped out, which is a chase pattern. Capping extension at 0.8% would skip them and costs little, because every other entry was within 0.6% of )"
- },
- {
   "time": "2026-10-25T21:18:40-04:00",
   "type": "plan",
   "agent": "trend",
@@ -6897,5 +6878,26 @@
   "stop": 532.17,
   "thesis": "VWAP pullback bounce on MSFT: 1.69x volume, +0.12% vs VWAP; target +0.5%, stop -0.3%",
   "confidence": 3
+ },
+ {
+  "time": "2026-11-06T14:07:41-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ASTS",
+  "note": "near max value (1.75 of 2 wide) (tried 1.70, 1.56, 1.43, 1.29; mark 1.75, natural 1.29)"
+ },
+ {
+  "time": "2026-11-06T14:08:02-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.21)"
+ },
+ {
+  "time": "2026-11-06T14:08:31-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MSFT, AAPL, GOOGL",
+  "note": "defensive: The single slice is already committed to the open MSFT scalp, so new entries are unlikely to fire anyway. Crash radar is at 42 and AI names are weak, so I'm keeping defensive mode with tight risk, limited to the large caps holding their opening ranges."
  }
 ]
