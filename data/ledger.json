@@ -17127,5 +17127,79 @@
   ],
   "aggression": "defensive",
   "why": "Crash radar is at warning (41) and the AI-hardware names are weakening, so I'm keeping size small with half-size VWAP bounces only. I'm watching the liquid, trending names that held above VWAP, and I'll verify the 1.5x relative-volume impulse manually because the filter may not apply to pullbacks."
+ },
+ {
+  "time": "2026-11-09T10:06:23-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-f754fab9a5",
+  "symbol": "DT",
+  "underlying": "DT",
+  "sector": "Technology",
+  "instrument": "stock",
+  "entry": 47.267885,
+  "exit": 43.37,
+  "pnl": -10.55,
+  "return_pct": -8.8,
+  "opened": "2026-11-03T10:06:43-05:00",
+  "why_entered": "DT is a fresh RSI(2) 0.1 washout still 6% above its 200-day, with target 56.80 vs stop 42.87 at about 2.1:1 on the scan price; this is a new setup after yesterday's stop-out, not a re-run of the old trade.",
+  "why_exited": "time stop"
+ },
+ {
+  "time": "2026-11-09T10:09:19-05:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-65a52a0c07",
+  "symbol": "ABNB",
+  "underlying": "ABNB",
+  "sector": "Consumer Discretionary",
+  "instrument": "stock",
+  "qty": 1.2867,
+  "price": 193.21,
+  "cost": 248.6,
+  "stop": 182.51,
+  "why": "ABNB closed above its 55-day breakout at 193.41 on 2.61x relative volume (above the 2.5x minimum), 31.5% above its 200-day SMA, so the uptrend is intact; the 182.51 stop limits risk to about $15 (roughly 1.7% of equity).",
+  "confidence": 3,
+  "signals": {
+   "rel_volume": 2.61,
+   "roc20_pct": 14.6,
+   "pct_vs_sma50": 14.9,
+   "pct_vs_sma200": 31.5
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-09T10:09:46-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "NVDA",
+   "AMD",
+   "MU",
+   "AVGO",
+   "SPY",
+   "QQQ",
+   "SMH",
+   "TSM"
+  ],
+  "aggression": "normal",
+  "why": "SPY is above its 200-day and the crash radar reads calm at 40, so I'm moving from defensive to normal. The AI-hardware leaders (NVDA, AMD, MU, AVGO, SMH) are above VWAP and their opening ranges with volume, so they are the best candidates for VWAP pullbacks and breakouts; I'm dropping GOOGL because "
+ },
+ {
+  "time": "2026-11-09T10:13:56-05:00",
+  "type": "trade_closed",
+  "agent": "blackswan",
+  "position_id": "pos-9492f88301",
+  "symbol": "PSQ",
+  "underlying": "PSQ",
+  "sector": "Consumer Staples",
+  "instrument": "stock",
+  "entry": 27.94,
+  "exit": 27.18,
+  "pnl": -0.76,
+  "return_pct": -2.7,
+  "opened": "2026-11-06T10:37:06-05:00",
+  "why_entered": "Radar is in warning at 42 with QQQ weakening (ROC20 -5.2% on SPY), so one share of PSQ as a small inverse hedge fits the $28.03 per-trade cap and has a tight stop at 26.83.",
+  "why_exited": "eliminated"
  }
 ]
