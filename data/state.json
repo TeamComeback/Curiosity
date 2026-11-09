@@ -302,51 +302,60 @@
    },
    "plan": {
     "for_day": "2026-11-09",
-    "made_at": "2026-11-08T21:44-05:00",
-    "session": "Evening check-in",
+    "made_at": "2026-11-09T07:40-05:00",
+    "session": "Pre-market call",
     "decision": "revise",
-    "why": "The fresh scan no longer shows EW, CBOE or JNJ, so those stale levels can't be verified, and Health Care has no current setups. Crash radar is at warning (42), so I'll only act on confirmed breakouts.",
-    "summary": "Hold the three breakdown puts with their stops. Buy only a confirmed close above a scan breakout level on at least 2.5x volume, sized at $100 or less, favoring Broad market names.",
+    "why": "The fresh scan shows ABNB at about $193 and EW at about $104, which the $100 budget cannot buy as stock or near-ATM options, so ABNB is dropped. ADT (about $10) and UUP (about $29) are affordable breakout candidates within the Broad market focus. The three puts still sit above their breakdown stops and nothing new has changed their thesis.",
+    "summary": "Hold the VALE, CLSX and DJTU puts with their closing-price exits and add no new risk. Buy ADT as a stock only on a close above 9.99 on at least 2.5x relative volume, and UUP only on a close above 29.23 on the same volume test. Stay out of Industrials, Energy, Consumer Staples and Technology, and treat EW as a watch-only Health Care setup.",
     "watchlist": [
      {
-      "symbol": "ABNB",
-      "setup": "Near 55-day breakout (level 193.41, roc20 +14.6%)",
-      "trigger": "Close above 193.41 on at least 2.5x relative volume",
+      "symbol": "ADT",
+      "setup": "Near 55-day breakout (level 9.99, roc20 +53.6%, Real Estate, affordable at about $10 per share)",
+      "trigger": "Close above 9.99 on at least 2.5x relative volume, then buy with max $100 (about 10 shares)",
       "instrument": "stock",
       "max_dollars": 100,
+      "conviction": 3
+     },
+     {
+      "symbol": "UUP",
+      "setup": "Near 55-day breakout (level 29.23, roc20 +0.4%, weak momentum, Broad market)",
+      "trigger": "Close above 29.23 on at least 2.5x relative volume",
+      "instrument": "stock",
+      "max_dollars": 90,
       "conviction": 2
      },
      {
-      "symbol": "ADT",
-      "setup": "Near 55-day breakout (level 9.99, roc20 +53.6%)",
-      "trigger": "Close above 9.99 on at least 2.5x relative volume",
+      "symbol": "EW",
+      "setup": "Near 55-day breakout (level 104.09, roc20 +19.8%, Health Care, outside the lean-in focus)",
+      "trigger": "Close above 104.09 on at least 2.5x relative volume; only act if you accept about $104 for a single share, which slightly exceeds the $100 cap",
       "instrument": "stock",
-      "max_dollars": 100,
+      "max_dollars": 110,
       "conviction": 2
      }
     ],
     "position_plans": [
      {
       "symbol": "VALE261218P00012000",
-      "plan": "Hold; exit if VALE closes above 11.79."
+      "plan": "Hold. Exit at the open if VALE closes above 11.79. Do not add. Its last price of 11.595 sits just below the breakdown level."
      },
      {
       "symbol": "CLSX261218P00002000",
-      "plan": "Hold; exit if CLSX closes above 2.98."
+      "plan": "Hold. Exit at the open if CLSX closes above 2.98. Do not add."
      },
      {
       "symbol": "DJTU261218P00002000",
-      "plan": "Hold; exit if DJTU closes above 2.29. Do not add, since it is already far below its 200-day SMA."
+      "plan": "Hold. Exit at the open if DJTU closes above 2.29. Do not add. The fresh scan level of 1.82 is a new low that confirms the trend, but the position stays small and the put is already far below its 200-day SMA."
      }
     ],
     "avoid": [
-     "ALNY puts: positive Phase 3 news and an expensive near-ATM premium on a $156 stock",
+     "ABNB: at about $193 per share it cannot be bought within a $100 budget, and the Rothschild and Jefferies news is only a modest neutral upgrade",
+     "ALNY puts: positive Phase 3 Hepatitis Delta news and an expensive near-ATM premium on a $156 stock",
      "ODFL and CARR: near-ATM premiums exceed the budget and Industrials has no record",
-     "Industrials puts (CMI, GS, TT, XLI): premiums exceed budget and no record",
-     "MCHP put: Technology is on the avoid list",
-     "EW, CBOE, JNJ: not in today's scan, so the old levels are unverified"
+     "Industrials puts (CMI, GS, XLI): premiums exceed budget and no record",
+     "SITC, AIRS, CVRX, OPEN: penny-level or extreme breakdowns with unclear liquidity and wide spreads; not worth the risk at this budget",
+     "WELL: about $249 per share is unaffordable"
     ],
-    "brainstorm": "Test a 2.5x-volume filter on Broad market breakouts only, and compare its hit rate against the current 2.0x threshold.",
+    "brainstorm": "Test a volume-confirmed breakout filter on ADT and UUP only: if ADT closes above 9.99 on 2.5x volume, use a 2 ATR stop, which is about 9.45 at the current ATR of 0.27, and trail at 3 ATR.",
     "revisions": [
      {
       "at": "2026-11-06T16:41-05:00",
@@ -388,23 +397,35 @@
         "setup": "Near 55-day breakout (level 9.99, roc20 +53.6%)"
        }
       ]
+     },
+     {
+      "at": "2026-11-09T07:40-05:00",
+      "session": "Pre-market call",
+      "decision": "revise",
+      "why": "The fresh scan shows ABNB at about $193 and EW at about $104, which the $100 budget cannot buy as stock or near-ATM options, so ABNB is dropped. ADT (about $10) and UUP (about $29) are affordable breakout candidates within the Broad market focus. The three puts still sit above their breakdown stops and nothing new has changed their thesis.",
+      "watch": [
+       {
+        "symbol": "ADT",
+        "instrument": "stock",
+        "setup": "Near 55-day breakout (level 9.99, roc20 +53.6%, Real Estate, affordable at about"
+       },
+       {
+        "symbol": "UUP",
+        "instrument": "stock",
+        "setup": "Near 55-day breakout (level 29.23, roc20 +0.4%, weak momentum, Broad market)"
+       },
+       {
+        "symbol": "EW",
+        "instrument": "stock",
+        "setup": "Near 55-day breakout (level 104.09, roc20 +19.8%, Health Care, outside the lean-"
+       }
+      ]
      }
     ],
-    "settled_cash_at_plan": 435.16,
+    "settled_cash_at_plan": 686.54,
     "budgets_clamped": 0
    },
-   "unsettled": [
-    {
-     "amount": 106.92,
-     "settles": "2026-11-09",
-     "note": "sold XLV"
-    },
-    {
-     "amount": 144.46,
-     "settles": "2026-11-09",
-     "note": "sold ALL"
-    }
-   ],
+   "unsettled": [],
    "focus": {
     "lean_in": [
      "Broad market / other"
@@ -412,11 +433,12 @@
     "avoid": [
      "Energy",
      "Consumer Staples",
-     "Technology"
+     "Technology",
+     "Industrials"
     ],
-    "why": "Broad market is the only clearly profitable sector (+$91 over 7 trades). Health Care has no live scan setups and a small, mixed record, so I'm dropping it from the lean-in list.",
-    "set_at": "2026-11-08T21:44-05:00",
-    "expires": "2026-11-22"
+    "why": "Broad market is the only sector with a clear profit ($91 over 7 trades, 29% win rate with a positive average P&L). Energy (-$47), Consumer Staples (-$16.88) and Technology (-$15.50) are losing sectors. Industrials has no trades on record and its scan setups are near-ATM options outside the budget. H",
+    "set_at": "2026-11-09T07:40-05:00",
+    "expires": "2026-11-23"
    },
    "scorecard": [
     {
@@ -1225,18 +1247,18 @@
    },
    "plan": {
     "for_day": "2026-11-09",
-    "made_at": "2026-11-08T21:44-05:00",
-    "session": "Evening check-in",
+    "made_at": "2026-11-09T07:40-05:00",
+    "session": "Pre-market call",
     "decision": "revise",
-    "why": "Cash is still locked until the $193.51 settles tomorrow, and the fresh scan shows only one new candidate (XLE) near 1:1 on live prices, so I'm adding it as a conditional entry rather than a broad re-screen.",
-    "summary": "Hold all seven open positions to their stops and targets. After the cash settles, consider one XLE entry only if it opens at or below about 62 with the stop near 59.16 and reward still at least 1:1.",
+    "why": "Cash is now $194.35 settled, and XLE's live price of 61.64 sits just under the 62 trigger, so a small entry clears 1:1 for the first time. The other scan names are either already held or fail the 1:1 floor.",
+    "summary": "Hold all seven open positions to their stops and targets. Buy a small XLE starter only if it opens at or below 62 with the stop near 59.16, and skip it if the stop-to-target ratio drops under 1:1.",
     "watchlist": [
      {
       "symbol": "XLE",
-      "setup": "RSI(2) 2.3 washout 4.2% above its 200-day, Energy focus",
-      "trigger": "Opens at or below 62.00 after settlement; skip if above 63 or if the 1.5-ATR stop (about 59.16) gives under 1:1 to the 64.17 SMA5 target",
+      "setup": "RSI(2) 2.3 washout 4.2% above its 200-day; Energy lean-in",
+      "trigger": "Opens at or below 62.00; skip above 63 or if the reward to the 64.17 SMA5 target is under 1:1 against a 1.5-ATR stop near 59.16",
       "instrument": "stock",
-      "max_dollars": 0.84,
+      "max_dollars": 60,
       "conviction": 2
      }
     ],
@@ -1267,13 +1289,13 @@
      }
     ],
     "avoid": [
-     "ZS, BP, TEAM and MPC (below 1:1 on live prices or too expensive for cash)",
-     "SU, PSX and SHEL (about 0.7:1 on 2-ATR stops to SMA5 targets)",
+     "ZS, BP, TEAM and MPC: below 1:1 on live prices, or stretched far above the 200-day",
+     "SU, PSX and SHEL: about 0.7:1 on 2-ATR stops to SMA5 targets",
      "CRM and other Technology names while the AI rout is unresolved",
-     "COF, PM and ALL (about 0.7:1 or worse)",
-     "TSLA and PBR (below 1:1)"
+     "COF, PM, ALL and MNST: about 0.7:1 or worse, or not a real washout",
+     "TSLA and PBR: below 1:1"
     ],
-    "brainstorm": "",
+    "brainstorm": "After the open positions settle, test whether a tighter 1.25-ATR stop on Energy washouts improves the reward-to-risk ratio.",
     "revisions": [
      {
       "at": "2026-11-06T16:41-05:00",
@@ -1294,23 +1316,25 @@
         "setup": "RSI(2) 2.3 washout 4.2% above its 200-day, Energy focus"
        }
       ]
+     },
+     {
+      "at": "2026-11-09T07:40-05:00",
+      "session": "Pre-market call",
+      "decision": "revise",
+      "why": "Cash is now $194.35 settled, and XLE's live price of 61.64 sits just under the 62 trigger, so a small entry clears 1:1 for the first time. The other scan names are either already held or fail the 1:1 floor.",
+      "watch": [
+       {
+        "symbol": "XLE",
+        "instrument": "stock",
+        "setup": "RSI(2) 2.3 washout 4.2% above its 200-day; Energy lean-in"
+       }
+      ]
      }
     ],
-    "settled_cash_at_plan": 0.84,
-    "budgets_clamped": 1
+    "settled_cash_at_plan": 194.35,
+    "budgets_clamped": 0
    },
-   "unsettled": [
-    {
-     "amount": 151.51,
-     "settles": "2026-11-09",
-     "note": "sold TWLO"
-    },
-    {
-     "amount": 42.0,
-     "settles": "2026-11-09",
-     "note": "sold SHOP"
-    }
-   ],
+   "unsettled": [],
    "focus": {
     "lean_in": [
      "Energy"
@@ -1318,9 +1342,9 @@
     "avoid": [
      "Technology"
     ],
-    "why": "Energy has the most washouts in today's scan and my Energy trades have won; Technology is 0-for-1 with the AI rout unresolved. Sample sizes are small.",
-    "set_at": "2026-11-08T21:44-05:00",
-    "expires": "2026-11-22"
+    "why": "Energy has the most washouts in today's scan and the Energy trades so far have won, though the sample is one trade. Technology is 0-for-1 with the AI rout unresolved.",
+    "set_at": "2026-11-09T07:40-05:00",
+    "expires": "2026-11-23"
    },
    "scorecard": [
     {
@@ -1891,16 +1915,16 @@
    },
    "plan": {
     "for_day": "2026-11-09",
-    "made_at": "2026-11-08T21:45-05:00",
-    "session": "Evening check-in",
-    "decision": "keep",
-    "why": "Scan data is unchanged in substance: IWM and TLT remain inside their thesis ranges, and the fresh EEM bear call still clears the 0.95 IV/RV floor (1.11). The Iran talks headline adds geopolitical risk, but it does not justify new exposure beyond the one conditional EEM idea.",
-    "summary": "Hold the IWM 286/287 bear call and TLT 80/79 bull put to their exits without adding. Consider only the EEM 63/64 bear call, and only if it fills at 0.15 or better with EEM below 63. Otherwise keep cash settled.",
+    "made_at": "2026-11-09T07:41-05:00",
+    "session": "Pre-market call",
+    "decision": "revise",
+    "why": "The fresh scan now shows EEM at 1.25 IV/RV, up from 1.11 in my plan, with a bear-call trend side, so the setup is stronger than when I wrote it. My record is still weak (25% hit rate, Financials and Industrials losses), so I'm keeping the size at $85 and the 0.15 credit floor.",
+    "summary": "Hold the IWM 286/287 bear call and TLT 80/79 bull put to their exits without adding. Only if EEM opens below 63 and the 63/64 bear call fills at 0.15 or better with a tight bid/ask, enter one spread at $85 max loss; otherwise keep cash settled.",
     "watchlist": [
      {
       "symbol": "EEM",
-      "setup": "1-wide bear call spread, short strike near 25 delta (about 63/64 from the 59.32 close, ~33% IV), 21-45 DTE. Scan IV/RV 1.11 clears the 0.95 floor. Trend side is bear call.",
-      "trigger": "Enter only if the spread fills at 0.15 credit or better, the bid/ask is tight, and EEM is trading below the 63 short strike. Skip if the fill is thin or EEM gaps above 63 on Iran-related risk-on news.",
+      "setup": "1-wide bear call spread, short strike near 25 delta (about 63/64 from the 59.32 close, ~37% IV), 21-45 DTE. Scan IV/RV 1.25 clears the 0.95 floor. Trend side is bear call.",
+      "trigger": "Enter only if the spread fills at 0.15 credit or better with a tight bid/ask, and EEM is trading below the 63 short strike at the open. Skip if EEM gaps above 63 on Iran/oil risk-on news or the fill is thin.",
       "instrument": "spread",
       "max_dollars": 85,
       "conviction": 2
@@ -1917,14 +1941,14 @@
      }
     ],
     "avoid": [
-     "QQQ: bear call IV/RV 0.97 is below the 0.95 floor in practice, and Technology is on the avoid list with AI-stock and gap-up risk.",
+     "QQQ: bear call IV/RV 1.04 clears the floor, but Technology is on the avoid list with AI-stock and NVDA gap-up risk after the rout.",
      "SPY: stand-aside trend, 4% below its 50-day, with no clean credit.",
-     "XLF: IV/RV 0.94 is below the floor, and Financials lost my only trade (-16.5).",
-     "XLE: IV/RV 0.92 is below the floor, and Energy is on the avoid list because of Iran/oil headline risk.",
-     "SLV and GDX: IV/RV 0.90 and 0.86 are below the floor. Materials is on the avoid list, and gold miners' ~54% realized vol makes bear calls thin relative to max loss.",
+     "XLF: IV/RV 1.13 clears the floor, but Financials lost my only trade (-16.5), so I won't add exposure there.",
+     "XLE: IV/RV 0.92 is below the floor, and Energy is on the avoid list because of Iran/Hormuz headline risk.",
+     "SLV and GDX: IV/RV 1.03 and 1.06 pass the floor, but Materials is on the avoid list and gold miners' ~54% realized vol makes bear calls thin relative to max loss.",
      "IWM and TLT: no duplicate entries while the open spreads are live."
     ],
-    "brainstorm": "Test whether EM and oil-sensitive names (EEM, XLE) get a clean bear-call edge on geopolitical headline days, but only after the EEM sample grows. For now, treat the Iran headline as a reason to size down, not to add.",
+    "brainstorm": "Require the net credit after friction to be at least 0.15 on a 1-wide spread and skip any fill that needs slippage to reach it, since tiny credits lose money even on profit-target exits.",
     "revisions": [
      {
       "at": "2026-11-06T16:41-05:00",
@@ -1951,19 +1975,26 @@
         "setup": "1-wide bear call spread, short strike near 25 delta (about 63/64 from the 59.32 "
        }
       ]
+     },
+     {
+      "at": "2026-11-09T07:41-05:00",
+      "session": "Pre-market call",
+      "decision": "revise",
+      "why": "The fresh scan now shows EEM at 1.25 IV/RV, up from 1.11 in my plan, with a bear-call trend side, so the setup is stronger than when I wrote it. My record is still weak (25% hit rate, Financials and Industrials losses), so I'm keeping the size at $85 and the 0.15 credit floor.",
+      "watch": [
+       {
+        "symbol": "EEM",
+        "instrument": "spread",
+        "setup": "1-wide bear call spread, short strike near 25 delta (about 63/64 from the 59.32 "
+       }
+      ]
      }
     ],
-    "settled_cash_at_plan": 785.5,
+    "settled_cash_at_plan": 797.5,
     "budgets_clamped": 0
    },
    "min_trade_seen": 79.0,
-   "unsettled": [
-    {
-     "amount": 12.0,
-     "settles": "2026-11-09",
-     "note": "credit TLT"
-    }
-   ],
+   "unsettled": [],
    "focus": {
     "lean_in": [
      "Broad market / other"
@@ -1972,11 +2003,12 @@
      "Technology",
      "Energy",
      "Materials",
-     "Financials"
+     "Financials",
+     "Industrials"
     ],
-    "why": "Broad market / other is the only sector with a fresh scan clearing the IV/RV floor and with open positions (IWM, TLT, EEM). Financials (-16.5), Industrials (-10.5), and Real Estate (-1.0) have all lost money in my results, and Technology and Energy carry gap or headline risk. The sample is small, so",
-    "set_at": "2026-11-08T21:45-05:00",
-    "expires": "2026-11-22"
+    "why": "Broad market / other is the only sector where my open trades (IWM, TLT) and the fresh scan (EEM, IV/RV 1.25) show a working setup. Financials (-16.5) and Industrials (-10.5) have lost money in my results, and Technology and Energy carry gap or headline risk. The sample is small, so I'm keeping the f",
+    "set_at": "2026-11-09T07:41-05:00",
+    "expires": "2026-11-23"
    },
    "scorecard": [
     {
@@ -3080,18 +3112,7 @@
     "AMZN": "2026-11-05"
    },
    "joined": "2026-10-14T12:09:57-04:00",
-   "unsettled": [
-    {
-     "amount": 249.28,
-     "settles": "2026-11-09",
-     "note": "sold SPY"
-    },
-    {
-     "amount": 500.87,
-     "settles": "2026-11-09",
-     "note": "sold MSFT"
-    }
-   ],
+   "unsettled": [],
    "playbook": {
     "date": "2026-11-06",
     "made_at": "2026-11-06T15:36-05:00",
@@ -3117,16 +3138,16 @@
    },
    "plan": {
     "for_day": "2026-11-09",
-    "made_at": "2026-11-08T21:45-05:00",
-    "session": "Evening check-in",
-    "decision": "revise",
-    "why": "The plan's core premise, a thin edge in Communication Services, still stands on a small sample, but the 1.5x relative-volume gate has never been verified as enforced, so the plan is only as good as manual checks. Technology is still -$2.17 over 46 trades, and today's scan shows the AI-hardware names up sharply after prior selling, which is a chase risk rather than evidence of an edge. Trimming the",
-    "summary": "Stand aside by default. Only consider GOOGL if the first 30 minutes show at least 1.5x relative volume on the impulse, a pullback that holds and reclaims VWAP, and SPY above its open. If it qualifies, take one $50 scalp with a 0.5% target, a 0.3% stop (expect roughly 0.35% realized after slippage), and a 45-minute time limit. Otherwise no trades.",
+    "made_at": "2026-11-09T07:41-05:00",
+    "session": "Pre-market call",
+    "decision": "keep",
+    "why": "Today's scan shows strong gains in AI-hardware names (AMD +10.9%, INTC +7.9%), but those moves are chase-prone and event-driven, and my Technology record is -$2.17 over 46 trades. The Nasdaq rebound and the 42 crash-radar reading (warning tier) don't justify changing the stand-aside default, so the GOOGL-only conditional plan still holds.",
+    "summary": "Stand aside by default. Only consider GOOGL if the first 30 minutes show at least 1.5x relative volume on the impulse (verified manually, since the min_rel_volume filter may not be enforced on VWAP pullbacks), a pullback that holds and reclaims VWAP, and SPY above its open. If it qualifies, take one $50 scalp with a 0.5% target, 0.3% stop, and 45-minute time limit. Otherwise no trades.",
     "watchlist": [
      {
       "symbol": "GOOGL",
-      "setup": "VWAP pullback continuation in Communication Services, the only sector with positive results for me (+$1.54 over 6 trades). Up 0.73% on the scan with a 3.7% ATR, and less damaged than the AI-hardware names.",
-      "trigger": "Verify relative volume manually (at least 1.5x on the morning impulse) before acting, then a pullback that holds and reclaims VWAP, with SPY above its open. Skip if the impulse fades on declining volume, or if NVDA, MU, AMD or AVGO make new lows in the first hour.",
+      "setup": "VWAP pullback continuation in Communication Services, the only positive sector in my results. Up 0.73% on the scan, 3.7% ATR, and less exposed to the AI-hardware selloff.",
+      "trigger": "Manually verify at least 1.5x relative volume on the morning impulse, then a pullback that holds and reclaims VWAP, with SPY above its open. Skip if the impulse fades on declining volume, or if NVDA, MU, AMD or AVGO make new lows in the first hour.",
       "instrument": "stock",
       "max_dollars": 50,
       "conviction": 2
@@ -3134,14 +3155,14 @@
     ],
     "position_plans": [],
     "avoid": [
-     "Technology and AI-hardware names (SNDK, LITE, MU, AMD, INTC, NVDA, AVGO, TSM, SMH, SOXX, QQQ, SPCX): 46 trades at 43% for -$2.17. Today's gains are a chase risk, and the Nvidia bear-market headline and the SpaceX/Starship news make intraday moves event-driven.",
+     "Technology and AI-hardware names (SNDK, LITE, MU, AMD, INTC, NVDA, AVGO, TSM, SMH, SOXX, QQQ, SPCX): -$2.17 over 46 trades, and today's large gains are a chase risk. The Nvidia bear-market headline and SpaceX/Starship news make intraday moves event-driven.",
      "SPY: stopped out at 1.89x volume; the tape is weak.",
-     "MSFT: an event trade, and the VWAP bounce timed out.",
-     "META and AMZN: each stopped out at about 1.5-1.9x volume in AI-rout tape.",
+     "MSFT: event-driven, and the last VWAP bounce timed out.",
+     "META and AMZN: each stopped out around 1.5-1.9x volume in the AI-rout tape.",
      "TSLA: trades on election, SpaceX and Musk headlines, which don't suit a 0.5% target.",
      "GOOG: same company as GOOGL, so it adds no diversification."
     ],
-    "brainstorm": "Test a no-trade week to measure whether the thin edge (about +$0.87 total) survives. If I do trade, log relative volume at entry for every trade so the 1.5x filter can be checked against outcomes.",
+    "brainstorm": "Before trading live, check whether min_rel_volume is actually enforced for VWAP pullbacks. If it is not, add a hard code-side gate and log the rel-volume value on every entry so the next review can test whether volume matters.",
     "revisions": [
      {
       "at": "2026-11-06T16:41-05:00",
@@ -3168,9 +3189,22 @@
         "setup": "VWAP pullback continuation in Communication Services, the only sector with posit"
        }
       ]
+     },
+     {
+      "at": "2026-11-09T07:41-05:00",
+      "session": "Pre-market call",
+      "decision": "keep",
+      "why": "Today's scan shows strong gains in AI-hardware names (AMD +10.9%, INTC +7.9%), but those moves are chase-prone and event-driven, and my Technology record is -$2.17 over 46 trades. The Nasdaq rebound and the 42 crash-radar reading (warning tier) don't justify changing the stand-aside default, so the GOOGL-only conditional plan still holds.",
+      "watch": [
+       {
+        "symbol": "GOOGL",
+        "instrument": "stock",
+        "setup": "VWAP pullback continuation in Communication Services, the only positive sector i"
+       }
+      ]
      }
     ],
-    "settled_cash_at_plan": 250.72,
+    "settled_cash_at_plan": 1000.87,
     "budgets_clamped": 0
    },
    "focus": {
@@ -3181,9 +3215,9 @@
      "Technology",
      "Consumer Discretionary"
     ],
-    "why": "Communication Services is +$1.54 over 6 trades (50% win rate), the only positive sector with a meaningful count, though the sample is small. Technology is -$2.17 over 46 trades. Consumer Discretionary is +$0.28 over 9 trades, below the bar for a lean-in, and its name tags are unreliable (MSFT is tag",
-    "set_at": "2026-11-08T21:45-05:00",
-    "expires": "2026-11-22"
+    "why": "Communication Services is +$1.54 over 6 trades (50% win rate), the only positive sector with a meaningful count, though the sample is small. Technology is -$2.17 over 46 trades. Consumer Discretionary is +$0.28 over 9 trades, too thin to lean into, and its name tags are unreliable (MSFT is tagged th",
+    "set_at": "2026-11-09T07:41-05:00",
+    "expires": "2026-11-23"
    },
    "scorecard": [
     {

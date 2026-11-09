@@ -16862,5 +16862,128 @@
     "conviction": 2
    }
   ]
+ },
+ {
+  "time": "2026-11-09T07:40:28-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-11-09",
+  "decision": "revise",
+  "why": "The fresh scan shows ABNB at about $193 and EW at about $104, which the $100 budget cannot buy as stock or near-ATM options, so ABNB is dropped. ADT (about $10) and UUP (about $29) are affordable breakout candidates within the Broad market focus. The three puts still sit above their breakdown stops and nothing new has changed their thesis.",
+  "summary": "Hold the VALE, CLSX and DJTU puts with their closing-price exits and add no new risk. Buy ADT as a stock only on a close above 9.99 on at least 2.5x relative volume, and UUP only on a close above 29.23 on the same volume test. Stay out of Industrials, Energy, Consumer Staples and Technology, and treat EW as a watch-only Health Care setup.",
+  "watchlist": [
+   {
+    "symbol": "ADT",
+    "setup": "Near 55-day breakout (level 9.99, roc20 +53.6%, Real Estate, affordable at about $10 per share)",
+    "trigger": "Close above 9.99 on at least 2.5x relative volume, then buy with max $100 (about 10 shares)",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "UUP",
+    "setup": "Near 55-day breakout (level 29.23, roc20 +0.4%, weak momentum, Broad market)",
+    "trigger": "Close above 29.23 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "EW",
+    "setup": "Near 55-day breakout (level 104.09, roc20 +19.8%, Health Care, outside the lean-in focus)",
+    "trigger": "Close above 104.09 on at least 2.5x relative volume; only act if you accept about $104 for a single share, which slightly exceeds the $100 cap",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-09T07:40:28-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Broad market / other"
+  ],
+  "avoid": [
+   "Energy",
+   "Consumer Staples",
+   "Technology",
+   "Industrials"
+  ],
+  "why": "Broad market is the only sector with a clear profit ($91 over 7 trades, 29% win rate with a positive average P&L). Energy (-$47), Consumer Staples (-$16.88) and Technology (-$15.50) are losing sectors. Industrials has no trades on record and its scan setups are near-ATM options outside the budget. H",
+  "expires": "2026-11-23"
+ },
+ {
+  "time": "2026-11-09T07:40:54-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-11-09",
+  "decision": "revise",
+  "why": "Cash is now $194.35 settled, and XLE's live price of 61.64 sits just under the 62 trigger, so a small entry clears 1:1 for the first time. The other scan names are either already held or fail the 1:1 floor.",
+  "summary": "Hold all seven open positions to their stops and targets. Buy a small XLE starter only if it opens at or below 62 with the stop near 59.16, and skip it if the stop-to-target ratio drops under 1:1.",
+  "watchlist": [
+   {
+    "symbol": "XLE",
+    "setup": "RSI(2) 2.3 washout 4.2% above its 200-day; Energy lean-in",
+    "trigger": "Opens at or below 62.00; skip above 63 or if the reward to the 64.17 SMA5 target is under 1:1 against a 1.5-ATR stop near 59.16",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-09T07:41:07-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-11-09",
+  "decision": "revise",
+  "why": "The fresh scan now shows EEM at 1.25 IV/RV, up from 1.11 in my plan, with a bear-call trend side, so the setup is stronger than when I wrote it. My record is still weak (25% hit rate, Financials and Industrials losses), so I'm keeping the size at $85 and the 0.15 credit floor.",
+  "summary": "Hold the IWM 286/287 bear call and TLT 80/79 bull put to their exits without adding. Only if EEM opens below 63 and the 63/64 bear call fills at 0.15 or better with a tight bid/ask, enter one spread at $85 max loss; otherwise keep cash settled.",
+  "watchlist": [
+   {
+    "symbol": "EEM",
+    "setup": "1-wide bear call spread, short strike near 25 delta (about 63/64 from the 59.32 close, ~37% IV), 21-45 DTE. Scan IV/RV 1.25 clears the 0.95 floor. Trend side is bear call.",
+    "trigger": "Enter only if the spread fills at 0.15 credit or better with a tight bid/ask, and EEM is trading below the 63 short strike at the open. Skip if EEM gaps above 63 on Iran/oil risk-on news or the fill is thin.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-09T07:41:07-05:00",
+  "type": "focus",
+  "agent": "volsell",
+  "lean_in": [
+   "Broad market / other"
+  ],
+  "avoid": [
+   "Technology",
+   "Energy",
+   "Materials",
+   "Financials",
+   "Industrials"
+  ],
+  "why": "Broad market / other is the only sector where my open trades (IWM, TLT) and the fresh scan (EEM, IV/RV 1.25) show a working setup. Financials (-16.5) and Industrials (-10.5) have lost money in my results, and Technology and Energy carry gap or headline risk. The sample is small, so I'm keeping the f",
+  "expires": "2026-11-23"
+ },
+ {
+  "time": "2026-11-09T07:41:14-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-11-09",
+  "decision": "keep",
+  "why": "Today's scan shows strong gains in AI-hardware names (AMD +10.9%, INTC +7.9%), but those moves are chase-prone and event-driven, and my Technology record is -$2.17 over 46 trades. The Nasdaq rebound and the 42 crash-radar reading (warning tier) don't justify changing the stand-aside default, so the GOOGL-only conditional plan still holds.",
+  "summary": "Stand aside by default. Only consider GOOGL if the first 30 minutes show at least 1.5x relative volume on the impulse (verified manually, since the min_rel_volume filter may not be enforced on VWAP pullbacks), a pullback that holds and reclaims VWAP, and SPY above its open. If it qualifies, take one $50 scalp with a 0.5% target, 0.3% stop, and 45-minute time limit. Otherwise no trades.",
+  "watchlist": [
+   {
+    "symbol": "GOOGL",
+    "setup": "VWAP pullback continuation in Communication Services, the only positive sector in my results. Up 0.73% on the scan, 3.7% ATR, and less exposed to the AI-hardware selloff.",
+    "trigger": "Manually verify at least 1.5x relative volume on the morning impulse, then a pullback that holds and reclaims VWAP, with SPY above its open. Skip if the impulse fades on declining volume, or if NVDA, MU, AMD or AVGO make new lows in the first hour.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
  }
 ]

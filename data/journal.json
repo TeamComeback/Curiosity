@@ -1,65 +1,5 @@
 [
  {
-  "time": "2026-10-26T10:01:27-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "TSLA",
-  "instrument": "stock",
-  "qty": 0.3183,
-  "price": 394.124,
-  "cost": 125.45,
-  "stop": 392.85,
-  "thesis": "VWAP pullback bounce on TSLA: 0.93x volume, +0.83% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-26T10:01:28-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "TSLA",
-  "instrument": "stock",
-  "qty": 0.2126,
-  "price": 394.124,
-  "cost": 83.79,
-  "stop": 392.66,
-  "thesis": "VWAP pullback bounce on TSLA: 0.93x volume, +0.83% vs VWAP; target +0.7%, stop -0.35%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-26T10:01:29-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "TSLL",
-  "instrument": "stock",
-  "qty": 7.681,
-  "price": 10.9,
-  "cost": 83.72,
-  "stop": 10.87,
-  "thesis": "VWAP pullback bounce on TSLL: 0.65x volume, +1.59% vs VWAP; target +0.7%, stop -0.35%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-26T10:06:01-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-62%)"
- },
- {
-  "time": "2026-10-26T10:06:41-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "IWM",
-  "note": "credit not filled at 0.25 (mid 0.25, natural 0.17, floor 0.25)"
- },
- {
-  "time": "2026-10-26T10:06:51-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, TSLA, EWZ, XLE, IWM",
-  "note": "defensive: Calm tape with a few clean uptrends (TSLA, EWZ, XLE, IWM), but the MU stop and the thin SPY volume show the market isn't giving much follow-through, so I'm keeping size at half and taking only VWAP bounces. I'm widening the stop to 0.4% because the 0.3% stop got clipped by noise, and I'm keeping the"
- },
- {
   "time": "2026-10-26T10:06:56-04:00",
   "type": "playbook",
   "agent": "hyper",
@@ -6829,6 +6769,46 @@
   "type": "plan",
   "agent": "scalper",
   "note": "Evening check-in: revise. The plan's core premise, a thin edge in Communication Services, still stands on a small sample, but the 1.5x relative-volume gate has never been verified as enforced, so the plan is only as good as manual checks. Technology is still -$2.17 over 46 trades, and today's scan shows the AI-hardware names up sharply after prior selling, which is a chase risk rather than evidence of an edge. Trimming the",
+  "symbol": "GOOGL"
+ },
+ {
+  "time": "2026-11-09T07:40:28-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Broad market / other; avoiding Energy, Consumer Staples, Technology, Industrials. Broad market is the only sector with a clear profit ($91 over 7 trades, 29% win rate with a positive average P&L). Energy (-$47), Consumer Staples (-$16.88) and Technology (-$15.50) are losing sectors. Industrials has no trades on record and its scan setups are near-ATM options outside the budget. H"
+ },
+ {
+  "time": "2026-11-09T07:40:28-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. The fresh scan shows ABNB at about $193 and EW at about $104, which the $100 budget cannot buy as stock or near-ATM options, so ABNB is dropped. ADT (about $10) and UUP (about $29) are affordable breakout candidates within the Broad market focus. The three puts still sit above their breakdown stops and nothing new has changed their thesis.",
+  "symbol": "ADT, UUP, EW"
+ },
+ {
+  "time": "2026-11-09T07:40:54-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: revise. Cash is now $194.35 settled, and XLE's live price of 61.64 sits just under the 62 trigger, so a small entry clears 1:1 for the first time. The other scan names are either already held or fail the 1:1 floor.",
+  "symbol": "XLE"
+ },
+ {
+  "time": "2026-11-09T07:41:07-05:00",
+  "type": "focus",
+  "agent": "volsell",
+  "note": "Leaning into Broad market / other; avoiding Technology, Energy, Materials, Financials, Industrials. Broad market / other is the only sector where my open trades (IWM, TLT) and the fresh scan (EEM, IV/RV 1.25) show a working setup. Financials (-16.5) and Industrials (-10.5) have lost money in my results, and Technology and Energy carry gap or headline risk. The sample is small, so I'm keeping the f"
+ },
+ {
+  "time": "2026-11-09T07:41:07-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: revise. The fresh scan now shows EEM at 1.25 IV/RV, up from 1.11 in my plan, with a bear-call trend side, so the setup is stronger than when I wrote it. My record is still weak (25% hit rate, Financials and Industrials losses), so I'm keeping the size at $85 and the 0.15 credit floor.",
+  "symbol": "EEM"
+ },
+ {
+  "time": "2026-11-09T07:41:15-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: keep. Today's scan shows strong gains in AI-hardware names (AMD +10.9%, INTC +7.9%), but those moves are chase-prone and event-driven, and my Technology record is -$2.17 over 46 trades. The Nasdaq rebound and the 42 crash-radar reading (warning tier) don't justify changing the stand-aside default, so the GOOGL-only conditional plan still holds.",
   "symbol": "GOOGL"
  }
 ]
