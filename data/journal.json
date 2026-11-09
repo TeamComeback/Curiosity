@@ -1,74 +1,5 @@
 [
  {
-  "time": "2026-10-27T07:40:49-04:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Pre-market call: keep. Nothing in the fresh scan clears the 1:1 reward-to-risk floor. Every washout's SMA5 target sits well inside its 2.5-ATR stop (MRK ~0.5:1, XYZ ~0.5:1, MCK ~0.34:1, MOH ~0.4:1, CNC ~0.4:1). CNC's earnings beat is real, but its RSI(2) of 12.5 is not a washout trigger and its reward is too small. The existing DXCM and PBR holds remain valid under their stops.",
-  "symbol": ""
- },
- {
-  "time": "2026-10-27T07:40:58-04:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "Pre-market call: revise. IWM's IV rose to 21.4% (IV/RV 1.48) from 20.2%, which may lift the credit toward the 0.25 gate, but the Fed decision is due in the window and the Iran and China AI headlines add gap risk. Keep the same gate and sizing, with added caution on the FOMC timing.",
-  "symbol": "IWM"
- },
- {
-  "time": "2026-10-27T07:41:09-04:00",
-  "type": "plan",
-  "agent": "blackswan",
-  "note": "Pre-market call: keep. The fresh scan adds more Communication Services and Technology breakdowns, but none can be funded: settled cash is $143.50 and the open bearish book (about $811 cost) still exceeds equity, so the 50% guideline blocks new bearish debit. The radar is calm at 24, so the plan's stance is unchanged.",
-  "symbol": "T, NFLX"
- },
- {
-  "time": "2026-10-27T07:41:20-04:00",
-  "type": "focus",
-  "agent": "scalper",
-  "note": "Leaning into Broad market / other, Industrials; avoiding Real Estate, Communication Services. Broad market (SPY) is the only gate-compliant evidence so far. Industrials has 6 trades at a 67% win rate and +$0.99, but the sample is small. Consumer Staples (2 wins, AAPL) is dropped from lean-in because it is too small to act on. Technology has 30 trades at 50% and +$0.06 per trade, so it is neu"
- },
- {
-  "time": "2026-10-27T07:41:20-04:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "Pre-market call: revise. Crash radar is calm at 24 and today has no open positions, so the VWAP-reclaim plan still applies. I'm tightening it because the 1.5x relative-volume gate has not been enforced on VWAP pullbacks, and the edge is about +$0.10 per trade, so I'm dropping AAPL and keeping only the two most liquid index names.",
-  "symbol": "SPY, IWM"
- },
- {
-  "time": "2026-10-27T09:35:56-04:00",
-  "type": "close",
-  "agent": "meanrev",
-  "symbol": "DXCM",
-  "qty": 3.2201,
-  "entry": 77.67,
-  "exit": 78.72,
-  "pnl": 3.38,
-  "note": "snap-back (RSI2 52)",
-  "opened": "2026-10-22T14:06:31-04:00",
-  "confidence": 3,
-  "thesis": "DXCM RSI(2) 2.5 washout 4.6% above its 200-day; live target 83.13 vs stop 71.98 is about 0.97:1, near my 1:1 floor, and the calm regime supports a snap-back."
- },
- {
-  "time": "2026-10-27T09:36:28-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-69%)"
- },
- {
-  "time": "2026-10-27T09:37:02-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "IWM",
-  "note": "credit not filled at 0.26 (mid 0.26, natural 0.17, floor 0.25)"
- },
- {
-  "time": "2026-10-27T09:37:15-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AVGO, AMD, TSLA, INTC, QQQ",
-  "note": "defensive: SPY is flat with a tiny range and thin volume, so the index setups are weak. I'd rather trade uptrending liquid names near VWAP (AVGO above its opening range, AMD, TSLA, INTC) at half size, with fewer slices and tighter limits. I skipped BE and WDC because they are too extended above VWAP for a safe"
- },
- {
   "time": "2026-10-27T09:37:20-04:00",
   "type": "playbook",
   "agent": "hyper",
@@ -6738,5 +6669,62 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, IWM",
   "note": "stand_down: It's 3:38 PM with the forced flat at 3:50, so there are only about 12 minutes left, too little time for a new scalp to develop and exit cleanly. The META trade is already closed, and the day's remaining edge doesn't justify a fresh entry, so I'm standing down for the rest of the session."
+ },
+ {
+  "time": "2026-11-09T16:40:26-05:00",
+  "type": "recap",
+  "note": "5 trades opened and 10 closed (4 winners), realized -$84.69. Best day among the racers: Snapback Partners (+5.93)."
+ },
+ {
+  "time": "2026-11-09T16:40:26-05:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 2 of 3 picks moved the planned way, avg +0.82%"
+ },
+ {
+  "time": "2026-11-09T16:40:53-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: revise. Nothing new met the 2.5x-volume breakout trigger, but the old plan's ABNB avoid note conflicts with holding it, so I'm correcting that and tightening the position notes.",
+  "symbol": "ADT, UUP, EW"
+ },
+ {
+  "time": "2026-11-09T16:40:53-05:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 1 of 1 picks moved the planned way, avg +0.52%"
+ },
+ {
+  "time": "2026-11-09T16:41:06-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: revise. The old plan's only watchlist name, XLE, is absent from today's scan, so its trigger cannot fire. Of today's sub-10 RSI(2) washouts, every candidate fails the 1:1 floor on a 1.5-ATR stop to SMA5 target (SU about 0.87:1, CVX 0.63:1, SHEL 0.62:1, XOM 0.55:1, BP below 0.5:1), and TEAM is 29.8% above its 200-day with analyst target cuts.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-09T16:41:06-05:00",
+  "type": "scorecard",
+  "agent": "volsell",
+  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -2.88%"
+ },
+ {
+  "time": "2026-11-09T16:41:19-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "After-close review: revise. The fresh scan shows EEM at IV/RV 0.94, below the 0.95 floor, with IV below realized vol (29.9% vs 31.8%). My EEM trigger was built on a stale 1.25 reading and a 59.32 close, and the stock is now at 61.03. With no other name clearing the floor except TLT, which I already hold, the EEM setup is void.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-09T16:41:19-05:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 1 of 1 picks moved the planned way, avg +1.20%"
+ },
+ {
+  "time": "2026-11-09T16:41:31-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's only trade was a META ORB winner (+$1.16), which supports the Communication Services lean. But overnight Waymo news (a federal probe and an NHTSA recall query covering GOOG and GOOGL) adds regulatory event risk to the GOOGL setup, and my own scorecard shows mind-changes have not helped, so I'm keeping the trigger strict rather than widening it.",
+  "symbol": "GOOGL, META"
  }
 ]

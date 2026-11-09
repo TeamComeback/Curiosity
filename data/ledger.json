@@ -17447,5 +17447,86 @@
   ],
   "aggression": "stand_down",
   "why": "It's 3:38 PM with the forced flat at 3:50, so there are only about 12 minutes left, too little time for a new scalp to develop and exit cleanly. The META trade is already closed, and the day's remaining edge doesn't justify a fresh entry, so I'm standing down for the rest of the session."
+ },
+ {
+  "time": "2026-11-09T16:40:53-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-11-10",
+  "decision": "revise",
+  "why": "Nothing new met the 2.5x-volume breakout trigger, but the old plan's ABNB avoid note conflicts with holding it, so I'm correcting that and tightening the position notes.",
+  "summary": "Hold ABNB on its 182.51 stop and the CLSX and DJTU puts on their closing exits. Buy only on confirmed closes above trigger levels with 2.5x volume: ADT, UUP or EW.",
+  "watchlist": [
+   {
+    "symbol": "ADT",
+    "setup": "Near 55-day breakout, Real Estate, roc20 +53.8%",
+    "trigger": "Close above 9.99 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "UUP",
+    "setup": "Near 55-day breakout, weak momentum",
+    "trigger": "Close above 29.23 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "EW",
+    "setup": "Near 55-day breakout, Health Care, roc20 +21.2%",
+    "trigger": "Close above 104.09 on at least 2.5x relative volume; about $104 per share",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-09T16:41:06-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-11-10",
+  "decision": "revise",
+  "why": "The old plan's only watchlist name, XLE, is absent from today's scan, so its trigger cannot fire. Of today's sub-10 RSI(2) washouts, every candidate fails the 1:1 floor on a 1.5-ATR stop to SMA5 target (SU about 0.87:1, CVX 0.63:1, SHEL 0.62:1, XOM 0.55:1, BP below 0.5:1), and TEAM is 29.8% above its 200-day with analyst target cuts.",
+  "summary": "No new entries tomorrow. Hold XOP, CNQ and PM to their stops and targets, and let the ~$688 settling next day stay in cash until a washout clears the 1:1 floor. Only buy with the $44 settled cash if a name clearly passes the RSI(2) < 10 and 1:1 test.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-09T16:41:19-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-11-10",
+  "decision": "revise",
+  "why": "The fresh scan shows EEM at IV/RV 0.94, below the 0.95 floor, with IV below realized vol (29.9% vs 31.8%). My EEM trigger was built on a stale 1.25 reading and a 59.32 close, and the stock is now at 61.03. With no other name clearing the floor except TLT, which I already hold, the EEM setup is void.",
+  "summary": "Hold the TLT 80/79 bull put to its exits without adding. No new entries: the only qualifying underlying is TLT, which is already open, so stay in cash and wait for a fresh name with IV/RV at or above 0.95.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-09T16:41:31-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-11-10",
+  "decision": "revise",
+  "why": "Today's only trade was a META ORB winner (+$1.16), which supports the Communication Services lean. But overnight Waymo news (a federal probe and an NHTSA recall query covering GOOG and GOOGL) adds regulatory event risk to the GOOGL setup, and my own scorecard shows mind-changes have not helped, so I'm keeping the trigger strict rather than widening it.",
+  "summary": "Stand aside by default. Watch GOOGL and META only for a verified 1.5x+ relative-volume impulse in the first 30 minutes, then a pullback that holds and reclaims VWAP, with SPY above its open. Each qualifying setup gets one $50 scalp with a 0.5% target, 0.3% stop and 45-minute limit. Skip everything else.",
+  "watchlist": [
+   {
+    "symbol": "GOOGL",
+    "setup": "VWAP pullback continuation after a verified 1.5x+ relative-volume morning impulse. Communication Services is my only positive sector, but the overnight Waymo probe and NHTSA recall query are a headline risk.",
+    "trigger": "Manually verify at least 1.5x relative volume on the impulse, then a pullback that holds and reclaims VWAP, with SPY above its open. Skip if the impulse fades on falling volume, if the stock gaps on Waymo follow-up headlines, or if NVDA, MU, AMD or AVGO make new lows in the first hour.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "META",
+    "setup": "Opening-range breakout continuation. Today's ORB winner was META; the stock is up 5.1% on the scan with 4% ATR and $600M dollar volume, so it's liquid enough for a 0.5% target.",
+    "trigger": "Break above the first 15-minute high on at least 1.5x relative volume, with price holding above VWAP and SPY above its open. Skip if the breakout comes on the same weak-tape conditions that stopped META out earlier this week, or if the Tech/AI complex is selling off.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
  }
 ]
