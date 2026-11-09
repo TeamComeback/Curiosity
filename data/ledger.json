@@ -17201,5 +17201,77 @@
   "opened": "2026-11-06T10:37:06-05:00",
   "why_entered": "Radar is in warning at 42 with QQQ weakening (ROC20 -5.2% on SPY), so one share of PSQ as a small inverse hedge fits the $28.03 per-trade cap and has a tight stop at 26.83.",
   "why_exited": "eliminated"
+ },
+ {
+  "time": "2026-11-09T11:05:42-05:00",
+  "type": "trade_closed",
+  "agent": "trend",
+  "position_id": "pos-caf474ebf0",
+  "symbol": "VALE261218P00012000",
+  "underlying": "VALE",
+  "sector": "Broad market / other",
+  "instrument": "option",
+  "entry": 0.76,
+  "exit": 0.57,
+  "pnl": -25.5,
+  "return_pct": -31.9,
+  "opened": "2026-10-27T14:06:17-04:00",
+  "why_entered": "VALE closed below its 55-day low at 11.79 on 2.0x relative volume with roc20 at -11.8%, and it sits 23% below its 200-day SMA, so the breakdown is confirmed; the 12.52 stop sits above the breakdown level.",
+  "why_exited": "trailing stop on underlying"
+ },
+ {
+  "time": "2026-11-09T11:08:01-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-5508b54455",
+  "symbol": "PM",
+  "underlying": "PM",
+  "sector": "Consumer Staples",
+  "instrument": "stock",
+  "qty": 0.777,
+  "price": 193.26,
+  "cost": 150.16,
+  "stop": 184.94,
+  "why": "PM is an RSI(2) 4.8 washout 5.6% above its 200-day in a calm regime (crash radar 39, SPY above its 200-day); live prices give 1.14:1 from 193.04 to the 202.28 target against the 184.94 stop, clearing my 1:1 floor, so the game plan's 0.99 figure is stale.",
+  "confidence": 2,
+  "signals": {
+   "rsi2": 4.8,
+   "pct_vs_sma200": 5.6,
+   "pct_vs_sma5": -4.6
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-09T11:08:06-05:00",
+  "type": "trade_closed",
+  "agent": "volsell",
+  "position_id": "pos-c99ace43e6",
+  "symbol": "IWM",
+  "underlying": "IWM",
+  "sector": "Industrials",
+  "instrument": "spread",
+  "entry": 0.2,
+  "exit": 0.53,
+  "pnl": -49.5,
+  "return_pct": -366.7,
+  "opened": "2026-11-05T14:39:16-05:00",
+  "why_entered": "IWM IV 24% vs realized 16% (1.53x) with crash radar calm at 34 and SPY above its 200-day; a 286/287 bear call collects 0.25 credit against $75 max loss, and IWM is no longer open after today's close, so this is not a duplicate.",
+  "why_exited": "agent: IWM bear call mark 0.49 is above the 2x stop of 0.40 on the 0.20 entry, so the trade has failed its risk rule. Closing n"
+ },
+ {
+  "time": "2026-11-09T11:08:11-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "AMD",
+   "MU",
+   "AVGO",
+   "SMH",
+   "SPY",
+   "QQQ",
+   "TSM"
+  ],
+  "aggression": "normal",
+  "why": "SPY is above its 200-day with a calm crash radar (39), and the AI-hardware leaders AMD, MU, AVGO, SMH and TSM are holding above VWAP and their opening ranges on volume. NVDA's 1-minute trend is down, so I'm dropping it, and GOOGL stays out because it is below VWAP and not confirming."
  }
 ]

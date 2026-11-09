@@ -1,75 +1,5 @@
 [
  {
-  "time": "2026-10-26T10:51:34-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "VZ",
-  "qty": 1.9189,
-  "entry": 43.67,
-  "exit": 43.49,
-  "pnl": -0.35,
-  "note": "stop (-0.40%)",
-  "opened": "2026-10-26T10:29:40-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on VZ: 0.56x volume, +0.53% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-26T10:55:37-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "IWM",
-  "qty": 0.4525,
-  "entry": 277.168,
-  "exit": 278.204,
-  "pnl": 0.47,
-  "note": "time limit, 47 min (+0.40%)",
-  "opened": "2026-10-26T10:08:59-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on IWM: 0.39x volume, +0.20% vs VWAP; target +0.6%, stop -0.4%"
- },
- {
-  "time": "2026-10-26T11:06:02-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-65%)"
- },
- {
-  "time": "2026-10-26T11:06:36-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, CRWV, EWZ, NVDA, TSLL",
-  "note": "aggressive: Semis and high-momentum names (SOXL, CRWV, EWZ, NVDA) are leading with strong VWAP premiums, and SPY's uptrend is intact. Most stops have been hit by normal noise at 0.4%, so I'm widening the stop slightly to 0.45% and the target to 0.9% to keep roughly 2:1."
- },
- {
-  "time": "2026-10-26T11:26:53-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "QQQ",
-  "qty": 0.235,
-  "entry": 711.506,
-  "exit": 714.984,
-  "pnl": 0.82,
-  "note": "time limit, 46 min (+0.46%)",
-  "opened": "2026-10-26T10:41:22-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on QQQ: 1.4x volume, +0.43% vs VWAP; target +0.6%, stop -0.4%"
- },
- {
-  "time": "2026-10-26T11:36:03-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-62%)"
- },
- {
-  "time": "2026-10-26T11:36:31-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ",
-  "note": "stand_down: Only $42 is settled cash today, with $964 still settling until tomorrow, so any trade would be tiny. Today's seven round trips have mostly been small, and follow-through is thin. Stand down and reassess once proceeds settle."
- },
- {
   "time": "2026-10-26T11:36:36-04:00",
   "type": "playbook",
   "agent": "hyper",
@@ -6708,5 +6638,74 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-91%) (tried 0.33, 0.22, 0.12, 0.01; mark 0.38, natural -3.5)"
+ },
+ {
+  "time": "2026-11-09T11:05:42-05:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "VALE261218P00012000",
+  "qty": 1,
+  "entry": 0.76,
+  "exit": 0.57,
+  "pnl": -25.5,
+  "note": "trailing stop on underlying",
+  "opened": "2026-10-27T14:06:17-04:00",
+  "confidence": 3,
+  "thesis": "VALE closed below its 55-day low at 11.79 on 2.0x relative volume with roc20 at -11.8%, and it sits 23% below its 200-day SMA, so the breakdown is confirmed; the 12.52 stop sits above the breakdown level."
+ },
+ {
+  "time": "2026-11-09T11:06:03-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-09T11:07:26-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-90%) (tried 0.29, 0.19, 0.10, 0.01; mark 0.34, natural -2.31)"
+ },
+ {
+  "time": "2026-11-09T11:07:47-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.72)"
+ },
+ {
+  "time": "2026-11-09T11:08:01-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "PM",
+  "instrument": "stock",
+  "qty": 0.777,
+  "price": 193.26,
+  "cost": 150.16,
+  "stop": 184.94,
+  "thesis": "PM is an RSI(2) 4.8 washout 5.6% above its 200-day in a calm regime (crash radar 39, SPY above its 200-day); live prices give 1.14:1 from 193.04 to the 202.28 target against the 184.94 stop, clearing my 1:1 floor, so the game plan's 0.99 figure is stale.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-11-09T11:08:06-05:00",
+  "type": "close",
+  "agent": "volsell",
+  "symbol": "IWM",
+  "qty": 1,
+  "entry": 0.2,
+  "exit": 0.53,
+  "pnl": -49.5,
+  "note": "agent: IWM bear call mark 0.49 is above the 2x stop of 0.40 on the 0.20 entry, so the trade has failed its risk rule. Closing n",
+  "opened": "2026-11-05T14:39:16-05:00",
+  "confidence": 3,
+  "thesis": "IWM IV 24% vs realized 16% (1.53x) with crash radar calm at 34 and SPY above its 200-day; a 286/287 bear call collects 0.25 credit against $75 max loss, and IWM is no longer open after today's close, so this is not a duplicate."
+ },
+ {
+  "time": "2026-11-09T11:08:12-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AMD, MU, AVGO, SMH, SPY",
+  "note": "normal: SPY is above its 200-day with a calm crash radar (39), and the AI-hardware leaders AMD, MU, AVGO, SMH and TSM are holding above VWAP and their opening ranges on volume. NVDA's 1-minute trend is down, so I'm dropping it, and GOOGL stays out because it is below VWAP and not confirming."
  }
 ]
