@@ -1,73 +1,5 @@
 [
  {
-  "time": "2026-10-26T09:51:17-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "MU",
-  "instrument": "stock",
-  "qty": 0.0928,
-  "price": 902.48,
-  "cost": 83.75,
-  "stop": 899.75,
-  "thesis": "VWAP pullback bounce on MU: 0.82x volume, +0.43% vs VWAP; target +0.7%, stop -0.35%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-26T09:53:19-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "MU",
-  "qty": 0.1389,
-  "entry": 902.54,
-  "exit": 896.11,
-  "pnl": -0.89,
-  "note": "stop (-0.72%)",
-  "opened": "2026-10-26T09:51:17-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on MU: 0.82x volume, +0.43% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-10-26T09:53:19-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.1642,
-  "price": 763.754,
-  "cost": 125.41,
-  "stop": 761.46,
-  "thesis": "VWAP pullback bounce on SPY: 0.46x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-26T09:53:19-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "MU",
-  "qty": 0.0928,
-  "entry": 902.48,
-  "exit": 896.48,
-  "pnl": -0.56,
-  "note": "stop (-0.71%)",
-  "opened": "2026-10-26T09:51:17-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on MU: 0.82x volume, +0.43% vs VWAP; target +0.7%, stop -0.35%"
- },
- {
-  "time": "2026-10-26T09:57:22-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "TSM",
-  "qty": 0.1983,
-  "entry": 422.85,
-  "exit": 420.896,
-  "pnl": -0.39,
-  "note": "stop (-0.44%)",
-  "opened": "2026-10-26T09:51:17-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on TSM: 1.08x volume, +0.16% vs VWAP; target +0.7%, stop -0.35%"
- },
- {
   "time": "2026-10-26T10:01:27-04:00",
   "type": "open",
   "agent": "scalper",
@@ -6864,5 +6796,39 @@
   "type": "param_change",
   "agent": "volsell",
   "note": "short_delta: 0.25 -> 0.3 (Credits at 0.25 delta were near the 0.15 floor. A 0.30 delta short collects more premium per contract, improving the credit-to-friction ratio. Keeping width at 1 holds max loss near $80-100, about 10%)"
+ },
+ {
+  "time": "2026-11-08T21:44:28-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Broad market / other; avoiding Energy, Consumer Staples, Technology. Broad market is the only clearly profitable sector (+$91 over 7 trades). Health Care has no live scan setups and a small, mixed record, so I'm dropping it from the lean-in list."
+ },
+ {
+  "time": "2026-11-08T21:44:28-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Evening check-in: revise. The fresh scan no longer shows EW, CBOE or JNJ, so those stale levels can't be verified, and Health Care has no current setups. Crash radar is at warning (42), so I'll only act on confirmed breakouts.",
+  "symbol": "ABNB, ADT"
+ },
+ {
+  "time": "2026-11-08T21:44:59-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Evening check-in: revise. Cash is still locked until the $193.51 settles tomorrow, and the fresh scan shows only one new candidate (XLE) near 1:1 on live prices, so I'm adding it as a conditional entry rather than a broad re-screen.",
+  "symbol": "XLE"
+ },
+ {
+  "time": "2026-11-08T21:45:08-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Evening check-in: keep. Scan data is unchanged in substance: IWM and TLT remain inside their thesis ranges, and the fresh EEM bear call still clears the 0.95 IV/RV floor (1.11). The Iran talks headline adds geopolitical risk, but it does not justify new exposure beyond the one conditional EEM idea.",
+  "symbol": "EEM"
+ },
+ {
+  "time": "2026-11-08T21:45:19-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Evening check-in: revise. The plan's core premise, a thin edge in Communication Services, still stands on a small sample, but the 1.5x relative-volume gate has never been verified as enforced, so the plan is only as good as manual checks. Technology is still -$2.17 over 46 trades, and today's scan shows the AI-hardware names up sharply after prior selling, which is a chase risk rather than evidence of an edge. Trimming the",
+  "symbol": "GOOGL"
  }
 ]
