@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-10-26T11:36:36-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, CRWV, EWZ, TSLL, NU",
-  "note": "aggressive: Semis and high-beta leaders (SOXL, CRWV, EWZ, TSLL) show the strongest VWAP premiums and volume, with SPY still in an uptrend. Recent stops clustered around 0.4%, so I'm widening the stop to 0.45% and the target to 0.9% to keep roughly 2:1, though settled cash is only $0.19 so few trades can fire un"
- },
- {
-  "time": "2026-10-26T12:06:02-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-65%)"
- },
- {
-  "time": "2026-10-26T12:07:20-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "IWM",
-  "note": "credit not filled at 0.29, 0.27, 0.26 (mid 0.29, natural 0.24, floor 0.25)"
- },
- {
-  "time": "2026-10-26T12:07:34-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, EWZ, CRWV, INTC, NU",
-  "note": "aggressive: Fastest movers with the strongest VWAP premiums are SOXL, EWZ, CRWV, and INTC, with TSLL, NU, STX, and TSLA as backups. Settled cash is only $0.19, so little can fire until settlement, but keeping the 0.9% target and 0.45% stop gives roughly 2:1 against the recent stop clusters."
- },
- {
   "time": "2026-10-26T12:35:56-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6707,5 +6679,33 @@
   "agent": "scalper",
   "symbol": "AMD, MU, AVGO, SMH, SPY",
   "note": "normal: SPY is above its 200-day with a calm crash radar (39), and the AI-hardware leaders AMD, MU, AVGO, SMH and TSM are holding above VWAP and their opening ranges on volume. NVDA's 1-minute trend is down, so I'm dropping it, and GOOGL stays out because it is below VWAP and not confirming."
+ },
+ {
+  "time": "2026-11-09T11:35:58-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-09T11:37:21-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-89%) (tried 0.31, 0.21, 0.11, 0.01; mark 0.36, natural -2.3)"
+ },
+ {
+  "time": "2026-11-09T11:38:43-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-94%) (tried 0.19, 0.13, 0.07, 0.01; mark 0.24, natural -2.7)"
+ },
+ {
+  "time": "2026-11-09T11:39:03-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AMD, MU, AVGO, SMH, SPY",
+  "note": "defensive: SPY is still above its 200-day with a calm crash radar, but most 1-minute trends have turned down and nothing has fired since the 11:08 setup, so I'm cutting size to half and dropping TSM, which is slipping below VWAP. AMD, MU, AVGO and SMH still hold above VWAP and their opening ranges, so they sta"
  }
 ]
