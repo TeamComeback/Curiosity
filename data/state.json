@@ -29,7 +29,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.41,
+     "mark": 0.43,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -48,7 +48,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.415
+     "exit_half_spread": 0.435
     },
     "pos-bd45b81ce0": {
      "kind": "option",
@@ -97,7 +97,7 @@
       "pct_vs_sma200": 31.5
      },
      "sector": "Consumer Discretionary",
-     "last": 193.44,
+     "last": 192.86,
      "high_water": 194.18
     }
    },
@@ -109,10 +109,6 @@
    "peak": 1340.54,
    "max_dd": 0.3745,
    "notes": [
-    {
-     "date": "2026-11-03",
-     "note": "No entry: the only candidate (KPTI put) was blocked twice as unaffordable and illiquid, and the Financials watchlist has no candidate IDs. Holding XLE, AEYE, REGN, RVTY and VALE stops unchanged; REGN's live 919.32 stop is tighter than the plan's 914.50, so it stays."
-    },
     {
      "date": "2026-11-03",
      "note": "No entry: the only candidate (KPTI put) was blocked twice as unaffordable, and the Financials watchlist has no delivered candidate IDs. Hold XLE, AEYE, REGN, RVTY and the VALE put on their live stops; enter only on a delivered breakout with at least 2x volume."
@@ -268,6 +264,10 @@
     {
      "date": "2026-11-09",
      "note": "Passed CVRX: a sub-$1 name down 44.6% in 20 days, with a $60 put budget that couldn't buy a contract and likely wide option spreads. Keep ABNB and the three puts on their stops and wait for a clean 2.5x-volume breakout with a fundable contract."
+    },
+    {
+     "date": "2026-11-09",
+     "note": "No confirmed breakout fits the rules today. CVRX passes: its only put exceeds the $60 premium budget, and a sub-$1 underlying likely has wide option spreads. Hold ABNB and the CLSX and DJTU puts on their stops, and keep settled cash for a clean 2.5x-volume breakout with a fundable contract."
     }
    ],
    "last_exits": {
@@ -935,7 +935,7 @@
       "pct_vs_sma5": -6.2
      },
      "sector": "Energy",
-     "last": 174.0
+     "last": 173.84
     },
     "pos-3671552095": {
      "kind": "stock",
@@ -955,7 +955,7 @@
       "pct_vs_sma5": -5.9
      },
      "sector": "Energy",
-     "last": 47.985
+     "last": 47.88
     },
     "pos-5508b54455": {
      "kind": "stock",
@@ -975,7 +975,7 @@
       "pct_vs_sma5": -4.6
      },
      "sector": "Consumer Staples",
-     "last": 194.27
+     "last": 194.26
     }
    },
    "status": "active",
@@ -986,10 +986,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-05",
-     "note": "Passing: none of the six live candidates clears my 1:1 floor (LNG ~0.87:1, LMT ~0.75:1, MPC ~0.73:1, ZS ~0.58:1, PBR ~0.59:1, URI ~0.37:1). CNQ, XOP, AR and OXY from the game plan aren't in today's candidate list, so I can't trade them. Hold the six positions to their stops and targets and keep the "
-    },
     {
      "date": "2026-11-05",
      "note": "No entries: none of the four live candidates clears my 1:1 target-to-stop floor (PBR ~0.54:1, ZS ~0.56:1, URI ~0.59:1, SWKS ~0.29:1, and SWKS is already held). The game-plan energy names (CNQ, XOP, AR, OXY) aren't in today's candidate list, so their triggers can't fire. Hold all six positions to the"
@@ -1145,6 +1141,10 @@
     {
      "date": "2026-11-09",
      "note": "No new entries: SU (0.91:1), CVX (0.68:1) and SHEL (0.65:1) fail the 1:1 stop-to-target floor, TEAM (1.27:1) is Technology on the avoid list and 29% above its 200-day, and XLE is not in today's candidates. Holding XOP, CNQ and PM to their stops and targets."
+    },
+    {
+     "date": "2026-11-09",
+     "note": "No entry: the only candidate above 1:1 stop-to-target is TEAM (about 1.3:1), but it is Technology, 28.8% above its 200-day, and on the avoid list. SU (0.89:1), CVX (0.67:1) and SHEL (0.63:1) fail the floor, and XLE is not in today's candidates. Holding XOP, CNQ and PM to their stops and targets."
     }
    ],
    "last_exits": {
@@ -1613,7 +1613,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-11",
      "credit": 0.16,
-     "mark": 0.23,
+     "mark": 0.21,
      "entry": 0.16,
      "width": 1.0,
      "short_strike": 80.0,
@@ -1646,10 +1646,6 @@
    "peak": 1000.0,
    "max_dd": 0.0885,
    "notes": [
-    {
-     "date": "2026-11-04",
-     "note": "Thin credit-to-width means one contract and a hard 50%-credit exit; IWM put and call spreads should be watched together as one iron condor."
-    },
     {
      "date": "2026-11-05",
      "note": "Passed the TLT 80/79 bull put (0.22 credit, 0.26 delta, Dec 11). It is the same underlying and sector as the open TLT 12-04 spread, so it would double TLT downside risk, and the edge is too thin to justify that. Holding TLT and IWM to their exits and keeping $811 settled for a non-correlated setup."
@@ -1805,6 +1801,10 @@
     {
      "date": "2026-11-09",
      "note": "Passed the only candidate (TLT 80.5/79.5 bull put). It duplicates the open TLT 80/79 on the same 12/11 expiry, and that position is already losing (mark 0.23 vs 0.16 entry). Adding into a losing thesis doubles rate exposure. Hold TLT to its 0.32 stop or 0.08 target, and wait for a non-duplicate unde"
+    },
+    {
+     "date": "2026-11-09",
+     "note": "Passed the only candidate (TLT 81/80 bull put, 0.25 credit). It duplicates the open TLT 80/79 on the same 12/11 expiry, which is already losing. The EEM watchlist idea isn't in today's candidates, so there's no trigger to act on. Hold IWM and TLT to their exits."
     }
    ],
    "last_exits": {
@@ -1892,7 +1892,7 @@
     "settled_cash_at_plan": 797.5,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 76.0,
+   "min_trade_seen": 75.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -2231,7 +2231,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 752.905
+     "last": 752.48
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2247,7 +2247,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 752.905
+     "last": 752.48
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2263,7 +2263,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 752.905
+     "last": 752.48
     }
    },
    "status": "active",
@@ -2296,7 +2296,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 113.46
+     "last": 113.695
     }
    },
    "status": "active",
@@ -2318,7 +2318,7 @@
    "unsettled": []
   },
   "blackswan": {
-   "cash": -556.26,
+   "cash": -471.26,
    "reserved": 0.0,
    "positions": {
     "pos-25be894208": {
@@ -2343,7 +2343,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.38,
+     "mark": 1.21,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2363,55 +2363,9 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.495,
+     "exit_half_spread": 0.45,
      "peak_mark": 1.66,
      "low_water": 27.975
-    },
-    "pos-ebf1f3ff74": {
-     "kind": "debit_spread",
-     "symbol": "APLD",
-     "underlying": "APLD",
-     "qty": 1,
-     "legs": [
-      {
-       "symbol": "APLD270115P00017000",
-       "ratio_qty": "1",
-       "side": "buy",
-       "position_intent": "buy_to_open"
-      },
-      {
-       "symbol": "APLD270115P00015000",
-       "ratio_qty": "1",
-       "side": "sell",
-       "position_intent": "sell_to_open"
-      }
-     ],
-     "structure": "bear put spread",
-     "expiry": "2027-01-15",
-     "entry": 0.86,
-     "mark": 1.08,
-     "width": 2.0,
-     "long_strike": 17.0,
-     "short_strike": 15.0,
-     "cost": 91.5,
-     "play": "weak_stock",
-     "direction": "short",
-     "stop": 18.0,
-     "atr": 1.585,
-     "opened": "2026-10-15T13:07:01-04:00",
-     "thesis": "APLD closed through its 20.02 breakdown level at 19.21, down 16.7% over 20 days and 40% below its 200-day, so a smaller $90 bear put spread keeps Technology exposure sized down while the radar is calm.",
-     "confidence": 2,
-     "signals": {
-      "roc20_pct": -16.7,
-      "pct_vs_sma50": -27.7,
-      "pct_vs_sma200": -40.0,
-      "pct_above_low": -4.02,
-      "downtrend": true
-     },
-     "sector": "Technology",
-     "exit_half_spread": 0.145,
-     "peak_mark": 1.47,
-     "low_water": 13.245
     },
     "pos-8572906c01": {
      "kind": "debit_spread",
@@ -2435,7 +2389,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.13,
+     "mark": 0.16,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2455,7 +2409,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.48,
+     "exit_half_spread": 2.505,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2480,7 +2434,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.54,
+     "mark": 0.51,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2500,14 +2454,14 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 2.885,
+     "exit_half_spread": 3.055,
      "peak_mark": 0.67
     }
    },
    "status": "eliminated",
    "status_reason": "equity $-202.19 fell below $10",
    "status_at": "2026-11-09T10:09:46-05:00",
-   "closed": 3,
+   "closed": 4,
    "wins": 1,
    "peak": 1000.0,
    "max_dd": 1.2783,
@@ -2676,7 +2630,8 @@
    "last_exits": {
     "IREN": "2026-11-03",
     "PLD": "2026-11-05",
-    "PSQ": "2026-11-09"
+    "PSQ": "2026-11-09",
+    "APLD": "2026-11-09"
    },
    "joined": "2026-10-13T22:01:29-04:00",
    "plan": {
@@ -2788,6 +2743,11 @@
      "amount": 27.18,
      "settles": "2026-11-10",
      "note": "sold PSQ"
+    },
+    {
+     "amount": 85.0,
+     "settles": "2026-11-10",
+     "note": "sold APLD"
     }
    ],
    "scorecard": [
@@ -3063,17 +3023,19 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-09",
-    "made_at": "2026-11-09T14:09-05:00",
+    "made_at": "2026-11-09T14:39-05:00",
     "watch": [
+     "SPY",
+     "QQQ",
+     "NVDA",
      "AAPL",
      "TSLA",
-     "IWM",
-     "LLY",
-     "INTC",
-     "XLP"
+     "META",
+     "AMD",
+     "IWM"
     ],
-    "aggression": "defensive",
-    "why": "Most of the prior leaders have rolled to 1-minute downtrends, so I'm keeping defensive and shifting to the names still trending up and above their opening ranges: AAPL, TSLA, IWM, LLY, INTC and XLP. Tape is quiet midday, so VWAP bounces only at half size, with a slightly shorter hold.",
+    "aggression": "normal",
+    "why": "Calm crash radar, SPY and QQQ are up and above their opening ranges, and the leaders are trending up on 1-minute charts with clean VWAP support. I'm moving back to normal aggression with the same tight 0.5% target and 0.3% stop, and dropping GOOGL and the 1-minute downtrends from the watchlist.",
     "slices": 3,
     "target_pct": 0.5,
     "stop_pct": 0.3,

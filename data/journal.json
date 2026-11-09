@@ -1,37 +1,5 @@
 [
  {
-  "time": "2026-10-26T16:40:58-04:00",
-  "type": "plan_error",
-  "agent": "trend",
-  "note": "After-close review failed (JSONDecodeError); kept the previous plan"
- },
- {
-  "time": "2026-10-26T16:40:58-04:00",
-  "type": "scorecard",
-  "agent": "meanrev",
-  "note": "Plan graded: 0 of 0 picks moved the planned way"
- },
- {
-  "time": "2026-10-26T16:41:10-04:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "After-close review: keep. Nothing in the fresh scan clears the 1:1 floor: MRK is about 0.53:1, XYZ about 0.50:1, PINS about 0.63:1 and EBAY about 0.33:1. Both open positions still hold their stops, and the Brazil selloff is a reason to watch PBR closely, not to add to it.",
-  "symbol": ""
- },
- {
-  "time": "2026-10-26T16:41:10-04:00",
-  "type": "scorecard",
-  "agent": "volsell",
-  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -0.45%"
- },
- {
-  "time": "2026-10-26T16:41:20-04:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "After-close review: revise. The IWM setup still has the best IV/RV (1.38 to 1.49) and a bearish trend side, but the reference levels are stale. IWM closed at 276.95, up from 275.72, which moves the 0.25-delta short call to roughly 288-289. The credit gate is unchanged because it was never met today.",
-  "symbol": "IWM"
- },
- {
   "time": "2026-10-26T16:41:20-04:00",
   "type": "scorecard",
   "agent": "blackswan",
@@ -6710,5 +6678,47 @@
   "agent": "scalper",
   "symbol": "AAPL, TSLA, IWM, LLY, INTC",
   "note": "defensive: Most of the prior leaders have rolled to 1-minute downtrends, so I'm keeping defensive and shifting to the names still trending up and above their opening ranges: AAPL, TSLA, IWM, LLY, INTC and XLP. Tape is quiet midday, so VWAP bounces only at half size, with a slightly shorter hold."
+ },
+ {
+  "time": "2026-11-09T14:36:03-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-52%)"
+ },
+ {
+  "time": "2026-11-09T14:36:05-05:00",
+  "type": "close",
+  "agent": "blackswan",
+  "symbol": "APLD",
+  "qty": 1,
+  "entry": 0.86,
+  "exit": 0.95,
+  "pnl": -6.5,
+  "note": "locked in gains: down 30% from the peak after +71%",
+  "opened": "2026-10-15T13:07:01-04:00",
+  "confidence": 2,
+  "thesis": "APLD closed through its 20.02 breakdown level at 19.21, down 16.7% over 20 days and 40% below its 200-day, so a smaller $90 bear put spread keeps Technology exposure sized down while the radar is calm."
+ },
+ {
+  "time": "2026-11-09T14:37:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-95%) (tried 0.11, 0.08, 0.04, 0.01; mark 0.16, natural -2.35)"
+ },
+ {
+  "time": "2026-11-09T14:38:56-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-88%) (tried 0.46, 0.31, 0.16, 0.01; mark 0.51, natural -2.54)"
+ },
+ {
+  "time": "2026-11-09T14:39:22-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, NVDA, AAPL, TSLA",
+  "note": "normal: Calm crash radar, SPY and QQQ are up and above their opening ranges, and the leaders are trending up on 1-minute charts with clean VWAP support. I'm moving back to normal aggression with the same tight 0.5% target and 0.3% stop, and dropping GOOGL and the 1-minute downtrends from the watchlist."
  }
 ]
