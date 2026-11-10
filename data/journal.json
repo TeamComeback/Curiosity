@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-10-27T11:06:51-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "WDC, BE, SNDK, SOXL, TQQQ",
-  "note": "aggressive: Settled cash is only $0.47, so new entries are effectively blocked until tomorrow's settlement; the playbook is set for the next session. Keeping the fastest movers (WDC, BE, SNDK, SOXL, TQQQ) plus AMD, SPCX, and INTC, with the 0.8% target and 0.5% stop, since the 0.4% stops were getting clipped by "
- },
- {
-  "time": "2026-10-27T11:21:06-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "TSLA",
-  "qty": 0.4167,
-  "entry": 402.272,
-  "exit": 405.418,
-  "pnl": 1.31,
-  "note": "target hit (+0.77%)",
-  "opened": "2026-10-27T10:49:46-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on TSLA: 1.03x volume, +0.25% vs VWAP; target +0.6%, stop -0.35%"
- },
- {
-  "time": "2026-10-27T11:36:00-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-64%)"
- },
- {
   "time": "2026-10-27T11:36:02-04:00",
   "type": "close",
   "agent": "scalper",
@@ -6589,5 +6561,26 @@
   "agent": "scalper",
   "symbol": "META",
   "note": "stand_down: SPY is slightly below its open (-0.01%) and the tech complex is mixed (NVDA and MU weak, AMD and AVGO strong), so the overnight plan's SPY-above-open gate isn't met and relative volume isn't verified. Four round trips are already used today, so I'm standing down and keeping META on watch only in cas"
+ },
+ {
+  "time": "2026-11-10T11:36:24-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-10T11:37:49-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-92%) (tried 0.22, 0.15, 0.08, 0.01; mark 0.27, natural -0.79)"
+ },
+ {
+  "time": "2026-11-10T11:38:11-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.19)"
  }
 ]
