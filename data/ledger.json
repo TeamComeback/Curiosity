@@ -17632,5 +17632,132 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-10T07:40:42-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-11-10",
+  "decision": "revise",
+  "why": "The scan now shows a cluster of Health Care breakouts (EW, MRNA, TMO, BDX, JNJ, ONC) and Health Care has been a small positive. UUP has lost its breakout setup from the scan, and ADT is absent from it, so the watchlist needs refreshing. The scan lacks relative-volume data, so every entry stays gated on the 2.5x close confirmation.",
+  "summary": "Hold ABNB and the CLSX and DJTU puts on their existing stops. Buy only on a confirmed close above trigger with at least 2.5x volume: EW and MRNA first, then ADT. Size by stop distance (2x ATR) so each trade risks about $15, and keep settled cash for one clean breakout.",
+  "watchlist": [
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout, roc20 +21.2%, ATR 2.76",
+    "trigger": "Close above 104.09 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "MRNA",
+    "setup": "Health Care breakout, roc20 +26%, high volatility (ATR 22.7)",
+    "trigger": "Close above 267.32 on at least 2.5x relative volume; size small because the 2x ATR stop is about $45/share",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "ADT",
+    "setup": "Near 55-day breakout, Real Estate, roc20 +53.8% (carried from prior plan, not in today's scan)",
+    "trigger": "Close above 9.99 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-10T07:40:42-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Broad market / other",
+   "Health Care"
+  ],
+  "avoid": [
+   "Energy",
+   "Consumer Staples",
+   "Technology",
+   "Industrials"
+  ],
+  "why": "Broad market is still the only clearly profitable sector ($65.58 over 8 trades). Health Care is roughly break-even on 2 trades, but today's scan has seven breakouts there. Energy (-$47), Consumer Staples (-$16.88), Technology (-$15.50) and Industrials stay out.",
+  "expires": "2026-11-24"
+ },
+ {
+  "time": "2026-11-10T07:41:12-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-11-10",
+  "decision": "revise",
+  "why": "The fresh scan adds two new candidates that clear the 1:1 floor, HALO (about 2.2:1) and PAYC (about 1.1:1), while the energy washouts still fail on stop-to-target.",
+  "summary": "Hold XOP, CNQ and PM to their stops and targets. Watch HALO and PAYC for an open that keeps them inside the stop-to-target floor, and keep the rest of the cash in reserve.",
+  "watchlist": [
+   {
+    "symbol": "HALO",
+    "setup": "Health Care RSI(2) 1.9 washout, 21% above its 200-day, about 12% below its 5-day average",
+    "trigger": "Open at or below 103 with RSI(2) still under 10 and no new negative news; stop 96.3, target 117.7",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "PAYC",
+    "setup": "Financials RSI(2) 5.9 washout, 41% above its 200-day, about 6% below its 5-day average",
+    "trigger": "Open at or below 236 with RSI(2) still under 10; stop 1.5 ATR below entry, target 251",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-10T07:41:12-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "lean_in": [
+   "Energy",
+   "Health Care"
+  ],
+  "avoid": [
+   "Technology"
+  ],
+  "why": "Energy has the most washouts today but none passes the R:R floor, and my one Energy trade won; Health Care has HALO at about 2.2:1. Technology is 1-for-3 for -14.20 and the AI rout is unresolved.",
+  "expires": "2026-11-24"
+ },
+ {
+  "time": "2026-11-10T07:41:21-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-11-10",
+  "decision": "revise",
+  "why": "The EEM trigger failed: IV/RV fell to 0.93, below the 0.95 floor. Waller's hawkish comments (a possible 50bp December hike) also raise the risk to the open TLT bull put, so I'm keeping it on its stop and target rules but adding nothing.",
+  "summary": "No new trades tomorrow. Hold the TLT 80/79 bull put with its 0.32 buy-to-close stop and 0.08 profit target, and stay in cash otherwise.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-10T07:41:30-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-11-10",
+  "decision": "keep",
+  "why": "Nothing in the fresh scan or news changes the case for META. Tech remains a losing sector for us (-$2.17 over 46 trades) and its gaps are event-driven, so the plan still holds. I'm adding a gap guard and a hard check on the entry rel-volume the code logs.",
+  "summary": "Stand aside unless META gives a verified 1.5x+ relative-volume break above its first 15-minute high, holds above VWAP, and SPY is above its open. Take at most one $50 scalp (0.5% target, 0.3% stop, 45-minute limit). GOOGL is a conviction-1 backup only, and only if META does not qualify.",
+  "watchlist": [
+   {
+    "symbol": "META",
+    "setup": "Opening-range breakout continuation in Communication Services, our best-performing sector (+$2.70 over 7 trades). Scan shows +5.1% move, 4% ATR, $600M dollar volume.",
+    "trigger": "Break above the first 15-minute high on at least 1.5x relative volume, price holding above VWAP, SPY above its open. Skip if the gap-up exceeds about 3% at the open (chase risk), if the Tech/AI complex (NVDA, AMD, AVGO, MU) sells off in the first hour, or if the breakout fades on falling volume.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "GOOGL",
+    "setup": "Backup only: VWAP pullback continuation after a verified 1.5x+ relative-volume morning impulse.",
+    "trigger": "Only if META does not qualify. Needs 1.5x+ verified relative volume, a pullback that holds and reclaims VWAP, and SPY above its open. Skip on any Waymo or federal-probe headline, or on a gap above about 2%.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]

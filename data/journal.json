@@ -1,59 +1,5 @@
 [
  {
-  "time": "2026-10-27T09:59:43-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "WDC",
-  "instrument": "stock",
-  "qty": 0.2194,
-  "price": 380.43,
-  "cost": 83.47,
-  "stop": 378.59,
-  "thesis": "opening-range breakout on WDC: 1.41x volume, +1.34% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-27T10:03:48-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "BE",
-  "instrument": "stock",
-  "qty": 0.3797,
-  "price": 219.81,
-  "cost": 83.46,
-  "stop": 218.74,
-  "thesis": "VWAP pullback bounce on BE: 0.67x volume, +0.20% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-27T10:06:15-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-68%)"
- },
- {
-  "time": "2026-10-27T10:07:11-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "IWM",
-  "note": "credit not filled at 0.29, 0.27 (mid 0.29, natural 0.22, floor 0.25)"
- },
- {
-  "time": "2026-10-27T10:07:22-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AMD, TSLA, SPCX, AVGO, INTC",
-  "note": "defensive: Keep the defensive stance: SPY is still flat with a tiny range and a down 1-minute trend, so index setups stay weak. AMD is already open, and TSLA and SPCX are the cleanest uptrending names. AVGO and INTC are near VWAP and may give bounce setups, while the overnight SPY/IWM plan is stale against tod"
- },
- {
-  "time": "2026-10-27T10:07:27-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "WDC, BE, SNDK, CRWV, AMD",
-  "note": "aggressive: WDC, BE, SNDK, and CRWV lead on strength with wide ranges and rising relative volume, while SOXL, TSLL, and TQQQ offer fast 3x moves. Keeping 12 slices gives the most shots, and the standard 0.8% target and 0.4% stop still fit the current volatility."
- },
- {
   "time": "2026-10-27T10:09:30-04:00",
   "type": "close",
   "agent": "hyper",
@@ -6707,6 +6653,46 @@
   "type": "plan",
   "agent": "scalper",
   "note": "Evening check-in: revise. Today's only trade was a META opening-range breakout that won +$1.16 on 2.26x volume, and META is still the cleanest liquid name with a Communication Services tag. The Waymo probe and the Anthropic S-1 headline now sit on GOOGL, and the NVIDIA inquiry keeps the Tech/AI complex event-driven, so GOOGL drops to a low-conviction watch.",
+  "symbol": "META, GOOGL"
+ },
+ {
+  "time": "2026-11-10T07:40:42-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Broad market / other, Health Care; avoiding Energy, Consumer Staples, Technology, Industrials. Broad market is still the only clearly profitable sector ($65.58 over 8 trades). Health Care is roughly break-even on 2 trades, but today's scan has seven breakouts there. Energy (-$47), Consumer Staples (-$16.88), Technology (-$15.50) and Industrials stay out."
+ },
+ {
+  "time": "2026-11-10T07:40:42-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. The scan now shows a cluster of Health Care breakouts (EW, MRNA, TMO, BDX, JNJ, ONC) and Health Care has been a small positive. UUP has lost its breakout setup from the scan, and ADT is absent from it, so the watchlist needs refreshing. The scan lacks relative-volume data, so every entry stays gated on the 2.5x close confirmation.",
+  "symbol": "EW, MRNA, ADT"
+ },
+ {
+  "time": "2026-11-10T07:41:12-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "note": "Leaning into Energy, Health Care; avoiding Technology. Energy has the most washouts today but none passes the R:R floor, and my one Energy trade won; Health Care has HALO at about 2.2:1. Technology is 1-for-3 for -14.20 and the AI rout is unresolved."
+ },
+ {
+  "time": "2026-11-10T07:41:12-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: revise. The fresh scan adds two new candidates that clear the 1:1 floor, HALO (about 2.2:1) and PAYC (about 1.1:1), while the energy washouts still fail on stop-to-target.",
+  "symbol": "HALO, PAYC"
+ },
+ {
+  "time": "2026-11-10T07:41:21-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: revise. The EEM trigger failed: IV/RV fell to 0.93, below the 0.95 floor. Waller's hawkish comments (a possible 50bp December hike) also raise the risk to the open TLT bull put, so I'm keeping it on its stop and target rules but adding nothing.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-10T07:41:30-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: keep. Nothing in the fresh scan or news changes the case for META. Tech remains a losing sector for us (-$2.17 over 46 trades) and its gaps are event-driven, so the plan still holds. I'm adding a gap guard and a hard check on the entry rel-volume the code logs.",
   "symbol": "META, GOOGL"
  }
 ]
