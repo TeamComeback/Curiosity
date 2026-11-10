@@ -11,7 +11,8 @@
  "entries": {
   "date": "2026-11-10",
   "counts": {
-   "monkey": 1
+   "monkey": 1,
+   "scalper": 1
   }
  },
  "agents": {
@@ -94,7 +95,7 @@
       "pct_vs_sma200": 31.5
      },
      "sector": "Consumer Discretionary",
-     "last": 189.455,
+     "last": 187.54,
      "high_water": 194.18
     }
    },
@@ -104,7 +105,7 @@
    "closed": 20,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.3844,
+   "max_dd": 0.3863,
    "notes": [
     {
      "date": "2026-11-04",
@@ -969,7 +970,7 @@
       "pct_vs_sma5": -4.6
      },
      "sector": "Consumer Staples",
-     "last": 195.01
+     "last": 194.79
     }
    },
    "status": "active",
@@ -2224,7 +2225,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 748.44
+     "last": 749.3
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2240,7 +2241,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 748.44
+     "last": 749.3
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2256,7 +2257,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 748.44
+     "last": 749.3
     }
    },
    "status": "active",
@@ -2289,7 +2290,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 112.0
+     "last": 114.11
     },
     "pos-9d67e5d154": {
      "kind": "stock",
@@ -2306,7 +2307,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 118.9
+     "last": 118.87
     }
    },
    "status": "active",
@@ -2973,9 +2974,32 @@
    ]
   },
   "scalper": {
-   "cash": 1002.03,
+   "cash": 876.8,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-5a8cec4d7a": {
+     "kind": "stock",
+     "symbol": "GOOGL",
+     "qty": 0.4323,
+     "entry": 289.692,
+     "cost": 125.23,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 288.82,
+     "atr": 0,
+     "opened": "2026-11-10T09:56:11-05:00",
+     "thesis": "VWAP pullback bounce on GOOGL: 1.97x volume, +0.26% vs VWAP; target +0.5%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Communication Services",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.5,
+     "stop_pct": 0.3,
+     "max_hold_min": 45,
+     "last": 291.07,
+     "peak_gain": 0.4756776162268883
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
@@ -3041,7 +3065,13 @@
    },
    "scalp_day": {
     "date": "2026-11-10",
-    "equity": 1002.03
+    "equity": 1002.03,
+    "low_volume_skips": [
+     "META",
+     "AMZN",
+     "SPY",
+     "GEV"
+    ]
    },
    "plan": {
     "for_day": "2026-11-10",
