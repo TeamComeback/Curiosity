@@ -1,84 +1,5 @@
 [
  {
-  "time": "2026-10-27T10:27:54-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "TQQQ",
-  "instrument": "stock",
-  "qty": 1.2015,
-  "price": 69.35,
-  "cost": 83.32,
-  "stop": 69.14,
-  "thesis": "VWAP pullback bounce on TQQQ: 0.67x volume, +0.02% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-27T10:27:55-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "AMD",
-  "instrument": "stock",
-  "qty": 0.1515,
-  "price": 550.29,
-  "cost": 83.37,
-  "stop": 548.11,
-  "thesis": "VWAP pullback bounce on AMD: 0.63x volume, +0.33% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-27T10:29:59-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "INTC",
-  "instrument": "stock",
-  "qty": 1.8001,
-  "price": 93.12,
-  "cost": 167.63,
-  "stop": 92.79,
-  "thesis": "VWAP pullback bounce on INTC: 0.64x volume, +0.39% vs VWAP; target +0.6%, stop -0.35%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-27T10:30:00-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "SOXL",
-  "instrument": "stock",
-  "qty": 0.8661,
-  "price": 96.362,
-  "cost": 83.46,
-  "stop": 95.91,
-  "thesis": "VWAP pullback bounce on SOXL: 1.27x volume, +0.14% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-27T10:32:04-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "SNDK",
-  "instrument": "stock",
-  "qty": 0.0643,
-  "price": 1294.542,
-  "cost": 83.24,
-  "stop": 1290.24,
-  "thesis": "VWAP pullback bounce on SNDK: 1.15x volume, +0.58% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-27T10:34:08-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "TQQQ",
-  "qty": 1.2015,
-  "entry": 69.35,
-  "exit": 70.02,
-  "pnl": 0.81,
-  "note": "target hit (+0.99%)",
-  "opened": "2026-10-27T10:27:54-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on TQQQ: 0.67x volume, +0.02% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
   "time": "2026-10-27T10:36:14-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6642,5 +6563,60 @@
   "agent": "scalper",
   "symbol": "GEV",
   "note": "VWAP pullback bounce skipped: 0.35x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-10T10:02:20-05:00",
+  "type": "close",
+  "agent": "scalper",
+  "symbol": "GOOGL",
+  "qty": 0.4323,
+  "entry": 289.692,
+  "exit": 291.548,
+  "pnl": 0.81,
+  "note": "target hit (+0.62%)",
+  "opened": "2026-11-10T09:56:11-05:00",
+  "confidence": 3,
+  "thesis": "VWAP pullback bounce on GOOGL: 1.97x volume, +0.26% vs VWAP; target +0.5%, stop -0.3%"
+ },
+ {
+  "time": "2026-11-10T10:02:21-05:00",
+  "type": "open",
+  "agent": "scalper",
+  "symbol": "MSFT",
+  "instrument": "stock",
+  "qty": 0.2306,
+  "price": 543.156,
+  "cost": 125.25,
+  "stop": 541.32,
+  "thesis": "VWAP pullback bounce on MSFT: 1.76x volume, +0.21% vs VWAP; target +0.5%, stop -0.3%",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-10T10:06:18-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-10T10:07:43-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-88%) (tried 0.34, 0.23, 0.12, 0.01; mark 0.39, natural -0.8)"
+ },
+ {
+  "time": "2026-11-10T10:09:09-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-79%) (tried 0.81, 0.54, 0.27, 0.01; mark 0.86, natural -2.74)"
+ },
+ {
+  "time": "2026-11-10T10:09:30-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AVGO, MU, AMD, META, GOOGL",
+  "note": "normal: Tech/semis are leading with volume and most names sit above their opening range, so normal size makes sense while SPY's quiet range keeps stops tight. AMD and MU are already 2.4% or more above VWAP, so the extension cap will filter chase entries; MSFT's open scalp keeps its original stop."
  }
 ]
