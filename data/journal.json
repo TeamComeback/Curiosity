@@ -1,19 +1,5 @@
 [
  {
-  "time": "2026-10-27T10:37:09-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "IWM",
-  "note": "credit not filled at 0.27, 0.26 (mid 0.27, natural 0.23, floor 0.25)"
- },
- {
-  "time": "2026-10-27T10:37:27-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "WDC, BE, SNDK, SOXL, TQQQ",
-  "note": "aggressive: Stops at 0.4% have been clipped by normal noise, so I'm widening the stop to 0.5% while keeping the 0.8% target. I'm keeping the focus on the fastest movers (WDC, BE, SNDK, SOXL, TQQQ) and shortening the hold to 20 minutes given the late-morning timing."
- },
- {
   "time": "2026-10-27T10:39:32-04:00",
   "type": "close",
   "agent": "scalper",
@@ -6618,5 +6604,32 @@
   "agent": "scalper",
   "symbol": "GOOGL",
   "note": "VWAP pullback bounce skipped: 0.4x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-10T10:21:45-05:00",
+  "type": "open",
+  "agent": "scalper",
+  "symbol": "GOOGL",
+  "instrument": "stock",
+  "qty": 0.8595,
+  "price": 291.384,
+  "cost": 250.44,
+  "stop": 290.58,
+  "thesis": "opening-range breakout on GOOGL: 1.56x volume, +0.62% vs VWAP; target +0.5%, stop -0.3%",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-10T10:29:50-05:00",
+  "type": "close",
+  "agent": "scalper",
+  "symbol": "GOOGL",
+  "qty": 0.8595,
+  "entry": 291.384,
+  "exit": 290.106,
+  "pnl": -1.09,
+  "note": "stop (-0.45%)",
+  "opened": "2026-11-10T10:21:45-05:00",
+  "confidence": 3,
+  "thesis": "opening-range breakout on GOOGL: 1.56x volume, +0.62% vs VWAP; target +0.5%, stop -0.3%"
  }
 ]
