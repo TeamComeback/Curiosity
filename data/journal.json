@@ -1,26 +1,5 @@
 [
  {
-  "time": "2026-10-27T12:36:36-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, AMD, TSLA, SPCX",
-  "note": "normal: No settled cash is available until tomorrow, so this playbook is for the next session. I widened the stop to 0.4% because today's 0.35% stops were hit by normal noise (INTC, AMD), and I kept the 0.6% target and 40-minute limit that worked on SPCX and TSLA."
- },
- {
-  "time": "2026-10-27T12:38:01-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-67%)"
- },
- {
-  "time": "2026-10-27T12:38:59-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "SPY",
-  "note": "credit not filled at 0.27, 0.23 (mid 0.27, natural 0.15, floor 0.23)"
- },
- {
   "time": "2026-10-27T13:06:16-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6575,5 +6554,26 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.15)"
+ },
+ {
+  "time": "2026-11-10T12:39:36-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-10T12:40:58-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-90%) (tried 0.27, 0.18, 0.10, 0.01; mark 0.32, natural -0.93)"
+ },
+ {
+  "time": "2026-11-10T12:41:18-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.29)"
  }
 ]
