@@ -17932,5 +17932,77 @@
   "opened": "2026-11-10T10:21:45-05:00",
   "why_entered": "opening-range breakout on GOOGL: 1.56x volume, +0.62% vs VWAP; target +0.5%, stop -0.3%",
   "why_exited": "stop (-0.45%)"
+ },
+ {
+  "time": "2026-11-10T10:31:53-05:00",
+  "type": "trade_opened",
+  "agent": "scalper",
+  "position_id": "pos-2c1dfe7e3a",
+  "symbol": "META",
+  "underlying": "META",
+  "sector": "Communication Services",
+  "instrument": "stock",
+  "qty": 0.3888,
+  "price": 644.26,
+  "cost": 250.49,
+  "stop": 642.23,
+  "why": "opening-range breakout on META: 1.72x volume, +0.24% vs VWAP; target +0.5%, stop -0.3%",
+  "confidence": 3,
+  "signals": {},
+  "from_plan": true
+ },
+ {
+  "time": "2026-11-10T10:38:16-05:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-f9820d2b5e",
+  "symbol": "TLS",
+  "underlying": "TLS",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "qty": 16.2711,
+  "price": 7.36,
+  "cost": 119.76,
+  "stop": 6.53,
+  "why": "TLS trades at 7.375, about 2.6% above its 55-day breakout at 7.19, on 3.49x relative volume, so the 2.5x confirmation is met; the 6.53 stop (2 ATR) risks about $14 on roughly 17 shares.",
+  "confidence": 3,
+  "signals": {
+   "rel_volume": 3.49,
+   "roc20_pct": 64.5,
+   "pct_vs_sma50": 60.6,
+   "pct_vs_sma200": 63.2
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-10T10:38:29-05:00",
+  "type": "trade_closed",
+  "agent": "volsell",
+  "position_id": "pos-e1dccf4e05",
+  "symbol": "TLT",
+  "underlying": "TLT",
+  "sector": "Real Estate",
+  "instrument": "spread",
+  "entry": 0.16,
+  "exit": 0.32,
+  "pnl": -21.5,
+  "return_pct": -179.2,
+  "opened": "2026-11-06T12:06:53-05:00",
+  "why_entered": "TLT IV 13.8% vs realized 10.8% (1.27x) with SPY trend up and crash radar at 42 (warning but not stress); the 80/79 bull put collects 0.16 against $84 max loss over 35 DTE, and TLT is no longer open after the 12:06 close, so this is a fresh signal rather than a duplicate.",
+  "why_exited": "agent: Mark 0.35 is above the 0.32 stop (2x the 0.16 credit). The Fed-hawkish rate risk the game plan flagged is playing out, s"
+ },
+ {
+  "time": "2026-11-10T10:38:37-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "META",
+   "MSFT",
+   "GOOGL",
+   "AVGO",
+   "SPY"
+  ],
+  "aggression": "defensive",
+  "why": "Most tech names are trading below VWAP with down 1-minute trends, so I'm cutting to defensive size and keeping only the cleanest names. META and MSFT have open scalps, and the 1.5x relative-volume and SPY-above-open gates from the overnight plan still apply."
  }
 ]
