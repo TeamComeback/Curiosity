@@ -17528,5 +17528,109 @@
     "conviction": 2
    }
   ]
+ },
+ {
+  "time": "2026-11-09T20:10:37-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Evening check-in",
+  "for_day": "2026-11-10",
+  "decision": "keep",
+  "why": "No stock on my list has a confirmed close above its trigger on 2.5x volume, and the scan gives no volume data for the new breakouts, so the plan still holds.",
+  "summary": "Hold ABNB on its 182.51 stop and the CLSX and DJTU puts on their stop-based exits. Buy only if ADT, UUP or EW closes above its trigger on at least 2.5x volume, sizing by stop distance.",
+  "watchlist": [
+   {
+    "symbol": "ADT",
+    "setup": "Near 55-day breakout, Real Estate, roc20 +53.8%",
+    "trigger": "Close above 9.99 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "EW",
+    "setup": "Broke out today, Health Care, roc20 +21.2%",
+    "trigger": "Confirmed close above 104.09 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "UUP",
+    "setup": "Near 55-day breakout, weak momentum",
+    "trigger": "Close above 29.23 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-09T20:10:50-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-11-10",
+  "decision": "keep",
+  "why": "Live stop-to-target math still fails the 1:1 floor on every fresh Energy washout (SU about 0.87:1, CVX 0.64:1, SHEL 0.63:1, XOM 0.55:1, BP below 0.5:1), TEAM is Technology 29.8% above its 200-day with analyst target cuts, and the other RSI(2) names are above 10. The existing positions are still inside their stops and targets, so nothing changes.",
+  "summary": "No new entries unless a conditional trigger fires. Hold XOP, CNQ and PM to their stops and targets, and keep the settling cash in reserve. Only buy SU or CVX if the price falls to the level where the stop-to-target ratio reaches 1:1.",
+  "watchlist": [
+   {
+    "symbol": "SU",
+    "setup": "Energy RSI(2) 1.3 washout, 5.2% above its 200-day",
+    "trigger": "Price at or below 66.90 (about 1 ATR-stop distance below the 70.54 SMA5 target), with RSI(2) still under 10",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "CVX",
+    "setup": "Energy RSI(2) 2.0 washout, 8.2% above its 200-day",
+    "trigger": "Price at or below 208.05 (where the 1.5x ATR stop gives 1:1 to the 215.76 SMA5 target), with RSI(2) still under 10",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-09T20:11:00-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Evening check-in",
+  "for_day": "2026-11-10",
+  "decision": "revise",
+  "why": "The fresh scan replaces the stale 0.94 EEM reading with 0.95, which meets the floor, and TLT now shows IV/RV 1.14 as a fresh signal. The open TLT spread still needs its stop enforced, and the weak scorecard argues for only one new small trade.",
+  "summary": "Hold the open TLT 80/79 bull put to its 0.32 stop, 0.08 target, or exit rules and add nothing to it. Consider one small EEM bear call spread only if its IV/RV still reads at least 0.95 at the open and the credit justifies the risk; otherwise stay in cash.",
+  "watchlist": [
+   {
+    "symbol": "EEM",
+    "setup": "1-wide bear call spread about 30 delta above the 61.03 price, 21-45 DTE",
+    "trigger": "Open with IV/RV still at or above 0.95, EEM still below its 20-day high, and a credit of at least about 0.20 per share (roughly 0.20 credit against $80 max loss); skip if IV/RV has slipped below 0.95",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-09T20:11:10-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-11-10",
+  "decision": "revise",
+  "why": "Today's only trade was a META opening-range breakout that won +$1.16 on 2.26x volume, and META is still the cleanest liquid name with a Communication Services tag. The Waymo probe and the Anthropic S-1 headline now sit on GOOGL, and the NVIDIA inquiry keeps the Tech/AI complex event-driven, so GOOGL drops to a low-conviction watch.",
+  "summary": "Stand aside by default. Watch META for a verified 1.5x+ relative-volume breakout above the first 15-minute high that holds above VWAP with SPY above its open, and take at most one $50 scalp (0.5% target, 0.3% stop, 45-minute limit). Keep GOOGL on watch only as a backup with conviction 1.",
+  "watchlist": [
+   {
+    "symbol": "META",
+    "setup": "Opening-range breakout continuation in the Communication Services lean-in sector. META is up 5.1% on the scan with 4% ATR and $600M dollar volume, and its ORB won today.",
+    "trigger": "Break above the first 15-minute high on at least 1.5x relative volume (check the actual entry rel-volume, since the min filter may not be enforced), with price holding above VWAP and SPY above its open. Skip if the Tech/AI complex (NVDA, AMD, AVGO, MU) is selling off in the first hour or if the breakout fades on falling volume.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "GOOGL",
+    "setup": "Backup only: VWAP pullback continuation after a verified 1.5x+ relative-volume morning impulse.",
+    "trigger": "Only if META does not qualify. Requires 1.5x+ verified relative volume, a pullback that holds and reclaims VWAP, and SPY above its open. Skip on any Waymo follow-up or federal probe headline, or on a gap.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]

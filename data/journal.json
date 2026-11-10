@@ -1,51 +1,5 @@
 [
  {
-  "time": "2026-10-27T09:37:20-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "BE, WDC, AMD, TSLA, INTC",
-  "note": "aggressive: BE and WDC lead on strength and sit well above VWAP with wide ranges, and AMD, TSLA, and INTC are trending up with rising relative volume. The 3x ETFs (SOXL, TQQQ, TSLL) give fast moves, and 12 slices maximize the number of shots on about $1,000."
- },
- {
-  "time": "2026-10-27T09:55:37-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "AMD",
-  "instrument": "stock",
-  "qty": 0.3052,
-  "price": 548.89,
-  "cost": 167.52,
-  "stop": 547.24,
-  "thesis": "VWAP pullback bounce on AMD: 1.32x volume, +0.09% vs VWAP; target +0.6%, stop -0.35%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-27T09:55:38-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "AMD",
-  "instrument": "stock",
-  "qty": 0.1518,
-  "price": 548.878,
-  "cost": 83.32,
-  "stop": 546.96,
-  "thesis": "VWAP pullback bounce on AMD: 1.32x volume, +0.09% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-27T09:55:38-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "SPCX",
-  "instrument": "stock",
-  "qty": 0.5597,
-  "price": 148.976,
-  "cost": 83.38,
-  "stop": 148.4,
-  "thesis": "VWAP pullback bounce on SPCX: 0.62x volume, +0.46% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
   "time": "2026-10-27T09:59:43-04:00",
   "type": "open",
   "agent": "hyper",
@@ -6726,5 +6680,33 @@
   "agent": "scalper",
   "note": "After-close review: revise. Today's only trade was a META ORB winner (+$1.16), which supports the Communication Services lean. But overnight Waymo news (a federal probe and an NHTSA recall query covering GOOG and GOOGL) adds regulatory event risk to the GOOGL setup, and my own scorecard shows mind-changes have not helped, so I'm keeping the trigger strict rather than widening it.",
   "symbol": "GOOGL, META"
+ },
+ {
+  "time": "2026-11-09T20:10:37-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Evening check-in: keep. No stock on my list has a confirmed close above its trigger on 2.5x volume, and the scan gives no volume data for the new breakouts, so the plan still holds.",
+  "symbol": "ADT, EW, UUP"
+ },
+ {
+  "time": "2026-11-09T20:10:50-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Evening check-in: keep. Live stop-to-target math still fails the 1:1 floor on every fresh Energy washout (SU about 0.87:1, CVX 0.64:1, SHEL 0.63:1, XOM 0.55:1, BP below 0.5:1), TEAM is Technology 29.8% above its 200-day with analyst target cuts, and the other RSI(2) names are above 10. The existing positions are still inside their stops and targets, so nothing changes.",
+  "symbol": "SU, CVX"
+ },
+ {
+  "time": "2026-11-09T20:11:00-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Evening check-in: revise. The fresh scan replaces the stale 0.94 EEM reading with 0.95, which meets the floor, and TLT now shows IV/RV 1.14 as a fresh signal. The open TLT spread still needs its stop enforced, and the weak scorecard argues for only one new small trade.",
+  "symbol": "EEM"
+ },
+ {
+  "time": "2026-11-09T20:11:10-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Evening check-in: revise. Today's only trade was a META opening-range breakout that won +$1.16 on 2.26x volume, and META is still the cleanest liquid name with a Communication Services tag. The Waymo probe and the Anthropic S-1 headline now sit on GOOGL, and the NVIDIA inquiry keeps the Tech/AI complex event-driven, so GOOGL drops to a low-conviction watch.",
+  "symbol": "META, GOOGL"
  }
 ]
