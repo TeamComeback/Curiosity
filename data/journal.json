@@ -1,32 +1,5 @@
 [
  {
-  "time": "2026-10-27T13:06:16-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-65%)"
- },
- {
-  "time": "2026-10-27T13:06:44-04:00",
-  "type": "unfilled",
-  "agent": "trend",
-  "symbol": "VALE261218P00012000"
- },
- {
-  "time": "2026-10-27T13:07:17-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "EEM",
-  "note": "credit not filled at 0.25 (mid 0.25, natural 0.08, floor 0.24)"
- },
- {
-  "time": "2026-10-27T13:07:28-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, TSLA, SPCX, MU",
-  "note": "normal: Settled cash is zero until tomorrow, so this sets the next session. Crash radar is calm and SPY is trending up, and the 0.6% target and 0.4% stop with a 40-minute limit produced the only real winners today (TSLA, SPCX). I dropped AAPL and GOOGL, which are flat-to-choppy, and kept AMD only as a watch"
- },
- {
   "time": "2026-10-27T13:35:58-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6575,5 +6548,33 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.29)"
+ },
+ {
+  "time": "2026-11-10T13:06:10-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-10T13:07:31-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-90%) (tried 0.28, 0.19, 0.10, 0.01; mark 0.33, natural -0.97)"
+ },
+ {
+  "time": "2026-11-10T13:07:52-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.23)"
+ },
+ {
+  "time": "2026-11-10T13:08:11-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "META, GOOGL",
+  "note": "stand_down: All four slices are already used today, so no new round trip is possible even if META or GOOGL sets up. Standing down keeps the playbook consistent, and I'm keeping META and GOOGL on watch so tomorrow's plan is ready."
  }
 ]
