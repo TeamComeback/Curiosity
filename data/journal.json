@@ -1,40 +1,5 @@
 [
  {
-  "time": "2026-10-27T15:06:08-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-62%)"
- },
- {
-  "time": "2026-10-27T15:06:35-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "note": "stand_down: Settled cash is $0 and today's sale proceeds won't settle until tomorrow, so no new round trips are possible today. Only about 45 minutes remain before the 3:50 flatten, and today's scalps were mostly small losers and near-scratches, so standing down is the disciplined call."
- },
- {
-  "time": "2026-10-27T15:06:40-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOXL, WDC, CRWV, SNDK, BE",
-  "note": "aggressive: Settled cash is only $0.47, so no entries are possible until tomorrow's settlement. Keep the 0.5% stop, which avoided the noise stops that hit the 0.4% stops today, and use the 0.9% target with a 20-minute hold on the highest-volume movers (SOXL, TQQQ, WDC, CRWV, SNDK) plus BE, AMD, SPCX, SMH, TSLA,"
- },
- {
-  "time": "2026-10-27T15:36:02-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-62%)"
- },
- {
-  "time": "2026-10-27T15:36:24-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, IWM",
-  "note": "stand_down: Settled cash is $0 and today's sale proceeds settle tomorrow, so no new round trip is possible before the 3:50 flatten. Keep SPY and IWM on watch for the next session, when the crash radar is calm and SPY is trending up."
- },
- {
   "time": "2026-10-27T15:36:30-04:00",
   "type": "playbook",
   "agent": "hyper",
@@ -6570,5 +6535,46 @@
   "agent": "volsell",
   "symbol": "TLT",
   "note": "credit not filled at 0.29, 0.28, 0.27 (mid 0.29, natural 0.27, floor 0.15)"
+ },
+ {
+  "time": "2026-11-10T14:36:26-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-10T14:37:51-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ASTS",
+  "note": "near max value (1.74 of 2 wide) (tried 1.69, 1.49, 1.30, 1.11; mark 1.74, natural 1.11)"
+ },
+ {
+  "time": "2026-11-10T14:39:18-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-91%) (tried 0.26, 0.17, 0.09, 0.01; mark 0.31, natural -0.97)"
+ },
+ {
+  "time": "2026-11-10T14:39:40-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.17)"
+ },
+ {
+  "time": "2026-11-10T14:40:41-05:00",
+  "type": "open",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "instrument": "spread",
+  "qty": 1,
+  "price": 0.22,
+  "cost": -20.0,
+  "stop": 0,
+  "thesis": "TLT IV/RV is 1.26 with SPY trend up and crash radar calm at 38, so the 79.5/78.5 bull put is a rich-vol setup; one contract at the 0.15 credit floor limits risk to $76 while I test the edge at small size despite hawkish-Fed rate risk.",
+  "confidence": 2
  }
 ]
