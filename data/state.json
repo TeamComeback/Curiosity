@@ -56,7 +56,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.85,
-     "mark": 0.45,
+     "mark": 0.43,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.39,
@@ -75,7 +75,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 1.795,
-     "exit_half_spread": 0.22
+     "exit_half_spread": 0.2
     },
     "pos-65a52a0c07": {
      "kind": "stock",
@@ -96,7 +96,7 @@
       "pct_vs_sma200": 31.5
      },
      "sector": "Consumer Discretionary",
-     "last": 186.99,
+     "last": 187.67,
      "high_water": 194.18
     },
     "pos-f9820d2b5e": {
@@ -118,7 +118,8 @@
       "pct_vs_sma200": 63.2
      },
      "sector": "Broad market / other",
-     "last": 7.33
+     "last": 7.455,
+     "high_water": 7.455
     }
    },
    "status": "active",
@@ -129,10 +130,6 @@
    "peak": 1340.54,
    "max_dd": 0.3894,
    "notes": [
-    {
-     "date": "2026-11-05",
-     "note": "Live marks beat the overnight plan: REGN (940.61) is above its 935 stop and AAPL (353.64) is above its 351.68 breakout, so both stay open. MMM stop moves to breakeven at 189.34. No candidates delivered, so no new entries."
-    },
     {
      "date": "2026-11-05",
      "note": "Cut AAPL on a failed breakout rather than waiting for the stop; keep most settled cash for confirmed 2x-volume breakdowns, since the MCK/EW/DIS watchlist has no delivered candidates."
@@ -288,6 +285,10 @@
     {
      "date": "2026-11-10",
      "note": "The game plan flagged TLS's scan levels as unreliable, but the live price now sits above the level on 3.5x volume, so I took a small, stop-sized position. Keep the ABNB and CLSX/DJTU puts on their stops and avoid chasing extended names."
+    },
+    {
+     "date": "2026-11-10",
+     "note": "No new entries: the only candidate (TLS) is already held from this morning's 3.5x-volume breakout, so I won't double up. Keeping ~$373 settled cash for an EW, MRNA, or ADT close above trigger on at least 2.5x volume. Existing stops stay as they are."
     }
    ],
    "last_exits": {
@@ -992,7 +993,7 @@
       "pct_vs_sma5": -4.6
      },
      "sector": "Consumer Staples",
-     "last": 194.6
+     "last": 194.15
     }
    },
    "status": "active",
@@ -1003,10 +1004,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-05",
-     "note": "Ratios from stale notes don't match live candidate prices; recompute target-to-stop on each scan before passing or taking a setup."
-    },
     {
      "date": "2026-11-05",
      "note": "No entries: no live candidate clears my 1:1 target-to-stop floor (XOP ~0.98, AR ~0.92, BP ~0.70, PBR ~0.70, ZS ~0.67, URI already held). Game-plan names CNQ, AR and OXY aren't all in today's scan, so their triggers can't fire. Hold the seven positions to their stops and targets and keep the $30.89 f"
@@ -1162,6 +1159,10 @@
     {
      "date": "2026-11-10",
      "note": "No entries at 10:38: every live candidate fails my 1:1 stop-to-target floor (SHEL 0.78, SU 0.47, CVX 0.40, CNQ 0.25, PAYC 0.76, TEAM 0.84). Holding PM to its 184.94 stop and 202.28 target; watch HALO and PAYC only if they reprice to a 1:1 setup."
+    },
+    {
+     "date": "2026-11-10",
+     "note": "No entries: every live candidate fails the 1:1 stop-to-target floor (SHEL 0.85, CVX 0.53, SU 0.51, CNQ 0.37, PAYC 0.77, TEAM 0.89), and HALO is not in today's candidates. Holding PM to its 184.94 stop and 202.28 target; keep cash in reserve."
     }
    ],
    "last_exits": {
@@ -1624,10 +1625,6 @@
    "notes": [
     {
      "date": "2026-11-05",
-     "note": "Thin credit-to-width and repeated XLF fill failures mean one contract at the 0.15 floor; keep TLT and IWM on manual exits and never double up an underlying."
-    },
-    {
-     "date": "2026-11-05",
      "note": "Single-contract spreads on non-duplicate underlyings only; manage TLT and IWM to their 50%-credit exits and never double an open underlying."
     },
     {
@@ -1781,6 +1778,10 @@
     {
      "date": "2026-11-10",
      "note": "Passed the TLT 79.5/78.5 candidate. It was still a rate-sensitive bull put in a hawkish-Fed tape, and re-entering TLT right after a stop-out would be churn. Next setup needs a different underlying with a clear rich-vol edge."
+    },
+    {
+     "date": "2026-11-10",
+     "note": "Passed the TLT 79.5/78.5 bull put: it re-enters the same underlying that was stopped out today into a hawkish-Fed tape, and Real Estate is 0-for-2 in my results. Wait for a non-rate, broad-market setup with a clear IV/RV edge."
     }
    ],
    "last_exits": {
@@ -2200,7 +2201,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 747.34
+     "last": 747.31
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2216,7 +2217,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 747.34
+     "last": 747.31
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2232,7 +2233,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 747.34
+     "last": 747.31
     }
    },
    "status": "active",
@@ -2265,7 +2266,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 112.59
+     "last": 112.77
     },
     "pos-9d67e5d154": {
      "kind": "stock",
@@ -2282,7 +2283,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 118.4
+     "last": 118.34
     }
    },
    "status": "active",
@@ -2329,7 +2330,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.64,
+     "mark": 1.67,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2349,7 +2350,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.475,
+     "exit_half_spread": 0.35,
      "peak_mark": 1.67,
      "low_water": 27.975
     },
@@ -2395,7 +2396,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.04,
+     "exit_half_spread": 1.035,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2440,7 +2441,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 2.055,
+     "exit_half_spread": 2.33,
      "peak_mark": 1.09
     }
    },
@@ -3019,16 +3020,12 @@
    ],
    "playbook": {
     "date": "2026-11-10",
-    "made_at": "2026-11-10T10:38-05:00",
+    "made_at": "2026-11-10T11:08-05:00",
     "watch": [
-     "META",
-     "MSFT",
-     "GOOGL",
-     "AVGO",
-     "SPY"
+     "META"
     ],
-    "aggression": "defensive",
-    "why": "Most tech names are trading below VWAP with down 1-minute trends, so I'm cutting to defensive size and keeping only the cleanest names. META and MSFT have open scalps, and the 1.5x relative-volume and SPY-above-open gates from the overnight plan still apply.",
+    "aggression": "stand_down",
+    "why": "SPY is slightly below its open (-0.01%) and the tech complex is mixed (NVDA and MU weak, AMD and AVGO strong), so the overnight plan's SPY-above-open gate isn't met and relative volume isn't verified. Four round trips are already used today, so I'm standing down and keeping META on watch only in cas",
     "slices": 4,
     "target_pct": 0.5,
     "stop_pct": 0.3,
