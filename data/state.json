@@ -56,7 +56,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.85,
-     "mark": 0.43,
+     "mark": 0.45,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.39,
@@ -75,7 +75,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 1.795,
-     "exit_half_spread": 0.2
+     "exit_half_spread": 0.22
     },
     "pos-65a52a0c07": {
      "kind": "stock",
@@ -96,7 +96,7 @@
       "pct_vs_sma200": 31.5
      },
      "sector": "Consumer Discretionary",
-     "last": 186.24,
+     "last": 185.85,
      "high_water": 194.18
     },
     "pos-f9820d2b5e": {
@@ -118,7 +118,7 @@
       "pct_vs_sma200": 63.2
      },
      "sector": "Broad market / other",
-     "last": 7.595,
+     "last": 7.525,
      "high_water": 7.595
     }
    },
@@ -130,10 +130,6 @@
    "peak": 1340.54,
    "max_dd": 0.3894,
    "notes": [
-    {
-     "date": "2026-11-05",
-     "note": "Broad-market breakdown puts on confirmed 2x+ volume are the only entries; the MCK/EW/DIS watchlist still has no delivered triggers, so I'm keeping most settled cash in reserve."
-    },
     {
      "date": "2026-11-05",
      "note": "Broad-market breakdown puts on 2x+ volume are the only entries; keep about $150 settled cash for the next confirmed setup, and skip KORU since no put fits its budget."
@@ -289,6 +285,10 @@
     {
      "date": "2026-11-10",
      "note": "No new entries: TLS is already held from this morning's 3.5x-volume breakout and is the only candidate, and EW, MRNA and ADT have no confirmed 2.5x-volume close above trigger. Keep ABNB, CLSX and DJTU on their stops and hold ~$373 settled cash for a clean breakout."
+    },
+    {
+     "date": "2026-11-10",
+     "note": "No new entries: TLS is already held from this morning's 3.5x-volume breakout and is the only candidate. Keep ABNB (stop 182.51) and the CLSX (2.98) and DJTU (2.29) puts on their stops, and hold settled cash for an EW, MRNA, or ADT close above trigger on at least 2.5x volume."
     }
    ],
    "last_exits": {
@@ -993,7 +993,7 @@
       "pct_vs_sma5": -4.6
      },
      "sector": "Consumer Staples",
-     "last": 195.59
+     "last": 194.66
     }
    },
    "status": "active",
@@ -1004,10 +1004,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-05",
-     "note": "Only CNQ clears 1:1 on live prices; BP, AR, and ZS fail. The $30.89 went to the single energy name that qualifies, and I'm holding the rest to stops and targets."
-    },
     {
      "date": "2026-11-05",
      "note": "Only $0.84 settled cash, so no new entries are possible. Hold all open positions to their stops and targets, and wait for settlements before sizing any new washout."
@@ -1163,6 +1159,10 @@
     {
      "date": "2026-11-10",
      "note": "No entries at 12:08: every live candidate fails my 1:1 stop-to-target floor on its scan prices (SHEL 0.69, CVX 0.29, BP 0.20, XOM 0.24, PAYC 0.75, TEAM 0.93), and HALO isn't a candidate. Holding PM to its 184.94 stop and 202.28 target; keep $732 settled cash in reserve."
+    },
+    {
+     "date": "2026-11-10",
+     "note": "No entries at 12:38: live stop-to-target ratios are SHEL ~0.7, CVX ~0.3, BP ~0.2, WDAY ~0.54, PAYC ~0.74, TEAM ~0.9, all below my 1:1 floor. HALO isn't a candidate. Holding PM to its 184.94 stop and 202.28 target, keeping $732 settled cash in reserve."
     }
    ],
    "last_exits": {
@@ -1625,10 +1625,6 @@
    "notes": [
     {
      "date": "2026-11-05",
-     "note": "Single-contract spreads on non-duplicate underlyings only; manage TLT and IWM to their 50%-credit exits and never double an open underlying."
-    },
-    {
-     "date": "2026-11-05",
      "note": "Only non-duplicate setup clearing the 0.15 floor; XLF fills have been unreliable, so keep to one contract and hold to the 50%-credit exit."
     },
     {
@@ -1782,6 +1778,10 @@
     {
      "date": "2026-11-10",
      "note": "Passed TLT 79.5/78.5 bull put (0.28 credit). It re-enters the underlying stopped out at 10:38 into a hawkish-Fed tape with Real Estate 0-for-2. Wait for a non-rate underlying with IV/RV above 0.95; keep settled cash ready."
+    },
+    {
+     "date": "2026-11-10",
+     "note": "Passed TLT 79.5/78.5 again: same underlying stopped out at 10:38 into a hawkish-Fed tape, and Real Estate is 0-for-2. Stay in cash and wait for a non-rate underlying with IV/RV above 0.95."
     }
    ],
    "last_exits": {
@@ -1844,7 +1844,7 @@
     "settled_cash_at_plan": 834.5,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 72.0,
+   "min_trade_seen": 68.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -2201,7 +2201,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 746.61
+     "last": 746.31
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2217,7 +2217,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 746.61
+     "last": 746.31
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2233,7 +2233,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 746.61
+     "last": 746.31
     }
    },
    "status": "active",
@@ -2266,7 +2266,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 111.37
+     "last": 111.595
     },
     "pos-9d67e5d154": {
      "kind": "stock",
@@ -2283,7 +2283,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 117.85
+     "last": 116.54
     }
    },
    "status": "active",
@@ -2292,7 +2292,7 @@
    "closed": 5,
    "wins": 2,
    "peak": 1000.67,
-   "max_dd": 0.0992,
+   "max_dd": 0.1027,
    "notes": [],
    "last_exits": {
     "HUM": "2026-10-20",
@@ -2350,7 +2350,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 0.525,
+     "exit_half_spread": 0.375,
      "peak_mark": 1.67,
      "low_water": 27.975
     },
@@ -2376,7 +2376,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.35,
+     "mark": 0.33,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2396,7 +2396,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.275,
+     "exit_half_spread": 1.255,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2441,7 +2441,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 2.64,
+     "exit_half_spread": 2.625,
      "peak_mark": 1.09
     }
    },
@@ -3020,12 +3020,12 @@
    ],
    "playbook": {
     "date": "2026-11-10",
-    "made_at": "2026-11-10T12:08-05:00",
+    "made_at": "2026-11-10T12:38-05:00",
     "watch": [
      "META"
     ],
     "aggression": "stand_down",
-    "why": "All four slices are already used today (four opens: GOOGL, MSFT, GOOGL, META), so no new round trips are possible. SPY is still below its open, and NVDA, AMD, MU, and SOXX are weak below VWAP, so the gate for META stays closed.",
+    "why": "All four slices are already used today, so no new round trips are possible even if a setup appears. Most candidates are below VWAP with down 1-minute trends, and SPY is slightly negative, so the META gate stays closed.",
     "slices": 4,
     "target_pct": 0.5,
     "stop_pct": 0.3,
