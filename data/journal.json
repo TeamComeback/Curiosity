@@ -1,53 +1,5 @@
 [
  {
-  "time": "2026-10-28T07:40:55-04:00",
-  "type": "plan",
-  "agent": "blackswan",
-  "note": "Pre-market call: keep. Today's fresh scan adds several breakdowns (BA, BURL, BKNG, NFLX, T, GOOG), but settled cash is only $143.50 against an open bearish book of about 78% of the $660.50 equity, above the firm's 50% guideline, so nothing new is fundable without breaking that rule. The radar is calm at 17, so the existing plan holds, with only the contingent watchlist refreshed.",
-  "symbol": "T, NFLX, BA"
- },
- {
-  "time": "2026-10-28T07:41:06-04:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "Pre-market call: revise. Yesterday's edge is thin (about +$0.10 per trade over 36 trades), and the 1.5x relative-volume gate has not been enforced on VWAP pullbacks, so I'm keeping only the two index setups and sizing them to the actual cash. Today is Fed day with crash radar calm at 17, so I'm trading only before the 2pm statement.",
-  "symbol": "SPY, IWM"
- },
- {
-  "time": "2026-10-28T09:36:30-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-56%)"
- },
- {
-  "time": "2026-10-28T09:36:54-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, IWM, MU, SNDK",
-  "note": "defensive: SPY is up on a calm regime but its range is nearly flat, so I'm starting defensive with VWAP bounces at half size. I'm watching the liquid names with clean 1-minute uptrends (MU, SNDK, MSFT, AVGO, SOFI) plus the index ETFs, and will step up to normal once SPY and QQQ show real volume expansion."
- },
- {
-  "time": "2026-10-28T09:36:59-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SOFI, SNDK, MU, WDC, GEV",
-  "note": "aggressive: SOFI is leading above its opening range on volume, and SNDK, MU, and WDC show the most intraday range among large names. Going aggressive with 12 slices and a 0.8% target / 0.4% stop suits the fast movers, with 3x ETFs SOXL and TQQQ as higher-volatility plays."
- },
- {
-  "time": "2026-10-28T09:51:15-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "SOFI",
-  "instrument": "stock",
-  "qty": 7.371,
-  "price": 17.1,
-  "cost": 126.04,
-  "stop": 17.02,
-  "thesis": "VWAP pullback bounce on SOFI: 0.48x volume, +0.39% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-10-28T09:51:17-04:00",
   "type": "open",
   "agent": "hyper",
@@ -6584,6 +6536,46 @@
   "type": "plan",
   "agent": "scalper",
   "note": "Evening check-in: revise. Today lost $1.29 across four trades, and the Communication Services edge (+$1.53 over 10 trades) is weakening after three losing entries today. The 1.5x volume gate is not confirmed as enforced, so I'm cutting the plan to one conviction-1 META test and dropping the GOOGL backup.",
+  "symbol": "META"
+ },
+ {
+  "time": "2026-11-11T07:40:29-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Broad market / other, Health Care, Communication Services; avoiding Energy, Consumer Staples, Technology, Industrials. Broad market is the only clearly profitable sector ($65.58 over 8 trades). Health Care has 2 trades and Communication Services has none, so both are lean-in on today's scan rather than on my results. Energy (-$47), Consumer Staples (-$16.88) and Technology (-$15.50) remain negative and stay avoided."
+ },
+ {
+  "time": "2026-11-11T07:40:29-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. The fresh scan adds FWONK, a Communication Services breakout at 108.36 with ATR 2.72 (about $15 of risk at a 2x ATR stop is roughly 2-3 shares). I'm also dropping CBOE and ONC from the watchlist because their per-share prices make the $15 risk budget impractical. The scan shows no relative-volume data, so every entry still needs the 2.5x confirmation from the plan.",
+  "symbol": "VTRS, AHR, IBN, FWONK"
+ },
+ {
+  "time": "2026-11-11T07:40:42-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "note": "Leaning into Health Care; avoiding Technology, Energy. Health Care has the open HALO trade at about 1.5:1, but I have no closed Health Care trades yet, so this is a thin lean. Technology is 1-for-3 for -14.20 and Energy is 1-for-3 with time-stop losses. Financials dropped out because it has no current setups and only one closed win. Keep the focus under"
+ },
+ {
+  "time": "2026-11-11T07:40:42-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: revise. The PM thesis math is wrong: from the 194.27 last price, the 202.28 target is 8.01 away and the 184.94 stop is 9.33 away, so reward-to-risk is about 0.86:1, not 1.14:1. RSI(2) has also recovered to 23 and price is below the 5-day average, so the washout has played out and the evening exit-at-open plan stands. HALO's washout still qualifies at about 1.5:1, but the Morgan Stanley downgrade is new ne",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-11T07:40:53-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: revise. EEM's IV/RV has risen from 1.02 to 1.32 while it stays in a down trend, and crash radar is calm at 37, so it now qualifies more clearly. The TLT thesis is weaker: the 10-year is at 5%, Fed hike talk has grown, and the underlying is only about 1% above the 80 stop, so I'm exiting rather than holding.",
+  "symbol": "EEM"
+ },
+ {
+  "time": "2026-11-11T07:41:02-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: revise. Pre-market news for META is mixed: a Brazilian election fine and ByteDance's AI assistant launch are mild negatives, and the Sanders wealth-tax headline is noise. My notes also say min_rel_volume has not been enforced on past entries, so the 1.5x condition can't be trusted unless it is checked before the order.",
   "symbol": "META"
  }
 ]

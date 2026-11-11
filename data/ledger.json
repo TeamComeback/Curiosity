@@ -18352,5 +18352,133 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-11T07:40:29-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-11-11",
+  "decision": "revise",
+  "why": "The fresh scan adds FWONK, a Communication Services breakout at 108.36 with ATR 2.72 (about $15 of risk at a 2x ATR stop is roughly 2-3 shares). I'm also dropping CBOE and ONC from the watchlist because their per-share prices make the $15 risk budget impractical. The scan shows no relative-volume data, so every entry still needs the 2.5x confirmation from the plan.",
+  "summary": "Hold TLS, ABNB and both puts on their stops. Buy VTRS, AHR, IBN or FWONK only on a close above trigger with at least 2.5x relative volume, sized to about $15 of risk (2x ATR stop). Stay out of extended names and penny stocks.",
+  "watchlist": [
+   {
+    "symbol": "VTRS",
+    "setup": "Health Care breakout at 20.53, ATR 0.56, roc20 +21%",
+    "trigger": "Close above 20.53 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "AHR",
+    "setup": "Real Estate breakout at 59.21, ATR 1.4, two price-target raises",
+    "trigger": "Close above 59.21 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IBN",
+    "setup": "Communication Services breakout at 34.66, ATR 0.75, roc20 +22%",
+    "trigger": "Close above 34.66 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "FWONK",
+    "setup": "Communication Services breakout at 108.36, ATR 2.72, roc20 +17%, TD Cowen target raise",
+    "trigger": "Close above 108.36 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IRTC",
+    "setup": "Real Estate breakdown below 86.4, roc20 -20%",
+    "trigger": "Close below 86.4 on at least 2.5x relative volume",
+    "instrument": "put",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-11T07:40:29-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Broad market / other",
+   "Health Care",
+   "Communication Services"
+  ],
+  "avoid": [
+   "Energy",
+   "Consumer Staples",
+   "Technology",
+   "Industrials"
+  ],
+  "why": "Broad market is the only clearly profitable sector ($65.58 over 8 trades). Health Care has 2 trades and Communication Services has none, so both are lean-in on today's scan rather than on my results. Energy (-$47), Consumer Staples (-$16.88) and Technology (-$15.50) remain negative and stay avoided.",
+  "expires": "2026-11-25"
+ },
+ {
+  "time": "2026-11-11T07:40:42-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-11-11",
+  "decision": "revise",
+  "why": "The PM thesis math is wrong: from the 194.27 last price, the 202.28 target is 8.01 away and the 184.94 stop is 9.33 away, so reward-to-risk is about 0.86:1, not 1.14:1. RSI(2) has also recovered to 23 and price is below the 5-day average, so the washout has played out and the evening exit-at-open plan stands. HALO's washout still qualifies at about 1.5:1, but the Morgan Stanley downgrade is new ne",
+  "summary": "Sell PM at the open (market order) since it has recovered below its 5-day average with R:R near 0.86:1. Keep HALO on its 96.66 stop and 112.66 target with the 5-day time stop, no adds. No new entries: the only other washouts (TEAM, WDAY) fail the 1:1 floor or sit on the avoid list.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-11T07:40:42-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "lean_in": [
+   "Health Care"
+  ],
+  "avoid": [
+   "Technology",
+   "Energy"
+  ],
+  "why": "Health Care has the open HALO trade at about 1.5:1, but I have no closed Health Care trades yet, so this is a thin lean. Technology is 1-for-3 for -14.20 and Energy is 1-for-3 with time-stop losses. Financials dropped out because it has no current setups and only one closed win. Keep the focus under",
+  "expires": "2026-11-25"
+ },
+ {
+  "time": "2026-11-11T07:40:53-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-11-11",
+  "decision": "revise",
+  "why": "EEM's IV/RV has risen from 1.02 to 1.32 while it stays in a down trend, and crash radar is calm at 37, so it now qualifies more clearly. The TLT thesis is weaker: the 10-year is at 5%, Fed hike talk has grown, and the underlying is only about 1% above the 80 stop, so I'm exiting rather than holding.",
+  "summary": "Exit the TLT 79.5/78.5 bull put at the open and stay out of rate proxies. Look for one EEM bear call spread, 1-wide near 30-delta, 21-45 DTE, only if EEM is still below its 50-day and the credit is at least 1/3 of width at the open. Keep the rest of cash settled.",
+  "watchlist": [
+   {
+    "symbol": "EEM",
+    "setup": "Bear call spread, 1-wide, short call near 30-delta, 21-45 DTE. Scan shows bear call trend and IV/RV 1.32 (well above the 0.95 floor), with a firm dollar and hawkish Fed as headwinds for emerging markets.",
+    "trigger": "Enter at the open only if EEM is still below its 50-day trend, IV/RV stays above 0.95, and the short call credit is at least about 0.33 (1/3 of the 1.00 width). Skip if EEM gaps up above its 50-day or the credit is thinner.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-11T07:41:02-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-11-11",
+  "decision": "revise",
+  "why": "Pre-market news for META is mixed: a Brazilian election fine and ByteDance's AI assistant launch are mild negatives, and the Sanders wealth-tax headline is noise. My notes also say min_rel_volume has not been enforced on past entries, so the 1.5x condition can't be trusted unless it is checked before the order.",
+  "summary": "Stand aside unless META clears its first 15-minute high on verified 1.5x+ relative volume with price above VWAP and SPY above its open. Take at most one $50 position. Otherwise sit out the day.",
+  "watchlist": [
+   {
+    "symbol": "META",
+    "setup": "Opening-range breakout continuation in Communication Services, conviction 1 only.",
+    "trigger": "Break above the first 15-minute high on at least 1.5x relative volume that is confirmed from the actual bar data (not assumed), price holding above VWAP, SPY above its open. Skip if the open gaps more than about 2.5%, if NVDA/AMD/AVGO/MU sell off in the first hour, or if the breakout fades on falling volume.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]
