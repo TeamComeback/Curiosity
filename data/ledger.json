@@ -18480,5 +18480,88 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-11T09:37:23-05:00",
+  "type": "trade_closed",
+  "agent": "trend",
+  "position_id": "pos-65a52a0c07",
+  "symbol": "ABNB",
+  "underlying": "ABNB",
+  "sector": "Consumer Discretionary",
+  "instrument": "stock",
+  "entry": 193.21,
+  "exit": 181.36,
+  "pnl": -15.24,
+  "return_pct": -6.1,
+  "opened": "2026-11-09T10:09:19-05:00",
+  "why_entered": "ABNB closed above its 55-day breakout at 193.41 on 2.61x relative volume (above the 2.5x minimum), 31.5% above its 200-day SMA, so the uptrend is intact; the 182.51 stop limits risk to about $15 (roughly 1.7% of equity).",
+  "why_exited": "trailing stop on underlying"
+ },
+ {
+  "time": "2026-11-11T09:40:20-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-5508b54455",
+  "symbol": "PM",
+  "underlying": "PM",
+  "sector": "Consumer Staples",
+  "instrument": "stock",
+  "entry": 193.26,
+  "exit": 193.408,
+  "pnl": 0.12,
+  "return_pct": 0.1,
+  "opened": "2026-11-09T11:08:01-05:00",
+  "why_entered": "PM is an RSI(2) 4.8 washout 5.6% above its 200-day in a calm regime (crash radar 39, SPY above its 200-day); live prices give 1.14:1 from 193.04 to the 202.28 target against the 184.94 stop, clearing my 1:1 floor, so the game plan's 0.99 figure is stale.",
+  "why_exited": "agent: Game plan exit at the open: RSI(2) has recovered to 23 and price is below the 5-day average, so the washout has played o"
+ },
+ {
+  "time": "2026-11-11T09:40:24-05:00",
+  "type": "trade_closed",
+  "agent": "volsell",
+  "position_id": "pos-77899865bf",
+  "symbol": "TLT",
+  "underlying": "TLT",
+  "sector": "Real Estate",
+  "instrument": "spread",
+  "entry": 0.22,
+  "exit": 0.28,
+  "pnl": -12.0,
+  "return_pct": -60.0,
+  "opened": "2026-11-10T14:40:41-05:00",
+  "why_entered": "TLT IV/RV is 1.26 with SPY trend up and crash radar calm at 38, so the 79.5/78.5 bull put is a rich-vol setup; one contract at the 0.15 credit floor limits risk to $76 while I test the edge at small size despite hawkish-Fed rate risk.",
+  "why_exited": "agent: Exiting per the morning plan: TLT is about 1% above the 80.0 underlying stop, the 10-year is near 5% with Fed hike talk,"
+ },
+ {
+  "time": "2026-11-11T09:40:25-05:00",
+  "type": "trade_opened",
+  "agent": "monkey",
+  "position_id": "pos-3a98f6a8fe",
+  "symbol": "PLTR",
+  "underlying": "PLTR",
+  "sector": "Technology",
+  "instrument": "stock",
+  "qty": 0.4433,
+  "price": 173.658,
+  "cost": 76.98,
+  "stop": 154.12,
+  "why": "Dart landed on PLTR",
+  "confidence": 0,
+  "signals": {},
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-11T09:40:34-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SNDK",
+   "NVDA",
+   "AAPL",
+   "MSFT",
+   "META"
+  ],
+  "aggression": "defensive",
+  "why": "SPY is flat and most names are trending down on the 1-minute chart, so the market is mixed rather than clean. SNDK is the only candidate above its opening range with price above VWAP and rising volume, while NVDA, AAPL and MSFT are up on the 1-minute trend. Defensive sizing keeps risk small until SP"
  }
 ]
