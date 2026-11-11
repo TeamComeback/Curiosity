@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-10-28T11:21:01-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "WDC",
-  "qty": 0.2151,
-  "entry": 387.276,
-  "exit": 391.868,
-  "pnl": 0.99,
-  "note": "target hit (+1.22%)",
-  "opened": "2026-10-28T10:59:18-04:00",
-  "confidence": 3,
-  "thesis": "opening-range breakout on WDC: 1.25x volume, +1.23% vs VWAP; target +1.0%, stop -0.45%"
- },
- {
-  "time": "2026-10-28T11:25:05-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "BE",
-  "qty": 0.3728,
-  "entry": 223.652,
-  "exit": 224.424,
-  "pnl": 0.29,
-  "note": "time limit, 22 min (+0.35%)",
-  "opened": "2026-10-28T11:03:23-04:00",
-  "confidence": 3,
-  "thesis": "momentum burst on BE: 2.07x volume, +0.01% vs VWAP; target +1.0%, stop -0.45%"
- },
- {
-  "time": "2026-10-28T11:36:13-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-65%)"
- },
- {
-  "time": "2026-10-28T11:36:41-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "STX, WDC, SPY, IWM",
-  "note": "stand_down: Today's VWAP bounces are chopping inside 0.3-0.7% ranges and four of five hit the 0.3% stop, so I'm not paying for more of these in a tape this tight. I'll keep STX and WDC on watch for a clean opening-range hold, where their 4-9% ranges give room, and SPY/IWM for a real VWAP reclaim on volume."
- },
- {
   "time": "2026-10-28T11:36:47-04:00",
   "type": "playbook",
   "agent": "hyper",
@@ -6417,5 +6375,33 @@
   "stop": 69.04,
   "thesis": "ALC RSI(2) 7.1 washout at about 1.0:1 (71.77 to 74.52 target vs 69.04 stop), the only candidate clearing the 1:1 floor at live prices; sized small because it sits right at the 200-day average.",
   "confidence": 2
+ },
+ {
+  "time": "2026-11-11T13:06:31-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-59%)"
+ },
+ {
+  "time": "2026-11-11T13:06:51-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -0.76)"
+ },
+ {
+  "time": "2026-11-11T13:07:13-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.8)"
+ },
+ {
+  "time": "2026-11-11T13:07:32-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AAPL, GOOGL, XLE, XLP, EEM",
+  "note": "defensive: Trends are mixed: only AAPL, GOOGL, XLE and AMD are in 1-minute uptrends, while most leaders are rolling over, and the crash radar is calm at 31. I'm keeping defensive sizing and dropping the extended MU, SNDK and SOXL, and favoring names affordable on $1,000 so each slice can actually fill."
  }
 ]
