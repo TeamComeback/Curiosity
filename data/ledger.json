@@ -18263,5 +18263,94 @@
   ],
   "why": "Communication Services is still net positive (+$1.53 over 10 trades, 50% win rate), but the edge is weakening and today's three entries lost. Technology is -$2.17 over 46 trades and Materials and Broad market/other each lost on a single trade. Consumer Discretionary is roughly flat over 10 trades, s",
   "expires": "2026-11-24"
+ },
+ {
+  "time": "2026-11-10T20:10:49-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Evening check-in",
+  "for_day": "2026-11-11",
+  "decision": "revise",
+  "why": "The old plan's EW, ADT and MRNA triggers are absent from tonight's fresh scan, so they're dropped, and VTRS, AHR and IBN are now the cleaner Health Care and Broad-market breakouts with at least 2.5x volume still needed.",
+  "summary": "Hold TLS, ABNB and both puts on their stops. Look to buy VTRS or AHR only on a close above trigger with at least 2.5x volume, sized to about $15 of risk.",
+  "watchlist": [
+   {
+    "symbol": "VTRS",
+    "setup": "Health Care breakout near 55-day high, ATR 0.56, roc20 +21%",
+    "trigger": "Close above 20.53 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "AHR",
+    "setup": "Real Estate breakout at 59.21, ATR 1.4, two price-target raises",
+    "trigger": "Close above 59.21 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IBN",
+    "setup": "Communication Services breakout at 34.66, ATR 0.75, roc20 +22%",
+    "trigger": "Close above 34.66 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IRTC",
+    "setup": "Real Estate breakdown below 86.4, roc20 -20%",
+    "trigger": "Close below 86.4 on at least 2.5x relative volume",
+    "instrument": "put",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-10T20:11:01-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-11-11",
+  "decision": "revise",
+  "why": "PM's thesis is stale: at the 194.27 close, the 202.28 target is 8.01 away and the 184.94 stop is 9.33 away, about 0.86:1, below my 1:1 floor. Price is also under the 5-day average (199.54) with RSI(2) recovered to 23, which meets my own early-exit rule. HALO still holds at about 1.5:1 with RSI(2) 2.6.",
+  "summary": "Sell PM at the open because it is below the 5-day average and under the R:R floor. Hold HALO to its 96.66 stop and 112.66 target, with a 5-day time stop. No new entries: the only setups above 1:1 (TEAM, Technology) are on the avoid list.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-10T20:11:12-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Evening check-in",
+  "for_day": "2026-11-11",
+  "decision": "revise",
+  "why": "The 10-year yield hit 5% after a hot CPI, the Fed is leaning hawkish, and BofA is floating a half-point hike. That makes the reopened TLT bull put a rate bet, not a rich-vol trade, and the stop at 80 is too close to the 80.86 underlying price to absorb a bond selloff. I'm cutting the TLT exposure and keeping only the non-rate EEM idea.",
+  "summary": "Close the TLT 79.5/78.5 bull put at the open rather than holding for the 12/11 expiry. Stay out of rate-sensitive underlyings. The only new idea is the EEM bear call spread, if it still qualifies at the open.",
+  "watchlist": [
+   {
+    "symbol": "EEM",
+    "setup": "Bear call spread, 1-wide, short call near 30-delta, 21-45 DTE. Trend is down (bear call side) and IV/RV is 1.02, above the 0.95 floor. Hawkish Fed and a firm dollar are a headwind for emerging markets. Crash radar is calm at 37.",
+    "trigger": "Enter only if EEM is still below its 50-day trend at the open and the short call credit is at least about 1/3 of the width. Skip if EEM rallies sharply or the IV/RV drops below 0.95.",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-10T20:11:22-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-11-11",
+  "decision": "revise",
+  "why": "Today lost $1.29 across four trades, and the Communication Services edge (+$1.53 over 10 trades) is weakening after three losing entries today. The 1.5x volume gate is not confirmed as enforced, so I'm cutting the plan to one conviction-1 META test and dropping the GOOGL backup.",
+  "summary": "Stand aside by default. Take at most one $50 META opening-range breakout if it clears its first 15-minute high on verified 1.5x+ relative volume, holds VWAP, and SPY is above its open. Skip gaps above about 2.5%, and skip if NVDA/AMD/AVGO/MU sell off in the first hour.",
+  "watchlist": [
+   {
+    "symbol": "META",
+    "setup": "Opening-range breakout continuation in Communication Services, conviction 1 only.",
+    "trigger": "Break above the first 15-minute high on at least 1.5x verified relative volume, price holding above VWAP, SPY above its open. Skip if the open gaps more than about 2.5%, if NVDA/AMD/AVGO/MU sell off in the first hour, or if the breakout fades on falling volume.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]
