@@ -13,7 +13,7 @@
   "counts": {
    "monkey": 2,
    "meanrev": 1,
-   "scalper": 1
+   "scalper": 2
   }
  },
  "agents": {
@@ -68,7 +68,7 @@
       "pct_vs_sma200": 63.2
      },
      "sector": "Broad market / other",
-     "last": 7.545,
+     "last": 7.455,
      "high_water": 7.925
     }
    },
@@ -78,7 +78,7 @@
    "closed": 22,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.4409,
+   "max_dd": 0.4418,
    "notes": [
     {
      "date": "2026-11-09",
@@ -1025,7 +1025,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 101.73
+     "last": 101.57
     },
     "pos-38ef0e24a8": {
      "kind": "stock",
@@ -1045,7 +1045,7 @@
       "pct_vs_sma5": -3.7
      },
      "sector": "Consumer Staples",
-     "last": 72.31
+     "last": 72.32
     }
    },
    "status": "active",
@@ -2266,7 +2266,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 760.395
+     "last": 760.615
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2282,7 +2282,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 760.395
+     "last": 760.615
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2298,7 +2298,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 760.395
+     "last": 760.615
     }
    },
    "status": "active",
@@ -2331,7 +2331,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 117.75
+     "last": 117.5
     },
     "pos-9d67e5d154": {
      "kind": "stock",
@@ -2348,7 +2348,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 129.035
+     "last": 129.32
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2365,7 +2365,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 173.13
+     "last": 173.255
     },
     "pos-4c91c52c63": {
      "kind": "stock",
@@ -2382,7 +2382,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 310.53
+     "last": 310.85
     }
    },
    "status": "active",
@@ -3010,9 +3010,32 @@
    ]
   },
   "scalper": {
-   "cash": 1000.88,
+   "cash": 834.1,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-eb41dac1cd": {
+     "kind": "stock",
+     "symbol": "IWM",
+     "qty": 0.5892,
+     "entry": 283.058,
+     "cost": 166.78,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 282.35,
+     "atr": 0,
+     "opened": "2026-11-11T14:53:33-05:00",
+     "thesis": "VWAP pullback bounce on IWM: 1.6x volume, +0.14% vs VWAP; target +0.4%, stop -0.25%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Industrials",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.4,
+     "stop_pct": 0.25,
+     "max_hold_min": 35,
+     "last": 283.12,
+     "peak_gain": 0.02190363812364371
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
@@ -3086,7 +3109,8 @@
     "low_volume_skips": [
      "AAPL",
      "NVDA",
-     "INTC"
+     "INTC",
+     "IWM"
     ]
    },
    "plan": {
