@@ -1,68 +1,5 @@
 [
  {
-  "time": "2026-10-28T10:06:02-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-66%)"
- },
- {
-  "time": "2026-10-28T10:06:28-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, IWM, MU, GOOGL",
-  "note": "defensive: SPY's range is only 0.31% and volume is still thin, so I'm keeping defensive sizing. I'm trimming the watchlist to the index ETFs plus MU and GOOGL, the names with clean 1-minute uptrends, and dropping SNDK and the other choppy single names."
- },
- {
-  "time": "2026-10-28T10:06:33-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "SNDK, MU, WDC, GEV, SOXL",
-  "note": "aggressive: Five open VWAP bounces already hold most of the settled cash, so the slice count stays at 12 for any remaining shots. SNDK, MU, WDC, GEV, and the 3x ETFs SOXL and TQQQ have the widest intraday ranges, and BE, TSLA, and SPCX add volatility on the downside-to-VWAP setups."
- },
- {
-  "time": "2026-10-28T10:08:36-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "SOXL",
-  "qty": 0.8011,
-  "entry": 104.068,
-  "exit": 103.982,
-  "pnl": -0.07,
-  "note": "gave back a +0.59% gain: out at breakeven",
-  "opened": "2026-10-28T09:59:32-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SOXL: 0.59x volume, +0.58% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-28T10:08:36-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "GEV",
-  "qty": 0.0968,
-  "entry": 861.048,
-  "exit": 857.506,
-  "pnl": -0.34,
-  "note": "gave back a +0.68% gain: out at breakeven",
-  "opened": "2026-10-28T10:03:38-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on GEV: 2.08x volume, +1.05% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-28T10:12:39-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "MU",
-  "qty": 0.1291,
-  "entry": 975.178,
-  "exit": 970.456,
-  "pnl": -0.61,
-  "note": "stop (-0.52%)",
-  "opened": "2026-10-28T10:03:38-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on MU: 0.95x volume, +0.14% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
   "time": "2026-10-28T10:12:39-04:00",
   "type": "close",
   "agent": "hyper",
@@ -6542,5 +6479,60 @@
   "agent": "scalper",
   "symbol": "AAPL",
   "note": "VWAP pullback bounce skipped: 0.54x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-11T10:06:23-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-11T10:06:25-05:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "DJTU261218P00002000",
+  "qty": 1,
+  "entry": 0.85,
+  "exit": 0.1,
+  "pnl": -122.0,
+  "note": "option stop (-61%)",
+  "opened": "2026-11-05T12:41:06-05:00",
+  "confidence": 4,
+  "thesis": "DJTU broke below its 55-day low at 2.29 on 13x relative volume and trades at 2.015, 87% below its 200-day SMA, so a put with the 3.03 underlying stop caps the risk."
+ },
+ {
+  "time": "2026-11-11T10:07:48-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-92%) (tried 0.22, 0.15, 0.08, 0.01; mark 0.27, natural -0.94)"
+ },
+ {
+  "time": "2026-11-11T10:09:10-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-94%) (tried 0.20, 0.14, 0.07, 0.01; mark 0.25, natural -4.05)"
+ },
+ {
+  "time": "2026-11-11T10:09:23-05:00",
+  "type": "open",
+  "agent": "monkey",
+  "symbol": "TXN",
+  "instrument": "stock",
+  "qty": 0.291,
+  "price": 305.686,
+  "cost": 88.95,
+  "stop": 280.37,
+  "thesis": "Dart landed on TXN",
+  "confidence": 0
+ },
+ {
+  "time": "2026-11-11T10:09:31-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SNDK, MU, AMD, STX, NVDA",
+  "note": "defensive: SNDK, MU, AMD and STX are holding above their opening ranges with price above VWAP and uptrends on the 1-minute chart, so they are the cleanest setups. META is below VWAP and trending down, so it fails the overnight plan's conditions and is dropped. Defensive sizing suits a mixed SPY tape."
  }
 ]

@@ -18563,5 +18563,54 @@
   ],
   "aggression": "defensive",
   "why": "SPY is flat and most names are trending down on the 1-minute chart, so the market is mixed rather than clean. SNDK is the only candidate above its opening range with price above VWAP and rising volume, while NVDA, AAPL and MSFT are up on the 1-minute trend. Defensive sizing keeps risk small until SP"
+ },
+ {
+  "time": "2026-11-11T10:06:25-05:00",
+  "type": "trade_closed",
+  "agent": "trend",
+  "position_id": "pos-bd45b81ce0",
+  "symbol": "DJTU261218P00002000",
+  "underlying": "DJTU",
+  "sector": "Broad market / other",
+  "instrument": "option",
+  "entry": 0.85,
+  "exit": 0.1,
+  "pnl": -122.0,
+  "return_pct": -114.0,
+  "opened": "2026-11-05T12:41:06-05:00",
+  "why_entered": "DJTU broke below its 55-day low at 2.29 on 13x relative volume and trades at 2.015, 87% below its 200-day SMA, so a put with the 3.03 underlying stop caps the risk.",
+  "why_exited": "option stop (-61%)"
+ },
+ {
+  "time": "2026-11-11T10:09:23-05:00",
+  "type": "trade_opened",
+  "agent": "monkey",
+  "position_id": "pos-4c91c52c63",
+  "symbol": "TXN",
+  "underlying": "TXN",
+  "sector": "Technology",
+  "instrument": "stock",
+  "qty": 0.291,
+  "price": 305.686,
+  "cost": 88.95,
+  "stop": 280.37,
+  "why": "Dart landed on TXN",
+  "confidence": 0,
+  "signals": {},
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-11T10:09:31-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SNDK",
+   "MU",
+   "AMD",
+   "STX",
+   "NVDA"
+  ],
+  "aggression": "defensive",
+  "why": "SNDK, MU, AMD and STX are holding above their opening ranges with price above VWAP and uptrends on the 1-minute chart, so they are the cleanest setups. META is below VWAP and trending down, so it fails the overnight plan's conditions and is dropped. Defensive sizing suits a mixed SPY tape."
  }
 ]

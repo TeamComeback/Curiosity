@@ -11,12 +11,12 @@
  "entries": {
   "date": "2026-11-11",
   "counts": {
-   "monkey": 1
+   "monkey": 2
   }
  },
  "agents": {
   "trend": {
-   "cash": 606.04,
+   "cash": 591.04,
    "reserved": 0.0,
    "positions": {
     "pos-3dac13e0ef": {
@@ -26,7 +26,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.43,
+     "mark": 0.41,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -45,35 +45,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.435
-    },
-    "pos-bd45b81ce0": {
-     "kind": "option",
-     "symbol": "DJTU261218P00002000",
-     "underlying": "DJTU",
-     "opt_type": "put",
-     "qty": 1,
-     "entry": 0.85,
-     "mark": 2.54,
-     "expiry": "2026-12-18",
-     "strike": 2.0,
-     "delta": -0.39,
-     "cost": 107.0,
-     "direction": "short",
-     "stop": 2.29,
-     "atr": 0.508,
-     "opened": "2026-11-05T12:41:06-05:00",
-     "thesis": "DJTU broke below its 55-day low at 2.29 on 13x relative volume and trades at 2.015, 87% below its 200-day SMA, so a put with the 3.03 underlying stop caps the risk.",
-     "confidence": 4,
-     "signals": {
-      "rel_volume": 12.98,
-      "roc20_pct": -74.6,
-      "pct_vs_sma50": -78.1,
-      "pct_vs_sma200": -86.7
-     },
-     "sector": "Broad market / other",
-     "low_water": 1.795,
-     "exit_half_spread": 2.535
+     "exit_half_spread": 0.415
     },
     "pos-f9820d2b5e": {
      "kind": "stock",
@@ -94,22 +66,18 @@
       "pct_vs_sma200": 63.2
      },
      "sector": "Broad market / other",
-     "last": 7.89,
+     "last": 7.7,
      "high_water": 7.89
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 21,
+   "closed": 22,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.3907,
+   "max_dd": 0.4351,
    "notes": [
-    {
-     "date": "2026-11-06",
-     "note": "Passed on WDC and MCHP puts: both are Technology (avoid list, 1 win in 3 trades), and we already hold three bearish puts. Keep settled cash for a confirmed 2x-volume close above a breakout level in Health Care or Broad market."
-    },
     {
      "date": "2026-11-06",
      "note": "Pass on MCHP short: Technology is on the avoid list and three bearish puts are already open. Existing put stops (VALE 11.79, CLSX 2.98, DJTU 2.29) already sit at their breakdown levels. Hold settled cash for a confirmed 2x-volume close above a breakout in Health Care or Broad market."
@@ -265,6 +233,10 @@
     {
      "date": "2026-11-11",
      "note": "No live candidates today, so no new entries. Watchlist names (VTRS, AHR, IBN, FWONK, IRTC) stay pending until a close clears the trigger on 2.5x volume. Holding TLS and both puts on their stops."
+    },
+    {
+     "date": "2026-11-11",
+     "note": "No candidates today, so no entries. Holding TLS (stop 6.53) and the CLSX put (underlying stop 2.98). The DJTU put is no longer held: it already closed at the -61% option stop this morning, so I'm not sending a close for it. Watchlist names (VTRS, AHR, IBN, FWONK, IRTC) need a close through trigger o"
     }
    ],
    "last_exits": {
@@ -288,7 +260,8 @@
     "XLV": "2026-11-06",
     "ALL": "2026-11-06",
     "VALE": "2026-11-09",
-    "ABNB": "2026-11-11"
+    "ABNB": "2026-11-11",
+    "DJTU": "2026-11-11"
    },
    "plan": {
     "for_day": "2026-11-11",
@@ -1050,7 +1023,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 100.495
+     "last": 100.39
     }
    },
    "status": "active",
@@ -1061,10 +1034,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-06",
-     "note": "Available settled cash is $0.84, so no entries are possible. Hold all eight positions to their stops and targets, and size new washouts only after the TWLO and SHOP proceeds settle, checking 1:1 on live prices and avoiding Technology."
-    },
     {
      "date": "2026-11-06",
      "note": "Only $0.84 settled cash, so no entries are possible; hold all eight positions to their stops and targets and size new washouts only after the $193.51 settles, checking 1:1 on live prices and avoiding Technology."
@@ -1220,6 +1189,10 @@
     {
      "date": "2026-11-11",
      "note": "No new entries: every candidate fails the 1:1 floor on stop-to-target math (IT ~0.31, KHC ~0.5, OTIS ~0.48, MNST ~0.4, TOST ~0.4), and HALO is already held, so a second HALO entry would be an add the plan rules out. Keep cash for a real washout."
+    },
+    {
+     "date": "2026-11-11",
+     "note": "No entries: every live candidate fails the 1:1 floor on stop-to-target math (MNST ~0.49, OTIS ~0.53, YUM ~0.55, IT ~0.24, TOST ~0.40). HALO stays on its 96.66 stop and 112.66 target with no adds."
     }
    ],
    "last_exits": {
@@ -1662,10 +1635,6 @@
    "notes": [
     {
      "date": "2026-11-06",
-     "note": "No new spread: the only candidate (TLT 80/79 bull put) duplicates the open TLT position, and EEM isn't in today's candidates. Hold TLT and IWM to their exits. The notes say TLT was closed at 67% captured, but the position list still shows it open at 0.14 vs 0.21 entry (33% captured), so I'm treating"
-    },
-    {
-     "date": "2026-11-06",
      "note": "Re-entering a same-day closed underlying is allowed only on a fresh scan signal; the overnight game plan is stale for TLT, so I sized to one contract at the 0.15 credit floor and stopped at the short strike."
     },
     {
@@ -1819,6 +1788,10 @@
     {
      "date": "2026-11-11",
      "note": "Rate-proxy spreads have failed for this firm. Stay in cash until a non-rate candidate such as EEM appears with IV/RV above 0.95 and a credit near 1/3 of width."
+    },
+    {
+     "date": "2026-11-11",
+     "note": "Passed: the only candidate is TLT, a rate proxy in Real Estate, which my 0-for-5 record and the avoid list rule out. Waiting for the EEM bear call setup (IV/RV above 0.95, credit near 1/3 of width) or another non-rate underlying; cash stays settled."
     }
    ],
    "last_exits": {
@@ -1901,7 +1874,7 @@
     "settled_cash_at_plan": 821.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 71.0,
+   "min_trade_seen": 78.0,
    "unsettled": [],
    "focus": {
     "lean_in": [
@@ -2271,7 +2244,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 756.05
+     "last": 756.22
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2287,7 +2260,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 756.05
+     "last": 756.22
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2303,7 +2276,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 756.05
+     "last": 756.22
     }
    },
    "status": "active",
@@ -2318,7 +2291,7 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 194.34,
+   "cash": 105.39,
    "reserved": 0.0,
    "positions": {
     "pos-984e54fed0": {
@@ -2336,7 +2309,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 117.11
+     "last": 117.42
     },
     "pos-9d67e5d154": {
      "kind": "stock",
@@ -2353,7 +2326,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 124.475
+     "last": 126.2
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2370,7 +2343,24 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 173.94
+     "last": 171.62
+    },
+    "pos-4c91c52c63": {
+     "kind": "stock",
+     "symbol": "TXN",
+     "qty": 0.291,
+     "entry": 305.686,
+     "cost": 88.95,
+     "hold_days": 2,
+     "direction": "long",
+     "stop": 280.37,
+     "atr": 12.7,
+     "opened": "2026-11-11T10:09:23-05:00",
+     "thesis": "Dart landed on TXN",
+     "confidence": 0,
+     "signals": {},
+     "sector": "Technology",
+     "last": 305.77
     }
    },
    "status": "active",
@@ -2417,7 +2407,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 1.25,
-     "mark": 1.39,
+     "mark": 1.33,
      "width": 2.0,
      "long_strike": 42.0,
      "short_strike": 40.0,
@@ -2437,7 +2427,7 @@
       "downtrend": true
      },
      "sector": "Technology",
-     "exit_half_spread": 1.205,
+     "exit_half_spread": 1.305,
      "peak_mark": 1.67,
      "low_water": 27.975
     },
@@ -2463,7 +2453,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.3,
+     "mark": 0.27,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2483,7 +2473,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.165,
+     "exit_half_spread": 1.205,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2508,7 +2498,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.27,
+     "mark": 0.25,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2528,7 +2518,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 4.38,
+     "exit_half_spread": 4.305,
      "peak_mark": 1.09
     }
    },
@@ -3086,16 +3076,16 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-11",
-    "made_at": "2026-11-11T09:40-05:00",
+    "made_at": "2026-11-11T10:09-05:00",
     "watch": [
      "SNDK",
-     "NVDA",
-     "AAPL",
-     "MSFT",
-     "META"
+     "MU",
+     "AMD",
+     "STX",
+     "NVDA"
     ],
     "aggression": "defensive",
-    "why": "SPY is flat and most names are trending down on the 1-minute chart, so the market is mixed rather than clean. SNDK is the only candidate above its opening range with price above VWAP and rising volume, while NVDA, AAPL and MSFT are up on the 1-minute trend. Defensive sizing keeps risk small until SP",
+    "why": "SNDK, MU, AMD and STX are holding above their opening ranges with price above VWAP and uptrends on the 1-minute chart, so they are the cleanest setups. META is below VWAP and trending down, so it fails the overnight plan's conditions and is dropped. Defensive sizing suits a mixed SPY tape.",
     "slices": 4,
     "target_pct": 0.5,
     "stop_pct": 0.3,
