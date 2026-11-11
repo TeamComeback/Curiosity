@@ -1,39 +1,5 @@
 [
  {
-  "time": "2026-10-28T11:06:14-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-65%)"
- },
- {
-  "time": "2026-10-28T11:06:21-04:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "AEYE",
-  "instrument": "stock",
-  "qty": 3.3573,
-  "price": 10.45,
-  "cost": 35.08,
-  "stop": 9.64,
-  "thesis": "AEYE is 1.9% above its 55-day breakout at 10.23 on 6.7x relative volume, so this is a fresh breakout, but it is extended (roc20 +52%), so I'm sizing small with the 9.64 stop limiting risk to about $2.7.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-28T11:06:40-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, STX, WDC",
-  "note": "stand_down: Today's entries are chopping in 0.3-0.7% ranges and four of five stopped out, so the 0.5% target and 0.3% stop are not paying. I'm standing down, but I'm keeping SPY and QQQ on watch for a clean VWAP reclaim and STX/WDC for a true opening-range hold."
- },
- {
-  "time": "2026-10-28T11:06:47-04:00",
-  "type": "playbook",
-  "agent": "hyper",
-  "symbol": "WDC, BE, SNDK, GEV, SOXL",
-  "note": "aggressive: Calm tape with SPY trending up favors quick VWAP bounces and breakouts. WDC and BE are already working above VWAP, and I'm widening the stop to 0.5% because 0.45% stops were getting hit by normal noise on names like MU, SOXL, and BE."
- },
- {
   "time": "2026-10-28T11:21:01-04:00",
   "type": "close",
   "agent": "hyper",
@@ -6417,5 +6383,39 @@
   "agent": "scalper",
   "symbol": "NVDA, AMD, AVGO, SMH, SOXX",
   "note": "defensive: Semis and QQQ are still in 1-minute uptrends above VWAP with a calm crash radar and SPY trending up, so I'm keeping defensive sizing. I dropped AAPL, which has rolled to a 1-minute downtrend, and left out the extended MU, SNDK and SOXL, where chasing is poor risk-reward."
+ },
+ {
+  "time": "2026-11-11T12:38:32-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-59%)"
+ },
+ {
+  "time": "2026-11-11T12:38:54-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -0.76)"
+ },
+ {
+  "time": "2026-11-11T12:39:14-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.94)"
+ },
+ {
+  "time": "2026-11-11T12:39:29-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "ALC",
+  "instrument": "stock",
+  "qty": 1.6721,
+  "price": 71.85,
+  "cost": 120.14,
+  "stop": 69.04,
+  "thesis": "ALC RSI(2) 7.1 washout at about 1.0:1 (71.77 to 74.52 target vs 69.04 stop), the only candidate clearing the 1:1 floor at live prices; sized small because it sits right at the 200-day average.",
+  "confidence": 2
  }
 ]
