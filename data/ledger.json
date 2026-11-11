@@ -18870,5 +18870,149 @@
   ],
   "aggression": "stand_down",
   "why": "It is 3:37 PM with only about 13 minutes before the 3:50 flat rule, not enough time for a clean scalp. Most leaders are in 1-minute downtrends or below VWAP, and no open scalps remain, so I'm standing down for the rest of the session."
+ },
+ {
+  "time": "2026-11-11T16:41:16-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-11-12",
+  "decision": "revise",
+  "why": "Today's scan has new breakout levels (VTRS 20.86, EW 105.35, RPRX 69.71), and my watchlist triggers are stale. My sector focus also overstated Broad market, which is -$56 on my results.",
+  "summary": "Hold TLS and the CLSX put on their stops. Buy only on a close through a fresh trigger on at least 2.5x relative volume, sized to about $15 of risk.",
+  "watchlist": [
+   {
+    "symbol": "VTRS",
+    "setup": "Health Care breakout at 20.86, ATR 0.55, roc20 +21%",
+    "trigger": "Close above 20.86 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout at 105.35, ATR 2.81, target raised to $121",
+    "trigger": "Close above 105.35 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "RPRX",
+    "setup": "Health Care breakout at 69.71, ATR 1.53, roc20 +19%",
+    "trigger": "Close above 69.71 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "AHR",
+    "setup": "Real Estate near breakout at 59.53, two UBS target raises",
+    "trigger": "Close above 59.53 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "WELL",
+    "setup": "Real Estate near breakout at 248.95, UBS target raised to $289",
+    "trigger": "Close above 248.95 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-11T16:41:16-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Health Care",
+   "Real Estate"
+  ],
+  "avoid": [
+   "Energy",
+   "Consumer Staples",
+   "Technology",
+   "Broad market / other"
+  ],
+  "why": "Health Care is the only sector with multiple fresh breakouts and a small positive record (VTRS +0.91%). Broad market is -$56 across 9 trades, so my earlier +$65 claim is wrong. Real Estate has no record yet but has the strongest analyst support.",
+  "expires": "2026-11-25"
+ },
+ {
+  "time": "2026-11-11T16:41:30-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-11-12",
+  "decision": "revise",
+  "why": "The pre-market plan is stale: PM has already been closed for +0.12, and the fresh scan shows HALO deeper into washout (RSI(2) 1.8) with its thesis intact, while ALC's RSI(2) has risen to 8.9 and the live reward-to-risk on it is poor. Every other washout in the scan fails the 1:1 floor at scan prices, so there is no new entry to add.",
+  "summary": "Hold HALO (stop 96.66, target 112.66, 5-day time stop) and ALC (stop 69.04, target 74.52) on their existing plans, with no adds and no new entries. Keep the $607 settled cash in reserve for a real washout that clears 1:1 at the live price.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-11T16:41:38-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-11-12",
+  "decision": "revise",
+  "why": "The EEM bear call that was my only candidate now shows IV/RV 0.88, below the 0.95 floor, so it no longer qualifies. Every other scan name also fails the floor or is a rate proxy I've already excluded, so there is no trade.",
+  "summary": "No trades tomorrow. Keep the $889 in settled cash and wait for a bear call or bull put with IV/RV at or above 0.95 on a non-rate underlying. Re-check EEM only if its IV/RV rises back above 0.95.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-11T16:41:38-05:00",
+  "type": "focus",
+  "agent": "volsell",
+  "lean_in": [],
+  "avoid": [
+   "Technology",
+   "Energy",
+   "Materials",
+   "Financials",
+   "Industrials",
+   "Real Estate"
+  ],
+  "why": "The only lean-in case (Broad market / other, via EEM) no longer qualifies, so I'm dropping it rather than renewing on a setup that fails the floor. My results are 0-for-5 in the avoided sectors and each of them is rate-sensitive, or has headline risk (Energy, Technology).",
+  "expires": "2026-11-25"
+ },
+ {
+  "time": "2026-11-11T16:41:49-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-11-12",
+  "decision": "revise",
+  "why": "Today's two VWAP bounces went nowhere (XLP +0.12% on a time exit, IWM -0.06% on a time exit), and META, the only pick, fell 1.91%. The pre-market call's 1.5x relative-volume gate has never been enforced, so the META trigger is only usable if it is checked against bar data. Consumer Staples is the one other sector with positive results, so I'm leaning into it alongside Communication Services.",
+  "summary": "Stand aside unless a watchlist name clears its opening-range high on verified 1.5x+ relative volume with price above VWAP and SPY above its open. Use $50 max per setup, one trade per name, and exit by the 45-minute limit. If the verified volume check fails, skip the trade.",
+  "watchlist": [
+   {
+    "symbol": "META",
+    "setup": "Opening-range breakout continuation in Communication Services, conviction 1 only, after a down day that shows no bounce.",
+    "trigger": "Break above the first 15-minute high on at least 1.5x relative volume computed from actual bars, price above VWAP, SPY above its open. Skip if the open gaps more than about 2.5%, if NVDA/AMD/AVGO/MU sell off in the first hour, or if the breakout fades on falling volume.",
+    "instrument": "stock",
+    "conviction": 1
+   },
+   {
+    "symbol": "AAPL",
+    "setup": "Consumer Staples VWAP pullback bounce after a strong open, the one staples name in the scan with a normal ATR (2.27%).",
+    "trigger": "Pullback to VWAP that holds, with relative volume of at least 1.5x verified from bars, and SPY above its open. Target +0.5%, stop -0.3%, time limit 45 minutes.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-11T16:41:49-05:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Communication Services",
+   "Consumer Staples"
+  ],
+  "avoid": [
+   "Technology",
+   "Consumer Discretionary",
+   "Materials"
+  ],
+  "why": "Communication Services is +$1.53 over 10 trades (50% win rate), though the edge is weakening. Consumer Staples is +$0.97 over 4 trades (75% win rate), a small sample but the only other positive sector. Technology is -$2.17 over 46 trades. Consumer Discretionary is roughly flat, and Materials lost on",
+  "expires": "2026-11-25"
  }
 ]
