@@ -1,57 +1,5 @@
 [
  {
-  "time": "2026-10-28T10:25:01-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "SMH",
-  "instrument": "stock",
-  "qty": 0.1475,
-  "price": 564.622,
-  "cost": 83.28,
-  "stop": 562.76,
-  "thesis": "VWAP pullback bounce on SMH: 0.41x volume, +0.28% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-28T10:29:05-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "BE",
-  "instrument": "stock",
-  "qty": 0.3698,
-  "price": 225.636,
-  "cost": 83.44,
-  "stop": 224.46,
-  "thesis": "VWAP pullback bounce on BE: 2.35x volume, +0.91% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-28T10:29:06-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "SOXL",
-  "instrument": "stock",
-  "qty": 0.8009,
-  "price": 104.058,
-  "cost": 83.34,
-  "stop": 103.65,
-  "thesis": "VWAP pullback bounce on SOXL: 1.64x volume, +0.50% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-28T10:31:08-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "instrument": "stock",
-  "qty": 0.3875,
-  "price": 324.772,
-  "cost": 125.85,
-  "stop": 323.78,
-  "thesis": "VWAP pullback bounce on GOOGL: 1.55x volume, +0.13% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-10-28T10:33:11-04:00",
   "type": "close",
   "agent": "scalper",
@@ -6501,5 +6449,33 @@
   "agent": "scalper",
   "symbol": "MU, SNDK, STX, AMD, NVDA",
   "note": "defensive: MU, SNDK, STX and SOXX are holding above their opening ranges with price above VWAP and 1-minute uptrends, and AMD and NVDA are trending up above VWAP. SPY is flat (0.04%, 0.39% range) with no clean trend, and the account is small, so defensive sizing fits. META is below VWAP and trending down, so i"
+ },
+ {
+  "time": "2026-11-11T11:06:28-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-57%)"
+ },
+ {
+  "time": "2026-11-11T11:07:51-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-97%) (tried 0.04, 0.03, 0.02, 0.01; mark 0.09, natural -0.94)"
+ },
+ {
+  "time": "2026-11-11T11:09:13-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-96%) (tried 0.12, 0.08, 0.05, 0.01; mark 0.17, natural -3.99)"
+ },
+ {
+  "time": "2026-11-11T11:09:33-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MU, SNDK, STX, AMD, NVDA",
+  "note": "defensive: Semis lead the tape: MU, SNDK, STX, AMD and NVDA are above VWAP with 1-minute uptrends, and SOXX and SMH confirm the group. SPY is flat and crash radar is calm, so defensive sizing with the existing targets fits, and I'm dropping META since it's no longer above its opening range."
  }
 ]
