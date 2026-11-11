@@ -1,73 +1,5 @@
 [
  {
-  "time": "2026-10-28T10:14:46-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.1632,
-  "price": 771.054,
-  "cost": 125.84,
-  "stop": 768.74,
-  "thesis": "VWAP pullback bounce on SPY: 0.7x volume, +0.06% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-28T10:16:48-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "WDC",
-  "qty": 0.2181,
-  "entry": 382.348,
-  "exit": 385.186,
-  "pnl": 0.62,
-  "note": "target hit (+0.90%)",
-  "opened": "2026-10-28T09:55:25-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on WDC: 0.56x volume, +0.92% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-28T10:16:48-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "BE",
-  "instrument": "stock",
-  "qty": 0.3727,
-  "price": 223.57,
-  "cost": 83.32,
-  "stop": 222.69,
-  "thesis": "VWAP pullback bounce on BE: 0.71x volume, +0.34% vs VWAP; target +0.8%, stop -0.4%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-28T10:20:58-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "SMH",
-  "qty": 0.1475,
-  "entry": 564.836,
-  "exit": 564.488,
-  "pnl": -0.05,
-  "note": "time limit, 21 min (-0.09%)",
-  "opened": "2026-10-28T09:59:31-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SMH: 0.67x volume, +0.30% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-28T10:20:58-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "BE",
-  "qty": 0.3727,
-  "entry": 223.57,
-  "exit": 223.692,
-  "pnl": 0.05,
-  "note": "gave back a +0.50% gain: out at breakeven",
-  "opened": "2026-10-28T10:16:48-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on BE: 0.71x volume, +0.34% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
   "time": "2026-10-28T10:25:01-04:00",
   "type": "open",
   "agent": "hyper",
@@ -6527,5 +6459,47 @@
   "agent": "scalper",
   "symbol": "NVDA",
   "note": "VWAP pullback bounce skipped: 1.45x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-11T10:36:21-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-52%)"
+ },
+ {
+  "time": "2026-11-11T10:37:23-05:00",
+  "type": "close",
+  "agent": "blackswan",
+  "symbol": "ASTS",
+  "qty": 1,
+  "entry": 1.25,
+  "exit": 0.7,
+  "pnl": -75.0,
+  "note": "near max value (1.89 of 2 wide)",
+  "opened": "2026-10-14T12:06:32-04:00",
+  "confidence": 3,
+  "thesis": "ASTS broke its 46.26 20-day low, sits below its 200-day after a Piper downgrade, and the radar is calm, so a bear put spread with a $150 cap is a targeted breakdown bet."
+ },
+ {
+  "time": "2026-11-11T10:38:46-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-96%) (tried 0.09, 0.06, 0.04, 0.01; mark 0.14, natural -0.9)"
+ },
+ {
+  "time": "2026-11-11T10:40:09-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-93%) (tried 0.26, 0.17, 0.09, 0.01; mark 0.31, natural -3.87)"
+ },
+ {
+  "time": "2026-11-11T10:40:30-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MU, SNDK, STX, AMD, NVDA",
+  "note": "defensive: MU, SNDK, STX and SOXX are holding above their opening ranges with price above VWAP and 1-minute uptrends, and AMD and NVDA are trending up above VWAP. SPY is flat (0.04%, 0.39% range) with no clean trend, and the account is small, so defensive sizing fits. META is below VWAP and trending down, so i"
  }
 ]
