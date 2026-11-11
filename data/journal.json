@@ -1,53 +1,5 @@
 [
  {
-  "time": "2026-10-28T10:36:26-04:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "MANH",
-  "instrument": "stock",
-  "qty": 0.2024,
-  "price": 247.002,
-  "cost": 49.99,
-  "stop": 233.93,
-  "thesis": "MANH is 1.8% above its 55-day breakout at 242.56 on 2.4x volume with roc20 +16.8%, and it isn't extended (15% above its 50-day SMA), so this is a clean trend entry. Fractional sizing (~0.2 shares) keeps the 233.93 stop risk to about $2.6, and technology is a lean-in sector.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-28T10:36:46-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, GOOGL",
-  "note": "stand_down: Four of five entries have hit stops, and most names are chopping in ranges of 0.3-0.7%, too tight for a 0.5% target to clear reliably. I'm standing down on new entries and letting the open SPY and GOOGL scalps exit on their own rules, with SPY, QQQ and GOOGL kept on watch for a clean reclaim later."
- },
- {
-  "time": "2026-10-28T10:38:57-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "BE",
-  "qty": 0.3698,
-  "entry": 225.636,
-  "exit": 224.212,
-  "pnl": -0.53,
-  "note": "stop (-0.52%)",
-  "opened": "2026-10-28T10:29:05-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on BE: 2.35x volume, +0.91% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-28T10:40:59-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "qty": 0.3875,
-  "entry": 324.772,
-  "exit": 323.634,
-  "pnl": -0.44,
-  "note": "stop (-0.36%)",
-  "opened": "2026-10-28T10:31:08-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on GOOGL: 1.55x volume, +0.13% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
   "time": "2026-10-28T10:45:02-04:00",
   "type": "close",
   "agent": "hyper",
@@ -6463,5 +6415,33 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-97%) (tried 0.07, 0.05, 0.03, 0.01; mark 0.12, natural -3.99)"
+ },
+ {
+  "time": "2026-11-11T12:06:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-59%)"
+ },
+ {
+  "time": "2026-11-11T12:06:51-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -0.76)"
+ },
+ {
+  "time": "2026-11-11T12:08:13-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-96%) (tried 0.12, 0.08, 0.05, 0.01; mark 0.17, natural -4.05)"
+ },
+ {
+  "time": "2026-11-11T12:08:31-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "NVDA, AMD, AVGO, SMH, SOXX",
+  "note": "defensive: NVDA, AMD, AVGO and the semi ETFs still show 1-minute uptrends above VWAP, while MU, SNDK and STX have rolled to 1-minute downtrends and are now too extended to chase, so I'm dropping them. Crash radar is calm and SPY is trending up, so defensive sizing with the existing 0.5/0.3 bracket fits."
  }
 ]
