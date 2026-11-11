@@ -1,59 +1,5 @@
 [
  {
-  "time": "2026-10-28T10:45:02-04:00",
-  "type": "close",
-  "agent": "hyper",
-  "symbol": "SMH",
-  "qty": 0.1475,
-  "entry": 564.622,
-  "exit": 563.686,
-  "pnl": -0.14,
-  "note": "time limit, 20 min (-0.14%)",
-  "opened": "2026-10-28T10:25:01-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SMH: 0.41x volume, +0.28% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-28T10:59:18-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "WDC",
-  "instrument": "stock",
-  "qty": 0.2151,
-  "price": 387.276,
-  "cost": 83.3,
-  "stop": 385.61,
-  "thesis": "opening-range breakout on WDC: 1.25x volume, +1.23% vs VWAP; target +1.0%, stop -0.45%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-28T11:01:20-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "qty": 0.1632,
-  "entry": 771.054,
-  "exit": 770.326,
-  "pnl": -0.12,
-  "note": "time limit, 47 min (-0.09%)",
-  "opened": "2026-10-28T10:14:46-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SPY: 0.7x volume, +0.06% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-10-28T11:03:23-04:00",
-  "type": "open",
-  "agent": "hyper",
-  "symbol": "BE",
-  "instrument": "stock",
-  "qty": 0.3728,
-  "price": 223.652,
-  "cost": 83.38,
-  "stop": 222.52,
-  "thesis": "momentum burst on BE: 2.07x volume, +0.01% vs VWAP; target +1.0%, stop -0.45%",
-  "confidence": 3
- },
- {
   "time": "2026-10-28T11:06:14-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6443,5 +6389,33 @@
   "agent": "scalper",
   "symbol": "NVDA, AMD, AVGO, SMH, SOXX",
   "note": "defensive: NVDA, AMD, AVGO and the semi ETFs still show 1-minute uptrends above VWAP, while MU, SNDK and STX have rolled to 1-minute downtrends and are now too extended to chase, so I'm dropping them. Crash radar is calm and SPY is trending up, so defensive sizing with the existing 0.5/0.3 bracket fits."
+ },
+ {
+  "time": "2026-11-11T12:36:12-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-59%)"
+ },
+ {
+  "time": "2026-11-11T12:36:33-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -0.8)"
+ },
+ {
+  "time": "2026-11-11T12:36:54-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.9)"
+ },
+ {
+  "time": "2026-11-11T12:37:12-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "NVDA, AMD, AVGO, SMH, SOXX",
+  "note": "defensive: Semis and QQQ are still in 1-minute uptrends above VWAP with a calm crash radar and SPY trending up, so I'm keeping defensive sizing. I dropped AAPL, which has rolled to a 1-minute downtrend, and left out the extended MU, SNDK and SOXL, where chasing is poor risk-reward."
  }
 ]
