@@ -67,7 +67,7 @@
       "pct_vs_sma200": 63.2
      },
      "sector": "Broad market / other",
-     "last": 7.505,
+     "last": 7.61,
      "high_water": 7.925
     },
     "pos-9b9cea9b90": {
@@ -77,7 +77,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.05,
-     "mark": 0.89,
+     "mark": 0.93,
      "expiry": "2026-12-18",
      "strike": 310.0,
      "delta": -0.07,
@@ -96,7 +96,7 @@
      },
      "sector": "Consumer Discretionary",
      "low_water": 354.23,
-     "exit_half_spread": 0.025
+     "exit_half_spread": 0.03
     }
    },
    "status": "active",
@@ -107,10 +107,6 @@
    "peak": 1340.54,
    "max_dd": 0.4566,
    "notes": [
-    {
-     "date": "2026-11-09",
-     "note": "No candidates and no 2.5x-volume breakout trigger. Holding ABNB (stop 182.51) and the CLSX and DJTU puts at their existing stops, keeping settled cash for a real breakout. The game plan's $100 caps are self-imposed and not binding, so size by stop distance if a trigger fires."
-    },
     {
      "date": "2026-11-09",
      "note": "Trend-follower exception to the team's CVRX pass: the 2.94x volume clears the 2.5x minimum, and the premium budget is capped at $60 because of spread risk. Existing puts and ABNB stay on their stops, with settled cash kept for the next confirmed breakout."
@@ -266,6 +262,10 @@
     {
      "date": "2026-11-12",
      "note": "Passing on BABA put: Broad market / other is on my avoid list, and a 0.5-delta 30-60 DTE put on a ~$95 stock likely costs well over the $483 available budget. Holding TLS and CLSX put; waiting for a confirmed 2.5x-volume Health Care or Real Estate trigger."
+    },
+    {
+     "date": "2026-11-12",
+     "note": "No new entries: the only candidate is a BABA put in Broad market / other, which is on my avoid list. Its premium likely exceeds the $483.54 settled budget. Keep TLS and CLSX on their current stops and wait for a confirmed 2.5x-volume Health Care or Real Estate breakout."
     }
    ],
    "last_exits": {
@@ -1085,7 +1085,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 101.53
+     "last": 101.78
     },
     "pos-38ef0e24a8": {
      "kind": "stock",
@@ -1105,7 +1105,7 @@
       "pct_vs_sma5": -3.7
      },
      "sector": "Consumer Staples",
-     "last": 72.285
+     "last": 72.305
     }
    },
    "status": "active",
@@ -1116,10 +1116,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-09",
-     "note": "Settled cash is $44.19, not the $194 in the game plan, and XLE isn't in today's candidates, so its trigger can't fire. Only TEAM clears 1:1 and it's 29% above its 200-day on the avoid list, so I'm passing and holding XOP, CNQ and PM to their stops and targets."
-    },
     {
      "date": "2026-11-09",
      "note": "No entry: on live stop-to-target, SU (0.86:1), BP (0.45:1) and CVX (0.63:1) fail the 1:1 floor. TEAM (about 1.29:1) is the only pass but is Technology, 29% above its 200-day, and on the game-plan avoid list, so I'm passing. Holding XOP, CNQ and PM to their stops and targets."
@@ -1275,6 +1271,10 @@
     {
      "date": "2026-11-12",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (ABT ~0.35:1, TOST ~0.3:1). Holding HALO and ALC on their existing stops with $757 settled cash in reserve."
+    },
+    {
+     "date": "2026-11-12",
+     "note": "No candidate clears the 1:1 stop-to-target floor at live prices (ABT ~0.35:1, TOST ~0.31:1). Holding HALO and ALC on their existing stops and keeping $757 settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2337,7 +2337,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 761.01
+     "last": 761.195
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2353,7 +2353,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 761.01
+     "last": 761.195
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2369,7 +2369,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 761.01
+     "last": 761.195
     }
    },
    "status": "active",
@@ -2402,7 +2402,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 116.37
+     "last": 115.98
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2419,7 +2419,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 172.1
+     "last": 172.585
     },
     "pos-4c91c52c63": {
      "kind": "stock",
@@ -2436,7 +2436,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 313.1
+     "last": 313.39
     }
    },
    "status": "active",
@@ -2510,7 +2510,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.28,
+     "exit_half_spread": 1.345,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2535,7 +2535,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.07,
+     "mark": 0.04,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2555,7 +2555,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 4.045,
+     "exit_half_spread": 4.085,
      "peak_mark": 1.09
     }
    },
@@ -3087,8 +3087,8 @@
      "target_pct": 0.6,
      "stop_pct": 0.3,
      "max_hold_min": 45,
-     "last": 91.695,
-     "peak_gain": 0.06001745962460614
+     "last": 91.68,
+     "peak_gain": 0.0818419903972023
     }
    },
    "status": "active",
@@ -3153,7 +3153,7 @@
    ],
    "playbook": {
     "date": "2026-11-12",
-    "made_at": "2026-11-12T12:07-05:00",
+    "made_at": "2026-11-12T12:37-05:00",
     "watch": [
      "NVDA",
      "AMD",
@@ -3165,8 +3165,8 @@
      "XLP"
     ],
     "aggression": "defensive",
-    "why": "Three of four slices are used and the 0.6%/0.3% bracket is 2-for-3 today, so I'm keeping it with defensive half-size VWAP bounces on the semis and XLP, which has a live setup. The overnight plan's 0.5% target is less tested than the current bracket, so I'm not adopting it.",
-    "slices": 4,
+    "why": "The 0.6%/0.3% bracket has worked 2-for-3 today and SPY's trend is up, so I'm keeping defensive half-size VWAP bounces on the semis and XLP. I'm raising slices to 5 so one more round trip is possible, since all 4 are used, but I'm not adopting the overnight plan's staples and META setups because they",
+    "slices": 5,
     "target_pct": 0.6,
     "stop_pct": 0.3,
     "max_hold_min": 45
