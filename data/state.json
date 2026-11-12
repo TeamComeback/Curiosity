@@ -9,12 +9,8 @@
   "start_balance": 1000.0
  },
  "entries": {
-  "date": "2026-11-11",
-  "counts": {
-   "monkey": 2,
-   "meanrev": 1,
-   "scalper": 2
-  }
+  "date": "2026-11-12",
+  "counts": {}
  },
  "agents": {
   "trend": {
@@ -28,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.36,
+     "mark": 2.49,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -47,7 +43,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.365
+     "exit_half_spread": 2.49
     },
     "pos-f9820d2b5e": {
      "kind": "stock",
@@ -68,7 +64,7 @@
       "pct_vs_sma200": 63.2
      },
      "sector": "Broad market / other",
-     "last": 7.6,
+     "last": 7.55,
      "high_water": 7.925
     }
    },
@@ -80,10 +76,6 @@
    "peak": 1340.54,
    "max_dd": 0.4418,
    "notes": [
-    {
-     "date": "2026-11-09",
-     "note": "No candidates and no confirmed 2.5x-volume breakout today. Hold ABNB at its 182.51 stop and the VALE, CLSX and DJTU puts at their breakdown stops, and keep settled cash for a real breakout."
-    },
     {
      "date": "2026-11-09",
      "note": "No candidates and no 2.5x-volume breakout today. Holding ABNB (stop 182.51) and the CLSX and DJTU puts at their existing stops, with settled cash kept for a real breakout."
@@ -239,6 +231,10 @@
     {
      "date": "2026-11-11",
      "note": "No candidates and no watchlist trigger confirmed at 15:37. Holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98), keeping $357.68 settled cash for a confirmed 2.5x-volume close through a watchlist trigger."
+    },
+    {
+     "date": "2026-11-12",
+     "note": "No candidates and no live trigger confirmed, so I'm holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98) and keeping $591 settled cash for a confirmed 2.5x-volume close through a VTRS, EW, RPRX or AHR trigger."
     }
    ],
    "last_exits": {
@@ -1058,7 +1054,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 101.47
+     "last": 101.15
     },
     "pos-38ef0e24a8": {
      "kind": "stock",
@@ -1078,7 +1074,7 @@
       "pct_vs_sma5": -3.7
      },
      "sector": "Consumer Staples",
-     "last": 72.31
+     "last": 73.645
     }
    },
    "status": "active",
@@ -1089,10 +1085,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-09",
-     "note": "No entry: XLE isn't in today's candidate list so it can't be opened, and every listed candidate fails the 1:1 floor on stop-to-target (BP 0.46, SU 0.79, CVX 0.61, PM 0.99, TEAM is a Technology-type name the sector focus avoids). Holding XOP, CNQ, DT, ILMN, ZBRA, SWKS and URI to their stops and targe"
-    },
     {
      "date": "2026-11-09",
      "note": "XLE is not in today's candidate list, so the watchlist trigger can't fire; re-check stop-to-target on live prices rather than relying on overnight ratios."
@@ -1248,6 +1240,10 @@
     {
      "date": "2026-11-11",
      "note": "No new setups: the only live candidates (HALO, ALC) are already held, so I'm holding both on their existing stops and keeping $607 settled cash in reserve."
+    },
+    {
+     "date": "2026-11-12",
+     "note": "No fresh washout clears the 1:1 stop-to-target floor at live prices (TOST ~0.31:1, ICLR ~0.53:1, HALO already held). Hold HALO and ALC on their stops and keep settled cash in reserve."
     }
    ],
    "last_exits": {
@@ -1695,10 +1691,6 @@
    "notes": [
     {
      "date": "2026-11-09",
-     "note": "Passed the TLT 80.5/79.5 bull put (0.27 credit): it stacks onto the open TLT 80/79 spread on the same expiry, which doubles TLT exposure. Holding IWM and TLT to their exits; waiting for a non-duplicate signal or the EEM trigger."
-    },
-    {
-     "date": "2026-11-09",
      "note": "Passed the only candidate (TLT 80.5/79.5 bull put): it duplicates the open TLT 80/79 spread on the same expiry. Keep TLT to its exit and wait for a non-duplicate setup or the EEM trigger."
     },
     {
@@ -1852,6 +1844,10 @@
     {
      "date": "2026-11-11",
      "note": "Passed the only candidate (TLT 79.5/78.5 bull put): rate proxy on the avoid list after 0-for-5 and two TLT stop-outs, with the 10-year near 5%. Staying in $889 settled cash for an EEM bear call or a non-rate setup with IV/RV above 0.95."
+    },
+    {
+     "date": "2026-11-12",
+     "note": "Passing the only candidate, TLT 79/78 bull put (Real Estate, rate proxy). It is on my avoid list after 0-for-6 across sectors and two TLT stop-outs, and the 10-year is near 5% with Fed hike talk. Keep $889 settled and wait for an EEM bear call with IV/RV at or above 0.95, or another non-rate setup."
     }
    ],
    "last_exits": {
@@ -1924,7 +1920,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 77.0,
+   "min_trade_seen": 74.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2310,7 +2306,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 760.39
+     "last": 755.67
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2326,7 +2322,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 760.39
+     "last": 755.67
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2342,7 +2338,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 760.39
+     "last": 755.67
     }
    },
    "status": "active",
@@ -2357,7 +2353,7 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 105.39,
+   "cash": 492.23,
    "reserved": 0.0,
    "positions": {
     "pos-984e54fed0": {
@@ -2375,24 +2371,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 116.865
-    },
-    "pos-9d67e5d154": {
-     "kind": "stock",
-     "symbol": "ORCL",
-     "qty": 3.0918,
-     "entry": 119.14,
-     "cost": 368.36,
-     "hold_days": 2,
-     "direction": "long",
-     "stop": 102.19,
-     "atr": 8.354,
-     "opened": "2026-11-10T09:39:45-05:00",
-     "thesis": "Dart landed on ORCL",
-     "confidence": 0,
-     "signals": {},
-     "sector": "Technology",
-     "last": 128.93
+     "last": 112.65
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2409,7 +2388,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 173.055
+     "last": 169.6
     },
     "pos-4c91c52c63": {
      "kind": "stock",
@@ -2426,14 +2405,14 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 310.56
+     "last": 310.585
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 5,
-   "wins": 2,
+   "closed": 6,
+   "wins": 3,
    "peak": 1000.67,
    "max_dd": 0.1058,
    "notes": [],
@@ -2442,10 +2421,17 @@
     "QQQ": "2026-10-30",
     "CSCO": "2026-11-04",
     "ABBV": "2026-11-05",
-    "WDC": "2026-11-05"
+    "WDC": "2026-11-05",
+    "ORCL": "2026-11-12"
    },
    "joined": "2026-10-13T19:21:59-04:00",
-   "unsettled": []
+   "unsettled": [
+    {
+     "amount": 386.84,
+     "settles": "2026-11-13",
+     "note": "sold ORCL"
+    }
+   ]
   },
   "blackswan": {
    "cash": -411.26,
@@ -2493,7 +2479,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 0.78,
+     "exit_half_spread": 1.345,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2518,7 +2504,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0,
+     "mark": 0.15,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2538,7 +2524,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 2.995,
+     "exit_half_spread": 4.08,
      "peak_mark": 1.09
     }
    },
@@ -2823,13 +2809,7 @@
     "set_at": "2026-10-28T16:41-04:00",
     "expires": "2026-11-11"
    },
-   "unsettled": [
-    {
-     "amount": 60.0,
-     "settles": "2026-11-12",
-     "note": "sold ASTS"
-    }
-   ],
+   "unsettled": [],
    "scorecard": [
     {
      "day": "2026-10-15",
@@ -3102,18 +3082,23 @@
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [],
    "playbook": {
-    "date": "2026-11-11",
-    "made_at": "2026-11-11T15:37-05:00",
+    "date": "2026-11-12",
+    "made_at": "2026-11-12T09:38-05:00",
     "watch": [
-     "SPY",
-     "IWM"
+     "NVDA",
+     "AMD",
+     "AVGO",
+     "MU",
+     "TSM",
+     "META",
+     "AAPL"
     ],
-    "aggression": "stand_down",
-    "why": "It is 3:37 PM with only about 13 minutes before the 3:50 flat rule, not enough time for a clean scalp. Most leaders are in 1-minute downtrends or below VWAP, and no open scalps remain, so I'm standing down for the rest of the session.",
-    "slices": 1,
-    "target_pct": 0.4,
-    "stop_pct": 0.25,
-    "max_hold_min": 35
+    "aggression": "normal",
+    "why": "Crash radar is calm and SPY is in an uptrend, so I'm trading normally. Semis lead on real dollar volume (NVDA, AMD, AVGO, MU, TSM), with META and AAPL added from the overnight plan for diversification. Tight 0.6%/0.3% bracket with a 45-minute limit fits the choppy intraday tape.",
+    "slices": 4,
+    "target_pct": 0.6,
+    "stop_pct": 0.3,
+    "max_hold_min": 45
    },
    "scalp_day": {
     "date": "2026-11-11",
