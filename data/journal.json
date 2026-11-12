@@ -1,46 +1,5 @@
 [
  {
-  "time": "2026-10-29T10:19:23-04:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "META",
-  "instrument": "stock",
-  "qty": 0.4026,
-  "price": 623.93,
-  "cost": 251.19,
-  "stop": 622.01,
-  "thesis": "VWAP pullback bounce on META: 1.25x volume, +0.42% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-10-29T10:36:36-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-51%)"
- },
- {
-  "time": "2026-10-29T10:37:05-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AAPL, META, QQQ, IWM, SPY",
-  "note": "stand_down: Cash is effectively fully deployed in four open VWAP bounces (settled cash $0.11), so no new entries are possible until settlement. SPY's 0.37% range is too tight for clean scalps, and the 1:45-2:30 headline window is ahead, so I'm standing down on new trades and keeping the existing parameters so t"
- },
- {
-  "time": "2026-10-29T10:43:14-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "AAPL",
-  "qty": 0.7169,
-  "entry": 350.368,
-  "exit": 349.346,
-  "pnl": -0.73,
-  "note": "stop (-0.30%)",
-  "opened": "2026-10-29T10:09:06-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on AAPL: 1.21x volume, +0.25% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
   "time": "2026-10-29T10:53:26-04:00",
   "type": "close",
   "agent": "scalper",
@@ -6405,5 +6364,33 @@
   "agent": "scalper",
   "symbol": "TSM",
   "note": "VWAP pullback bounce skipped: 0.52x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-12T10:07:00-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-57%)"
+ },
+ {
+  "time": "2026-11-12T10:07:22-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.01)"
+ },
+ {
+  "time": "2026-11-12T10:08:45-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.04, 0.03, 0.02, 0.01; mark 0.09, natural -3.94)"
+ },
+ {
+  "time": "2026-11-12T10:09:04-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "NVDA, AMD, AVGO, MU, TSM",
+  "note": "defensive: Crash radar is calm and SPY is up on the daily trend, but most names are below VWAP on a down 1-minute tape, so I'm cutting to defensive with VWAP bounces only at half size. NVDA is the one clear leader (above VWAP, up 5.9%, heavy dollar volume), so it stays the main focus with the tight 0.6%/0.3% b"
  }
 ]
