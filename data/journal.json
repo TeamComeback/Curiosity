@@ -1,32 +1,5 @@
 [
  {
-  "time": "2026-10-29T20:11:17-04:00",
-  "type": "focus",
-  "agent": "scalper",
-  "note": "Leaning into Consumer Discretionary; avoiding Technology, Communication Services, Real Estate. Consumer Discretionary is 6 trades at +$1.78 (50% win rate, small sample), and the scan has few clean names there, so this is a weak lean. Technology is the largest sample at 38 trades but averages +$0.01 and has ATR too high for these stops. Communication Services is negative and carries headline g"
- },
- {
-  "time": "2026-10-29T20:11:17-04:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "Evening check-in: revise. Today's four VWAP pullback entries were taken at 0.57x to 1.25x relative volume, below the 1.5x minimum, and the code does not enforce that gate. The net result was -$0.25, and the notes already flag the minimum as unenforced. Consumer Discretionary and Staples look better on paper, but both samples are tiny and the scan has few clean names in those sectors, so I'm narrowing the plan to one hand-c",
-  "symbol": "SPY"
- },
- {
-  "time": "2026-10-30T07:40:40-04:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Pre-market call: revise. Cash is now settled at $52.11, so one small breakout entry is affordable. The old plan's triggers referenced $4.19 and stale MANH/ICLR levels, so I'm replacing them with current scan levels.",
-  "symbol": "TRGP, TXN, ADI, XOM"
- },
- {
-  "time": "2026-10-30T07:40:55-04:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Pre-market call: keep. The fresh scan confirms the plan: the only names clearing the 1:1 target-to-stop floor are the three stated triggers (TEAM, CTSH, WDAY), which still sit at their trigger prices. New names like IOVA (1.36:1 on paper) look like news-driven collapses rather than clean washouts, so I'm avoiding them.",
-  "symbol": "TEAM, CTSH, WDAY"
- },
- {
   "time": "2026-10-30T07:41:03-04:00",
   "type": "plan",
   "agent": "volsell",
@@ -6436,5 +6409,33 @@
   "agent": "scalper",
   "symbol": "NVDA, MU, AVGO, TSM, AMD",
   "note": "defensive: Only one slice is left, so I'm keeping defensive sizing for VWAP bounces only on the liquid leaders with 1-minute trends that are holding up, plus XLP. Most names are printing down 1-minute trends, and NVDA is too extended above VWAP (2.2%) to chase, so I'm leaving it on the watch list for pullbacks"
+ },
+ {
+  "time": "2026-11-12T13:36:40-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "trailing stop on underlying"
+ },
+ {
+  "time": "2026-11-12T13:37:01-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.05)"
+ },
+ {
+  "time": "2026-11-12T13:37:23-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-99%) (tried 0.01; mark 0.04, natural -4.03)"
+ },
+ {
+  "time": "2026-11-12T13:37:42-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AMD, AVGO, MU, TSM, SMH",
+  "note": "defensive: Four of five slices are used and the day is net positive (about +$1.06), so I'm keeping defensive sizing and holding the last slice for a clean VWAP bounce. I dropped NVDA because it's 2.65% above VWAP, past the extension limit, and I left out the AAPL/META overnight ideas because they were built fo"
  }
 ]
