@@ -1,31 +1,5 @@
 [
  {
-  "time": "2026-10-29T15:08:23-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, META, AAPL, MSFT",
-  "note": "defensive: Today's VWAP bounces went 1 win, 2 stops, 1 time-out, and several setups had weak relative volume, so I'm cutting to half size and requiring real volume. A slightly wider stop and target keep the 1.7:1 reward-to-risk ratio while giving the trades room to avoid slippage-driven stops."
- },
- {
-  "time": "2026-10-29T15:36:28-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-10-29T15:36:49-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ",
-  "note": "stand_down: It's 3:36 PM with the new-entry cutoff at 1:45 PM already passed, and only $0.11 is settled cash, so no new round trip can finish before the 3:50 flat. Stand down and keep the watchlist small for the next session's setup check."
- },
- {
-  "time": "2026-10-29T16:40:31-04:00",
-  "type": "recap",
-  "note": "Quiet, calm tape (radar 12) and a poor day for closed trades: 1 win, 4 losses, -$2.32 realized. Trend Co. led the race on open-position gains (+$10.97 on the day) while SPY slipped 0.33%."
- },
- {
   "time": "2026-10-29T16:40:31-04:00",
   "type": "scorecard",
   "agent": "trend",
@@ -6416,5 +6390,33 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-97%) (tried 0.09, 0.06, 0.04, 0.01; mark 0.14, natural -3.98)"
+ },
+ {
+  "time": "2026-11-12T12:06:28-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "trailing stop on underlying"
+ },
+ {
+  "time": "2026-11-12T12:06:49-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.98)"
+ },
+ {
+  "time": "2026-11-12T12:07:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.02, 0.01; mark 0.07, natural -3.97)"
+ },
+ {
+  "time": "2026-11-12T12:07:49-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "NVDA, AMD, MU, AVGO, TSM",
+  "note": "defensive: Three of four slices are used and the 0.6%/0.3% bracket is 2-for-3 today, so I'm keeping it with defensive half-size VWAP bounces on the semis and XLP, which has a live setup. The overnight plan's 0.5% target is less tested than the current bracket, so I'm not adopting it."
  }
 ]
