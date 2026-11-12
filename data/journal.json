@@ -1,40 +1,5 @@
 [
  {
-  "time": "2026-10-29T11:06:24-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-88%)"
- },
- {
-  "time": "2026-10-29T11:36:18-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-96%)"
- },
- {
-  "time": "2026-10-29T11:38:00-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "SPY",
-  "note": "credit not filled at 0.32, 0.30, 0.28, 0.26 (mid 0.32, natural 0.26, floor 0.25)"
- },
- {
-  "time": "2026-10-29T11:38:09-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, META, AMZN, AAPL",
-  "note": "stand_down: Settled cash is $0.11 with $1,004.42 still settling until tomorrow, so no new entries are possible today. Standing down through the 1:45-2:30 PM headline window, and keeping the liquid, trending names on watch for tomorrow's cash."
- },
- {
-  "time": "2026-10-29T12:06:19-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-41%)"
- },
- {
   "time": "2026-10-29T12:06:49-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6390,5 +6355,46 @@
   "opened": "2026-11-12T10:15:14-05:00",
   "confidence": 3,
   "thesis": "VWAP pullback bounce on AVGO: 2.43x volume, +0.65% vs VWAP; target +0.6%, stop -0.3%"
+ },
+ {
+  "time": "2026-11-12T10:36:21-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-57%)"
+ },
+ {
+  "time": "2026-11-12T10:36:42-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.1)"
+ },
+ {
+  "time": "2026-11-12T10:38:05-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.06, 0.04, 0.03, 0.01; mark 0.11, natural -4.06)"
+ },
+ {
+  "time": "2026-11-12T10:38:16-05:00",
+  "type": "open",
+  "agent": "trend",
+  "symbol": "GLD261218P00310000",
+  "instrument": "put",
+  "qty": 1,
+  "price": 1.05,
+  "cost": 107.5,
+  "stop": 367.07,
+  "thesis": "GLD closed below its 55-day low at 354.69 on 3.5x relative volume and sits 13.6% below its 200-day SMA, so the breakdown is confirmed; the 367.07 underlying stop caps risk, and a put limits the loss to the premium paid.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-12T10:38:31-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "NVDA, AMD, AVGO, MU, TSM",
+  "note": "defensive: NVDA is the only clear leader (up about 9% on the day and 3.2% above VWAP), so it stays the focus. Most other names are below VWAP on a choppy 1-minute tape, and AVGO already stopped out, so I'm keeping the half-size VWAP-bounce approach with the tight bracket and four slices."
  }
 ]
