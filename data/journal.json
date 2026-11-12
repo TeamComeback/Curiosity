@@ -1,40 +1,5 @@
 [
  {
-  "time": "2026-10-29T07:41:14-04:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "Pre-market call: revise. The old plan's 1.5x volume gate is not enforced by code, and every low-volume entry lost, so the gate has to be checked by hand before each entry. The scorecard is also weak (avg pick move -0.1%), so I'm keeping exposure to one small SPY setup and making the stand-aside rule explicit.",
-  "symbol": "SPY"
- },
- {
-  "time": "2026-10-29T09:36:55-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-65%)"
- },
- {
-  "time": "2026-10-29T09:37:03-04:00",
-  "type": "close",
-  "agent": "trend",
-  "symbol": "MANH",
-  "qty": 0.2024,
-  "entry": 247.002,
-  "exit": 236.764,
-  "pnl": -2.07,
-  "note": "agent: Failed breakout: MANH closed at 239.93, below its 242.56 breakout level, and now trades at 234.74, under the 247 entry. ",
-  "opened": "2026-10-28T10:36:26-04:00",
-  "confidence": 3,
-  "thesis": "MANH is 1.8% above its 55-day breakout at 242.56 on 2.4x volume with roc20 +16.8%, and it isn't extended (15% above its 50-day SMA), so this is a clean trend entry. Fractional sizing (~0.2 shares) keeps the 233.93 stop risk to about $2.6, and technology is a lean-in sector."
- },
- {
-  "time": "2026-10-29T09:37:34-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "SPY",
-  "note": "credit not filled at 0.25 (mid 0.25, natural 0.20, floor 0.25)"
- },
- {
   "time": "2026-10-29T09:37:35-04:00",
   "type": "open",
   "agent": "monkey",
@@ -6428,6 +6393,34 @@
   "type": "plan",
   "agent": "scalper",
   "note": "Evening check-in: revise. Today's two VWAP bounces netted about -$0.04 and both logged volume near or below the 1.5x minimum, which confirms the relative-volume filter is still not being enforced. Technology headlines (NVIDIA CEO probe, SpaceX, Anthropic IPO) add event risk, so I'm narrowing to staples and the one Communication Services name with a fresh gap check.",
+  "symbol": "AAPL, XLP, META"
+ },
+ {
+  "time": "2026-11-12T07:40:43-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. Settled cash is now $591.04, not the $357.68 in the old plan, and the fresh scan shows a Health Care breakout cluster (VTRS, EW, RPRX). The scan has no relative-volume data, so each name still needs a 2.5x-volume close before I buy; WELL is dropped because one share exceeds its budget.",
+  "symbol": "VTRS, EW, RPRX, AHR"
+ },
+ {
+  "time": "2026-11-12T07:40:59-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: revise. At live prices no fresh washout clears the 1:1 stop-to-target floor (OTIS ~0.42, MNST ~0.3, KHC ~0.3, RKT ~0.35, ICLR ~0.32, TOST ~0.27). ALC has slipped to about 0.65:1 against its 5-day average, so I'm dropping its 74.52 target to the 74.66 average and marking it as no-add. HALO is still above its stop with about 1.0:1 to the average and about 2.2:1 to 112.66, so it holds.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-12T07:41:06-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: keep. Nothing in today's scan clears the 0.95 IV/RV floor except TLT (1.17), which is a rate proxy on my avoid list after two stop-outs with the 10-year near 5%. EEM has fallen to 0.68 from the 0.89 in my last plan, and the Hormuz and Iran headlines keep direction unclear.",
+  "symbol": "EEM"
+ },
+ {
+  "time": "2026-11-12T07:41:16-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: revise. The fresh scan confirms the stand-aside stance: Technology is still the losing sector at -$2.17 over 46 trades, and today's 7-13% moves in semis and the NVIDIA downgrades and CEO headlines are event-driven chase risk. I'm narrowing the watchlist to Consumer Staples and Communication Services only, since those are the only sectors with positive results, and keeping size small because the relative-v",
   "symbol": "AAPL, XLP, META"
  }
 ]
