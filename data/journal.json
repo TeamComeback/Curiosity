@@ -1,25 +1,5 @@
 [
  {
-  "time": "2026-10-30T07:41:03-04:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "Pre-market call: revise. The fresh scan shows SPY IV/RV at 1.09, below my 1.10 minimum, so the 1.54 ratio in the overnight plan is stale and the setup no longer passes my own gate. My scorecard is also weak (31% hit rate, 0 of 13 picks acted on), so I should not force a trade.",
-  "symbol": "SPY"
- },
- {
-  "time": "2026-10-30T07:41:15-04:00",
-  "type": "focus",
-  "agent": "scalper",
-  "note": "Leaning into no sector; avoiding Technology, Communication Services. Technology is the largest sample (38 trades) and averages +$0.01, with the scan showing an ongoing chip selloff. Communication Services is 4 trades at +$0.20 average but carries live headline risk. Consumer Discretionary's +$0.30 average over 6 trades is too small to lean on, and today's clean names"
- },
- {
-  "time": "2026-10-30T07:41:15-04:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "Pre-market call: revise. The old plan's 0.3% stop sits inside observed slippage (fills at -0.34% to -0.36%) and inside Technology's 1.6% to 6.6% ATR, and its 1.5x volume gate is not enforced by code. Today's scan is a chip selloff (MU -4.9%, INTC -3.6%, SNDK -5.2%) with GOOGL -12.9% on headlines, so the only clean structure is SPY, where ATR is 0.9%.",
-  "symbol": "SPY"
- },
- {
   "time": "2026-10-30T09:37:12-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6437,5 +6417,26 @@
   "agent": "scalper",
   "symbol": "AMD, AVGO, MU, TSM, SMH",
   "note": "defensive: Four of five slices are used and the day is net positive (about +$1.06), so I'm keeping defensive sizing and holding the last slice for a clean VWAP bounce. I dropped NVDA because it's 2.65% above VWAP, past the extension limit, and I left out the AAPL/META overnight ideas because they were built fo"
+ },
+ {
+  "time": "2026-11-12T14:06:18-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "trailing stop on underlying"
+ },
+ {
+  "time": "2026-11-12T14:06:40-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.02)"
+ },
+ {
+  "time": "2026-11-12T14:08:05-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.07, 0.05, 0.03, 0.01; mark 0.12, natural -3.97)"
  }
 ]
