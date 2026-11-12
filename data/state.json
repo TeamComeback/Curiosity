@@ -67,7 +67,7 @@
       "pct_vs_sma200": 63.2
      },
      "sector": "Broad market / other",
-     "last": 7.67,
+     "last": 7.705,
      "high_water": 7.925
     },
     "pos-9b9cea9b90": {
@@ -77,7 +77,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.05,
-     "mark": 0.88,
+     "mark": 0.89,
      "expiry": "2026-12-18",
      "strike": 310.0,
      "delta": -0.07,
@@ -96,7 +96,7 @@
      },
      "sector": "Consumer Discretionary",
      "low_water": 354.23,
-     "exit_half_spread": 0.035
+     "exit_half_spread": 0.015
     }
    },
    "status": "active",
@@ -107,10 +107,6 @@
    "peak": 1340.54,
    "max_dd": 0.458,
    "notes": [
-    {
-     "date": "2026-11-09",
-     "note": "Two budget blocks on the same CVRX put: when a confirmed breakout has no fundable contract, fund it at the minimum that works and size by premium rather than passing on a valid setup."
-    },
     {
      "date": "2026-11-10",
      "note": "No candidates and no confirmed 2.5x-volume breakout today. Holding ABNB (stop 182.51) and the CLSX (underlying stop 2.98) and DJTU (2.29) puts on their automatic stops, keeping settled cash for a real breakout."
@@ -266,6 +262,10 @@
     {
      "date": "2026-11-12",
      "note": "No trade: the only candidate (BABA put) is in Broad market / other, which is on my avoid list, and a 0.5-delta 30-60 DTE put on a ~$95 stock likely exceeds the budget. Holding TLS (stop 7.36), CLSX put (stop 2.98), and GLD put (stop 367.07) on enforced stops; waiting for a 2.5x-volume breakout in He"
+    },
+    {
+     "date": "2026-11-12",
+     "note": "Pass on BABA put: it is a sector-avoid name with a -56 P&L record, and a ~0.5-delta 30-60 DTE put on a ~$94 stock likely costs more than the $483.54 settled cash, so sizing it all-in would break the risk rule. Hold TLS (stop 7.36, tighter than the 6.53 plan level), the CLSX put (stop 2.98, underlyin"
     }
    ],
    "last_exits": {
@@ -1085,7 +1085,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 101.42
+     "last": 101.34
     },
     "pos-38ef0e24a8": {
      "kind": "stock",
@@ -1105,7 +1105,7 @@
       "pct_vs_sma5": -3.7
      },
      "sector": "Consumer Staples",
-     "last": 71.865
+     "last": 71.89
     }
    },
    "status": "active",
@@ -1116,10 +1116,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-09",
-     "note": "No entry at 15:38: SU (0.88:1), BP (0.47:1) and CVX (0.66:1) fail the 1:1 floor on live stop and target, TEAM is Technology on the avoid list and about 29% above its 200-day, and XLE is not a candidate. Holding XOP, CNQ, PM and the rest to their stops and targets."
-    },
     {
      "date": "2026-11-10",
      "note": "No entry at 09:39: PAYC meets the RSI and price trigger but stop-to-target is about 0.97:1, under my 1:1 floor. TEAM (0.93:1, Technology, avoid list), the energy names (0.6 to 0.9:1) and SHEL also fail. Holding PM to its 184.94 stop and 202.28 target."
@@ -1275,6 +1271,10 @@
     {
      "date": "2026-11-12",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (ABT ~0.47, TOST ~0.34, VEEV ~0.21). Hold HALO and ALC on their existing stops and keep $757 settled cash for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-12",
+     "note": "No candidate clears the 1:1 floor at live prices (ABT about 0.48:1, TOST about 0.25:1). Holding HALO and ALC on their existing stops and keeping $757 settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2337,7 +2337,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 758.71
+     "last": 758.055
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2353,7 +2353,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 758.71
+     "last": 758.055
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2369,7 +2369,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 758.71
+     "last": 758.055
     }
    },
    "status": "active",
@@ -2402,7 +2402,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 115.43
+     "last": 115.35
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2419,7 +2419,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 172.035
+     "last": 171.9
     },
     "pos-4c91c52c63": {
      "kind": "stock",
@@ -2436,7 +2436,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 311.295
+     "last": 311.47
     }
    },
    "status": "active",
@@ -2510,7 +2510,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.32,
+     "exit_half_spread": 1.33,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2535,7 +2535,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.12,
+     "mark": 0.17,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2555,7 +2555,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 4.095,
+     "exit_half_spread": 4.21,
      "peak_mark": 1.09
     }
    },

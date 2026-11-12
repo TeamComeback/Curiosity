@@ -1,38 +1,5 @@
 [
  {
-  "time": "2026-10-30T09:37:19-04:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "REGN",
-  "instrument": "stock",
-  "qty": 0.0542,
-  "price": 924.44,
-  "cost": 50.1,
-  "stop": 884.48,
-  "thesis": "REGN cleared its 55-day high at 858.17 on 3.1x relative volume with roc20 +11.3%, and it sits 25% above its 200-day SMA; the 884.48 stop limits risk to about 4% of the position.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-30T09:37:27-04:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "HPQ",
-  "instrument": "stock",
-  "qty": 6.9013,
-  "price": 29.03,
-  "cost": 200.34,
-  "stop": 25.99,
-  "thesis": "HPQ RSI(2) 2.0 washout 18.3% above its 200-day in a calm regime; target 32.19 vs stop 25.99 is about 1.07:1, the only live candidate clearing my 1:1 floor, so I'm taking a small $200 starter despite the game plan's stale avoid.",
-  "confidence": 2
- },
- {
-  "time": "2026-10-30T09:37:43-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AMZN, AMD, MU, TSM, GEV",
-  "note": "normal: Calm regime with SPY trending up, and these liquid names are above their opening ranges and VWAP with up 1-minute trends, so breakouts and VWAP pullbacks have a clean bias. I'm skipping the weak, choppy names (INTC, MSFT, NVDA) and the thin ones (BE, SOXL), and using a 2:1 target-to-stop ratio with "
- },
- {
   "time": "2026-10-30T09:52:00-04:00",
   "type": "open",
   "agent": "scalper",
@@ -6438,5 +6405,26 @@
   "agent": "scalper",
   "symbol": "SMH",
   "note": "VWAP pullback bounce skipped: 0.43x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-12T14:36:28-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-62%)"
+ },
+ {
+  "time": "2026-11-12T14:36:49-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.04)"
+ },
+ {
+  "time": "2026-11-12T14:38:15-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-96%) (tried 0.12, 0.08, 0.05, 0.01; mark 0.17, natural -4.04)"
  }
 ]
