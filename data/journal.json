@@ -1,101 +1,5 @@
 [
  {
-  "time": "2026-10-30T10:06:59-04:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "TWLO",
-  "instrument": "stock",
-  "qty": 0.7524,
-  "price": 199.378,
-  "cost": 150.01,
-  "stop": 162.55,
-  "thesis": "TWLO RSI(2) 1.0 washout 5.8% above its 200-day in a calm regime; live target 242.85 vs stop 162.55 is about 1.18:1, clearing my 1:1 floor where the stale plan's 0.45 no longer applies, so I'm taking a small starter given the 17.9% five-day drop.",
-  "confidence": 2
- },
- {
-  "time": "2026-10-30T10:11:21-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "TSM",
-  "qty": 0.6023,
-  "entry": 416.974,
-  "exit": 414.95,
-  "pnl": -1.22,
-  "note": "stop (-0.51%)",
-  "opened": "2026-10-30T09:58:08-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on TSM: 0.51x volume, +0.20% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-30T10:13:25-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "SPCX",
-  "qty": 1.8178,
-  "entry": 138.19,
-  "exit": 137.32,
-  "pnl": -1.58,
-  "note": "stop (-0.59%)",
-  "opened": "2026-10-30T09:54:04-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SPCX: 0.8x volume, +0.47% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-30T10:13:25-04:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "AMD",
-  "qty": 0.4867,
-  "entry": 516.088,
-  "exit": 514.228,
-  "pnl": -0.91,
-  "note": "stop (-0.41%)",
-  "opened": "2026-10-30T10:00:14-04:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on AMD: 0.93x volume, +0.55% vs VWAP; target +0.8%, stop -0.4%"
- },
- {
-  "time": "2026-10-30T10:36:49-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-87%)"
- },
- {
-  "time": "2026-10-30T10:37:15-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, MU",
-  "note": "stand_down: Three VWAP bounces on sub-1x volume all hit stops, and settled cash is about zero with all four slices used, so new entries aren't possible anyway. Standing down avoids low-conviction bounces until volume confirms a trend."
- },
- {
-  "time": "2026-10-30T11:06:56-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-86%)"
- },
- {
-  "time": "2026-10-30T11:07:35-04:00",
-  "type": "open",
-  "agent": "volsell",
-  "symbol": "TLT",
-  "instrument": "spread",
-  "qty": 1,
-  "price": 0.21,
-  "cost": -15.5,
-  "stop": 0,
-  "thesis": "TLT IV 16.1% vs realized 10.7% (1.50x) with the SPY trend up and crash radar calm at 19; a 79.5/78.5 bull put collects 0.23 credit against $77 max loss over 35 DTE.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-30T11:07:47-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, AMZN",
-  "note": "stand_down: All four round trips and the slice budget are used, and settled cash is about zero, so no new entries are possible today. The three VWAP bounces on sub-1x volume all stopped out, so I'm keeping entries off and watching SPY, QQQ, and AMZN (above its opening range on volume) for a cleaner setup tomorr"
- },
- {
   "time": "2026-10-30T11:36:39-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6388,5 +6292,62 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, IWM",
   "note": "stand_down: It's 3:38 PM with the code flattening everything by 3:50, so a new scalp would have about 12 minutes and little room to reach target. Staying flat protects the day's small gain (equity $1,001.84), and the overnight ideas are for tomorrow, not this session."
+ },
+ {
+  "time": "2026-11-12T16:40:55-05:00",
+  "type": "recap",
+  "note": "A quiet, mostly red day with the radar at 'calm' (26). Rapid Fire was the only racing firm to finish up, and Trend Co. took the biggest hit, down 3.08%. The five closed trades netted +$19.54, with 3 wins and 2 losses."
+ },
+ {
+  "time": "2026-11-12T16:40:55-05:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 1 of 4 picks moved the planned way, avg -1.03%"
+ },
+ {
+  "time": "2026-11-12T16:41:24-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: revise. The Health Care and Real Estate watchlist names failed on volume and moved negative today, and the scan levels have shifted, so the old triggers are stale.",
+  "symbol": "EW, BDX, JNJ, AHR"
+ },
+ {
+  "time": "2026-11-12T16:41:24-05:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 0 of 0 picks moved the planned way"
+ },
+ {
+  "time": "2026-11-12T16:41:33-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: keep. Nothing changed enough to alter the plan. The scan's washouts (ABT, OTIS, TOST, NEM, ALC) still fail the 1:1 stop-to-target floor at live prices, and HALO and ALC are still inside their stops.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-12T16:41:33-05:00",
+  "type": "scorecard",
+  "agent": "volsell",
+  "note": "Plan graded: 1 of 1 picks moved the planned way, avg +1.47%"
+ },
+ {
+  "time": "2026-11-12T16:41:40-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "After-close review: keep. The EEM bear call setup is still one notch short of the 0.95 IV/RV floor (scan shows 0.94), and the Houthi attack on Aramco adds Middle East escalation risk, so the plan still holds and no other name clears the bar.",
+  "symbol": "EEM"
+ },
+ {
+  "time": "2026-11-12T16:41:40-05:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 0 of 3 picks moved the planned way, avg -0.52%"
+ },
+ {
+  "time": "2026-11-12T16:41:53-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's four round trips made +$1.06, but the scorecard still shows a 44% hit rate and negative average pick moves, and the rel-volume filter has not been verified from bars. I'm narrowing the plan to the three Staples/Comm Services names with explicit verification gates, and leaving Technology alone while the CEO-removal headlines and 4-11% ATRs remain live.",
+  "symbol": "AAPL, XLP, META"
  }
 ]

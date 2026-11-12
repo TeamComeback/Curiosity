@@ -19543,5 +19543,108 @@
   ],
   "aggression": "stand_down",
   "why": "It's 3:38 PM with the code flattening everything by 3:50, so a new scalp would have about 12 minutes and little room to reach target. Staying flat protects the day's small gain (equity $1,001.84), and the overnight ideas are for tomorrow, not this session."
+ },
+ {
+  "time": "2026-11-12T16:41:24-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-11-13",
+  "decision": "revise",
+  "why": "The Health Care and Real Estate watchlist names failed on volume and moved negative today, and the scan levels have shifted, so the old triggers are stale.",
+  "summary": "Hold TLS, the CLSX put and the GLD put on their stops. Buy only Health Care or Real Estate names that close through today's scan levels on at least 2.5x relative volume, sized to about $15 of 2-ATR risk.",
+  "watchlist": [
+   {
+    "symbol": "EW",
+    "setup": "Health Care near breakout, ATR 2.76",
+    "trigger": "Close above 106.04 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "BDX",
+    "setup": "Health Care near breakout, ATR 4.0",
+    "trigger": "Close above 216.74 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "JNJ",
+    "setup": "Health Care broke out today, ATR 6.83",
+    "trigger": "Next close holds above 282.84 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "AHR",
+    "setup": "Real Estate near breakout, ATR 1.37",
+    "trigger": "Close above 59.53 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-12T16:41:33-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-11-13",
+  "decision": "keep",
+  "why": "Nothing changed enough to alter the plan. The scan's washouts (ABT, OTIS, TOST, NEM, ALC) still fail the 1:1 stop-to-target floor at live prices, and HALO and ALC are still inside their stops.",
+  "summary": "No new entries. Hold HALO on its 96.66 stop and ALC on its 69.04 stop, taking profit into the 5-day averages. Keep the roughly $757 settled cash in reserve until a washout clears 1:1 at live prices.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-12T16:41:40-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-11-13",
+  "decision": "keep",
+  "why": "The EEM bear call setup is still one notch short of the 0.95 IV/RV floor (scan shows 0.94), and the Houthi attack on Aramco adds Middle East escalation risk, so the plan still holds and no other name clears the bar.",
+  "summary": "No trades tomorrow. Keep the $889 in settled cash. Act only if EEM IV/RV reaches at least 0.95 with a bearish trend and no fresh Hormuz, Iran or Houthi escalation; otherwise pass.",
+  "watchlist": [
+   {
+    "symbol": "EEM",
+    "setup": "Bear call spread, short delta about 0.30, 1-wide, 21-45 DTE",
+    "trigger": "EEM IV/RV at or above 0.95 (scan 0.94) with bear call trend intact and no new Hormuz, Iran or Houthi escalation headlines",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-12T16:41:53-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-11-13",
+  "decision": "revise",
+  "why": "Today's four round trips made +$1.06, but the scorecard still shows a 44% hit rate and negative average pick moves, and the rel-volume filter has not been verified from bars. I'm narrowing the plan to the three Staples/Comm Services names with explicit verification gates, and leaving Technology alone while the CEO-removal headlines and 4-11% ATRs remain live.",
+  "summary": "Stand aside by default. Take only AAPL or XLP VWAP pullback bounces, or a META opening-range breakout that holds, and only when relative volume is verified from bars at 1.5x or higher, price is above VWAP, and SPY is above its open. Use $50 per setup, a +0.5% target, a -0.3% stop, a 45-minute limit, and flat by the close.",
+  "watchlist": [
+   {
+    "symbol": "AAPL",
+    "setup": "Consumer Staples VWAP pullback bounce after a mild down day (scan -0.26%, ATR 2.26%).",
+    "trigger": "Pullback to VWAP that holds, verified relative volume of at least 1.5x from bars, price above VWAP, SPY above its open. Target +0.5%, stop -0.3%, 45-minute limit.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "XLP",
+    "setup": "Consumer Staples ETF VWAP pullback bounce; the one setup today that worked on volume-backed entries.",
+    "trigger": "Pullback to VWAP that holds, verified relative volume of at least 1.5x from bars, SPY above its open. Target +0.5%, stop -0.3%, 45-minute limit. Skip if relative volume can't be verified.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "META",
+    "setup": "Communication Services opening-range breakout continuation, only if it holds after a -0.9% down day.",
+    "trigger": "Break above the first 15-minute high on verified 1.5x+ relative volume, price above VWAP, SPY above its open. Skip if the open gaps more than 2.5%, if NVDA/AMD/AVGO/MU sell off in the first hour, or if the breakout fades on falling volume.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]
