@@ -851,6 +851,40 @@
  ],
  "journal": [
   {
+   "time": "2026-11-11T20:11:16-05:00",
+   "type": "plan",
+   "agent": "scalper",
+   "note": "Evening check-in: revise. Today's two VWAP bounces netted about -$0.04 and both logged volume near or below the 1.5x minimum, which confirms the relative-volume filter is still not being enforced. Technology headlines (NVIDIA CEO probe, SpaceX, Anthropic IPO) add event risk, so I'm narrowing to staples and the one Communication Services name with a fresh gap check.",
+   "symbol": "AAPL, XLP, META"
+  },
+  {
+   "time": "2026-11-11T20:11:05-05:00",
+   "type": "plan",
+   "agent": "volsell",
+   "note": "Evening check-in: keep. Nothing in today's scan clears the 0.95 IV/RV floor on a non-rate underlying. EEM has the best bear-call trend read but sits at 0.89, and TLT's 1.15 is a rate proxy I already stopped out of twice, with the 10-year near 5% and hawkish Fed talk.",
+   "symbol": "EEM"
+  },
+  {
+   "time": "2026-11-11T20:10:57-05:00",
+   "type": "plan",
+   "agent": "meanrev",
+   "note": "Evening check-in: keep. Fresh scan prices don't change the picture: HALO and ALC are still the only names near a washout, and no new candidate clears the 1:1 stop-to-target floor (OTIS about 0.42:1, KHC about 0.45:1, MNST about 0.37:1). HALO's RSI(2) is now 1.8, but the Morgan Stanley downgrade is still live, so I'm holding rather than adding.",
+   "symbol": ""
+  },
+  {
+   "time": "2026-11-11T20:10:57-05:00",
+   "type": "focus",
+   "agent": "meanrev",
+   "note": "Leaning into Health Care, Consumer Staples; avoiding Technology. Health Care is a thin lean (HALO is open with no closed results yet). Consumer Staples has the most scan washouts (OTIS, KHC, MNST, YUM, ALC), but my own record there is only 1-for-1 for +0.12, so it's a lean, not a conviction. Technology is 1-for-3 for -14.20 and stays avoided. Energy has dropped o"
+  },
+  {
+   "time": "2026-11-11T20:10:44-05:00",
+   "type": "plan",
+   "agent": "trend",
+   "note": "Evening check-in: keep. The fresh scan still shows a Health Care breakout cluster (VTRS, EW, RPRX broke out today) with supportive news (Lilly data, UBS raises on WELL and AHR), so the thesis holds. The scan has no relative-volume data, so the 2.5x confirmation stays the gate and nothing changes until a close qualifies.",
+   "symbol": "VTRS, EW, RPRX, AHR"
+  },
+  {
    "time": "2026-11-11T16:41:49-05:00",
    "type": "plan",
    "agent": "scalper",
@@ -1257,41 +1291,6 @@
    "agent": "blackswan",
    "symbol": "ALNY",
    "note": "spread stop (-97%) (tried 0.07, 0.05, 0.03, 0.01; mark 0.12, natural -3.99)"
-  },
-  {
-   "time": "2026-11-11T11:36:47-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -0.8)"
-  },
-  {
-   "time": "2026-11-11T11:36:26-05:00",
-   "type": "exit_unfilled",
-   "agent": "trend",
-   "symbol": "CLSX261218P00002000",
-   "note": "option stop (-59%)"
-  },
-  {
-   "time": "2026-11-11T11:09:33-05:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "MU, SNDK, STX, AMD, NVDA",
-   "note": "defensive: Semis lead the tape: MU, SNDK, STX, AMD and NVDA are above VWAP with 1-minute uptrends, and SOXX and SMH confirm the group. SPY is flat and crash radar is calm, so defensive sizing with the existing targets fits, and I'm dropping META since it's no longer above its opening range."
-  },
-  {
-   "time": "2026-11-11T11:09:13-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-96%) (tried 0.12, 0.08, 0.05, 0.01; mark 0.17, natural -3.99)"
-  },
-  {
-   "time": "2026-11-11T11:07:51-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-97%) (tried 0.04, 0.03, 0.02, 0.01; mark 0.09, natural -0.94)"
   }
  ],
  "reviews": [
@@ -2731,23 +2730,23 @@
  "plans": {
   "trend": {
    "for_day": "2026-11-12",
-   "made_at": "2026-11-11T16:41-05:00",
-   "session": "After-close review",
-   "decision": "revise",
-   "why": "Today's scan has new breakout levels (VTRS 20.86, EW 105.35, RPRX 69.71), and my watchlist triggers are stale. My sector focus also overstated Broad market, which is -$56 on my results.",
-   "summary": "Hold TLS and the CLSX put on their stops. Buy only on a close through a fresh trigger on at least 2.5x relative volume, sized to about $15 of risk.",
+   "made_at": "2026-11-11T20:10-05:00",
+   "session": "Evening check-in",
+   "decision": "keep",
+   "why": "The fresh scan still shows a Health Care breakout cluster (VTRS, EW, RPRX broke out today) with supportive news (Lilly data, UBS raises on WELL and AHR), so the thesis holds. The scan has no relative-volume data, so the 2.5x confirmation stays the gate and nothing changes until a close qualifies.",
+   "summary": "Hold TLS (stop 6.53) and the CLSX put (exit if CLSX closes above 2.98). Buy a watchlist name only on a close through its trigger on at least 2.5x relative volume, sized to about $15 of risk. Settled cash is $357.68, so later entries are limited by available cash, not the max_dollars figures.",
    "watchlist": [
     {
      "symbol": "VTRS",
-     "setup": "Health Care breakout at 20.86, ATR 0.55, roc20 +21%",
-     "trigger": "Close above 20.86 on at least 2.5x relative volume",
+     "setup": "Health Care breakout at 20.86 (today), ATR 0.55, roc20 +21%",
+     "trigger": "Close above 20.86 on at least 2.5x relative volume (confirm today's volume before acting; if unconfirmed, wait for a fresh qualifying close)",
      "instrument": "stock",
      "max_dollars": 200,
      "conviction": 3
     },
     {
      "symbol": "EW",
-     "setup": "Health Care breakout at 105.35, ATR 2.81, target raised to $121",
+     "setup": "Health Care breakout at 105.35 (today), ATR 2.81, TD Cowen target $121",
      "trigger": "Close above 105.35 on at least 2.5x relative volume",
      "instrument": "stock",
      "max_dollars": 200,
@@ -2755,7 +2754,7 @@
     },
     {
      "symbol": "RPRX",
-     "setup": "Health Care breakout at 69.71, ATR 1.53, roc20 +19%",
+     "setup": "Health Care breakout at 69.71 (today), ATR 1.53, roc20 +19%",
      "trigger": "Close above 69.71 on at least 2.5x relative volume",
      "instrument": "stock",
      "max_dollars": 180,
@@ -2781,21 +2780,22 @@
    "position_plans": [
     {
      "symbol": "TLS",
-     "plan": "Hold; exit at open if it closes below 6.53. Do not add. Trail to 3 ATR once well above entry."
+     "plan": "Hold. Exit at open if it closes below 6.53 (the 2-ATR stop from the thesis; the 7.36 stop field looks like the entry, so treat 6.53 as the active stop). Do not add. Trail to 3 ATR once well above entry."
     },
     {
      "symbol": "CLSX261218P00002000",
-     "plan": "Hold; exit at open if CLSX closes above 2.98. Do not add."
+     "plan": "Hold. Exit at open if CLSX closes above 2.98. Do not add. Data conflict: the thesis cites 2.01 and a 3.63 stop, but last underlying is 2.89 and the stop field is 2.98. Use 2.98 until verified."
     }
    ],
    "avoid": [
-    "FWONK: closed above its 108.36 trigger by about 1.8% with no confirmed 2.5x volume; chasing adds stop distance",
+    "FWONK: already closed about 1.8% above its 108.36 trigger without confirmed 2.5x volume; chasing widens the stop distance",
+    "LLY, TMO: share prices far exceed the risk budget (ATR 46.8 and 20.5 give stops well beyond $200 of risk)",
     "CBOE and ONC: share prices too high for the $15 risk budget",
     "KPTI, JPST, UUP: penny-level, broken, or no real trend",
     "MAR, DAL, HLT, BLK: no volume confirmation and outside focus",
-    "Energy, Consumer Staples, Technology, Industrials: losing on my record"
+    "Energy, Consumer Staples, Technology, Broad market / other: losing on my record (Energy -$47, Broad market -$56)"
    ],
-   "brainstorm": "Test requiring a close above the level on 2.5x volume with a 2-day hold before adding, to cut false breakouts.",
+   "brainstorm": "Test a no-intraday-changes rule: act only on closes evaluated after the bell. My scorecard shows mind changes cost about -1.67 on average, so I will not re-plan mid-session.",
    "revisions": [
     {
      "at": "2026-11-11T16:41-05:00",
@@ -2829,6 +2829,39 @@
        "setup": "Real Estate near breakout at 248.95, UBS target raised to $289"
       }
      ]
+    },
+    {
+     "at": "2026-11-11T20:10-05:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "The fresh scan still shows a Health Care breakout cluster (VTRS, EW, RPRX broke out today) with supportive news (Lilly data, UBS raises on WELL and AHR), so the thesis holds. The scan has no relative-volume data, so the 2.5x confirmation stays the gate and nothing changes until a close qualifies.",
+     "watch": [
+      {
+       "symbol": "VTRS",
+       "instrument": "stock",
+       "setup": "Health Care breakout at 20.86 (today), ATR 0.55, roc20 +21%"
+      },
+      {
+       "symbol": "EW",
+       "instrument": "stock",
+       "setup": "Health Care breakout at 105.35 (today), ATR 2.81, TD Cowen target $121"
+      },
+      {
+       "symbol": "RPRX",
+       "instrument": "stock",
+       "setup": "Health Care breakout at 69.71 (today), ATR 1.53, roc20 +19%"
+      },
+      {
+       "symbol": "AHR",
+       "instrument": "stock",
+       "setup": "Real Estate near breakout at 59.53, two UBS target raises"
+      },
+      {
+       "symbol": "WELL",
+       "instrument": "stock",
+       "setup": "Real Estate near breakout at 248.95, UBS target raised to $289"
+      }
+     ]
     }
    ],
    "settled_cash_at_plan": 357.68,
@@ -2836,37 +2869,44 @@
   },
   "meanrev": {
    "for_day": "2026-11-12",
-   "made_at": "2026-11-11T16:41-05:00",
-   "session": "After-close review",
-   "decision": "revise",
-   "why": "The pre-market plan is stale: PM has already been closed for +0.12, and the fresh scan shows HALO deeper into washout (RSI(2) 1.8) with its thesis intact, while ALC's RSI(2) has risen to 8.9 and the live reward-to-risk on it is poor. Every other washout in the scan fails the 1:1 floor at scan prices, so there is no new entry to add.",
-   "summary": "Hold HALO (stop 96.66, target 112.66, 5-day time stop) and ALC (stop 69.04, target 74.52) on their existing plans, with no adds and no new entries. Keep the $607 settled cash in reserve for a real washout that clears 1:1 at the live price.",
+   "made_at": "2026-11-11T20:10-05:00",
+   "session": "Evening check-in",
+   "decision": "keep",
+   "why": "Fresh scan prices don't change the picture: HALO and ALC are still the only names near a washout, and no new candidate clears the 1:1 stop-to-target floor (OTIS about 0.42:1, KHC about 0.45:1, MNST about 0.37:1). HALO's RSI(2) is now 1.8, but the Morgan Stanley downgrade is still live, so I'm holding rather than adding.",
+   "summary": "Hold HALO (stop 96.66, target 112.66) and ALC (stop 69.04, target 74.52) on their existing plans, with no adds and no new entries. Keep the roughly $607 settled cash in reserve until a washout clears 1:1 at live prices.",
    "watchlist": [],
    "position_plans": [
     {
      "symbol": "HALO",
-     "plan": "Hold. Exit at the open if it closes below 96.66. Take profit near 112.66 (about the 5-day average). Time stop 5 days from entry. No adds: the Morgan Stanley downgrade is fresh negative news."
+     "plan": "Hold. Exit at the open if it closes below 96.66. Take profit near 112.66 (about the 5-day average, which is 106.86 on the scan). Time stop 5 days from entry. No adds."
     },
     {
      "symbol": "ALC",
-     "plan": "Hold to the 74.52 target or the 69.04 stop. Exit at the open if it closes below 69.04. Time stop 5 days from entry. No adds: at 72.45 the live reward-to-risk is only about 0.6:1 with the stop 3.41 away, and the Q3 headwind news is unresolved."
+     "plan": "Hold to the 74.52 target or the 69.04 stop. Exit at the open if it closes below 69.04. Time stop 5 days from entry. At 72.45 the live reward-to-risk is only about 0.6:1, so no adds and no re-sizing up."
     }
    ],
    "avoid": [
-    "PM re-entry: RSI(2) has recovered to 23, so the washout is over",
-    "OTIS: 'washout now' on the scan but only about 0.4:1 on a 1.5 ATR stop to the 5-day average",
-    "MSFT: RSI(2) 19.4 is not a washout yet, and a 1.5 ATR stop gives only about 0.5:1",
-    "TEAM and WDAY: fail the 1:1 floor on scan prices",
-    "MNST, KHC, YUM, ABT, RKT, VMRK, ICLR, TOST: RSI(2) too high or stop-to-target below 1:1",
+    "OTIS: RSI(2) 9.7 washout, but about 0.42:1 to the 5-day average on a 1.5 ATR stop",
+    "MNST and KHC: washouts still fail 1:1 (about 0.37:1 and 0.45:1)",
+    "MSFT: RSI(2) 19.4 is not a washout, and the Anthropic/AI news flow is unresolved",
+    "TOST: Bernstein downgrade stacked on a 13 RSI, not a washout setup",
+    "PM: RSI(2) has recovered, so the washout has played out",
     "Technology sector: 1-for-3 for -14.20 with the AI rout unresolved"
    ],
-   "brainstorm": "Test whether a 1.25 ATR stop (instead of 1.5) lets deep washouts such as HALO, RSI(2) under 5 and more than 15% above the 200-day, clear 1:1 without loosening the floor. Track it on paper only.",
+   "brainstorm": "Test whether a 1.0 ATR stop (instead of 1.5) on Consumer Staples washouts, such as OTIS and KHC, produces a 1:1 setup at scan prices. Paper-test only, not for live entries until it's been checked against my own closed trades.",
    "revisions": [
     {
      "at": "2026-11-11T16:41-05:00",
      "session": "After-close review",
      "decision": "revise",
      "why": "The pre-market plan is stale: PM has already been closed for +0.12, and the fresh scan shows HALO deeper into washout (RSI(2) 1.8) with its thesis intact, while ALC's RSI(2) has risen to 8.9 and the live reward-to-risk on it is poor. Every other washout in the scan fails the 1:1 floor at scan prices, so there is no new entry to add.",
+     "watch": []
+    },
+    {
+     "at": "2026-11-11T20:10-05:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Fresh scan prices don't change the picture: HALO and ALC are still the only names near a washout, and no new candidate clears the 1:1 stop-to-target floor (OTIS about 0.42:1, KHC about 0.45:1, MNST about 0.37:1). HALO's RSI(2) is now 1.8, but the Morgan Stanley downgrade is still live, so I'm holding rather than adding.",
      "watch": []
     }
    ],
@@ -2875,21 +2915,30 @@
   },
   "volsell": {
    "for_day": "2026-11-12",
-   "made_at": "2026-11-11T16:41-05:00",
-   "session": "After-close review",
-   "decision": "revise",
-   "why": "The EEM bear call that was my only candidate now shows IV/RV 0.88, below the 0.95 floor, so it no longer qualifies. Every other scan name also fails the floor or is a rate proxy I've already excluded, so there is no trade.",
-   "summary": "No trades tomorrow. Keep the $889 in settled cash and wait for a bear call or bull put with IV/RV at or above 0.95 on a non-rate underlying. Re-check EEM only if its IV/RV rises back above 0.95.",
-   "watchlist": [],
+   "made_at": "2026-11-11T20:11-05:00",
+   "session": "Evening check-in",
+   "decision": "keep",
+   "why": "Nothing in today's scan clears the 0.95 IV/RV floor on a non-rate underlying. EEM has the best bear-call trend read but sits at 0.89, and TLT's 1.15 is a rate proxy I already stopped out of twice, with the 10-year near 5% and hawkish Fed talk.",
+   "summary": "No trades tomorrow. Keep the $889 in settled cash and re-check EEM for a bear call only if its IV/RV rises to 0.95 or higher while the trend stays bearish. Otherwise wait for a non-rate underlying that clears the floor.",
+   "watchlist": [
+    {
+     "symbol": "EEM",
+     "setup": "Bear call spread (short delta about 0.30, 1-wide, 21-45 DTE) if IV/RV reaches the floor",
+     "trigger": "EEM IV/RV at or above 0.95 with a bearish trend and no new Hormuz or Iran escalation headlines",
+     "instrument": "spread",
+     "max_dollars": 90,
+     "conviction": 2
+    }
+   ],
    "position_plans": [],
    "avoid": [
-    "EEM bear call: IV/RV 0.88 is below the 0.95 floor, so the edge isn't there.",
-    "TLT and other rate proxies (IEF, SHY): the 10-year is near 5%, the Fed is hawkish with 50bp hike talk, and TLT has been stopped out twice despite its 1.18 IV/RV.",
-    "GDX (0.77), SLV (0.87), IWM (0.73), XLF (0.69), XLE (0.84), SPY (0.64), QQQ (0.65): all below the 0.95 floor.",
-    "Real Estate, Financials, Industrials: 0-for-5 in my results and rate-sensitive.",
-    "Energy: Hormuz and Iran headlines make direction unclear, so rich premium is not a clean edge."
+    "TLT and rate proxies (IEF, SHY): 10-year near 5%, Fed hike talk, two prior stop-outs despite rich IV/RV",
+    "EEM at current 0.89: below the 0.95 floor",
+    "SPY (0.63), QQQ (0.55), IWM (0.73), XLF (0.67), XLE (0.83), GDX (0.75), SLV (0.86): all below the floor",
+    "Energy: Hormuz and Iran headlines make direction unclear, so rich premium is not a clean edge",
+    "Real Estate, Financials, Industrials: 0-for-6 in my results and rate-sensitive"
    ],
-   "brainstorm": "Test whether the 0.95 IV/RV floor is too strict for the broad-market bear call case by logging near-misses (0.88-0.94) with their outcomes, without trading them yet.",
+   "brainstorm": "Test whether the 0.95 floor is too strict for broad-index bear calls when crash radar stays calm (31), by logging IV/RV 0.85-0.95 setups on paper only and scoring them against the plan.",
    "revisions": [
     {
      "at": "2026-11-11T16:41-05:00",
@@ -2897,6 +2946,19 @@
      "decision": "revise",
      "why": "The EEM bear call that was my only candidate now shows IV/RV 0.88, below the 0.95 floor, so it no longer qualifies. Every other scan name also fails the floor or is a rate proxy I've already excluded, so there is no trade.",
      "watch": []
+    },
+    {
+     "at": "2026-11-11T20:11-05:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Nothing in today's scan clears the 0.95 IV/RV floor on a non-rate underlying. EEM has the best bear-call trend read but sits at 0.89, and TLT's 1.15 is a rate proxy I already stopped out of twice, with the 10-year near 5% and hawkish Fed talk.",
+     "watch": [
+      {
+       "symbol": "EEM",
+       "instrument": "spread",
+       "setup": "Bear call spread (short delta about 0.30, 1-wide, 21-45 DTE) if IV/RV reaches th"
+      }
+     ]
     }
    ],
    "settled_cash_at_plan": 889.0,
@@ -2996,39 +3058,46 @@
   },
   "scalper": {
    "for_day": "2026-11-12",
-   "made_at": "2026-11-11T16:41-05:00",
-   "session": "After-close review",
+   "made_at": "2026-11-11T20:11-05:00",
+   "session": "Evening check-in",
    "decision": "revise",
-   "why": "Today's two VWAP bounces went nowhere (XLP +0.12% on a time exit, IWM -0.06% on a time exit), and META, the only pick, fell 1.91%. The pre-market call's 1.5x relative-volume gate has never been enforced, so the META trigger is only usable if it is checked against bar data. Consumer Staples is the one other sector with positive results, so I'm leaning into it alongside Communication Services.",
-   "summary": "Stand aside unless a watchlist name clears its opening-range high on verified 1.5x+ relative volume with price above VWAP and SPY above its open. Use $50 max per setup, one trade per name, and exit by the 45-minute limit. If the verified volume check fails, skip the trade.",
+   "why": "Today's two VWAP bounces netted about -$0.04 and both logged volume near or below the 1.5x minimum, which confirms the relative-volume filter is still not being enforced. Technology headlines (NVIDIA CEO probe, SpaceX, Anthropic IPO) add event risk, so I'm narrowing to staples and the one Communication Services name with a fresh gap check.",
+   "summary": "Stand aside by default. Trade only Consumer Staples (AAPL, XLP) and META on a VWAP pullback or opening-range break, and only after relative volume is verified from actual bars at 1.5x or higher with SPY above its open. Use $50 max per setup, one trade per name, with a +0.5%/-0.3% bracket and a 45-minute time limit.",
    "watchlist": [
     {
-     "symbol": "META",
-     "setup": "Opening-range breakout continuation in Communication Services, conviction 1 only, after a down day that shows no bounce.",
-     "trigger": "Break above the first 15-minute high on at least 1.5x relative volume computed from actual bars, price above VWAP, SPY above its open. Skip if the open gaps more than about 2.5%, if NVDA/AMD/AVGO/MU sell off in the first hour, or if the breakout fades on falling volume.",
+     "symbol": "AAPL",
+     "setup": "Consumer Staples VWAP pullback bounce that holds after a strong open; the scan shows it with a normal ATR (2.27%).",
+     "trigger": "Pullback to VWAP that holds, with verified relative volume of at least 1.5x from bars, price above VWAP, and SPY above its open. Target +0.5%, stop -0.3%, time limit 45 minutes.",
+     "instrument": "stock",
+     "max_dollars": 50,
+     "conviction": 2
+    },
+    {
+     "symbol": "XLP",
+     "setup": "Consumer Staples ETF VWAP pullback bounce, the same setup that produced a small win today.",
+     "trigger": "Pullback to VWAP that holds, with verified relative volume of at least 1.5x from bars and SPY above its open. Target +0.5%, stop -0.3%, time limit 45 minutes. Skip if today's pattern repeats below 1.5x.",
      "instrument": "stock",
      "max_dollars": 50,
      "conviction": 1
     },
     {
-     "symbol": "AAPL",
-     "setup": "Consumer Staples VWAP pullback bounce after a strong open, the one staples name in the scan with a normal ATR (2.27%).",
-     "trigger": "Pullback to VWAP that holds, with relative volume of at least 1.5x verified from bars, and SPY above its open. Target +0.5%, stop -0.3%, time limit 45 minutes.",
+     "symbol": "META",
+     "setup": "Communication Services opening-range breakout continuation, only if it isn't a fade after a down day.",
+     "trigger": "Break above the first 15-minute high on verified 1.5x+ relative volume, price above VWAP, SPY above its open. Skip if the open gaps more than 2.5%, if NVDA/AMD/AVGO/MU sell off in the first hour, or if the breakout fades on falling volume.",
      "instrument": "stock",
      "max_dollars": 50,
-     "conviction": 2
+     "conviction": 1
     }
    ],
    "position_plans": [],
    "avoid": [
-    "Technology and AI-hardware names (NVDA, AMD, AVGO, MU, INTC, SNDK, LITE, TSM, SMH, SOXX, QQQ, SPCX): -$2.17 over 46 trades, today's large moves are chase risk, and the NVIDIA probe and SpaceX headlines add event risk.",
-    "GOOGL and GOOG: same company, headline risk, and no diversification benefit.",
-    "MSFT: event-driven, and past VWAP bounces have timed out at a loss.",
-    "SPY and QQQ: elevated volume and tape below the 50-day average argue against trading the index.",
-    "AMZN: stopped out in the AI-rout tape, with Anthropic S-1 headline risk.",
-    "Any entry where relative volume cannot be verified as 1.5x or higher: the filter has not been enforced in past logs."
+    "NVDA, AMD, AVGO, MU, INTC, SNDK, LITE, TSM, SMH, SOXX, QQQ, SPCX: Technology is -$2.17 over 46 trades, the NVIDIA CEO-removal headlines are live event risk, and the big 7-13% moves today are chase risk.",
+    "GOOGL and GOOG: duplicate exposure to the same company and headline risk.",
+    "MSFT and AMZN: event-driven, with recent VWAP bounces timing out at a loss and Anthropic S-1 headline risk.",
+    "SPY and QQQ: the index is below its 50-day average and volume is elevated, so stay out.",
+    "Any entry where relative volume cannot be verified at 1.5x or higher: the filter has not been enforced in past logs, so skip these trades."
    ],
-   "brainstorm": "Test a hard gate in code: a VWAP pullback entry requires computed relative volume of at least 1.5x and logs the value. Compare results of trades above and below that threshold over the next 20 entries before changing any other parameter.",
+   "brainstorm": "Test a hard rule that a VWAP bounce needs verified volume from the bar data before the order is placed. Track how many setups get skipped and compare their outcomes, to see whether the filter adds value.",
    "revisions": [
     {
      "at": "2026-11-11T16:41-05:00",
@@ -3045,6 +3114,29 @@
        "symbol": "AAPL",
        "instrument": "stock",
        "setup": "Consumer Staples VWAP pullback bounce after a strong open, the one staples name "
+      }
+     ]
+    },
+    {
+     "at": "2026-11-11T20:11-05:00",
+     "session": "Evening check-in",
+     "decision": "revise",
+     "why": "Today's two VWAP bounces netted about -$0.04 and both logged volume near or below the 1.5x minimum, which confirms the relative-volume filter is still not being enforced. Technology headlines (NVIDIA CEO probe, SpaceX, Anthropic IPO) add event risk, so I'm narrowing to staples and the one Communication Services name with a fresh gap check.",
+     "watch": [
+      {
+       "symbol": "AAPL",
+       "instrument": "stock",
+       "setup": "Consumer Staples VWAP pullback bounce that holds after a strong open; the scan s"
+      },
+      {
+       "symbol": "XLP",
+       "instrument": "stock",
+       "setup": "Consumer Staples ETF VWAP pullback bounce, the same setup that produced a small "
+      },
+      {
+       "symbol": "META",
+       "instrument": "stock",
+       "setup": "Communication Services opening-range breakout continuation, only if it isn't a f"
       }
      ]
     }
@@ -3540,20 +3632,20 @@
     "Technology",
     "Broad market / other"
    ],
-   "why": "Health Care is the only sector with multiple fresh breakouts and a small positive record (VTRS +0.91%). Broad market is -$56 across 9 trades, so my earlier +$65 claim is wrong. Real Estate has no record yet but has the strongest analyst support.",
-   "set_at": "2026-11-11T16:41-05:00",
+   "why": "Health Care has the only fresh breakout cluster in today's scan and supportive company news, though my own Health Care record is small and negative (-$2.49 over 2 trades). Real Estate has analyst support (UBS on WELL and AHR) but no trade record yet, so it stays a lean-in to be tested with small siz",
+   "set_at": "2026-11-11T20:10-05:00",
    "expires": "2026-11-25"
   },
   "meanrev": {
    "lean_in": [
-    "Health Care"
+    "Health Care",
+    "Consumer Staples"
    ],
    "avoid": [
-    "Technology",
-    "Energy"
+    "Technology"
    ],
-   "why": "Health Care is kept as a thin lean: HALO is the only open trade and I have no closed Health Care results yet. Technology is 1-for-3 for -14.20 and Energy is 1-for-3 with time-stop losses. Consumer Staples (ALC, 1-for-1 for +0.12) is not promoted because the evidence is too thin, but I will reconside",
-   "set_at": "2026-11-11T16:41-05:00",
+   "why": "Health Care is a thin lean (HALO is open with no closed results yet). Consumer Staples has the most scan washouts (OTIS, KHC, MNST, YUM, ALC), but my own record there is only 1-for-1 for +0.12, so it's a lean, not a conviction. Technology is 1-for-3 for -14.20 and stays avoided. Energy has dropped o",
+   "set_at": "2026-11-11T20:10-05:00",
    "expires": "2026-11-25"
   },
   "volsell": {
@@ -3566,8 +3658,8 @@
     "Industrials",
     "Real Estate"
    ],
-   "why": "The only lean-in case (Broad market / other, via EEM) no longer qualifies, so I'm dropping it rather than renewing on a setup that fails the floor. My results are 0-for-5 in the avoided sectors and each of them is rate-sensitive, or has headline risk (Energy, Technology).",
-   "set_at": "2026-11-11T16:41-05:00",
+   "why": "No sector has real positive evidence in my results or today's scan. Every setup that passed the rules was rate-sensitive or headline-driven, and my sectors are 0-for-6.",
+   "set_at": "2026-11-11T20:11-05:00",
    "expires": "2026-11-25"
   },
   "blackswan": {
@@ -3584,16 +3676,16 @@
   },
   "scalper": {
    "lean_in": [
-    "Communication Services",
-    "Consumer Staples"
+    "Consumer Staples",
+    "Communication Services"
    ],
    "avoid": [
     "Technology",
-    "Consumer Discretionary",
-    "Materials"
+    "Materials",
+    "Consumer Discretionary"
    ],
-   "why": "Communication Services is +$1.53 over 10 trades (50% win rate), though the edge is weakening. Consumer Staples is +$0.97 over 4 trades (75% win rate), a small sample but the only other positive sector. Technology is -$2.17 over 46 trades. Consumer Discretionary is roughly flat, and Materials lost on",
-   "set_at": "2026-11-11T16:41-05:00",
+   "why": "Communication Services is +$1.53 over 10 trades (50% win rate) and Consumer Staples is +$0.97 over 4 trades (75% win rate); both are small samples, so the focus is provisional. Technology is -$2.17 over 46 trades, Materials lost on its one trade, and Consumer Discretionary is roughly flat over 10 tr",
+   "set_at": "2026-11-11T20:11-05:00",
    "expires": "2026-11-25"
   }
  },
@@ -3914,5 +4006,5 @@
   "core_size": 501
  },
  "recap_updated": "2026-11-11T16:40-05:00",
- "plans_updated": "2026-11-11T16:41-05:00"
+ "plans_updated": "2026-11-11T20:11-05:00"
 }

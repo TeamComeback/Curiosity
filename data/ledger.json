@@ -19014,5 +19014,129 @@
   ],
   "why": "Communication Services is +$1.53 over 10 trades (50% win rate), though the edge is weakening. Consumer Staples is +$0.97 over 4 trades (75% win rate), a small sample but the only other positive sector. Technology is -$2.17 over 46 trades. Consumer Discretionary is roughly flat, and Materials lost on",
   "expires": "2026-11-25"
+ },
+ {
+  "time": "2026-11-11T20:10:44-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Evening check-in",
+  "for_day": "2026-11-12",
+  "decision": "keep",
+  "why": "The fresh scan still shows a Health Care breakout cluster (VTRS, EW, RPRX broke out today) with supportive news (Lilly data, UBS raises on WELL and AHR), so the thesis holds. The scan has no relative-volume data, so the 2.5x confirmation stays the gate and nothing changes until a close qualifies.",
+  "summary": "Hold TLS (stop 6.53) and the CLSX put (exit if CLSX closes above 2.98). Buy a watchlist name only on a close through its trigger on at least 2.5x relative volume, sized to about $15 of risk. Settled cash is $357.68, so later entries are limited by available cash, not the max_dollars figures.",
+  "watchlist": [
+   {
+    "symbol": "VTRS",
+    "setup": "Health Care breakout at 20.86 (today), ATR 0.55, roc20 +21%",
+    "trigger": "Close above 20.86 on at least 2.5x relative volume (confirm today's volume before acting; if unconfirmed, wait for a fresh qualifying close)",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout at 105.35 (today), ATR 2.81, TD Cowen target $121",
+    "trigger": "Close above 105.35 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "RPRX",
+    "setup": "Health Care breakout at 69.71 (today), ATR 1.53, roc20 +19%",
+    "trigger": "Close above 69.71 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "AHR",
+    "setup": "Real Estate near breakout at 59.53, two UBS target raises",
+    "trigger": "Close above 59.53 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "WELL",
+    "setup": "Real Estate near breakout at 248.95, UBS target raised to $289",
+    "trigger": "Close above 248.95 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-11T20:10:57-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-11-12",
+  "decision": "keep",
+  "why": "Fresh scan prices don't change the picture: HALO and ALC are still the only names near a washout, and no new candidate clears the 1:1 stop-to-target floor (OTIS about 0.42:1, KHC about 0.45:1, MNST about 0.37:1). HALO's RSI(2) is now 1.8, but the Morgan Stanley downgrade is still live, so I'm holding rather than adding.",
+  "summary": "Hold HALO (stop 96.66, target 112.66) and ALC (stop 69.04, target 74.52) on their existing plans, with no adds and no new entries. Keep the roughly $607 settled cash in reserve until a washout clears 1:1 at live prices.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-11T20:10:57-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "lean_in": [
+   "Health Care",
+   "Consumer Staples"
+  ],
+  "avoid": [
+   "Technology"
+  ],
+  "why": "Health Care is a thin lean (HALO is open with no closed results yet). Consumer Staples has the most scan washouts (OTIS, KHC, MNST, YUM, ALC), but my own record there is only 1-for-1 for +0.12, so it's a lean, not a conviction. Technology is 1-for-3 for -14.20 and stays avoided. Energy has dropped o",
+  "expires": "2026-11-25"
+ },
+ {
+  "time": "2026-11-11T20:11:05-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Evening check-in",
+  "for_day": "2026-11-12",
+  "decision": "keep",
+  "why": "Nothing in today's scan clears the 0.95 IV/RV floor on a non-rate underlying. EEM has the best bear-call trend read but sits at 0.89, and TLT's 1.15 is a rate proxy I already stopped out of twice, with the 10-year near 5% and hawkish Fed talk.",
+  "summary": "No trades tomorrow. Keep the $889 in settled cash and re-check EEM for a bear call only if its IV/RV rises to 0.95 or higher while the trend stays bearish. Otherwise wait for a non-rate underlying that clears the floor.",
+  "watchlist": [
+   {
+    "symbol": "EEM",
+    "setup": "Bear call spread (short delta about 0.30, 1-wide, 21-45 DTE) if IV/RV reaches the floor",
+    "trigger": "EEM IV/RV at or above 0.95 with a bearish trend and no new Hormuz or Iran escalation headlines",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-11T20:11:16-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-11-12",
+  "decision": "revise",
+  "why": "Today's two VWAP bounces netted about -$0.04 and both logged volume near or below the 1.5x minimum, which confirms the relative-volume filter is still not being enforced. Technology headlines (NVIDIA CEO probe, SpaceX, Anthropic IPO) add event risk, so I'm narrowing to staples and the one Communication Services name with a fresh gap check.",
+  "summary": "Stand aside by default. Trade only Consumer Staples (AAPL, XLP) and META on a VWAP pullback or opening-range break, and only after relative volume is verified from actual bars at 1.5x or higher with SPY above its open. Use $50 max per setup, one trade per name, with a +0.5%/-0.3% bracket and a 45-minute time limit.",
+  "watchlist": [
+   {
+    "symbol": "AAPL",
+    "setup": "Consumer Staples VWAP pullback bounce that holds after a strong open; the scan shows it with a normal ATR (2.27%).",
+    "trigger": "Pullback to VWAP that holds, with verified relative volume of at least 1.5x from bars, price above VWAP, and SPY above its open. Target +0.5%, stop -0.3%, time limit 45 minutes.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "XLP",
+    "setup": "Consumer Staples ETF VWAP pullback bounce, the same setup that produced a small win today.",
+    "trigger": "Pullback to VWAP that holds, with verified relative volume of at least 1.5x from bars and SPY above its open. Target +0.5%, stop -0.3%, time limit 45 minutes. Skip if today's pattern repeats below 1.5x.",
+    "instrument": "stock",
+    "conviction": 1
+   },
+   {
+    "symbol": "META",
+    "setup": "Communication Services opening-range breakout continuation, only if it isn't a fade after a down day.",
+    "trigger": "Break above the first 15-minute high on verified 1.5x+ relative volume, price above VWAP, SPY above its open. Skip if the open gaps more than 2.5%, if NVDA/AMD/AVGO/MU sell off in the first hour, or if the breakout fades on falling volume.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]
