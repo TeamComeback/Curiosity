@@ -27,7 +27,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.39,
+     "mark": 0.41,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -46,7 +46,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.39
+     "exit_half_spread": 0.41
     },
     "pos-f9820d2b5e": {
      "kind": "stock",
@@ -67,7 +67,7 @@
       "pct_vs_sma200": 63.2
      },
      "sector": "Broad market / other",
-     "last": 7.59,
+     "last": 7.475,
      "high_water": 7.925
     },
     "pos-9b9cea9b90": {
@@ -77,7 +77,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.05,
-     "mark": 1.05,
+     "mark": 1.0,
      "expiry": "2026-12-18",
      "strike": 310.0,
      "delta": -0.07,
@@ -94,7 +94,9 @@
       "pct_vs_sma50": -7.6,
       "pct_vs_sma200": -13.6
      },
-     "sector": "Consumer Discretionary"
+     "sector": "Consumer Discretionary",
+     "low_water": 354.82,
+     "exit_half_spread": 0.05
     }
    },
    "status": "active",
@@ -103,12 +105,8 @@
    "closed": 22,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.4418,
+   "max_dd": 0.4434,
    "notes": [
-    {
-     "date": "2026-11-09",
-     "note": "Passed CVRX put: sub-$1 underlying with likely wide option spreads, and the 2.53x volume is only marginally above the 2.5x minimum. Keep settled cash for a cleaner breakout. Existing puts and ABNB stay on their stops."
-    },
     {
      "date": "2026-11-09",
      "note": "No candidates and no 2.5x-volume breakout today. Holding ABNB at its 182.51 stop and the CLSX and DJTU puts at their breakdown stops, keeping settled cash for a real breakout."
@@ -264,6 +262,10 @@
     {
      "date": "2026-11-12",
      "note": "Taking the GLD put is a deliberate exception to my lean-in focus: it is a confirmed 3.5x-volume breakdown, and the premium budget is small enough that a stop-out is capped at about $120. Keep TLS at its active stop and don't loosen it."
+    },
+    {
+     "date": "2026-11-12",
+     "note": "Passed on the BABA put: a 0.5-delta, 30-60 DTE put on a ~$95 stock likely costs well over the $120 budget and would be blocked, and Broad market / other is on my avoid list. Holding TLS and the CLSX put; verify TLS's active stop (6.53 vs 7.36) and CLSX's stop (2.98 vs 3.63) before the open."
     }
    ],
    "last_exits": {
@@ -1083,7 +1085,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 100.45
+     "last": 100.54
     },
     "pos-38ef0e24a8": {
      "kind": "stock",
@@ -1103,7 +1105,7 @@
       "pct_vs_sma5": -3.7
      },
      "sector": "Consumer Staples",
-     "last": 72.21
+     "last": 72.0
     }
    },
    "status": "active",
@@ -1114,10 +1116,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-09",
-     "note": "No entry: every energy candidate fails the 1:1 stop-to-target floor on live prices (XOM 0.56, CVX 0.54, SU 0.81, CNQ 0.76), XLE isn't in the candidate list, and TEAM passes the ratio but is Technology and 29.5% above its 200-day. Hold XOP, CNQ and PM to their stops and targets."
-    },
     {
      "date": "2026-11-09",
      "note": "No entry: SU (0.77:1), CVX (0.5:1) and CNQ/PM (already held) fail the 1:1 floor on live stop-to-target, and XLE is not in today's candidates. Hold XOP, CNQ and PM to their stops and targets."
@@ -1273,6 +1271,10 @@
     {
      "date": "2026-11-12",
      "note": "No entries: VEEV (RSI(2) 4.9) is about 0.48:1 to its 303.55 target against the 284.20 stop, below my 1:1 floor, and HALO and ALC are already held. Keep $757 settled cash and wait for a washout that clears 1:1 at live prices."
+    },
+    {
+     "date": "2026-11-12",
+     "note": "No new entries: ABT (about 0.37:1) and VEEV (about 0.38:1) fail the 1:1 stop-to-target floor at live prices, and HALO and ALC are already held. Keep settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2335,7 +2337,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 760.415
+     "last": 760.96
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2351,7 +2353,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 760.415
+     "last": 760.96
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2367,7 +2369,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 760.415
+     "last": 760.96
     }
    },
    "status": "active",
@@ -2400,7 +2402,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 115.82
+     "last": 116.905
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2417,7 +2419,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 171.2
+     "last": 171.13
     },
     "pos-4c91c52c63": {
      "kind": "stock",
@@ -2434,7 +2436,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 315.83
+     "last": 315.055
     }
    },
    "status": "active",
@@ -2508,7 +2510,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.34,
+     "exit_half_spread": 1.31,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2533,7 +2535,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.11,
+     "mark": 0.14,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2553,7 +2555,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 4.165,
+     "exit_half_spread": 4.19,
      "peak_mark": 1.09
     }
    },
@@ -3128,16 +3130,18 @@
    ],
    "playbook": {
     "date": "2026-11-12",
-    "made_at": "2026-11-12T10:38-05:00",
+    "made_at": "2026-11-12T11:08-05:00",
     "watch": [
      "NVDA",
      "AMD",
-     "AVGO",
+     "TSM",
      "MU",
-     "TSM"
+     "AVGO",
+     "SMH",
+     "SOXX"
     ],
     "aggression": "defensive",
-    "why": "NVDA is the only clear leader (up about 9% on the day and 3.2% above VWAP), so it stays the focus. Most other names are below VWAP on a choppy 1-minute tape, and AVGO already stopped out, so I'm keeping the half-size VWAP-bounce approach with the tight bracket and four slices.",
+    "why": "Semis are the only broad leadership today (NVDA up about 10% and above VWAP, SMH and SOXX trending up), so I'm keeping the focus there with half-size VWAP bounces. Three of four slices are used and the tape is still choppy, so I'm holding the tight bracket and not adding risk.",
     "slices": 4,
     "target_pct": 0.6,
     "stop_pct": 0.3,
