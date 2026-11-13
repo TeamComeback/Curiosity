@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-10-30T11:36:39-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-10-30T12:06:41-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-10-30T12:07:39-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "EEM",
-  "note": "credit not filled at 0.30, 0.20 (mid 0.30, natural 0.01, floor 0.15)"
- },
- {
-  "time": "2026-10-30T12:36:55-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-10-30T12:37:52-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "XLF",
-  "note": "credit not filled at 0.17, 0.15 (mid 0.17, natural 0.12, floor 0.15)"
- },
- {
-  "time": "2026-10-30T12:38:34-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "EEM",
-  "note": "credit not filled at 0.26, 0.17 (mid 0.26, natural 0.01, floor 0.15)"
- },
- {
   "time": "2026-10-30T12:38:44-04:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6349,5 +6307,45 @@
   "agent": "scalper",
   "note": "After-close review: revise. Today's four round trips made +$1.06, but the scorecard still shows a 44% hit rate and negative average pick moves, and the rel-volume filter has not been verified from bars. I'm narrowing the plan to the three Staples/Comm Services names with explicit verification gates, and leaving Technology alone while the CEO-removal headlines and 4-11% ATRs remain live.",
   "symbol": "AAPL, XLP, META"
+ },
+ {
+  "time": "2026-11-12T20:10:25-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Health Care; avoiding Energy, Consumer Staples, Technology, Broad market / other. Health Care has the only fresh breakout cluster and supportive news, but my record there is small and slightly negative (-2.49 over 2 trades). Real Estate is dropped: no trade record, and its scan names are bond funds rather than real estate. Consumer Discretionary (-15.24) and Financials (-5.58) ar"
+ },
+ {
+  "time": "2026-11-12T20:10:25-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Evening check-in: revise. Health Care is still the only sector with a fresh breakout cluster (JNJ, EW, BDX), and the crash radar is calm at 26. Real Estate has no record, and its scan names are mostly bond funds (BND, AGG, VCIT, VCSH, HYG) with ATRs too small to trade, so I am dropping that lean. The CLSX thesis figures (2.01, 3.63) don't match the 2.85 last price, so I'm using only the verified 2.98 stop.",
+  "symbol": "EW, JNJ, BDX"
+ },
+ {
+  "time": "2026-11-12T20:10:49-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "note": "Leaning into Health Care; avoiding Technology. Health Care has the open HALO trade and the scan's cleanest washout; Consumer Staples' 1-for-1 record (+0.12) is too small to justify a lean-in."
+ },
+ {
+  "time": "2026-11-12T20:10:49-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Evening check-in: revise. No scan name clears the 1:1 stop-to-target floor at live prices (ABT about 0.48:1, OTIS about 0.37:1, TOST about 0.4:1), so the watchlist stays empty. I'm dropping Consumer Staples from the lean-in because its 1-for-1 record is too thin to support it.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-12T20:10:56-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Evening check-in: keep. The EEM trigger is not met: IV/RV is 0.95 at the floor, but the 17:58Z Houthi attack on an Aramco building in Riyadh is the exact Middle East escalation headline my trigger excludes, and Jones Act oil-shipping headlines add to the uncertainty. Nothing else on the scan qualifies, so the plan holds with no trade.",
+  "symbol": "EEM"
+ },
+ {
+  "time": "2026-11-12T20:11:08-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Evening check-in: revise. Today's four trades netted about +$1.06, but the three Technology VWAP bounces (AVGO, TSM, MU) drove that result while the stored Technology record is still negative, and the scorecard shows only 44% of picks moved the right way. I'm keeping the stand-aside default, narrowing the watchlist to fewer names, and making the volume check a hard requirement, since it has not been enforced in past logs.",
+  "symbol": "META, XLP, AAPL"
  }
 ]

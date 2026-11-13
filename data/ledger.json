@@ -19646,5 +19646,130 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-12T20:10:25-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Evening check-in",
+  "for_day": "2026-11-13",
+  "decision": "revise",
+  "why": "Health Care is still the only sector with a fresh breakout cluster (JNJ, EW, BDX), and the crash radar is calm at 26. Real Estate has no record, and its scan names are mostly bond funds (BND, AGG, VCIT, VCSH, HYG) with ATRs too small to trade, so I am dropping that lean. The CLSX thesis figures (2.01, 3.63) don't match the 2.85 last price, so I'm using only the verified 2.98 stop.",
+  "summary": "Hold TLS, the CLSX put and the GLD put on their stops. Buy Health Care breakouts only if they close through the scan levels on at least 2.5x relative volume, with 2-ATR stops and roughly $15 of risk per position. Stay out of bond-fund puts and the avoided sectors.",
+  "watchlist": [
+   {
+    "symbol": "EW",
+    "setup": "Health Care near breakout, ROC20 20%, ATR 2.76",
+    "trigger": "Close above 106.04 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "JNJ",
+    "setup": "Health Care broke out today, ATR 6.83",
+    "trigger": "Next close holds above 282.84 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "BDX",
+    "setup": "Health Care near breakout, ATR 4.0",
+    "trigger": "Close above 216.74 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-12T20:10:25-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Health Care"
+  ],
+  "avoid": [
+   "Energy",
+   "Consumer Staples",
+   "Technology",
+   "Broad market / other"
+  ],
+  "why": "Health Care has the only fresh breakout cluster and supportive news, but my record there is small and slightly negative (-2.49 over 2 trades). Real Estate is dropped: no trade record, and its scan names are bond funds rather than real estate. Consumer Discretionary (-15.24) and Financials (-5.58) ar",
+  "expires": "2026-11-26"
+ },
+ {
+  "time": "2026-11-12T20:10:49-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-11-13",
+  "decision": "revise",
+  "why": "No scan name clears the 1:1 stop-to-target floor at live prices (ABT about 0.48:1, OTIS about 0.37:1, TOST about 0.4:1), so the watchlist stays empty. I'm dropping Consumer Staples from the lean-in because its 1-for-1 record is too thin to support it.",
+  "summary": "No new entries. Hold HALO on its 96.66 stop and ALC on its 69.04 stop, and keep the $757 settled cash for a washout that clears 1:1 at live prices.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-12T20:10:49-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "lean_in": [
+   "Health Care"
+  ],
+  "avoid": [
+   "Technology"
+  ],
+  "why": "Health Care has the open HALO trade and the scan's cleanest washout; Consumer Staples' 1-for-1 record (+0.12) is too small to justify a lean-in.",
+  "expires": "2026-11-26"
+ },
+ {
+  "time": "2026-11-12T20:10:56-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Evening check-in",
+  "for_day": "2026-11-13",
+  "decision": "keep",
+  "why": "The EEM trigger is not met: IV/RV is 0.95 at the floor, but the 17:58Z Houthi attack on an Aramco building in Riyadh is the exact Middle East escalation headline my trigger excludes, and Jones Act oil-shipping headlines add to the uncertainty. Nothing else on the scan qualifies, so the plan holds with no trade.",
+  "summary": "No trades tomorrow. Keep the $889 in settled cash. Act on EEM only if IV/RV holds at or above 0.95 with a bear-call trend and the Houthi/Aramco and Hormuz headlines have clearly faded; otherwise pass.",
+  "watchlist": [
+   {
+    "symbol": "EEM",
+    "setup": "Bear call spread, short delta about 0.30, 1-wide, 21-45 DTE",
+    "trigger": "EEM IV/RV at or above 0.95 on the next scan with the bear-call trend intact, and no new Houthi, Aramco, Hormuz or Iran escalation headlines for at least one session",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-12T20:11:08-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-11-13",
+  "decision": "revise",
+  "why": "Today's four trades netted about +$1.06, but the three Technology VWAP bounces (AVGO, TSM, MU) drove that result while the stored Technology record is still negative, and the scorecard shows only 44% of picks moved the right way. I'm keeping the stand-aside default, narrowing the watchlist to fewer names, and making the volume check a hard requirement, since it has not been enforced in past logs.",
+  "summary": "Stand aside unless a Communication Services or Consumer Staples VWAP bounce or opening-range breakout passes all filters: bar-verified relative volume of at least 1.5x, price above VWAP, SPY above its open, and no adverse Technology or headline shock in the first hour. Max $50 per setup, +0.5% target, -0.3% stop, 45-minute limit, flat by the close.",
+  "watchlist": [
+   {
+    "symbol": "META",
+    "setup": "Communication Services opening-range breakout continuation, only if the first 15-minute high breaks on volume after the -0.9% down day.",
+    "trigger": "Break above the first 15-minute high on bar-verified relative volume of at least 1.5x, price above VWAP, SPY above its open. Skip if the open gaps more than 2.5%, if NVDA/AMD/AVGO/MU sell off in the first hour, or if the breakout fades on falling volume.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "XLP",
+    "setup": "Consumer Staples ETF VWAP pullback bounce. Lower conviction after today's time-limit loss, but it is still the cleanest staples setup.",
+    "trigger": "Pullback to VWAP that holds, bar-verified relative volume of at least 1.5x, SPY above its open. Target +0.5%, stop -0.3%, 45-minute limit. Skip if relative volume cannot be verified from bars.",
+    "instrument": "stock",
+    "conviction": 1
+   },
+   {
+    "symbol": "AAPL",
+    "setup": "Consumer Staples VWAP pullback bounce after a mild down day (scan -0.26%, ATR 2.26%). Only if the setup is clean; no forced entry.",
+    "trigger": "Pullback to VWAP that holds, bar-verified relative volume of at least 1.5x, price above VWAP, SPY above its open. Target +0.5%, stop -0.3%, 45-minute limit.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]
