@@ -1,31 +1,5 @@
 [
  {
-  "time": "2026-10-30T16:41:57-04:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "After-close review: revise. SPY fell about 1.8% to 755.72, well below the 769.49 reference, and is now below its 50-day average with the trend flagged as stand-aside. Nasdaq dropped over 3%, more than 60% of S&P 500 components are in bear territory, and Hormuz and Fed headlines add two-way risk. The pre-market SPY bull put thesis no longer holds, even though IV/RV is now 1.34 and the crash radar reads a calm 20.",
-  "symbol": ""
- },
- {
-  "time": "2026-10-30T16:41:57-04:00",
-  "type": "scorecard",
-  "agent": "scalper",
-  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -1.79%"
- },
- {
-  "time": "2026-10-30T16:42:08-04:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "After-close review: revise. Today's four VWAP-pullback trades netted about -$1.48, with three stops on 0.51x to 0.93x relative volume, so the 1.5x gate is still not being enforced and the stops are inside normal noise. The SPY plan rests on the same unverified setup in a session with an active chip selloff and Iran headline risk, so I'm standing aside.",
-  "symbol": ""
- },
- {
-  "time": "2026-10-30T17:30:05-04:00",
-  "type": "param_change",
-  "agent": "trend",
-  "note": "min_rel_volume: 1.75 -> 2.0 (Fewer, higher-conviction breakouts should reduce quick failures. The failed entries came on 1.9x-2.9x volume, so a modest raise filters the weakest setups without starving entries on a small account.)"
- },
- {
   "time": "2026-10-30T17:30:13-04:00",
   "type": "param_change",
   "agent": "meanrev",
@@ -6362,5 +6336,33 @@
   "agent": "scalper",
   "symbol": "MSFT, XLP",
   "note": "stand_down: SPY is still -1.33% on the day and below VWAP, and the semis (NVDA, AMD, AVGO, MU, SOXX) are down 3-7%, so the tape is still weak. MSFT (above VWAP and its opening range) and XLP (above its opening range) are the only clean up-trends, so I'll watch them and reassess if SPY reclaims its open."
+ },
+ {
+  "time": "2026-11-13T11:35:44-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-57%)"
+ },
+ {
+  "time": "2026-11-13T11:36:04-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.64)"
+ },
+ {
+  "time": "2026-11-13T11:36:47-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.02, 0.01; mark 0.07, natural -3.88)"
+ },
+ {
+  "time": "2026-11-13T11:37:06-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MSFT, META, LLY, AAPL",
+  "note": "defensive: SPY is only slightly below VWAP and its 1-minute trend is up, but the semis are still weak, so I'm moving from stand_down to defensive with VWAP bounces at half size only. MSFT (above VWAP and its opening range) and LLY (above its opening range, up-trending) are the cleanest names, with META and AAP"
  }
 ]
