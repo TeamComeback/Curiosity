@@ -19944,5 +19944,33 @@
   ],
   "aggression": "stand_down",
   "why": "SPY is -0.99% and below VWAP on a down 1-minute trend, and most of the liquid names, especially the semis, are weak, so setups are unlikely to hold. META and MSFT are the only firm names; I'll reassess if SPY reclaims its open with volume."
+ },
+ {
+  "time": "2026-11-13T11:05:49-05:00",
+  "type": "trade_closed",
+  "agent": "trend",
+  "position_id": "pos-f9820d2b5e",
+  "symbol": "TLS",
+  "underlying": "TLS",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "entry": 7.36,
+  "exit": 7.312458,
+  "pnl": -0.78,
+  "return_pct": -0.7,
+  "opened": "2026-11-10T10:38:16-05:00",
+  "why_entered": "TLS trades at 7.375, about 2.6% above its 55-day breakout at 7.19, on 3.49x relative volume, so the 2.5x confirmation is met; the 6.53 stop (2 ATR) risks about $14 on roughly 17 shares.",
+  "why_exited": "trailing stop on underlying"
+ },
+ {
+  "time": "2026-11-13T11:07:09-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "MSFT",
+   "XLP"
+  ],
+  "aggression": "stand_down",
+  "why": "SPY is still -1.33% on the day and below VWAP, and the semis (NVDA, AMD, AVGO, MU, SOXX) are down 3-7%, so the tape is still weak. MSFT (above VWAP and its opening range) and XLP (above its opening range) are the only clean up-trends, so I'll watch them and reassess if SPY reclaims its open."
  }
 ]
