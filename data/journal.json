@@ -1,82 +1,5 @@
 [
  {
-  "time": "2026-11-02T12:06:06-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-59%)"
- },
- {
-  "time": "2026-11-02T12:06:38-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-97%)"
- },
- {
-  "time": "2026-11-02T12:06:59-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, TSLA, KRE",
-  "note": "stand_down: Only $0.16 is settled, so no new trade can be funded today, and the overnight SPY reclaim is unfunded and unconfirmed (SPY is below VWAP and trending down). Recent VWAP bounces stopped out, so stay flat; the tighter 4-slice setup is for when the $1,003 settles tomorrow."
- },
- {
-  "time": "2026-11-02T12:36:06-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-55%)"
- },
- {
-  "time": "2026-11-02T12:36:38-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-96%)"
- },
- {
-  "time": "2026-11-02T12:39:02-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-59%)"
- },
- {
-  "time": "2026-11-02T12:39:33-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-98%)"
- },
- {
-  "time": "2026-11-02T12:39:55-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, NVDA, MSFT, AAPL",
-  "note": "stand_down: Only $0.16 is settled today, so no new trade can be funded, and SPY is below VWAP with no confirmed reclaim. Recent VWAP bounces stopped out, so stay flat and keep the 4-slice setup for when the $1,003 settles tomorrow."
- },
- {
-  "time": "2026-11-02T13:05:38-05:00",
-  "type": "close",
-  "agent": "trend",
-  "symbol": "BP",
-  "qty": 1.013,
-  "entry": 49.36,
-  "exit": 47.94,
-  "pnl": -1.44,
-  "note": "trailing stop on underlying",
-  "opened": "2026-10-16T10:05:54-04:00",
-  "confidence": 3,
-  "thesis": "BP broke above its 55-day high at 49.21 on 1.7x relative volume with a 6.6% 20-day rate of change, and it is 17% above its 200-day SMA; the 47.12 stop risks about $2.24 per share and the position is uncorrelated with the short puts."
- },
- {
-  "time": "2026-11-02T13:06:10-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-52%)"
- },
- {
   "time": "2026-11-02T13:06:41-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6316,5 +6239,68 @@
   "opened": "2026-11-13T15:04:03-05:00",
   "confidence": 3,
   "thesis": "VWAP pullback bounce on SPY: 2.86x volume, +0.17% vs VWAP; target +0.5%, stop -0.3%"
+ },
+ {
+  "time": "2026-11-13T16:40:21-05:00",
+  "type": "recap",
+  "note": "A quiet, calm-tape Friday (radar 24): 6 trades closed for 3 wins, 2 losses and 1 flat, and +$3.41 realized across the board. Snapback Partners had the best day, while Trend Co. lost the most."
+ },
+ {
+  "time": "2026-11-13T16:40:21-05:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 4 of 4 picks moved the planned way, avg +0.90%"
+ },
+ {
+  "time": "2026-11-13T16:40:49-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: revise. No Health Care trigger has fired on 2.5x volume, but fresh breakouts in ASND, BDX and EW make the sector worth keeping, so I'm tightening levels to the current scan and dropping the weakest candidates.",
+  "symbol": "EW, ASND, RPRX, BDX"
+ },
+ {
+  "time": "2026-11-13T16:40:49-05:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 0 of 0 picks moved the planned way"
+ },
+ {
+  "time": "2026-11-13T16:41:05-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "note": "Leaning into no sector; avoiding Technology. Technology is 1-for-3 for -14.20. Health Care was dropped from lean-in because it has zero closed trades and no scan name clears 1:1. Broad market is 5 wins from 7 trades but -8.10 pnl, so I'm not leaning in there. The Industrials, Financials, Consumer Discretionary and Consumer Staples wins are one"
+ },
+ {
+  "time": "2026-11-13T16:41:05-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: revise. ALC already closed at 73.80 (+3.26), so its position plan is stale and removed. Health Care has no closed trades to back a lean-in, so I'm dropping it. Nothing new clears the 1:1 floor: VRTX is about 0.3:1 and MRNA about 0.66:1, and HALO's stop-to-target is now roughly 3.4:1 from the 100.30 price.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-13T16:41:05-05:00",
+  "type": "scorecard",
+  "agent": "volsell",
+  "note": "Plan graded: 1 of 1 picks moved the planned way, avg +0.34%"
+ },
+ {
+  "time": "2026-11-13T16:41:15-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "After-close review: revise. Today's Fed-hike commentary (Daly, Collins) strengthens the rate-down thesis, which points to bear calls on TLT rather than the bull put I passed. My old avoid note was written against the bull put side, so it doesn't rule out a bear call. TLT IV/RV is 1.15, above my floor, and the trend side matches.",
+  "symbol": "TLT, EEM"
+ },
+ {
+  "time": "2026-11-13T16:41:15-05:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 2 of 2 picks moved the planned way, avg +1.70%"
+ },
+ {
+  "time": "2026-11-13T16:41:26-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. The pre-market META setup assumed a down day, but META closed +2.95% and is now extended, so the thesis has changed. Today's VWAP bounces (SPY and QQQ timed out flat, META gave back its gain) add to the evidence that the playbook is thin, and Technology's 51-trade record remains negative.",
+  "symbol": "META, AAPL"
  }
 ]
