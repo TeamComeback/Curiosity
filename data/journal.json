@@ -1,46 +1,5 @@
 [
  {
-  "time": "2026-11-02T10:09:43-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "KRE",
-  "instrument": "stock",
-  "qty": 3.4242,
-  "price": 73.23,
-  "cost": 250.75,
-  "stop": 73.01,
-  "thesis": "VWAP pullback bounce on KRE: 0.53x volume, +0.38% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-11-02T10:32:02-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "GLD",
-  "qty": 0.6902,
-  "entry": 363.294,
-  "exit": 362.264,
-  "pnl": -0.72,
-  "note": "stop (-0.32%)",
-  "opened": "2026-11-02T09:53:31-05:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on GLD: 0.45x volume, +0.21% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-11-02T10:36:11-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "IREN",
-  "note": "near max value (1.80 of 2 wide)"
- },
- {
-  "time": "2026-11-02T10:36:42-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-52%)"
- },
- {
   "time": "2026-11-02T10:37:14-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6330,5 +6289,33 @@
   "agent": "scalper",
   "symbol": "META, QQQ, SPY",
   "note": "stand_down: Both of today's slices are already used and no scalps are open, so no new entries are possible before the close. Keeping META, QQQ, and SPY on watch for next session's planning while the tape stays mixed with semis under pressure."
+ },
+ {
+  "time": "2026-11-13T14:35:50-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-57%)"
+ },
+ {
+  "time": "2026-11-13T14:36:12-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.57)"
+ },
+ {
+  "time": "2026-11-13T14:37:37-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-96%) (tried 0.10, 0.07, 0.04, 0.01; mark 0.15, natural -2.52)"
+ },
+ {
+  "time": "2026-11-13T14:37:51-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, META, AAPL",
+  "note": "defensive: Both slices are used and no scalps are open, so this only shapes the next session. SPY is above its 200-day with a calm crash radar, but semis are weak and the tape is mixed, so I'd keep VWAP bounces at half size on a few liquid names."
  }
 ]
