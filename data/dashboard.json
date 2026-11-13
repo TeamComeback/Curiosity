@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T12:40-05:00",
+ "updated": "2026-11-13T12:52-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -75,7 +75,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 996.1,
+   "equity": 996.11,
    "cash": 757.36,
    "available": 757.36,
    "settling": 0,
@@ -147,7 +147,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 972.73,
+   "equity": 972.89,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
@@ -170,7 +170,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 927.38,
+   "equity": 927.43,
    "cash": 581.98,
    "available": 492.23,
    "settling": 89.75,
@@ -229,19 +229,19 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 1001.73,
-   "cash": 1001.73,
-   "available": 751.44,
+   "equity": 1001.81,
+   "cash": 751.36,
+   "available": 501.07,
    "settling": 250.29,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
    "progress_pct": 10.02,
-   "open": 0,
+   "open": 1,
    "closed": 89,
    "win_rate": 44.9,
    "max_dd_pct": 0.7,
-   "risk_adj": 0.03,
+   "risk_adj": 0.04,
    "notes": [
     {
      "date": "2026-10-23",
@@ -577,12 +577,12 @@
    "date": "2026-11-13",
    "agents": {
     "trend": 715.52,
-    "meanrev": 996.1,
+    "meanrev": 996.11,
     "volsell": 889.0,
-    "baseline": 972.73,
-    "monkey": 927.38,
+    "baseline": 972.89,
+    "monkey": 927.43,
     "blackswan": -391.26,
-    "scalper": 1001.73,
+    "scalper": 1001.81,
     "hyper": 999.71
    }
   }
@@ -642,7 +642,7 @@
    "opt_type": null,
    "qty": 1.1615,
    "entry": 103.21,
-   "last": 100.325,
+   "last": 100.2,
    "mark": null,
    "stop": 96.66,
    "expiry": null,
@@ -664,7 +664,7 @@
    "opt_type": null,
    "qty": 1.6721,
    "entry": 71.85,
-   "last": 73.09,
+   "last": 73.185,
    "mark": null,
    "stop": 69.04,
    "expiry": null,
@@ -686,7 +686,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 752.09,
+   "last": 752.21,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -708,7 +708,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 752.09,
+   "last": 752.21,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -730,7 +730,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 752.09,
+   "last": 752.21,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -752,7 +752,7 @@
    "opt_type": null,
    "qty": 2.3861,
    "entry": 110.74,
-   "last": 113.555,
+   "last": 113.53,
    "mark": null,
    "stop": 91.66,
    "expiry": null,
@@ -774,7 +774,7 @@
    "opt_type": null,
    "qty": 0.4433,
    "entry": 173.658,
-   "last": 167.93,
+   "last": 168.175,
    "mark": null,
    "stop": 154.12,
    "expiry": null,
@@ -829,9 +829,58 @@
    "realized": null,
    "play": "weak_stock",
    "width": 5.0
+  },
+  {
+   "agent": "scalper",
+   "position_id": "pos-19729d2ab7",
+   "kind": "stock",
+   "symbol": "QQQ",
+   "underlying": null,
+   "structure": null,
+   "opt_type": null,
+   "qty": 0.3696,
+   "entry": 677.402,
+   "last": 677.63,
+   "mark": null,
+   "stop": 675.6,
+   "expiry": null,
+   "opened": "2026-11-13T12:52:55-05:00",
+   "thesis": "VWAP pullback bounce on QQQ: 1.53x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%",
+   "confidence": 3,
+   "cost": 250.37,
+   "realized": null,
+   "play": "scalp",
+   "width": null
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-13T12:52:55-05:00",
+   "type": "open",
+   "agent": "scalper",
+   "symbol": "QQQ",
+   "instrument": "stock",
+   "qty": 0.3696,
+   "price": 677.402,
+   "cost": 250.37,
+   "stop": 675.6,
+   "thesis": "VWAP pullback bounce on QQQ: 1.53x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%",
+   "confidence": 3
+  },
+  {
+   "time": "2026-11-13T12:42:50-05:00",
+   "type": "skip",
+   "agent": "scalper",
+   "symbol": "IWM",
+   "note": "VWAP pullback bounce skipped: 0.91x volume < 1.5x"
+  },
+  {
+   "time": "2026-11-13T12:42:50-05:00",
+   "type": "skip",
+   "agent": "scalper",
+   "symbol": "SPY",
+   "note": "VWAP pullback bounce skipped: 0.91x volume < 1.5x"
+  },
   {
    "time": "2026-11-13T12:40:47-05:00",
    "type": "playbook",
@@ -1249,27 +1298,6 @@
    "agent": "scalper",
    "symbol": "SPY, QQQ, IWM",
    "note": "stand_down: It's 3:38 PM with the code flattening everything by 3:50, so a new scalp would have about 12 minutes and little room to reach target. Staying flat protects the day's small gain (equity $1,001.84), and the overnight ideas are for tomorrow, not this session."
-  },
-  {
-   "time": "2026-11-12T15:37:58-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-98%) (tried 0.03, 0.02, 0.01; mark 0.08, natural -4.17)"
-  },
-  {
-   "time": "2026-11-12T15:36:55-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.97)"
-  },
-  {
-   "time": "2026-11-12T15:36:33-05:00",
-   "type": "exit_unfilled",
-   "agent": "trend",
-   "symbol": "CLSX261218P00002000",
-   "note": "option stop (-62%)"
   }
  ],
  "reviews": [
@@ -3613,7 +3641,7 @@
   }
  },
  "compliance_today": {
-  "approved": 1,
+  "approved": 2,
   "denied": 0,
   "last_denied": null
  },
