@@ -54,7 +54,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.05,
-     "mark": 0.76,
+     "mark": 0.74,
      "expiry": "2026-12-18",
      "strike": 310.0,
      "delta": -0.07,
@@ -84,10 +84,6 @@
    "peak": 1340.54,
    "max_dd": 0.467,
    "notes": [
-    {
-     "date": "2026-11-10",
-     "note": "Only candidate TLS is already held from this morning's 3.5x-volume breakout, so no new entries. Keep ABNB (stop 182.51), CLSX put and DJTU put on their stops, and hold settled cash for a confirmed 2.5x-volume breakout."
-    },
     {
      "date": "2026-11-10",
      "note": "No new entries: TLS is already held from the 3.5x-volume breakout and is the only candidate. Holding ABNB, CLSX put and DJTU put on their stops; ~$373 settled cash waits for an EW, MRNA, or ADT close above trigger on at least 2.5x volume."
@@ -243,6 +239,10 @@
     {
      "date": "2026-11-13",
      "note": "Passed on the NBIG, NEBX and PSFE breakdown puts. All are Broad market / other, which is on our avoid list with a -57 P&L record, and the stops sit 25-90% above price. Holding TLS, the CLSX put and the GLD put on their stops, and keeping the $483 settled cash for a 2.5x-volume Health Care close (EW "
+    },
+    {
+     "date": "2026-11-13",
+     "note": "No trade. The three puts (NBIG, NEBX, PSFE) are Broad market / other breakdowns in a sector where my record is -57, and the SPY uptrend argues against shorts. Health Care triggers (EW 106.04, RPRX 70.25, VTRS 21.10, BDX 216.74) have not fired on 2.5x volume. Keep the $483 settled cash for a confirme"
     }
    ],
    "last_exits": {
@@ -1094,7 +1094,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 100.31
+     "last": 100.325
     },
     "pos-38ef0e24a8": {
      "kind": "stock",
@@ -1125,10 +1125,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-10",
-     "note": "No entries at 13:38. TEAM is the only candidate above the 1:1 floor (about 1.21:1 on scan prices), but it's on the Technology avoid list with analyst target cuts and an unresolved AI rout, so I'm passing again. Holding PM to its 184.94 stop and 202.28 target; watch HALO and PAYC for a repriced 1:1 s"
-    },
     {
      "date": "2026-11-10",
      "note": "No entries at 14:07: live reward-to-risk is below my 1:1 floor on SHEL (~0.68), WDAY (~0.6), CVX, BP, and PAYC (~0.70, and still above its 236 trigger). TEAM is the only candidate above 1:1 (~1.15), but it is on the Technology avoid list with analyst target cuts, so I'm passing. Holding PM to its 18"
@@ -1284,6 +1280,10 @@
     {
      "date": "2026-11-13",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (best are MRNA ~0.56:1 and GMAB ~0.54:1), so I'm holding HALO and ALC on their stops and keeping the $757 settled cash."
+    },
+    {
+     "date": "2026-11-13",
+     "note": "No candidate clears my 1:1 stop-to-target floor at live prices (PFE ~0.35:1, VRTX ~0.27:1, MRNA ~0.57:1, GMAB ~0.54:1, VEEV ~0.28:1, HALO ~0.23:1 on the scan target). Holding HALO and ALC on their stops and keeping $757 settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2380,7 +2380,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 751.98
+     "last": 752.09
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2396,7 +2396,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 751.98
+     "last": 752.09
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2412,7 +2412,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 751.98
+     "last": 752.09
     }
    },
    "status": "active",
@@ -2445,7 +2445,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 113.465
+     "last": 113.555
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2462,7 +2462,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 167.86
+     "last": 167.93
     }
    },
    "status": "active",
@@ -2562,7 +2562,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.11,
+     "mark": 0.1,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2582,7 +2582,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.87,
+     "exit_half_spread": 3.935,
      "peak_mark": 1.09
     }
    },
@@ -3147,17 +3147,17 @@
    ],
    "playbook": {
     "date": "2026-11-13",
-    "made_at": "2026-11-13T12:37-05:00",
+    "made_at": "2026-11-13T12:40-05:00",
     "watch": [
      "MSFT",
      "LLY",
      "SPY",
      "QQQ",
      "META",
-     "AAPL"
+     "IWM"
     ],
     "aggression": "defensive",
-    "why": "The crash radar is calm and SPY is trending up, but semis are weak and the morning META trade gave back its gain, so VWAP bounces stay at half size. MSFT and LLY are above their opening ranges and VWAP, making them the cleanest names, and SPY has a live VWAP bounce setup.",
+    "why": "The crash radar is calm and SPY is trending up, but semis are weak and META just gave back its gain, so VWAP bounces stay at half size. I dropped AAPL, which is below VWAP and trending down, and added IWM, which is holding VWAP with an uptrend.",
     "slices": 2,
     "target_pct": 0.5,
     "stop_pct": 0.3,
