@@ -1,45 +1,5 @@
 [
  {
-  "time": "2026-11-02T09:36:56-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-86%)"
- },
- {
-  "time": "2026-11-02T09:37:04-05:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "ILMN",
-  "instrument": "stock",
-  "qty": 0.6522,
-  "price": 233.008,
-  "cost": 151.97,
-  "stop": 196.33,
-  "thesis": "ILMN RSI(2) 5.8 washout 30.6% above its 200-day in a calm regime (crash radar 25, SPY above its 200-day); target 264.77 vs stop 196.33 is about 1.03:1, the only candidate clearing my 1:1 floor, sized at the $150 plan cap as a low-conviction starter.",
-  "confidence": 2
- },
- {
-  "time": "2026-11-02T09:37:16-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, AMZN, XLP, GLD",
-  "note": "defensive: Most candidates are flat or choppy with narrow ranges, so I'm keeping risk small. Defensive mode lets only VWAP bounces trade at half size, and I'm avoiding the tech and communication names the overnight plan says to skip. AMZN is the one clean uptrend above its opening range, with SPY, XLP, and GLD"
- },
- {
-  "time": "2026-11-02T09:51:30-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "XLP",
-  "instrument": "stock",
-  "qty": 2.7703,
-  "price": 90.49,
-  "cost": 250.68,
-  "stop": 90.24,
-  "thesis": "VWAP pullback bounce on XLP: 0.17x volume, +0.42% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-11-02T09:53:31-05:00",
   "type": "open",
   "agent": "scalper",
@@ -6367,5 +6327,33 @@
   "stop": 675.6,
   "thesis": "VWAP pullback bounce on QQQ: 1.53x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%",
   "confidence": 3
+ },
+ {
+  "time": "2026-11-13T13:05:50-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-57%)"
+ },
+ {
+  "time": "2026-11-13T13:06:12-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.56)"
+ },
+ {
+  "time": "2026-11-13T13:07:37-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.05, 0.04, 0.02, 0.01; mark 0.10, natural -3.78)"
+ },
+ {
+  "time": "2026-11-13T13:07:53-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MSFT, LLY, META",
+  "note": "stand_down: Most of the liquid tape is down on the day with 1-minute trends pointing down, and SPY is slipping while semis sell off, so new longs are unlikely to work. Both slices are already used today (META round trip and the open QQQ scalp), so I'm standing down on new entries and keeping MSFT, LLY, and META"
  }
 ]
