@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-10-30T13:08:26-04:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "IWM",
-  "note": "credit not filled at 0.29, 0.27, 0.25, 0.23 (mid 0.29, natural 0.23, floor 0.15)"
- },
- {
-  "time": "2026-10-30T13:08:36-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, META, AMZN, TSLA",
-  "note": "defensive: Settled cash is about zero today, so no new entries can execute before tomorrow's settlement. For tomorrow I'm keeping the wider 0.5% stop, since today's 0.4% stops were hit by noise, and running defensive with two slices because the tape has been choppy and most names are trading below VWAP."
- },
- {
-  "time": "2026-10-30T13:36:26-04:00",
-  "type": "close",
-  "agent": "monkey",
-  "symbol": "QQQ",
-  "qty": 0.4021,
-  "entry": 712.76,
-  "exit": 688.222,
-  "pnl": -9.87,
-  "note": "stop loss",
-  "opened": "2026-10-29T09:37:35-04:00",
-  "confidence": 0,
-  "thesis": "Dart landed on QQQ"
- },
- {
-  "time": "2026-10-30T13:36:57-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "IREN",
-  "note": "near max value (1.75 of 2 wide)"
- },
- {
-  "time": "2026-10-30T13:37:29-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
   "time": "2026-10-30T13:38:33-04:00",
   "type": "open",
   "agent": "volsell",
@@ -6341,5 +6299,47 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. Tech headline risk is still heavy (Huang exit, SpaceX/Tesla), and today's scan gives no fresh staples or Comm Services edge beyond a -0.26% AAPL and -0.9% META move. I'm dropping XLP because it has no scan data here and lost last time. I'm also making the relative-volume gate a hard skip, since the logs show it was never enforced.",
   "symbol": "META, AAPL"
+ },
+ {
+  "time": "2026-11-13T09:36:08-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-13T09:36:09-05:00",
+  "type": "close",
+  "agent": "monkey",
+  "symbol": "TXN",
+  "qty": 0.291,
+  "entry": 305.686,
+  "exit": 308.422,
+  "pnl": 0.8,
+  "note": "random holding period over (2 days)",
+  "opened": "2026-11-11T10:09:23-05:00",
+  "confidence": 0,
+  "thesis": "Dart landed on TXN"
+ },
+ {
+  "time": "2026-11-13T09:36:29-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.62)"
+ },
+ {
+  "time": "2026-11-13T09:37:56-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.06, 0.04, 0.03, 0.01; mark 0.11, natural -4.02)"
+ },
+ {
+  "time": "2026-11-13T09:38:09-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "META, AAPL, GOOGL, MSFT",
+  "note": "defensive: Broad tape is soft: SPY is -0.42% and under VWAP with a down 1-minute trend, so the overnight 'SPY above open' condition fails for now. Defensive keeps only VWAP bounces at half size in the cleaner names (META, AAPL) and can flip to normal if SPY reclaims its open with volume."
  }
 ]

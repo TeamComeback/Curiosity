@@ -19867,5 +19867,35 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-13T09:36:09-05:00",
+  "type": "trade_closed",
+  "agent": "monkey",
+  "position_id": "pos-4c91c52c63",
+  "symbol": "TXN",
+  "underlying": "TXN",
+  "sector": "Technology",
+  "instrument": "stock",
+  "entry": 305.686,
+  "exit": 308.422,
+  "pnl": 0.8,
+  "return_pct": 0.9,
+  "opened": "2026-11-11T10:09:23-05:00",
+  "why_entered": "Dart landed on TXN",
+  "why_exited": "random holding period over (2 days)"
+ },
+ {
+  "time": "2026-11-13T09:38:09-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "META",
+   "AAPL",
+   "GOOGL",
+   "MSFT"
+  ],
+  "aggression": "defensive",
+  "why": "Broad tape is soft: SPY is -0.42% and under VWAP with a down 1-minute trend, so the overnight 'SPY above open' condition fails for now. Defensive keeps only VWAP bounces at half size in the cleaner names (META, AAPL) and can flip to normal if SPY reclaims its open with volume."
  }
 ]
