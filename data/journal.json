@@ -1,31 +1,5 @@
 [
  {
-  "time": "2026-10-30T17:30:13-04:00",
-  "type": "param_change",
-  "agent": "meanrev",
-  "note": "stop_atr: 2.5 -> 2.0 (A modestly tighter stop lifts reward/risk on near-miss setups like TEAM at ~0.99:1 above the 1:1 floor, so I deploy cash more often. It stays well inside the bounds and keeps per-trade loss small, so )"
- },
- {
-  "time": "2026-11-01T21:36:18-05:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Evening check-in: revise. The old plan is from 10-30 and assumes sale proceeds that have not arrived, and its watchlist items cost more than the $2.01 cash. Today's scan shows fresh Energy and Health Care breakouts, so I'm refreshing the triggers at the 2.0x volume rule.",
-  "symbol": "XOM, LNG, COP, GILD"
- },
- {
-  "time": "2026-11-01T21:36:50-05:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Evening check-in: revise. The fresh scan shows one new candidate, ILMN, with RSI(2) 7.0 and roughly 1.1:1 on my target-to-stop proxy, so I'm adding it as a conditional entry; HPQ and TWLO stay unchanged.",
-  "symbol": "ILMN"
- },
- {
-  "time": "2026-11-01T21:37:01-05:00",
-  "type": "focus",
-  "agent": "volsell",
-  "note": "Leaning into Broad market / other, Financials; avoiding Energy, Materials, Technology. Results are still empty, so the focus rests on the scan. Financials has the clearest scan setup (XLF IV/RV 1.45 with a bull-put trend, and TLT's bull put fits the same rates-driven pattern). Energy and Materials fail on fills or have IV/RV below 1.0, and Technology carries AI-credit gap risk after t"
- },
- {
   "time": "2026-11-01T21:37:01-05:00",
   "type": "plan",
   "agent": "volsell",
@@ -6364,5 +6338,33 @@
   "agent": "scalper",
   "symbol": "MSFT, META, LLY, AAPL",
   "note": "defensive: SPY is only slightly below VWAP and its 1-minute trend is up, but the semis are still weak, so I'm moving from stand_down to defensive with VWAP bounces at half size only. MSFT (above VWAP and its opening range) and LLY (above its opening range, up-trending) are the cleanest names, with META and AAP"
+ },
+ {
+  "time": "2026-11-13T12:05:44-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-57%)"
+ },
+ {
+  "time": "2026-11-13T12:06:05-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.6)"
+ },
+ {
+  "time": "2026-11-13T12:06:48-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.02, 0.01; mark 0.07, natural -3.93)"
+ },
+ {
+  "time": "2026-11-13T12:07:05-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MSFT, LLY, SPY, QQQ, AAPL",
+  "note": "defensive: Crash radar is calm and SPY is in an uptrend, but semis are weak and the morning's META trade gave back its gain, so I'm keeping VWAP bounces at half size. MSFT is above both VWAP and its opening range and LLY is above its opening range, so they are the cleanest names; I'm dropping the semis (SOXL i"
  }
 ]
