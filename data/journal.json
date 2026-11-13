@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-02T13:06:41-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-97%)"
- },
- {
-  "time": "2026-11-02T13:07:02-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, NVDA, AAPL, KRE",
-  "note": "stand_down: Only $0.16 is settled, so no new trade can be funded today, and the last two VWAP bounces (XLP, GLD) stopped out. Hold the 4-slice, 0.5% target, 0.3% stop setup for tomorrow when the $1,003 settles."
- },
- {
-  "time": "2026-11-02T13:36:05-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-51%)"
- },
- {
-  "time": "2026-11-02T13:36:36-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-98%)"
- },
- {
   "time": "2026-11-02T14:05:57-05:00",
   "type": "exit_unfilled",
   "agent": "trend",
@@ -6302,5 +6274,29 @@
   "agent": "scalper",
   "note": "After-close review: revise. The pre-market META setup assumed a down day, but META closed +2.95% and is now extended, so the thesis has changed. Today's VWAP bounces (SPY and QQQ timed out flat, META gave back its gain) add to the evidence that the playbook is thin, and Technology's 51-trade record remains negative.",
   "symbol": "META, AAPL"
+ },
+ {
+  "time": "2026-11-13T17:30:05-05:00",
+  "type": "param_change",
+  "agent": "trend",
+  "note": "breakout_lookback: 55 -> 40 (A 55-day high is a late trigger, so entries come after the move is extended and then reverse (XLV, ALL failed right after the breakout). A 40-day lookback should enter earlier in established trends, w)"
+ },
+ {
+  "time": "2026-11-13T17:30:05-05:00",
+  "type": "param_change",
+  "agent": "trend",
+  "note": "opt_delta: 0.5 -> 0.637 (The 0.5-delta puts on low-priced, extremely volatile names were hit by the -61% option stop and lost a lot (DJTU -122, VALE -25.5). A higher delta means more intrinsic value and less time-value decay,)"
+ },
+ {
+  "time": "2026-11-13T17:30:26-05:00",
+  "type": "param_change",
+  "agent": "volsell",
+  "note": "short_delta: 0.3 -> 0.22 (Moving the short strike further out-of-the-money raises win probability and gives more room before the 2x stop is hit. Credits will shrink, but the stop-outs show 0.30 delta was too aggressive for a s)"
+ },
+ {
+  "time": "2026-11-13T17:30:26-05:00",
+  "type": "param_change",
+  "agent": "volsell",
+  "note": "min_iv_rv: 0.95 -> 1.15 (A 0.95 floor accepts marginal setups, such as the 1.09-1.27 TLT looks that kept failing. Requiring at least 1.2 means I only sell premium when implied vol is clearly rich versus realized, and the filt)"
  }
 ]

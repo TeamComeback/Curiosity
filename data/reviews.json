@@ -1371,5 +1371,382 @@
     }
    }
   }
+ },
+ {
+  "date": "2026-11-13",
+  "agents": {
+   "trend": {
+    "summary": "Equity fell from 883.54 to 715.52 this week (-172.24), with a 23.1% win rate and a 46.8% max drawdown. Most of the loss was one DJTU put that hit its option stop for -122 (a low-priced, 87%-below-200-day stock with a 13x volume spike). The other five trades lost small amounts, and three of them were quick breakout failures. A 55-day lookback with 2.5x volume is catching false breakouts in a choppy market, but the stops are cutting losses fast, so I will make a small adjustment.",
+    "applied": [
+     {
+      "agent": "trend",
+      "param": "breakout_lookback",
+      "old": 55,
+      "new": 40,
+      "reason": "A 55-day high is a late trigger, so entries come after the move is extended and then reverse (XLV, ALL failed right after the breakout). A 40-day lookback should enter earlier in established trends, w"
+     },
+     {
+      "agent": "trend",
+      "param": "opt_delta",
+      "old": 0.5,
+      "new": 0.637,
+      "reason": "The 0.5-delta puts on low-priced, extremely volatile names were hit by the -61% option stop and lost a lot (DJTU -122, VALE -25.5). A higher delta means more intrinsic value and less time-value decay,"
+     }
+    ],
+    "stats": {
+     "equity_now": 715.52,
+     "equity_week_ago": 883.54,
+     "closed_trades": 13,
+     "closed_this_week": 6,
+     "week_pnl": -172.24,
+     "win_rate": 23.1,
+     "avg_win": 45.07,
+     "avg_loss": -20.41,
+     "max_drawdown_pct": 46.8,
+     "avg_pnl_by_confidence": {
+      "3": -7.43,
+      "4": 1.8
+     },
+     "this_week_trades": [
+      {
+       "symbol": "XLV",
+       "pnl": -3.14,
+       "note": "agent: Breakout failed: XLV closed at 184.99, below the 187.98 breakout level. Exit per game plan at the open.",
+       "thesis": "XLV is trading at 188.19, just above its 55-day breakout at 187.98, on 2.9x relative volume with roc20 +10.1% and 18.4% above its 200-day SMA. The 181.99 stop limits risk to about 3.3%, and Health Care is a lean-in sector with the cleanest breakout that doesn't depend on the unconfirmed EXEL/EW triggers.",
+       "confidence": 3
+      },
+      {
+       "symbol": "ALL",
+       "pnl": -5.58,
+       "note": "agent: Breakout failed: ALL closed at 266.89, below the 270.62 breakout level. Exit per game plan at the open.",
+       "thesis": "ALL cleared its 55-day high at 270.62 on 2.2x relative volume with roc20 +20% and 18% above its 200-day SMA; the 259.51 stop caps risk near 4% of the position, and a stock entry avoids the option-fit problems that blocked the puts.",
+       "confidence": 3
+      },
+      {
+       "symbol": "VALE261218P00012000",
+       "pnl": -25.5,
+       "note": "trailing stop on underlying",
+       "thesis": "VALE closed below its 55-day low at 11.79 on 2.0x relative volume with roc20 at -11.8%, and it sits 23% below its 200-day SMA, so the breakdown is confirmed; the 12.52 stop sits above the breakdown level.",
+       "confidence": 3
+      },
+      {
+       "symbol": "ABNB",
+       "pnl": -15.24,
+       "note": "trailing stop on underlying",
+       "thesis": "ABNB closed above its 55-day breakout at 193.41 on 2.61x relative volume (above the 2.5x minimum), 31.5% above its 200-day SMA, so the uptrend is intact; the 182.51 stop limits risk to about $15 (roughly 1.7% of equity).",
+       "confidence": 3
+      },
+      {
+       "symbol": "DJTU261218P00002000",
+       "pnl": -122.0,
+       "note": "option stop (-61%)",
+       "thesis": "DJTU broke below its 55-day low at 2.29 on 13x relative volume and trades at 2.015, 87% below its 200-day SMA, so a put with the 3.03 underlying stop caps the risk.",
+       "confidence": 4
+      },
+      {
+       "symbol": "TLS",
+       "pnl": -0.78,
+       "note": "trailing stop on underlying",
+       "thesis": "TLS trades at 7.375, about 2.6% above its 55-day breakout at 7.19, on 3.49x relative volume, so the 2.5x confirmation is met; the 6.53 stop (2 ATR) risks about $14 on roughly 17 shares.",
+       "confidence": 3
+      }
+     ]
+    }
+   },
+   "meanrev": {
+    "summary": "Review failed (ValueError).",
+    "applied": [],
+    "stats": {
+     "equity_now": 997.44,
+     "equity_week_ago": 994.35,
+     "closed_trades": 14,
+     "closed_this_week": 11,
+     "week_pnl": -2.19,
+     "win_rate": 64.3,
+     "avg_win": 3.62,
+     "avg_loss": -9.88,
+     "max_drawdown_pct": 4.2,
+     "avg_pnl_by_confidence": {
+      "2": -1.44,
+      "3": -0.6
+     },
+     "this_week_trades": [
+      {
+       "symbol": "TWLO",
+       "pnl": 1.5,
+       "note": "time stop",
+       "thesis": "TWLO RSI(2) 1.0 washout 5.8% above its 200-day in a calm regime; live target 242.85 vs stop 162.55 is about 1.18:1, clearing my 1:1 floor where the stale plan's 0.45 no longer applies, so I'm taking a small starter given the 17.9% five-day drop.",
+       "confidence": 2
+      },
+      {
+       "symbol": "SHOP",
+       "pnl": 1.91,
+       "note": "snap-back (RSI2 56)",
+       "thesis": "SHOP RSI(2) 0.9 washout 9.8% above its 200-day in a calm regime (crash radar 32, SPY above its 200-day); target 158.31 vs stop 127.83 is about 1.07:1 on the scan price, clearing my 1:1 floor, so I'm taking a small starter with the $44 settled cash.",
+       "confidence": 2
+      },
+      {
+       "symbol": "ILMN",
+       "pnl": -12.09,
+       "note": "time stop",
+       "thesis": "ILMN RSI(2) 5.8 washout 30.6% above its 200-day in a calm regime (crash radar 25, SPY above its 200-day); target 264.77 vs stop 196.33 is about 1.03:1, the only candidate clearing my 1:1 floor, sized at the $150 plan cap as a low-conviction starter.",
+       "confidence": 2
+      },
+      {
+       "symbol": "ZBRA",
+       "pnl": 2.45,
+       "note": "snap-back (RSI2 52)",
+       "thesis": "ZBRA is an RSI(2) 0.4 washout 13% above its 200-day, with target 360.24 vs stop 294.68 at about 1.9:1 on the scan price, clearing my 1:1 floor comfortably.",
+       "confidence": 3
+      },
+      {
+       "symbol": "SWKS",
+       "pnl": 9.56,
+       "note": "time stop",
+       "thesis": "SWKS RSI(2) 2.6 washout 12.4% above its 200-day in a calm regime (crash radar 29, SPY above its 200-day); target 84.73 vs stop 69.76 is about 1.28:1 on the scan price, the only unheld candidate clearing my 1:1 floor, so I'm committing most of the $133 settled cash.",
+       "confidence": 3
+      },
+      {
+       "symbol": "URI",
+       "pnl": 7.04,
+       "note": "snap-back (RSI2 65)",
+       "thesis": "URI RSI(2) 2.1 washout 7.7% above its 200-day in a calm regime; live scan target 1138.49 vs stop 970.31 is about 1.13:1, clearing my 1:1 floor on current prices even though the stale game-plan avoid listed it at 0.56:1.",
+       "confidence": 2
+      },
+      {
+       "symbol": "DT",
+       "pnl": -10.55,
+       "note": "time stop",
+       "thesis": "DT is a fresh RSI(2) 0.1 washout still 6% above its 200-day, with target 56.80 vs stop 42.87 at about 2.1:1 on the scan price; this is a new setup after yesterday's stop-out, not a re-run of the old trade.",
+       "confidence": 3
+      },
+      {
+       "symbol": "XOP",
+       "pnl": -3.86,
+       "note": "time stop",
+       "thesis": "XOP is an RSI(2) 2.9 washout 3.5% above its 200-day in a calm regime, sitting inside the game-plan trigger (177.48 vs 182.85 max); target 189.11 vs stop 166.62 is about 1.07:1, clearing my 1:1 floor.",
+       "confidence": 3
+      },
+      {
+       "symbol": "CNQ",
+       "pnl": -1.53,
+       "note": "time stop",
+       "thesis": "CNQ RSI(2) 3.3 washout 6.8% above its 200-day in a calm regime (crash radar 34); it sits inside the game-plan trigger (49.39 vs 50.59 max), and the 46.40 stop gives about 1.03:1 to the 52.46 target, which clears my floor.",
+       "confidence": 2
+      },
+      {
+       "symbol": "PM",
+       "pnl": 0.12,
+       "note": "agent: Game plan exit at the open: RSI(2) has recovered to 23 and price is below the 5-day average, so the washout has played o",
+       "thesis": "PM is an RSI(2) 4.8 washout 5.6% above its 200-day in a calm regime (crash radar 39, SPY above its 200-day); live prices give 1.14:1 from 193.04 to the 202.28 target against the 184.94 stop, clearing my 1:1 floor, so the game plan's 0.99 figure is stale.",
+       "confidence": 2
+      },
+      {
+       "symbol": "ALC",
+       "pnl": 3.26,
+       "note": "snap-back (RSI2 69)",
+       "thesis": "ALC RSI(2) 7.1 washout at about 1.0:1 (71.77 to 74.52 target vs 69.04 stop), the only candidate clearing the 1:1 floor at live prices; sized small because it sits right at the 200-day average.",
+       "confidence": 2
+      }
+     ]
+    }
+   },
+   "volsell": {
+    "summary": "Week P&L was -$84 (equity $950.5 to $889, 11.1% drawdown), with 0 wins in 6 closed trades. Four of the losses were stop-outs or early exits on TLT and IWM, so the 0.30-delta shorts were too close to the money. They collected thin credits of 0.15-0.25 and were stopped on routine noise, which means the sample says more about strike placement and rate-regime exposure than about the IV/RV signal.",
+    "applied": [
+     {
+      "agent": "volsell",
+      "param": "short_delta",
+      "old": 0.3,
+      "new": 0.22,
+      "reason": "Moving the short strike further out-of-the-money raises win probability and gives more room before the 2x stop is hit. Credits will shrink, but the stop-outs show 0.30 delta was too aggressive for a s"
+     },
+     {
+      "agent": "volsell",
+      "param": "min_iv_rv",
+      "old": 0.95,
+      "new": 1.15,
+      "reason": "A 0.95 floor accepts marginal setups, such as the 1.09-1.27 TLT looks that kept failing. Requiring at least 1.2 means I only sell premium when implied vol is clearly rich versus realized, and the filt"
+     }
+    ],
+    "stats": {
+     "equity_now": 889.0,
+     "equity_week_ago": 950.5,
+     "closed_trades": 6,
+     "closed_this_week": 4,
+     "week_pnl": -84.0,
+     "win_rate": 0.0,
+     "avg_win": null,
+     "avg_loss": -18.5,
+     "max_drawdown_pct": 11.1,
+     "avg_pnl_by_confidence": {
+      "2": -12.0,
+      "3": -19.8
+     },
+     "this_week_trades": [
+      {
+       "symbol": "TLT",
+       "pnl": -1.0,
+       "note": "profit target (50% of credit)",
+       "thesis": "TLT IV 16.1% vs realized 10.7% (1.50x) with the SPY trend up and crash radar calm at 19; a 79.5/78.5 bull put collects 0.23 credit against $77 max loss over 35 DTE.",
+       "confidence": 3
+      },
+      {
+       "symbol": "IWM",
+       "pnl": -49.5,
+       "note": "agent: IWM bear call mark 0.49 is above the 2x stop of 0.40 on the 0.20 entry, so the trade has failed its risk rule. Closing n",
+       "thesis": "IWM IV 24% vs realized 16% (1.53x) with crash radar calm at 34 and SPY above its 200-day; a 286/287 bear call collects 0.25 credit against $75 max loss, and IWM is no longer open after today's close, so this is not a duplicate.",
+       "confidence": 3
+      },
+      {
+       "symbol": "TLT",
+       "pnl": -21.5,
+       "note": "agent: Mark 0.35 is above the 0.32 stop (2x the 0.16 credit). The Fed-hawkish rate risk the game plan flagged is playing out, s",
+       "thesis": "TLT IV 13.8% vs realized 10.8% (1.27x) with SPY trend up and crash radar at 42 (warning but not stress); the 80/79 bull put collects 0.16 against $84 max loss over 35 DTE, and TLT is no longer open after the 12:06 close, so this is a fresh signal rather than a duplicate.",
+       "confidence": 3
+      },
+      {
+       "symbol": "TLT",
+       "pnl": -12.0,
+       "note": "agent: Exiting per the morning plan: TLT is about 1% above the 80.0 underlying stop, the 10-year is near 5% with Fed hike talk,",
+       "thesis": "TLT IV/RV is 1.26 with SPY trend up and crash radar calm at 38, so the 79.5/78.5 bull put is a rich-vol setup; one contract at the 0.15 credit floor limits risk to $76 while I test the edge at small size despite hawkish-Fed rate risk.",
+       "confidence": 2
+      }
+     ]
+    }
+   },
+   "scalper": {
+    "summary": "The week was roughly flat (-$1.01 on 16 trades, equity about $1,002) with a 43.5% win rate and avg win and loss nearly equal (+0.58 vs -0.55). That is about breakeven expectancy, and 9 of 16 trades timed out near zero. The sample is too small to separate a real edge from noise, so I'm holding parameters and keeping drawdown small (0.7%).",
+    "applied": [],
+    "stats": {
+     "equity_now": 1001.97,
+     "equity_week_ago": 1000.87,
+     "closed_trades": 23,
+     "closed_this_week": 16,
+     "week_pnl": -1.01,
+     "win_rate": 43.5,
+     "avg_win": 0.58,
+     "avg_loss": -0.55,
+     "max_drawdown_pct": 0.7,
+     "avg_pnl_by_confidence": {
+      "3": -0.06
+     },
+     "this_week_trades": [
+      {
+       "symbol": "SPY",
+       "pnl": -1.45,
+       "note": "stop (-0.58%)",
+       "thesis": "VWAP pullback bounce on SPY: 1.89x volume, +0.15% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "MSFT",
+       "pnl": -0.66,
+       "note": "time limit, 31 min (-0.12%)",
+       "thesis": "VWAP pullback bounce on MSFT: 1.69x volume, +0.12% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "META",
+       "pnl": 1.16,
+       "note": "time limit, 41 min (+0.35%)",
+       "thesis": "opening-range breakout on META: 2.26x volume, +0.60% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "GOOGL",
+       "pnl": 0.81,
+       "note": "target hit (+0.62%)",
+       "thesis": "VWAP pullback bounce on GOOGL: 1.97x volume, +0.26% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "GOOGL",
+       "pnl": -1.09,
+       "note": "stop (-0.45%)",
+       "thesis": "opening-range breakout on GOOGL: 1.56x volume, +0.62% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "META",
+       "pnl": -0.89,
+       "note": "stop (-0.33%)",
+       "thesis": "opening-range breakout on META: 1.72x volume, +0.24% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "MSFT",
+       "pnl": -0.12,
+       "note": "time limit, 46 min (-0.10%)",
+       "thesis": "VWAP pullback bounce on MSFT: 1.76x volume, +0.21% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "XLP",
+       "pnl": 0.14,
+       "note": "time limit, 46 min (+0.12%)",
+       "thesis": "VWAP pullback bounce on XLP: 1.92x volume, +0.14% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "IWM",
+       "pnl": -0.1,
+       "note": "time limit, 36 min (-0.06%)",
+       "thesis": "VWAP pullback bounce on IWM: 1.6x volume, +0.14% vs VWAP; target +0.4%, stop -0.25%",
+       "confidence": 3
+      },
+      {
+       "symbol": "AVGO",
+       "pnl": -0.54,
+       "note": "stop (-0.40%)",
+       "thesis": "VWAP pullback bounce on AVGO: 2.43x volume, +0.65% vs VWAP; target +0.6%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "TSM",
+       "pnl": 0.87,
+       "note": "target hit (+0.70%)",
+       "thesis": "VWAP pullback bounce on TSM: 1.54x volume, +0.51% vs VWAP; target +0.6%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "MU",
+       "pnl": 0.91,
+       "note": "target hit (+0.74%)",
+       "thesis": "VWAP pullback bounce on MU: 1.59x volume, +0.80% vs VWAP; target +0.6%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "XLP",
+       "pnl": -0.18,
+       "note": "time limit, 45 min (-0.14%)",
+       "thesis": "VWAP pullback bounce on XLP: 3.27x volume, +0.04% vs VWAP; target +0.6%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "META",
+       "pnl": -0.11,
+       "note": "gave back a +0.33% gain: out at breakeven",
+       "thesis": "VWAP pullback bounce on META: 1.7x volume, +0.30% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "QQQ",
+       "pnl": 0.24,
+       "note": "time limit, 47 min (+0.09%)",
+       "thesis": "VWAP pullback bounce on QQQ: 1.53x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      },
+      {
+       "symbol": "SPY",
+       "pnl": 0.0,
+       "note": "time limit, 46 min (-0.00%)",
+       "thesis": "VWAP pullback bounce on SPY: 2.86x volume, +0.17% vs VWAP; target +0.5%, stop -0.3%",
+       "confidence": 3
+      }
+     ]
+    }
+   }
+  }
  }
 ]
