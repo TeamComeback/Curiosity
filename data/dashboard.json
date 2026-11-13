@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T13:37-05:00",
+ "updated": "2026-11-13T13:39-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -75,7 +75,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 997.03,
+   "equity": 996.9,
    "cash": 880.76,
    "available": 757.36,
    "settling": 123.4,
@@ -147,7 +147,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 972.97,
+   "equity": 973.21,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
@@ -170,7 +170,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 927.62,
+   "equity": 928.12,
    "cash": 581.98,
    "available": 492.23,
    "settling": 89.75,
@@ -229,17 +229,17 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 1001.86,
-   "cash": 751.36,
+   "equity": 1001.97,
+   "cash": 1001.97,
    "available": 501.07,
-   "settling": 250.29,
+   "settling": 500.9,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
    "progress_pct": 10.02,
-   "open": 1,
-   "closed": 89,
-   "win_rate": 44.9,
+   "open": 0,
+   "closed": 90,
+   "win_rate": 45.6,
    "max_dd_pct": 0.7,
    "risk_adj": 0.04,
    "notes": [
@@ -577,12 +577,12 @@
    "date": "2026-11-13",
    "agents": {
     "trend": 717.52,
-    "meanrev": 997.03,
+    "meanrev": 996.9,
     "volsell": 889.0,
-    "baseline": 972.97,
-    "monkey": 927.62,
+    "baseline": 973.21,
+    "monkey": 928.12,
     "blackswan": -383.26,
-    "scalper": 1001.86,
+    "scalper": 1001.97,
     "hyper": 999.71
    }
   }
@@ -642,7 +642,7 @@
    "opt_type": null,
    "qty": 1.1615,
    "entry": 103.21,
-   "last": 100.105,
+   "last": 99.99,
    "mark": null,
    "stop": 96.66,
    "expiry": null,
@@ -664,7 +664,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 752.27,
+   "last": 752.46,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -686,7 +686,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 752.27,
+   "last": 752.46,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -708,7 +708,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 752.27,
+   "last": 752.46,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -730,7 +730,7 @@
    "opt_type": null,
    "qty": 2.3861,
    "entry": 110.74,
-   "last": 113.6,
+   "last": 113.77,
    "mark": null,
    "stop": 91.66,
    "expiry": null,
@@ -752,7 +752,7 @@
    "opt_type": null,
    "qty": 0.4433,
    "entry": 173.658,
-   "last": 168.24,
+   "last": 168.46,
    "mark": null,
    "stop": 154.12,
    "expiry": null,
@@ -807,31 +807,23 @@
    "realized": null,
    "play": "weak_stock",
    "width": 5.0
-  },
-  {
-   "agent": "scalper",
-   "position_id": "pos-19729d2ab7",
-   "kind": "stock",
-   "symbol": "QQQ",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 0.3696,
-   "entry": 677.402,
-   "last": 677.755,
-   "mark": null,
-   "stop": 675.6,
-   "expiry": null,
-   "opened": "2026-11-13T12:52:55-05:00",
-   "thesis": "VWAP pullback bounce on QQQ: 1.53x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%",
-   "confidence": 3,
-   "cost": 250.37,
-   "realized": null,
-   "play": "scalp",
-   "width": null
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-13T13:39:51-05:00",
+   "type": "close",
+   "agent": "scalper",
+   "symbol": "QQQ",
+   "qty": 0.3696,
+   "entry": 677.402,
+   "exit": 678.048,
+   "pnl": 0.24,
+   "note": "time limit, 47 min (+0.09%)",
+   "opened": "2026-11-13T12:52:55-05:00",
+   "confidence": 3,
+   "thesis": "VWAP pullback bounce on QQQ: 1.53x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%"
+  },
   {
    "time": "2026-11-13T13:37:49-05:00",
    "type": "playbook",
@@ -1282,13 +1274,6 @@
    "type": "focus",
    "agent": "trend",
    "note": "Leaning into Health Care; avoiding Energy, Consumer Staples, Technology, Broad market / other. Health Care has the only fresh breakout cluster and supportive news, but my record there is small and slightly negative (-2.49 over 2 trades). Real Estate is dropped: no trade record, and its scan names are bond funds rather than real estate. Consumer Discretionary (-15.24) and Financials (-5.58) ar"
-  },
-  {
-   "time": "2026-11-12T16:41:53-05:00",
-   "type": "plan",
-   "agent": "scalper",
-   "note": "After-close review: revise. Today's four round trips made +$1.06, but the scorecard still shows a 44% hit rate and negative average pick moves, and the rel-volume filter has not been verified from bars. I'm narrowing the plan to the three Staples/Comm Services names with explicit verification gates, and leaving Technology alone while the CEO-removal headlines and 4-11% ATRs remain live.",
-   "symbol": "AAPL, XLP, META"
   }
  ],
  "reviews": [
@@ -3968,6 +3953,13 @@
     "win_rate_pct": 0,
     "avg_pnl": -0.06
    },
+   "Technology": {
+    "trades": 50,
+    "wins": 23,
+    "pnl": -0.69,
+    "win_rate_pct": 46,
+    "avg_pnl": -0.01
+   },
    "Materials": {
     "trades": 1,
     "wins": 0,
@@ -3981,13 +3973,6 @@
     "pnl": -0.73,
     "win_rate_pct": 0,
     "avg_pnl": -0.73
-   },
-   "Technology": {
-    "trades": 49,
-    "wins": 22,
-    "pnl": -0.93,
-    "win_rate_pct": 45,
-    "avg_pnl": -0.02
    }
   },
   "hyper": {
