@@ -1,39 +1,5 @@
 [
  {
-  "time": "2026-10-30T12:38:44-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, AMZN, META, TSLA",
-  "note": "stand_down: Settled cash is about zero with the single slice already used, so no entries are possible today; stand down. For tomorrow, I'd widen the stop to 0.5% because today's 0.4% stops were hit by noise, and use two slices with liquid names that are above VWAP and trending up."
- },
- {
-  "time": "2026-10-30T12:40:33-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-10-30T12:41:12-04:00",
-  "type": "open",
-  "agent": "volsell",
-  "symbol": "XLF",
-  "instrument": "spread",
-  "qty": 1,
-  "price": 0.12,
-  "cost": -4.5,
-  "stop": 0,
-  "thesis": "XLF IV 16.8% vs realized 12.2% (1.38x) with the crash radar calm at 20 and SPY above its 200-day; a 55/54 bull put collects about 0.15 credit against $85 max loss over 35 DTE.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-30T13:06:46-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
   "time": "2026-10-30T13:08:26-04:00",
   "type": "unfilled",
   "agent": "volsell",
@@ -6347,5 +6313,33 @@
   "agent": "scalper",
   "note": "Evening check-in: revise. Today's four trades netted about +$1.06, but the three Technology VWAP bounces (AVGO, TSM, MU) drove that result while the stored Technology record is still negative, and the scorecard shows only 44% of picks moved the right way. I'm keeping the stand-aside default, narrowing the watchlist to fewer names, and making the volume check a hard requirement, since it has not been enforced in past logs.",
   "symbol": "META, XLP, AAPL"
+ },
+ {
+  "time": "2026-11-13T07:40:36-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. Today's scan still shows a Health Care breakout cluster, but my earlier watchlist is stale and JNJ is already extended, so I'm swapping in lower-ATR names that fit the $15 risk budget.",
+  "symbol": "EW, RPRX, VTRS, BDX"
+ },
+ {
+  "time": "2026-11-13T07:40:51-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: keep. Nothing in the fresh scan clears my 1:1 floor when I measure target as the 5-day SMA and stop as 1.5 ATR below the live close. HALO's live reward-to-risk is better than the entry-based 1.4:1 (about 3:1 from 100.67 to 112.66 against the 96.66 stop), so it stays. ALC's Barclays news was a target raise to $80, not a cut as my plan said, but its live ratio is still about 0.95:1, so it stays on its sto",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-13T07:40:56-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: keep. The fresh scan shows no candidate at IV/RV of 0.95 or above, and EEM slipped to 0.94 with the Houthi/Aramco headlines still recent, so the EEM trigger is not met. The other high-IV names (TLT 1.02, SLV 0.93) are the rate proxy I've already banned and a metal with a weak trend.",
+  "symbol": "EEM"
+ },
+ {
+  "time": "2026-11-13T07:41:07-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: revise. Tech headline risk is still heavy (Huang exit, SpaceX/Tesla), and today's scan gives no fresh staples or Comm Services edge beyond a -0.26% AAPL and -0.9% META move. I'm dropping XLP because it has no scan data here and lost last time. I'm also making the relative-volume gate a hard skip, since the logs show it was never enforced.",
+  "symbol": "META, AAPL"
  }
 ]
