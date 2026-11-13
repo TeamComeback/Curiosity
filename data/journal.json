@@ -1,46 +1,5 @@
 [
  {
-  "time": "2026-11-02T10:07:09-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-90%)"
- },
- {
-  "time": "2026-11-02T10:07:12-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "XLP",
-  "qty": 2.7703,
-  "entry": 90.49,
-  "exit": 90.08,
-  "pnl": -1.13,
-  "note": "stop (-0.41%)",
-  "opened": "2026-11-02T09:51:30-05:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on XLP: 0.17x volume, +0.42% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-11-02T10:07:25-05:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "DT",
-  "instrument": "stock",
-  "qty": 2.6973,
-  "price": 55.82,
-  "cost": 150.56,
-  "stop": 51.29,
-  "thesis": "DT RSI(2) 0.5 washout 25% above its 200-day in a calm regime (crash radar 25); target 60.19 vs stop 51.29 is about 1.06:1, clearing my 1:1 floor on live prices, and it is tagged Broad market rather than Technology.",
-  "confidence": 2
- },
- {
-  "time": "2026-11-02T10:07:39-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, AMZN, KRE, GLD",
-  "note": "defensive: Keeping defensive, half-size VWAP-bounce-only trading since volume is thin (XLP stopped on 0.17x volume) and the overnight plan says to avoid tech and communication names. I'm keeping SPY, GLD, and AMZN from the open book, adding KRE, which is above its opening range with a fresh VWAP bounce, and le"
- },
- {
   "time": "2026-11-02T10:09:43-05:00",
   "type": "open",
   "agent": "scalper",
@@ -6343,5 +6302,33 @@
   "opened": "2026-11-13T12:52:55-05:00",
   "confidence": 3,
   "thesis": "VWAP pullback bounce on QQQ: 1.53x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%"
+ },
+ {
+  "time": "2026-11-13T14:05:47-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-57%)"
+ },
+ {
+  "time": "2026-11-13T14:06:08-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.56)"
+ },
+ {
+  "time": "2026-11-13T14:07:33-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.07, 0.05, 0.03, 0.01; mark 0.12, natural -3.33)"
+ },
+ {
+  "time": "2026-11-13T14:07:48-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "META, QQQ, SPY",
+  "note": "stand_down: Both of today's slices are already used and no scalps are open, so no new entries are possible before the close. Keeping META, QQQ, and SPY on watch for next session's planning while the tape stays mixed with semis under pressure."
  }
 ]

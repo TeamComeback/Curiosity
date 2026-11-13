@@ -54,7 +54,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.05,
-     "mark": 0.76,
+     "mark": 0.72,
      "expiry": "2026-12-18",
      "strike": 310.0,
      "delta": -0.07,
@@ -73,7 +73,7 @@
      },
      "sector": "Consumer Discretionary",
      "low_water": 354.23,
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.03
     }
    },
    "status": "active",
@@ -84,10 +84,6 @@
    "peak": 1340.54,
    "max_dd": 0.4677,
    "notes": [
-    {
-     "date": "2026-11-10",
-     "note": "No new entries: the only candidate (TLS) is already held from the 3.5x-volume breakout. EW, MRNA and ADT have no confirmed 2.5x-volume close above trigger, so I'm holding ABNB, the CLSX and DJTU puts on their stops, and keeping settled cash for a clean setup."
-    },
     {
      "date": "2026-11-10",
      "note": "No new entries: the only candidate (TLS) is already held from this morning's breakout, so adding would double up. Keep ABNB, the CLSX and DJTU puts, and TLS on their stops, and hold settled cash for a confirmed 2.5x-volume breakout."
@@ -243,6 +239,10 @@
     {
      "date": "2026-11-13",
      "note": "No candidates today and no Health Care trigger has fired on 2.5x volume. Hold the CLSX and GLD puts on their enforced stops and keep the settled cash for a confirmed Health Care breakout."
+    },
+    {
+     "date": "2026-11-13",
+     "note": "No candidates and no Health Care trigger on 2.5x volume. Holding the CLSX and GLD puts on their enforced stops and keeping settled cash for a confirmed Health Care breakout."
     }
    ],
    "last_exits": {
@@ -1094,7 +1094,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 99.99
+     "last": 100.18
     }
    },
    "status": "active",
@@ -1105,10 +1105,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-10",
-     "note": "Passing on PAYC (about 0.75:1 at 235.59), WDAY (about 0.6:1) and TEAM (Technology avoid list); the energy washouts still fail the 1:1 floor, so keep the rest of the cash in reserve."
-    },
     {
      "date": "2026-11-10",
      "note": "Pass again at 15:37: TEAM is the only candidate at or above 1:1 (~1.10), but it sits on the Technology avoid list with an 10.7% stop and analyst target cuts. SHEL, WDAY, BP and IT fail the floor. Hold PM and HALO to their stops and targets and keep cash in reserve."
@@ -1264,6 +1260,10 @@
     {
      "date": "2026-11-13",
      "note": "No candidate clears my 1:1 stop-to-target floor at live prices (best are MRNA ~0.58:1 and CCL/GMAB ~0.55-0.58:1). Hold HALO and ALC on their existing stops and keep the $757 settled cash for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-13",
+     "note": "No candidate clears the 1:1 stop-to-target floor at live prices (best are GMAB ~0.56:1 and MRNA ~0.63:1). Holding HALO on its 96.66 stop and keeping $757 settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2367,7 +2367,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 752.46
+     "last": 753.395
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2383,7 +2383,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 752.46
+     "last": 753.395
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2399,7 +2399,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 752.46
+     "last": 753.395
     }
    },
    "status": "active",
@@ -2432,7 +2432,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 113.77
+     "last": 113.74
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2449,7 +2449,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 168.46
+     "last": 168.78
     }
    },
    "status": "active",
@@ -2524,7 +2524,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.925,
+     "exit_half_spread": 1.915,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2549,7 +2549,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.14,
+     "mark": 0.12,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2569,7 +2569,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.9,
+     "exit_half_spread": 3.455,
      "peak_mark": 1.09
     }
    },
@@ -3139,13 +3139,14 @@
    ],
    "playbook": {
     "date": "2026-11-13",
-    "made_at": "2026-11-13T13:37-05:00",
+    "made_at": "2026-11-13T14:07-05:00",
     "watch": [
      "META",
-     "QQQ"
+     "QQQ",
+     "SPY"
     ],
     "aggression": "stand_down",
-    "why": "Both daily slices are already used (META round trip and the open QQQ scalp), so no new entries are possible, and the tape is still weak with most liquid names red and semis selling off. Keeping META and QQQ on watch for management and any later setup, with stand_down in effect.",
+    "why": "Both of today's slices are already used and no scalps are open, so no new entries are possible before the close. Keeping META, QQQ, and SPY on watch for next session's planning while the tape stays mixed with semis under pressure.",
     "slices": 2,
     "target_pct": 0.5,
     "stop_pct": 0.3,
