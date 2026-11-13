@@ -54,7 +54,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.05,
-     "mark": 0.78,
+     "mark": 0.74,
      "expiry": "2026-12-18",
      "strike": 310.0,
      "delta": -0.07,
@@ -73,7 +73,7 @@
      },
      "sector": "Consumer Discretionary",
      "low_water": 354.23,
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.055
     }
    },
    "status": "active",
@@ -84,10 +84,6 @@
    "peak": 1340.54,
    "max_dd": 0.4677,
    "notes": [
-    {
-     "date": "2026-11-11",
-     "note": "No candidates today, so no entries. Holding TLS (stop 6.53) and the CLSX put (underlying stop 2.98). The DJTU put is no longer held: it already closed at the -61% option stop this morning, so I'm not sending a close for it. Watchlist names (VTRS, AHR, IBN, FWONK, IRTC) need a close through trigger o"
-    },
     {
      "date": "2026-11-11",
      "note": "No candidates on today's scan and no trigger has fired. Holding TLS (stop 6.62) and the CLSX put (underlying stop 2.98). Watching VTRS, AHR, IBN, FWONK and IRTC for a close through trigger on at least 2.5x volume."
@@ -243,6 +239,10 @@
     {
      "date": "2026-11-13",
      "note": "Pass on NBIG: Broad market / other is on my avoid list, and its 6.51 stop sits about 89% above price, so it isn't a usable risk stop. Hold the CLSX and GLD puts on their enforced stops and keep settled cash for a confirmed Health Care breakout on at least 2.5x volume."
+    },
+    {
+     "date": "2026-11-13",
+     "note": "Passed on NBIG: its 6.49 stop is about 89% above the 3.43 price, so it isn't a usable risk stop, and Broad market / other is on my avoid list. Holding the CLSX and GLD puts on their enforced stops and keeping settled cash for a confirmed Health Care breakout on at least 2.5x volume."
     }
    ],
    "last_exits": {
@@ -1094,7 +1094,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 100.63
+     "last": 100.5
     }
    },
    "status": "active",
@@ -1105,10 +1105,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-11",
-     "note": "No entries: every live candidate fails the 1:1 floor on stop-to-target math (MNST ~0.49, OTIS ~0.53, YUM ~0.55, IT ~0.24, TOST ~0.40). HALO stays on its 96.66 stop and 112.66 target with no adds."
-    },
     {
      "date": "2026-11-11",
      "note": "PM already exited at the open. No candidate clears the 1:1 stop-to-target floor, so cash stays in reserve. HALO holds on its 96.66 stop and 112.66 target, with no adds after the Morgan Stanley downgrade."
@@ -1264,6 +1260,10 @@
     {
      "date": "2026-11-13",
      "note": "No candidate clears my 1:1 stop-to-target floor (best is MRNA at about 0.6:1), so I'm holding HALO on its 96.66 stop and keeping $757 settled cash for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-13",
+     "note": "No candidate clears the 1:1 stop-to-target floor at live prices (best is MRNA at about 0.64:1). Hold HALO on its 96.66 stop and keep the $757 settled cash. ALC already closed at 73.80 today, so the game plan's ALC position is stale."
     }
    ],
    "last_exits": {
@@ -2367,7 +2367,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 753.49
+     "last": 752.745
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2383,7 +2383,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 753.49
+     "last": 752.745
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2399,7 +2399,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 753.49
+     "last": 752.745
     }
    },
    "status": "active",
@@ -2432,7 +2432,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 114.05
+     "last": 114.02
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2449,7 +2449,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 169.22
+     "last": 168.615
     }
    },
    "status": "active",
@@ -2524,7 +2524,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.915,
+     "exit_half_spread": 1.925,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2549,7 +2549,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.18,
+     "mark": 0.42,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2569,7 +2569,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 2.155,
+     "exit_half_spread": 1.645,
      "peak_mark": 1.09
     }
    },
@@ -3101,7 +3101,7 @@
      "target_pct": 0.5,
      "stop_pct": 0.3,
      "max_hold_min": 45,
-     "last": 753.35,
+     "last": 752.745,
      "peak_gain": 0.033978662461797704
     }
    },
@@ -3162,12 +3162,12 @@
    ],
    "playbook": {
     "date": "2026-11-13",
-    "made_at": "2026-11-13T15:07-05:00",
+    "made_at": "2026-11-13T15:37-05:00",
     "watch": [
      "SPY"
     ],
     "aggression": "stand_down",
-    "why": "With about 40 minutes left before the 3:50 flat rule and most of the day's slices already used, new entries carry little edge. I'm standing down and letting the open SPY scalp run to its target, stop, or time exit, with parameters unchanged so its management doesn't shift.",
+    "why": "With about 13 minutes until the 3:50 flat rule, new entries have little room to work, so I'm standing down. I'm keeping the open SPY scalp's parameters unchanged so its exit management doesn't shift.",
     "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,
