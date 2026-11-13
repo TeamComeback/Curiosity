@@ -1,66 +1,5 @@
 [
  {
-  "time": "2026-11-02T09:53:31-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "GLD",
-  "instrument": "stock",
-  "qty": 0.6902,
-  "price": 363.294,
-  "cost": 250.75,
-  "stop": 362.2,
-  "thesis": "VWAP pullback bounce on GLD: 0.45x volume, +0.21% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-11-02T09:59:37-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.3297,
-  "price": 760.416,
-  "cost": 250.71,
-  "stop": 758.11,
-  "thesis": "VWAP pullback bounce on SPY: 0.71x volume, +0.07% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-11-02T10:05:34-05:00",
-  "type": "close",
-  "agent": "trend",
-  "symbol": "SMR261106P00006000",
-  "qty": 2,
-  "entry": 0.55,
-  "exit": 0.43,
-  "pnl": -39.0,
-  "note": "time exit (4 DTE)",
-  "opened": "2026-10-14T11:35:39-04:00",
-  "confidence": 3,
-  "thesis": "SMR broke below its 55-day low at 6.42 on 1.9x volume with roc20 at -23%, and it is 49% below its 200-day SMA; the stop at 6.94 sits just above the breakdown level."
- },
- {
-  "time": "2026-11-02T10:05:36-05:00",
-  "type": "close",
-  "agent": "trend",
-  "symbol": "EQNR",
-  "qty": 1.4421,
-  "entry": 48.5,
-  "exit": 46.11,
-  "pnl": -3.44,
-  "note": "trailing stop on underlying",
-  "opened": "2026-10-23T10:06:52-04:00",
-  "confidence": 3,
-  "thesis": "EQNR broke above its 55-day high at 47.01 on 2.2x volume with roc20 +7.5% and 31.7% above its 200-day SMA; the 46.15 stop limits risk to about 4.9%."
- },
- {
-  "time": "2026-11-02T10:06:07-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "IREN",
-  "note": "near max value (1.70 of 2 wide)"
- },
- {
   "time": "2026-11-02T10:06:37-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6355,5 +6294,47 @@
   "agent": "scalper",
   "symbol": "MSFT, LLY, META",
   "note": "stand_down: Most of the liquid tape is down on the day with 1-minute trends pointing down, and SPY is slipping while semis sell off, so new longs are unlikely to work. Both slices are already used today (META round trip and the open QQQ scalp), so I'm standing down on new entries and keeping MSFT, LLY, and META"
+ },
+ {
+  "time": "2026-11-13T13:35:46-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-57%)"
+ },
+ {
+  "time": "2026-11-13T13:35:47-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "ALC",
+  "qty": 1.6721,
+  "entry": 71.85,
+  "exit": 73.8,
+  "pnl": 3.26,
+  "note": "snap-back (RSI2 69)",
+  "opened": "2026-11-11T12:39:29-05:00",
+  "confidence": 2,
+  "thesis": "ALC RSI(2) 7.1 washout at about 1.0:1 (71.77 to 74.52 target vs 69.04 stop), the only candidate clearing the 1:1 floor at live prices; sized small because it sits right at the 200-day average."
+ },
+ {
+  "time": "2026-11-13T13:36:09-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.58)"
+ },
+ {
+  "time": "2026-11-13T13:37:34-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.09, 0.06, 0.04, 0.01; mark 0.14, natural -3.76)"
+ },
+ {
+  "time": "2026-11-13T13:37:49-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "META, QQQ",
+  "note": "stand_down: Both daily slices are already used (META round trip and the open QQQ scalp), so no new entries are possible, and the tape is still weak with most liquid names red and semis selling off. Keeping META and QQQ on watch for management and any later setup, with stand_down in effect."
  }
 ]
