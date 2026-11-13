@@ -10,7 +10,9 @@
  },
  "entries": {
   "date": "2026-11-13",
-  "counts": {}
+  "counts": {
+   "scalper": 1
+  }
  },
  "agents": {
   "trend": {
@@ -64,7 +66,7 @@
       "pct_vs_sma200": 63.2
      },
      "sector": "Broad market / other",
-     "last": 7.64,
+     "last": 7.55,
      "high_water": 7.925
     },
     "pos-9b9cea9b90": {
@@ -102,7 +104,7 @@
    "closed": 22,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.4593,
+   "max_dd": 0.4604,
    "notes": [
     {
      "date": "2026-11-10",
@@ -1107,7 +1109,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 100.365
+     "last": 100.0
     },
     "pos-38ef0e24a8": {
      "kind": "stock",
@@ -1127,7 +1129,7 @@
       "pct_vs_sma5": -3.7
      },
      "sector": "Consumer Staples",
-     "last": 72.85
+     "last": 72.99
     }
    },
    "status": "active",
@@ -2393,7 +2395,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 757.6
+     "last": 753.95
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2409,7 +2411,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 757.6
+     "last": 753.95
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2425,7 +2427,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 757.6
+     "last": 753.95
     }
    },
    "status": "active",
@@ -2458,7 +2460,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 118.365
+     "last": 114.47
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2475,7 +2477,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 169.58
+     "last": 169.84
     }
    },
    "status": "active",
@@ -3105,13 +3107,13 @@
    ]
   },
   "scalper": {
-   "cash": 1001.84,
+   "cash": 1001.73,
    "reserved": 0.0,
    "positions": {},
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 88,
+   "closed": 89,
    "wins": 40,
    "peak": 1006.98,
    "max_dd": 0.007,
@@ -3137,7 +3139,7 @@
     "SPY": "2026-11-06",
     "MU": "2026-11-12",
     "QQQ": "2026-10-29",
-    "META": "2026-11-10",
+    "META": "2026-11-13",
     "SPCX": "2026-10-30",
     "AMD": "2026-10-30",
     "INTC": "2026-10-27",
@@ -3151,7 +3153,13 @@
     "AMZN": "2026-11-05"
    },
    "joined": "2026-10-14T12:09:57-04:00",
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 250.29,
+     "settles": "2026-11-16",
+     "note": "sold META"
+    }
+   ],
    "playbook": {
     "date": "2026-11-13",
     "made_at": "2026-11-13T09:38-05:00",
@@ -3170,7 +3178,11 @@
    },
    "scalp_day": {
     "date": "2026-11-13",
-    "equity": 1001.84
+    "equity": 1001.84,
+    "low_volume_skips": [
+     "AAPL",
+     "META"
+    ]
    },
    "plan": {
     "for_day": "2026-11-13",

@@ -1,39 +1,5 @@
 [
  {
-  "time": "2026-10-30T13:38:33-04:00",
-  "type": "open",
-  "agent": "volsell",
-  "symbol": "IWM",
-  "instrument": "spread",
-  "qty": 1,
-  "price": 0.22,
-  "cost": -12.0,
-  "stop": 0,
-  "thesis": "IWM IV 21% vs realized 15% (1.36x) with the crash radar calm at 20 and SPY above its 200-day; a 290/291 bear call at the 0.15 floor collects premium against $72 max loss over 35 DTE, and IWM is a broad-market name rather than an avoided sector.",
-  "confidence": 3
- },
- {
-  "time": "2026-10-30T14:06:57-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-10-30T14:07:30-04:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AMZN, TSLA, SPY, QQQ",
-  "note": "stand_down: Settled cash is about zero, so nothing can execute today, and it is past the 1:45 PM entry cutoff anyway. Most names are below VWAP and today's bounces were stopped out, so I'm standing down and reviewing AMZN and TSLA (the only names above their opening range) and SPY/QQQ for a defensive restart to"
- },
- {
-  "time": "2026-10-30T14:36:55-04:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-42%)"
- },
- {
   "time": "2026-10-30T14:37:27-04:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6341,5 +6307,46 @@
   "agent": "scalper",
   "symbol": "META, AAPL, GOOGL, MSFT",
   "note": "defensive: Broad tape is soft: SPY is -0.42% and under VWAP with a down 1-minute trend, so the overnight 'SPY above open' condition fails for now. Defensive keeps only VWAP bounces at half size in the cleaner names (META, AAPL) and can flip to normal if SPY reclaims its open with volume."
+ },
+ {
+  "time": "2026-11-13T09:52:20-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "AAPL",
+  "note": "VWAP pullback bounce skipped: 0.63x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-13T09:52:20-05:00",
+  "type": "open",
+  "agent": "scalper",
+  "symbol": "META",
+  "instrument": "stock",
+  "qty": 0.3946,
+  "price": 634.558,
+  "cost": 250.4,
+  "stop": 632.68,
+  "thesis": "VWAP pullback bounce on META: 1.7x volume, +0.30% vs VWAP; target +0.5%, stop -0.3%",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-13T09:56:21-05:00",
+  "type": "close",
+  "agent": "scalper",
+  "symbol": "META",
+  "qty": 0.3946,
+  "entry": 634.558,
+  "exit": 634.296,
+  "pnl": -0.11,
+  "note": "gave back a +0.33% gain: out at breakeven",
+  "opened": "2026-11-13T09:52:20-05:00",
+  "confidence": 3,
+  "thesis": "VWAP pullback bounce on META: 1.7x volume, +0.30% vs VWAP; target +0.5%, stop -0.3%"
+ },
+ {
+  "time": "2026-11-13T09:58:23-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "META",
+  "note": "VWAP pullback bounce skipped: 0.76x volume < 1.5x"
  }
 ]
