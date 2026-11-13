@@ -11,7 +11,7 @@
  "entries": {
   "date": "2026-11-13",
   "counts": {
-   "scalper": 2
+   "scalper": 3
   }
  },
  "agents": {
@@ -54,7 +54,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 1.05,
-     "mark": 0.76,
+     "mark": 0.78,
      "expiry": "2026-12-18",
      "strike": 310.0,
      "delta": -0.07,
@@ -73,7 +73,7 @@
      },
      "sector": "Consumer Discretionary",
      "low_water": 354.23,
-     "exit_half_spread": 0.03
+     "exit_half_spread": 0.015
     }
    },
    "status": "active",
@@ -84,10 +84,6 @@
    "peak": 1340.54,
    "max_dd": 0.4677,
    "notes": [
-    {
-     "date": "2026-11-11",
-     "note": "No live candidates today, so no new entries. Watchlist names (VTRS, AHR, IBN, FWONK, IRTC) stay pending until a close clears the trigger on 2.5x volume. Holding TLS and both puts on their stops."
-    },
     {
      "date": "2026-11-11",
      "note": "No candidates today, so no entries. Holding TLS (stop 6.53) and the CLSX put (underlying stop 2.98). The DJTU put is no longer held: it already closed at the -61% option stop this morning, so I'm not sending a close for it. Watchlist names (VTRS, AHR, IBN, FWONK, IRTC) need a close through trigger o"
@@ -243,6 +239,10 @@
     {
      "date": "2026-11-13",
      "note": "No candidates and no Health Care trigger on 2.5x volume. TLS already stopped out today, so the game plan's TLS hold is moot. Holding the CLSX and GLD puts on their enforced stops and keeping settled cash for a confirmed Health Care breakout."
+    },
+    {
+     "date": "2026-11-13",
+     "note": "Pass on NBIG: Broad market / other is on my avoid list, and its 6.51 stop sits about 89% above price, so it isn't a usable risk stop. Hold the CLSX and GLD puts on their enforced stops and keep settled cash for a confirmed Health Care breakout on at least 2.5x volume."
     }
    ],
    "last_exits": {
@@ -1094,7 +1094,7 @@
       "pct_vs_sma5": -8.3
      },
      "sector": "Health Care",
-     "last": 100.57
+     "last": 100.63
     }
    },
    "status": "active",
@@ -1105,10 +1105,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-11",
-     "note": "No new entries: every candidate fails the 1:1 floor on stop-to-target math (IT ~0.31, KHC ~0.5, OTIS ~0.48, MNST ~0.4, TOST ~0.4), and HALO is already held, so a second HALO entry would be an add the plan rules out. Keep cash for a real washout."
-    },
     {
      "date": "2026-11-11",
      "note": "No entries: every live candidate fails the 1:1 floor on stop-to-target math (MNST ~0.49, OTIS ~0.53, YUM ~0.55, IT ~0.24, TOST ~0.40). HALO stays on its 96.66 stop and 112.66 target with no adds."
@@ -1264,6 +1260,10 @@
     {
      "date": "2026-11-13",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (HALO ~0.2:1, MRNA ~0.6:1, VRTX ~0.2:1, GMAB ~0.5:1). Hold HALO and ALC on their stops and keep $757 settled cash for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-13",
+     "note": "No candidate clears my 1:1 stop-to-target floor (best is MRNA at about 0.6:1), so I'm holding HALO on its 96.66 stop and keeping $757 settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2367,7 +2367,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 752.93
+     "last": 753.49
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2383,7 +2383,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 752.93
+     "last": 753.49
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2399,7 +2399,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 752.93
+     "last": 753.49
     }
    },
    "status": "active",
@@ -2432,7 +2432,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 113.79
+     "last": 114.05
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2449,7 +2449,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 169.23
+     "last": 169.22
     }
    },
    "status": "active",
@@ -2524,7 +2524,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.9,
+     "exit_half_spread": 1.915,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2549,7 +2549,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.15,
+     "mark": 0.18,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2569,7 +2569,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 2.67,
+     "exit_half_spread": 2.155,
      "peak_mark": 1.09
     }
    },
@@ -3079,9 +3079,32 @@
    ]
   },
   "scalper": {
-   "cash": 1001.97,
+   "cash": 751.54,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-23119f0664": {
+     "kind": "stock",
+     "symbol": "SPY",
+     "qty": 0.3324,
+     "entry": 753.414,
+     "cost": 250.43,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 751.12,
+     "atr": 0,
+     "opened": "2026-11-13T15:04:03-05:00",
+     "thesis": "VWAP pullback bounce on SPY: 2.86x volume, +0.17% vs VWAP; target +0.5%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.5,
+     "stop_pct": 0.3,
+     "max_hold_min": 45,
+     "last": 753.49,
+     "peak_gain": 0.010087415418347234
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
@@ -3139,19 +3162,16 @@
    ],
    "playbook": {
     "date": "2026-11-13",
-    "made_at": "2026-11-13T14:37-05:00",
+    "made_at": "2026-11-13T15:07-05:00",
     "watch": [
-     "SPY",
-     "QQQ",
-     "META",
-     "AAPL"
+     "SPY"
     ],
-    "aggression": "defensive",
-    "why": "Both slices are used and no scalps are open, so this only shapes the next session. SPY is above its 200-day with a calm crash radar, but semis are weak and the tape is mixed, so I'd keep VWAP bounces at half size on a few liquid names.",
-    "slices": 2,
+    "aggression": "stand_down",
+    "why": "With about 40 minutes left before the 3:50 flat rule and most of the day's slices already used, new entries carry little edge. I'm standing down and letting the open SPY scalp run to its target, stop, or time exit, with parameters unchanged so its management doesn't shift.",
+    "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,
-    "max_hold_min": 45
+    "max_hold_min": 30
    },
    "scalp_day": {
     "date": "2026-11-13",
