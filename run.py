@@ -131,6 +131,12 @@ def open_trade(b, state, aid, cand, order, ctx):
     p = {**ctx["params"].get(aid, {}), **cand.get("opt", {})}
     if cand.get("max_dollars") is not None and order.get("dollars") is not None:   # firm's own per-trade cap
         order = {**order, "dollars": min(float(order["dollars"]), float(cand["max_dollars"]))}
+    if order.get("dollars") is not None:                                            # house sizing rules (HQ, Nov 2026)
+        sized, why = governor.size_entry(agent, aid, float(order["dollars"]))
+        if why and sized < float(order["dollars"]):
+            store.journal({"type": "sizing", "agent": aid, "symbol": cand.get("symbol"),
+                           "note": f"${float(order['dollars']):.2f} -> ${sized:.2f}: {why}"})
+            order = {**order, "dollars": sized}
     default_stop = cand.get("stop") or 0
     stop = default_stop
     agent_stop = order.get("stop")
