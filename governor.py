@@ -42,6 +42,25 @@ def can_trade_today(state, aid):
     return True, "ok"
 
 
+def size_entry(agent, aid, dollars):
+    """Per-firm sizing rules from config.AGENTS: a cap on any one entry as a share of the firm
+    (so cash is left for the next setup) and a half-size rule while the win rate is poor.
+    Returns (dollars, note)."""
+    cfg = config.AGENTS.get(aid, {})
+    notes = []
+    firm = agent["cash"] + sum(float(p.get("cost") or 0) for p in agent["positions"].values())
+    pct = cfg.get("max_entry_pct")
+    if pct and firm > 0 and dollars > firm * pct:
+        dollars = firm * pct
+        notes.append(f"capped at {pct:.0%} of the firm")
+    cut = cfg.get("risk_cut")
+    closed = agent.get("closed") or 0
+    if cut and closed >= cut.get("min_closed", 10) and (agent.get("wins") or 0) / closed < cut["below_win_rate"]:
+        dollars *= cut["mult"]
+        notes.append(f"half size while win rate {agent.get('wins', 0)}/{closed} is under {cut['below_win_rate']:.0%}")
+    return round(dollars, 2), "; ".join(notes)
+
+
 def check_order(state, aid, cand, instrument, cost):
     """Validate one agent order and record the decision in the compliance log."""
     ok, why = _check_order(state, aid, cand, instrument, cost)
