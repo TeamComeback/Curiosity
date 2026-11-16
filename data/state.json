@@ -56,10 +56,6 @@
    "notes": [
     {
      "date": "2026-11-12",
-     "note": "Taking the GLD put is a deliberate exception to my lean-in focus: it is a confirmed 3.5x-volume breakdown, and the premium budget is small enough that a stop-out is capped at about $120. Keep TLS at its active stop and don't loosen it."
-    },
-    {
-     "date": "2026-11-12",
      "note": "Passed on the BABA put: a 0.5-delta, 30-60 DTE put on a ~$95 stock likely costs well over the $120 budget and would be blocked, and Broad market / other is on my avoid list. Holding TLS and the CLSX put; verify TLS's active stop (6.53 vs 7.36) and CLSX's stop (2.98 vs 3.63) before the open."
     },
     {
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-16",
      "note": "Passed on KLC put: it's a $1.25 extreme-volatility name in the avoid-listed Broad market bucket, and its 40-60 DTE put doesn't fit the $17.50 budget without over-committing. Hold CLSX to its 2.98 underlying stop and keep settled cash for a Health Care close above trigger on 2.5x+ volume."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "Taking the rule-qualifying KLC breakdown at a small premium budget despite the avoid-list tag; the loss is capped at premium, and cheap extreme-volatility names need small size."
     }
    ],
    "last_exits": {
@@ -1101,10 +1101,6 @@
    "notes": [
     {
      "date": "2026-11-12",
-     "note": "No entries: ABT (about 0.31:1) and VEEV (about 0.29:1) fail the 1:1 floor at live prices. Hold HALO and ALC on their stops and keep $757 settled cash in reserve."
-    },
-    {
-     "date": "2026-11-12",
      "note": "No entries: VEEV (RSI(2) 4.9) is about 0.48:1 to its 303.55 target against the 284.20 stop, below my 1:1 floor, and HALO and ALC are already held. Keep $757 settled cash and wait for a washout that clears 1:1 at live prices."
     },
     {
@@ -1258,6 +1254,10 @@
     {
      "date": "2026-11-16",
      "note": "No candidate clears the 1:1 stop-to-target floor at scan prices (GM 0.72, ICLR 0.54, MRNA 0.54, HALO 0.57, VRTX 0.26, VEEV 0.24). HALO already closed today, so the game plan's HALO position is stale. Holding $880 settled cash for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "No candidate clears my 1:1 stop-to-target floor at 15:37 prices: DE about 0.82:1, GM 0.69, MRNA 0.56, HALO 0.55, VRTX 0.28, VEEV 0.24. Passing and keeping $880 settled cash. The game plan's HALO position is stale because HALO closed this morning."
     }
    ],
    "last_exits": {
@@ -2396,7 +2396,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 740.28
+     "last": 738.97
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2412,7 +2412,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 740.28
+     "last": 738.97
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2428,7 +2428,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 740.28
+     "last": 738.97
     }
    },
    "status": "active",
@@ -2461,7 +2461,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 160.08
+     "last": 159.525
     }
    },
    "status": "active",
@@ -2582,7 +2582,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.045,
+     "exit_half_spread": 3.1,
      "peak_mark": 1.09
     }
    },
@@ -3145,19 +3145,18 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-16",
-    "made_at": "2026-11-16T15:07-05:00",
+    "made_at": "2026-11-16T15:37-05:00",
     "watch": [
      "SPY",
      "QQQ",
-     "AAPL",
-     "MSFT"
+     "RWM"
     ],
-    "aggression": "defensive",
-    "why": "About 40 minutes remain before the 3:50 flat, so I'm cutting to two slices and a 15-minute hold. The market is still weak with SPY and QQQ below VWAP, so I'm limiting trades to half-size VWAP bounces in the names still trending up.",
-    "slices": 2,
+    "aggression": "stand_down",
+    "why": "Only about 13 minutes remain before the 3:50 flat, too little time for a new scalp to play out. Most liquid names are below VWAP and trending down, so I'm standing down rather than forcing entries into a weak tape.",
+    "slices": 1,
     "target_pct": 0.4,
     "stop_pct": 0.25,
-    "max_hold_min": 15
+    "max_hold_min": 10
    },
    "scalp_day": {
     "date": "2026-11-16",

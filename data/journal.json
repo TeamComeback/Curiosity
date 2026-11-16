@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-11-03T11:06:49-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-03T11:07:13-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, IWM",
-  "note": "stand_down: Only about $0.02 is settled cash and the single slice has already been used, so no new round trip can be funded today. Both morning scalps have closed at their time limits with no open positions, so there is nothing to manage."
- },
- {
-  "time": "2026-11-03T11:36:06-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-03T11:37:03-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "agent: AGCO fill ($330) is far above the $183.9 budget and the marks conflict (0.00 to 0.14). The option is nearly worthless wi"
- },
- {
-  "time": "2026-11-03T11:37:04-05:00",
-  "type": "close",
-  "agent": "blackswan",
-  "symbol": "IREN",
-  "qty": 1,
-  "entry": 1.2,
-  "exit": 1.4,
-  "pnl": 1.0,
-  "note": "agent: Staged exit to cut bearish-book concentration toward my 50%-of-equity cap. IREN is the largest mark (about $192) and is ",
-  "opened": "2026-10-14T12:10:57-04:00",
-  "confidence": 3,
-  "thesis": "IREN broke its 20-day low at 32.71, is down 16% over 20 days and sits below its 200-day in a calm radar (15), so a bear put spread capped at $150 targets the breakdown."
- },
- {
   "time": "2026-11-03T12:06:11-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6241,5 +6199,40 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, AAPL, MSFT",
   "note": "defensive: About 40 minutes remain before the 3:50 flat, so I'm cutting to two slices and a 15-minute hold. The market is still weak with SPY and QQQ below VWAP, so I'm limiting trades to half-size VWAP bounces in the names still trending up."
+ },
+ {
+  "time": "2026-11-16T15:36:34-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-95%) (tried 0.10, 0.07, 0.04, 0.01; mark 0.15, natural -1.72)"
+ },
+ {
+  "time": "2026-11-16T15:36:55-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.82)"
+ },
+ {
+  "time": "2026-11-16T15:37:01-05:00",
+  "type": "sizing",
+  "agent": "trend",
+  "symbol": "KLC",
+  "note": "$60.00 -> $30.00: half size while win rate 4/24 is under 30%"
+ },
+ {
+  "time": "2026-11-16T15:37:02-05:00",
+  "type": "rule_block",
+  "agent": "trend",
+  "symbol": "KLC",
+  "note": "no put affordable within $30.00"
+ },
+ {
+  "time": "2026-11-16T15:37:10-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, RWM",
+  "note": "stand_down: Only about 13 minutes remain before the 3:50 flat, too little time for a new scalp to play out. Most liquid names are below VWAP and trending down, so I'm standing down rather than forcing entries into a weak tape."
  }
 ]
