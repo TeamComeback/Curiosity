@@ -1,25 +1,5 @@
 [
  {
-  "time": "2026-11-02T16:41:30-05:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "After-close review: revise. The pre-market plan is stale: five positions are now open (HPQ, TWLO, ILMN, DT, CHKP), and the live scan shows no fresh candidate clearing the 1:1 target-to-stop floor.",
-  "symbol": "TEAM"
- },
- {
-  "time": "2026-11-02T16:41:30-05:00",
-  "type": "scorecard",
-  "agent": "volsell",
-  "note": "Plan graded: 0 of 0 picks moved the planned way"
- },
- {
-  "time": "2026-11-02T16:41:39-05:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "After-close review: keep. Fresh scan shows no new non-duplicate setup that clears the 0.15 fill floor with acceptable payoff. XLE, EEM, GDX and SLV still fail on fills, illiquidity, or poor credit, and the existing XLF, TLT and IWM spreads are still within their thesis and exit levels.",
-  "symbol": ""
- },
- {
   "time": "2026-11-02T16:41:39-05:00",
   "type": "scorecard",
   "agent": "scalper",
@@ -6311,5 +6291,26 @@
   "agent": "scalper",
   "symbol": "NVDA, AMD, SOXS, RWM",
   "note": "stand_down: The tape is broadly red and under VWAP, with SPY down 0.71% and most liquid names trending down, so long-only scalps have poor odds. Stay flat and reassess if NVDA or AMD reclaim VWAP on volume, or if SOXS and RWM keep working as a sign of a sustained sell-off."
+ },
+ {
+  "time": "2026-11-16T11:06:32-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-95%) (tried 0.10, 0.07, 0.04, 0.01; mark 0.15, natural -1.73)"
+ },
+ {
+  "time": "2026-11-16T11:06:53-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.73)"
+ },
+ {
+  "time": "2026-11-16T11:07:09-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "QQQ, SPY, MSFT, AVGO, MU",
+  "note": "defensive: SPY has turned trend-up on the 1-minute chart and is back at VWAP, and several megacaps and semis (MSFT, AVGO, MU, AMZN) are holding above VWAP, with QQQ showing a VWAP pullback bounce. Defensive size, with only VWAP bounces in liquid names, fits a market that's mixed rather than clearly trending."
  }
 ]
