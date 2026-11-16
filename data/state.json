@@ -56,10 +56,6 @@
    "notes": [
     {
      "date": "2026-11-11",
-     "note": "No candidates and no watchlist trigger has fired (VTRS, AHR, IBN, FWONK, IRTC need a close through trigger on at least 2.5x volume). Holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98) with $357.68 settled cash ready for a confirmed breakout."
-    },
-    {
-     "date": "2026-11-11",
      "note": "No candidates and no trigger fired. Holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98) with $357.68 settled cash for a confirmed 2.5x-volume breakout. ABNB and DJTU are already closed, so the game plan's holds on them don't apply."
     },
     {
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-16",
      "note": "Passed on KLC put: it's in the Broad market / other bucket (-57.20 record, on the avoid list), and at $1.25 it's a cheap, extreme-volatility name like DJTU. Keep settled cash for a Health Care close above trigger on 2.5x+ volume; CLSX holds to its 2.98 stop."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "No trade: the only candidate, KLC short, is in Broad market / other (-57.20 record, on the avoid list) and is a $1.25 extreme-volatility name like DJTU. Hold CLSX put to its 2.98 underlying stop; keep settled cash for a Health Care close above trigger on 2.5x+ volume."
     }
    ],
    "last_exits": {
@@ -1101,10 +1101,6 @@
    "notes": [
     {
      "date": "2026-11-11",
-     "note": "No entries: at live prices WDAY (~0.32:1), OTIS (~0.54:1), KHC (~0.46:1) and IT (~0.20:1) all fail the 1:1 stop-to-target floor. Hold HALO (stop 96.66, target 112.66) and ALC (stop 69.04, target ~74.52) on their existing plans and keep cash in reserve."
-    },
-    {
-     "date": "2026-11-11",
      "note": "No entries: every live washout fails the 1:1 stop-to-target floor (WDAY ~0.31, OTIS ~0.55, KHC ~0.42, MNST ~0.37). Hold HALO (stop 96.66) and ALC (stop 69.04) on their existing plans and keep cash in reserve."
     },
     {
@@ -1258,6 +1254,10 @@
     {
      "date": "2026-11-16",
      "note": "Stop-to-target check at live prices: ICLR 0.63:1, ROST 0.87:1, MRNA 0.54:1, GM 0.54:1, CCL 0.50:1, HALO 0.40:1. None clears my 1:1 floor, so I'm passing and keeping $880 settled cash for a washout that does."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "Scan-price stop-to-target ratios are all below my 1:1 floor: HALO 0.38, ICLR 0.56, GM 0.56, MRNA 0.46, CCL 0.54, XLY 0.53. No positions are open and $880 settled cash stays on hand for a setup that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2396,7 +2396,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 744.71
+     "last": 743.205
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2412,7 +2412,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 744.71
+     "last": 743.205
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2428,7 +2428,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 744.71
+     "last": 743.205
     }
    },
    "status": "active",
@@ -2461,7 +2461,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 163.51
+     "last": 162.38
     }
    },
    "status": "active",
@@ -2517,7 +2517,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.15,
+     "mark": 0.13,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2537,7 +2537,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.92,
+     "exit_half_spread": 1.899,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2582,7 +2582,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.07,
+     "exit_half_spread": 3.045,
      "peak_mark": 1.09
     }
    },
@@ -3145,15 +3145,14 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-16",
-    "made_at": "2026-11-16T12:07-05:00",
+    "made_at": "2026-11-16T12:37-05:00",
     "watch": [
      "MU",
-     "TSM",
      "AVGO",
-     "MSFT"
+     "TSM"
     ],
-    "aggression": "defensive",
-    "why": "The tape is mixed: SPY and most megacaps are trending down on the 1-minute chart, so I'm dropping SPY and QQQ. MU and TSM are trending up above VWAP, and AVGO is holding above its opening range, so I'll keep VWAP bounces at half size in those names with the current tight stop and target.",
+    "aggression": "stand_down",
+    "why": "Most candidates, including SPY, QQQ, MSFT and TSM, are trending down on the 1-minute chart, with few names above VWAP and no clean setups. I'm standing down until breadth improves, and I'm keeping MU and AVGO on watch since they're the only names still holding near VWAP.",
     "slices": 3,
     "target_pct": 0.5,
     "stop_pct": 0.3,

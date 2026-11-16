@@ -1,26 +1,5 @@
 [
  {
-  "time": "2026-11-02T20:11:35-05:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "Evening check-in: revise. Today's three misses (XLP, GLD, SPY) were all entries below the 1.5x volume minimum, and my notes say the code does not enforce that gate, so the volume rule was not really applied. Across 43 Technology trades the strategy is negative, and the 50% hit rate and -0.28% average pick move give no edge to trade aggressively on. The crash radar is calm (26), so I'll keep a single small, strictly gated S",
-  "symbol": "SPY"
- },
- {
-  "time": "2026-11-03T07:40:46-05:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Pre-market call: revise. Cash has settled to $541, so the old $2 budget no longer limits entries, and the planned Financials breakouts are now affordable. Energy's 0-for-3 record and the oil drop argue against adding there.",
-  "symbol": "CBOE, NDAQ, ICE, V"
- },
- {
-  "time": "2026-11-03T07:41:18-05:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Pre-market call: revise. Fresh scan prices show DDOG (about 1.24:1), OKTA (about 1.13:1) and TEAM (about 1.0:1) now clear my 1:1 floor, which the stale plan missed.",
-  "symbol": "DDOG, OKTA, TEAM"
- },
- {
   "time": "2026-11-03T07:41:29-05:00",
   "type": "plan",
   "agent": "volsell",
@@ -6316,5 +6295,26 @@
   "agent": "scalper",
   "symbol": "MU, TSM, AVGO, MSFT",
   "note": "defensive: The tape is mixed: SPY and most megacaps are trending down on the 1-minute chart, so I'm dropping SPY and QQQ. MU and TSM are trending up above VWAP, and AVGO is holding above its opening range, so I'll keep VWAP bounces at half size in those names with the current tight stop and target."
+ },
+ {
+  "time": "2026-11-16T12:36:31-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-96%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -1.77)"
+ },
+ {
+  "time": "2026-11-16T12:36:52-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.76)"
+ },
+ {
+  "time": "2026-11-16T12:37:05-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MU, AVGO, TSM",
+  "note": "stand_down: Most candidates, including SPY, QQQ, MSFT and TSM, are trending down on the 1-minute chart, with few names above VWAP and no clean setups. I'm standing down until breadth improves, and I'm keeping MU and AVGO on watch since they're the only names still holding near VWAP."
  }
 ]
