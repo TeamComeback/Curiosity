@@ -56,10 +56,6 @@
    "notes": [
     {
      "date": "2026-11-11",
-     "note": "No new candidates beyond TLS, which is already held. Holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98). Watching VTRS, AHR, IBN, FWONK and IRTC for a close through trigger on at least 2.5x volume."
-    },
-    {
-     "date": "2026-11-11",
      "note": "No candidates on today's scan. Holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98). Watching VTRS, AHR, IBN, FWONK and IRTC for a close through trigger on at least 2.5x volume."
     },
     {
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-16",
      "note": "Holding CLSX put on its enforced stop; no candidates today. Keep settled cash for a confirmed Health Care breakout (2.5x+ volume close) with $150 max per name."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "Passed on SLV put: Consumer Discretionary has a -59.74 record for this firm, a 7% stop distance, and an option premium that won't fit the ~5%-of-equity option risk cap. Keep settled cash for a Health Care close above a trigger on 2.5x+ volume; hold CLSX put on its 2.98 stop."
     }
    ],
    "last_exits": {
@@ -1101,10 +1101,6 @@
    "notes": [
     {
      "date": "2026-11-11",
-     "note": "No entries: IT, TOST, KHC, OTIS and MNST all fail my 1:1 stop-to-target floor (roughly 0.24 to 0.49:1 at live prices). HALO stays on its 96.66 stop and 112.66 target with no adds, and PM is already closed."
-    },
-    {
-     "date": "2026-11-11",
      "note": "No entries: at live prices OTIS (~0.56:1), IT (~0.24:1), KHC (~0.46:1) and TOST (~0.42:1) all fail my 1:1 stop-to-target floor. HALO holds on its 96.66 stop and 112.66 target with no adds."
     },
     {
@@ -1258,6 +1254,10 @@
     {
      "date": "2026-11-16",
      "note": "No candidate clears the 1:1 stop-to-target floor (MRNA 0.53, ICLR 0.56, GM 0.39, ETR 0.30, MMM 0.36). HALO already closed today, so the HALO game plan is stale. Keep the $880 settled cash and wait for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "No candidate clears my 1:1 stop-to-target floor at live prices (HALO ~0.15:1, MRNA ~0.60:1, ICLR ~0.59:1, GM ~0.50:1, CCL ~0.49:1, VEEV ~0.17:1). Keep the $880 settled cash and wait for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2396,7 +2396,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 747.62
+     "last": 744.84
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2412,7 +2412,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 747.62
+     "last": 744.84
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2428,7 +2428,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 747.62
+     "last": 744.84
     }
    },
    "status": "active",
@@ -2443,26 +2443,9 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 581.98,
+   "cash": 843.04,
    "reserved": 0.0,
    "positions": {
-    "pos-984e54fed0": {
-     "kind": "stock",
-     "symbol": "NVT",
-     "qty": 2.3861,
-     "entry": 110.74,
-     "cost": 264.24,
-     "hold_days": 7,
-     "direction": "long",
-     "stop": 91.66,
-     "atr": 9.303,
-     "opened": "2026-11-09T09:38:26-05:00",
-     "thesis": "Dart landed on NVT",
-     "confidence": 0,
-     "signals": {},
-     "sector": "Technology",
-     "last": 109.37
-    },
     "pos-3a98f6a8fe": {
      "kind": "stock",
      "symbol": "PLTR",
@@ -2478,13 +2461,13 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 165.19
+     "last": 162.945
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 7,
+   "closed": 8,
    "wins": 4,
    "peak": 1000.67,
    "max_dd": 0.1058,
@@ -2496,10 +2479,17 @@
     "ABBV": "2026-11-05",
     "WDC": "2026-11-05",
     "ORCL": "2026-11-12",
-    "TXN": "2026-11-13"
+    "TXN": "2026-11-13",
+    "NVT": "2026-11-16"
    },
    "joined": "2026-10-13T19:21:59-04:00",
-   "unsettled": []
+   "unsettled": [
+    {
+     "amount": 261.06,
+     "settles": "2026-11-17",
+     "note": "sold NVT"
+    }
+   ]
   },
   "blackswan": {
    "cash": -411.26,
@@ -2527,7 +2517,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.12,
+     "mark": 0.18,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2547,7 +2537,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.905,
+     "exit_half_spread": 1.9,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2592,7 +2582,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.11,
+     "exit_half_spread": 3.08,
      "peak_mark": 1.09
     }
    },
@@ -3155,15 +3145,14 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-16",
-    "made_at": "2026-11-16T09:37-05:00",
+    "made_at": "2026-11-16T10:07-05:00",
     "watch": [
      "NVDA",
      "AMD",
-     "IBIT",
-     "GEV"
+     "SPY"
     ],
-    "aggression": "normal",
-    "why": "NVDA and AMD are the strongest liquid names: both are up on the day, above VWAP and above their opening range, with 1-minute trends up. IBIT and GEV are also up and above opening range, but on thinner volume, so they're secondary. The overnight META and AAPL ideas don't fit today's tape (META is dow",
+    "aggression": "stand_down",
+    "why": "The morning long thesis has broken: NVDA and AMD have flipped below VWAP with 1-minute trends down, and nearly every liquid name is red and below VWAP while SPY is weak. Long-only scalps into a falling tape are poor odds, so I'm standing down and will reassess if NVDA or AMD reclaim VWAP with volume",
     "slices": 4,
     "target_pct": 0.5,
     "stop_pct": 0.3,
