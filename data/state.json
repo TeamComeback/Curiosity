@@ -9,14 +9,12 @@
   "start_balance": 1000.0
  },
  "entries": {
-  "date": "2026-11-13",
-  "counts": {
-   "scalper": 3
-  }
+  "date": "2026-11-16",
+  "counts": {}
  },
  "agents": {
   "trend": {
-   "cash": 602.52,
+   "cash": 665.52,
    "reserved": 0.0,
    "positions": {
     "pos-3dac13e0ef": {
@@ -26,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.39,
+     "mark": 0.46,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -45,53 +43,17 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.39
-    },
-    "pos-9b9cea9b90": {
-     "kind": "option",
-     "symbol": "GLD261218P00310000",
-     "underlying": "GLD",
-     "opt_type": "put",
-     "qty": 1,
-     "entry": 1.05,
-     "mark": 0.74,
-     "expiry": "2026-12-18",
-     "strike": 310.0,
-     "delta": -0.07,
-     "cost": 107.5,
-     "direction": "short",
-     "stop": 367.07,
-     "atr": 6.537,
-     "opened": "2026-11-12T10:38:16-05:00",
-     "thesis": "GLD closed below its 55-day low at 354.69 on 3.5x relative volume and sits 13.6% below its 200-day SMA, so the breakdown is confirmed; the 367.07 underlying stop caps risk, and a put limits the loss to the premium paid.",
-     "confidence": 3,
-     "signals": {
-      "rel_volume": 3.51,
-      "roc20_pct": -2.9,
-      "pct_vs_sma50": -7.6,
-      "pct_vs_sma200": -13.6
-     },
-     "sector": "Consumer Discretionary",
-     "low_water": 354.23,
-     "exit_half_spread": 0.055
+     "exit_half_spread": 0.46
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 23,
+   "closed": 24,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.4677,
+   "max_dd": 0.4692,
    "notes": [
-    {
-     "date": "2026-11-11",
-     "note": "No candidates on today's scan and no trigger has fired. Holding TLS (stop 6.62) and the CLSX put (underlying stop 2.98). Watching VTRS, AHR, IBN, FWONK and IRTC for a close through trigger on at least 2.5x volume."
-    },
-    {
-     "date": "2026-11-11",
-     "note": "No new entries: TLS is the only candidate and is already held. Tightened the TLS stop to breakeven (7.36) to protect the open gain. Watchlist triggers (VTRS, AHR, IBN, FWONK, IRTC) still need a close through trigger on at least 2.5x volume."
-    },
     {
      "date": "2026-11-11",
      "note": "No new candidates beyond TLS, which is already held. Holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98). Watching VTRS, AHR, IBN, FWONK and IRTC for a close through trigger on at least 2.5x volume."
@@ -247,6 +209,10 @@
     {
      "date": "2026-11-13",
      "note": "[weekly] Don't buy options on cheap, extreme-volatility stocks like DJTU: one -122 stop-out cost more than five other losers combined. Cap option risk at about 5% of equity at most. Breakouts that fail within 1-2 days are the norm in chop, so keep sizes small until win rate recovers above 35%, and don't loos"
+    },
+    {
+     "date": "2026-11-16",
+     "note": "Holding CLSX put on its enforced stop; no candidates today. Keep settled cash for a confirmed Health Care breakout (2.5x+ volume close) with $150 max per name."
     }
    ],
    "last_exits": {
@@ -272,7 +238,8 @@
     "VALE": "2026-11-09",
     "ABNB": "2026-11-11",
     "DJTU": "2026-11-11",
-    "TLS": "2026-11-13"
+    "TLS": "2026-11-13",
+    "GLD": "2026-11-16"
    },
    "plan": {
     "for_day": "2026-11-16",
@@ -423,7 +390,13 @@
     "settled_cash_at_plan": 602.52,
     "budgets_clamped": 0
    },
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 63.0,
+     "settles": "2026-11-17",
+     "note": "sold GLD261218P00310000"
+    }
+   ],
    "focus": {
     "lean_in": [
      "Health Care"
@@ -1115,42 +1088,17 @@
    ]
   },
   "meanrev": {
-   "cash": 880.76,
+   "cash": 997.86,
    "reserved": 0.0,
-   "positions": {
-    "pos-3432e0283b": {
-     "kind": "stock",
-     "symbol": "HALO",
-     "qty": 1.1615,
-     "entry": 103.21,
-     "cost": 119.88,
-     "direction": "long",
-     "stop": 96.66,
-     "atr": 4.432,
-     "opened": "2026-11-10T15:08:07-05:00",
-     "thesis": "HALO is an RSI(2) 6.7 washout 21.8% above its 200-day, with live reward-to-risk about 1.4:1 (103.31 to 112.66 target vs 96.66 stop), and Health Care is a lean-in sector; the 103 trigger is within 0.3% of the live price, so I'm taking the planned $120 starter.",
-     "confidence": 2,
-     "signals": {
-      "rsi2": 6.7,
-      "pct_vs_sma200": 21.8,
-      "pct_vs_sma5": -8.3
-     },
-     "sector": "Health Care",
-     "last": 100.46
-    }
-   },
+   "positions": {},
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 19,
+   "closed": 20,
    "wins": 13,
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-11",
-     "note": "PM already exited at the open. No candidate clears the 1:1 stop-to-target floor, so cash stays in reserve. HALO holds on its 96.66 stop and 112.66 target, with no adds after the Morgan Stanley downgrade."
-    },
     {
      "date": "2026-11-11",
      "note": "No entries: IT, TOST, KHC, OTIS and MNST all fail my 1:1 stop-to-target floor (roughly 0.24 to 0.49:1 at live prices). HALO stays on its 96.66 stop and 112.66 target with no adds, and PM is already closed."
@@ -1306,6 +1254,10 @@
     {
      "date": "2026-11-13",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (best is MRNA at about 0.64:1). Hold HALO on its 96.66 stop and keep the $757 settled cash. ALC already closed at 73.80 today, so the game plan's ALC position is stale."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "No candidate clears the 1:1 stop-to-target floor (MRNA 0.53, ICLR 0.56, GM 0.39, ETR 0.30, MMM 0.36). HALO already closed today, so the HALO game plan is stale. Keep the $880 settled cash and wait for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -1326,7 +1278,8 @@
     "XOP": "2026-11-10",
     "CNQ": "2026-11-10",
     "PM": "2026-11-11",
-    "ALC": "2026-11-13"
+    "ALC": "2026-11-13",
+    "HALO": "2026-11-16"
    },
    "plan": {
     "for_day": "2026-11-16",
@@ -1376,7 +1329,13 @@
     "settled_cash_at_plan": 880.76,
     "budgets_clamped": 0
    },
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 117.1,
+     "settles": "2026-11-17",
+     "note": "sold HALO"
+    }
+   ],
    "focus": {
     "lean_in": [],
     "avoid": [
@@ -2437,7 +2396,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 753.39
+     "last": 747.62
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2453,7 +2412,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 753.39
+     "last": 747.62
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2469,7 +2428,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 753.39
+     "last": 747.62
     }
    },
    "status": "active",
@@ -2502,7 +2461,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 114.25
+     "last": 109.37
     },
     "pos-3a98f6a8fe": {
      "kind": "stock",
@@ -2519,7 +2478,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 168.48
+     "last": 165.19
     }
    },
    "status": "active",
@@ -2540,13 +2499,7 @@
     "TXN": "2026-11-13"
    },
    "joined": "2026-10-13T19:21:59-04:00",
-   "unsettled": [
-    {
-     "amount": 89.75,
-     "settles": "2026-11-16",
-     "note": "sold TXN"
-    }
-   ]
+   "unsettled": []
   },
   "blackswan": {
    "cash": -411.26,
@@ -2574,7 +2527,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0,
+     "mark": 0.12,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2594,7 +2547,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.925,
+     "exit_half_spread": 1.905,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2619,7 +2572,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.42,
+     "mark": 0,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2639,7 +2592,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 1.645,
+     "exit_half_spread": 3.11,
      "peak_mark": 1.09
     }
    },
@@ -3201,17 +3154,20 @@
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [],
    "playbook": {
-    "date": "2026-11-13",
-    "made_at": "2026-11-13T15:37-05:00",
+    "date": "2026-11-16",
+    "made_at": "2026-11-16T09:37-05:00",
     "watch": [
-     "SPY"
+     "NVDA",
+     "AMD",
+     "IBIT",
+     "GEV"
     ],
-    "aggression": "stand_down",
-    "why": "With about 13 minutes until the 3:50 flat rule, new entries have little room to work, so I'm standing down. I'm keeping the open SPY scalp's parameters unchanged so its exit management doesn't shift.",
-    "slices": 1,
+    "aggression": "normal",
+    "why": "NVDA and AMD are the strongest liquid names: both are up on the day, above VWAP and above their opening range, with 1-minute trends up. IBIT and GEV are also up and above opening range, but on thinner volume, so they're secondary. The overnight META and AAPL ideas don't fit today's tape (META is dow",
+    "slices": 4,
     "target_pct": 0.5,
     "stop_pct": 0.3,
-    "max_hold_min": 30
+    "max_hold_min": 45
    },
    "scalp_day": {
     "date": "2026-11-13",
