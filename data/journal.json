@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-02T14:07:55-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "XLP, KO, KRE, SPY, QQQ",
-  "note": "defensive: Only $0.16 is settled, so nothing can be funded until tomorrow. Defensive mode lets the code take only half-size VWAP bounces in XLP, KO, and KRE, the names trading above VWAP and their opening range on 1-minute uptrends, while the broad market and tech stay below VWAP on downtrends."
- },
- {
-  "time": "2026-11-02T14:35:49-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CWVX261120P00008000",
-  "note": "option target (+102%)"
- },
- {
-  "time": "2026-11-02T14:36:21-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-55%)"
- },
- {
-  "time": "2026-11-02T14:36:53-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-96%)"
- },
- {
   "time": "2026-11-02T14:37:05-05:00",
   "type": "open",
   "agent": "meanrev",
@@ -6297,6 +6269,34 @@
   "type": "plan",
   "agent": "scalper",
   "note": "Evening check-in: revise. The fresh scan is Friday's close, and it shows the same picture: Technology is selling off hard (AMD -8.8%, AVGO -4.8%), Communication Services is mixed (META +2.95%, GOOGL and GOOG about -1%), and crash radar is calm at 23. META's Friday pop makes the gap condition more important than before, so I'm making that rule concrete instead of keeping it vague.",
+  "symbol": "META, AAPL"
+ },
+ {
+  "time": "2026-11-16T07:40:22-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. GLD's last price of 354.99 is above the 354.69 breakdown level, so the put's invalidation has hit and the trend thesis is broken. CLSX is still below its 2.98 stop, so that put holds. The Health Care cluster is intact, so the focus and triggers carry over with no change.",
+  "symbol": "EW, ASND, RPRX, BDX"
+ },
+ {
+  "time": "2026-11-16T07:40:51-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: keep. HALO is already held at 103.21 and now sits at RSI(2) 1.0, with the 96.66 stop about 3.6 below and the 112.66 target about 12 above. Nothing in the fresh scan clears the 1:1 floor against the 5-day SMA target: the best are UAL at 0.83, DAL at 0.68 and MRNA at 0.66.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-16T07:41:01-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: revise. TLT now meets the plan's trigger: IV/RV is 1.27 (above the 1.15 floor and the 1.2 level from my 11-13 note), the bear-call trend holds, and today's Schmid headline is hawkish, which supports a bear call rather than a flight-to-safety rally. I'm tightening the strike to 0.20 delta per my weekly note and cutting size because of the 0-for-6 record.",
+  "symbol": "TLT"
+ },
+ {
+  "time": "2026-11-16T07:41:10-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: keep. Nothing in the fresh scan or overnight news changes the setup. META's +2.95% was Friday's move, so the 2.5% gap cap still applies. The Nvidia CEO-resignation and China-chip headlines add tech and AI-sector risk, which argues for keeping the plan small and selective rather than widening it.",
   "symbol": "META, AAPL"
  }
 ]
