@@ -56,10 +56,6 @@
    "notes": [
     {
      "date": "2026-11-12",
-     "note": "Passing on BABA short: it's in Broad market / other, which is on my avoid list and has a -56 P&L record. Holding TLS (stop 6.53 per plan; the 7.36 field is entry) and CLSX put (stop 2.98). Keeping settled cash for a confirmed 2.5x-volume close on VTRS, EW, RPRX or AHR."
-    },
-    {
-     "date": "2026-11-12",
      "note": "Taking the GLD put is a deliberate exception to my lean-in focus: it is a confirmed 3.5x-volume breakdown, and the premium budget is small enough that a stop-out is capped at about $120. Keep TLS at its active stop and don't loosen it."
     },
     {
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-16",
      "note": "No trade: the only candidate (KLC put) is in the avoid-listed Broad market bucket, and its put would exceed the $17.50 budget. Hold CLSX to its 2.98 underlying stop and keep settled cash for a Health Care close above trigger on 2.5x+ volume."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "Passed on KLC put: it's a $1.25 extreme-volatility name in the avoid-listed Broad market bucket, and its 40-60 DTE put doesn't fit the $17.50 budget without over-committing. Hold CLSX to its 2.98 underlying stop and keep settled cash for a Health Care close above trigger on 2.5x+ volume."
     }
    ],
    "last_exits": {
@@ -1101,10 +1101,6 @@
    "notes": [
     {
      "date": "2026-11-12",
-     "note": "No fresh washout clears the 1:1 stop-to-target floor at live prices (TOST ~0.31:1, ICLR ~0.53:1, HALO already held). Hold HALO and ALC on their stops and keep settled cash in reserve."
-    },
-    {
-     "date": "2026-11-12",
      "note": "No entries: ABT (about 0.31:1) and VEEV (about 0.29:1) fail the 1:1 floor at live prices. Hold HALO and ALC on their stops and keep $757 settled cash in reserve."
     },
     {
@@ -1258,6 +1254,10 @@
     {
      "date": "2026-11-16",
      "note": "No candidate clears my 1:1 stop-to-target floor at scan prices (GM 0.72, XLY 0.66, MRNA 0.54, HALO 0.50, VRTX 0.27, VEEV 0.25). Passing and keeping settled cash for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "No candidate clears the 1:1 stop-to-target floor at scan prices (GM 0.72, ICLR 0.54, MRNA 0.54, HALO 0.57, VRTX 0.26, VEEV 0.24). HALO already closed today, so the game plan's HALO position is stale. Holding $880 settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2396,7 +2396,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 739.45
+     "last": 740.28
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2412,7 +2412,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 739.45
+     "last": 740.28
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2428,7 +2428,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 739.45
+     "last": 740.28
     }
    },
    "status": "active",
@@ -2461,7 +2461,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 160.29
+     "last": 160.08
     }
    },
    "status": "active",
@@ -2517,7 +2517,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.17,
+     "mark": 0.15,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2537,7 +2537,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.895,
+     "exit_half_spread": 1.874,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2582,7 +2582,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.09,
+     "exit_half_spread": 3.045,
      "peak_mark": 1.09
     }
    },
@@ -3145,19 +3145,19 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-16",
-    "made_at": "2026-11-16T14:37-05:00",
+    "made_at": "2026-11-16T15:07-05:00",
     "watch": [
-     "RWM",
-     "SOXS",
-     "SPCX",
-     "STX"
+     "SPY",
+     "QQQ",
+     "AAPL",
+     "MSFT"
     ],
     "aggression": "defensive",
-    "why": "Breadth is still weak, with SPY below VWAP and most large caps trending down, so I'm keeping half-size VWAP bounces only. RWM and SOXS are the only names trending up with the market selling off, and SPCX is holding above VWAP. I'm dropping TSM, which has slipped back below VWAP, and adding STX, whic",
-    "slices": 3,
-    "target_pct": 0.5,
-    "stop_pct": 0.3,
-    "max_hold_min": 30
+    "why": "About 40 minutes remain before the 3:50 flat, so I'm cutting to two slices and a 15-minute hold. The market is still weak with SPY and QQQ below VWAP, so I'm limiting trades to half-size VWAP bounces in the names still trending up.",
+    "slices": 2,
+    "target_pct": 0.4,
+    "stop_pct": 0.25,
+    "max_hold_min": 15
    },
    "scalp_day": {
     "date": "2026-11-16",
