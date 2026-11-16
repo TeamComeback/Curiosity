@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-02T14:05:57-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CWVX261120P00008000",
-  "note": "option target (+101%)"
- },
- {
-  "time": "2026-11-02T14:06:28-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "IREN",
-  "note": "near max value (1.92 of 2 wide)"
- },
- {
-  "time": "2026-11-02T14:07:00-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-55%)"
- },
- {
-  "time": "2026-11-02T14:07:31-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-97%)"
- },
- {
   "time": "2026-11-02T14:07:55-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6298,5 +6270,33 @@
   "type": "param_change",
   "agent": "volsell",
   "note": "min_iv_rv: 0.95 -> 1.15 (A 0.95 floor accepts marginal setups, such as the 1.09-1.27 TLT looks that kept failing. Requiring at least 1.2 means I only sell premium when implied vol is clearly rich versus realized, and the filt)"
+ },
+ {
+  "time": "2026-11-15T21:50:51-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Evening check-in: revise. The Health Care breakouts are still unconfirmed and the watchlist triggers still hold. I'm tightening the GLD put's invalidation from 367.07 to the 354.69 breakdown level, since a 3.4% cushion is too loose for a breakdown thesis, and I'm cutting the sizes to reflect a weak record.",
+  "symbol": "EW, ASND, RPRX, BDX"
+ },
+ {
+  "time": "2026-11-15T21:51:09-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Evening check-in: revise. HALO now clears the 1:1 floor at its live price of 100.30 (about 3.6 risk to the 96.66 stop vs about 12.4 to the 112.66 target), which the prior plan's stale 'hold on the stop' stance did not reflect. No other scan name clears 1:1 on the 5-day SMA target (MRNA about 0.66, DAL about 0.68, UAL about 0.83 and airline news is unresolved), so no new entries.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-15T21:51:20-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Evening check-in: revise. The TLT trigger is now met: IV/RV is 1.2 (above the 1.15 parameter floor), the trend is bear-call side, and the Fed's Schmid is hawkish, which supports the thesis. Havens are lagging SPY by 1.9% over 20 days, so there is no flight-to-safety rally. EEM at 0.99 does not clear my own 1.15 parameter floor or the 1.2 bar from my latest weekly note, so it drops off the watchlist.",
+  "symbol": "TLT"
+ },
+ {
+  "time": "2026-11-15T21:51:31-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Evening check-in: revise. The fresh scan is Friday's close, and it shows the same picture: Technology is selling off hard (AMD -8.8%, AVGO -4.8%), Communication Services is mixed (META +2.95%, GOOGL and GOOG about -1%), and crash radar is calm at 23. META's Friday pop makes the gap condition more important than before, so I'm making that rule concrete instead of keeping it vague.",
+  "symbol": "META, AAPL"
  }
 ]

@@ -20274,5 +20274,101 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-15T21:50:51-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Evening check-in",
+  "for_day": "2026-11-16",
+  "decision": "revise",
+  "why": "The Health Care breakouts are still unconfirmed and the watchlist triggers still hold. I'm tightening the GLD put's invalidation from 367.07 to the 354.69 breakdown level, since a 3.4% cushion is too loose for a breakdown thesis, and I'm cutting the sizes to reflect a weak record.",
+  "summary": "Hold the CLSX and GLD puts on tighter invalidation levels. Stay in cash unless a Health Care name closes through its trigger on at least 2.5x relative volume, with sizes capped at $150 each.",
+  "watchlist": [
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout today, ROC20 23.8%, ATR 2.74",
+    "trigger": "Close above 106.70 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "ASND",
+    "setup": "Health Care breakout today, ROC20 22.3%, ATR 5.89; needs follow-through",
+    "trigger": "Next-day close above 271.82 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "RPRX",
+    "setup": "Health Care near breakout, ATR 1.52 keeps the stop tight",
+    "trigger": "Close above 70.34 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "BDX",
+    "setup": "Health Care breakout today, ATR 3.92; needs a confirmed hold",
+    "trigger": "Next-day close above 216.74 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-15T21:51:09-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-11-16",
+  "decision": "revise",
+  "why": "HALO now clears the 1:1 floor at its live price of 100.30 (about 3.6 risk to the 96.66 stop vs about 12.4 to the 112.66 target), which the prior plan's stale 'hold on the stop' stance did not reflect. No other scan name clears 1:1 on the 5-day SMA target (MRNA about 0.66, DAL about 0.68, UAL about 0.83 and airline news is unresolved), so no new entries.",
+  "summary": "Hold the existing HALO position (about $120 at 103.21) with its 96.66 hard stop. Take a partial at 106.86 and the rest at 112.66. Make no new entries unless a washout clears 1:1 at live prices.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-15T21:51:19-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Evening check-in",
+  "for_day": "2026-11-16",
+  "decision": "revise",
+  "why": "The TLT trigger is now met: IV/RV is 1.2 (above the 1.15 parameter floor), the trend is bear-call side, and the Fed's Schmid is hawkish, which supports the thesis. Havens are lagging SPY by 1.9% over 20 days, so there is no flight-to-safety rally. EEM at 0.99 does not clear my own 1.15 parameter floor or the 1.2 bar from my latest weekly note, so it drops off the watchlist.",
+  "summary": "Tomorrow, consider one small TLT bear call spread (about 0.22 short delta, 1 wide, 21-45 DTE) only if the Monday open still shows IV/RV of at least 1.15, the bear-call trend intact, and no dovish rate or flight-to-safety headline. Otherwise stay in the $889 settled cash.",
+  "watchlist": [
+   {
+    "symbol": "TLT",
+    "setup": "Bear call spread above the market, about 0.22 short delta, 1 wide, 21-45 DTE, sized small given the two prior TLT stop-outs",
+    "trigger": "Monday's scan still shows TLT IV/RV at or above 1.15 with the bear-call trend intact, and no dovish Fed or rate-cut headline or flight-to-safety rally in that session",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-15T21:51:31-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-11-16",
+  "decision": "revise",
+  "why": "The fresh scan is Friday's close, and it shows the same picture: Technology is selling off hard (AMD -8.8%, AVGO -4.8%), Communication Services is mixed (META +2.95%, GOOGL and GOOG about -1%), and crash radar is calm at 23. META's Friday pop makes the gap condition more important than before, so I'm making that rule concrete instead of keeping it vague.",
+  "summary": "Stand aside unless META or AAPL shows a bar-verified setup after the open. For META, skip any gap above 2.5% and require a break of the first 15-minute high on at least 1.5x relative volume, above VWAP, with SPY above its open. For AAPL, take only a VWAP pullback that holds on at least 1.5x relative volume under the same SPY condition. Max $50 per setup, +0.5% target, -0.3% stop, 45-minute limit, flat by the close.",
+  "watchlist": [
+   {
+    "symbol": "META",
+    "setup": "Communication Services opening-range breakout after Friday's +2.95%, at reduced conviction. Only a clean, volume-backed breakout counts; ATR is 3.5%, so the +0.5% target is a small slice of the daily range.",
+    "trigger": "Gap at the open of 2.5% or less, then a break above the first 15-minute high on at least 1.5x bar-verified relative volume, price above VWAP, and SPY above its open. Skip if NVDA, AMD, AVGO or MU sell off hard in the first hour, or if the breakout fades on falling volume.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "AAPL",
+    "setup": "Consumer Staples VWAP pullback bounce on a mild +0.44% day with ATR 2.2%. The news is low-impact.",
+    "trigger": "Pullback to VWAP that holds on at least 1.5x bar-verified relative volume, price above VWAP, and SPY above its open. Target +0.5%, stop -0.3%, 45-minute limit. No forced entry.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]
