@@ -1,52 +1,5 @@
 [
  {
-  "time": "2026-11-03T10:36:08-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "qty": 0.6653,
-  "entry": 754.046,
-  "exit": 754.204,
-  "pnl": 0.1,
-  "note": "time limit, 46 min (+0.03%)",
-  "opened": "2026-11-03T09:50:01-05:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SPY: 0.78x volume, +0.07% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-11-03T10:36:18-05:00",
-  "type": "rule_block",
-  "agent": "trend",
-  "symbol": "KPTI",
-  "note": "no put affordable within $100.00"
- },
- {
-  "time": "2026-11-03T10:36:26-05:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "SHOP",
-  "instrument": "stock",
-  "qty": 0.2806,
-  "price": 142.872,
-  "cost": 40.09,
-  "stop": 127.83,
-  "thesis": "SHOP RSI(2) 0.9 washout 9.8% above its 200-day in a calm regime (crash radar 32, SPY above its 200-day); target 158.31 vs stop 127.83 is about 1.07:1 on the scan price, clearing my 1:1 floor, so I'm taking a small starter with the $44 settled cash.",
-  "confidence": 2
- },
- {
-  "time": "2026-11-03T10:36:28-05:00",
-  "type": "open",
-  "agent": "monkey",
-  "symbol": "ABBV",
-  "instrument": "stock",
-  "qty": 0.4336,
-  "price": 289.448,
-  "cost": 125.5,
-  "stop": 275.55,
-  "thesis": "Dart landed on ABBV",
-  "confidence": 0
- },
- {
   "time": "2026-11-03T10:36:37-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6267,5 +6220,33 @@
   "agent": "scalper",
   "symbol": "STX",
   "note": "VWAP pullback bounce skipped: 1.16x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-16T14:33:30-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "SOXS",
+  "note": "VWAP pullback bounce skipped: 1.18x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-16T14:36:37-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-95%) (tried 0.12, 0.08, 0.05, 0.01; mark 0.17, natural -1.72)"
+ },
+ {
+  "time": "2026-11-16T14:36:58-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.88)"
+ },
+ {
+  "time": "2026-11-16T14:37:13-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "RWM, SOXS, SPCX, STX",
+  "note": "defensive: Breadth is still weak, with SPY below VWAP and most large caps trending down, so I'm keeping half-size VWAP bounces only. RWM and SOXS are the only names trending up with the market selling off, and SPCX is holding above VWAP. I'm dropping TSM, which has slipped back below VWAP, and adding STX, whic"
  }
 ]
