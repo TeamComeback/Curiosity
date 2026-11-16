@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T12:37-05:00",
+ "updated": "2026-11-16T12:39-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,7 +10,7 @@
  },
  "regime": {
   "spy_trend": "up",
-  "spy_vs_sma200_pct": 1.5,
+  "spy_vs_sma200_pct": 1.6,
   "spy_roc20_pct": -1.2,
   "crash_radar": 23
  },
@@ -55,15 +55,15 @@
    "notes": [
     {
      "date": "2026-11-16",
+     "note": "No trade: the only candidate (KLC short) is in the avoid-listed Broad market bucket and is a $1.25 high-volatility name. Hold CLSX put to its 2.98 underlying stop. GLD exit already filled; keep settled cash for a Health Care close above trigger on 2.5x+ volume."
+    },
+    {
+     "date": "2026-11-16",
      "note": "No trade: the only candidate, KLC short, is in Broad market / other (-57.20 record, on the avoid list) and is a $1.25 extreme-volatility name like DJTU. Hold CLSX put to its 2.98 underlying stop; keep settled cash for a Health Care close above trigger on 2.5x+ volume."
     },
     {
      "date": "2026-11-16",
      "note": "Passed on KLC put: it's in the Broad market / other bucket (-57.20 record, on the avoid list), and at $1.25 it's a cheap, extreme-volatility name like DJTU. Keep settled cash for a Health Care close above trigger on 2.5x+ volume; CLSX holds to its 2.98 stop."
-    },
-    {
-     "date": "2026-11-16",
-     "note": "Passed on VALE put (2.7x breakdown): a 40-60 DTE put won't fit the ~$35 option risk cap (5% of equity), and Materials is outside the Health Care lean-in. Keep cash for a confirmed Health Care breakout on 2.5x+ volume; CLSX holds to its enforced stop."
     }
    ],
    "thesis_review": null
@@ -91,15 +91,15 @@
    "notes": [
     {
      "date": "2026-11-16",
+     "note": "No candidate clears the 1:1 stop-to-target floor at scan prices (HALO 0.38, ICLR 0.56, MRNA 0.50, GM 0.56, CCL 0.54, XLY 0.55). Pass and keep $880 settled cash for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-16",
      "note": "Scan-price stop-to-target ratios are all below my 1:1 floor: HALO 0.38, ICLR 0.56, GM 0.56, MRNA 0.46, CCL 0.54, XLY 0.53. No positions are open and $880 settled cash stays on hand for a setup that clears 1:1."
     },
     {
      "date": "2026-11-16",
      "note": "Stop-to-target check at live prices: ICLR 0.63:1, ROST 0.87:1, MRNA 0.54:1, GM 0.54:1, CCL 0.50:1, HALO 0.40:1. None clears my 1:1 floor, so I'm passing and keeping $880 settled cash for a washout that does."
-    },
-    {
-     "date": "2026-11-16",
-     "note": "No candidate clears my 1:1 stop-to-target floor at live prices (HALO 0.28, ICLR 0.59, MRNA 0.51, ETR 0.46, GM 0.52, CCL 0.50). Hold the $880 settled cash and wait for a washout that clears 1:1."
     }
    ],
    "thesis_review": null
@@ -147,19 +147,19 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 961.3,
+   "equity": 961.5,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.96,
-   "progress_pct": 9.61,
+   "progress_pct": 9.62,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 5.1,
-   "risk_adj": -0.76,
+   "risk_adj": -0.75,
    "notes": [],
    "thesis_review": null
   },
@@ -170,7 +170,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 915.02,
+   "equity": 915.08,
    "cash": 843.04,
    "available": 581.98,
    "settling": 261.06,
@@ -596,8 +596,8 @@
     "trend": 711.52,
     "meanrev": 997.86,
     "volsell": 889.0,
-    "baseline": 961.3,
-    "monkey": 915.02,
+    "baseline": 961.5,
+    "monkey": 915.08,
     "blackswan": -398.26,
     "scalper": 1001.97,
     "hyper": 999.71
@@ -637,7 +637,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 743.205,
+   "last": 743.36,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -659,7 +659,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 743.205,
+   "last": 743.36,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -681,7 +681,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 743.205,
+   "last": 743.36,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -703,7 +703,7 @@
    "opt_type": null,
    "qty": 0.4433,
    "entry": 173.658,
-   "last": 162.38,
+   "last": 162.51,
    "mark": null,
    "stop": 154.12,
    "expiry": null,
@@ -761,6 +761,27 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-16T12:39:35-05:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "MU, AVGO, SNDK",
+   "note": "stand_down: Most candidates are trending down below VWAP with no setups, and the broad tape is weak into the afternoon. I'm standing down, keeping MU and AVGO near VWAP and SNDK, the one name trending up, on watch for a clean setup if breadth turns."
+  },
+  {
+   "time": "2026-11-16T12:39:22-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "ALNY",
+   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.76)"
+  },
+  {
+   "time": "2026-11-16T12:39:01-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-96%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -1.77)"
+  },
   {
    "time": "2026-11-16T12:37:05-05:00",
    "type": "playbook",
@@ -1176,33 +1197,6 @@
    "agent": "blackswan",
    "symbol": "ALNY",
    "note": "spread stop (-96%) (tried 0.13, 0.09, 0.05, 0.01; mark 0.18, natural -1.98)"
-  },
-  {
-   "time": "2026-11-13T15:06:12-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.6)"
-  },
-  {
-   "time": "2026-11-13T15:05:50-05:00",
-   "type": "exit_unfilled",
-   "agent": "trend",
-   "symbol": "CLSX261218P00002000",
-   "note": "option stop (-57%)"
-  },
-  {
-   "time": "2026-11-13T15:04:03-05:00",
-   "type": "open",
-   "agent": "scalper",
-   "symbol": "SPY",
-   "instrument": "stock",
-   "qty": 0.3324,
-   "price": 753.414,
-   "cost": 250.43,
-   "stop": 751.12,
-   "thesis": "VWAP pullback bounce on SPY: 2.86x volume, +0.17% vs VWAP; target +0.5%, stop -0.3%",
-   "confidence": 3
   }
  ],
  "reviews": [
@@ -3758,11 +3752,11 @@
    },
    "facts": {
     "spy_vs_sma50_pct": -2.8,
-    "spy_vs_sma200_pct": 1.5,
+    "spy_vs_sma200_pct": 1.6,
     "spy_off_high_pct": 4.9,
     "spy_iv_pct": 16.6,
     "spy_realized_vol_pct": 22.1,
-    "pct_above_50d": 49.0,
+    "pct_above_50d": 48.8,
     "breadth_sample": 512,
     "junk_vs_treasuries_20d_pct": 0.51,
     "havens_vs_spy_20d_pct": -2.7
@@ -3776,7 +3770,7 @@
     "junk_bond_spread_pct": 3.2,
     "sahm_indicator": 0.0
    },
-   "at": "2026-11-16T12:35-05:00"
+   "at": "2026-11-16T12:37-05:00"
   },
   "history": [
    {
@@ -3923,14 +3917,14 @@
  "playbooks": {
   "scalper": {
    "date": "2026-11-16",
-   "made_at": "2026-11-16T12:37-05:00",
+   "made_at": "2026-11-16T12:39-05:00",
    "watch": [
     "MU",
     "AVGO",
-    "TSM"
+    "SNDK"
    ],
    "aggression": "stand_down",
-   "why": "Most candidates, including SPY, QQQ, MSFT and TSM, are trending down on the 1-minute chart, with few names above VWAP and no clean setups. I'm standing down until breadth improves, and I'm keeping MU and AVGO on watch since they're the only names still holding near VWAP.",
+   "why": "Most candidates are trending down below VWAP with no setups, and the broad tape is weak into the afternoon. I'm standing down, keeping MU and AVGO near VWAP and SNDK, the one name trending up, on watch for a clean setup if breadth turns.",
    "slices": 3,
    "target_pct": 0.5,
    "stop_pct": 0.3,

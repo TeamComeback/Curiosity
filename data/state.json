@@ -56,10 +56,6 @@
    "notes": [
     {
      "date": "2026-11-11",
-     "note": "No candidates and no trigger fired. Holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98) with $357.68 settled cash for a confirmed 2.5x-volume breakout. ABNB and DJTU are already closed, so the game plan's holds on them don't apply."
-    },
-    {
-     "date": "2026-11-11",
      "note": "No candidates on today's scan and no watchlist trigger has fired. Holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98), keeping $357.68 settled cash for a confirmed 2.5x-volume breakout."
     },
     {
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-16",
      "note": "No trade: the only candidate, KLC short, is in Broad market / other (-57.20 record, on the avoid list) and is a $1.25 extreme-volatility name like DJTU. Hold CLSX put to its 2.98 underlying stop; keep settled cash for a Health Care close above trigger on 2.5x+ volume."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "No trade: the only candidate (KLC short) is in the avoid-listed Broad market bucket and is a $1.25 high-volatility name. Hold CLSX put to its 2.98 underlying stop. GLD exit already filled; keep settled cash for a Health Care close above trigger on 2.5x+ volume."
     }
    ],
    "last_exits": {
@@ -1101,10 +1101,6 @@
    "notes": [
     {
      "date": "2026-11-11",
-     "note": "No entries: every live washout fails the 1:1 stop-to-target floor (WDAY ~0.31, OTIS ~0.55, KHC ~0.42, MNST ~0.37). Hold HALO (stop 96.66) and ALC (stop 69.04) on their existing plans and keep cash in reserve."
-    },
-    {
-     "date": "2026-11-11",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (OTIS ~0.54:1, MNST ~0.38:1). Hold HALO (stop 96.66, target 112.66) and ALC (stop 69.04, target ~74.52) on their existing plans and keep cash in reserve for a real washout."
     },
     {
@@ -1258,6 +1254,10 @@
     {
      "date": "2026-11-16",
      "note": "Scan-price stop-to-target ratios are all below my 1:1 floor: HALO 0.38, ICLR 0.56, GM 0.56, MRNA 0.46, CCL 0.54, XLY 0.53. No positions are open and $880 settled cash stays on hand for a setup that clears 1:1."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "No candidate clears the 1:1 stop-to-target floor at scan prices (HALO 0.38, ICLR 0.56, MRNA 0.50, GM 0.56, CCL 0.54, XLY 0.55). Pass and keep $880 settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2396,7 +2396,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 743.205
+     "last": 743.36
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2412,7 +2412,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 743.205
+     "last": 743.36
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2428,7 +2428,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 743.205
+     "last": 743.36
     }
    },
    "status": "active",
@@ -2461,7 +2461,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 162.38
+     "last": 162.51
     }
    },
    "status": "active",
@@ -3145,14 +3145,14 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-16",
-    "made_at": "2026-11-16T12:37-05:00",
+    "made_at": "2026-11-16T12:39-05:00",
     "watch": [
      "MU",
      "AVGO",
-     "TSM"
+     "SNDK"
     ],
     "aggression": "stand_down",
-    "why": "Most candidates, including SPY, QQQ, MSFT and TSM, are trending down on the 1-minute chart, with few names above VWAP and no clean setups. I'm standing down until breadth improves, and I'm keeping MU and AVGO on watch since they're the only names still holding near VWAP.",
+    "why": "Most candidates are trending down below VWAP with no setups, and the broad tape is weak into the afternoon. I'm standing down, keeping MU and AVGO near VWAP and SNDK, the one name trending up, on watch for a clean setup if breadth turns.",
     "slices": 3,
     "target_pct": 0.5,
     "stop_pct": 0.3,
