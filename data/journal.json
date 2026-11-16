@@ -1,38 +1,5 @@
 [
  {
-  "time": "2026-11-03T09:37:49-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, XLV, LLY",
-  "note": "defensive: SPY's range is only 0.18% so far, which makes the 0.5% target hard to reach, so I'm keeping risk small with one slice and a defensive setting. I'm limiting the watchlist to SPY and two non-tech liquid names, XLV and LLY, consistent with the overnight plan's exclusion of Technology and Communication "
- },
- {
-  "time": "2026-11-03T09:50:01-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.6653,
-  "price": 754.046,
-  "cost": 501.67,
-  "stop": 751.82,
-  "thesis": "VWAP pullback bounce on SPY: 0.78x volume, +0.07% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-11-03T09:52:06-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "XLV",
-  "instrument": "stock",
-  "qty": 2.7102,
-  "price": 185.12369,
-  "cost": 501.72,
-  "stop": 184.55,
-  "thesis": "VWAP pullback bounce on XLV: 0.72x volume, +0.07% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-11-03T10:06:24-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6303,5 +6270,26 @@
   "agent": "scalper",
   "symbol": "AMZN, RWM, STX",
   "note": "stand_down: Most liquid names are below VWAP with 1-minute trends down and no setups, and SPY is weak intraday, so no new longs. I'm keeping AMZN (1-min up, pulling back toward VWAP), RWM (above its opening range), and STX (small gain, above VWAP) on watch in case breadth turns."
+ },
+ {
+  "time": "2026-11-16T13:36:31-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-95%) (tried 0.13, 0.09, 0.05, 0.01; mark 0.18, natural -1.72)"
+ },
+ {
+  "time": "2026-11-16T13:36:52-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.78)"
+ },
+ {
+  "time": "2026-11-16T13:37:06-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "RWM, SOXS, AMZN",
+  "note": "defensive: Breadth is broadly weak with SPY below VWAP, but RWM and SOXS are the only names trending up and holding above VWAP or their opening range, so I'm allowing only half-size VWAP bounces. AMZN stays on watch for a pullback entry if the tape stabilizes."
  }
 ]
