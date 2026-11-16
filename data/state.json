@@ -55,10 +55,6 @@
    "max_dd": 0.4692,
    "notes": [
     {
-     "date": "2026-11-11",
-     "note": "No candidates and no watchlist trigger confirmed at 15:37. Holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98), keeping $357.68 settled cash for a confirmed 2.5x-volume close through a watchlist trigger."
-    },
-    {
      "date": "2026-11-12",
      "note": "No candidates and no live trigger confirmed, so I'm holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98) and keeping $591 settled cash for a confirmed 2.5x-volume close through a VTRS, EW, RPRX or AHR trigger."
     },
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-16",
      "note": "No trade: the only candidate (KLC put) is in the avoid-listed Broad market bucket and is a $1.25 high-volatility name. Hold CLSX to its 2.98 underlying stop and keep settled cash for a Health Care close above trigger on 2.5x+ volume."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "Took the rule-qualifying KLC breakdown at a small premium budget despite the avoid-list tag. Keep the loss capped at premium and let the trend rules, not the sector memo, decide whether to keep trading cheap names."
     }
    ],
    "last_exits": {
@@ -1101,10 +1101,6 @@
    "notes": [
     {
      "date": "2026-11-11",
-     "note": "No entries at 15:07: OTIS (about 0.45:1) and MNST (about 0.37:1) fail the 1:1 stop-to-target floor. Hold HALO (stop 96.66, target ~112.66, time stop 5 days) and ALC (stop 69.04, target ~74.52), and keep settled cash in reserve for a real washout."
-    },
-    {
-     "date": "2026-11-11",
      "note": "No new setups: the only live candidates (HALO, ALC) are already held, so I'm holding both on their existing stops and keeping $607 settled cash in reserve."
     },
     {
@@ -1258,6 +1254,10 @@
     {
      "date": "2026-11-16",
      "note": "No candidate clears my 1:1 stop-to-target floor at scan prices (GM ~0.71, ICLR ~0.64, MRNA ~0.59, CCL ~0.67, HALO ~0.49, VEEV ~0.23). Holding $880 settled cash for a washout that clears 1:1; the game plan's HALO position is stale since HALO already closed today."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "No candidate clears my 1:1 stop-to-target floor at scan prices (HALO 0.48, MRNA 0.58, VRTX 0.27, GM 0.67, ICLR 0.56, CCL 0.60). Pass and keep $880 settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2396,7 +2396,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 739.04
+     "last": 740.96
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2412,7 +2412,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 739.04
+     "last": 740.96
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2428,7 +2428,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 739.04
+     "last": 740.96
     }
    },
    "status": "active",
@@ -2461,7 +2461,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 160.93
+     "last": 161.18
     }
    },
    "status": "active",
@@ -2517,7 +2517,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.18,
+     "mark": 0.15,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2537,7 +2537,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.9,
+     "exit_half_spread": 1.874,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2582,7 +2582,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.085,
+     "exit_half_spread": 3.055,
      "peak_mark": 1.09
     }
    },
@@ -3145,14 +3145,16 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-16",
-    "made_at": "2026-11-16T13:37-05:00",
+    "made_at": "2026-11-16T14:07-05:00",
     "watch": [
      "RWM",
      "SOXS",
-     "AMZN"
+     "TSM",
+     "SPCX",
+     "STX"
     ],
     "aggression": "defensive",
-    "why": "Breadth is broadly weak with SPY below VWAP, but RWM and SOXS are the only names trending up and holding above VWAP or their opening range, so I'm allowing only half-size VWAP bounces. AMZN stays on watch for a pullback entry if the tape stabilizes.",
+    "why": "Breadth is still weak with SPY below VWAP and most large caps trending down, so I'm keeping half-size VWAP bounces only. I'm dropping AMZN and swapping in TSM, SPCX and STX, which are trending up and holding above VWAP, alongside RWM and SOXS.",
     "slices": 3,
     "target_pct": 0.5,
     "stop_pct": 0.3,

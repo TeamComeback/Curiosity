@@ -1,64 +1,5 @@
 [
  {
-  "time": "2026-11-03T10:06:24-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-03T10:06:31-05:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "RVTY",
-  "instrument": "stock",
-  "qty": 0.8843,
-  "price": 169.9,
-  "cost": 150.24,
-  "stop": 157.62,
-  "thesis": "RVTY is trading at 169.62, just above its 55-day breakout at 168.90, on 3.7x relative volume and 51% above its 200-day SMA; the 157.62 stop limits risk to about 7% of the position, and it is in the lean-in Broad market sector.",
-  "confidence": 3
- },
- {
-  "time": "2026-11-03T10:06:43-05:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "DT",
-  "instrument": "stock",
-  "qty": 2.5364,
-  "price": 47.267885,
-  "cost": 119.89,
-  "stop": 42.87,
-  "thesis": "DT is a fresh RSI(2) 0.1 washout still 6% above its 200-day, with target 56.80 vs stop 42.87 at about 2.1:1 on the scan price; this is a new setup after yesterday's stop-out, not a re-run of the old trade.",
-  "confidence": 3
- },
- {
-  "time": "2026-11-03T10:06:43-05:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "ZBRA",
-  "instrument": "stock",
-  "qty": 0.3152,
-  "price": 318.36,
-  "cost": 100.35,
-  "stop": 294.68,
-  "thesis": "ZBRA is an RSI(2) 0.4 washout 13% above its 200-day, with target 360.24 vs stop 294.68 at about 1.9:1 on the scan price, clearing my 1:1 floor comfortably.",
-  "confidence": 3
- },
- {
-  "time": "2026-11-03T10:06:49-05:00",
-  "type": "open",
-  "agent": "monkey",
-  "symbol": "CSCO",
-  "instrument": "stock",
-  "qty": 3.3534,
-  "price": 102.55,
-  "cost": 343.89,
-  "stop": 95.92,
-  "thesis": "Dart landed on CSCO",
-  "confidence": 0
- },
- {
   "time": "2026-11-03T10:06:57-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6291,5 +6232,40 @@
   "agent": "scalper",
   "symbol": "RWM, SOXS, AMZN",
   "note": "defensive: Breadth is broadly weak with SPY below VWAP, but RWM and SOXS are the only names trending up and holding above VWAP or their opening range, so I'm allowing only half-size VWAP bounces. AMZN stays on watch for a pullback entry if the tape stabilizes."
+ },
+ {
+  "time": "2026-11-16T14:06:32-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-95%) (tried 0.10, 0.07, 0.04, 0.01; mark 0.15, natural -1.72)"
+ },
+ {
+  "time": "2026-11-16T14:06:53-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.78)"
+ },
+ {
+  "time": "2026-11-16T14:07:02-05:00",
+  "type": "sizing",
+  "agent": "trend",
+  "symbol": "KLC",
+  "note": "$35.00 -> $17.50: half size while win rate 4/24 is under 30%"
+ },
+ {
+  "time": "2026-11-16T14:07:02-05:00",
+  "type": "rule_block",
+  "agent": "trend",
+  "symbol": "KLC",
+  "note": "no put affordable within $17.50"
+ },
+ {
+  "time": "2026-11-16T14:07:12-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "RWM, SOXS, TSM, SPCX, STX",
+  "note": "defensive: Breadth is still weak with SPY below VWAP and most large caps trending down, so I'm keeping half-size VWAP bounces only. I'm dropping AMZN and swapping in TSM, SPCX and STX, which are trending up and holding above VWAP, alongside RWM and SOXS."
  }
 ]
