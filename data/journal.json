@@ -1,75 +1,5 @@
 [
  {
-  "time": "2026-11-03T12:06:11-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-03T12:07:01-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "agent: Mark is near zero on conflicting feeds and the fill ($330) doesn't match the $183.9 budget. Closing clears the unreconci"
- },
- {
-  "time": "2026-11-03T12:36:21-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-03T12:36:30-05:00",
-  "type": "rule_block",
-  "agent": "trend",
-  "symbol": "KPTI",
-  "note": "no put affordable within $200.00"
- },
- {
-  "time": "2026-11-03T12:37:14-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "agent: Exit the AGCO bear put spread. Its mark is ~0 against a $183.9 budget and a $330 fill, so the position is effectively wo"
- },
- {
-  "time": "2026-11-03T12:38:56-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-03T12:39:47-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "agent: Clearing the stale AGCO record: the mark is about 0, the fill ($330) doesn't match the $183.9 budget, and my notes say i"
- },
- {
-  "time": "2026-11-03T13:06:21-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-03T13:07:11-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "agent: AGCO is still listed with a near-zero mark (0) after the earlier close note. Closing it clears the stale position and re"
- },
- {
-  "time": "2026-11-03T13:36:22-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
   "time": "2026-11-03T13:37:14-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6234,5 +6164,68 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, RWM",
   "note": "stand_down: Only about 13 minutes remain before the 3:50 flat, too little time for a new scalp to play out. Most liquid names are below VWAP and trending down, so I'm standing down rather than forcing entries into a weak tape."
+ },
+ {
+  "time": "2026-11-16T16:40:18-05:00",
+  "type": "recap",
+  "note": "A red day: three trades closed, all losers, for -$50.46 realized, and the SPY baseline fell 1.9%. No firm opened a new position, and the radar stayed calm at 24."
+ },
+ {
+  "time": "2026-11-16T16:40:18-05:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 0 of 4 picks moved the planned way, avg -0.83%"
+ },
+ {
+  "time": "2026-11-16T16:40:48-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Health Care; avoiding Energy, Consumer Staples, Technology, Broad market / other, Consumer Discretionary. Health Care is the only sector with a fresh breakout cluster and calm market stress (score 24). Consumer Discretionary is my worst sector at -59.74 over 2 trades, and the other avoided sectors are negative."
+ },
+ {
+  "time": "2026-11-16T16:40:48-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: revise. The GLD put already closed, and the fresh scan shows the Health Care breakout levels moved (EW 107.67, ASND 278.35, BDX 219.66), so I'm using those, dropping RPRX, which is no longer in the scan, and adding the GMED breakdown.",
+  "symbol": "EW, ASND, BDX, GMED"
+ },
+ {
+  "time": "2026-11-16T16:40:48-05:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 0 of 0 picks moved the planned way"
+ },
+ {
+  "time": "2026-11-16T16:40:59-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: revise. HALO already closed this morning at -2.78, so the pre-market plan to hold it and sell half at 106.86 is stale and no longer applies. Recomputing stop-to-target from the fresh scan (stop at 1.5 ATR, target at the 5-day SMA) puts every washout below 1:1, with the best at DE about 0.85 and XBI about 0.78.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-16T16:40:59-05:00",
+  "type": "scorecard",
+  "agent": "volsell",
+  "note": "Plan graded: 0 of 1 picks moved the planned way, avg +0.00%"
+ },
+ {
+  "time": "2026-11-16T16:41:07-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "After-close review: keep. The plan still holds: TLT's scan shows IV/RV 1.23 with a bear-call trend, which clears the 1.2 floor. The news feed is empty and the crash radar is calm at 24, so there's no new catalyst to justify changing course. Overall results remain weak (6 right-way of 21 picks), so size stays small.",
+  "symbol": "TLT"
+ },
+ {
+  "time": "2026-11-16T16:41:07-05:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 0 of 2 picks moved the planned way, avg -1.70%"
+ },
+ {
+  "time": "2026-11-16T16:41:20-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's AI-complex selloff (NVDA -4.1%, AMD -5.6%, MU -7.6%) and the CEO-resignation headline are the kind of day the old META skip rule targets, and META fell -2.37% instead of breaking out. Friday's +2.95% no longer supports the setup, so META drops to a low-conviction, conditional idea. AAPL is a mild, low-impact name and the plan still holds for it.",
+  "symbol": "META, AAPL"
  }
 ]

@@ -20697,5 +20697,118 @@
   ],
   "aggression": "stand_down",
   "why": "Only about 13 minutes remain before the 3:50 flat, too little time for a new scalp to play out. Most liquid names are below VWAP and trending down, so I'm standing down rather than forcing entries into a weak tape."
+ },
+ {
+  "time": "2026-11-16T16:40:48-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-11-17",
+  "decision": "revise",
+  "why": "The GLD put already closed, and the fresh scan shows the Health Care breakout levels moved (EW 107.67, ASND 278.35, BDX 219.66), so I'm using those, dropping RPRX, which is no longer in the scan, and adding the GMED breakdown.",
+  "summary": "Hold CLSX to its 2.98 stop. Buy only Health Care breakouts that close through the fresh levels on 2.5x+ volume, at $150 max each. Stay in cash otherwise.",
+  "watchlist": [
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout, 0.5% below the 107.67 level",
+    "trigger": "Close above 107.67 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "ASND",
+    "setup": "Health Care breakout, 2.5% below the 278.35 level",
+    "trigger": "Close above 278.35 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "BDX",
+    "setup": "Health Care breakout, 1.5% below the 219.66 level",
+    "trigger": "Close above 219.66 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "GMED",
+    "setup": "Health Care breakdown put, 0.2% above the 70.39 level, ROC20 -6.8%",
+    "trigger": "Close below 70.39 on at least 2.5x relative volume, then buy a 30-60 DTE put",
+    "instrument": "put",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-16T16:40:48-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Health Care"
+  ],
+  "avoid": [
+   "Energy",
+   "Consumer Staples",
+   "Technology",
+   "Broad market / other",
+   "Consumer Discretionary"
+  ],
+  "why": "Health Care is the only sector with a fresh breakout cluster and calm market stress (score 24). Consumer Discretionary is my worst sector at -59.74 over 2 trades, and the other avoided sectors are negative.",
+  "expires": "2026-11-30"
+ },
+ {
+  "time": "2026-11-16T16:40:59-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-11-17",
+  "decision": "revise",
+  "why": "HALO already closed this morning at -2.78, so the pre-market plan to hold it and sell half at 106.86 is stale and no longer applies. Recomputing stop-to-target from the fresh scan (stop at 1.5 ATR, target at the 5-day SMA) puts every washout below 1:1, with the best at DE about 0.85 and XBI about 0.78.",
+  "summary": "No open positions and no entries tomorrow. Keep the $880 settled cash and buy nothing unless a washout clears 1:1 at live prices. Re-check the scan at the open against the same stop and target math.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-16T16:41:07-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "After-close review",
+  "for_day": "2026-11-17",
+  "decision": "keep",
+  "why": "The plan still holds: TLT's scan shows IV/RV 1.23 with a bear-call trend, which clears the 1.2 floor. The news feed is empty and the crash radar is calm at 24, so there's no new catalyst to justify changing course. Overall results remain weak (6 right-way of 21 picks), so size stays small.",
+  "summary": "Tomorrow, only consider one small TLT bear call spread (about 0.20-0.22 short delta, 1 wide, 21-45 DTE, max risk about $75) if the open still shows TLT IV/RV at or above 1.2 and the bearish trend intact, with no dovish, rate-cut, or flight-to-safety headline. Otherwise keep the $889 in settled cash.",
+  "watchlist": [
+   {
+    "symbol": "TLT",
+    "setup": "Bear call spread above the market, about 0.20-0.22 short delta, 1 wide, 21-45 DTE, small size",
+    "trigger": "At the open, TLT IV/RV is still at or above 1.2, the bear-call trend holds, and there is no dovish Fed, rate-cut, or flight-to-safety headline",
+    "instrument": "spread",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-16T16:41:20-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-11-17",
+  "decision": "revise",
+  "why": "Today's AI-complex selloff (NVDA -4.1%, AMD -5.6%, MU -7.6%) and the CEO-resignation headline are the kind of day the old META skip rule targets, and META fell -2.37% instead of breaking out. Friday's +2.95% no longer supports the setup, so META drops to a low-conviction, conditional idea. AAPL is a mild, low-impact name and the plan still holds for it.",
+  "summary": "Stand aside unless a setup prints. META is a conditional long only if it opens at or below +1% with the AI complex stable and then breaks its first 15-minute high on at least 1.5x relative volume above VWAP. AAPL is a VWAP pullback bounce only if it holds on at least 1.5x relative volume. Both use $50 max, +0.5% target, -0.3% stop, and a 45-minute limit, and both must be flat by the close.",
+  "watchlist": [
+   {
+    "symbol": "META",
+    "setup": "Communication Services opening-range breakout, reduced to conditional after a -2.37% day with the AI complex broadly weak.",
+    "trigger": "Opens at or below +1% gap, then breaks above the first 15-minute high on at least 1.5x bar-verified relative volume, with price above VWAP, SPY above its open, and NVDA/AMD/AVGO/MU not down more than about 2% in the first hour. Skip if any of them sells off hard early.",
+    "instrument": "stock",
+    "conviction": 1
+   },
+   {
+    "symbol": "AAPL",
+    "setup": "Consumer Staples VWAP pullback bounce. Low-impact news, ATR about 2.3%, and the staples lean-in is supported by a 60% win rate on a small sample.",
+    "trigger": "Pullback to VWAP that holds on at least 1.5x bar-verified relative volume, with price above VWAP and SPY above its open. Target +0.5%, stop -0.3%, 45-minute limit. No forced entry.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]
