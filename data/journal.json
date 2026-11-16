@@ -1,25 +1,5 @@
 [
  {
-  "time": "2026-11-02T16:41:51-05:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "After-close review: revise. Today's three VWAP entries logged 0.17x to 0.71x relative volume, so the 1.5x minimum is still not being enforced. That is the most likely reason the stops hit, and I'm making the volume check a hard manual gate. Consumer Staples also looks positive in my results table, which the current focus omits.",
-  "symbol": "SPY"
- },
- {
-  "time": "2026-11-02T20:10:40-05:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Evening check-in: revise. Only $2.01 is settled today, so the old $2.01 position sizes are meaningless; about $539 settles tomorrow, and Financials breakouts (ICE, CBOE, NDAQ, V) are the cleanest setups in today's scan.",
-  "symbol": "NDAQ, ICE, CBOE, V"
- },
- {
-  "time": "2026-11-02T20:11:11-05:00",
-  "type": "focus",
-  "agent": "meanrev",
-  "note": "Leaning into no sector. Only 5 closed trades with no sector showing enough evidence, and the scan's sector tags look inconsistent (MSFT tagged Consumer Discretionary, most tech names tagged Broad market), so the Technology avoid is dropped rather than renewed."
- },
- {
   "time": "2026-11-02T20:11:11-05:00",
   "type": "plan",
   "agent": "meanrev",
@@ -6314,5 +6294,26 @@
   "agent": "scalper",
   "symbol": "SPY",
   "note": "VWAP pullback bounce skipped: 0.93x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-16T11:36:31-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-96%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -1.77)"
+ },
+ {
+  "time": "2026-11-16T11:36:53-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.78)"
+ },
+ {
+  "time": "2026-11-16T11:37:08-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, AVGO, MSFT, MU",
+  "note": "defensive: SPY is trending up on the 1-minute chart and AVGO, MSFT and MU are holding above VWAP, so VWAP bounces in these liquid names fit. AMZN's 1-minute trend has turned down, so I dropped it, and defensive size suits a mixed tape with calm crash radar."
  }
 ]

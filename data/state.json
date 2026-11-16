@@ -56,10 +56,6 @@
    "notes": [
     {
      "date": "2026-11-11",
-     "note": "No candidates on today's scan and no watchlist trigger has fired. Holding TLS (stop 7.36, breakeven) and the CLSX put (underlying stop 2.98). Keeping settled cash for a confirmed 2.5x-volume close through a VTRS, AHR, IBN, FWONK or IRTC trigger."
-    },
-    {
-     "date": "2026-11-11",
      "note": "No candidates on today's scan and no watchlist trigger has fired, so I'm holding TLS (stop 7.36) and the CLSX put (underlying stop 2.98) and keeping settled cash for a confirmed 2.5x-volume breakout."
     },
     {
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-16",
      "note": "No trade today: VALE put doesn't fit the ~$35 option budget, SLV is in the losing Consumer Discretionary bucket, and no Health Care trigger has closed on 2.5x+ volume. Keep settled cash and hold CLSX to its 2.98 underlying stop."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "Passed on VALE put (2.7x breakdown): a 40-60 DTE put won't fit the ~$35 option risk cap (5% of equity), and Materials is outside the Health Care lean-in. Keep cash for a confirmed Health Care breakout on 2.5x+ volume; CLSX holds to its enforced stop."
     }
    ],
    "last_exits": {
@@ -1101,10 +1101,6 @@
    "notes": [
     {
      "date": "2026-11-11",
-     "note": "No entries: OTIS (~0.55:1) and KHC (~0.47:1) fail the 1:1 stop-to-target floor, and HALO is already held. Hold HALO on its 96.66 stop and 112.66 target, and keep cash in reserve for a real washout."
-    },
-    {
-     "date": "2026-11-11",
      "note": "The game plan's ALC avoid note used a stale RSI above 10; live RSI(2) is 7.1, so check live signals before accepting plan avoids. Hold HALO to its stop."
     },
     {
@@ -1258,6 +1254,10 @@
     {
      "date": "2026-11-16",
      "note": "No candidate clears my 1:1 stop-to-target floor at live prices (best is ICLR at about 0.63:1; HALO ~0.2, CCL ~0.48, MRNA ~0.53, WAT ~0.48, GM ~0.44). Keep the $880 settled cash and wait for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-16",
+     "note": "No candidate clears my 1:1 stop-to-target floor at live prices (HALO 0.28, ICLR 0.59, MRNA 0.51, ETR 0.46, GM 0.52, CCL 0.50). Hold the $880 settled cash and wait for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2396,7 +2396,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 746.24
+     "last": 746.69
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2412,7 +2412,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 746.24
+     "last": 746.69
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2428,7 +2428,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 746.24
+     "last": 746.69
     }
    },
    "status": "active",
@@ -2461,7 +2461,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 164.01
+     "last": 164.33
     }
    },
    "status": "active",
@@ -2517,7 +2517,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.15,
+     "mark": 0.13,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2537,7 +2537,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.875,
+     "exit_half_spread": 1.899,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2582,7 +2582,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.05,
+     "exit_half_spread": 3.085,
      "peak_mark": 1.09
     }
    },
@@ -3145,17 +3145,16 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-16",
-    "made_at": "2026-11-16T11:07-05:00",
+    "made_at": "2026-11-16T11:37-05:00",
     "watch": [
-     "QQQ",
      "SPY",
-     "MSFT",
+     "QQQ",
      "AVGO",
-     "MU",
-     "AMZN"
+     "MSFT",
+     "MU"
     ],
     "aggression": "defensive",
-    "why": "SPY has turned trend-up on the 1-minute chart and is back at VWAP, and several megacaps and semis (MSFT, AVGO, MU, AMZN) are holding above VWAP, with QQQ showing a VWAP pullback bounce. Defensive size, with only VWAP bounces in liquid names, fits a market that's mixed rather than clearly trending.",
+    "why": "SPY is trending up on the 1-minute chart and AVGO, MSFT and MU are holding above VWAP, so VWAP bounces in these liquid names fit. AMZN's 1-minute trend has turned down, so I dropped it, and defensive size suits a mixed tape with calm crash radar.",
     "slices": 3,
     "target_pct": 0.5,
     "stop_pct": 0.3,
