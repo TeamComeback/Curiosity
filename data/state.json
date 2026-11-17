@@ -68,7 +68,7 @@
       "pct_vs_sma200": 16.8
      },
      "sector": "Communication Services",
-     "last": 119.98,
+     "last": 119.82,
      "high_water": 121.325
     }
    },
@@ -80,10 +80,6 @@
    "peak": 1340.54,
    "max_dd": 0.4738,
    "notes": [
-    {
-     "date": "2026-11-12",
-     "note": "No trade: the only candidate (BABA put) is in Broad market / other, which is on my avoid list, and a 0.5-delta 30-60 DTE put on a ~$95 stock likely exceeds the budget. Holding TLS (stop 7.36), CLSX put (stop 2.98), and GLD put (stop 367.07) on enforced stops; waiting for a 2.5x-volume breakout in He"
-    },
     {
      "date": "2026-11-12",
      "note": "Pass on BABA put: it is a sector-avoid name with a -56 P&L record, and a ~0.5-delta 30-60 DTE put on a ~$94 stock likely costs more than the $483.54 settled cash, so sizing it all-in would break the risk rule. Hold TLS (stop 7.36, tighter than the 6.53 plan level), the CLSX put (stop 2.98, underlyin"
@@ -239,6 +235,10 @@
     {
      "date": "2026-11-17",
      "note": "No qualifying entry: the only candidate is CNTY, a sub-$0.30 put in the avoid-listed Broad market bucket (2 wins in 10 trades), so I'm passing again. Holding CLSX to its 2.98 stop and DIS to its 116.69 stop; EW, NFLX and SE triggers aren't in today's scan, so they stay on watch with cash kept settle"
+    },
+    {
+     "date": "2026-11-17",
+     "note": "No qualifying entry: CNTY is a sub-$0.30 put in the avoid-listed Broad market bucket (2 wins in 10 trades). Holding CLSX to its 2.98 underlying stop and DIS to its 116.69 stop, and keeping settled cash for EW, NFLX, or SE triggers if they appear in a scan."
     }
    ],
    "last_exits": {
@@ -1137,7 +1137,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Consumer Staples",
-     "last": 222.87
+     "last": 222.5
     },
     "pos-dc107bcf5c": {
      "kind": "stock",
@@ -1157,7 +1157,7 @@
       "pct_vs_sma5": -4.4
      },
      "sector": "Broad market / other",
-     "last": 81.98
+     "last": 82.02
     }
    },
    "status": "active",
@@ -1168,10 +1168,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-12",
-     "note": "No candidate clears the 1:1 stop-to-target floor at live prices (ABT ~0.42:1, TOST ~0.31:1; HALO and ALC already held). Hold both on existing stops and keep $757 settled cash for a washout that clears 1:1."
-    },
     {
      "date": "2026-11-12",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (ABT ~0.47, TOST ~0.34, VEEV ~0.21). Hold HALO and ALC on their existing stops and keep $757 settled cash for a washout that clears 1:1."
@@ -1327,6 +1323,10 @@
     {
      "date": "2026-11-17",
      "note": "Only HZN clears the 1:1 floor at live scan prices (MCO is 0.99:1, MRNA 0.61, IQV 0.53, VRTX 0.21); keep the SAP starter on its 214.83 stop and stay disciplined on the floor."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "No new entries: every live candidate is below the 1:1 stop-to-target floor (MRNA ~0.59, IQV ~0.52, VRTX ~0.22, CCL ~0.5), and HZN and SAP are already held. Keep ~$598 settled cash and wait for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2513,7 +2513,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 732.615
+     "last": 732.06
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2529,7 +2529,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 732.615
+     "last": 732.06
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2545,7 +2545,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 732.615
+     "last": 732.06
     }
    },
    "status": "active",
@@ -2637,7 +2637,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.865,
+     "exit_half_spread": 2.825,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2662,7 +2662,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.15,
+     "mark": 0.09,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2682,7 +2682,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.93,
+     "exit_half_spread": 3.87,
      "peak_mark": 1.09
     }
    },
@@ -3251,21 +3251,20 @@
    ],
    "playbook": {
     "date": "2026-11-17",
-    "made_at": "2026-11-17T12:38-05:00",
+    "made_at": "2026-11-17T12:42-05:00",
     "watch": [
      "AVGO",
      "META",
      "GOOGL",
-     "QQQ",
-     "AAPL",
-     "SPY",
+     "AMZN",
+     "SPCX",
      "SQQQ",
      "RWM"
     ],
     "aggression": "defensive",
-    "why": "SPY is still negative on the day, and most large caps are below VWAP, so sizing stays defensive with VWAP bounces only. I'm watching the names that are above VWAP on an up 1-minute trend (AVGO, META, GOOGL, QQQ, AAPL) plus SQQQ and RWM, which hold above their opening ranges, with two slices to limit",
+    "why": "SPY is still down on the day and most large caps are below VWAP, so I'm keeping sizing defensive with VWAP bounces only and two slices. I'm watching the names holding above VWAP on an up 1-minute trend (AVGO, META, GOOGL, AMZN, SPCX) plus SQQQ and RWM, which are above their opening ranges, and dropp",
     "slices": 2,
-    "target_pct": 0.6,
+    "target_pct": 0.5,
     "stop_pct": 0.3,
     "max_hold_min": 30
    },
