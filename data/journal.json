@@ -1,19 +1,5 @@
 [
  {
-  "time": "2026-11-04T11:38:07-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "MSFT, TSLA",
-  "note": "stand_down: All three slices are used by today's round trips (GOOGL, AMZN, SPY), so no new entries are possible. Most of the tape is weak versus VWAP and SPY is below VWAP, so I'm standing down and holding MSFT (above its opening range, trending up) and TSLA (above its opening range) for the next session."
- },
- {
-  "time": "2026-11-04T12:06:09-05:00",
-  "type": "error",
-  "agent": "trend",
-  "symbol": "XLE",
-  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
- },
- {
   "time": "2026-11-04T12:06:40-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6171,5 +6157,25 @@
   "agent": "scalper",
   "symbol": "AVGO, META, GOOGL, AMZN, SPCX",
   "note": "defensive: SPY is still down on the day and most large caps are below VWAP, so I'm keeping sizing defensive with VWAP bounces only and two slices. I'm watching the names holding above VWAP on an up 1-minute trend (AVGO, META, GOOGL, AMZN, SPCX) plus SQQQ and RWM, which are above their opening ranges, and dropp"
+ },
+ {
+  "time": "2026-11-17T12:56:36-05:00",
+  "type": "open",
+  "agent": "scalper",
+  "symbol": "AMZN",
+  "instrument": "stock",
+  "qty": 0.9731,
+  "price": 257.412,
+  "cost": 250.49,
+  "stop": 256.63,
+  "thesis": "VWAP pullback bounce on AMZN: 2.83x volume, +0.28% vs VWAP; target +0.5%, stop -0.3%",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-17T13:00:37-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "RWM",
+  "note": "VWAP pullback bounce skipped: 0.41x volume < 1.5x"
  }
 ]
