@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-04T13:35:48-05:00",
-  "type": "error",
-  "agent": "trend",
-  "symbol": "XLE",
-  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
- },
- {
   "time": "2026-11-04T13:36:19-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6190,5 +6183,19 @@
   "agent": "scalper",
   "symbol": "META, MSFT, AVGO, MU, SNDK",
   "note": "defensive: SPY is weak (-0.85% on the day) and two of today's VWAP scalps hit their stops, so I'm keeping size at half and limiting the watch to names holding above VWAP on an up 1-minute trend. I widened the stop to 0.4% because the 0.3% stops were getting clipped by normal bar noise."
+ },
+ {
+  "time": "2026-11-17T13:48:38-05:00",
+  "type": "close",
+  "agent": "scalper",
+  "symbol": "META",
+  "qty": 0.4023,
+  "entry": 622.734,
+  "exit": 620.68,
+  "pnl": -0.83,
+  "note": "stop (-0.32%)",
+  "opened": "2026-11-17T13:26:37-05:00",
+  "confidence": 3,
+  "thesis": "VWAP pullback bounce on META: 1.58x volume, +0.52% vs VWAP; target +0.5%, stop -0.3%"
  }
 ]
