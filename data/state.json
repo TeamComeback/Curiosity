@@ -9,7 +9,7 @@
   "start_balance": 1000.0
  },
  "entries": {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "counts": {}
  },
  "agents": {
@@ -24,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.46,
+     "mark": 0.43,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -43,7 +43,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.46
+     "exit_half_spread": 0.435
     }
    },
    "status": "active",
@@ -52,12 +52,8 @@
    "closed": 24,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.4692,
+   "max_dd": 0.4715,
    "notes": [
-    {
-     "date": "2026-11-12",
-     "note": "Passed on the BABA put: a 0.5-delta, 30-60 DTE put on a ~$95 stock likely costs well over the $120 budget and would be blocked, and Broad market / other is on my avoid list. Holding TLS and the CLSX put; verify TLS's active stop (6.53 vs 7.36) and CLSX's stop (2.98 vs 3.63) before the open."
-    },
     {
      "date": "2026-11-12",
      "note": "No new candidates beyond GLD, which is already held. Watchlist triggers (VTRS, EW, RPRX, AHR) are unconfirmed. Live available cash is $483.54, not the $591 in the game plan. Keep TLS and CLSX stops as the system shows them; never loosen."
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-16",
      "note": "Taking the rule-qualifying KLC breakdown at a small premium budget despite the avoid-list tag; the loss is capped at premium, and cheap extreme-volatility names need small size."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "No candidates in today's scan, so no entries. Holding CLSX put to its 2.98 underlying stop. Watchlist names (EW, NFLX, SE) are not live candidates, so their triggers can't be acted on until they appear in the scan."
     }
    ],
    "last_exits": {
@@ -1103,10 +1103,6 @@
    "notes": [
     {
      "date": "2026-11-12",
-     "note": "No entries: VEEV (RSI(2) 4.9) is about 0.48:1 to its 303.55 target against the 284.20 stop, below my 1:1 floor, and HALO and ALC are already held. Keep $757 settled cash and wait for a washout that clears 1:1 at live prices."
-    },
-    {
-     "date": "2026-11-12",
      "note": "No new entries: ABT (about 0.37:1) and VEEV (about 0.38:1) fail the 1:1 stop-to-target floor at live prices, and HALO and ALC are already held. Keep settled cash for a washout that clears 1:1."
     },
     {
@@ -1260,6 +1256,10 @@
     {
      "date": "2026-11-16",
      "note": "No candidate clears my 1:1 stop-to-target floor at 15:37 prices: DE about 0.82:1, GM 0.69, MRNA 0.56, HALO 0.55, VRTX 0.28, VEEV 0.24. Passing and keeping $880 settled cash. The game plan's HALO position is stale because HALO closed this morning."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "Passing: every live candidate is below my 1:1 stop-to-target floor (VRTX 0.27, MRNA 0.52, AZN 0.35, SAP 0.73, CRM 0.66, HD 0.48). Game-plan triggers (DE, IBB, EMR, AMZN) aren't in the live candidate list and haven't hit. Keep $997.86 settled cash."
     }
    ],
    "last_exits": {
@@ -2450,7 +2450,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 738.97
+     "last": 737.9
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2466,7 +2466,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 738.97
+     "last": 737.9
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2482,7 +2482,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 738.97
+     "last": 737.9
     }
    },
    "status": "active",
@@ -2497,31 +2497,13 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 843.04,
+   "cash": 914.69,
    "reserved": 0.0,
-   "positions": {
-    "pos-3a98f6a8fe": {
-     "kind": "stock",
-     "symbol": "PLTR",
-     "qty": 0.4433,
-     "entry": 173.658,
-     "cost": 76.98,
-     "hold_days": 6,
-     "direction": "long",
-     "stop": 154.12,
-     "atr": 9.91,
-     "opened": "2026-11-11T09:40:25-05:00",
-     "thesis": "Dart landed on PLTR",
-     "confidence": 0,
-     "signals": {},
-     "sector": "Technology",
-     "last": 159.525
-    }
-   },
+   "positions": {},
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 8,
+   "closed": 9,
    "wins": 4,
    "peak": 1000.67,
    "max_dd": 0.1058,
@@ -2534,14 +2516,15 @@
     "WDC": "2026-11-05",
     "ORCL": "2026-11-12",
     "TXN": "2026-11-13",
-    "NVT": "2026-11-16"
+    "NVT": "2026-11-16",
+    "PLTR": "2026-11-17"
    },
    "joined": "2026-10-13T19:21:59-04:00",
    "unsettled": [
     {
-     "amount": 261.06,
-     "settles": "2026-11-17",
-     "note": "sold NVT"
+     "amount": 71.65,
+     "settles": "2026-11-18",
+     "note": "sold PLTR"
     }
    ]
   },
@@ -2571,7 +2554,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.15,
+     "mark": 0.33,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2591,7 +2574,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.874,
+     "exit_half_spread": 2.895,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2616,7 +2599,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0,
+     "mark": 0.1,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2636,7 +2619,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.1,
+     "exit_half_spread": 3.83,
      "peak_mark": 1.09
     }
    },
@@ -3198,19 +3181,19 @@
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [],
    "playbook": {
-    "date": "2026-11-16",
-    "made_at": "2026-11-16T15:37-05:00",
+    "date": "2026-11-17",
+    "made_at": "2026-11-17T09:38-05:00",
     "watch": [
-     "SPY",
-     "QQQ",
-     "RWM"
+     "AAPL",
+     "AVGO",
+     "SNDK"
     ],
-    "aggression": "stand_down",
-    "why": "Only about 13 minutes remain before the 3:50 flat, too little time for a new scalp to play out. Most liquid names are below VWAP and trending down, so I'm standing down rather than forcing entries into a weak tape.",
-    "slices": 1,
+    "aggression": "defensive",
+    "why": "The tape is choppy and mostly red with SPY flat and low ranges, so only the few names trending above VWAP are worth watching, at half size on VWAP bounces. Tighter target and stop fit AAPL's roughly 0.45% daily range and keep the risk small on a $1,000 account.",
+    "slices": 3,
     "target_pct": 0.4,
-    "stop_pct": 0.25,
-    "max_hold_min": 10
+    "stop_pct": 0.2,
+    "max_hold_min": 30
    },
    "scalp_day": {
     "date": "2026-11-16",
