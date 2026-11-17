@@ -1,58 +1,5 @@
 [
  {
-  "time": "2026-11-04T09:54:22-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "instrument": "stock",
-  "qty": 0.576,
-  "price": 290.42,
-  "cost": 167.28,
-  "stop": 289.5,
-  "thesis": "VWAP pullback bounce on GOOGL: 0.79x volume, +0.67% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-11-04T09:56:24-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "AMZN",
-  "instrument": "stock",
-  "qty": 0.619,
-  "price": 270.228,
-  "cost": 167.27,
-  "stop": 269.4,
-  "thesis": "VWAP pullback bounce on AMZN: 1.03x volume, +0.76% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-11-04T10:00:32-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "qty": 0.576,
-  "entry": 290.42,
-  "exit": 292.912,
-  "pnl": 1.44,
-  "note": "target hit (+0.89%)",
-  "opened": "2026-11-04T09:54:22-05:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on GOOGL: 0.79x volume, +0.67% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-11-04T10:00:32-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "instrument": "stock",
-  "qty": 0.2179,
-  "price": 767.582,
-  "cost": 167.26,
-  "stop": 765.29,
-  "thesis": "VWAP pullback bounce on SPY: 0.78x volume, +0.24% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-11-04T10:06:02-05:00",
   "type": "error",
   "agent": "trend",
@@ -6218,5 +6165,33 @@
   "agent": "scalper",
   "symbol": "LQD",
   "note": "VWAP pullback bounce skipped: 0.79x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-17T11:05:32-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-17T11:06:54-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-90%) (tried 0.27, 0.18, 0.10, 0.01; mark 0.32, natural -2.59)"
+ },
+ {
+  "time": "2026-11-17T11:08:17-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.09, 0.06, 0.04, 0.01; mark 0.14, natural -3.77)"
+ },
+ {
+  "time": "2026-11-17T11:08:29-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "NVDA, SPCX, AVGO, RWM",
+  "note": "defensive: SPY is down 0.84% with a weak 20-day rate of change, so I'm keeping defensive sizing. I'm limiting the list to the names holding above VWAP on an up 1-minute trend (NVDA, SPCX, AVGO) plus RWM, an inverse ETF that is above both VWAP and its opening range."
  }
 ]
