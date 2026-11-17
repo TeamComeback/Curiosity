@@ -12,7 +12,8 @@
   "date": "2026-11-17",
   "counts": {
    "trend": 1,
-   "meanrev": 1
+   "meanrev": 1,
+   "scalper": 1
   }
  },
  "agents": {
@@ -67,7 +68,7 @@
       "pct_vs_sma200": 16.8
      },
      "sector": "Communication Services",
-     "last": 119.48,
+     "last": 119.615,
      "high_water": 121.325
     }
    },
@@ -1136,7 +1137,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Consumer Staples",
-     "last": 222.095
+     "last": 222.51
     }
    },
    "status": "active",
@@ -2492,7 +2493,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 732.46
+     "last": 732.34
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2508,7 +2509,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 732.46
+     "last": 732.34
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2524,7 +2525,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 732.46
+     "last": 732.34
     }
    },
    "status": "active",
@@ -2533,7 +2534,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1001.41,
-   "max_dd": 0.0539,
+   "max_dd": 0.054,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -3171,9 +3172,32 @@
    ]
   },
   "scalper": {
-   "cash": 1001.97,
+   "cash": 834.88,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-8b0e9dcd00": {
+     "kind": "stock",
+     "symbol": "SPCX",
+     "qty": 1.1825,
+     "entry": 141.3,
+     "cost": 167.09,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 140.87,
+     "atr": 0,
+     "opened": "2026-11-17T11:10:34-05:00",
+     "thesis": "VWAP pullback bounce on SPCX: 1.5x volume, +0.69% vs VWAP; target +0.5%, stop -0.25%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.5,
+     "stop_pct": 0.25,
+     "max_hold_min": 30,
+     "last": 141.11,
+     "peak_gain": -0.03184713375797843
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,

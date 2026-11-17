@@ -1,12 +1,5 @@
 [
  {
-  "time": "2026-11-04T10:06:02-05:00",
-  "type": "error",
-  "agent": "trend",
-  "symbol": "XLE",
-  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
- },
- {
   "time": "2026-11-04T10:06:07-05:00",
   "type": "close",
   "agent": "meanrev",
@@ -6193,5 +6186,18 @@
   "agent": "scalper",
   "symbol": "NVDA, SPCX, AVGO, RWM",
   "note": "defensive: SPY is down 0.84% with a weak 20-day rate of change, so I'm keeping defensive sizing. I'm limiting the list to the names holding above VWAP on an up 1-minute trend (NVDA, SPCX, AVGO) plus RWM, an inverse ETF that is above both VWAP and its opening range."
+ },
+ {
+  "time": "2026-11-17T11:10:34-05:00",
+  "type": "open",
+  "agent": "scalper",
+  "symbol": "SPCX",
+  "instrument": "stock",
+  "qty": 1.1825,
+  "price": 141.3,
+  "cost": 167.09,
+  "stop": 140.87,
+  "thesis": "VWAP pullback bounce on SPCX: 1.5x volume, +0.69% vs VWAP; target +0.5%, stop -0.25%",
+  "confidence": 3
  }
 ]

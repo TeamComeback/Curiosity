@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T11:08-05:00",
+ "updated": "2026-11-17T11:10-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -39,7 +39,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 705.37,
+   "equity": 705.46,
    "cash": 586.04,
    "available": 586.04,
    "settling": 0,
@@ -75,19 +75,19 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 996.46,
+   "equity": 996.83,
    "cash": 797.68,
    "available": 797.68,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 9.96,
+   "progress_pct": 9.97,
    "open": 1,
    "closed": 20,
    "win_rate": 65.0,
    "max_dd_pct": 4.2,
-   "risk_adj": -0.07,
+   "risk_adj": -0.06,
    "notes": [
     {
      "date": "2026-11-17",
@@ -147,7 +147,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 947.48,
+   "equity": 947.32,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
@@ -159,7 +159,7 @@
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 5.4,
-   "risk_adj": -0.97,
+   "risk_adj": -0.98,
    "notes": [],
    "thesis_review": null
   },
@@ -229,15 +229,15 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 1001.97,
-   "cash": 1001.97,
-   "available": 1001.97,
+   "equity": 1002.04,
+   "cash": 834.88,
+   "available": 834.88,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
    "progress_pct": 10.02,
-   "open": 0,
+   "open": 1,
    "closed": 91,
    "win_rate": 45.1,
    "max_dd_pct": 0.7,
@@ -606,13 +606,13 @@
   {
    "date": "2026-11-17",
    "agents": {
-    "trend": 705.37,
-    "meanrev": 996.46,
+    "trend": 705.46,
+    "meanrev": 996.83,
     "volsell": 889.0,
-    "baseline": 947.48,
+    "baseline": 947.32,
     "monkey": 914.69,
     "blackswan": -351.26,
-    "scalper": 1001.97,
+    "scalper": 1002.04,
     "hyper": 999.71
    }
   }
@@ -650,7 +650,7 @@
    "opt_type": null,
    "qty": 0.6556,
    "entry": 121.226,
-   "last": 119.48,
+   "last": 119.615,
    "mark": null,
    "stop": 116.69,
    "expiry": null,
@@ -672,7 +672,7 @@
    "opt_type": null,
    "qty": 0.895,
    "entry": 223.66,
-   "last": 222.095,
+   "last": 222.51,
    "mark": null,
    "stop": 214.83,
    "expiry": null,
@@ -694,7 +694,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 732.46,
+   "last": 732.34,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -716,7 +716,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 732.46,
+   "last": 732.34,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -738,7 +738,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 732.46,
+   "last": 732.34,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -793,9 +793,44 @@
    "realized": null,
    "play": "weak_stock",
    "width": 5.0
+  },
+  {
+   "agent": "scalper",
+   "position_id": "pos-8b0e9dcd00",
+   "kind": "stock",
+   "symbol": "SPCX",
+   "underlying": null,
+   "structure": null,
+   "opt_type": null,
+   "qty": 1.1825,
+   "entry": 141.3,
+   "last": 141.365,
+   "mark": null,
+   "stop": 140.87,
+   "expiry": null,
+   "opened": "2026-11-17T11:10:34-05:00",
+   "thesis": "VWAP pullback bounce on SPCX: 1.5x volume, +0.69% vs VWAP; target +0.5%, stop -0.25%",
+   "confidence": 3,
+   "cost": 167.09,
+   "realized": null,
+   "play": "scalp",
+   "width": null
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-17T11:10:34-05:00",
+   "type": "open",
+   "agent": "scalper",
+   "symbol": "SPCX",
+   "instrument": "stock",
+   "qty": 1.1825,
+   "price": 141.3,
+   "cost": 167.09,
+   "stop": 140.87,
+   "thesis": "VWAP pullback bounce on SPCX: 1.5x volume, +0.69% vs VWAP; target +0.5%, stop -0.25%",
+   "confidence": 3
+  },
   {
    "time": "2026-11-17T11:08:29-05:00",
    "type": "playbook",
@@ -1218,13 +1253,6 @@
    "agent": "blackswan",
    "symbol": "ALNY",
    "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.88)"
-  },
-  {
-   "time": "2026-11-16T14:36:37-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-95%) (tried 0.12, 0.08, 0.05, 0.01; mark 0.17, natural -1.72)"
   }
  ],
  "reviews": [
@@ -3915,7 +3943,7 @@
   }
  },
  "compliance_today": {
-  "approved": 2,
+  "approved": 3,
   "denied": 0,
   "last_denied": null
  },
