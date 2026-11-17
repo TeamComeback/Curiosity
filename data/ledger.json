@@ -20884,5 +20884,141 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-17T07:40:29-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-11-17",
+  "decision": "revise",
+  "why": "The fresh scan has a clean EW breakout 0.5% below its level and two Communication Services breakdowns (NFLX, SE) that fit my trend rules. The GMED put is no longer in the scan, so I'm dropping it rather than trading stale levels.",
+  "summary": "Buy EW stock only on a close above 107.67 on at least 2.5x relative volume, with about $150 at risk. Buy a 30-60 DTE put on NFLX or SE only after a close below its breakdown level on 2.5x+ volume and only if the premium fits $150. Hold CLSX to its 2.98 underlying stop with no adds, and stay in cash otherwise.",
+  "watchlist": [
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout, 0.5% below the 107.67 level, ATR 2.76, ROC20 +22.7%",
+    "trigger": "Close above 107.67 on at least 2.5x relative volume; initial stop 2 ATR (~5.5) below entry",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services breakdown already printed today at 61.4 (-13% ROC20), ATR 2.05",
+    "trigger": "Next close below 61.4 on at least 2.5x relative volume, then buy a 30-60 DTE put only if the premium is within $150; skip if the move has already run more than 1 ATR",
+    "instrument": "put",
+    "conviction": 2
+   },
+   {
+    "symbol": "SE",
+    "setup": "Communication Services breakdown setup, price at the 71.47 level, ROC20 -19.1%, ATR 3.9",
+    "trigger": "Close below 71.47 on at least 2.5x relative volume, then buy a 30-60 DTE put only if the premium is within $150",
+    "instrument": "put",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-17T07:40:29-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Health Care",
+   "Communication Services"
+  ],
+  "avoid": [
+   "Energy",
+   "Consumer Staples",
+   "Technology",
+   "Broad market / other",
+   "Consumer Discretionary"
+  ],
+  "why": "Health Care is still the only sector with a fresh breakout cluster and calm market stress (score 24), but my own record there is thin (2 trades, -2.49). Communication Services has no record of mine yet, but today's scan shows two fresh breakdowns (NFLX, SE) with ROC20 of -13% and -19%, so it earns a",
+  "expires": "2026-12-01"
+ },
+ {
+  "time": "2026-11-17T07:40:43-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-11-17",
+  "decision": "keep",
+  "why": "Recomputing the 1:1 floor (target = 5-day SMA, stop = 1.5 ATR) on the fresh scan, every name still falls short: DE 0.85, IBB 0.71, EMR 0.68, ROIV 0.69, and the rest lower. Crash radar is calm at 24, so there's no reason to loosen the floor. The only change is adding price-triggered entries for the closest names.",
+  "summary": "Still flat with $997.86 settled cash. Buy only if a name trades down to a level where the reward to the 5-day SMA is at least 1.5 ATR (1:1 against a 1.5 ATR stop). Otherwise stay in cash and re-check at the open.",
+  "watchlist": [
+   {
+    "symbol": "DE",
+    "setup": "RSI2 4.5 washout, 6.7% above SMA200, closest to the floor (0.85 at 654.24)",
+    "trigger": "Buy only if live price is at or below 650.30 (reward to SMA5 of 677.11 is at least 26.82 = 1.5 ATR). Stop 1.5 ATR below entry, target the 5-day SMA.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IBB",
+    "setup": "RSI2 5.8 washout, 11.3% above SMA200 (0.71 at 208.09)",
+    "trigger": "Buy only if live price is at or below 205.78 with the 5-day SMA near 213.87.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "EMR",
+    "setup": "RSI2 3.9 washout, 8.5% above SMA200 (0.68 at 160.63)",
+    "trigger": "Buy only if live price is at or below 158.19 with the 5-day SMA near 165.72.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "AMZN",
+    "setup": "RSI2 8.0 washout, 5.4% above SMA200 (0.56 at 257.80)",
+    "trigger": "Buy only if live price is at or below 251.51 with the 5-day SMA near 265.79. Headline risk is low (rally and labor news), but size small.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-11-17T07:40:50-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "session": "Pre-market call",
+  "for_day": "2026-11-17",
+  "decision": "keep",
+  "why": "Nothing in today's scan clears my 1.15 IV/RV floor on a clean setup. TLT (1.26) is a rate proxy on my avoid list, SLV (1.13) is just under the floor and sits in Materials, which I'm avoiding, and the rest are below 1.0 or have no trend. Crash radar is calm at 24, so there's no reason to force trades.",
+  "summary": "No trades tomorrow. Keep the $889 in settled cash and wait for a non-rate, non-avoided-sector setup with IV/RV of at least 1.15 and a clear trend.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-17T07:40:58-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-11-17",
+  "decision": "revise",
+  "why": "Today's scan shows a broad AI-chip selloff (MU -7.6%, AMD -5.6%, NVDA -4.1%, AVGO -3.7%), which triggers META's own skip rule, so META comes off the list. Communication Services is also weak today (GOOGL -4.1%, META -2.4%), so I'm backing that sector out of lean-in. AAPL stays as the one conditional setup, since its news is low-impact and it's the only Consumer Staples name in the scan.",
+  "summary": "Stand aside unless AAPL pulls back to VWAP and holds it on at least 1.5x bar-verified relative volume with SPY above its open. The setup uses $50 max, a +0.5% target, a -0.3% stop, and a 45-minute limit, and must be flat by the close. No forced entries; stay out of the AI-chip complex.",
+  "watchlist": [
+   {
+    "symbol": "AAPL",
+    "setup": "Consumer Staples VWAP pullback bounce. Low-impact news (Face Unlock beta, Fugman appointment, French trial), ATR about 2.3%, and the only staples name in today's scan.",
+    "trigger": "Pullback to VWAP that holds on at least 1.5x bar-verified relative volume, with price above VWAP and SPY above its open. Target +0.5%, stop -0.3%, 45-minute limit. No forced entry.",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-17T07:40:58-05:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Consumer Staples"
+  ],
+  "avoid": [
+   "Technology",
+   "Consumer Discretionary",
+   "Materials"
+  ],
+  "why": "Consumer Staples is +$0.79 over 5 trades (3 wins), a small sample that today's scan doesn't contradict. Communication Services is +$1.42 over 11 trades, but it's weak today (GOOGL -4.1%, META -2.4%), so I'm removing it from lean-in until it shows strength again. Technology is -$0.69 over 51 trades a",
+  "expires": "2026-12-01"
  }
 ]

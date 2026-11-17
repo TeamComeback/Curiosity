@@ -1,44 +1,5 @@
 [
  {
-  "time": "2026-11-03T14:36:35-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-03T15:06:20-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-03T15:07:07-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "agent: AGCO spread marks at 0 (about -$340). Closing it clears the stale position; the proceeds are negligible, but the positio"
- },
- {
-  "time": "2026-11-03T15:36:16-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-03T16:40:35-05:00",
-  "type": "recap",
-  "note": "Quiet, mixed day: 4 trades closed (3 wins, 1 loss) for -$20.23 realized, with Snapback's DT stop-out accounting for the entire loss. Trend Co. was the only race firm to move meaningfully, up 1.75%, while the crash radar stayed calm at 32."
- },
- {
-  "time": "2026-11-03T16:40:35-05:00",
-  "type": "scorecard",
-  "agent": "trend",
-  "note": "Plan graded: 0 of 5 picks moved the planned way, avg -1.42%"
- },
- {
   "time": "2026-11-03T16:40:52-05:00",
   "type": "focus",
   "agent": "trend",
@@ -6227,5 +6188,45 @@
   "agent": "scalper",
   "note": "Evening check-in: keep. Today's scan shows a broad AI-chip and Technology selloff with GOOGL and META down about 2-4%, so the META conditional is less likely to trigger; I'm not changing its trigger. AAPL is the only staples name in the scan, its news is low-impact, and the staples lean-in still has a positive record, so the plan holds.",
   "symbol": "META, AAPL"
+ },
+ {
+  "time": "2026-11-17T07:40:29-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Health Care, Communication Services; avoiding Energy, Consumer Staples, Technology, Broad market / other, Consumer Discretionary. Health Care is still the only sector with a fresh breakout cluster and calm market stress (score 24), but my own record there is thin (2 trades, -2.49). Communication Services has no record of mine yet, but today's scan shows two fresh breakdowns (NFLX, SE) with ROC20 of -13% and -19%, so it earns a"
+ },
+ {
+  "time": "2026-11-17T07:40:29-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Pre-market call: revise. The fresh scan has a clean EW breakout 0.5% below its level and two Communication Services breakdowns (NFLX, SE) that fit my trend rules. The GMED put is no longer in the scan, so I'm dropping it rather than trading stale levels.",
+  "symbol": "EW, NFLX, SE"
+ },
+ {
+  "time": "2026-11-17T07:40:43-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: keep. Recomputing the 1:1 floor (target = 5-day SMA, stop = 1.5 ATR) on the fresh scan, every name still falls short: DE 0.85, IBB 0.71, EMR 0.68, ROIV 0.69, and the rest lower. Crash radar is calm at 24, so there's no reason to loosen the floor. The only change is adding price-triggered entries for the closest names.",
+  "symbol": "DE, IBB, EMR, AMZN"
+ },
+ {
+  "time": "2026-11-17T07:40:50-05:00",
+  "type": "plan",
+  "agent": "volsell",
+  "note": "Pre-market call: keep. Nothing in today's scan clears my 1.15 IV/RV floor on a clean setup. TLT (1.26) is a rate proxy on my avoid list, SLV (1.13) is just under the floor and sits in Materials, which I'm avoiding, and the rest are below 1.0 or have no trend. Crash radar is calm at 24, so there's no reason to force trades.",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-17T07:40:58-05:00",
+  "type": "focus",
+  "agent": "scalper",
+  "note": "Leaning into Consumer Staples; avoiding Technology, Consumer Discretionary, Materials. Consumer Staples is +$0.79 over 5 trades (3 wins), a small sample that today's scan doesn't contradict. Communication Services is +$1.42 over 11 trades, but it's weak today (GOOGL -4.1%, META -2.4%), so I'm removing it from lean-in until it shows strength again. Technology is -$0.69 over 51 trades a"
+ },
+ {
+  "time": "2026-11-17T07:40:58-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: revise. Today's scan shows a broad AI-chip selloff (MU -7.6%, AMD -5.6%, NVDA -4.1%, AVGO -3.7%), which triggers META's own skip rule, so META comes off the list. Communication Services is also weak today (GOOGL -4.1%, META -2.4%), so I'm backing that sector out of lean-in. AAPL stays as the one conditional setup, since its news is low-impact and it's the only Consumer Staples name in the scan.",
+  "symbol": "AAPL"
  }
 ]
