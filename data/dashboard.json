@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T11:10-05:00",
+ "updated": "2026-11-17T11:20-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -39,14 +39,14 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 705.46,
+   "equity": 705.61,
    "cash": 586.04,
    "available": 586.04,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.71,
-   "progress_pct": 7.05,
+   "progress_pct": 7.06,
    "open": 2,
    "closed": 24,
    "win_rate": 16.7,
@@ -75,19 +75,19 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 996.83,
+   "equity": 996.08,
    "cash": 797.68,
    "available": 797.68,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 9.97,
+   "progress_pct": 9.96,
    "open": 1,
    "closed": 20,
    "win_rate": 65.0,
    "max_dd_pct": 4.2,
-   "risk_adj": -0.06,
+   "risk_adj": -0.08,
    "notes": [
     {
      "date": "2026-11-17",
@@ -147,18 +147,18 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 947.32,
+   "equity": 946.22,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.95,
-   "progress_pct": 9.47,
+   "progress_pct": 9.46,
    "open": 3,
    "closed": 0,
    "win_rate": null,
-   "max_dd_pct": 5.4,
+   "max_dd_pct": 5.5,
    "risk_adj": -0.98,
    "notes": [],
    "thesis_review": null
@@ -229,19 +229,19 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 1002.04,
-   "cash": 834.88,
+   "equity": 1001.27,
+   "cash": 1001.27,
    "available": 834.88,
-   "settling": 0,
+   "settling": 166.39,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 10.02,
-   "open": 1,
-   "closed": 91,
-   "win_rate": 45.1,
+   "progress_pct": 10.01,
+   "open": 0,
+   "closed": 92,
+   "win_rate": 44.6,
    "max_dd_pct": 0.7,
-   "risk_adj": 0.04,
+   "risk_adj": 0.03,
    "notes": [
     {
      "date": "2026-11-13",
@@ -606,13 +606,13 @@
   {
    "date": "2026-11-17",
    "agents": {
-    "trend": 705.46,
-    "meanrev": 996.83,
+    "trend": 705.61,
+    "meanrev": 996.08,
     "volsell": 889.0,
-    "baseline": 947.32,
+    "baseline": 946.22,
     "monkey": 914.69,
     "blackswan": -351.26,
-    "scalper": 1002.04,
+    "scalper": 1001.27,
     "hyper": 999.71
    }
   }
@@ -650,7 +650,7 @@
    "opt_type": null,
    "qty": 0.6556,
    "entry": 121.226,
-   "last": 119.615,
+   "last": 119.84,
    "mark": null,
    "stop": 116.69,
    "expiry": null,
@@ -672,7 +672,7 @@
    "opt_type": null,
    "qty": 0.895,
    "entry": 223.66,
-   "last": 222.51,
+   "last": 221.68,
    "mark": null,
    "stop": 214.83,
    "expiry": null,
@@ -694,7 +694,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 732.34,
+   "last": 731.48,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -716,7 +716,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 732.34,
+   "last": 731.48,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -738,7 +738,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 732.34,
+   "last": 731.48,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -793,31 +793,23 @@
    "realized": null,
    "play": "weak_stock",
    "width": 5.0
-  },
-  {
-   "agent": "scalper",
-   "position_id": "pos-8b0e9dcd00",
-   "kind": "stock",
-   "symbol": "SPCX",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 1.1825,
-   "entry": 141.3,
-   "last": 141.365,
-   "mark": null,
-   "stop": 140.87,
-   "expiry": null,
-   "opened": "2026-11-17T11:10:34-05:00",
-   "thesis": "VWAP pullback bounce on SPCX: 1.5x volume, +0.69% vs VWAP; target +0.5%, stop -0.25%",
-   "confidence": 3,
-   "cost": 167.09,
-   "realized": null,
-   "play": "scalp",
-   "width": null
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-17T11:20:43-05:00",
+   "type": "close",
+   "agent": "scalper",
+   "symbol": "SPCX",
+   "qty": 1.1825,
+   "entry": 141.3,
+   "exit": 140.71,
+   "pnl": -0.7,
+   "note": "stop (-0.38%)",
+   "opened": "2026-11-17T11:10:34-05:00",
+   "confidence": 3,
+   "thesis": "VWAP pullback bounce on SPCX: 1.5x volume, +0.69% vs VWAP; target +0.5%, stop -0.25%"
+  },
   {
    "time": "2026-11-17T11:10:34-05:00",
    "type": "open",
@@ -1246,13 +1238,6 @@
    "agent": "scalper",
    "symbol": "RWM, SOXS, SPCX, STX",
    "note": "defensive: Breadth is still weak, with SPY below VWAP and most large caps trending down, so I'm keeping half-size VWAP bounces only. RWM and SOXS are the only names trending up with the market selling off, and SPCX is holding above VWAP. I'm dropping TSM, which has slipped back below VWAP, and adding STX, whic"
-  },
-  {
-   "time": "2026-11-16T14:36:58-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.88)"
   }
  ],
  "reviews": [
@@ -4287,13 +4272,6 @@
     "win_rate_pct": 0,
     "avg_pnl": -0.06
    },
-   "Technology": {
-    "trades": 51,
-    "wins": 23,
-    "pnl": -0.69,
-    "win_rate_pct": 45,
-    "avg_pnl": -0.01
-   },
    "Materials": {
     "trades": 1,
     "wins": 0,
@@ -4307,6 +4285,13 @@
     "pnl": -0.73,
     "win_rate_pct": 0,
     "avg_pnl": -0.73
+   },
+   "Technology": {
+    "trades": 52,
+    "wins": 23,
+    "pnl": -1.39,
+    "win_rate_pct": 44,
+    "avg_pnl": -0.03
    }
   },
   "hyper": {
