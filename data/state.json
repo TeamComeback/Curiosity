@@ -28,7 +28,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.41,
+     "mark": 0.43,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -47,7 +47,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.415
+     "exit_half_spread": 0.435
     },
     "pos-ef4ba21286": {
      "kind": "stock",
@@ -68,7 +68,7 @@
       "pct_vs_sma200": 16.8
      },
      "sector": "Communication Services",
-     "last": 119.84,
+     "last": 119.4,
      "high_water": 121.325
     }
    },
@@ -80,10 +80,6 @@
    "peak": 1340.54,
    "max_dd": 0.4738,
    "notes": [
-    {
-     "date": "2026-11-12",
-     "note": "Pass on BABA put: Broad market / other is on my avoid list with a -56 P&L record, and a 0.5-delta 30-60 DTE put on a ~$95 stock likely costs more than the $483.54 settled cash. Hold TLS and CLSX put on current stops; verify TLS's active stop (6.53 plan vs 7.36 field) and CLSX's (2.98 field vs 3.63 t"
-    },
     {
      "date": "2026-11-12",
      "note": "Passing on the BABA put: it's in Broad market / other (on my avoid list, -56 P&L record), and a 0.5-delta 30-60 DTE put on a ~$95 stock likely costs well above the $483.54 settled budget. Holding TLS (underlying stop 7.36, kept since it is tighter than the 6.53 plan level), CLSX put (stop 2.98), and"
@@ -239,6 +235,10 @@
     {
      "date": "2026-11-17",
      "note": "No live candidates in today's scan, so no entries. Holding CLSX put to its 2.98 underlying stop and DIS to its 116.69 stop. Keeping settled cash for EW, NFLX, or SE if their triggers appear in a future scan."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "Passed on CNTY put: sub-$0.30 name in the avoid-listed Broad market bucket, where my record is 2 wins in 10 trades (-57.2). Holding CLSX to its 2.98 stop and DIS to its 116.69 stop; keeping cash for EW, NFLX, or SE triggers."
     }
    ],
    "last_exits": {
@@ -1137,7 +1137,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Consumer Staples",
-     "last": 221.68
+     "last": 221.3
     }
    },
    "status": "active",
@@ -1148,10 +1148,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-12",
-     "note": "No candidate clears the 1:1 stop-to-target floor at live prices (ABT ~0.35:1, TOST ~0.31:1). Holding HALO and ALC on their existing stops and keeping $757 settled cash for a washout that clears 1:1."
-    },
     {
      "date": "2026-11-12",
      "note": "No fresh washout clears the 1:1 stop-to-target floor at live prices (ABT about 0.34:1, TOST about 0.33:1). Hold HALO and ALC on their existing stops and keep $757 settled cash for a setup that clears 1:1."
@@ -1307,6 +1303,10 @@
     {
      "date": "2026-11-17",
      "note": "Passed again: no candidate clears the 1:1 floor at live prices (VRTX ~0.35, IQV ~0.55, ACN ~0.59, CCL ~0.55, MRNA ~0.48). Keep the SAP starter on its 214.83 stop and $797.68 settled cash for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "Passing: every live candidate is below the 1:1 stop-to-target floor (VRTX ~0.32, IQV ~0.56, MRNA ~0.53, CCL ~0.55, TEAM ~0.56), and the DE/IBB/EMR/AMZN triggers haven't hit. Keep the SAP starter on its 214.83 stop and $797.68 settled cash."
     }
    ],
    "last_exits": {
@@ -1834,10 +1834,6 @@
    "notes": [
     {
      "date": "2026-11-09",
-     "note": "Passed TLT 80.5/79.5 bull put again: it duplicates the open TLT 80/79 spread on the same 12/11 expiry, and its short strike sits closer to spot (about 1.7% OTM vs 2.4%), so it would add single-name risk with less cushion. Hold TLT to its 0.32 stop or 0.08 target and wait for a non-duplicate setup."
-    },
-    {
-     "date": "2026-11-09",
      "note": "Passed the TLT 80.5/79.5 bull put (0.24 credit). It would stack a second spread on the open TLT 80/79 with the same 12/11 expiry, doubling single-name rate exposure. Holding TLT to its 0.32 stop or 0.08 target, and waiting for a non-duplicate setup or the EEM trigger."
     },
     {
@@ -1991,6 +1987,10 @@
     {
      "date": "2026-11-17",
      "note": "Passed XLF 55/54 bull put: IV/RV 1.00 is below the 1.15 floor, Financials is on my avoid list, and the 0.15 credit is thin. Staying in $889 settled cash for a setup with IV/RV at or above 1.15 in a non-avoided sector."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "XLF bull put fails the 1.15 IV/RV floor (1.04) and Financials is on my avoid list; stay in settled cash and wait for a non-avoided sector with IV/RV at or above 1.15."
     }
    ],
    "last_exits": {
@@ -2048,7 +2048,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 85.0,
+   "min_trade_seen": 83.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2493,7 +2493,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 731.48
+     "last": 730.69
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2509,7 +2509,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 731.48
+     "last": 730.69
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2525,7 +2525,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 731.48
+     "last": 730.69
     }
    },
    "status": "active",
@@ -2534,7 +2534,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1001.41,
-   "max_dd": 0.0551,
+   "max_dd": 0.0561,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -2597,7 +2597,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.32,
+     "mark": 0.36,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2617,7 +2617,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.905,
+     "exit_half_spread": 2.9,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2642,7 +2642,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.14,
+     "mark": 0.11,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2662,7 +2662,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.91,
+     "exit_half_spread": 3.84,
      "peak_mark": 1.09
     }
    },
@@ -3231,18 +3231,18 @@
    ],
    "playbook": {
     "date": "2026-11-17",
-    "made_at": "2026-11-17T11:08-05:00",
+    "made_at": "2026-11-17T11:38-05:00",
     "watch": [
-     "NVDA",
-     "SPCX",
-     "AVGO",
-     "RWM"
+     "RWM",
+     "SQQQ",
+     "SOXS",
+     "LLY"
     ],
     "aggression": "defensive",
-    "why": "SPY is down 0.84% with a weak 20-day rate of change, so I'm keeping defensive sizing. I'm limiting the list to the names holding above VWAP on an up 1-minute trend (NVDA, SPCX, AVGO) plus RWM, an inverse ETF that is above both VWAP and its opening range.",
-    "slices": 3,
-    "target_pct": 0.5,
-    "stop_pct": 0.25,
+    "why": "SPY is down 1.08% on a down 1-minute trend, and most large caps sit below VWAP, so I'm keeping sizing defensive. The only names above VWAP and their opening ranges are inverse ETFs (RWM, SQQQ, SOXS), plus LLY, which is above its 1-minute trend but slightly below VWAP and is a pullback candidate. Two",
+    "slices": 2,
+    "target_pct": 0.6,
+    "stop_pct": 0.3,
     "max_hold_min": 30
    },
    "scalp_day": {

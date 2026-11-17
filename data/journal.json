@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-04T10:06:38-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-51%)"
- },
- {
-  "time": "2026-11-04T10:07:08-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-04T10:08:12-05:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "XLF",
-  "note": "credit not filled at 0.32, 0.21 (mid 0.32, natural 0.01, floor 0.15)"
- },
- {
-  "time": "2026-11-04T10:08:25-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AMZN, AAPL, MSFT, GOOGL, PLTR",
-  "note": "defensive: Three slices are already used today (GOOGL closed, AMZN and SPY open), so the remaining capacity is one slice, and defensive VWAP bounces keep size small. The watchlist is limited to the cleanest up-trending names above VWAP with real volume, and SPY is included only for its trend support."
- },
- {
   "time": "2026-11-04T10:10:30-05:00",
   "type": "close",
   "agent": "scalper",
@@ -6199,5 +6171,33 @@
   "opened": "2026-11-17T11:10:34-05:00",
   "confidence": 3,
   "thesis": "VWAP pullback bounce on SPCX: 1.5x volume, +0.69% vs VWAP; target +0.5%, stop -0.25%"
+ },
+ {
+  "time": "2026-11-17T11:35:31-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-52%)"
+ },
+ {
+  "time": "2026-11-17T11:36:54-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-89%) (tried 0.31, 0.21, 0.11, 0.01; mark 0.36, natural -2.54)"
+ },
+ {
+  "time": "2026-11-17T11:38:16-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.06, 0.04, 0.03, 0.01; mark 0.11, natural -3.73)"
+ },
+ {
+  "time": "2026-11-17T11:38:34-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "RWM, SQQQ, SOXS, LLY",
+  "note": "defensive: SPY is down 1.08% on a down 1-minute trend, and most large caps sit below VWAP, so I'm keeping sizing defensive. The only names above VWAP and their opening ranges are inverse ETFs (RWM, SQQQ, SOXS), plus LLY, which is above its 1-minute trend but slightly below VWAP and is a pullback candidate. Two"
  }
 ]
