@@ -21196,5 +21196,44 @@
   ],
   "aggression": "defensive",
   "why": "SPY is weak (-0.84% on the day, down 1-minute trend) and most large caps are below VWAP, so I'm keeping sizing defensive and trading only VWAP bounces. SQQQ and RWM are the only names above their opening ranges and VWAP, and AAPL and GLD are the cleaner uptrending names; the 2-slice cap limits expos"
+ },
+ {
+  "time": "2026-11-17T12:38:25-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-dc107bcf5c",
+  "symbol": "HZN",
+  "underlying": "HZN",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "qty": 2.4343,
+  "price": 82.05,
+  "cost": 199.73,
+  "stop": 79.38,
+  "why": "HZN RSI(2) 2.7 washout 10.7% above its 200-day in a calm regime (crash radar 28, SPY above its 200-day); live target 85.75 vs stop 79.38 is about 1.45:1, clearing my 1:1 floor, with a tight 3.2% risk on the position.",
+  "confidence": 3,
+  "signals": {
+   "rsi2": 2.7,
+   "pct_vs_sma200": 10.7,
+   "pct_vs_sma5": -4.4
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-17T12:38:30-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "AVGO",
+   "META",
+   "GOOGL",
+   "QQQ",
+   "AAPL",
+   "SPY",
+   "SQQQ",
+   "RWM"
+  ],
+  "aggression": "defensive",
+  "why": "SPY is still negative on the day, and most large caps are below VWAP, so sizing stays defensive with VWAP bounces only. I'm watching the names that are above VWAP on an up 1-minute trend (AVGO, META, GOOGL, QQQ, AAPL) plus SQQQ and RWM, which hold above their opening ranges, with two slices to limit"
  }
 ]
