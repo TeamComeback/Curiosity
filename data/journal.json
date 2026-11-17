@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-11-04T10:10:30-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "AMZN",
-  "qty": 0.619,
-  "entry": 270.228,
-  "exit": 270.298,
-  "pnl": 0.04,
-  "note": "gave back a +0.35% gain: out at breakeven",
-  "opened": "2026-11-04T09:56:24-05:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on AMZN: 1.03x volume, +0.76% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-11-04T10:36:10-05:00",
-  "type": "error",
-  "agent": "trend",
-  "symbol": "XLE",
-  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
- },
- {
-  "time": "2026-11-04T10:36:10-05:00",
-  "type": "close",
-  "agent": "meanrev",
-  "symbol": "CHKP",
-  "qty": 0.7014,
-  "entry": 142.776,
-  "exit": 148.094,
-  "pnl": 3.73,
-  "note": "snap-back (RSI2 68)",
-  "opened": "2026-11-02T14:37:05-05:00",
-  "confidence": 2,
-  "thesis": "CHKP RSI(2) 1.9 washout only 1.1% above its 200-day in a calm regime; live target 152.63 vs stop 133.52 is about 1.11:1, clearing my 1:1 floor, which the prior notes missed because they used stale prices and a Technology tag the scan doesn't show."
- },
- {
-  "time": "2026-11-04T10:36:40-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
   "time": "2026-11-04T10:37:15-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6199,5 +6157,33 @@
   "agent": "scalper",
   "symbol": "RWM, SQQQ, SOXS, LLY",
   "note": "defensive: SPY is down 1.08% on a down 1-minute trend, and most large caps sit below VWAP, so I'm keeping sizing defensive. The only names above VWAP and their opening ranges are inverse ETFs (RWM, SQQQ, SOXS), plus LLY, which is above its 1-minute trend but slightly below VWAP and is a pullback candidate. Two"
+ },
+ {
+  "time": "2026-11-17T12:05:29-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-52%)"
+ },
+ {
+  "time": "2026-11-17T12:06:52-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-90%) (tried 0.27, 0.18, 0.10, 0.01; mark 0.32, natural -2.55)"
+ },
+ {
+  "time": "2026-11-17T12:07:33-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.02, 0.01; mark 0.07, natural -3.83)"
+ },
+ {
+  "time": "2026-11-17T12:07:47-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SQQQ, RWM, AAPL, GLD",
+  "note": "defensive: SPY is weak (-0.84% on the day, down 1-minute trend) and most large caps are below VWAP, so I'm keeping sizing defensive and trading only VWAP bounces. SQQQ and RWM are the only names above their opening ranges and VWAP, and AAPL and GLD are the cleaner uptrending names; the 2-slice cap limits expos"
  }
 ]
