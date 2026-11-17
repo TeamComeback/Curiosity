@@ -18,7 +18,7 @@
  },
  "agents": {
   "trend": {
-   "cash": 586.04,
+   "cash": 662.4,
    "reserved": 0.0,
    "positions": {
     "pos-3dac13e0ef": {
@@ -48,42 +48,16 @@
      "sector": "Broad market / other",
      "low_water": 2.01,
      "exit_half_spread": 0.415
-    },
-    "pos-ef4ba21286": {
-     "kind": "stock",
-     "symbol": "DIS",
-     "qty": 0.6556,
-     "entry": 121.226,
-     "cost": 79.48,
-     "direction": "long",
-     "stop": 116.69,
-     "atr": 2.276,
-     "opened": "2026-11-17T10:08:23-05:00",
-     "thesis": "DIS cleared its 40-day breakout at 120.72 on 5.3x relative volume with ROC20 +8.4% and 16.8% above its 200-day SMA, in a calm tape (crash radar 27) and in the lean-in Communication Services sector; the 116.69 stop (2 ATR) risks about 3.8% of the entry, roughly $9 on this size.",
-     "confidence": 4,
-     "signals": {
-      "rel_volume": 5.33,
-      "roc20_pct": 8.4,
-      "pct_vs_sma50": 10.7,
-      "pct_vs_sma200": 16.8
-     },
-     "sector": "Communication Services",
-     "last": 117.17,
-     "high_water": 121.325
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 24,
+   "closed": 25,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.4749,
+   "max_dd": 0.4753,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "Pass on the four Broad market / other put breakdowns (NBIG, NEBX, PSFE, NIO): my avoid-sector rule holds and the record there is -56. Keep settled cash for a 2.5x-volume Health Care close and hold TLS, CLSX put and GLD put on their stops."
-    },
     {
      "date": "2026-11-13",
      "note": "No Health Care trigger has fired and all four candidates are Broad market / other puts, a sector I've marked to avoid after a -57 P&L record. Hold TLS, CLSX put and GLD put on their stops and keep the settled cash for a 2.5x-volume Health Care close."
@@ -239,6 +213,10 @@
     {
      "date": "2026-11-17",
      "note": "Passed on CNTY again: a $0.26 stock down 60% in 20 days is a collapse, not an established-uptrend breakdown, and it's in the avoid-listed Broad market bucket. Holding CLSX and DIS to their stops; EW, NFLX, and SE triggers are not in today's scan, so cash stays settled for them."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "Passed on CNTY again: a $0.25 stock down 60% in 20 days is a collapse, not an established-uptrend breakdown. Holding CLSX to its 2.98 underlying stop and DIS to its 116.69 stop. Watching EW, NFLX, and SE triggers from the game plan with cash kept settled."
     }
    ],
    "last_exits": {
@@ -265,7 +243,8 @@
     "ABNB": "2026-11-11",
     "DJTU": "2026-11-11",
     "TLS": "2026-11-13",
-    "GLD": "2026-11-16"
+    "GLD": "2026-11-16",
+    "DIS": "2026-11-17"
    },
    "plan": {
     "for_day": "2026-11-17",
@@ -389,7 +368,13 @@
     "settled_cash_at_plan": 665.52,
     "budgets_clamped": 0
    },
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 76.36,
+     "settles": "2026-11-18",
+     "note": "sold DIS"
+    }
+   ],
    "focus": {
     "lean_in": [
      "Health Care",
@@ -1137,7 +1122,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Consumer Staples",
-     "last": 223.185
+     "last": 223.26
     },
     "pos-dc107bcf5c": {
      "kind": "stock",
@@ -1157,7 +1142,7 @@
       "pct_vs_sma5": -4.4
      },
      "sector": "Broad market / other",
-     "last": 82.17
+     "last": 81.885
     },
     "pos-87ffe95b10": {
      "kind": "stock",
@@ -1177,7 +1162,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 481.7
+     "last": 484.07
     }
    },
    "status": "active",
@@ -1188,10 +1173,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "No candidate clears the 1:1 floor at live prices (VRTX ~0.31, MRNA ~0.50, GMAB ~0.57, CCL ~0.57, VEEV ~0.22). Holding HALO and ALC on their existing stops and keeping $757 settled cash."
-    },
     {
      "date": "2026-11-13",
      "note": "No candidate clears the 1:1 floor at live prices (VRTX 0.25:1, MRNA 0.53:1, VEEV 0.21:1, GMAB 0.54:1, CCL 0.6:1). Hold HALO and ALC on their stops and keep the $757 settled cash."
@@ -1347,6 +1328,10 @@
     {
      "date": "2026-11-17",
      "note": "Passing again: all live candidates fail the 1:1 floor (IQV ~0.65, MRNA ~0.60, EMR ~0.72, CCL ~0.55, VRTX ~0.27). EMR's 158.19 trigger hasn't hit. Hold SAP, HZN and MCO on their default stops and keep settled cash."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "No entries: every candidate fails the 1:1 floor (IQV 0.61, MRNA 0.60, VRTX 0.25, CCL 0.56, EMR 0.67). Hold SAP, HZN and MCO on default stops and keep settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -1874,10 +1859,6 @@
    "notes": [
     {
      "date": "2026-11-09",
-     "note": "Passed the only candidate again: TLT 80.5/79.5 bull put duplicates the open TLT 80/79 on the same 12/11 expiry. Hold IWM and TLT to their stops and targets; the next entry needs a different underlying or expiry."
-    },
-    {
-     "date": "2026-11-09",
      "note": "Passed the only candidate (TLT 80.5/79.5 bull put, 0.23 credit). It stacks a second TLT rate-sensitive spread on the same 12/11 expiry as the open 80/79, so it adds concentration rather than a new edge. Holding IWM and TLT to their exits and waiting for a different underlying or expiry."
     },
     {
@@ -2031,6 +2012,10 @@
     {
      "date": "2026-11-17",
      "note": "Pass XLF: IV/RV 1.06 is below my 1.15 floor and Financials is on the avoid list. Keep $889 settled and wait for a non-avoided sector with IV/RV at or above 1.15."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "Passed XLF bull put 54/53: IV/RV 1.01 is below my 1.15 floor and Financials is on my avoid list. Holding $889 settled cash for a non-avoided setup with IV/RV at or above 1.15."
     }
    ],
    "last_exits": {
@@ -2088,7 +2073,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 84.0,
+   "min_trade_seen": 85.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2533,7 +2518,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 729.16
+     "last": 731.32
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2549,7 +2534,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 729.16
+     "last": 731.32
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2565,7 +2550,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 729.16
+     "last": 731.32
     }
    },
    "status": "active",
@@ -2637,7 +2622,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.36,
+     "mark": 0.34,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2682,7 +2667,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.1,
+     "mark": 0.07,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2702,7 +2687,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 4.02,
+     "exit_half_spread": 3.99,
      "peak_mark": 1.09
     }
    },
@@ -3281,18 +3266,17 @@
    ],
    "playbook": {
     "date": "2026-11-17",
-    "made_at": "2026-11-17T15:08-05:00",
+    "made_at": "2026-11-17T15:37-05:00",
     "watch": [
      "SOXS",
-     "RWM",
-     "MSFT"
+     "RWM"
     ],
     "aggression": "stand_down",
-    "why": "SPY is down on the day with a falling 1-minute trend, and all three VWAP bounces today hit stops, so the odds favor staying flat. Only SOXS and RWM are trending up above their opening range, and with about 40 minutes before the 3:50 flat cutoff there is little room for a trade to work.",
+    "why": "With about 13 minutes before the 3:50 PM flat cutoff, there is no room for a new round trip to work. SPY is down on the day and all three VWAP bounces today hit stops, so staying flat is the disciplined call.",
     "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.4,
-    "max_hold_min": 20
+    "max_hold_min": 10
    },
    "scalp_day": {
     "date": "2026-11-17",

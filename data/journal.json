@@ -1,37 +1,5 @@
 [
  {
-  "time": "2026-11-04T15:37:00-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-04T15:37:21-05:00",
-  "type": "rule_block",
-  "agent": "volsell",
-  "symbol": "IWM",
-  "note": "already holding IWM"
- },
- {
-  "time": "2026-11-04T15:37:31-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, GOOGL, AMZN",
-  "note": "defensive: Today's three round trips netted about +$1, and the tape is mixed, with many names trading against their 1-minute trend and wide ranges. Defensive sizing on the most liquid index and mega-cap names, with the 1.5x relative-volume gate kept, is the disciplined way to test whether the VWAP-bounce edge "
- },
- {
-  "time": "2026-11-04T16:40:45-05:00",
-  "type": "recap",
-  "note": "A mixed day with the crash radar calm at 21. The 10 closed trades netted -$28.94 (6 wins, 4 losses), and Trend Co.'s $25 loss on XLE did most of the damage. Snapback Partners finished on top at $1,027.13 while the SPY baseline gained 1.89%."
- },
- {
-  "time": "2026-11-04T16:40:45-05:00",
-  "type": "scorecard",
-  "agent": "trend",
-  "note": "Plan graded: 2 of 2 picks moved the planned way, avg +2.43%"
- },
- {
   "time": "2026-11-04T16:41:16-05:00",
   "type": "focus",
   "agent": "trend",
@@ -6190,5 +6158,47 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-98%) (tried 0.05, 0.04, 0.02, 0.01; mark 0.10, natural -3.92)"
+ },
+ {
+  "time": "2026-11-17T15:35:31-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-17T15:35:31-05:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "DIS",
+  "qty": 0.6556,
+  "entry": 121.226,
+  "exit": 116.474,
+  "pnl": -3.12,
+  "note": "trailing stop on underlying",
+  "opened": "2026-11-17T10:08:23-05:00",
+  "confidence": 4,
+  "thesis": "DIS cleared its 40-day breakout at 120.72 on 5.3x relative volume with ROC20 +8.4% and 16.8% above its 200-day SMA, in a calm tape (crash radar 27) and in the lean-in Communication Services sector; the 116.69 stop (2 ATR) risks about 3.8% of the entry, roughly $9 on this size."
+ },
+ {
+  "time": "2026-11-17T15:36:56-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-90%) (tried 0.29, 0.19, 0.10, 0.01; mark 0.34, natural -2.54)"
+ },
+ {
+  "time": "2026-11-17T15:37:39-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.02, 0.01; mark 0.07, natural -3.92)"
+ },
+ {
+  "time": "2026-11-17T15:37:51-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SOXS, RWM",
+  "note": "stand_down: With about 13 minutes before the 3:50 PM flat cutoff, there is no room for a new round trip to work. SPY is down on the day and all three VWAP bounces today hit stops, so staying flat is the disciplined call."
  }
 ]
