@@ -1,46 +1,5 @@
 [
  {
-  "time": "2026-11-04T09:36:59-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-47%)"
- },
- {
-  "time": "2026-11-04T09:37:29-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-04T09:37:38-05:00",
-  "type": "close",
-  "agent": "trend",
-  "symbol": "RVTY",
-  "qty": 0.8843,
-  "entry": 169.9,
-  "exit": 165.312,
-  "pnl": -4.05,
-  "note": "agent: Breakout failed: RVTY is back below its 168.90 breakout level (now 165.09), so the trend thesis is broken. Cutting per t",
-  "opened": "2026-11-03T10:06:31-05:00",
-  "confidence": 3,
-  "thesis": "RVTY is trading at 169.62, just above its 55-day breakout at 168.90, on 3.7x relative volume and 51% above its 200-day SMA; the 157.62 stop limits risk to about 7% of the position, and it is in the lean-in Broad market sector."
- },
- {
-  "time": "2026-11-04T09:37:38-05:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "MMM",
-  "instrument": "stock",
-  "qty": 0.9518,
-  "price": 189.338,
-  "cost": 180.21,
-  "stop": 181.11,
-  "thesis": "MMM cleared its 55-day high at 183.34 on 2.8x relative volume and trades at 189.1, 17% above its 200-day SMA; the 181.11 stop caps risk at about 4.2% (roughly $7.6).",
-  "confidence": 4
- },
- {
   "time": "2026-11-04T09:37:46-05:00",
   "type": "open",
   "agent": "meanrev",
@@ -6237,5 +6196,33 @@
   "agent": "scalper",
   "symbol": "TSLA",
   "note": "VWAP pullback bounce skipped: 0.9x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-17T10:35:34-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-52%)"
+ },
+ {
+  "time": "2026-11-17T10:36:56-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-90%) (tried 0.28, 0.19, 0.10, 0.01; mark 0.33, natural -2.52)"
+ },
+ {
+  "time": "2026-11-17T10:38:19-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.05, 0.04, 0.02, 0.01; mark 0.10, natural -3.82)"
+ },
+ {
+  "time": "2026-11-17T10:38:34-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "LLY, XLP, SQQQ, RWM, LQD",
+  "note": "defensive: Most of the tape is red and SPY is trending down, so I'm keeping defensive sizing. I'm limiting the watchlist to the few names trading above VWAP on an up 1-minute trend, with LLY showing a live VWAP bounce setup and the inverse ETFs (SQQQ, RWM) up on the weakness."
  }
 ]
