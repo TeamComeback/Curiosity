@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-04T14:06:11-05:00",
-  "type": "error",
-  "agent": "trend",
-  "symbol": "XLE",
-  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
- },
- {
-  "time": "2026-11-04T14:06:42-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-04T14:35:56-05:00",
-  "type": "error",
-  "agent": "trend",
-  "symbol": "XLE",
-  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
- },
- {
-  "time": "2026-11-04T14:36:27-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "breakdown failed (underlying back above stop)"
- },
- {
   "time": "2026-11-04T14:36:59-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6197,5 +6169,33 @@
   "agent": "scalper",
   "symbol": "MSFT",
   "note": "VWAP pullback bounce skipped: 0.96x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-17T14:05:28-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-17T14:06:53-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-91%) (tried 0.25, 0.17, 0.09, 0.01; mark 0.30, natural -2.59)"
+ },
+ {
+  "time": "2026-11-17T14:08:18-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-96%) (tried 0.12, 0.08, 0.05, 0.01; mark 0.17, natural -3.74)"
+ },
+ {
+  "time": "2026-11-17T14:08:30-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MU, MSFT",
+  "note": "stand_down: SPY is down on the day with a falling 1-minute trend, and all three VWAP bounces today hit their stops for about -$2.40 net, so with under two hours left I'm standing down. MU and MSFT stay on watch in case the tape turns up and they hold VWAP with volume."
  }
 ]
