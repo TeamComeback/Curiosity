@@ -762,6 +762,34 @@
  ],
  "journal": [
   {
+   "time": "2026-11-16T20:10:47-05:00",
+   "type": "plan",
+   "agent": "scalper",
+   "note": "Evening check-in: keep. Today's scan shows a broad AI-chip and Technology selloff with GOOGL and META down about 2-4%, so the META conditional is less likely to trigger; I'm not changing its trigger. AAPL is the only staples name in the scan, its news is low-impact, and the staples lean-in still has a positive record, so the plan holds.",
+   "symbol": "META, AAPL"
+  },
+  {
+   "time": "2026-11-16T20:10:37-05:00",
+   "type": "plan",
+   "agent": "volsell",
+   "note": "Evening check-in: scrap. The only setup, TLT bear call, depends on a rate-proxy trade I've already ruled out while the 10-year sits near 5%. TLT's implied vol is only about 14.7%, so a 1-wide spread would pay very little for the risk, and my sector results are 0-for-6 with no news to justify an exception.",
+   "symbol": ""
+  },
+  {
+   "time": "2026-11-16T20:10:29-05:00",
+   "type": "plan",
+   "agent": "meanrev",
+   "note": "Evening check-in: keep. HALO closed at -2.78 on the snap-back, so the HALO position plan is gone. Re-scoring the fresh scan at stop = 1.5 ATR and target = 5-day SMA, no candidate clears the 1:1 floor: best are DE about 0.85, XBI 0.78, IBB 0.71, GM 0.64, XLB 0.64, and HALO is 0.62 after the stop-out.",
+   "symbol": ""
+  },
+  {
+   "time": "2026-11-16T20:10:19-05:00",
+   "type": "plan",
+   "agent": "trend",
+   "note": "Evening check-in: revise. Health Care breakouts have not followed through (last day's four picks averaged -0.83%, and my hit rate is 39%), and ASND and BDX are priced above my $150 per-name cap, so they cannot be bought as stocks. I'm keeping EW and the GMED put as the only setups that fit the budget.",
+   "symbol": "EW, GMED"
+  },
+  {
    "time": "2026-11-16T16:41:20-05:00",
    "type": "plan",
    "agent": "scalper",
@@ -1145,41 +1173,6 @@
    "agent": "scalper",
    "symbol": "NVDA, AMD, SPY",
    "note": "stand_down: The morning long thesis has broken: NVDA and AMD have flipped below VWAP with 1-minute trends down, and nearly every liquid name is red and below VWAP while SPY is weak. Long-only scalps into a falling tape are poor odds, so I'm standing down and will reassess if NVDA or AMD reclaim VWAP with volume"
-  },
-  {
-   "time": "2026-11-16T10:06:58-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.77)"
-  },
-  {
-   "time": "2026-11-16T10:06:37-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-95%) (tried 0.13, 0.09, 0.05, 0.01; mark 0.18, natural -1.72)"
-  },
-  {
-   "time": "2026-11-16T10:05:11-05:00",
-   "type": "close",
-   "agent": "monkey",
-   "symbol": "NVT",
-   "qty": 2.3861,
-   "entry": 110.74,
-   "exit": 109.41,
-   "pnl": -3.18,
-   "note": "random holding period over (7 days)",
-   "opened": "2026-11-09T09:38:26-05:00",
-   "confidence": 0,
-   "thesis": "Dart landed on NVT"
-  },
-  {
-   "time": "2026-11-16T09:58:01-05:00",
-   "type": "skip",
-   "agent": "scalper",
-   "symbol": "NVDA",
-   "note": "VWAP pullback bounce skipped: 0.52x volume < 1.5x"
   }
  ],
  "reviews": [
@@ -2996,40 +2989,24 @@
  "plans": {
   "trend": {
    "for_day": "2026-11-17",
-   "made_at": "2026-11-16T16:40-05:00",
-   "session": "After-close review",
+   "made_at": "2026-11-16T20:10-05:00",
+   "session": "Evening check-in",
    "decision": "revise",
-   "why": "The GLD put already closed, and the fresh scan shows the Health Care breakout levels moved (EW 107.67, ASND 278.35, BDX 219.66), so I'm using those, dropping RPRX, which is no longer in the scan, and adding the GMED breakdown.",
-   "summary": "Hold CLSX to its 2.98 stop. Buy only Health Care breakouts that close through the fresh levels on 2.5x+ volume, at $150 max each. Stay in cash otherwise.",
+   "why": "Health Care breakouts have not followed through (last day's four picks averaged -0.83%, and my hit rate is 39%), and ASND and BDX are priced above my $150 per-name cap, so they cannot be bought as stocks. I'm keeping EW and the GMED put as the only setups that fit the budget.",
+   "summary": "Hold CLSX to its 2.98 underlying stop with no adds. Buy EW only on a close above 107.67 on 2.5x+ volume, and buy the GMED put only on a close below 70.39 on 2.5x+ volume, if the 30-60 DTE premium fits $150. Otherwise stay in cash.",
    "watchlist": [
     {
      "symbol": "EW",
-     "setup": "Health Care breakout, 0.5% below the 107.67 level",
+     "setup": "Health Care breakout, 0.5% below the 107.67 level, ATR 2.76, ROC20 +22.7%",
      "trigger": "Close above 107.67 on at least 2.5x relative volume",
      "instrument": "stock",
      "max_dollars": 150,
      "conviction": 3
     },
     {
-     "symbol": "ASND",
-     "setup": "Health Care breakout, 2.5% below the 278.35 level",
-     "trigger": "Close above 278.35 on at least 2.5x relative volume",
-     "instrument": "stock",
-     "max_dollars": 150,
-     "conviction": 3
-    },
-    {
-     "symbol": "BDX",
-     "setup": "Health Care breakout, 1.5% below the 219.66 level",
-     "trigger": "Close above 219.66 on at least 2.5x relative volume",
-     "instrument": "stock",
-     "max_dollars": 150,
-     "conviction": 2
-    },
-    {
      "symbol": "GMED",
-     "setup": "Health Care breakdown put, 0.2% above the 70.39 level, ROC20 -6.8%",
-     "trigger": "Close below 70.39 on at least 2.5x relative volume, then buy a 30-60 DTE put",
+     "setup": "Health Care breakdown put, 0.2% above the 70.39 level, ROC20 -6.8%, ATR 3.41",
+     "trigger": "Close below 70.39 on at least 2.5x relative volume, then buy a 30-60 DTE put only if the premium is within $150",
      "instrument": "put",
      "max_dollars": 150,
      "conviction": 2
@@ -3038,7 +3015,7 @@
    "position_plans": [
     {
      "symbol": "CLSX261218P00002000",
-     "plan": "Hold. Exit at open if CLSX closes above 2.98. Do not add."
+     "plan": "Hold. Exit at open if CLSX closes above 2.98 (the underlying stop). Do not add."
     },
     {
      "symbol": "GLD261218P00310000",
@@ -3046,14 +3023,14 @@
     }
    ],
    "avoid": [
+    "ASND: a single share (~278) exceeds the $150 per-name cap, so the setup is not tradeable within budget.",
+    "BDX: a single share (~220) exceeds the $150 per-name cap.",
     "JNJ: extended after the Ollin breakout, and its 2-ATR stop is too wide.",
     "LLY: ATR 46 and price near 1455 exceed the risk budget.",
     "TMO: ATR too large for the risk budget.",
-    "Bond and fixed-income ETFs (BND, AGG, VCIT, VCSH, HYG): ATR under 0.4, so moves are too small to cover spread and premium.",
-    "MELI put: ATR 70 makes the option too expensive for settled cash.",
-    "KLC puts: rule-blocked twice and in the avoid-listed Broad market bucket."
+    "Bond and fixed-income ETFs (BND, AGG, VCIT, VCSH, EMB, HYG): ATR under 0.5, so moves are too small to cover spread and premium."
    ],
-   "brainstorm": "Require two consecutive closes beyond the level before entering Health Care breakouts, to cut whipsaws.",
+   "brainstorm": "Test whether a single-name Communication Services breakdown put (NFLX, broke down 1.07% below 61.40, ATR 2.05) fits the $150 premium budget. Do not trade it unless the premium fits and the close is confirmed on 2.5x volume.",
    "revisions": [
     {
      "at": "2026-11-16T16:40-05:00",
@@ -3082,6 +3059,24 @@
        "setup": "Health Care breakdown put, 0.2% above the 70.39 level, ROC20 -6.8%"
       }
      ]
+    },
+    {
+     "at": "2026-11-16T20:10-05:00",
+     "session": "Evening check-in",
+     "decision": "revise",
+     "why": "Health Care breakouts have not followed through (last day's four picks averaged -0.83%, and my hit rate is 39%), and ASND and BDX are priced above my $150 per-name cap, so they cannot be bought as stocks. I'm keeping EW and the GMED put as the only setups that fit the budget.",
+     "watch": [
+      {
+       "symbol": "EW",
+       "instrument": "stock",
+       "setup": "Health Care breakout, 0.5% below the 107.67 level, ATR 2.76, ROC20 +22.7%"
+      },
+      {
+       "symbol": "GMED",
+       "instrument": "put",
+       "setup": "Health Care breakdown put, 0.2% above the 70.39 level, ROC20 -6.8%, ATR 3.41"
+      }
+     ]
     }
    ],
    "settled_cash_at_plan": 602.52,
@@ -3089,28 +3084,34 @@
   },
   "meanrev": {
    "for_day": "2026-11-17",
-   "made_at": "2026-11-16T16:40-05:00",
-   "session": "After-close review",
-   "decision": "revise",
-   "why": "HALO already closed this morning at -2.78, so the pre-market plan to hold it and sell half at 106.86 is stale and no longer applies. Recomputing stop-to-target from the fresh scan (stop at 1.5 ATR, target at the 5-day SMA) puts every washout below 1:1, with the best at DE about 0.85 and XBI about 0.78.",
-   "summary": "No open positions and no entries tomorrow. Keep the $880 settled cash and buy nothing unless a washout clears 1:1 at live prices. Re-check the scan at the open against the same stop and target math.",
+   "made_at": "2026-11-16T20:10-05:00",
+   "session": "Evening check-in",
+   "decision": "keep",
+   "why": "HALO closed at -2.78 on the snap-back, so the HALO position plan is gone. Re-scoring the fresh scan at stop = 1.5 ATR and target = 5-day SMA, no candidate clears the 1:1 floor: best are DE about 0.85, XBI 0.78, IBB 0.71, GM 0.64, XLB 0.64, and HALO is 0.62 after the stop-out.",
+   "summary": "No open positions and no entries. Keep the $880 settled cash and buy nothing unless a washout clears 1:1 at live prices (stop 1.5 ATR, target at the 5-day SMA). Re-check the scan at the open.",
    "watchlist": [],
    "position_plans": [],
    "avoid": [
-    "HALO: closed today at -2.78; ratio about 0.62 on the scan, so no re-entry",
-    "DE (0.85), XBI (0.78), IBB (0.71), GM (0.64), XLB (0.64), MMM (0.54), AMZN (0.56), XLY (0.57): all below the 1:1 floor",
-    "VRTX (about 0.2), ETR (about 0.45), LOW (about 0.4), CCL (about 0.39), TMO (about 0.48): stretched above the 200-day or too close to the 5-day SMA",
-    "VEEV, MRNA, ICLR: far above the 200-day or too close to the 5-day SMA (previously scored below 0.6)",
-    "Airlines: washouts are news-driven and fail the floor",
+    "HALO: stopped out today at -2.78 after a snap-back at RSI2 57; re-scored at about 0.62:1 on the fresh scan, so no re-entry",
+    "DE (0.85), XBI (0.78), IBB (0.71), GM (0.64), XLB (0.64), XLY (0.57), AMZN (0.56), MRNA (0.58), MMM (0.54), ICLR (0.53), WAT (0.52), IJR (0.53): all below the 1:1 floor",
+    "VRTX (about 0.21), ACN (about 0.29), VEEV (about 0.29), ETR (about 0.45), CCL (about 0.45), TMO (about 0.48), LOW (about 0.4): stretched above the 200-day or too close to the 5-day SMA",
+    "Airlines and news-driven washouts (MRNA and VRTX insider sales, GM and MMM headlines): these fail the floor and carry headline risk",
     "Technology: 1-for-3 for -14.20 with the AI rout unresolved"
    ],
-   "brainstorm": "Test whether the 1:1 floor is too strict in calm markets (crash radar 24). Log the ratio of the next washout that misses the floor by under 0.1 and track how it resolves, to see whether 0.9:1 setups are worth paper-testing. Don't change the rule yet.",
+   "brainstorm": "Test a 1:1 floor measured against the 20-day SMA as the target rather than the 5-day, to see whether high-quality washouts such as DE or XBI can qualify without loosening the stop. Track it on paper only until it has 5+ scored picks.",
    "revisions": [
     {
      "at": "2026-11-16T16:40-05:00",
      "session": "After-close review",
      "decision": "revise",
      "why": "HALO already closed this morning at -2.78, so the pre-market plan to hold it and sell half at 106.86 is stale and no longer applies. Recomputing stop-to-target from the fresh scan (stop at 1.5 ATR, target at the 5-day SMA) puts every washout below 1:1, with the best at DE about 0.85 and XBI about 0.78.",
+     "watch": []
+    },
+    {
+     "at": "2026-11-16T20:10-05:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "HALO closed at -2.78 on the snap-back, so the HALO position plan is gone. Re-scoring the fresh scan at stop = 1.5 ATR and target = 5-day SMA, no candidate clears the 1:1 floor: best are DE about 0.85, XBI 0.78, IBB 0.71, GM 0.64, XLB 0.64, and HALO is 0.62 after the stop-out.",
      "watch": []
     }
    ],
@@ -3119,31 +3120,22 @@
   },
   "volsell": {
    "for_day": "2026-11-17",
-   "made_at": "2026-11-16T16:41-05:00",
-   "session": "After-close review",
-   "decision": "keep",
-   "why": "The plan still holds: TLT's scan shows IV/RV 1.23 with a bear-call trend, which clears the 1.2 floor. The news feed is empty and the crash radar is calm at 24, so there's no new catalyst to justify changing course. Overall results remain weak (6 right-way of 21 picks), so size stays small.",
-   "summary": "Tomorrow, only consider one small TLT bear call spread (about 0.20-0.22 short delta, 1 wide, 21-45 DTE, max risk about $75) if the open still shows TLT IV/RV at or above 1.2 and the bearish trend intact, with no dovish, rate-cut, or flight-to-safety headline. Otherwise keep the $889 in settled cash.",
-   "watchlist": [
-    {
-     "symbol": "TLT",
-     "setup": "Bear call spread above the market, about 0.20-0.22 short delta, 1 wide, 21-45 DTE, small size",
-     "trigger": "At the open, TLT IV/RV is still at or above 1.2, the bear-call trend holds, and there is no dovish Fed, rate-cut, or flight-to-safety headline",
-     "instrument": "spread",
-     "max_dollars": 75,
-     "conviction": 2
-    }
-   ],
+   "made_at": "2026-11-16T20:10-05:00",
+   "session": "Evening check-in",
+   "decision": "scrap",
+   "why": "The only setup, TLT bear call, depends on a rate-proxy trade I've already ruled out while the 10-year sits near 5%. TLT's implied vol is only about 14.7%, so a 1-wide spread would pay very little for the risk, and my sector results are 0-for-6 with no news to justify an exception.",
+   "summary": "No trades tomorrow. Keep the $889 in settled cash and wait for a non-rate setup with IV/RV at or above 1.2 and a clear trend, or an EEM bear call that meets the floor at the open.",
+   "watchlist": [],
    "position_plans": [],
    "avoid": [
-    "EEM: IV/RV 1.0 in the scan but the prior-day IV/RV was far below the floor and results don't support chasing it; wait for a clean setup",
-    "SPY: no clear trend, IV/RV 0.82 well below the floor",
-    "QQQ, IWM, XLE, GDX, SLV, XLF: IV/RV below the 1.2 floor, and weak results in these areas",
+    "TLT: rate proxy with the 10-year near 5% and two prior stop-outs; the IV/RV of 1.2 sits on a very low absolute premium",
+    "EEM: IV/RV of 1.0 but the prior-day reading was far below the floor and results don't support chasing it",
+    "SPY: no clear trend and IV/RV 0.82, well below the floor",
+    "QQQ, IWM, XLE, GDX, SLV, XLF: IV/RV below the 1.2 floor and weak results in these areas",
     "Technology and Nvidia-driven swings: headline-driven, premium is not a clean edge",
-    "Energy and oil proxies: geopolitical headlines make direction unclear",
-    "Real Estate, Financials, Industrials: 0-for-6 in my results; TLT is judged on its own setup, not the sector label"
+    "Energy and oil proxies: geopolitical headlines make direction unclear"
    ],
-   "brainstorm": "Test whether requiring IV/RV at or above 1.2 plus a trend confirmed at the open improves hit rate versus the 0.20 delta strikes; judge only after 5-6 more trades, not on the current small sample.",
+   "brainstorm": "If the next few setups still fail, test a higher-IV-level filter (absolute IV above 20%) so the credit is worth the risk, rather than relying on IV/RV alone. Don't tune on six trades.",
    "revisions": [
     {
      "at": "2026-11-16T16:41-05:00",
@@ -3157,6 +3149,13 @@
        "setup": "Bear call spread above the market, about 0.20-0.22 short delta, 1 wide, 21-45 DT"
       }
      ]
+    },
+    {
+     "at": "2026-11-16T20:10-05:00",
+     "session": "Evening check-in",
+     "decision": "scrap",
+     "why": "The only setup, TLT bear call, depends on a rate-proxy trade I've already ruled out while the 10-year sits near 5%. TLT's implied vol is only about 14.7%, so a 1-wide spread would pay very little for the risk, and my sector results are 0-for-6 with no news to justify an exception.",
+     "watch": []
     }
    ],
    "settled_cash_at_plan": 889.0,
@@ -3256,23 +3255,23 @@
   },
   "scalper": {
    "for_day": "2026-11-17",
-   "made_at": "2026-11-16T16:41-05:00",
-   "session": "After-close review",
-   "decision": "revise",
-   "why": "Today's AI-complex selloff (NVDA -4.1%, AMD -5.6%, MU -7.6%) and the CEO-resignation headline are the kind of day the old META skip rule targets, and META fell -2.37% instead of breaking out. Friday's +2.95% no longer supports the setup, so META drops to a low-conviction, conditional idea. AAPL is a mild, low-impact name and the plan still holds for it.",
-   "summary": "Stand aside unless a setup prints. META is a conditional long only if it opens at or below +1% with the AI complex stable and then breaks its first 15-minute high on at least 1.5x relative volume above VWAP. AAPL is a VWAP pullback bounce only if it holds on at least 1.5x relative volume. Both use $50 max, +0.5% target, -0.3% stop, and a 45-minute limit, and both must be flat by the close.",
+   "made_at": "2026-11-16T20:10-05:00",
+   "session": "Evening check-in",
+   "decision": "keep",
+   "why": "Today's scan shows a broad AI-chip and Technology selloff with GOOGL and META down about 2-4%, so the META conditional is less likely to trigger; I'm not changing its trigger. AAPL is the only staples name in the scan, its news is low-impact, and the staples lean-in still has a positive record, so the plan holds.",
+   "summary": "Stand aside unless a setup prints. META is a conditional long only if it opens at or below +1%, the AI complex is not selling off hard in the first hour, and it breaks its first 15-minute high on at least 1.5x relative volume above VWAP. AAPL is a VWAP pullback bounce only if it holds VWAP on at least 1.5x relative volume. Both use $50 max, a +0.5% target, a -0.3% stop, and a 45-minute limit, and both must be flat by the close.",
    "watchlist": [
     {
      "symbol": "META",
-     "setup": "Communication Services opening-range breakout, reduced to conditional after a -2.37% day with the AI complex broadly weak.",
-     "trigger": "Opens at or below +1% gap, then breaks above the first 15-minute high on at least 1.5x bar-verified relative volume, with price above VWAP, SPY above its open, and NVDA/AMD/AVGO/MU not down more than about 2% in the first hour. Skip if any of them sells off hard early.",
+     "setup": "Communication Services opening-range breakout, conditional. Today it fell 2.37% with the AI complex weak, so skip it on any broad AI-chip selloff.",
+     "trigger": "Opens at or below +1% gap, then breaks above the first 15-minute high on at least 1.5x bar-verified relative volume, with price above VWAP, SPY above its open, and NVDA/AMD/AVGO/MU not down more than about 2% in the first hour.",
      "instrument": "stock",
      "max_dollars": 50,
      "conviction": 1
     },
     {
      "symbol": "AAPL",
-     "setup": "Consumer Staples VWAP pullback bounce. Low-impact news, ATR about 2.3%, and the staples lean-in is supported by a 60% win rate on a small sample.",
+     "setup": "Consumer Staples VWAP pullback bounce. Low-impact news, ATR about 2.3%, and the only staples name in today's scan.",
      "trigger": "Pullback to VWAP that holds on at least 1.5x bar-verified relative volume, with price above VWAP and SPY above its open. Target +0.5%, stop -0.3%, 45-minute limit. No forced entry.",
      "instrument": "stock",
      "max_dollars": 50,
@@ -3281,14 +3280,14 @@
    ],
    "position_plans": [],
    "avoid": [
-    "AI-chip and Technology complex (NVDA, AMD, AVGO, MU, INTC, SNDK, TSM, SMH, SOXX, SPCX, TSLA): 3-12% ATRs, Nvidia CEO-resignation and lawsuit headlines, SpaceX booster-detonation news, and a -$0.69 record over 51 trades.",
+    "AI-chip and Technology complex (NVDA, AMD, AVGO, MU, INTC, SNDK, TSM, SMH, SOXX, SPCX, TSLA, QQQ): 3-12% ATRs, Nvidia CEO-resignation and lawsuit headlines, SpaceX booster-detonation news, and a -$0.69 record over 51 trades.",
     "GOOGL and GOOG: down about 4% in a broad selloff, which is not a clean pullback, and they duplicate exposure.",
     "MSFT and AMZN: event-driven, and past VWAP bounces timed out at a loss.",
-    "SPY and QQQ: bounces have timed out flat, and QQQ sits in Technology.",
+    "SPY and QQQ: bounces have timed out flat.",
     "XLP: no scan data today; revisit only if it reappears in a scan.",
     "Any AI-chip or Nvidia-led selloff day: skip META in that case."
    ],
-   "brainstorm": "Test a long-only VWAP reclaim in META or GOOGL after a -3% or worse day, but only in a calm crash-radar regime and only if the AI complex is stable. Keep it on paper until it has about 10 clean samples.",
+   "brainstorm": "Test whether AAPL's VWAP bounces do better on days when the AI complex is flat or up, since staples may hold up in tech selloffs but have not been tested on those days yet. Do not change parameters until there are about 40 trades.",
    "revisions": [
     {
      "at": "2026-11-16T16:41-05:00",
@@ -3300,6 +3299,24 @@
        "symbol": "META",
        "instrument": "stock",
        "setup": "Communication Services opening-range breakout, reduced to conditional after a -2"
+      },
+      {
+       "symbol": "AAPL",
+       "instrument": "stock",
+       "setup": "Consumer Staples VWAP pullback bounce. Low-impact news, ATR about 2.3%, and the "
+      }
+     ]
+    },
+    {
+     "at": "2026-11-16T20:10-05:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Today's scan shows a broad AI-chip and Technology selloff with GOOGL and META down about 2-4%, so the META conditional is less likely to trigger; I'm not changing its trigger. AAPL is the only staples name in the scan, its news is low-impact, and the staples lean-in still has a positive record, so the plan holds.",
+     "watch": [
+      {
+       "symbol": "META",
+       "instrument": "stock",
+       "setup": "Communication Services opening-range breakout, conditional. Today it fell 2.37% "
       },
       {
        "symbol": "AAPL",
@@ -3798,8 +3815,8 @@
     "Broad market / other",
     "Consumer Discretionary"
    ],
-   "why": "Health Care is the only sector with a fresh breakout cluster and calm market stress (score 24). Consumer Discretionary is my worst sector at -59.74 over 2 trades, and the other avoided sectors are negative.",
-   "set_at": "2026-11-16T16:40-05:00",
+   "why": "Health Care is still the only sector with a fresh breakout cluster and calm market stress (score 24), but my Health Care record is only 2 trades at -2.49, so the lean-in is thin. The avoided sectors are negative on my own results. I'll reassess if Health Care follow-through does not improve within t",
+   "set_at": "2026-11-16T20:10-05:00",
    "expires": "2026-11-30"
   },
   "meanrev": {
@@ -3807,22 +3824,22 @@
    "avoid": [
     "Technology"
    ],
-   "why": "No sector has enough closed-trade evidence to lean in. Health Care has one loss (HALO -2.78), Industrials, Financials, Consumer Discretionary and Consumer Staples have only one or two wins each, and Broad market is 5 wins from 7 trades but -8.10 in total. Technology stays on avoid at 1-for-3 for -14",
-   "set_at": "2026-11-16T16:40-05:00",
+   "why": "No sector has enough closed-trade evidence to lean in. Health Care is 0-for-1 (HALO -2.78). Broad market / other is 5 wins from 7 trades but -8.10 in total, so the winners are smaller than the losers. Technology stays on avoid at 1-for-3 for -14.20.",
+   "set_at": "2026-11-16T20:10-05:00",
    "expires": "2026-11-30"
   },
   "volsell": {
    "lean_in": [],
    "avoid": [
-    "Technology",
-    "Energy",
-    "Materials",
+    "Real Estate",
     "Financials",
     "Industrials",
-    "Real Estate"
+    "Technology",
+    "Energy",
+    "Materials"
    ],
-   "why": "No sector has paying results (0-for-6 across Financials, Real Estate, Industrials), and the scan's rich IV/RV names are mostly below the floor or headline-driven. TLT stays an individual setup, not a sector bet.",
-   "set_at": "2026-11-16T16:41-05:00",
+   "why": "No sector has paying results (0-for-6 across Financials, Real Estate and Industrials), and today's scan shows no sector with IV/RV at the floor plus a clean trend. Stay out until a sector shows results.",
+   "set_at": "2026-11-16T20:10-05:00",
    "expires": "2026-11-30"
   },
   "scalper": {
@@ -3835,8 +3852,8 @@
     "Consumer Discretionary",
     "Materials"
    ],
-   "why": "Communication Services is +$1.42 over 11 trades (45% win rate) and Consumer Staples is +$0.79 over 5 trades (60%), both small samples. Technology is -$0.69 over 51 trades and today's scan shows broad tech weakness. Consumer Discretionary is weak at +$0.16 over 10 trades and Materials lost $0.72 on o",
-   "set_at": "2026-11-16T16:41-05:00",
+   "why": "Communication Services is +$1.42 over 11 trades and Consumer Staples is +$0.79 over 5, both small samples. Technology is -$0.69 over 51 trades, and today's scan shows broad tech weakness. Keeping the focus until its 11-30 expiry, but Communication Services looked weak in today's scan, so I'm watchin",
+   "set_at": "2026-11-16T20:10-05:00",
    "expires": "2026-11-30"
   }
  },
@@ -4164,5 +4181,5 @@
   "core_size": 501
  },
  "recap_updated": "2026-11-16T16:40-05:00",
- "plans_updated": "2026-11-16T16:41-05:00"
+ "plans_updated": "2026-11-16T20:10-05:00"
 }
