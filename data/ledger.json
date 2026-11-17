@@ -21049,5 +21049,64 @@
   ],
   "aggression": "defensive",
   "why": "The tape is choppy and mostly red with SPY flat and low ranges, so only the few names trending above VWAP are worth watching, at half size on VWAP bounces. Tighter target and stop fit AAPL's roughly 0.45% daily range and keep the risk small on a $1,000 account."
+ },
+ {
+  "time": "2026-11-17T10:08:23-05:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-ef4ba21286",
+  "symbol": "DIS",
+  "underlying": "DIS",
+  "sector": "Communication Services",
+  "instrument": "stock",
+  "qty": 0.6556,
+  "price": 121.226,
+  "cost": 79.48,
+  "stop": 116.69,
+  "why": "DIS cleared its 40-day breakout at 120.72 on 5.3x relative volume with ROC20 +8.4% and 16.8% above its 200-day SMA, in a calm tape (crash radar 27) and in the lean-in Communication Services sector; the 116.69 stop (2 ATR) risks about 3.8% of the entry, roughly $9 on this size.",
+  "confidence": 4,
+  "signals": {
+   "rel_volume": 5.33,
+   "roc20_pct": 8.4,
+   "pct_vs_sma50": 10.7,
+   "pct_vs_sma200": 16.8
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-17T10:08:30-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-9478f7aed7",
+  "symbol": "SAP",
+  "underlying": "SAP",
+  "sector": "Consumer Staples",
+  "instrument": "stock",
+  "qty": 0.895,
+  "price": 223.66,
+  "cost": 200.18,
+  "stop": 214.83,
+  "why": "SAP RSI(2) 2.5 washout 16% above its 200-day in a calm regime (crash radar 27); live stop 214.83 to target 231.99 is about 1.11:1 on current prices, clearing my 1:1 floor, so I'm taking a starter size.",
+  "confidence": 3,
+  "signals": {
+   "rsi2": 2.5,
+   "pct_vs_sma200": 16.0,
+   "pct_vs_sma5": -3.9
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-17T10:08:34-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "AAPL",
+   "AMZN",
+   "GOOGL",
+   "META",
+   "TSLA"
+  ],
+  "aggression": "defensive",
+  "why": "Most of the tape is still red with SPY flat, so I'm keeping defensive sizing and limiting the watchlist to names trading above VWAP on the 1-minute trend (AAPL and AMZN are also above their opening range). Keeping the tight 0.4% target and 0.2% stop suits these low-range, liquid large caps on a $1,0"
  }
 ]

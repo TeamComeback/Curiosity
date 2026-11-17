@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T09:38-05:00",
+ "updated": "2026-11-17T10:08-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -12,7 +12,7 @@
   "spy_trend": "up",
   "spy_vs_sma200_pct": 0.8,
   "spy_roc20_pct": -3.5,
-  "crash_radar": 26
+  "crash_radar": 27
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -39,15 +39,15 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 708.52,
-   "cash": 665.52,
-   "available": 665.52,
+   "equity": 708.53,
+   "cash": 586.04,
+   "available": 586.04,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.71,
    "progress_pct": 7.09,
-   "open": 1,
+   "open": 2,
    "closed": 24,
    "win_rate": 16.7,
    "max_dd_pct": 47.1,
@@ -55,15 +55,15 @@
    "notes": [
     {
      "date": "2026-11-17",
+     "note": "Size breakouts so the 2-ATR stop risks about 1.3% of equity, and keep settled cash for the game-plan triggers (EW, NFLX, SE) if they appear in the scan."
+    },
+    {
+     "date": "2026-11-17",
      "note": "No candidates in today's scan, so no entries. Holding CLSX put to its 2.98 underlying stop. Watchlist names (EW, NFLX, SE) are not live candidates, so their triggers can't be acted on until they appear in the scan."
     },
     {
      "date": "2026-11-16",
      "note": "Taking the rule-qualifying KLC breakdown at a small premium budget despite the avoid-list tag; the loss is capped at premium, and cheap extreme-volatility names need small size."
-    },
-    {
-     "date": "2026-11-16",
-     "note": "Passed on KLC put: it's a $1.25 extreme-volatility name in the avoid-listed Broad market bucket, and its 40-60 DTE put doesn't fit the $17.50 budget without over-committing. Hold CLSX to its 2.98 underlying stop and keep settled cash for a Health Care close above trigger on 2.5x+ volume."
     }
    ],
    "thesis_review": null
@@ -75,20 +75,24 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 997.86,
-   "cash": 997.86,
-   "available": 997.86,
+   "equity": 997.23,
+   "cash": 797.68,
+   "available": 797.68,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
-   "progress_pct": 9.98,
-   "open": 0,
+   "progress_pct": 9.97,
+   "open": 1,
    "closed": 20,
    "win_rate": 65.0,
    "max_dd_pct": 4.2,
-   "risk_adj": -0.04,
+   "risk_adj": -0.06,
    "notes": [
+    {
+     "date": "2026-11-17",
+     "note": "Re-scored the live candidates: CRM (1.15:1) and SAP (1.11:1) clear the floor while the game-plan figures were stale. I took SAP and passed on CRM to avoid doubling up on software names."
+    },
     {
      "date": "2026-11-17",
      "note": "Passing: every live candidate is below my 1:1 stop-to-target floor (VRTX 0.27, MRNA 0.52, AZN 0.35, SAP 0.73, CRM 0.66, HD 0.48). Game-plan triggers (DE, IBB, EMR, AMZN) aren't in the live candidate list and haven't hit. Keep $997.86 settled cash."
@@ -96,10 +100,6 @@
     {
      "date": "2026-11-16",
      "note": "No candidate clears my 1:1 stop-to-target floor at 15:37 prices: DE about 0.82:1, GM 0.69, MRNA 0.56, HALO 0.55, VRTX 0.28, VEEV 0.24. Passing and keeping $880 settled cash. The game plan's HALO position is stale because HALO closed this morning."
-    },
-    {
-     "date": "2026-11-16",
-     "note": "No candidate clears the 1:1 stop-to-target floor at scan prices (GM 0.72, ICLR 0.54, MRNA 0.54, HALO 0.57, VRTX 0.26, VEEV 0.24). HALO already closed today, so the game plan's HALO position is stale. Holding $880 settled cash for a washout that clears 1:1."
     }
    ],
    "thesis_review": null
@@ -147,14 +147,14 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 954.48,
+   "equity": 954.59,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.95,
-   "progress_pct": 9.54,
+   "progress_pct": 9.55,
    "open": 3,
    "closed": 0,
    "win_rate": null,
@@ -193,14 +193,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": -358.26,
+   "equity": -353.26,
    "cash": -411.26,
    "available": -411.26,
    "settling": 0,
    "status": "eliminated",
    "status_reason": "equity $-202.19 fell below $10",
-   "multiple": -0.36,
-   "progress_pct": -3.58,
+   "multiple": -0.35,
+   "progress_pct": -3.53,
    "open": 2,
    "closed": 5,
    "win_rate": 20.0,
@@ -606,12 +606,12 @@
   {
    "date": "2026-11-17",
    "agents": {
-    "trend": 708.52,
-    "meanrev": 997.86,
+    "trend": 708.53,
+    "meanrev": 997.23,
     "volsell": 889.0,
-    "baseline": 954.48,
+    "baseline": 954.59,
     "monkey": 914.69,
-    "blackswan": -358.26,
+    "blackswan": -353.26,
     "scalper": 1001.97,
     "hyper": 999.71
    }
@@ -641,6 +641,50 @@
    "width": null
   },
   {
+   "agent": "trend",
+   "position_id": "pos-ef4ba21286",
+   "kind": "stock",
+   "symbol": "DIS",
+   "underlying": null,
+   "structure": null,
+   "opt_type": null,
+   "qty": 0.6556,
+   "entry": 121.226,
+   "last": 121.245,
+   "mark": null,
+   "stop": 116.69,
+   "expiry": null,
+   "opened": "2026-11-17T10:08:23-05:00",
+   "thesis": "DIS cleared its 40-day breakout at 120.72 on 5.3x relative volume with ROC20 +8.4% and 16.8% above its 200-day SMA, in a calm tape (crash radar 27) and in the lean-in Communication Services sector; the 116.69 stop (2 ATR) risks about 3.8% of the entry, roughly $9 on this size.",
+   "confidence": 4,
+   "cost": 79.48,
+   "realized": null,
+   "play": null,
+   "width": null
+  },
+  {
+   "agent": "meanrev",
+   "position_id": "pos-9478f7aed7",
+   "kind": "stock",
+   "symbol": "SAP",
+   "underlying": null,
+   "structure": null,
+   "opt_type": null,
+   "qty": 0.895,
+   "entry": 223.66,
+   "last": 222.96,
+   "mark": null,
+   "stop": 214.83,
+   "expiry": null,
+   "opened": "2026-11-17T10:08:30-05:00",
+   "thesis": "SAP RSI(2) 2.5 washout 16% above its 200-day in a calm regime (crash radar 27); live stop 214.83 to target 231.99 is about 1.11:1 on current prices, clearing my 1:1 floor, so I'm taking a starter size.",
+   "confidence": 3,
+   "cost": 200.18,
+   "realized": null,
+   "play": null,
+   "width": null
+  },
+  {
    "agent": "baseline",
    "position_id": "pos-fe0738abd6",
    "kind": "stock",
@@ -650,7 +694,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 737.9,
+   "last": 737.99,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -672,7 +716,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 737.9,
+   "last": 737.99,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -694,7 +738,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 737.9,
+   "last": 737.99,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -717,7 +761,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 0.33,
+   "mark": 0.32,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -739,7 +783,7 @@
    "qty": 2,
    "entry": 4.15,
    "last": null,
-   "mark": 0.1,
+   "mark": 0.13,
    "stop": 175.6,
    "expiry": "2027-01-15",
    "opened": "2026-11-09T09:38:36-05:00",
@@ -752,6 +796,88 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-17T10:08:34-05:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "AAPL, AMZN, GOOGL, META, TSLA",
+   "note": "defensive: Most of the tape is still red with SPY flat, so I'm keeping defensive sizing and limiting the watchlist to names trading above VWAP on the 1-minute trend (AAPL and AMZN are also above their opening range). Keeping the tight 0.4% target and 0.2% stop suits these low-range, liquid large caps on a $1,0"
+  },
+  {
+   "time": "2026-11-17T10:08:30-05:00",
+   "type": "open",
+   "agent": "meanrev",
+   "symbol": "SAP",
+   "instrument": "stock",
+   "qty": 0.895,
+   "price": 223.66,
+   "cost": 200.18,
+   "stop": 214.83,
+   "thesis": "SAP RSI(2) 2.5 washout 16% above its 200-day in a calm regime (crash radar 27); live stop 214.83 to target 231.99 is about 1.11:1 on current prices, clearing my 1:1 floor, so I'm taking a starter size.",
+   "confidence": 3
+  },
+  {
+   "time": "2026-11-17T10:08:30-05:00",
+   "type": "sizing",
+   "agent": "meanrev",
+   "symbol": "SAP",
+   "note": "$300.00 -> $199.57: capped at 20% of the firm"
+  },
+  {
+   "time": "2026-11-17T10:08:23-05:00",
+   "type": "open",
+   "agent": "trend",
+   "symbol": "DIS",
+   "instrument": "stock",
+   "qty": 0.6556,
+   "price": 121.226,
+   "cost": 79.48,
+   "stop": 116.69,
+   "thesis": "DIS cleared its 40-day breakout at 120.72 on 5.3x relative volume with ROC20 +8.4% and 16.8% above its 200-day SMA, in a calm tape (crash radar 27) and in the lean-in Communication Services sector; the 116.69 stop (2 ATR) risks about 3.8% of the entry, roughly $9 on this size.",
+   "confidence": 4
+  },
+  {
+   "time": "2026-11-17T10:08:23-05:00",
+   "type": "sizing",
+   "agent": "trend",
+   "symbol": "DIS",
+   "note": "$250.00 -> $79.50: capped at 20% of the firm; half size while win rate 4/24 is under 30%"
+  },
+  {
+   "time": "2026-11-17T10:08:18-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "ALNY",
+   "note": "spread stop (-97%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -3.76)"
+  },
+  {
+   "time": "2026-11-17T10:06:56-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-90%) (tried 0.27, 0.18, 0.10, 0.01; mark 0.32, natural -2.58)"
+  },
+  {
+   "time": "2026-11-17T10:05:33-05:00",
+   "type": "exit_unfilled",
+   "agent": "trend",
+   "symbol": "CLSX261218P00002000",
+   "note": "option stop (-52%)"
+  },
+  {
+   "time": "2026-11-17T09:54:42-05:00",
+   "type": "skip",
+   "agent": "scalper",
+   "symbol": "AVGO",
+   "note": "VWAP pullback bounce skipped: 0.66x volume < 1.5x"
+  },
+  {
+   "time": "2026-11-17T09:52:41-05:00",
+   "type": "skip",
+   "agent": "scalper",
+   "symbol": "AAPL",
+   "note": "VWAP pullback bounce skipped: 0.52x volume < 1.5x"
+  },
   {
    "time": "2026-11-17T09:38:31-05:00",
    "type": "playbook",
@@ -1099,76 +1225,6 @@
    "agent": "blackswan",
    "symbol": "AGCO",
    "note": "spread stop (-96%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -1.77)"
-  },
-  {
-   "time": "2026-11-16T12:39:35-05:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "MU, AVGO, SNDK",
-   "note": "stand_down: Most candidates are trending down below VWAP with no setups, and the broad tape is weak into the afternoon. I'm standing down, keeping MU and AVGO near VWAP and SNDK, the one name trending up, on watch for a clean setup if breadth turns."
-  },
-  {
-   "time": "2026-11-16T12:39:22-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.76)"
-  },
-  {
-   "time": "2026-11-16T12:39:01-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-96%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -1.77)"
-  },
-  {
-   "time": "2026-11-16T12:37:05-05:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "MU, AVGO, TSM",
-   "note": "stand_down: Most candidates, including SPY, QQQ, MSFT and TSM, are trending down on the 1-minute chart, with few names above VWAP and no clean setups. I'm standing down until breadth improves, and I'm keeping MU and AVGO on watch since they're the only names still holding near VWAP."
-  },
-  {
-   "time": "2026-11-16T12:36:52-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.76)"
-  },
-  {
-   "time": "2026-11-16T12:36:31-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-96%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -1.77)"
-  },
-  {
-   "time": "2026-11-16T12:07:08-05:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "MU, TSM, AVGO, MSFT",
-   "note": "defensive: The tape is mixed: SPY and most megacaps are trending down on the 1-minute chart, so I'm dropping SPY and QQQ. MU and TSM are trending up above VWAP, and AVGO is holding above its opening range, so I'll keep VWAP bounces at half size in those names with the current tight stop and target."
-  },
-  {
-   "time": "2026-11-16T12:06:53-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.82)"
-  },
-  {
-   "time": "2026-11-16T12:06:32-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-95%) (tried 0.10, 0.07, 0.04, 0.01; mark 0.15, natural -1.77)"
-  },
-  {
-   "time": "2026-11-16T11:37:08-05:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "SPY, QQQ, AVGO, MSFT, MU",
-   "note": "defensive: SPY is trending up on the 1-minute chart and AVGO, MSFT and MU are holding above VWAP, so VWAP bounces in these liquid names fit. AMZN's 1-minute trend has turned down, so I dropped it, and defensive size suits a mixed tape with calm crash radar."
   }
  ],
  "reviews": [
@@ -3681,7 +3737,7 @@
  ],
  "radar": {
   "now": {
-   "score": 26,
+   "score": 27,
    "tier": "calm",
    "market_score": 33,
    "economy_score": 7,
@@ -3689,7 +3745,7 @@
     "trend": 35,
     "drawdown": 37,
     "volatility": 48,
-    "breadth": 43,
+    "breadth": 45,
     "credit": 32,
     "safety": 0,
     "economy": 7
@@ -3700,7 +3756,7 @@
     "spy_off_high_pct": 5.6,
     "spy_iv_pct": 18.9,
     "spy_realized_vol_pct": 23.0,
-    "pct_above_50d": 47.9,
+    "pct_above_50d": 47.1,
     "breadth_sample": 505,
     "junk_vs_treasuries_20d_pct": -0.26,
     "havens_vs_spy_20d_pct": -0.1
@@ -3714,7 +3770,7 @@
     "junk_bond_spread_pct": 3.23,
     "sahm_indicator": 0.0
    },
-   "at": "2026-11-17T09:35-05:00"
+   "at": "2026-11-17T10:05-05:00"
   },
   "history": [
    {
@@ -3844,7 +3900,7 @@
    },
    {
     "date": "2026-11-17",
-    "score": 26,
+    "score": 27,
     "tier": "calm"
    }
   ],
@@ -3859,21 +3915,23 @@
   }
  },
  "compliance_today": {
-  "approved": 0,
+  "approved": 2,
   "denied": 0,
   "last_denied": null
  },
  "playbooks": {
   "scalper": {
    "date": "2026-11-17",
-   "made_at": "2026-11-17T09:38-05:00",
+   "made_at": "2026-11-17T10:08-05:00",
    "watch": [
     "AAPL",
-    "AVGO",
-    "SNDK"
+    "AMZN",
+    "GOOGL",
+    "META",
+    "TSLA"
    ],
    "aggression": "defensive",
-   "why": "The tape is choppy and mostly red with SPY flat and low ranges, so only the few names trending above VWAP are worth watching, at half size on VWAP bounces. Tighter target and stop fit AAPL's roughly 0.45% daily range and keep the risk small on a $1,000 account.",
+   "why": "Most of the tape is still red with SPY flat, so I'm keeping defensive sizing and limiting the watchlist to names trading above VWAP on the 1-minute trend (AAPL and AMZN are also above their opening range). Keeping the tight 0.4% target and 0.2% stop suits these low-range, liquid large caps on a $1,0",
    "slices": 3,
    "target_pct": 0.4,
    "stop_pct": 0.2,

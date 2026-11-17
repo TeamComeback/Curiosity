@@ -1,61 +1,5 @@
 [
  {
-  "time": "2026-11-03T16:41:51-05:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "After-close review: revise. Today's SPY and XLV entries logged 0.78x and 0.72x relative volume, well under the 1.5x minimum in my plan, so the volume gate is not being enforced and my plan's main filter has never worked as written. Net result was +$0.15 on $0.16 of exposure, which is noise, and the 44 Technology trades at -$0.24 are still the largest negative sample.",
-  "symbol": ""
- },
- {
-  "time": "2026-11-03T20:10:27-05:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Evening check-in: revise. RVTY's breakout has failed (back below the 168.90 level at 163.64), so it exits at the open. REGN's stop moves up to lock in gains, and I'm dropping ICE because Financials has no realized edge for me and my last Financials picks fell.",
-  "symbol": "EXEL, EW"
- },
- {
-  "time": "2026-11-03T20:10:58-05:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Evening check-in: revise. Today's stop on DT and new entries in DT, ZBRA and SHOP changed the book, so the old hold-seven plan is stale. Settled cash is only $4.09 until tomorrow's proceeds settle.",
-  "symbol": "DVN"
- },
- {
-  "time": "2026-11-03T20:11:07-05:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "Evening check-in: keep. The fresh scan doesn't change the picture: the only bull-put candidates in the scan are already held (XLF, TLT), and the other IV/RV-rich names fail on liquidity (EEM) or poor payoff (XLE, GDX, SLV). Holding to exits is still the best use of the open risk.",
-  "symbol": ""
- },
- {
-  "time": "2026-11-03T20:11:16-05:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "Evening check-in: revise. Today's two entries (SPY at 0.78x and XLV at 0.72x relative volume) went through despite the 1.5x minimum, so the volume gate isn't being enforced. Both trades were flat time-limit exits. The fresh scan is dominated by AMD's post-earnings move and Technology headlines, which are event trades rather than scalp setups, so there is still nothing worth buying.",
-  "symbol": ""
- },
- {
-  "time": "2026-11-04T07:40:26-05:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Pre-market call: revise. The fresh data confirms the RVTY breakout failed (163.64, back below 168.90), so it goes at the open. The VALE put's 12.09 stop is a premium figure that sits far above the option's value, so the real exit is the underlying close above 11.79.",
-  "symbol": "EXEL, EW"
- },
- {
-  "time": "2026-11-04T07:40:44-05:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Pre-market call: revise. Positions are now all at live prices with live stops, and the stale DVN trigger no longer fits: DVN's target-to-stop is about 0.9:1 even at its trigger price, so it is out. Every unheld scan name also fails the 1:1 floor on live ATR stops and SMA5 targets.",
-  "symbol": ""
- },
- {
-  "time": "2026-11-04T07:40:54-05:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "Pre-market call: keep. The fresh scan offers no new non-duplicate setup that clears my filters: the only candidates are Energy (XLE, headline gap risk), illiquid EEM, and gold/silver bear calls (GDX, SLV) that lean against a rally with weak credit. Post-election volatility is already in the open positions, so I hold them to their exits.",
-  "symbol": ""
- },
- {
   "time": "2026-11-04T07:41:03-05:00",
   "type": "plan",
   "agent": "scalper",
@@ -6239,5 +6183,73 @@
   "agent": "scalper",
   "symbol": "AVGO",
   "note": "VWAP pullback bounce skipped: 0.66x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-17T10:05:33-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-52%)"
+ },
+ {
+  "time": "2026-11-17T10:06:56-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-90%) (tried 0.27, 0.18, 0.10, 0.01; mark 0.32, natural -2.58)"
+ },
+ {
+  "time": "2026-11-17T10:08:18-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -3.76)"
+ },
+ {
+  "time": "2026-11-17T10:08:23-05:00",
+  "type": "sizing",
+  "agent": "trend",
+  "symbol": "DIS",
+  "note": "$250.00 -> $79.50: capped at 20% of the firm; half size while win rate 4/24 is under 30%"
+ },
+ {
+  "time": "2026-11-17T10:08:23-05:00",
+  "type": "open",
+  "agent": "trend",
+  "symbol": "DIS",
+  "instrument": "stock",
+  "qty": 0.6556,
+  "price": 121.226,
+  "cost": 79.48,
+  "stop": 116.69,
+  "thesis": "DIS cleared its 40-day breakout at 120.72 on 5.3x relative volume with ROC20 +8.4% and 16.8% above its 200-day SMA, in a calm tape (crash radar 27) and in the lean-in Communication Services sector; the 116.69 stop (2 ATR) risks about 3.8% of the entry, roughly $9 on this size.",
+  "confidence": 4
+ },
+ {
+  "time": "2026-11-17T10:08:30-05:00",
+  "type": "sizing",
+  "agent": "meanrev",
+  "symbol": "SAP",
+  "note": "$300.00 -> $199.57: capped at 20% of the firm"
+ },
+ {
+  "time": "2026-11-17T10:08:30-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "SAP",
+  "instrument": "stock",
+  "qty": 0.895,
+  "price": 223.66,
+  "cost": 200.18,
+  "stop": 214.83,
+  "thesis": "SAP RSI(2) 2.5 washout 16% above its 200-day in a calm regime (crash radar 27); live stop 214.83 to target 231.99 is about 1.11:1 on current prices, clearing my 1:1 floor, so I'm taking a starter size.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-17T10:08:34-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AAPL, AMZN, GOOGL, META, TSLA",
+  "note": "defensive: Most of the tape is still red with SPY flat, so I'm keeping defensive sizing and limiting the watchlist to names trading above VWAP on the 1-minute trend (AAPL and AMZN are also above their opening range). Keeping the tight 0.4% target and 0.2% stop suits these low-range, liquid large caps on a $1,0"
  }
 ]
