@@ -21269,5 +21269,40 @@
   "confidence": 3,
   "signals": {},
   "from_plan": false
+ },
+ {
+  "time": "2026-11-17T13:08:26-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-87ffe95b10",
+  "symbol": "MCO",
+  "underlying": "MCO",
+  "sector": "Financials",
+  "instrument": "stock",
+  "qty": 0.2479,
+  "price": 485.082,
+  "cost": 120.25,
+  "stop": 464.4,
+  "why": "MCO RSI(2) 2.8 washout only 3.9% above its 200-day in a calm regime (crash radar 34); live reward-to-risk is about 1.01:1 (484.04 to 503.94 target vs 464.40 stop), just clearing my 1:1 floor, so I'm taking a small starter.",
+  "confidence": 2,
+  "signals": {
+   "rsi2": 2.8,
+   "pct_vs_sma200": 3.9,
+   "pct_vs_sma5": -3.9
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-17T13:08:30-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "AMZN",
+   "GOOGL",
+   "TSLA",
+   "META"
+  ],
+  "aggression": "defensive",
+  "why": "SPY is still down and most large caps sit below VWAP, so I'm keeping VWAP bounces at half size. I'm limiting the watch to the few names holding above VWAP on an up 1-minute trend (AMZN, GOOGL, TSLA, META), and I'm letting the open AMZN scalp run to its existing target or stop."
  }
 ]
