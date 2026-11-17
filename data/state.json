@@ -28,7 +28,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.43,
+     "mark": 0.41,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -47,7 +47,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.435
+     "exit_half_spread": 0.415
     },
     "pos-ef4ba21286": {
      "kind": "stock",
@@ -68,7 +68,7 @@
       "pct_vs_sma200": 16.8
      },
      "sector": "Communication Services",
-     "last": 118.68,
+     "last": 118.925,
      "high_water": 121.325
     }
    },
@@ -78,12 +78,8 @@
    "closed": 24,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.4738,
+   "max_dd": 0.4741,
    "notes": [
-    {
-     "date": "2026-11-12",
-     "note": "No trade: the only candidate (BABA put) is a sector-avoid name and a 0.5-delta 30-60 DTE put on a ~$95 stock likely costs more than the $483.54 settled cash. Holding TLS, CLSX put and GLD put on their enforced stops; waiting for a 2.5x-volume Health Care or Real Estate breakout close."
-    },
     {
      "date": "2026-11-12",
      "note": "No trade: the only candidate is a BABA put in a sector-avoid name, and the budget can't fund a 0.5-delta 30-60 DTE put. Holding TLS (stop 7.36), CLSX put (stop 2.98) and GLD put (stop 367.07) on enforced stops. Waiting for a 2.5x-volume close through VTRS 20.86, EW 105.35, RPRX 69.71 or AHR 59.53."
@@ -239,6 +235,10 @@
     {
      "date": "2026-11-17",
      "note": "No entries: the only candidate is CNTY, a sub-$0.30 put in the avoid-listed Broad market bucket (2 wins in 10 trades). EW, NFLX and SE triggers are not in the scan. Holding CLSX to its 2.98 underlying stop and DIS to its 116.69 stop, keeping settled cash for game-plan triggers."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "Passing on CNTY: a sub-$0.30 put in the Broad market bucket, where my record is 2 wins in 10 trades. EW, NFLX and SE triggers are not in today's scan. Holding CLSX to its 2.98 underlying stop and DIS to its 116.69 stop, and keeping settled cash for game-plan triggers."
     }
    ],
    "last_exits": {
@@ -1137,7 +1137,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Consumer Staples",
-     "last": 222.975
+     "last": 223.61
     },
     "pos-dc107bcf5c": {
      "kind": "stock",
@@ -1157,7 +1157,7 @@
       "pct_vs_sma5": -4.4
      },
      "sector": "Broad market / other",
-     "last": 81.825
+     "last": 81.75
     },
     "pos-87ffe95b10": {
      "kind": "stock",
@@ -1177,7 +1177,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 484.54
+     "last": 485.29
     }
    },
    "status": "active",
@@ -1188,10 +1188,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-12",
-     "note": "No candidate clears the 1:1 floor at live prices (ABT about 0.48:1, TOST about 0.25:1). Holding HALO and ALC on their existing stops and keeping $757 settled cash for a washout that clears 1:1."
-    },
     {
      "date": "2026-11-12",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (ABT ~0.5:1, OTIS ~0.3:1, TOST ~0.25:1). Hold HALO and ALC on their existing stops and keep $757 settled cash for a washout that clears 1:1."
@@ -1347,6 +1343,10 @@
     {
      "date": "2026-11-17",
      "note": "Only MCO clears the 1:1 floor today, and only barely, so I'm sizing it small. SAP and HZN stay on their stops, and I'm not adding to SAP."
+    },
+    {
+     "date": "2026-11-17",
+     "note": "No new entries: all live candidates (MRNA 0.6:1, IQV 0.5:1, CCL 0.46:1) fail the 1:1 stop-to-target floor, and HZN, SAP, and MCO are already held on their stops. Keep ~$478 settled cash for a washout that clears 1:1."
     }
    ],
    "last_exits": {
@@ -2533,7 +2533,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 733.07
+     "last": 732.59
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2549,7 +2549,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 733.07
+     "last": 732.59
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2565,7 +2565,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 733.07
+     "last": 732.59
     }
    },
    "status": "active",
@@ -2657,7 +2657,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.83,
+     "exit_half_spread": 2.825,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2682,7 +2682,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.1,
+     "mark": 0.11,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2702,7 +2702,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.88,
+     "exit_half_spread": 3.96,
      "peak_mark": 1.09
     }
    },
@@ -3234,8 +3234,8 @@
      "target_pct": 0.5,
      "stop_pct": 0.3,
      "max_hold_min": 30,
-     "last": 622.17,
-     "peak_gain": -0.09056836466293516
+     "last": 622.53,
+     "peak_gain": 0.021839180131477676
     }
    },
    "status": "active",
@@ -3299,18 +3299,19 @@
    ],
    "playbook": {
     "date": "2026-11-17",
-    "made_at": "2026-11-17T13:08-05:00",
+    "made_at": "2026-11-17T13:38-05:00",
     "watch": [
-     "AMZN",
-     "GOOGL",
-     "TSLA",
-     "META"
+     "META",
+     "MSFT",
+     "AVGO",
+     "MU",
+     "SNDK"
     ],
     "aggression": "defensive",
-    "why": "SPY is still down and most large caps sit below VWAP, so I'm keeping VWAP bounces at half size. I'm limiting the watch to the few names holding above VWAP on an up 1-minute trend (AMZN, GOOGL, TSLA, META), and I'm letting the open AMZN scalp run to its existing target or stop.",
+    "why": "SPY is weak (-0.85% on the day) and two of today's VWAP scalps hit their stops, so I'm keeping size at half and limiting the watch to names holding above VWAP on an up 1-minute trend. I widened the stop to 0.4% because the 0.3% stops were getting clipped by normal bar noise.",
     "slices": 2,
     "target_pct": 0.5,
-    "stop_pct": 0.3,
+    "stop_pct": 0.4,
     "max_hold_min": 30
    },
    "scalp_day": {
