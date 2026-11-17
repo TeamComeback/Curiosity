@@ -1,25 +1,5 @@
 [
  {
-  "time": "2026-11-04T09:37:46-05:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "SWKS",
-  "instrument": "stock",
-  "qty": 1.572,
-  "price": 75.79,
-  "cost": 119.14,
-  "stop": 69.76,
-  "thesis": "SWKS RSI(2) 2.6 washout 12.4% above its 200-day in a calm regime (crash radar 29, SPY above its 200-day); target 84.73 vs stop 69.76 is about 1.28:1 on the scan price, the only unheld candidate clearing my 1:1 floor, so I'm committing most of the $133 settled cash.",
-  "confidence": 3
- },
- {
-  "time": "2026-11-04T09:38:03-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AMZN, AAPL, GOOGL, PLTR, SPY",
-  "note": "defensive: Most candidates are choppy with mixed 1-minute trends, but AMZN, AAPL, and GOOGL are trending up above VWAP and PLTR is strong and above its opening range. SPY is above its 200-day SMA, though its 20-day rate of change is negative, so I'm limiting size to defensive VWAP bounces with fewer slices."
- },
- {
   "time": "2026-11-04T09:54:22-05:00",
   "type": "open",
   "agent": "scalper",
@@ -6224,5 +6204,19 @@
   "agent": "scalper",
   "symbol": "LLY, XLP, SQQQ, RWM, LQD",
   "note": "defensive: Most of the tape is red and SPY is trending down, so I'm keeping defensive sizing. I'm limiting the watchlist to the few names trading above VWAP on an up 1-minute trend, with LLY showing a live VWAP bounce setup and the inverse ETFs (SQQQ, RWM) up on the weakness."
+ },
+ {
+  "time": "2026-11-17T10:40:37-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "LLY",
+  "note": "VWAP pullback bounce skipped: 0.77x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-17T10:42:38-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "LQD",
+  "note": "VWAP pullback bounce skipped: 0.79x volume < 1.5x"
  }
 ]
