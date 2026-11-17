@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-04T14:36:59-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-04T15:06:02-05:00",
-  "type": "error",
-  "agent": "trend",
-  "symbol": "XLE",
-  "note": "POST https://paper-api.alpaca.markets/v2/orders -> 403: {\"available\":\"1.8287\",\"code\":40310000,\"existing_qty\":\"1.8287\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: "
- },
- {
-  "time": "2026-11-04T15:06:33-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "breakdown failed (underlying back above stop)"
- },
- {
-  "time": "2026-11-04T15:07:04-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
   "time": "2026-11-04T15:35:55-05:00",
   "type": "reconcile",
   "agent": "trend",
@@ -6197,5 +6169,33 @@
   "agent": "scalper",
   "symbol": "MU, MSFT",
   "note": "stand_down: SPY is down on the day with a falling 1-minute trend, and all three VWAP bounces today hit their stops for about -$2.40 net, so with under two hours left I'm standing down. MU and MSFT stay on watch in case the tape turns up and they hold VWAP with volume."
+ },
+ {
+  "time": "2026-11-17T14:35:28-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-17T14:36:53-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-91%) (tried 0.25, 0.17, 0.09, 0.01; mark 0.30, natural -2.55)"
+ },
+ {
+  "time": "2026-11-17T14:38:18-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.07, 0.05, 0.03, 0.01; mark 0.12, natural -3.88)"
+ },
+ {
+  "time": "2026-11-17T14:38:29-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MSFT, RWM, SOXS",
+  "note": "stand_down: SPY is still down on the day with a falling 1-minute trend, and all three VWAP bounces today stopped out, so I'm standing down with about 70 minutes before the flat-by-3:50 cutoff. MSFT, RWM, and SOXS stay on watch because they are the only names currently trending up or above their opening range, a"
  }
 ]
