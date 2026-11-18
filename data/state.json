@@ -12,7 +12,7 @@
   "date": "2026-11-18",
   "counts": {
    "monkey": 2,
-   "meanrev": 2,
+   "meanrev": 3,
    "scalper": 4,
    "trend": 1
   }
@@ -69,7 +69,7 @@
       "pct_vs_sma200": 23.1
      },
      "sector": "Consumer Staples",
-     "last": 169.79,
+     "last": 168.645,
      "high_water": 171.145
     }
    },
@@ -81,10 +81,6 @@
    "peak": 1340.54,
    "max_dd": 0.4753,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "[weekly] Don't buy options on cheap, extreme-volatility stocks like DJTU: one -122 stop-out cost more than five other losers combined. Cap option risk at about 5% of equity at most. Breakouts that fail within 1-2 days are the norm in chop, so keep sizes small until win rate recovers above 35%, and don't loos"
-    },
     {
      "date": "2026-11-16",
      "note": "Holding CLSX put on its enforced stop; no candidates today. Keep settled cash for a confirmed Health Care breakout (2.5x+ volume close) with $150 max per name."
@@ -240,6 +236,10 @@
     {
      "date": "2026-11-18",
      "note": "No entries: all four candidates are puts in avoid-listed sectors (Technology, Consumer Discretionary, Broad market) or a sub-$0.30 collapse, and no IBN/EW/NFLX/SE trigger has fired. Hold TGT to its 158.63 stop and CLSX to its 2.98 underlying stop; keep settled cash for game-plan closes."
+    },
+    {
+     "date": "2026-11-18",
+     "note": "No new entries: FNGR is a sub-$0.30 collapse in an avoid-listed sector, COPX is Technology (avoid), and no game-plan trigger (IBN, EW, NFLX, SE) has fired. Hold TGT to its 158.63 stop and CLSX to its 2.98 underlying stop, and keep cash settled for triggers."
     }
    ],
    "last_exits": {
@@ -1181,7 +1181,7 @@
    ]
   },
   "meanrev": {
-   "cash": 469.42,
+   "cash": 369.51,
    "reserved": 0.0,
    "positions": {
     "pos-dc107bcf5c": {
@@ -1202,7 +1202,7 @@
       "pct_vs_sma5": -4.4
      },
      "sector": "Broad market / other",
-     "last": 81.705
+     "last": 81.54
     },
     "pos-87ffe95b10": {
      "kind": "stock",
@@ -1222,7 +1222,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 481.65
+     "last": 481.71
     },
     "pos-caba0983a7": {
      "kind": "stock",
@@ -1242,7 +1242,7 @@
       "pct_vs_sma5": -2.9
      },
      "sector": "Health Care",
-     "last": 443.07
+     "last": 442.77
     },
     "pos-c4618673be": {
      "kind": "stock",
@@ -1262,7 +1262,27 @@
       "pct_vs_sma5": -5.1
      },
      "sector": "Consumer Staples",
-     "last": 230.415
+     "last": 229.72
+    },
+    "pos-7c659f7cde": {
+     "kind": "stock",
+     "symbol": "NVS",
+     "qty": 0.6448,
+     "entry": 154.94,
+     "cost": 99.91,
+     "direction": "long",
+     "stop": 150.25,
+     "atr": 3.212,
+     "opened": "2026-11-18T14:38:29-05:00",
+     "thesis": "NVS RSI(2) 1.1 washout only 1.6% above its 200-day; live target 159.03 vs stop 150.25 from 155.07 is about 0.82:1, just clearing my 0.8:1 floor, so I'm taking a starter size.",
+     "confidence": 2,
+     "signals": {
+      "rsi2": 1.1,
+      "pct_vs_sma200": 1.6,
+      "pct_vs_sma5": -2.5
+     },
+     "sector": "Health Care",
+     "last": 155.065
     }
    },
    "status": "active",
@@ -1273,10 +1293,6 @@
    "peak": 1029.08,
    "max_dd": 0.0423,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "No candidate clears the 1:1 stop-to-target floor at live prices (best is MRNA at about 0.64:1). Hold HALO on its 96.66 stop and keep the $757 settled cash. ALC already closed at 73.80 today, so the game plan's ALC position is stale."
-    },
     {
      "date": "2026-11-16",
      "note": "No candidate clears the 1:1 stop-to-target floor (MRNA 0.53, ICLR 0.56, GM 0.39, ETR 0.30, MMM 0.36). HALO already closed today, so the HALO game plan is stale. Keep the $880 settled cash and wait for a washout that clears 1:1."
@@ -1432,6 +1448,10 @@
     {
      "date": "2026-11-18",
      "note": "14:08: no entries. NVS (about 0.71:1), TEAM (about 0.68:1) and ACN/AMGN (already held) miss the 0.8:1 floor or add duplicate exposure. SAP is a same-day re-entry after its stop-out, so it's skipped. MRNA is on the avoid list. Game-plan triggers (EMR, DE, NDAQ, IBB, IR) have no live prices in the can"
+    },
+    {
+     "date": "2026-11-18",
+     "note": "Take a starter only when a candidate clears 0.8:1 at live prices; skip same-day re-entries like SAP after a stop-out."
     }
    ],
    "last_exits": {
@@ -2731,7 +2751,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 731.04
+     "last": 730.37
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2747,7 +2767,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 731.04
+     "last": 730.37
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2763,7 +2783,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 731.04
+     "last": 730.37
     }
    },
    "status": "active",
@@ -2796,7 +2816,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 52.41
+     "last": 52.36
     },
     "pos-83bf9288a4": {
      "kind": "stock",
@@ -2813,7 +2833,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 114.47
+     "last": 114.44
     }
    },
    "status": "active",
@@ -2864,7 +2884,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.2,
+     "mark": 0.23,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2884,7 +2904,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 3.31,
+     "exit_half_spread": 3.325,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2909,7 +2929,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.92,
+     "mark": 1.0,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2929,7 +2949,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 1.47,
+     "exit_half_spread": 1.46,
      "peak_mark": 1.09
     }
    },
@@ -3513,12 +3533,13 @@
    ],
    "playbook": {
     "date": "2026-11-18",
-    "made_at": "2026-11-18T14:08-05:00",
+    "made_at": "2026-11-18T14:38-05:00",
     "watch": [
-     "AAPL"
+     "AMD",
+     "AVGO"
     ],
     "aggression": "stand_down",
-    "why": "Settled cash is effectively zero, with about $752 still settling until tomorrow, so no new entries are possible today. Only the open AAPL scalp is live, and it should run to its existing target, stop, or 45-minute limit, while SPY's negative 20-day trend and broad weakness argue against adding risk.",
+    "why": "Settled cash is about $0.07 with $1,001 still settling until tomorrow, so no new entries are possible before the close. AMD and AVGO are the only names above their opening ranges with rising 1-minute trends, so they're the ones to check for a clean setup tomorrow, while SPY's negative 20-day rate of",
     "slices": 2,
     "target_pct": 0.5,
     "stop_pct": 0.3,

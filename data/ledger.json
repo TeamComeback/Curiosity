@@ -22165,5 +22165,38 @@
   "opened": "2026-11-18T13:28:56-05:00",
   "why_entered": "VWAP pullback bounce on AAPL: 1.51x volume, +0.02% vs VWAP; target +0.5%, stop -0.3%",
   "why_exited": "time limit, 46 min (-0.18%)"
+ },
+ {
+  "time": "2026-11-18T14:38:29-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-7c659f7cde",
+  "symbol": "NVS",
+  "underlying": "NVS",
+  "sector": "Health Care",
+  "instrument": "stock",
+  "qty": 0.6448,
+  "price": 154.94,
+  "cost": 99.91,
+  "stop": 150.25,
+  "why": "NVS RSI(2) 1.1 washout only 1.6% above its 200-day; live target 159.03 vs stop 150.25 from 155.07 is about 0.82:1, just clearing my 0.8:1 floor, so I'm taking a starter size.",
+  "confidence": 2,
+  "signals": {
+   "rsi2": 1.1,
+   "pct_vs_sma200": 1.6,
+   "pct_vs_sma5": -2.5
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-18T14:38:34-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "AMD",
+   "AVGO"
+  ],
+  "aggression": "stand_down",
+  "why": "Settled cash is about $0.07 with $1,001 still settling until tomorrow, so no new entries are possible before the close. AMD and AVGO are the only names above their opening ranges with rising 1-minute trends, so they're the ones to check for a clean setup tomorrow, while SPY's negative 20-day rate of"
  }
 ]

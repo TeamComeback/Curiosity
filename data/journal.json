@@ -1,59 +1,5 @@
 [
  {
-  "time": "2026-11-05T14:37:48-05:00",
-  "type": "close",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "qty": 1,
-  "entry": 1.5,
-  "exit": 0.3,
-  "pnl": -140.0,
-  "note": "spread stop (-45%)",
-  "opened": "2026-10-16T10:06:17-04:00",
-  "confidence": 3,
-  "thesis": "PLD is testing its 20-day low at 126.19 after a -6.1% 20-day move and trades below its 200-day. Real Estate is uncorrelated with my open Technology puts, so this adds a different breakdown exposure without stacking more Tech risk."
- },
- {
-  "time": "2026-11-05T14:38:08-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.75)"
- },
- {
-  "time": "2026-11-05T14:38:19-05:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "ALL",
-  "instrument": "stock",
-  "qty": 0.5536,
-  "price": 271.034,
-  "cost": 150.04,
-  "stop": 259.51,
-  "thesis": "ALL cleared its 55-day high at 270.62 on 2.2x relative volume with roc20 +20% and 18% above its 200-day SMA; the 259.51 stop caps risk near 4% of the position, and a stock entry avoids the option-fit problems that blocked the puts.",
-  "confidence": 3
- },
- {
-  "time": "2026-11-05T14:39:16-05:00",
-  "type": "open",
-  "agent": "volsell",
-  "symbol": "IWM",
-  "instrument": "spread",
-  "qty": 1,
-  "price": 0.2,
-  "cost": -13.5,
-  "stop": 0,
-  "thesis": "IWM IV 24% vs realized 16% (1.53x) with crash radar calm at 34 and SPY above its 200-day; a 286/287 bear call collects 0.25 credit against $75 max loss, and IWM is no longer open after today's close, so this is not a duplicate.",
-  "confidence": 3
- },
- {
-  "time": "2026-11-05T14:39:25-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "GOOGL, META",
-  "note": "stand_down: Both VWAP scalps today hit the -0.3% stop within minutes, and SPY is down about 4% with most candidates below VWAP. With roughly 70 minutes left before the 3:50 flat, I'd rather preserve the $1,000 than force half-size trades into a choppy, red tape."
- },
- {
   "time": "2026-11-05T15:06:24-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6191,5 +6137,46 @@
   "opened": "2026-11-18T13:28:56-05:00",
   "confidence": 3,
   "thesis": "VWAP pullback bounce on AAPL: 1.51x volume, +0.02% vs VWAP; target +0.5%, stop -0.3%"
+ },
+ {
+  "time": "2026-11-18T14:35:33-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-18T14:36:56-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-93%) (tried 0.18, 0.12, 0.07, 0.01; mark 0.23, natural -3.1)"
+ },
+ {
+  "time": "2026-11-18T14:38:19-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-76%) (tried 0.95, 0.63, 0.32, 0.01; mark 1.00, natural -0.46)"
+ },
+ {
+  "time": "2026-11-18T14:38:29-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "NVS",
+  "instrument": "stock",
+  "qty": 0.6448,
+  "price": 154.94,
+  "cost": 99.91,
+  "stop": 150.25,
+  "thesis": "NVS RSI(2) 1.1 washout only 1.6% above its 200-day; live target 159.03 vs stop 150.25 from 155.07 is about 0.82:1, just clearing my 0.8:1 floor, so I'm taking a starter size.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-11-18T14:38:34-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AMD, AVGO",
+  "note": "stand_down: Settled cash is about $0.07 with $1,001 still settling until tomorrow, so no new entries are possible before the close. AMD and AVGO are the only names above their opening ranges with rising 1-minute trends, so they're the ones to check for a clean setup tomorrow, while SPY's negative 20-day rate of"
  }
 ]
