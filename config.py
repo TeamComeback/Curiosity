@@ -49,7 +49,10 @@ AGENTS = {
                 "instruments": ["stock", "call"],
                 "style": "Mean-reversion trader. Buys sharp short-term washouts (RSI(2) extremes) in "
                          "stocks that are still above their 200-day average, and sells into the snap-back."},
-    "volsell": {"name": "Premium House", "competing": True,
+    # Nov 17 2026 (owner-approved in HQ): moved to exhibition after going 0 for 6 on closed trades (-11.1%). It keeps
+    # trading on paper but stays out of the race pool, leaderboard and SPY comparison.
+    # It returns to the race once its thesis review passes: set competing True and drop exhibition.
+    "volsell": {"name": "Premium House", "competing": False, "exhibition": True,
                 "instruments": ["spread"],
                 "style": "Volatility seller. Sells defined-risk credit spreads on index ETFs when implied "
                          "volatility is rich versus realized, collecting premium as time passes."},
