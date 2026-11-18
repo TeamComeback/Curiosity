@@ -1,25 +1,5 @@
 [
  {
-  "time": "2026-11-05T13:36:59-05:00",
-  "type": "open",
-  "agent": "meanrev",
-  "symbol": "CNQ",
-  "instrument": "stock",
-  "qty": 0.6074,
-  "price": 49.468,
-  "cost": 30.05,
-  "stop": 46.4,
-  "thesis": "CNQ RSI(2) 3.3 washout 6.8% above its 200-day in a calm regime (crash radar 34); it sits inside the game-plan trigger (49.39 vs 50.59 max), and the 46.40 stop gives about 1.03:1 to the 52.46 target, which clears my floor.",
-  "confidence": 2
- },
- {
-  "time": "2026-11-05T13:37:45-05:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "XLF",
-  "note": "credit not filled at 0.22, 0.17 (mid 0.22, natural 0.06, floor 0.15)"
- },
- {
   "time": "2026-11-05T13:37:56-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6204,5 +6184,25 @@
   "stop": 215.73,
   "thesis": "ACN RSI(2) 1.0 washout 21.6% above its 200-day in a calm regime (crash radar 37); live reward-to-risk is 0.81:1 (231.20 to 243.73 target vs 215.73 stop), just clearing my 0.8:1 floor, so I'm taking a small starter.",
   "confidence": 2
+ },
+ {
+  "time": "2026-11-18T13:22:53-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "SPY",
+  "note": "VWAP pullback bounce skipped: 0.79x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-18T13:28:56-05:00",
+  "type": "open",
+  "agent": "scalper",
+  "symbol": "AAPL",
+  "instrument": "stock",
+  "qty": 0.7064,
+  "price": 353.732,
+  "cost": 249.88,
+  "stop": 352.67,
+  "thesis": "VWAP pullback bounce on AAPL: 1.51x volume, +0.02% vs VWAP; target +0.5%, stop -0.3%",
+  "confidence": 3
  }
 ]
