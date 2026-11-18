@@ -21554,5 +21554,111 @@
   ],
   "why": "Consumer Staples is +$0.79 over 5 trades with 3 wins, and today's scan doesn't contradict it, though the sample is small. Technology is -$1.39 over 52 trades. Consumer Discretionary is -$0.72 over 11 trades. Materials is -$0.72 over 1 trade. Communication Services is now +$0.59 over 12 trades, but i",
   "expires": "2026-12-01"
+ },
+ {
+  "time": "2026-11-17T20:10:17-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Evening check-in",
+  "for_day": "2026-11-18",
+  "decision": "revise",
+  "why": "The fresh scan still has IBN (0.4% below its 34.95 breakout) and EW (2.4% below 107.94) as the cleanest setups, which is the core of the existing plan. I'm trimming it: the bond ETF and GOOG/GOOGL noise is dropped, and the NFLX and SE put ideas are kept only as a strict premium check. The thin sector record is noted, and CLSX's stop is tightened to the 2.98 breakdown level.",
+  "summary": "Tomorrow: keep CLSX with its 2.98 underlying stop and keep settled cash ready. Buy IBN stock only on a close above 34.95 at 2.5x+ relative volume (up to ~4 shares, about $150). Buy EW stock only on a close above 107.94 at 2.5x+ volume (1 share, about $108). Take NFLX or SE puts only if the ask is at or below $1.50 per share, otherwise stay in cash.",
+  "watchlist": [
+   {
+    "symbol": "IBN",
+    "setup": "Communication Services near-breakout at 34.95, ROC20 +16.4%, ATR 0.70",
+    "trigger": "Close above 34.95 on at least 2.5x relative volume; initial stop 2 ATR (about 1.40) below entry; trail 3 ATR once in profit",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout, about 2.4% below the 107.94 level, ATR 2.85, ROC20 +19.4%",
+    "trigger": "Close above 107.94 on at least 2.5x relative volume; initial stop 2 ATR (about 5.7) below entry",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services breakdown at about 60.48, ROC20 -13.1%, ATR 2.0",
+    "trigger": "Close below 60.48 on at least 2.5x volume, and buy a 30-60 DTE put only if the ask is at or below $1.50 per share; otherwise skip",
+    "instrument": "put",
+    "conviction": 1
+   },
+   {
+    "symbol": "SE",
+    "setup": "Communication Services breakdown, about 2.9% below 71.47, ATR 3.6, ROC20 -13.7%",
+    "trigger": "Close below 71.47 on at least 2.5x volume, and buy a 30-60 DTE put only if the ask is at or below $1.50 per share; otherwise skip",
+    "instrument": "put",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-11-17T20:10:31-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-11-18",
+  "decision": "keep",
+  "why": "Nothing new changes the plan. Today's scan is the same washout set, every candidate still fails the 1:1 floor except the triggers already on the list, and my picks are averaging a slight loss (-0.31%), so I'm not adding risk.",
+  "summary": "Hold SAP, HZN and MCO on their stops and take no new positions. Only buy the five watchlist names if they reach their limit triggers, which keeps settled cash of about $478 available.",
+  "watchlist": [
+   {
+    "symbol": "EMR",
+    "setup": "RSI2 2.7 washout, 7.4% above SMA200, Industrials",
+    "trigger": "Buy at or below 156.45 (SMA5 164.03 minus 1.5 ATR stop of 7.58 gives 1:1)",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "DE",
+    "setup": "RSI2 3.2 washout, 5.7% above SMA200, Materials",
+    "trigger": "Buy at or below 642.28 (SMA5 669.33 minus 1.5 ATR of 27.05)",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "NDAQ",
+    "setup": "RSI2 2.9 washout, 15.3% above SMA200, Financials",
+    "trigger": "Buy at or below 104.40 (SMA5 108.09 minus 1.5 ATR of 3.69)",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "IBB",
+    "setup": "RSI2 4.3 washout, 10.6% above SMA200, Health Care",
+    "trigger": "Buy at or below 204.01 (SMA5 211.84 minus 1.5 ATR of 7.83)",
+    "instrument": "stock",
+    "conviction": 1
+   },
+   {
+    "symbol": "IR",
+    "setup": "RSI2 4.3 washout, 1.4% above SMA200, Industrials",
+    "trigger": "Buy at or below 80.20 (SMA5 84.20 minus 1.5 ATR of 4.00)",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-11-17T20:10:42-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-11-18",
+  "decision": "revise",
+  "why": "Today's three VWAP bounces (SPCX, AMZN, META) all hit stops for a combined -$2.41, and stops slipped past the 0.3% setting again. The plan's AAPL idea is still the only staples name in the scan, but the 15:01 ET Apple outage headline is new, so I'm lowering conviction and requiring that the outage story stop driving the stock before any entry.",
+  "summary": "Stand aside unless AAPL pulls back to VWAP, holds above it on at least 1.5x bar-verified relative volume, and SPY is above its open with no new Apple outage or supply-chain headline. Cap at $50, target +0.5%, stop -0.3%, 45-minute limit, flat by the close. Otherwise no trades.",
+  "watchlist": [
+   {
+    "symbol": "AAPL",
+    "setup": "Consumer Staples VWAP pullback bounce. ATR about 2.3%, down 0.24% today, the only staples name in the scan. The outage headline is recent, so entry needs the price to stabilize first.",
+    "trigger": "Price pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, with SPY above its open, and no fresh Apple outage or supply-chain headline in the last hour. Target +0.5%, stop -0.3%, 45-minute limit.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]

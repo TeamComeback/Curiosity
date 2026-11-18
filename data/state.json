@@ -248,15 +248,15 @@
    },
    "plan": {
     "for_day": "2026-11-18",
-    "made_at": "2026-11-17T16:40-05:00",
-    "session": "After-close review",
+    "made_at": "2026-11-17T20:10-05:00",
+    "session": "Evening check-in",
     "decision": "revise",
-    "why": "The scan now has a cheap Communication Services breakout in IBN (34.95, ATR 0.7), which fits the $150 budget as a stock trade. The NFLX and SE put triggers are unlikely to fit the premium limit at their current prices, so I'm demoting them.",
-    "summary": "Hold CLSX and the cash reserve. Buy IBN stock on a close above 34.95 at 2.5x+ relative volume, and buy EW stock on a close above 107.67 at 2.5x+ volume. Take NFLX or SE puts only if the premium is within $150, which is unlikely, so otherwise stay in cash.",
+    "why": "The fresh scan still has IBN (0.4% below its 34.95 breakout) and EW (2.4% below 107.94) as the cleanest setups, which is the core of the existing plan. I'm trimming it: the bond ETF and GOOG/GOOGL noise is dropped, and the NFLX and SE put ideas are kept only as a strict premium check. The thin sector record is noted, and CLSX's stop is tightened to the 2.98 breakdown level.",
+    "summary": "Tomorrow: keep CLSX with its 2.98 underlying stop and keep settled cash ready. Buy IBN stock only on a close above 34.95 at 2.5x+ relative volume (up to ~4 shares, about $150). Buy EW stock only on a close above 107.94 at 2.5x+ volume (1 share, about $108). Take NFLX or SE puts only if the ask is at or below $1.50 per share, otherwise stay in cash.",
     "watchlist": [
      {
       "symbol": "IBN",
-      "setup": "Communication Services near-breakout at 34.95, ROC20 +16.4%, ATR 0.70, cheap enough for about 4 shares within budget",
+      "setup": "Communication Services near-breakout at 34.95, ROC20 +16.4%, ATR 0.70",
       "trigger": "Close above 34.95 on at least 2.5x relative volume; initial stop 2 ATR (about 1.40) below entry; trail 3 ATR once in profit",
       "instrument": "stock",
       "max_dollars": 150,
@@ -264,23 +264,23 @@
      },
      {
       "symbol": "EW",
-      "setup": "Health Care breakout, currently about 2.4% below the 107.94 level, ATR 2.85, ROC20 +19.4%",
-      "trigger": "Close above 107.67 (or 107.94 if the scan level holds) on at least 2.5x relative volume; initial stop 2 ATR (about 5.7) below entry",
+      "setup": "Health Care breakout, about 2.4% below the 107.94 level, ATR 2.85, ROC20 +19.4%",
+      "trigger": "Close above 107.94 on at least 2.5x relative volume; initial stop 2 ATR (about 5.7) below entry",
       "instrument": "stock",
       "max_dollars": 150,
       "conviction": 3
      },
      {
       "symbol": "NFLX",
-      "setup": "Communication Services breakdown printed today at about 60.5 (ROC20 -13%, ATR 2.0). Put premium on a stock near $60 is likely above $150 per contract.",
-      "trigger": "Close below the breakdown level on at least 2.5x volume, and buy a 30-60 DTE put only if the ask is at or below $1.50 per share; otherwise skip",
+      "setup": "Communication Services breakdown at about 60.48, ROC20 -13.1%, ATR 2.0",
+      "trigger": "Close below 60.48 on at least 2.5x volume, and buy a 30-60 DTE put only if the ask is at or below $1.50 per share; otherwise skip",
       "instrument": "put",
       "max_dollars": 150,
       "conviction": 1
      },
      {
       "symbol": "SE",
-      "setup": "Communication Services breakdown, about 2.9% below the 71.47 level, ATR 3.6, ROC20 -13.7%. Put premium is likely above $150.",
+      "setup": "Communication Services breakdown, about 2.9% below 71.47, ATR 3.6, ROC20 -13.7%",
       "trigger": "Close below 71.47 on at least 2.5x volume, and buy a 30-60 DTE put only if the ask is at or below $1.50 per share; otherwise skip",
       "instrument": "put",
       "max_dollars": 150,
@@ -290,17 +290,17 @@
     "position_plans": [
      {
       "symbol": "CLSX261218P00002000",
-      "plan": "Hold. Exit at open if CLSX closes above 2.98 (the underlying stop). Do not add."
+      "plan": "Hold. Exit at open if CLSX closes above 2.98 (underlying stop, tighter than the 3.63 level in the original thesis). Do not add."
      }
     ],
     "avoid": [
-     "GOOG and GOOGL puts: about 0.8-1.2% from their breakdown levels, but ATR is about 10 on a $275 stock, so premium far exceeds $150, and bullish news flow (Anthropic placement, Gemini release) argues against a breakdown.",
-     "Bond ETFs flagged near breakdown (IGSB, VCSH, VCIT, IUSB, BND, LQD, EMB, IJH): daily ATR under 0.5% of price, so these moves are noise and the premiums would not justify the trade.",
-     "CNTY and other sub-$0.30 collapses: not an established uptrend and in the Broad market bucket where my record is 2 wins in 10.",
-     "LLY, HCA, JNJ, ABBV, XLV, CAH, PGR, CMI, BA: single-share costs or ATR too large for the $150 per-name budget.",
-     "F and BAC: breakdown and noise setups with news flow (Ford recall and retirement, BofA disruption and Berkshire stake sale) that do not match my trend-following edge."
+     "GOOG and GOOGL puts: ATR about 10 on a $275 stock, so premium far exceeds $150, and bullish news flow (Anthropic placement, Gemini release) argues against a breakdown.",
+     "Bond and income ETFs flagged near breakdown (IGSB, VCSH, VCIT, IUSB, BND, LQD, EMB, IJH): daily ATR under 0.5% of price, so the moves are noise.",
+     "CNTY and other sub-$0.30 collapses: not an established uptrend, and the Broad market bucket is a loser (2 wins in 10).",
+     "F and BAC: breakdown setups driven by news (Ford recall and retirement, BofA disruption and Berkshire stake sale) that do not match my trend-following edge.",
+     "BA, CRS, CMI, LLY, HCA, JNJ, ABBV, XLV, CAH, PGR: single-share cost or ATR too large for the $150 per-name budget."
     ],
-    "brainstorm": "Test requiring a Communication Services name to have ROC20 above +10% before buying stock breakouts, since the sector's downside breakdowns have been noisy.",
+    "brainstorm": "Test requiring the breakout close to land in the top third of the day's range as well as 2.5x volume, to filter weak closes like the DIS failure.",
     "revisions": [
      {
       "at": "2026-11-17T16:40-05:00",
@@ -329,6 +329,34 @@
         "setup": "Communication Services breakdown, about 2.9% below the 71.47 level, ATR 3.6, ROC"
        }
       ]
+     },
+     {
+      "at": "2026-11-17T20:10-05:00",
+      "session": "Evening check-in",
+      "decision": "revise",
+      "why": "The fresh scan still has IBN (0.4% below its 34.95 breakout) and EW (2.4% below 107.94) as the cleanest setups, which is the core of the existing plan. I'm trimming it: the bond ETF and GOOG/GOOGL noise is dropped, and the NFLX and SE put ideas are kept only as a strict premium check. The thin sector record is noted, and CLSX's stop is tightened to the 2.98 breakdown level.",
+      "watch": [
+       {
+        "symbol": "IBN",
+        "instrument": "stock",
+        "setup": "Communication Services near-breakout at 34.95, ROC20 +16.4%, ATR 0.70"
+       },
+       {
+        "symbol": "EW",
+        "instrument": "stock",
+        "setup": "Health Care breakout, about 2.4% below the 107.94 level, ATR 2.85, ROC20 +19.4%"
+       },
+       {
+        "symbol": "NFLX",
+        "instrument": "put",
+        "setup": "Communication Services breakdown at about 60.48, ROC20 -13.1%, ATR 2.0"
+       },
+       {
+        "symbol": "SE",
+        "instrument": "put",
+        "setup": "Communication Services breakdown, about 2.9% below 71.47, ATR 3.6, ROC20 -13.7%"
+       }
+      ]
      }
     ],
     "settled_cash_at_plan": 586.04,
@@ -353,8 +381,8 @@
      "Broad market / other",
      "Consumer Discretionary"
     ],
-    "why": "Health Care has a fresh breakout cluster (EW) and a calm tape (crash radar 29), though my record there is thin (2 trades, -2.49). Communication Services has a clean breakout (IBN) and two breakdowns (NFLX, SE). My record there is also thin (1 trade, -3.12), so I'm keeping it on the focus list only f",
-    "set_at": "2026-11-17T16:40-05:00",
+    "why": "Both lean-in sectors have fresh scan setups (EW and IBN breakouts, NFLX and SE breakdowns). My record there is thin (Health Care 2 trades, -2.49; Communication Services 1 trade, -3.12), so the focus stays small and will be re-checked before the 12/01 expiry. The avoid list reflects my negative resul",
+    "set_at": "2026-11-17T20:10-05:00",
     "expires": "2026-12-01"
    },
    "scorecard": [
@@ -1364,15 +1392,15 @@
    },
    "plan": {
     "for_day": "2026-11-18",
-    "made_at": "2026-11-17T16:40-05:00",
-    "session": "After-close review",
-    "decision": "revise",
-    "why": "The old trigger prices failed the 1:1 test on the fresh scan (EMR's 158.19 trigger gives about 0.99:1), so I'm recomputing entries as reward to the 5-day SMA at least equal to the 1.5 ATR stop.",
-    "summary": "Hold SAP, HZN and MCO on their stops and add only on pullbacks that clear 1:1 to the 5-day SMA: EMR, DE, NDAQ, IBB, IR. Otherwise stay in cash.",
+    "made_at": "2026-11-17T20:10-05:00",
+    "session": "Evening check-in",
+    "decision": "keep",
+    "why": "Nothing new changes the plan. Today's scan is the same washout set, every candidate still fails the 1:1 floor except the triggers already on the list, and my picks are averaging a slight loss (-0.31%), so I'm not adding risk.",
+    "summary": "Hold SAP, HZN and MCO on their stops and take no new positions. Only buy the five watchlist names if they reach their limit triggers, which keeps settled cash of about $478 available.",
     "watchlist": [
      {
       "symbol": "EMR",
-      "setup": "RSI2 2.7 washout, 7.4% above SMA200, Industrials (1-for-1 in my results)",
+      "setup": "RSI2 2.7 washout, 7.4% above SMA200, Industrials",
       "trigger": "Buy at or below 156.45 (SMA5 164.03 minus 1.5 ATR stop of 7.58 gives 1:1)",
       "instrument": "stock",
       "max_dollars": 150,
@@ -1380,7 +1408,7 @@
      },
      {
       "symbol": "DE",
-      "setup": "RSI2 3.2 washout, 5.7% above SMA200",
+      "setup": "RSI2 3.2 washout, 5.7% above SMA200, Materials",
       "trigger": "Buy at or below 642.28 (SMA5 669.33 minus 1.5 ATR of 27.05)",
       "instrument": "stock",
       "max_dollars": 150,
@@ -1388,7 +1416,7 @@
      },
      {
       "symbol": "NDAQ",
-      "setup": "RSI2 2.9 washout, 15.3% above SMA200, Financials (1-for-1 in my results)",
+      "setup": "RSI2 2.9 washout, 15.3% above SMA200, Financials",
       "trigger": "Buy at or below 104.40 (SMA5 108.09 minus 1.5 ATR of 3.69)",
       "instrument": "stock",
       "max_dollars": 150,
@@ -1414,25 +1442,26 @@
     "position_plans": [
      {
       "symbol": "SAP",
-      "plan": "Hold; stop 214.83 at the default level, target 231.99; exit at the open if it closes below the stop."
+      "plan": "Hold; stop 214.83, target 231.99. Exit at the open if it closes below the stop. No adds. The Saueressig exit news is minor for the thesis."
      },
      {
       "symbol": "HZN",
-      "plan": "Hold; stop 79.38, target 85.75; exit if it closes below the stop."
+      "plan": "Hold; stop 79.38, target 85.75. Exit if it closes below the stop. No adds."
      },
      {
       "symbol": "MCO",
-      "plan": "Hold; stop 464.40, target 503.94 (about 1:1 at current price, so no adds)."
+      "plan": "Hold; stop 464.40, target 503.94. Reward-to-risk is only about 1:1, so no adds. Exit at target or at the stop."
      }
     ],
     "avoid": [
      "MRNA: insider sales and wide target swings make a 1.5 ATR stop unreliable.",
-     "VRTX, ACN, IQV: far above the 5-day SMA, so the reward to target is too small.",
-     "CCL, RCL and cruise/airline names: news-driven washouts below the floor.",
-     "Technology: 1-for-3 for -14.20 with the AI rout unresolved.",
-     "HALO: stopped out today; no re-entry."
+     "VRTX, ACN, IQV: far above the 5-day SMA, so reward to target is too small (under 1:1).",
+     "CCL, RCL, XLY and other cruise/airline/news-driven names: washouts driven by news, below the 1:1 floor.",
+     "Technology (SAP and other tech-tagged names in the scan): 1-for-3 for -14.20 with the AI rout unresolved.",
+     "HALO: stopped out today; no re-entry.",
+     "XLRE and TEAM: below the 1:1 floor, with the TEAM stop too wide for the SMA5 target."
     ],
-    "brainstorm": "Test whether requiring the reward to the 5-day SMA to clear 1:1 against a 1.5 ATR stop cuts losers without missing the Industrials and Financials washouts.",
+    "brainstorm": "Test whether a target at SMA5 plus 0.5 ATR, rather than SMA5 alone, would turn the marginal 0.6\u20130.9:1 setups (EMR, DE, NDAQ) into tradeable ones without changing the stop.",
     "revisions": [
      {
       "at": "2026-11-17T16:40-05:00",
@@ -1466,6 +1495,39 @@
         "setup": "RSI2 4.3 washout, 1.4% above SMA200, Industrials"
        }
       ]
+     },
+     {
+      "at": "2026-11-17T20:10-05:00",
+      "session": "Evening check-in",
+      "decision": "keep",
+      "why": "Nothing new changes the plan. Today's scan is the same washout set, every candidate still fails the 1:1 floor except the triggers already on the list, and my picks are averaging a slight loss (-0.31%), so I'm not adding risk.",
+      "watch": [
+       {
+        "symbol": "EMR",
+        "instrument": "stock",
+        "setup": "RSI2 2.7 washout, 7.4% above SMA200, Industrials"
+       },
+       {
+        "symbol": "DE",
+        "instrument": "stock",
+        "setup": "RSI2 3.2 washout, 5.7% above SMA200, Materials"
+       },
+       {
+        "symbol": "NDAQ",
+        "instrument": "stock",
+        "setup": "RSI2 2.9 washout, 15.3% above SMA200, Financials"
+       },
+       {
+        "symbol": "IBB",
+        "instrument": "stock",
+        "setup": "RSI2 4.3 washout, 10.6% above SMA200, Health Care"
+       },
+       {
+        "symbol": "IR",
+        "instrument": "stock",
+        "setup": "RSI2 4.3 washout, 1.4% above SMA200, Industrials"
+       }
+      ]
      }
     ],
     "settled_cash_at_plan": 477.7,
@@ -1477,8 +1539,8 @@
     "avoid": [
      "Technology"
     ],
-    "why": "Industrials and Financials are only 1-for-1 each, too few trades to lean in; Technology is 1-for-3 for -14.20; Broad market is 5-of-7 but net -8.10.",
-    "set_at": "2026-11-17T16:40-05:00",
+    "why": "Industrials and Financials are 1-for-1 each and Consumer Staples is 2-for-2, all too few trades to justify leaning in. Technology is 1-for-3 for -14.20. Broad market is 5-of-7 but net -8.10, so I'm not adding new broad-market names.",
+    "set_at": "2026-11-17T20:10-05:00",
     "expires": "2026-12-01"
    },
    "scorecard": [
@@ -3344,31 +3406,31 @@
    },
    "plan": {
     "for_day": "2026-11-18",
-    "made_at": "2026-11-17T16:41-05:00",
-    "session": "After-close review",
+    "made_at": "2026-11-17T20:10-05:00",
+    "session": "Evening check-in",
     "decision": "revise",
-    "why": "Today's three VWAP bounces (SPCX, AMZN, META) all hit the -0.3% stop for a combined -$2.41, which fits the thin, unproven edge in my notes. The Technology and Communication Services names are now in a broad selloff with headline risk, so I'm narrowing the plan to one low-news staples name and dropping the rest.",
-    "summary": "Stand aside by default. Only trade AAPL if it pulls back to VWAP and holds on at least 1.5x bar-verified relative volume with SPY above its open. Use a $50 max, +0.5% target, -0.3% stop, and a 45-minute limit, and be flat by the close.",
+    "why": "Today's three VWAP bounces (SPCX, AMZN, META) all hit stops for a combined -$2.41, and stops slipped past the 0.3% setting again. The plan's AAPL idea is still the only staples name in the scan, but the 15:01 ET Apple outage headline is new, so I'm lowering conviction and requiring that the outage story stop driving the stock before any entry.",
+    "summary": "Stand aside unless AAPL pulls back to VWAP, holds above it on at least 1.5x bar-verified relative volume, and SPY is above its open with no new Apple outage or supply-chain headline. Cap at $50, target +0.5%, stop -0.3%, 45-minute limit, flat by the close. Otherwise no trades.",
     "watchlist": [
      {
       "symbol": "AAPL",
-      "setup": "Consumer Staples VWAP pullback bounce. ATR about 2.3%, down only 0.24% today, and the sole staples name in the scan. The Apple headlines are mostly low-impact, though the outage report needs checking at the open.",
-      "trigger": "Price pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, with SPY above its open and no new Apple outage or supply-chain headline. Target +0.5%, stop -0.3%, 45-minute limit.",
+      "setup": "Consumer Staples VWAP pullback bounce. ATR about 2.3%, down 0.24% today, the only staples name in the scan. The outage headline is recent, so entry needs the price to stabilize first.",
+      "trigger": "Price pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, with SPY above its open, and no fresh Apple outage or supply-chain headline in the last hour. Target +0.5%, stop -0.3%, 45-minute limit.",
       "instrument": "stock",
       "max_dollars": 50,
-      "conviction": 2
+      "conviction": 1
      }
     ],
     "position_plans": [],
     "avoid": [
-     "Technology and AI-chip complex (NVDA, AMD, AVGO, MU, INTC, SNDK, TSM, SMH, SOXX, SPCX, TSLA, QQQ): 3-13% ATRs, export-control headlines, and a -$1.39 record over 52 trades. SPCX stopped out today.",
-     "AMZN and MSFT: event-driven, and VWAP bounces timed out or stopped out.",
-     "META: dropped today because the AI-chip selloff breaks its skip condition, and it is weak in Communication Services.",
-     "GOOGL and GOOG: down about 4% in a broad selloff, not a clean pullback, and they duplicate exposure.",
+     "Technology and AI-chip complex (NVDA, AMD, AVGO, MU, INTC, SNDK, TSM, SMH, SOXX, SPCX, TSLA, QQQ): 3-13% ATRs, export-control headlines, -$1.39 over 52 trades, and SPCX stopped out today.",
+     "AMZN and MSFT: event-driven, and VWAP bounces stopped out or timed out, including AMZN today.",
+     "META: stopped out today and weak in Communication Services.",
+     "GOOGL and GOOG: broad selloff, not a clean pullback, and they duplicate exposure.",
      "SPY and QQQ: bounces have timed out flat.",
      "XLP: no scan data today; revisit only if it reappears in a scan."
     ],
-    "brainstorm": "Test widening the stop to -0.4% with the +0.5% target only on staples names. Stops have filled at -0.33% to -0.38% against a -0.3% setting, so the current stop may be too tight for the slippage. Don't retune until about 40 trades.",
+    "brainstorm": "Stop fills run about 0.03-0.05% worse than the 0.3% setting, which makes the 0.5% target thin after costs. Once Consumer Staples reaches about 40 trades, test whether a 0.6% target with the same stop changes the average result. No retuning before then.",
     "revisions": [
      {
       "at": "2026-11-17T16:41-05:00",
@@ -3380,6 +3442,19 @@
         "symbol": "AAPL",
         "instrument": "stock",
         "setup": "Consumer Staples VWAP pullback bounce. ATR about 2.3%, down only 0.24% today, an"
+       }
+      ]
+     },
+     {
+      "at": "2026-11-17T20:10-05:00",
+      "session": "Evening check-in",
+      "decision": "revise",
+      "why": "Today's three VWAP bounces (SPCX, AMZN, META) all hit stops for a combined -$2.41, and stops slipped past the 0.3% setting again. The plan's AAPL idea is still the only staples name in the scan, but the 15:01 ET Apple outage headline is new, so I'm lowering conviction and requiring that the outage story stop driving the stock before any entry.",
+      "watch": [
+       {
+        "symbol": "AAPL",
+        "instrument": "stock",
+        "setup": "Consumer Staples VWAP pullback bounce. ATR about 2.3%, down 0.24% today, the onl"
        }
       ]
      }
@@ -3397,8 +3472,8 @@
      "Materials",
      "Communication Services"
     ],
-    "why": "Consumer Staples is +$0.79 over 5 trades with 3 wins, and today's scan doesn't contradict it, though the sample is small. Technology is -$1.39 over 52 trades. Consumer Discretionary is -$0.72 over 11 trades. Materials is -$0.72 over 1 trade. Communication Services is now +$0.59 over 12 trades, but i",
-    "set_at": "2026-11-17T16:41-05:00",
+    "why": "Consumer Staples is +$0.79 over 5 trades with 3 wins, which is a small sample but the only positive sector with a real edge. Technology is -$1.39 over 52 trades, Consumer Discretionary is -$0.72 over 11, and today's three stop-outs came from Technology, Consumer Discretionary, and Communication Serv",
+    "set_at": "2026-11-17T20:10-05:00",
     "expires": "2026-12-01"
    },
    "scorecard": [
