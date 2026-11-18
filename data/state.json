@@ -12,7 +12,8 @@
   "date": "2026-11-18",
   "counts": {
    "monkey": 2,
-   "meanrev": 1
+   "meanrev": 1,
+   "scalper": 1
   }
  },
  "agents": {
@@ -1178,7 +1179,7 @@
       "pct_vs_sma5": -4.4
      },
      "sector": "Broad market / other",
-     "last": 81.3
+     "last": 81.5
     },
     "pos-87ffe95b10": {
      "kind": "stock",
@@ -1198,7 +1199,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 477.5
+     "last": 477.63
     },
     "pos-caba0983a7": {
      "kind": "stock",
@@ -1218,7 +1219,7 @@
       "pct_vs_sma5": -2.9
      },
      "sector": "Health Care",
-     "last": 446.7
+     "last": 446.61
     }
    },
    "status": "active",
@@ -2687,7 +2688,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 729.31
+     "last": 728.04
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2703,7 +2704,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 729.31
+     "last": 728.04
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2719,7 +2720,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 729.31
+     "last": 728.04
     }
    },
    "status": "active",
@@ -2728,7 +2729,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1001.41,
-   "max_dd": 0.0581,
+   "max_dd": 0.0595,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -2752,7 +2753,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 51.61
+     "last": 51.26
     },
     "pos-83bf9288a4": {
      "kind": "stock",
@@ -2769,7 +2770,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 114.4
+     "last": 114.04
     }
    },
    "status": "active",
@@ -3395,9 +3396,32 @@
    ]
   },
   "scalper": {
-   "cash": 999.56,
+   "cash": 749.67,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-3798677fd2": {
+     "kind": "stock",
+     "symbol": "XLP",
+     "qty": 2.7352,
+     "entry": 91.36,
+     "cost": 249.89,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 91.09,
+     "atr": 0,
+     "opened": "2026-11-18T11:40:36-05:00",
+     "thesis": "VWAP pullback bounce on XLP: 1.66x volume, +0.16% vs VWAP; target +0.5%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Consumer Staples",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.5,
+     "stop_pct": 0.3,
+     "max_hold_min": 45,
+     "last": 91.395,
+     "peak_gain": 0.03830998248686157
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
