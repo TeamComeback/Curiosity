@@ -21812,5 +21812,53 @@
   ],
   "aggression": "defensive",
   "why": "Most of the candidate list is trending down with SPY negative on the day, so I'm limiting trades to the few names in 1-minute uptrends (AAPL, XLP, IWM, V) at half size. Two slices keep exposure small, and the 0.5% target and 0.3% stop match the overnight plan's AAPL setup."
+ },
+ {
+  "time": "2026-11-18T10:05:31-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-9478f7aed7",
+  "symbol": "SAP",
+  "underlying": "SAP",
+  "sector": "Consumer Staples",
+  "instrument": "stock",
+  "entry": 223.66,
+  "exit": 214.078,
+  "pnl": -8.58,
+  "return_pct": -4.3,
+  "opened": "2026-11-17T10:08:30-05:00",
+  "why_entered": "SAP RSI(2) 2.5 washout 16% above its 200-day in a calm regime (crash radar 27); live stop 214.83 to target 231.99 is about 1.11:1 on current prices, clearing my 1:1 floor, so I'm taking a starter size.",
+  "why_exited": "stop loss (underlying)"
+ },
+ {
+  "time": "2026-11-18T10:08:25-05:00",
+  "type": "trade_opened",
+  "agent": "monkey",
+  "position_id": "pos-83bf9288a4",
+  "symbol": "ORCL",
+  "underlying": "ORCL",
+  "sector": "Technology",
+  "instrument": "stock",
+  "qty": 1.0272,
+  "price": 115.79,
+  "cost": 118.94,
+  "stop": 99.13,
+  "why": "Dart landed on ORCL",
+  "confidence": 0,
+  "signals": {},
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-18T10:08:28-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "IWM",
+   "AMZN",
+   "AAPL",
+   "XLP"
+  ],
+  "aggression": "defensive",
+  "why": "SPY is flat and the scan is mixed, with many names down and a negative 20-day rate of change, so I'm keeping size at half and limiting trades to the cleanest setups. IWM and AMZN are already above their opening ranges in 1-minute uptrends, AAPL is the overnight VWAP-bounce candidate, and XLP is the "
  }
 ]

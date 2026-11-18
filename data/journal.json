@@ -1,54 +1,5 @@
 [
  {
-  "time": "2026-11-05T10:07:13-05:00",
-  "type": "close",
-  "agent": "monkey",
-  "symbol": "WDC",
-  "qty": 1.0447,
-  "entry": 356.21,
-  "exit": 283.71,
-  "pnl": -75.74,
-  "note": "stop loss",
-  "opened": "2026-11-03T09:37:39-05:00",
-  "confidence": 0,
-  "thesis": "Dart landed on WDC"
- },
- {
-  "time": "2026-11-05T10:07:44-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-63%)"
- },
- {
-  "time": "2026-11-05T10:08:16-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-05T10:08:50-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "LLY, XLV, SOXS, SPY, QQQ",
-  "note": "defensive: Only LLY, XLV and SOXS are trending up above their opening range, so I'm moving from stand-down to defensive: VWAP bounces at half size only, with SPY and QQQ watched for a reclaim. The overnight GOOGL, META and AMZN premises no longer match the tape (all red and below VWAP), so I'm dropping them."
- },
- {
-  "time": "2026-11-05T10:36:51-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-63%)"
- },
- {
-  "time": "2026-11-05T10:37:22-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
   "time": "2026-11-05T10:38:24-05:00",
   "type": "unfilled",
   "agent": "volsell",
@@ -6191,5 +6142,60 @@
   "agent": "scalper",
   "symbol": "IWM",
   "note": "VWAP pullback bounce skipped: 0.97x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-18T10:05:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-52%)"
+ },
+ {
+  "time": "2026-11-18T10:05:31-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "SAP",
+  "qty": 0.895,
+  "entry": 223.66,
+  "exit": 214.078,
+  "pnl": -8.58,
+  "note": "stop loss (underlying)",
+  "opened": "2026-11-17T10:08:30-05:00",
+  "confidence": 3,
+  "thesis": "SAP RSI(2) 2.5 washout 16% above its 200-day in a calm regime (crash radar 27); live stop 214.83 to target 231.99 is about 1.11:1 on current prices, clearing my 1:1 floor, so I'm taking a starter size."
+ },
+ {
+  "time": "2026-11-18T10:06:52-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-91%) (tried 0.24, 0.16, 0.09, 0.01; mark 0.29, natural -3.02)"
+ },
+ {
+  "time": "2026-11-18T10:08:12-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.04, 0.03, 0.02, 0.01; mark 0.09, natural -3.85)"
+ },
+ {
+  "time": "2026-11-18T10:08:25-05:00",
+  "type": "open",
+  "agent": "monkey",
+  "symbol": "ORCL",
+  "instrument": "stock",
+  "qty": 1.0272,
+  "price": 115.79,
+  "cost": 118.94,
+  "stop": 99.13,
+  "thesis": "Dart landed on ORCL",
+  "confidence": 0
+ },
+ {
+  "time": "2026-11-18T10:08:28-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "IWM, AMZN, AAPL, XLP",
+  "note": "defensive: SPY is flat and the scan is mixed, with many names down and a negative 20-day rate of change, so I'm keeping size at half and limiting trades to the cleanest setups. IWM and AMZN are already above their opening ranges in 1-minute uptrends, AAPL is the overnight VWAP-bounce candidate, and XLP is the "
  }
 ]

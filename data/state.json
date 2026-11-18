@@ -11,7 +11,7 @@
  "entries": {
   "date": "2026-11-18",
   "counts": {
-   "monkey": 1
+   "monkey": 2
   }
  },
  "agents": {
@@ -56,10 +56,6 @@
    "peak": 1340.54,
    "max_dd": 0.4753,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "Pass on the NBIG and NEBX breakdown puts: Broad market / other is on my avoid list with a -57 record, and NBIG's 6.48 stop is about 90% above price, so it isn't a real stop. Hold TLS, CLSX put and GLD put on their stops, and keep the $483 settled cash for a 2.5x-volume Health Care close through EW 1"
-    },
     {
      "date": "2026-11-13",
      "note": "Pass on NBIG: it's a Broad market / other breakdown put, a sector I'm avoiding with a negative record, and its 6.51 stop is about 89% above price, so it isn't a real risk stop. Hold CLSX and GLD puts on their enforced stops and keep the 483.54 settled cash for a 2.5x-volume Health Care close (EW 106"
@@ -215,6 +211,10 @@
     {
      "date": "2026-11-18",
      "note": "No candidates today and no game-plan triggers have fired (IBN, EW, NFLX, SE all need a confirmed close on 2.5x+ volume). Holding CLSX put to its 2.98 underlying stop and keeping $662 settled cash for triggers."
+    },
+    {
+     "date": "2026-11-18",
+     "note": "No trades today: all six scan candidates are puts in avoid-listed sectors (Technology, Broad market, Consumer Discretionary) or sub-$0.30 collapses, and no IBN, EW, NFLX or SE trigger has fired. Holding CLSX put to its 2.98 underlying stop and keeping $662 settled cash for game-plan triggers."
     }
    ],
    "last_exits": {
@@ -1156,29 +1156,9 @@
    ]
   },
   "meanrev": {
-   "cash": 477.7,
+   "cash": 669.3,
    "reserved": 0.0,
    "positions": {
-    "pos-9478f7aed7": {
-     "kind": "stock",
-     "symbol": "SAP",
-     "qty": 0.895,
-     "entry": 223.66,
-     "cost": 200.18,
-     "direction": "long",
-     "stop": 214.83,
-     "atr": 5.421,
-     "opened": "2026-11-17T10:08:30-05:00",
-     "thesis": "SAP RSI(2) 2.5 washout 16% above its 200-day in a calm regime (crash radar 27); live stop 214.83 to target 231.99 is about 1.11:1 on current prices, clearing my 1:1 floor, so I'm taking a starter size.",
-     "confidence": 3,
-     "signals": {
-      "rsi2": 2.5,
-      "pct_vs_sma200": 16.0,
-      "pct_vs_sma5": -3.9
-     },
-     "sector": "Consumer Staples",
-     "last": 216.19
-    },
     "pos-dc107bcf5c": {
      "kind": "stock",
      "symbol": "HZN",
@@ -1197,7 +1177,7 @@
       "pct_vs_sma5": -4.4
      },
      "sector": "Broad market / other",
-     "last": 80.68
+     "last": 81.57
     },
     "pos-87ffe95b10": {
      "kind": "stock",
@@ -1217,21 +1197,17 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 482.165
+     "last": 478.97
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 20,
+   "closed": 21,
    "wins": 13,
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "No candidate clears the 1:1 stop-to-target floor at live prices (best is GMAB ~0.6:1, MRNA ~0.64:1). Hold HALO and ALC on their stops and keep the $757 settled cash for a washout that clears 1:1."
-    },
     {
      "date": "2026-11-13",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (VRTX ~0.29, PFE ~0.38, MRNA ~0.53, GMAB ~0.55, VEEV ~0.2), so I'm holding HALO and ALC on their stops and keeping the $757 settled cash."
@@ -1387,6 +1363,10 @@
     {
      "date": "2026-11-18",
      "note": "No new entries: every live candidate fails the 0.8:1 stop-to-target floor (AZN 0.37, ACN 0.48, MMM 0.43, HD 0.62, AMGN 0.46), SAP is already held with no adds, and no game-plan trigger has hit (EMR needs <=156.45). Hold SAP, HZN and MCO on their stops and keep settled cash."
+    },
+    {
+     "date": "2026-11-18",
+     "note": "No entries: all live candidates fail the 0.8:1 stop-to-target floor (SAP 1.56:1 but just stopped out today at 214.08, so no re-entry; ACN 0.73, AZN 0.45, TEAM 0.60, MMM 0.47, AMGN 0.55). No game-plan trigger has hit. Hold HZN and MCO on their stops and keep settled cash."
     }
    ],
    "last_exits": {
@@ -1408,7 +1388,8 @@
     "CNQ": "2026-11-10",
     "PM": "2026-11-11",
     "ALC": "2026-11-13",
-    "HALO": "2026-11-16"
+    "HALO": "2026-11-16",
+    "SAP": "2026-11-18"
    },
    "plan": {
     "for_day": "2026-11-18",
@@ -1585,7 +1566,13 @@
     "settled_cash_at_plan": 477.7,
     "budgets_clamped": 0
    },
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 191.6,
+     "settles": "2026-11-19",
+     "note": "sold SAP"
+    }
+   ],
    "focus": {
     "lean_in": [],
     "avoid": [
@@ -2025,10 +2012,6 @@
    "notes": [
     {
      "date": "2026-11-09",
-     "note": "Passed the only candidate (TLT 80.5/79.5 bull put, 0.23 credit). It stacks a second TLT rate-sensitive spread on the same 12/11 expiry as the open 80/79, so it adds concentration rather than a new edge. Holding IWM and TLT to their exits and waiting for a different underlying or expiry."
-    },
-    {
-     "date": "2026-11-09",
      "note": "Passed the only candidate (TLT 80.5/79.5 bull put). It duplicates the open TLT 80/79 on the same 12/11 expiry, and that position is already losing (mark 0.23 vs 0.16 entry). Adding into a losing thesis doubles rate exposure. Hold TLT to its 0.32 stop or 0.08 target, and wait for a non-duplicate unde"
     },
     {
@@ -2182,6 +2165,10 @@
     {
      "date": "2026-11-17",
      "note": "Passed XLF bull put 54/53: IV/RV 1.01 is below my 1.15 floor and Financials is on my avoid list. Holding $889 settled cash for a non-avoided setup with IV/RV at or above 1.15."
+    },
+    {
+     "date": "2026-11-18",
+     "note": "Passed XLF 54/53 bull put: IV/RV 0.97 is below the 1.15 floor and Financials is on the avoid list. Keeping $889 settled for a non-avoided setup with IV/RV at or above 1.15."
     }
    ],
    "last_exits": {
@@ -2217,7 +2204,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 85.0,
+   "min_trade_seen": 84.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2679,7 +2666,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 733.415
+     "last": 732.635
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2695,7 +2682,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 733.415
+     "last": 732.635
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2711,7 +2698,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 733.415
+     "last": 732.635
     }
    },
    "status": "active",
@@ -2726,7 +2713,7 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 417.06,
+   "cash": 298.12,
    "reserved": 0.0,
    "positions": {
     "pos-db2013ff40": {
@@ -2744,7 +2731,24 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 52.495
+     "last": 52.51
+    },
+    "pos-83bf9288a4": {
+     "kind": "stock",
+     "symbol": "ORCL",
+     "qty": 1.0272,
+     "entry": 115.79,
+     "cost": 118.94,
+     "hold_days": 7,
+     "direction": "long",
+     "stop": 99.13,
+     "atr": 8.233,
+     "opened": "2026-11-18T10:08:25-05:00",
+     "thesis": "Dart landed on ORCL",
+     "confidence": 0,
+     "signals": {},
+     "sector": "Technology",
+     "last": 115.6
     }
    },
    "status": "active",
@@ -2795,7 +2799,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.24,
+     "mark": 0.29,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2815,7 +2819,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 3.355,
+     "exit_half_spread": 3.305,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2840,7 +2844,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.11,
+     "mark": 0.09,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2860,7 +2864,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.85,
+     "exit_half_spread": 3.945,
      "peak_mark": 1.09
     }
    },
@@ -3423,15 +3427,15 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-18",
-    "made_at": "2026-11-18T09:38-05:00",
+    "made_at": "2026-11-18T10:08-05:00",
     "watch": [
-     "AAPL",
-     "XLP",
      "IWM",
-     "V"
+     "AMZN",
+     "AAPL",
+     "XLP"
     ],
     "aggression": "defensive",
-    "why": "Most of the candidate list is trending down with SPY negative on the day, so I'm limiting trades to the few names in 1-minute uptrends (AAPL, XLP, IWM, V) at half size. Two slices keep exposure small, and the 0.5% target and 0.3% stop match the overnight plan's AAPL setup.",
+    "why": "SPY is flat and the scan is mixed, with many names down and a negative 20-day rate of change, so I'm keeping size at half and limiting trades to the cleanest setups. IWM and AMZN are already above their opening ranges in 1-minute uptrends, AAPL is the overnight VWAP-bounce candidate, and XLP is the ",
     "slices": 2,
     "target_pct": 0.5,
     "stop_pct": 0.3,
