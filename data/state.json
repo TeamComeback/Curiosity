@@ -9,11 +9,9 @@
   "start_balance": 1000.0
  },
  "entries": {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "counts": {
-   "trend": 1,
-   "meanrev": 3,
-   "scalper": 3
+   "monkey": 1
   }
  },
  "agents": {
@@ -28,7 +26,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.41,
+     "mark": 0.43,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -47,7 +45,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.415
+     "exit_half_spread": 0.435
     }
    },
    "status": "active",
@@ -58,10 +56,6 @@
    "peak": 1340.54,
    "max_dd": 0.4753,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "No Health Care trigger has fired and all four candidates are Broad market / other puts, a sector I've marked to avoid after a -57 P&L record. Hold TLS, CLSX put and GLD put on their stops and keep the settled cash for a 2.5x-volume Health Care close."
-    },
     {
      "date": "2026-11-13",
      "note": "Pass on the NBIG and NEBX breakdown puts: Broad market / other is on my avoid list with a -57 record, and NBIG's 6.48 stop is about 90% above price, so it isn't a real stop. Hold TLS, CLSX put and GLD put on their stops, and keep the $483 settled cash for a 2.5x-volume Health Care close through EW 1"
@@ -217,6 +211,10 @@
     {
      "date": "2026-11-17",
      "note": "Passed on CNTY again: a $0.25 stock down 60% in 20 days is a collapse, not an established-uptrend breakdown. Holding CLSX to its 2.98 underlying stop and DIS to its 116.69 stop. Watching EW, NFLX, and SE triggers from the game plan with cash kept settled."
+    },
+    {
+     "date": "2026-11-18",
+     "note": "No candidates today and no game-plan triggers have fired (IBN, EW, NFLX, SE all need a confirmed close on 2.5x+ volume). Holding CLSX put to its 2.98 underlying stop and keeping $662 settled cash for triggers."
     }
    ],
    "last_exits": {
@@ -1179,7 +1177,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Consumer Staples",
-     "last": 223.26
+     "last": 216.19
     },
     "pos-dc107bcf5c": {
      "kind": "stock",
@@ -1199,7 +1197,7 @@
       "pct_vs_sma5": -4.4
      },
      "sector": "Broad market / other",
-     "last": 81.885
+     "last": 80.68
     },
     "pos-87ffe95b10": {
      "kind": "stock",
@@ -1219,7 +1217,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 484.07
+     "last": 482.165
     }
    },
    "status": "active",
@@ -1230,10 +1228,6 @@
    "peak": 1029.08,
    "max_dd": 0.0417,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "No candidate clears the 1:1 floor at live prices (VRTX 0.25:1, MRNA 0.53:1, VEEV 0.21:1, GMAB 0.54:1, CCL 0.6:1). Hold HALO and ALC on their stops and keep the $757 settled cash."
-    },
     {
      "date": "2026-11-13",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (best is GMAB ~0.6:1, MRNA ~0.64:1). Hold HALO and ALC on their stops and keep the $757 settled cash for a washout that clears 1:1."
@@ -1389,6 +1383,10 @@
     {
      "date": "2026-11-17",
      "note": "No entries: every candidate fails the 1:1 floor (IQV 0.61, MRNA 0.60, VRTX 0.25, CCL 0.56, EMR 0.67). Hold SAP, HZN and MCO on default stops and keep settled cash for a washout that clears 1:1."
+    },
+    {
+     "date": "2026-11-18",
+     "note": "No new entries: every live candidate fails the 0.8:1 stop-to-target floor (AZN 0.37, ACN 0.48, MMM 0.43, HD 0.62, AMGN 0.46), SAP is already held with no adds, and no game-plan trigger has hit (EMR needs <=156.45). Hold SAP, HZN and MCO on their stops and keep settled cash."
     }
    ],
    "last_exits": {
@@ -2681,7 +2679,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 731.32
+     "last": 733.415
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2697,7 +2695,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 731.32
+     "last": 733.415
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2713,7 +2711,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 731.32
+     "last": 733.415
     }
    },
    "status": "active",
@@ -2728,9 +2726,27 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 914.69,
+   "cash": 417.06,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-db2013ff40": {
+     "kind": "stock",
+     "symbol": "TQQQ",
+     "qty": 9.6104,
+     "entry": 51.78,
+     "cost": 497.63,
+     "hold_days": 6,
+     "direction": "long",
+     "stop": 43.26,
+     "atr": 4.619,
+     "opened": "2026-11-18T09:38:37-05:00",
+     "thesis": "Dart landed on TQQQ",
+     "confidence": 0,
+     "signals": {},
+     "sector": "Technology",
+     "last": 52.495
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
@@ -2751,13 +2767,7 @@
     "PLTR": "2026-11-17"
    },
    "joined": "2026-10-13T19:21:59-04:00",
-   "unsettled": [
-    {
-     "amount": 71.65,
-     "settles": "2026-11-18",
-     "note": "sold PLTR"
-    }
-   ]
+   "unsettled": []
   },
   "blackswan": {
    "cash": -411.26,
@@ -2785,7 +2795,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.34,
+     "mark": 0.24,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2805,7 +2815,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.885,
+     "exit_half_spread": 3.355,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2830,7 +2840,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.07,
+     "mark": 0.11,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2850,7 +2860,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.99,
+     "exit_half_spread": 3.85,
      "peak_mark": 1.09
     }
    },
@@ -3412,18 +3422,20 @@
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [],
    "playbook": {
-    "date": "2026-11-17",
-    "made_at": "2026-11-17T15:37-05:00",
+    "date": "2026-11-18",
+    "made_at": "2026-11-18T09:38-05:00",
     "watch": [
-     "SOXS",
-     "RWM"
+     "AAPL",
+     "XLP",
+     "IWM",
+     "V"
     ],
-    "aggression": "stand_down",
-    "why": "With about 13 minutes before the 3:50 PM flat cutoff, there is no room for a new round trip to work. SPY is down on the day and all three VWAP bounces today hit stops, so staying flat is the disciplined call.",
-    "slices": 1,
+    "aggression": "defensive",
+    "why": "Most of the candidate list is trending down with SPY negative on the day, so I'm limiting trades to the few names in 1-minute uptrends (AAPL, XLP, IWM, V) at half size. Two slices keep exposure small, and the 0.5% target and 0.3% stop match the overnight plan's AAPL setup.",
+    "slices": 2,
     "target_pct": 0.5,
-    "stop_pct": 0.4,
-    "max_hold_min": 10
+    "stop_pct": 0.3,
+    "max_hold_min": 45
    },
    "scalp_day": {
     "date": "2026-11-17",

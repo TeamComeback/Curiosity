@@ -21781,5 +21781,36 @@
   ],
   "why": "Consumer Staples is +$0.79 over 5 trades with 3 wins, which is a small sample but the only clearly positive sector. Technology (-$1.39 over 52), Consumer Discretionary (-$0.72 over 11), and Communication Services (+$0.59 over 12 but 42% win rate and falling) are either losing or not paying enough, a",
   "expires": "2026-12-02"
+ },
+ {
+  "time": "2026-11-18T09:38:37-05:00",
+  "type": "trade_opened",
+  "agent": "monkey",
+  "position_id": "pos-db2013ff40",
+  "symbol": "TQQQ",
+  "underlying": "TQQQ",
+  "sector": "Technology",
+  "instrument": "stock",
+  "qty": 9.6104,
+  "price": 51.78,
+  "cost": 497.63,
+  "stop": 43.26,
+  "why": "Dart landed on TQQQ",
+  "confidence": 0,
+  "signals": {},
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-18T09:38:40-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "AAPL",
+   "XLP",
+   "IWM",
+   "V"
+  ],
+  "aggression": "defensive",
+  "why": "Most of the candidate list is trending down with SPY negative on the day, so I'm limiting trades to the few names in 1-minute uptrends (AAPL, XLP, IWM, V) at half size. Two slices keep exposure small, and the 0.5% target and 0.3% stop match the overnight plan's AAPL setup."
  }
 ]

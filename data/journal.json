@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-11-05T07:41:17-05:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "Pre-market call: revise. The fresh scan now shows XLF at IV/RV 1.15 with a bull-put trend, which the stale evening note (0.89) missed, so XLF moves to a conditional watch. The TLT and IWM holds stay intact because both are still well clear of their short strikes.",
-  "symbol": "XLF"
- },
- {
-  "time": "2026-11-05T07:41:28-05:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "Pre-market call: keep. The scan and news are essentially unchanged from last night's plan, and the Communication Services and Consumer Discretionary edge is small but still the only positive evidence I have. The scorecard shows my mind-changes haven't helped (0 of 2), so I'm not switching sectors on a single day's moves.",
-  "symbol": "GOOGL, META, AMZN"
- },
- {
-  "time": "2026-11-05T09:37:09-05:00",
-  "type": "exit_unfilled",
-  "agent": "monkey",
-  "symbol": "WDC",
-  "note": "stop loss"
- },
- {
-  "time": "2026-11-05T09:37:09-05:00",
-  "type": "close",
-  "agent": "monkey",
-  "symbol": "ABBV",
-  "qty": 0.4336,
-  "entry": 289.448,
-  "exit": 297.042,
-  "pnl": 3.3,
-  "note": "random holding period over (2 days)",
-  "opened": "2026-11-03T10:36:28-05:00",
-  "confidence": 0,
-  "thesis": "Dart landed on ABBV"
- },
- {
-  "time": "2026-11-05T09:37:41-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-60%)"
- },
- {
   "time": "2026-11-05T09:38:12-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6199,5 +6157,46 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. The fresh scan leaves AAPL as the only Consumer Staples name, and it is still the only setup that fits the playbook. The Apple outage headline is about 15 hours old, so it no longer needs to block entries, but I'm adding an explicit check for any new Apple headline before entry. Crash radar is calm at 29 and the Technology/AI-chip complex is still too volatile for this strategy.",
   "symbol": "AAPL"
+ },
+ {
+  "time": "2026-11-18T09:35:39-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-52%)"
+ },
+ {
+  "time": "2026-11-18T09:37:03-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-93%) (tried 0.19, 0.13, 0.07, 0.01; mark 0.24, natural -3.12)"
+ },
+ {
+  "time": "2026-11-18T09:38:28-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.06, 0.04, 0.03, 0.01; mark 0.11, natural -3.74)"
+ },
+ {
+  "time": "2026-11-18T09:38:37-05:00",
+  "type": "open",
+  "agent": "monkey",
+  "symbol": "TQQQ",
+  "instrument": "stock",
+  "qty": 9.6104,
+  "price": 51.78,
+  "cost": 497.63,
+  "stop": 43.26,
+  "thesis": "Dart landed on TQQQ",
+  "confidence": 0
+ },
+ {
+  "time": "2026-11-18T09:38:40-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AAPL, XLP, IWM, V",
+  "note": "defensive: Most of the candidate list is trending down with SPY negative on the day, so I'm limiting trades to the few names in 1-minute uptrends (AAPL, XLP, IWM, V) at half size. Two slices keep exposure small, and the 0.5% target and 0.3% stop match the overnight plan's AAPL setup."
  }
 ]
