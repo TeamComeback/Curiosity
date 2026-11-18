@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-05T09:38:12-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-05T09:38:44-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, META, GOOGL, SOXS",
-  "note": "stand_down: Nearly every candidate is red, trending down, and below VWAP, so long-only VWAP pullbacks lack an uptrend to work in. The overnight plan's premises (GOOGL +3.25%, META +1.45%, AMZN +6.15% gap) don't match current data, so I'm standing down and will reassess once a stock is trending up above VWAP on "
- },
- {
-  "time": "2026-11-05T10:07:11-05:00",
-  "type": "close",
-  "agent": "trend",
-  "symbol": "REGN",
-  "qty": 0.0542,
-  "entry": 924.44,
-  "exit": 936.432,
-  "pnl": 0.65,
-  "note": "trailing stop on underlying",
-  "opened": "2026-10-30T09:37:19-04:00",
-  "confidence": 3,
-  "thesis": "REGN cleared its 55-day high at 858.17 on 3.1x relative volume with roc20 +11.3%, and it sits 25% above its 200-day SMA; the 884.48 stop limits risk to about 4% of the position."
- },
- {
   "time": "2026-11-05T10:07:13-05:00",
   "type": "close",
   "agent": "monkey",
@@ -6198,5 +6170,26 @@
   "agent": "scalper",
   "symbol": "AAPL, XLP, IWM, V",
   "note": "defensive: Most of the candidate list is trending down with SPY negative on the day, so I'm limiting trades to the few names in 1-minute uptrends (AAPL, XLP, IWM, V) at half size. Two slices keep exposure small, and the 0.5% target and 0.3% stop match the overnight plan's AAPL setup."
+ },
+ {
+  "time": "2026-11-18T09:50:49-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "AAPL",
+  "note": "VWAP pullback bounce skipped: 0.76x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-18T09:50:49-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "XLP",
+  "note": "VWAP pullback bounce skipped: 0.44x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-18T09:52:49-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "IWM",
+  "note": "VWAP pullback bounce skipped: 0.97x volume < 1.5x"
  }
 ]
