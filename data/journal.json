@@ -1,39 +1,5 @@
 [
  {
-  "time": "2026-11-05T12:41:07-05:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "DJTU261218P00002000",
-  "instrument": "put",
-  "qty": 1,
-  "price": 0.85,
-  "cost": 107.0,
-  "stop": 3.03,
-  "thesis": "DJTU broke below its 55-day low at 2.29 on 13x relative volume and trades at 2.015, 87% below its 200-day SMA, so a put with the 3.03 underlying stop caps the risk.",
-  "confidence": 4
- },
- {
-  "time": "2026-11-05T12:41:07-05:00",
-  "type": "rule_block",
-  "agent": "trend",
-  "symbol": "GLXU",
-  "note": "no put affordable within $100.00"
- },
- {
-  "time": "2026-11-05T12:41:40-05:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "XLF",
-  "note": "credit not filled at 0.16 (mid 0.16, natural 0.07, floor 0.15)"
- },
- {
-  "time": "2026-11-05T12:41:49-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SOXS, META, GOOGL",
-  "note": "stand_down: Nearly every candidate is in a 1-minute downtrend below VWAP with SPY and QQQ red, and the AMZN bounce already stopped out, so this is not a clean tape. SOXS (up 15%, above its opening range) is the only trending name, but chasing an inverse ETF after a 15% move is too risky, so I'll stand aside and"
- },
- {
   "time": "2026-11-05T13:05:57-05:00",
   "type": "close",
   "agent": "trend",
@@ -6204,5 +6170,33 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, IWM, AMZN, AVGO",
   "note": "defensive: Crash radar is calm (31) and SPY is above its 200-day SMA, but its 20-day rate of change is -4.8% and the open SPY scalp is still live, so I'm keeping half size with the same 0.5% target and 0.3% stop. AMZN and AVGO are the names above their opening range on an up 1-minute trend, and IWM and XLP sho"
+ },
+ {
+  "time": "2026-11-18T12:39:35-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-52%)"
+ },
+ {
+  "time": "2026-11-18T12:40:58-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-93%) (tried 0.18, 0.12, 0.07, 0.01; mark 0.23, natural -3.05)"
+ },
+ {
+  "time": "2026-11-18T12:42:21-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-92%) (tried 0.29, 0.19, 0.10, 0.01; mark 0.34, natural -2.01)"
+ },
+ {
+  "time": "2026-11-18T12:42:38-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AMZN, IWM, XLP, QQQ, AAPL",
+  "note": "defensive: Crash radar is calm (37) but SPY is still falling on the 1-minute chart with a negative 20-day rate of change, so I'm keeping half size. I'm watching the names trending up above their opening range or VWAP (AMZN, IWM, XLP, QQQ) plus the AAPL overnight plan and SPY, with the same 0.5% target and 0.3%"
  }
 ]
