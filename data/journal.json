@@ -1,71 +1,5 @@
 [
  {
-  "time": "2026-11-05T16:41:18-05:00",
-  "type": "scorecard",
-  "agent": "meanrev",
-  "note": "Plan graded: 0 of 4 picks moved the planned way, avg -2.17%"
- },
- {
-  "time": "2026-11-05T16:41:32-05:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "After-close review: revise. The pre-market plan is stale: it assumed $321 of settled cash and four energy entries, but only $0.84 is settled and I hold nine positions. Settlement is T+1, so no new buys are possible until cash frees up. The main change is to manage the existing book, with SWKS as the only likely source of cash.",
-  "symbol": ""
- },
- {
-  "time": "2026-11-05T16:41:32-05:00",
-  "type": "scorecard",
-  "agent": "volsell",
-  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -2.77%"
- },
- {
-  "time": "2026-11-05T16:41:44-05:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "After-close review: revise. The pre-market plan is stale: the IWM 290/291 call was closed today, and the live IWM position is the 286/287 bear call opened after the close. The fresh scan also puts XLF IV/RV at 0.94, below the 0.95 trigger, and SPY is now 4.4% below its 50-day.",
-  "symbol": ""
- },
- {
-  "time": "2026-11-05T16:41:44-05:00",
-  "type": "scorecard",
-  "agent": "scalper",
-  "note": "Plan graded: 0 of 3 picks moved the planned way, avg -2.72%"
- },
- {
-  "time": "2026-11-05T16:42:00-05:00",
-  "type": "focus",
-  "agent": "scalper",
-  "note": "Leaning into Communication Services; avoiding Technology, Consumer Discretionary. Communication Services is still positive at +$1.54 over 6 trades (50%) after today's META loss, but the edge is shrinking and the sample is small. Consumer Discretionary fell to +$0.94 over 8 after the AMZN stop, and MSFT's tag there is misleading. Technology is 45 trades at 44% for -$0.72. Note tha"
- },
- {
-  "time": "2026-11-05T16:42:00-05:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "After-close review: revise. Both open-and-stopped trades today (AMZN -$0.88, META -$0.70) came from the VWAP-pullback setup, and stops are filling at about -0.34% against a -0.3% setting, which eats most of the +0.5% target edge. The sector stats are also weakening: Communication Services dropped from +$2.24 to +$1.54 and Consumer Discretionary from +$1.82 to +$0.94 after today's losses, and the broader tape is in an AI-led ",
-  "symbol": "META, GOOGL"
- },
- {
-  "time": "2026-11-05T20:10:36-05:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Evening check-in: revise. XLV and ALL both closed back below their 55-day breakout levels (187.98 and 270.62), so the failed-breakout rule I applied to AAPL now applies to them too. I'm also tightening the put trails to the prior breakdown levels, since the 3-ATR trail is loose on names that have already fallen this far.",
-  "symbol": "MCK, EW, ICE"
- },
- {
-  "time": "2026-11-05T20:10:52-05:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Evening check-in: revise. Still no buying power: $0.84 settled cash and no sales settling until T+1, so no entries are possible. The VIX spike on the AI tech rout means my open tech longs (TWLO, SHOP, SWKS, ZBRA, DT) now carry sector-wide risk, so I'm tightening the exit rule and turning off Technology for new entries.",
-  "symbol": ""
- },
- {
-  "time": "2026-11-05T20:11:06-05:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "Evening check-in: revise. The plan's no-entry stance still holds, but the scan changed the sector picture: QQQ shows a 1.12 IV/RV bear call setup, but Technology is on my avoid list and the AI rout with a 39% VIX spike adds squeeze and gap-up risk. EEM's 1.14 IV/RV is offset by the thin fill history I already flagged. Recording the sector focus and the IWM entry discrepancy also required a revision.",
-  "symbol": ""
- },
- {
   "time": "2026-11-05T20:11:17-05:00",
   "type": "plan",
   "agent": "scalper",
@@ -6181,5 +6115,67 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-84%) (tried 0.62, 0.41, 0.21, 0.01; mark 0.67, natural -0.34)"
+ },
+ {
+  "time": "2026-11-18T16:40:18-05:00",
+  "type": "recap",
+  "note": "Quiet day with the crash radar calm at 38. Rapid Fire was the only racer to bank a profit (+$1.74), while Snapback's SAP stop-out drove the book to -$6.84 realized across 5 closed trades (3 wins, 2 losses)."
+ },
+ {
+  "time": "2026-11-18T16:40:18-05:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 2 of 4 picks moved the planned way, avg +0.26%"
+ },
+ {
+  "time": "2026-11-18T16:40:52-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Communication Services; avoiding Consumer Staples, Technology, Energy, Consumer Discretionary, Broad market / other. Communication Services has five live setups in today's scan, but my record there is only one trade (-3.12), so the focus stays small. Health Care is dropped from the lean-in list after its negative record (-2.49)."
+ },
+ {
+  "time": "2026-11-18T16:40:52-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: revise. TGT closed back below its 167.45 breakout, so the trend setup failed and I'm cutting it; the scan now shows a fresh DIS breakout and updated IBN and SE levels.",
+  "symbol": "IBN, DIS, EW, NFLX"
+ },
+ {
+  "time": "2026-11-18T16:40:52-05:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 3 of 5 picks moved the planned way, avg +0.33%"
+ },
+ {
+  "time": "2026-11-18T16:41:23-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "note": "Leaning into Financials; avoiding Technology. Financials is 2-for-2 with +6.78 on its only recorded trade, and Technology is 1-for-3 for -14.20. Health Care and Consumer Staples are too thin or negative to lean in."
+ },
+ {
+  "time": "2026-11-18T16:41:23-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: revise. Fresh scan shows several names now clear the 0.8:1 floor at the 5-day SMA target, and Financials is the only sector with a clean record. Prior triggers never filled.",
+  "symbol": "SPGI, SHEL, SCHD, XLV"
+ },
+ {
+  "time": "2026-11-18T16:41:23-05:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 1 of 1 picks moved the planned way, avg +0.11%"
+ },
+ {
+  "time": "2026-11-18T16:41:35-05:00",
+  "type": "focus",
+  "agent": "scalper",
+  "note": "Leaning into Industrials, Consumer Staples; avoiding Technology, Consumer Discretionary, Communication Services. Industrials is +$1.90 over 10 trades with a 50% win rate and the strongest sector result, and today's IWM win supports it. Consumer Staples is +$1.03 over 7 trades at 57% win rate, though today's only staples entry (AAPL) lost. Technology (-$1.35 over 53), Consumer Discretionary (-$0.72 over 11), an"
+ },
+ {
+  "time": "2026-11-18T16:41:35-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's trades were mildly positive (about +$1.74 net on the four closed round trips), with IWM the clear winner at 3.55x volume. Every entry was at or above 1.5x relative volume, so the filter looks enforced now. Industrials has the best sector P&L in my results and today's scan has only IWM as a viable name, so Industrials replaces Consumer Staples as the lead lean-in. AAPL's stock-specific news",
+  "symbol": "IWM, AAPL"
  }
 ]

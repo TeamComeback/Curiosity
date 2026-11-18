@@ -22210,5 +22210,171 @@
   ],
   "aggression": "defensive",
   "why": "Settled cash is about $0.07 today, so no entries are possible before the close and this sets up tomorrow only. AMD and AMZN are above their opening ranges with rising 1-minute trends, and AVGO is a reclaim watch, but SPY's negative 20-day rate of change (-4.8%) and below-200-day trend argue for half"
+ },
+ {
+  "time": "2026-11-18T16:40:52-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-11-19",
+  "decision": "revise",
+  "why": "TGT closed back below its 167.45 breakout, so the trend setup failed and I'm cutting it; the scan now shows a fresh DIS breakout and updated IBN and SE levels.",
+  "summary": "Exit TGT at open unless it reclaims 168.36. Hold CLSX put to its underlying stop. Buy IBN, DIS, or EW stock only on a 2.5x-volume close above its level. Buy SE or NFLX puts only on a 2.5x-volume close below the level with ask at or below $1.50.",
+  "watchlist": [
+   {
+    "symbol": "IBN",
+    "setup": "Communication Services near-breakout, 0.5% below 35.06, ROC20 +18%",
+    "trigger": "Close above 35.06 on at least 2.5x relative volume; stop 2 ATR (about 1.40) below entry",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "DIS",
+    "setup": "Communication Services near-breakout, 0.3% below 122.71, ROC20 +9.4%",
+    "trigger": "Close above 122.71 on at least 2.5x relative volume; stop 2 ATR (about 5.5) below entry",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout, 2.6% below 107.94, ROC20 +19%",
+    "trigger": "Close above 107.94 on at least 2.5x relative volume; stop 2 ATR (about 5.7) below entry",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services breakdown, 0.7% above 59.41, ROC20 -8%",
+    "trigger": "Close below 59.41 on at least 2.5x volume and a 30-60 DTE put ask at or below $1.50; otherwise skip",
+    "instrument": "put",
+    "conviction": 2
+   },
+   {
+    "symbol": "SE",
+    "setup": "Communication Services broke down today through 69.11, ROC20 -12%",
+    "trigger": "Close below 69.11 on at least 2.5x volume and a 30-60 DTE put ask at or below $1.50; otherwise skip",
+    "instrument": "put",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-18T16:40:52-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Communication Services"
+  ],
+  "avoid": [
+   "Consumer Staples",
+   "Technology",
+   "Energy",
+   "Consumer Discretionary",
+   "Broad market / other"
+  ],
+  "why": "Communication Services has five live setups in today's scan, but my record there is only one trade (-3.12), so the focus stays small. Health Care is dropped from the lean-in list after its negative record (-2.49).",
+  "expires": "2026-12-02"
+ },
+ {
+  "time": "2026-11-18T16:41:23-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-11-19",
+  "decision": "revise",
+  "why": "Fresh scan shows several names now clear the 0.8:1 floor at the 5-day SMA target, and Financials is the only sector with a clean record. Prior triggers never filled.",
+  "summary": "Hold HZN, MCO, AMGN, ACN and NVS on their stops. Buy SPGI, SHEL, SCHD, XLV or MRK only at or below the listed trigger, with starter size.",
+  "watchlist": [
+   {
+    "symbol": "SPGI",
+    "setup": "RSI(2) 4.4 washout, 4.6% above SMA200, about 1:1 to SMA5",
+    "trigger": "Buy at or below 446.31 (stop 429.93, target 462.48)",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "SHEL",
+    "setup": "RSI(2) 3.5 washout, about 1:1 to SMA5",
+    "trigger": "Buy at or below 94.34 (stop 91.28, target 97.39)",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "SCHD",
+    "setup": "RSI(2) 3.7 washout, about 1.2:1 to SMA5",
+    "trigger": "Buy at or below 34.69 (stop 33.97, target 35.57)",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "XLV",
+    "setup": "RSI(2) 3.0 washout, about 0.94:1 to SMA5",
+    "trigger": "Buy at or below 181.19 (stop 175.82, target 186.22)",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "MRK",
+    "setup": "RSI(2) 1.7 washout, about 0.93:1 to SMA5",
+    "trigger": "Buy at or below 137.79 (stop 131.01, target 144.08)",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-18T16:41:23-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "lean_in": [
+   "Financials"
+  ],
+  "avoid": [
+   "Technology"
+  ],
+  "why": "Financials is 2-for-2 with +6.78 on its only recorded trade, and Technology is 1-for-3 for -14.20. Health Care and Consumer Staples are too thin or negative to lean in.",
+  "expires": "2026-12-02"
+ },
+ {
+  "time": "2026-11-18T16:41:35-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-11-19",
+  "decision": "revise",
+  "why": "Today's trades were mildly positive (about +$1.74 net on the four closed round trips), with IWM the clear winner at 3.55x volume. Every entry was at or above 1.5x relative volume, so the filter looks enforced now. Industrials has the best sector P&L in my results and today's scan has only IWM as a viable name, so Industrials replaces Consumer Staples as the lead lean-in. AAPL's stock-specific news",
+  "summary": "Watch IWM for a VWAP pullback that holds above VWAP on at least 1.5x relative volume, and take one slice of up to $250 with a +0.5% target, -0.3% stop, and 45-minute limit. AAPL stays a low-conviction backup at $50 under the same conditions. XLP is out of the scan and not tradable. Stay flat by the close and stand aside if no trigger fires.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Industrials VWAP pullback bounce. Today's bounce hit target at 3.55x volume with +0.59% realized. ATR is about 1.9% and the stock is up 0.44% on the day, with no company-specific headlines in the scan.",
+    "trigger": "Price pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, with no broad-market selloff underway. Target +0.5%, stop -0.3% (expect about -0.35% fills), 45-minute limit, flat by close.",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "AAPL",
+    "setup": "Consumer Staples VWAP pullback bounce, low conviction. Today's trade stopped out on time at -0.18%. Korean regulator order and outage headlines add noise.",
+    "trigger": "Price pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, with SPY above its open and no new Apple outage or supply-chain headline in the last hour. Target +0.5%, stop -0.3%, 45-minute limit.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-11-18T16:41:35-05:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Industrials",
+   "Consumer Staples"
+  ],
+  "avoid": [
+   "Technology",
+   "Consumer Discretionary",
+   "Communication Services"
+  ],
+  "why": "Industrials is +$1.90 over 10 trades with a 50% win rate and the strongest sector result, and today's IWM win supports it. Consumer Staples is +$1.03 over 7 trades at 57% win rate, though today's only staples entry (AAPL) lost. Technology (-$1.35 over 53), Consumer Discretionary (-$0.72 over 11), an",
+  "expires": "2026-12-02"
  }
 ]
