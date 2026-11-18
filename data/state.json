@@ -13,12 +13,13 @@
   "counts": {
    "monkey": 2,
    "meanrev": 1,
-   "scalper": 1
+   "scalper": 2,
+   "trend": 1
   }
  },
  "agents": {
   "trend": {
-   "cash": 662.4,
+   "cash": 583.52,
    "reserved": 0.0,
    "positions": {
     "pos-3dac13e0ef": {
@@ -28,7 +29,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.41,
+     "mark": 0.43,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -47,7 +48,28 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.415
+     "exit_half_spread": 0.435
+    },
+    "pos-6e673a5286": {
+     "kind": "stock",
+     "symbol": "TGT",
+     "qty": 0.4685,
+     "entry": 168.362,
+     "cost": 78.88,
+     "direction": "long",
+     "stop": 158.63,
+     "atr": 5.192,
+     "opened": "2026-11-18T12:08:20-05:00",
+     "thesis": "TGT cleared its 40-day breakout at 167.45 on 3.3x relative volume with ROC20 +3.5% and 23% above its 200-day SMA; the 158.63 stop (2 ATR) risks about $10 on one share, roughly 1.5% of equity, so I'm taking this clean trend setup despite my Consumer Staples caution.",
+     "confidence": 3,
+     "signals": {
+      "rel_volume": 3.34,
+      "roc20_pct": 3.5,
+      "pct_vs_sma50": 8.2,
+      "pct_vs_sma200": 23.1
+     },
+     "sector": "Consumer Staples",
+     "last": 169.01
     }
    },
    "status": "active",
@@ -58,10 +80,6 @@
    "peak": 1340.54,
    "max_dd": 0.4753,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "No trade. The three candidates are Broad market / other put breakdowns, a sector with a -57 record, and their stops sit 25-90% above price. Hold TLS, the CLSX put and the GLD put on their enforced stops, and keep the $483.54 settled cash for a 2.5x-volume close through a Health Care trigger (EW 106."
-    },
     {
      "date": "2026-11-13",
      "note": "No candidates today and no Health Care trigger has fired on 2.5x volume. Hold the CLSX and GLD puts on their enforced stops and keep the settled cash for a confirmed Health Care breakout."
@@ -217,6 +235,10 @@
     {
      "date": "2026-11-18",
      "note": "Passed on TGT (Consumer Staples, on my avoid list; the only clean long breakout today). Still waiting for an IBN, EW, NFLX, or SE trigger with 2.5x+ volume. Crash radar is 38, still calm, so cash stays settled."
+    },
+    {
+     "date": "2026-11-18",
+     "note": "Overriding my own Consumer Staples avoid list for a clean 3.3x-volume breakout with a small one-share risk; the avoid list rests on a single losing trade, so I'll review it against this result before the 12/02 expiry."
     }
    ],
    "last_exits": {
@@ -1179,7 +1201,7 @@
       "pct_vs_sma5": -4.4
      },
      "sector": "Broad market / other",
-     "last": 81.5
+     "last": 81.85
     },
     "pos-87ffe95b10": {
      "kind": "stock",
@@ -1199,7 +1221,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 477.63
+     "last": 480.83
     },
     "pos-caba0983a7": {
      "kind": "stock",
@@ -1219,7 +1241,7 @@
       "pct_vs_sma5": -2.9
      },
      "sector": "Health Care",
-     "last": 446.61
+     "last": 449.68
     }
    },
    "status": "active",
@@ -1230,10 +1252,6 @@
    "peak": 1029.08,
    "max_dd": 0.0423,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "No candidate clears my 1:1 stop-to-target floor at live prices (PFE ~0.35:1, VRTX ~0.27:1, MRNA ~0.57:1, GMAB ~0.54:1, VEEV ~0.28:1, HALO ~0.23:1 on the scan target). Holding HALO and ALC on their stops and keeping $757 settled cash for a washout that clears 1:1."
-    },
     {
      "date": "2026-11-13",
      "note": "No candidate clears my 1:1 stop-to-target floor at live prices (best are MRNA ~0.63:1 and GMAB ~0.56:1). Hold HALO and ALC on their stops and keep the $757 settled cash for a washout that clears 1:1."
@@ -1389,6 +1407,10 @@
     {
      "date": "2026-11-18",
      "note": "Only AMGN clears the 0.8:1 floor. SAP is skipped because it was stopped out today, ACN (0.76), TEAM (0.72), NVS (0.66) and MRNA (0.44) fall short. Keep the remaining settled cash for a game-plan trigger at 1:1 or better."
+    },
+    {
+     "date": "2026-11-18",
+     "note": "No entries at 12:08: every live candidate misses the 0.8:1 floor (SAP 1.6:1 is a same-day re-entry after today's stop-out, so skipped; ACN 0.76, TEAM 0.72, NVS 0.58, AMGN 0.66 at candidate price, and we already hold AMGN). No game-plan trigger has hit. Hold HZN, MCO and AMGN on stops and keep settle"
     }
    ],
    "last_exits": {
@@ -2688,7 +2710,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 728.04
+     "last": 730.3
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2704,7 +2726,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 728.04
+     "last": 730.3
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2720,7 +2742,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 728.04
+     "last": 730.3
     }
    },
    "status": "active",
@@ -2753,7 +2775,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 51.26
+     "last": 51.94
     },
     "pos-83bf9288a4": {
      "kind": "stock",
@@ -2770,7 +2792,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 114.04
+     "last": 114.5
     }
    },
    "status": "active",
@@ -2821,7 +2843,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.29,
+     "mark": 0.2,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2841,7 +2863,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 3.22,
+     "exit_half_spread": 3.28,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2866,7 +2888,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.36,
+     "mark": 0.28,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2886,7 +2908,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 2.65,
+     "exit_half_spread": 2.365,
      "peak_mark": 1.09
     }
    },
@@ -3396,7 +3418,7 @@
    ]
   },
   "scalper": {
-   "cash": 749.67,
+   "cash": 499.8,
    "reserved": 0.0,
    "positions": {
     "pos-3798677fd2": {
@@ -3418,8 +3440,30 @@
      "target_pct": 0.5,
      "stop_pct": 0.3,
      "max_hold_min": 45,
-     "last": 91.535,
-     "peak_gain": 0.22985989492119163
+     "last": 91.545,
+     "peak_gain": 0.2845884413310129
+    },
+    "pos-5c6c9d22ae": {
+     "kind": "stock",
+     "symbol": "IWM",
+     "qty": 0.923,
+     "entry": 270.718,
+     "cost": 249.87,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 269.9,
+     "atr": 0,
+     "opened": "2026-11-18T12:02:48-05:00",
+     "thesis": "VWAP pullback bounce on IWM: 3.55x volume, +0.29% vs VWAP; target +0.5%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Industrials",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.5,
+     "stop_pct": 0.3,
+     "max_hold_min": 45,
+     "last": 270.95,
+     "peak_gain": 0.08569803263911435
     }
    },
    "status": "active",
@@ -3472,16 +3516,17 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-18",
-    "made_at": "2026-11-18T11:38-05:00",
+    "made_at": "2026-11-18T12:08-05:00",
     "watch": [
+     "QQQ",
      "AMZN",
      "IWM",
-     "AAPL",
+     "XLP",
      "SPY",
-     "XLP"
+     "AAPL"
     ],
     "aggression": "defensive",
-    "why": "SPY is still weak (down 0.57% on the day, 20-day rate of change -4.8%), so I'm keeping size at half. AMZN and IWM are the only names above their opening ranges with an up 1-minute trend, and XLP has a live VWAP-bounce setup, though its tight range makes the 0.5% target a stretch. AAPL stays on watch",
+    "why": "SPY is still weak (down 0.41% on the day, 20-day rate of change -4.8%), so I'm keeping size at half. QQQ has a live VWAP-bounce setup, AMZN is the only large name above its opening range with an up 1-minute trend, and the open IWM and XLP positions stay managed to their existing exits.",
     "slices": 2,
     "target_pct": 0.5,
     "stop_pct": 0.3,

@@ -21942,5 +21942,61 @@
   "confidence": 3,
   "signals": {},
   "from_plan": false
+ },
+ {
+  "time": "2026-11-18T12:02:48-05:00",
+  "type": "trade_opened",
+  "agent": "scalper",
+  "position_id": "pos-5c6c9d22ae",
+  "symbol": "IWM",
+  "underlying": "IWM",
+  "sector": "Industrials",
+  "instrument": "stock",
+  "qty": 0.923,
+  "price": 270.718,
+  "cost": 249.87,
+  "stop": 269.9,
+  "why": "VWAP pullback bounce on IWM: 3.55x volume, +0.29% vs VWAP; target +0.5%, stop -0.3%",
+  "confidence": 3,
+  "signals": {},
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-18T12:08:20-05:00",
+  "type": "trade_opened",
+  "agent": "trend",
+  "position_id": "pos-6e673a5286",
+  "symbol": "TGT",
+  "underlying": "TGT",
+  "sector": "Consumer Staples",
+  "instrument": "stock",
+  "qty": 0.4685,
+  "price": 168.362,
+  "cost": 78.88,
+  "stop": 158.63,
+  "why": "TGT cleared its 40-day breakout at 167.45 on 3.3x relative volume with ROC20 +3.5% and 23% above its 200-day SMA; the 158.63 stop (2 ATR) risks about $10 on one share, roughly 1.5% of equity, so I'm taking this clean trend setup despite my Consumer Staples caution.",
+  "confidence": 3,
+  "signals": {
+   "rel_volume": 3.34,
+   "roc20_pct": 3.5,
+   "pct_vs_sma50": 8.2,
+   "pct_vs_sma200": 23.1
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-18T12:08:29-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "QQQ",
+   "AMZN",
+   "IWM",
+   "XLP",
+   "SPY",
+   "AAPL"
+  ],
+  "aggression": "defensive",
+  "why": "SPY is still weak (down 0.41% on the day, 20-day rate of change -4.8%), so I'm keeping size at half. QQQ has a live VWAP-bounce setup, AMZN is the only large name above its opening range with an up 1-minute trend, and the open IWM and XLP positions stay managed to their existing exits."
  }
 ]

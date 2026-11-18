@@ -1,60 +1,5 @@
 [
  {
-  "time": "2026-11-05T12:08:03-05:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "XLF",
-  "note": "credit not filled at 0.17, 0.15 (mid 0.17, natural 0.12, floor 0.15)"
- },
- {
-  "time": "2026-11-05T12:08:13-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AMZN, GOOGL, GOOG, META, MSFT",
-  "note": "defensive: The tape is still broadly red (SPY -3.3%, QQQ -4.1%), so I'm keeping half-size VWAP bounces only. AMZN and GOOGL/GOOG are holding at or above VWAP on an up 1-minute trend, META is above VWAP, and LQD is the only name above its opening range, so these are the few setups with some structure."
- },
- {
-  "time": "2026-11-05T12:10:16-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "GOOG",
-  "note": "VWAP pullback bounce skipped: 1.06x volume < 1.5x"
- },
- {
-  "time": "2026-11-05T12:28:32-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "note": "VWAP pullback bounce skipped: 1.29x volume < 1.5x"
- },
- {
-  "time": "2026-11-05T12:28:32-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "AMZN",
-  "instrument": "stock",
-  "qty": 0.9587,
-  "price": 261.988,
-  "cost": 251.17,
-  "stop": 261.15,
-  "thesis": "VWAP pullback bounce on AMZN: 1.89x volume, +0.46% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-11-05T12:36:20-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-45%)"
- },
- {
-  "time": "2026-11-05T12:36:51-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
   "time": "2026-11-05T12:36:52-05:00",
   "type": "close",
   "agent": "scalper",
@@ -6197,5 +6142,66 @@
   "stop": 91.09,
   "thesis": "VWAP pullback bounce on XLP: 1.66x volume, +0.16% vs VWAP; target +0.5%, stop -0.3%",
   "confidence": 3
+ },
+ {
+  "time": "2026-11-18T12:02:48-05:00",
+  "type": "open",
+  "agent": "scalper",
+  "symbol": "IWM",
+  "instrument": "stock",
+  "qty": 0.923,
+  "price": 270.718,
+  "cost": 249.87,
+  "stop": 269.9,
+  "thesis": "VWAP pullback bounce on IWM: 3.55x volume, +0.29% vs VWAP; target +0.5%, stop -0.3%",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-18T12:05:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-52%)"
+ },
+ {
+  "time": "2026-11-18T12:06:51-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-94%) (tried 0.15, 0.10, 0.06, 0.01; mark 0.20, natural -3.08)"
+ },
+ {
+  "time": "2026-11-18T12:08:12-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-93%) (tried 0.23, 0.16, 0.08, 0.01; mark 0.28, natural -2.09)"
+ },
+ {
+  "time": "2026-11-18T12:08:20-05:00",
+  "type": "sizing",
+  "agent": "trend",
+  "symbol": "TGT",
+  "note": "$175.00 -> $79.19: capped at 20% of the firm; half size while win rate 4/25 is under 30%"
+ },
+ {
+  "time": "2026-11-18T12:08:20-05:00",
+  "type": "open",
+  "agent": "trend",
+  "symbol": "TGT",
+  "instrument": "stock",
+  "qty": 0.4685,
+  "price": 168.362,
+  "cost": 78.88,
+  "stop": 158.63,
+  "thesis": "TGT cleared its 40-day breakout at 167.45 on 3.3x relative volume with ROC20 +3.5% and 23% above its 200-day SMA; the 158.63 stop (2 ATR) risks about $10 on one share, roughly 1.5% of equity, so I'm taking this clean trend setup despite my Consumer Staples caution.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-18T12:08:29-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "QQQ, AMZN, IWM, XLP, SPY",
+  "note": "defensive: SPY is still weak (down 0.41% on the day, 20-day rate of change -4.8%), so I'm keeping size at half. QQQ has a live VWAP-bounce setup, AMZN is the only large name above its opening range with an up 1-minute trend, and the open IWM and XLP positions stay managed to their existing exits."
  }
 ]
