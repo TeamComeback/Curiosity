@@ -21888,5 +21888,41 @@
   ],
   "aggression": "defensive",
   "why": "SPY is still negative with a weak 20-day trend, so I'm keeping size at half and sticking with the names that are actually above their opening ranges (AMZN, AVGO) plus AAPL on its overnight VWAP-bounce plan. I'm dropping XLP and LQD because their ranges are too tight (about 0.2-1%) to reliably reach "
+ },
+ {
+  "time": "2026-11-18T11:38:27-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-caba0983a7",
+  "symbol": "AMGN",
+  "underlying": "AMGN",
+  "sector": "Health Care",
+  "instrument": "stock",
+  "qty": 0.2238,
+  "price": 446.93,
+  "cost": 100.02,
+  "stop": 430.25,
+  "why": "AMGN RSI(2) 1.1 washout 16.9% above its 200-day in a calm regime (crash radar 38); live reward-to-risk is 0.80:1 (446.70 to 459.90 target vs 430.25 stop), exactly at my 0.8:1 floor, so I'm taking a small starter.",
+  "confidence": 2,
+  "signals": {
+   "rsi2": 1.1,
+   "pct_vs_sma200": 16.9,
+   "pct_vs_sma5": -2.9
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-18T11:38:31-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "AMZN",
+   "IWM",
+   "AAPL",
+   "SPY",
+   "XLP"
+  ],
+  "aggression": "defensive",
+  "why": "SPY is still weak (down 0.57% on the day, 20-day rate of change -4.8%), so I'm keeping size at half. AMZN and IWM are the only names above their opening ranges with an up 1-minute trend, and XLP has a live VWAP-bounce setup, though its tight range makes the 0.5% target a stretch. AAPL stays on watch"
  }
 ]

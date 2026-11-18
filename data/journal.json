@@ -1,40 +1,5 @@
 [
  {
-  "time": "2026-11-05T11:37:48-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, MSFT, TSM, LQD",
-  "note": "defensive: The tape is broadly weak (SPY -2.6%, QQQ -3.2%, most megacaps red), so I'm staying defensive with half-size VWAP bounces only. I'm keeping the most liquid names that are holding near VWAP and trending up, and dropping the overnight GOOGL/META/AMZN premises, which the tape no longer supports."
- },
- {
-  "time": "2026-11-05T11:41:53-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "LQD",
-  "note": "VWAP pullback bounce skipped: 0.18x volume < 1.5x"
- },
- {
-  "time": "2026-11-05T12:06:29-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "PLD",
-  "note": "spread stop (-43%)"
- },
- {
-  "time": "2026-11-05T12:07:00-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%)"
- },
- {
-  "time": "2026-11-05T12:07:08-05:00",
-  "type": "rule_block",
-  "agent": "trend",
-  "symbol": "KORU",
-  "note": "no put affordable within $120.00"
- },
- {
   "time": "2026-11-05T12:07:17-05:00",
   "type": "open",
   "agent": "meanrev",
@@ -6191,5 +6156,46 @@
   "agent": "scalper",
   "symbol": "AMZN",
   "note": "VWAP pullback bounce skipped: 0.75x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-18T11:35:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-18T11:36:51-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-91%) (tried 0.24, 0.16, 0.09, 0.01; mark 0.29, natural -2.93)"
+ },
+ {
+  "time": "2026-11-18T11:38:13-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-91%) (tried 0.31, 0.21, 0.11, 0.01; mark 0.36, natural -2.29)"
+ },
+ {
+  "time": "2026-11-18T11:38:27-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "AMGN",
+  "instrument": "stock",
+  "qty": 0.2238,
+  "price": 446.93,
+  "cost": 100.02,
+  "stop": 430.25,
+  "thesis": "AMGN RSI(2) 1.1 washout 16.9% above its 200-day in a calm regime (crash radar 38); live reward-to-risk is 0.80:1 (446.70 to 459.90 target vs 430.25 stop), exactly at my 0.8:1 floor, so I'm taking a small starter.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-11-18T11:38:31-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "AMZN, IWM, AAPL, SPY, XLP",
+  "note": "defensive: SPY is still weak (down 0.57% on the day, 20-day rate of change -4.8%), so I'm keeping size at half. AMZN and IWM are the only names above their opening ranges with an up 1-minute trend, and XLP has a live VWAP-bounce setup, though its tight range makes the 0.5% target a stretch. AAPL stays on watch"
  }
 ]
