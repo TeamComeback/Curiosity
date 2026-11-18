@@ -1,32 +1,5 @@
 [
  {
-  "time": "2026-11-05T12:36:52-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "AMZN",
-  "qty": 0.9587,
-  "entry": 261.988,
-  "exit": 261.074,
-  "pnl": -0.88,
-  "note": "stop (-0.34%)",
-  "opened": "2026-11-05T12:28:32-05:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on AMZN: 1.89x volume, +0.46% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-11-05T12:37:03-05:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "instrument": "put",
-  "qty": 1,
-  "price": 0.9,
-  "cost": 129.5,
-  "stop": 3.63,
-  "thesis": "CLSX closed below its 55-day low at 2.98 on 3.2x relative volume, trading at 2.01 and 87% below its 200-day SMA, so the breakdown is confirmed; the 3.63 underlying stop sits above the breakdown level and caps the premium at risk.",
-  "confidence": 3
- },
- {
   "time": "2026-11-05T12:37:13-05:00",
   "type": "open",
   "agent": "meanrev",
@@ -6203,5 +6176,25 @@
   "agent": "scalper",
   "symbol": "QQQ, AMZN, IWM, XLP, SPY",
   "note": "defensive: SPY is still weak (down 0.41% on the day, 20-day rate of change -4.8%), so I'm keeping size at half. QQQ has a live VWAP-bounce setup, AMZN is the only large name above its opening range with an up 1-minute trend, and the open IWM and XLP positions stay managed to their existing exits."
+ },
+ {
+  "time": "2026-11-18T12:18:35-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "QQQ",
+  "note": "VWAP pullback bounce skipped: 0.37x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-18T12:18:36-05:00",
+  "type": "open",
+  "agent": "scalper",
+  "symbol": "SPY",
+  "instrument": "stock",
+  "qty": 0.3418,
+  "price": 730.972,
+  "cost": 249.85,
+  "stop": 728.77,
+  "thesis": "VWAP pullback bounce on SPY: 1.59x volume, +0.06% vs VWAP; target +0.5%, stop -0.3%",
+  "confidence": 3
  }
 ]
