@@ -12,7 +12,7 @@
   "date": "2026-11-18",
   "counts": {
    "monkey": 2,
-   "meanrev": 1,
+   "meanrev": 2,
    "scalper": 3,
    "trend": 1
   }
@@ -29,7 +29,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.43,
+     "mark": 0.41,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -48,7 +48,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.435
+     "exit_half_spread": 0.415
     },
     "pos-6e673a5286": {
      "kind": "stock",
@@ -69,8 +69,8 @@
       "pct_vs_sma200": 23.1
      },
      "sector": "Consumer Staples",
-     "last": 170.67,
-     "high_water": 170.49
+     "last": 170.89,
+     "high_water": 170.89
     }
    },
    "status": "active",
@@ -81,10 +81,6 @@
    "peak": 1340.54,
    "max_dd": 0.4753,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "No candidates and no Health Care trigger on 2.5x volume. TLS already stopped out today, so the game plan's TLS hold is moot. Holding the CLSX and GLD puts on their enforced stops and keeping settled cash for a confirmed Health Care breakout."
-    },
     {
      "date": "2026-11-13",
      "note": "Pass on NBIG: Broad market / other is on my avoid list, and its 6.51 stop sits about 89% above price, so it isn't a usable risk stop. Hold the CLSX and GLD puts on their enforced stops and keep settled cash for a confirmed Health Care breakout on at least 2.5x volume."
@@ -240,6 +236,10 @@
     {
      "date": "2026-11-18",
      "note": "No new entries: all short candidates are in avoid-listed sectors or are sub-$0.30 collapses, and the game-plan triggers (IBN, EW, NFLX, SE) haven't fired. Keep TGT to its 158.63 stop and CLSX to its 2.98 underlying stop, and hold settled cash for triggers."
+    },
+    {
+     "date": "2026-11-18",
+     "note": "No entries: scan candidates are avoid-listed sectors (Technology, Consumer Discretionary, Broad market) or sub-$0.30 collapses, and no game-plan trigger has fired. Hold TGT to its 158.63 stop and CLSX to its 2.98 underlying stop; keep cash settled for IBN/EW/NFLX/SE triggers."
     }
    ],
    "last_exits": {
@@ -1181,7 +1181,7 @@
    ]
   },
   "meanrev": {
-   "cash": 569.28,
+   "cash": 469.42,
    "reserved": 0.0,
    "positions": {
     "pos-dc107bcf5c": {
@@ -1202,7 +1202,7 @@
       "pct_vs_sma5": -4.4
      },
      "sector": "Broad market / other",
-     "last": 82.065
+     "last": 81.855
     },
     "pos-87ffe95b10": {
      "kind": "stock",
@@ -1222,7 +1222,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 480.0
+     "last": 480.61
     },
     "pos-caba0983a7": {
      "kind": "stock",
@@ -1242,7 +1242,27 @@
       "pct_vs_sma5": -2.9
      },
      "sector": "Health Care",
-     "last": 447.14
+     "last": 446.85
+    },
+    "pos-c4618673be": {
+     "kind": "stock",
+     "symbol": "ACN",
+     "qty": 0.4325,
+     "entry": 230.9,
+     "cost": 99.86,
+     "direction": "long",
+     "stop": 215.73,
+     "atr": 10.313,
+     "opened": "2026-11-18T13:08:32-05:00",
+     "thesis": "ACN RSI(2) 1.0 washout 21.6% above its 200-day in a calm regime (crash radar 37); live reward-to-risk is 0.81:1 (231.20 to 243.73 target vs 215.73 stop), just clearing my 0.8:1 floor, so I'm taking a small starter.",
+     "confidence": 2,
+     "signals": {
+      "rsi2": 1.0,
+      "pct_vs_sma200": 21.6,
+      "pct_vs_sma5": -5.1
+     },
+     "sector": "Consumer Staples",
+     "last": 231.2
     }
    },
    "status": "active",
@@ -1253,10 +1273,6 @@
    "peak": 1029.08,
    "max_dd": 0.0423,
    "notes": [
-    {
-     "date": "2026-11-13",
-     "note": "No candidate clears the 1:1 stop-to-target floor at live prices (best are GMAB ~0.56:1 and MRNA ~0.63:1). Holding HALO on its 96.66 stop and keeping $757 settled cash for a washout that clears 1:1."
-    },
     {
      "date": "2026-11-13",
      "note": "No candidate clears the 1:1 stop-to-target floor at live prices (HALO ~0.2:1, MRNA ~0.6:1, VRTX ~0.2:1, GMAB ~0.5:1). Hold HALO and ALC on their stops and keep $757 settled cash for a washout that clears 1:1."
@@ -1412,6 +1428,10 @@
     {
      "date": "2026-11-18",
      "note": "12:42: no entries. ACN (0.78:1), TEAM (0.70), NVS (0.67) and AMGN (0.77, already held) miss the 0.8:1 floor, MRNA is on the avoid list, and SAP is a same-day re-entry after its stop-out. Hold HZN, MCO and AMGN on their stops and keep settled cash for a game-plan trigger."
+    },
+    {
+     "date": "2026-11-18",
+     "note": "Several candidates sit right at the 0.8:1 floor; take only starter size when the ratio clears it, and skip same-day re-entries after a stop-out (SAP)."
     }
    ],
    "last_exits": {
@@ -2057,10 +2077,6 @@
    "notes": [
     {
      "date": "2026-11-09",
-     "note": "Passed the only candidate (TLT 81/80 bull put, 0.25 credit). It duplicates the open TLT 80/79 on the same 12/11 expiry, which is already losing. The EEM watchlist idea isn't in today's candidates, so there's no trigger to act on. Hold IWM and TLT to their exits."
-    },
-    {
-     "date": "2026-11-09",
      "note": "Passed the only candidate again. TLT 81/80 would duplicate the open TLT 80/79 on the same 12/11 expiry, and that spread is already losing. Hold IWM and TLT to their exits; take the next setup only if it uses a different underlying or expiry."
     },
     {
@@ -2214,6 +2230,10 @@
     {
      "date": "2026-11-18",
      "note": "Passed the only candidate, TLT 78/77 bull put (0.20 credit, IV/RV 1.27). It is a rate proxy in Real Estate, my avoid sector after 0-for-6, with TLT stop-outs and the 10-year near 5% amid Fed hike talk. SPY is also trending down (ROC20 -4.8%). Keeping $889 settled for a non-avoided, non-rate setup wi"
+    },
+    {
+     "date": "2026-11-18",
+     "note": "No trade today. TLT (IV/RV 1.27) clears the 1.15 floor but is a rate proxy in an avoid sector with a 0-for-6 record and SPY trend down. XLF fails the IV/RV floor. Keep $889 settled and wait for a non-rate setup at IV/RV 1.15+."
     }
    ],
    "last_exits": {
@@ -2249,7 +2269,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 80.0,
+   "min_trade_seen": 83.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2711,7 +2731,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 731.13
+     "last": 731.045
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2727,7 +2747,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 731.13
+     "last": 731.045
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2743,7 +2763,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 731.13
+     "last": 731.045
     }
    },
    "status": "active",
@@ -2776,7 +2796,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 52.225
+     "last": 52.25
     },
     "pos-83bf9288a4": {
      "kind": "stock",
@@ -2793,7 +2813,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 114.79
+     "last": 114.68
     }
    },
    "status": "active",
@@ -2844,7 +2864,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.23,
+     "mark": 0.26,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2864,7 +2884,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 3.28,
+     "exit_half_spread": 3.295,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2889,7 +2909,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.34,
+     "mark": 0.29,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2909,7 +2929,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 2.35,
+     "exit_half_spread": 2.295,
      "peak_mark": 1.09
     }
    },
