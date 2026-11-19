@@ -22376,5 +22376,97 @@
   ],
   "why": "Industrials is +$1.90 over 10 trades with a 50% win rate and the strongest sector result, and today's IWM win supports it. Consumer Staples is +$1.03 over 7 trades at 57% win rate, though today's only staples entry (AAPL) lost. Technology (-$1.35 over 53), Consumer Discretionary (-$0.72 over 11), an",
   "expires": "2026-12-02"
+ },
+ {
+  "time": "2026-11-18T20:10:31-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Evening check-in",
+  "for_day": "2026-11-19",
+  "decision": "revise",
+  "why": "TGT's breakout failed: it closed at 165.85, below its 167.45 breakout level and its 168.36 entry, so the thesis is broken and the position should be exited at open.",
+  "summary": "Exit TGT at open. Hold the CLSX put to its 2.98 underlying stop. Buy IBN or DIS stock only on a 2.5x-volume close above the breakout level, and buy SE or NFLX puts only on a 2.5x-volume close below the level with the ask at or below $1.50.",
+  "watchlist": [
+   {
+    "symbol": "IBN",
+    "setup": "Communication Services near-breakout, 0.5% below 35.06, ROC20 +18%",
+    "trigger": "Close above 35.06 on at least 2.5x relative volume; stop about 1.40 below entry",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "DIS",
+    "setup": "Communication Services near-breakout, 0.3% below 122.71, ROC20 +9.4%",
+    "trigger": "Close above 122.71 on at least 2.5x relative volume; stop about 5.5 below entry",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "SE",
+    "setup": "Communication Services broke down through 69.11, ROC20 -12%",
+    "trigger": "Close below 69.11 on at least 2.5x volume and a 30-60 DTE put ask at or below $1.50",
+    "instrument": "put",
+    "conviction": 2
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services near-breakdown, 0.7% above 59.41, ROC20 -8%",
+    "trigger": "Close below 59.41 on at least 2.5x volume and a 30-60 DTE put ask at or below $1.50; otherwise skip",
+    "instrument": "put",
+    "conviction": 2
+   },
+   {
+    "symbol": "EW",
+    "setup": "Health Care breakout, 2.6% below 107.94, ROC20 +19%",
+    "trigger": "Close above 107.94 on at least 2.5x relative volume; stop about 5.7 below entry",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-18T20:10:57-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-11-19",
+  "decision": "revise",
+  "why": "Fresh scan confirms SPGI (about 0.99:1) and MRK (about 0.93:1) clear the 0.8:1 floor, while SHEL, SCHD and XLV have no current scan data, so I'm dropping them.",
+  "summary": "Hold the five open positions on their stops and targets. Buy SPGI at or below 446.31 and MRK at or below 137.79, at starter size only.",
+  "watchlist": [
+   {
+    "symbol": "SPGI",
+    "setup": "RSI(2) 4.4 washout, 4.6% above SMA200, about 0.99:1 to SMA5 (Financials lean-in)",
+    "trigger": "Buy at or below 446.31 (stop 429.93, target 462.48)",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "MRK",
+    "setup": "RSI(2) 1.7 washout, 6.8% above SMA200, about 0.93:1 to SMA5",
+    "trigger": "Buy at or below 137.79 (stop 131.01, target 144.08)",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-18T20:11:08-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-11-19",
+  "decision": "revise",
+  "why": "Today's four trades netted about +$1.74, but the 25-day scorecard is 45% hit rate with a negative average move, so the edge is still unproven. I'm narrowing the plan to IWM alone and correcting the sizing: the 0.07 max is today's settled cash, and about $1,001 settles tomorrow, so one $250 slice is available. AAPL drops off because it lost today and both Apple headlines and an outage were in the n",
+  "summary": "Tomorrow, take at most one $250 slice in IWM only if it pulls back to VWAP and holds above it on at least 1.5x verified relative volume with no broad selloff. Target +0.5%, stop -0.3% (expect about -0.35% fills), 45-minute time limit, flat by the close. Otherwise stand aside.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Industrials VWAP pullback bounce. Today's bounce hit target at 3.55x volume (+0.59%). ATR is about 1.9%, the stock is up 0.44% on the day, and the scan shows no company-specific headlines.",
+    "trigger": "Price pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, with no broad-market selloff underway. Target +0.5%, stop -0.3%, 45-minute limit, flat by close.",
+    "instrument": "stock",
+    "conviction": 3
+   }
+  ]
  }
 ]
