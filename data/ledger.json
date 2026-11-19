@@ -22778,5 +22778,45 @@
   ],
   "aggression": "defensive",
   "why": "SPY is down 1.3% and below VWAP with a weak 20-day trend, so I'm keeping half-size VWAP bounces only. XLP, AAPL, IWM and AMZN are hovering near or just below VWAP on uptrending 1-minute bars, so they're the cleanest bounce candidates, and the small target and short hold suit the choppy tape."
+ },
+ {
+  "time": "2026-11-19T11:38:13-05:00",
+  "type": "trade_opened",
+  "agent": "volsell",
+  "position_id": "pos-7d4ce9e3f1",
+  "symbol": "TLT",
+  "underlying": "TLT",
+  "sector": "Real Estate",
+  "instrument": "spread",
+  "qty": 1,
+  "price": 0.18,
+  "cost": -13.5,
+  "stop": 0,
+  "why": "TLT 78/77 bull put at 0.18 credit with IV/RV 1.23 and crash radar calm at 40; one contract risks $82 max loss, and I'm overriding my self-imposed Real Estate avoid list for a small test because passing on sector labels has left the firm with zero trades.",
+  "confidence": 2,
+  "signals": {
+   "iv": 0.15,
+   "rv20": 0.122,
+   "iv_rv": 1.23,
+   "iv_rank": null,
+   "short_delta": -0.23,
+   "dte": 35
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-19T11:38:17-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "IWM",
+   "QQQ",
+   "XLP",
+   "AAPL",
+   "AMZN",
+   "XLE"
+  ],
+  "aggression": "defensive",
+  "why": "SPY is still down about 1% on the day and below its 200-day average with a weak 20-day trend, so I'm keeping half-size VWAP bounces only. IWM, QQQ, XLP, AAPL, AMZN and XLE are sitting right at VWAP on uptrending 1-minute bars with tight ranges, which gives clean bounce entries with small targets and"
  }
 ]

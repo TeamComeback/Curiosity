@@ -1,39 +1,5 @@
 [
  {
-  "time": "2026-11-06T12:06:36-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.01)"
- },
- {
-  "time": "2026-11-06T12:06:53-05:00",
-  "type": "open",
-  "agent": "volsell",
-  "symbol": "TLT",
-  "instrument": "spread",
-  "qty": 1,
-  "price": 0.16,
-  "cost": -12.0,
-  "stop": 0,
-  "thesis": "TLT IV 13.8% vs realized 10.8% (1.27x) with SPY trend up and crash radar at 42 (warning but not stress); the 80/79 bull put collects 0.16 against $84 max loss over 35 DTE, and TLT is no longer open after the 12:06 close, so this is a fresh signal rather than a duplicate.",
-  "confidence": 3
- },
- {
-  "time": "2026-11-06T12:07:05-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, MSFT, AAPL, TSLA, IWM",
-  "note": "defensive: Crash radar is at 42 and most AI and semis are breaking down, so I'm keeping size at half with VWAP bounces only. SPY is the only one with an open scalp, and I'm limiting the watch to liquid names above their opening ranges (MSFT, AAPL, TSLA, IWM) plus SPY."
- },
- {
-  "time": "2026-11-06T12:36:22-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.95)"
- },
- {
   "time": "2026-11-06T12:36:48-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6176,5 +6142,39 @@
   "agent": "scalper",
   "symbol": "AAPL",
   "note": "VWAP pullback bounce skipped: 0.68x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-19T11:36:31-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-63%) (tried 1.16, 0.77, 0.39, 0.01; mark 1.21, natural -0.91)"
+ },
+ {
+  "time": "2026-11-19T11:37:56-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-75%) (tried 0.98, 0.65, 0.33, 0.01; mark 1.03, natural -1.63)"
+ },
+ {
+  "time": "2026-11-19T11:38:13-05:00",
+  "type": "open",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "instrument": "spread",
+  "qty": 1,
+  "price": 0.18,
+  "cost": -13.5,
+  "stop": 0,
+  "thesis": "TLT 78/77 bull put at 0.18 credit with IV/RV 1.23 and crash radar calm at 40; one contract risks $82 max loss, and I'm overriding my self-imposed Real Estate avoid list for a small test because passing on sector labels has left the firm with zero trades.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-11-19T11:38:17-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "IWM, QQQ, XLP, AAPL, AMZN",
+  "note": "defensive: SPY is still down about 1% on the day and below its 200-day average with a weak 20-day trend, so I'm keeping half-size VWAP bounces only. IWM, QQQ, XLP, AAPL, AMZN and XLE are sitting right at VWAP on uptrending 1-minute bars with tight ranges, which gives clean bounce entries with small targets and"
  }
 ]

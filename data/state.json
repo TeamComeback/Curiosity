@@ -11,7 +11,8 @@
  "entries": {
   "date": "2026-11-19",
   "counts": {
-   "meanrev": 4
+   "meanrev": 4,
+   "volsell": 1
   }
  },
  "agents": {
@@ -27,10 +28,6 @@
    "peak": 1340.54,
    "max_dd": 0.5326,
    "notes": [
-    {
-     "date": "2026-11-16",
-     "note": "No trade: the only candidate, KLC short, is in Broad market / other (-57.20 record, on the avoid list) and is a $1.25 extreme-volatility name like DJTU. Hold CLSX put to its 2.98 underlying stop; keep settled cash for a Health Care close above trigger on 2.5x+ volume."
-    },
     {
      "date": "2026-11-16",
      "note": "No trade: the only candidate (KLC short) is in the avoid-listed Broad market bucket and is a $1.25 high-volatility name. Hold CLSX put to its 2.98 underlying stop. GLD exit already filled; keep settled cash for a Health Care close above trigger on 2.5x+ volume."
@@ -186,6 +183,10 @@
     {
      "date": "2026-11-19",
      "note": "No entries: JMIA is a Broad market/other short (avoid-listed) and already well below its 2.70 breakdown, so the stop is too wide to chase. IBN, DIS, NFLX and SE triggers have not fired, and there are no open positions. Keep cash settled and wait for a 2.5x-volume close through a Communication Servic"
+    },
+    {
+     "date": "2026-11-19",
+     "note": "Passing on JMIA: it's an avoid-listed Broad market short, already well past its 2.70 breakdown, and the 3.25 stop is about 32% above price, too wide for this account. No game-plan triggers (IBN, DIS, NFLX, SE) have fired, so I'm holding settled cash for them."
     }
    ],
    "last_exits": {
@@ -1202,7 +1203,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 474.69
+     "last": 475.5
     },
     "pos-caba0983a7": {
      "kind": "stock",
@@ -1222,7 +1223,7 @@
       "pct_vs_sma5": -2.9
      },
      "sector": "Health Care",
-     "last": 437.55
+     "last": 440.12
     },
     "pos-c4618673be": {
      "kind": "stock",
@@ -1242,7 +1243,7 @@
       "pct_vs_sma5": -5.1
      },
      "sector": "Consumer Staples",
-     "last": 220.51
+     "last": 219.765
     },
     "pos-7c659f7cde": {
      "kind": "stock",
@@ -1262,7 +1263,7 @@
       "pct_vs_sma5": -2.5
      },
      "sector": "Health Care",
-     "last": 151.37
+     "last": 151.02
     },
     "pos-a2d196d244": {
      "kind": "stock",
@@ -1282,7 +1283,7 @@
       "pct_vs_sma5": -6.8
      },
      "sector": "Consumer Staples",
-     "last": 206.38
+     "last": 205.47
     },
     "pos-369b4d65ca": {
      "kind": "stock",
@@ -1302,7 +1303,7 @@
       "pct_vs_sma5": -3.1
      },
      "sector": "Financials",
-     "last": 443.395
+     "last": 443.055
     },
     "pos-876eb38526": {
      "kind": "stock",
@@ -1322,7 +1323,7 @@
       "pct_vs_sma5": -3.7
      },
      "sector": "Materials",
-     "last": 626.28
+     "last": 628.04
     },
     "pos-e446ae5f43": {
      "kind": "stock",
@@ -1342,7 +1343,7 @@
       "pct_vs_sma5": -2.4
      },
      "sector": "Financials",
-     "last": 386.77
+     "last": 387.38
     }
    },
    "status": "active",
@@ -1353,10 +1354,6 @@
    "peak": 1029.08,
    "max_dd": 0.0566,
    "notes": [
-    {
-     "date": "2026-11-16",
-     "note": "Scan-price stop-to-target ratios are all below my 1:1 floor: HALO 0.38, ICLR 0.56, GM 0.56, MRNA 0.46, CCL 0.54, XLY 0.53. No positions are open and $880 settled cash stays on hand for a setup that clears 1:1."
-    },
     {
      "date": "2026-11-16",
      "note": "No candidate clears the 1:1 stop-to-target floor at scan prices (HALO 0.38, ICLR 0.56, MRNA 0.50, GM 0.56, CCL 0.54, XLY 0.55). Pass and keep $880 settled cash for a washout that clears 1:1."
@@ -1512,6 +1509,10 @@
     {
      "date": "2026-11-19",
      "note": "Recheck stale avoid-list ratios against live prices each scan; I hold seven stock positions, so no further adds beyond starters."
+    },
+    {
+     "date": "2026-11-19",
+     "note": "No new entries: RSP (0.74:1) and BNY (0.68:1) miss the 0.8:1 floor, and SAP, MCO, TRV, ACN, AMGN, NVS, SPGI and DE are already held. Hold existing stops and targets; add nothing while SPY is below its 200-day and eight positions are open."
     }
    ],
    "last_exits": {
@@ -2153,21 +2154,63 @@
    ]
   },
   "volsell": {
-   "cash": 889.0,
-   "reserved": 0.0,
-   "positions": {},
+   "cash": 902.5,
+   "reserved": 100.0,
+   "positions": {
+    "pos-7d4ce9e3f1": {
+     "kind": "spread",
+     "symbol": "TLT",
+     "underlying": "TLT",
+     "qty": 1,
+     "legs": [
+      {
+       "symbol": "TLT261224P00078000",
+       "ratio_qty": "1",
+       "side": "sell",
+       "position_intent": "sell_to_open"
+      },
+      {
+       "symbol": "TLT261224P00077000",
+       "ratio_qty": "1",
+       "side": "buy",
+       "position_intent": "buy_to_open"
+      }
+     ],
+     "structure": "bull put spread",
+     "expiry": "2026-12-24",
+     "credit": 0.18,
+     "mark": 0.18,
+     "entry": 0.18,
+     "width": 1.0,
+     "short_strike": 78.0,
+     "long_strike": 77.0,
+     "cost": -13.5,
+     "play": "rich_vol",
+     "direction": "short_vol",
+     "stop": 0,
+     "atr": 0,
+     "opened": "2026-11-19T11:38:13-05:00",
+     "thesis": "TLT 78/77 bull put at 0.18 credit with IV/RV 1.23 and crash radar calm at 40; one contract risks $82 max loss, and I'm overriding my self-imposed Real Estate avoid list for a small test because passing on sector labels has left the firm with zero trades.",
+     "confidence": 2,
+     "signals": {
+      "iv": 0.15,
+      "rv20": 0.122,
+      "iv_rv": 1.23,
+      "iv_rank": null,
+      "short_delta": -0.23,
+      "dte": 35
+     },
+     "sector": "Real Estate"
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
    "closed": 6,
    "wins": 0,
    "peak": 1000.0,
-   "max_dd": 0.111,
+   "max_dd": 0.1155,
    "notes": [
-    {
-     "date": "2026-11-10",
-     "note": "Passed the TLT 79.5/78.5 bull put: it re-enters the same underlying that was stopped out today into a hawkish-Fed tape, and Real Estate is 0-for-2 in my results. Wait for a non-rate, broad-market setup with a clear IV/RV edge."
-    },
     {
      "date": "2026-11-10",
      "note": "Passed the TLT 79.5/78.5 bull put (0.30 credit). It re-enters the underlying stopped out this morning into a hawkish-Fed tape, and Real Estate is 0-for-2 in my results. Next trade needs a non-rate underlying with a clear IV/RV edge; keep settled cash ready."
@@ -2323,6 +2366,10 @@
     {
      "date": "2026-11-19",
      "note": "Passing on rich-vol setups purely for sector labels leaves the firm at zero trades. Take a small, defined-risk trade at the 1.15 IV/RV floor and manage it tightly rather than waiting for a perfect setup."
+    },
+    {
+     "date": "2026-11-19",
+     "note": "Test one defined-risk trade at the 1.15 IV/RV floor and manage it tightly. If it stops out, reassess the sector avoid rule rather than letting it block all trades."
     }
    ],
    "last_exits": {
@@ -2358,8 +2405,14 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 77.0,
-   "unsettled": [],
+   "min_trade_seen": 82.0,
+   "unsettled": [
+    {
+     "amount": 13.5,
+     "settles": "2026-11-20",
+     "note": "credit TLT"
+    }
+   ],
    "focus": {
     "lean_in": [],
     "avoid": [
@@ -2820,7 +2873,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 729.67
+     "last": 728.82
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2836,7 +2889,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 729.67
+     "last": 728.82
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2852,7 +2905,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 729.67
+     "last": 728.82
     }
    },
    "status": "active",
@@ -2885,7 +2938,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 53.04
+     "last": 52.99
     },
     "pos-83bf9288a4": {
      "kind": "stock",
@@ -2902,7 +2955,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 114.71
+     "last": 114.63
     }
    },
    "status": "active",
@@ -2953,7 +3006,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 1.17,
+     "mark": 1.21,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2973,7 +3026,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.16,
+     "exit_half_spread": 2.125,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2998,7 +3051,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.96,
+     "mark": 1.03,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3018,7 +3071,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 2.69,
+     "exit_half_spread": 2.655,
      "peak_mark": 1.09
     }
    },
@@ -3581,17 +3634,17 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-19",
-    "made_at": "2026-11-19T11:09-05:00",
+    "made_at": "2026-11-19T11:38-05:00",
     "watch": [
+     "IWM",
+     "QQQ",
      "XLP",
      "AAPL",
-     "IWM",
-     "SPY",
-     "QQQ",
-     "AMZN"
+     "AMZN",
+     "XLE"
     ],
     "aggression": "defensive",
-    "why": "SPY is down 1.3% and below VWAP with a weak 20-day trend, so I'm keeping half-size VWAP bounces only. XLP, AAPL, IWM and AMZN are hovering near or just below VWAP on uptrending 1-minute bars, so they're the cleanest bounce candidates, and the small target and short hold suit the choppy tape.",
+    "why": "SPY is still down about 1% on the day and below its 200-day average with a weak 20-day trend, so I'm keeping half-size VWAP bounces only. IWM, QQQ, XLP, AAPL, AMZN and XLE are sitting right at VWAP on uptrending 1-minute bars with tight ranges, which gives clean bounce entries with small targets and",
     "slices": 3,
     "target_pct": 0.4,
     "stop_pct": 0.25,
