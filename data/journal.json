@@ -1,25 +1,5 @@
 [
  {
-  "time": "2026-11-06T13:36:59-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AAPL, MSFT, XLP, GOOGL",
-  "note": "defensive: The single slice is already spent on the SPY stop-out, so this mainly governs any residual setup. Crash radar is at 42 and AI names are breaking lower, so I'm keeping only half-size VWAP bounces in the defensive large caps that are holding their opening ranges, with tight risk."
- },
- {
-  "time": "2026-11-06T13:55:19-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "MSFT",
-  "instrument": "stock",
-  "qty": 0.9395,
-  "price": 533.822,
-  "cost": 501.53,
-  "stop": 532.17,
-  "thesis": "VWAP pullback bounce on MSFT: 1.69x volume, +0.12% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-11-06T14:07:41-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6174,5 +6154,19 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, IWM",
   "note": "stand_down: SPY is down 2.4% and 1.4% below VWAP on a 1-minute downtrend, with most candidates (NVDA, AMD, MSFT, SOXL, TQQQ) breaking down and crash radar at 42. Defensive VWAP bounces are unreliable in a broad selloff like this, so I'm standing down and keeping SPY, QQQ and IWM on watch for a stabilization."
+ },
+ {
+  "time": "2026-11-19T12:36:29-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-65%) (tried 1.10, 0.73, 0.37, 0.01; mark 1.15, natural -0.95)"
+ },
+ {
+  "time": "2026-11-19T12:37:54-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-75%) (tried 1.00, 0.66, 0.34, 0.01; mark 1.05, natural -1.58)"
  }
 ]
