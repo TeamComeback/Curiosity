@@ -22468,5 +22468,112 @@
     "conviction": 3
    }
   ]
+ },
+ {
+  "time": "2026-11-19T07:40:33-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-11-19",
+  "decision": "revise",
+  "why": "TGT's breakout failed and it sits below entry in an avoided sector, so I'm exiting; the CLSX put stays on its 2.98 underlying stop, and the 3.63 stop in its thesis is disregarded.",
+  "summary": "Exit TGT at open, hold CLSX with its stop at 2.98 on the underlying, and wait for 2.5x-volume closes through the Communication Services levels in IBN, DIS, SE and NFLX.",
+  "watchlist": [
+   {
+    "symbol": "IBN",
+    "setup": "Communication Services near-breakout, ROC20 +18%, ATR 0.70",
+    "trigger": "Close above 35.06 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "DIS",
+    "setup": "Communication Services near-breakout, ROC20 +9.4%, ATR 2.73",
+    "trigger": "Close above 122.71 on at least 2.5x relative volume",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Communication Services breakdown risk after soft Q4 guidance and ad-target cut, ROC20 -8%",
+    "trigger": "Close below 59.41 on at least 2.5x volume and a 30-60 DTE put ask at or below $1.50",
+    "instrument": "put",
+    "conviction": 2
+   },
+   {
+    "symbol": "SE",
+    "setup": "Communication Services broke down today, ROC20 -12%",
+    "trigger": "Close below 69.11 on at least 2.5x volume and a 30-60 DTE put ask at or below $1.50",
+    "instrument": "put",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-19T07:40:59-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-11-19",
+  "decision": "keep",
+  "why": "Scan levels for SPGI and MRK are unchanged and both still clear the 0.8:1 floor (about 0.99:1 and 0.93:1), and crash radar is calm at 37.",
+  "summary": "Hold the five open positions on their stops and targets. Take starter-size buys in SPGI at or below 446.31 and MRK at or below 137.79, and consider SAP at or below 210.61 only as a new-day re-entry.",
+  "watchlist": [
+   {
+    "symbol": "SPGI",
+    "setup": "RSI(2) 4.4 washout, 4.6% above SMA200, about 0.99:1 to SMA5 (Financials lean-in)",
+    "trigger": "Buy at or below 446.31 (stop 429.93, target 462.48)",
+    "instrument": "stock",
+    "conviction": 3
+   },
+   {
+    "symbol": "MRK",
+    "setup": "RSI(2) 1.7 washout, 6.8% above SMA200, about 0.93:1 to SMA5",
+    "trigger": "Buy at or below 137.79 (stop 131.01, target 144.08)",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "SAP",
+    "setup": "RSI(2) 0.8 washout, 9.5% above SMA200, about 1.78:1 to SMA5; stopped out 11-18, so this is a new-day re-entry",
+    "trigger": "Buy at or below 210.61 (stop about 201.28, target 227.20)",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-19T07:41:08-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-11-19",
+  "decision": "revise",
+  "why": "The IWM VWAP-pullback setup still holds: Industrials is the only lean-in sector with positive evidence in the scan, and crash radar is calm at 37. I'm revising two things: the watchlist max_dollars was recorded as 0.07, which conflicts with the stated $250 slice, so I'm correcting it to 250; and Consumer Staples comes off the lean-in list because no staples name is tradable in tomorrow's scan (AAP",
+  "summary": "Tomorrow, take at most one $250 IWM slice, and only if it pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume with no broad selloff. Target +0.5%, stop -0.3% (expect about -0.35% fills), 45-minute time limit, flat by the close. Otherwise stand aside.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Industrials VWAP pullback bounce. Today's bounce hit target at 3.55x volume (+0.59%). ATR is about 1.9%, the stock is up 0.44% on the day, and the scan shows no company-specific headlines.",
+    "trigger": "Price pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, with no broad-market selloff underway. Target +0.5%, stop -0.3%, 45-minute limit, flat by close.",
+    "instrument": "stock",
+    "conviction": 3
+   }
+  ]
+ },
+ {
+  "time": "2026-11-19T07:41:08-05:00",
+  "type": "focus",
+  "agent": "scalper",
+  "lean_in": [
+   "Industrials"
+  ],
+  "avoid": [
+   "Technology",
+   "Consumer Discretionary",
+   "Communication Services"
+  ],
+  "why": "Industrials is +$1.90 over 10 trades at a 50% win rate, and today's IWM win supports it. Consumer Staples (+$1.03 over 7) has no tradable names in the current scan, so it is not leaned into. Technology (-$1.35 over 53), Consumer Discretionary (-$0.72 over 11), and Communication Services (42% win rat",
+  "expires": "2026-12-03"
  }
 ]
