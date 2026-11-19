@@ -1,60 +1,5 @@
 [
  {
-  "time": "2026-11-06T10:08:09-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ASTS",
-  "note": "near max value (1.72 of 2 wide) (tried 1.67, 1.53, 1.40, 1.27; mark 1.72, natural 1.27)"
- },
- {
-  "time": "2026-11-06T10:08:30-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.99)"
- },
- {
-  "time": "2026-11-06T10:09:17-05:00",
-  "type": "exit_unfilled",
-  "agent": "volsell",
-  "symbol": "TLT",
-  "note": "agent: TLT bull put has reached the 50%-of-credit target (mark 0.09 vs 0.105 target on the 0.21 basis). Locking in the gain per"
- },
- {
-  "time": "2026-11-06T10:09:31-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "LLY, GOOGL, XLV, XLP, TSLA",
-  "note": "defensive: Breadth is still mixed: SPY is down on the 1-minute trend and the crash radar is at 42, so I'm keeping size small. LLY has a live VWAP-pullback bounce above its opening range, and XLV, XLP and TSLA are trending up and above their opening ranges, so those are the cleanest candidates; GOOGL stays on t"
- },
- {
-  "time": "2026-11-06T10:13:35-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "note": "VWAP pullback bounce skipped: 0.5x volume < 1.5x"
- },
- {
-  "time": "2026-11-06T10:36:41-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.95)"
- },
- {
-  "time": "2026-11-06T10:37:06-05:00",
-  "type": "open",
-  "agent": "blackswan",
-  "symbol": "PSQ",
-  "instrument": "stock",
-  "qty": 1.0,
-  "price": 27.94,
-  "cost": 27.94,
-  "stop": 26.83,
-  "thesis": "Radar is in warning at 42 with QQQ weakening (ROC20 -5.2% on SPY), so one share of PSQ as a small inverse hedge fits the $28.03 per-trade cap and has a tight stop at 26.83.",
-  "confidence": 2
- },
- {
   "time": "2026-11-06T10:37:14-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6170,5 +6115,67 @@
   "agent": "scalper",
   "symbol": "QQQ",
   "note": "VWAP pullback bounce skipped: 0.71x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-19T10:02:26-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "TSM",
+  "note": "VWAP pullback bounce skipped: 0.3x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-19T10:05:27-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-54%)"
+ },
+ {
+  "time": "2026-11-19T10:05:30-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "HZN",
+  "qty": 2.4343,
+  "entry": 82.05,
+  "exit": 79.11,
+  "pnl": -7.15,
+  "note": "stop loss (underlying)",
+  "opened": "2026-11-17T12:38:25-05:00",
+  "confidence": 3,
+  "thesis": "HZN RSI(2) 2.7 washout 10.7% above its 200-day in a calm regime (crash radar 28, SPY above its 200-day); live target 85.75 vs stop 79.38 is about 1.45:1, clearing my 1:1 floor, with a tight 3.2% risk on the position."
+ },
+ {
+  "time": "2026-11-19T10:06:55-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-65%) (tried 1.11, 0.74, 0.37, 0.01; mark 1.16, natural -0.95)"
+ },
+ {
+  "time": "2026-11-19T10:08:20-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-79%) (tried 0.81, 0.54, 0.27, 0.01; mark 0.86, natural -2.08)"
+ },
+ {
+  "time": "2026-11-19T10:08:32-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "SPGI",
+  "instrument": "stock",
+  "qty": 0.2031,
+  "price": 443.182,
+  "cost": 90.01,
+  "stop": 426.68,
+  "thesis": "SPGI RSI(2) 3.2 washout 3.8% above its 200-day, now at 443.06 and through the 446.31 game-plan trigger; stop 426.68 to target 457.39 is about 0.88:1, clearing the 0.8:1 floor in a calm radar regime (32) and inside the Financials lean-in.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-19T10:08:36-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "MU, INTC, SMH, TSM, MSFT",
+  "note": "defensive: Most of the tape is below VWAP and trending down on the 1-minute, with SPY and QQQ flat, so I'm dropping to defensive to limit breakout chases. MU and INTC are the strongest names above their opening range, and TSM, MSFT, and SMH are holding above VWAP, so they're the best VWAP-bounce candidates at "
  }
 ]

@@ -11,7 +11,7 @@
  "entries": {
   "date": "2026-11-19",
   "counts": {
-   "meanrev": 1
+   "meanrev": 2
   }
  },
  "agents": {
@@ -26,7 +26,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 1.41,
+     "mark": 0.41,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -45,7 +45,7 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 1.41
+     "exit_half_spread": 0.41
     }
    },
    "status": "active",
@@ -54,12 +54,8 @@
    "closed": 26,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.4754,
+   "max_dd": 0.4763,
    "notes": [
-    {
-     "date": "2026-11-16",
-     "note": "No trade today: VALE put doesn't fit the ~$35 option budget, SLV is in the losing Consumer Discretionary bucket, and no Health Care trigger has closed on 2.5x+ volume. Keep settled cash and hold CLSX to its 2.98 underlying stop."
-    },
     {
      "date": "2026-11-16",
      "note": "Passed on VALE put (2.7x breakdown): a 40-60 DTE put won't fit the ~$35 option risk cap (5% of equity), and Materials is outside the Health Care lean-in. Keep cash for a confirmed Health Care breakout on 2.5x+ volume; CLSX holds to its enforced stop."
@@ -215,6 +211,10 @@
     {
      "date": "2026-11-19",
      "note": "No live candidates today and no IBN/DIS/NFLX/SE triggers have fired, so keep cash settled. CLSX stays on its 2.98 underlying stop, which is already set."
+    },
+    {
+     "date": "2026-11-19",
+     "note": "Pass on JMIA: it is a Broad market/other short (avoid-listed) and already 13% below its 2.70 breakdown level with a 3.13 stop, so the risk is too wide to chase. CLSX put stays on its 2.98 underlying stop; TGT is already closed; wait for IBN/DIS/NFLX/SE triggers with settled cash."
     }
    ],
    "last_exits": {
@@ -1209,29 +1209,9 @@
    ]
   },
   "meanrev": {
-   "cash": 319.61,
+   "cash": 422.18,
    "reserved": 0.0,
    "positions": {
-    "pos-dc107bcf5c": {
-     "kind": "stock",
-     "symbol": "HZN",
-     "qty": 2.4343,
-     "entry": 82.05,
-     "cost": 199.73,
-     "direction": "long",
-     "stop": 79.38,
-     "atr": 1.73,
-     "opened": "2026-11-17T12:38:25-05:00",
-     "thesis": "HZN RSI(2) 2.7 washout 10.7% above its 200-day in a calm regime (crash radar 28, SPY above its 200-day); live target 85.75 vs stop 79.38 is about 1.45:1, clearing my 1:1 floor, with a tight 3.2% risk on the position.",
-     "confidence": 3,
-     "signals": {
-      "rsi2": 2.7,
-      "pct_vs_sma200": 10.7,
-      "pct_vs_sma5": -4.4
-     },
-     "sector": "Broad market / other",
-     "last": 80.065
-    },
     "pos-87ffe95b10": {
      "kind": "stock",
      "symbol": "MCO",
@@ -1250,7 +1230,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 479.89
+     "last": 477.91
     },
     "pos-caba0983a7": {
      "kind": "stock",
@@ -1270,7 +1250,7 @@
       "pct_vs_sma5": -2.9
      },
      "sector": "Health Care",
-     "last": 442.95
+     "last": 439.05
     },
     "pos-c4618673be": {
      "kind": "stock",
@@ -1290,7 +1270,7 @@
       "pct_vs_sma5": -5.1
      },
      "sector": "Consumer Staples",
-     "last": 229.0
+     "last": 222.525
     },
     "pos-7c659f7cde": {
      "kind": "stock",
@@ -1310,7 +1290,7 @@
       "pct_vs_sma5": -2.5
      },
      "sector": "Health Care",
-     "last": 153.03
+     "last": 151.535
     },
     "pos-a2d196d244": {
      "kind": "stock",
@@ -1330,21 +1310,37 @@
       "pct_vs_sma5": -6.8
      },
      "sector": "Consumer Staples",
-     "last": 206.69
+     "last": 205.13
+    },
+    "pos-369b4d65ca": {
+     "kind": "stock",
+     "symbol": "SPGI",
+     "qty": 0.2031,
+     "entry": 443.182,
+     "cost": 90.01,
+     "direction": "long",
+     "stop": 426.68,
+     "atr": 10.917,
+     "opened": "2026-11-19T10:08:32-05:00",
+     "thesis": "SPGI RSI(2) 3.2 washout 3.8% above its 200-day, now at 443.06 and through the 446.31 game-plan trigger; stop 426.68 to target 457.39 is about 0.88:1, clearing the 0.8:1 floor in a calm radar regime (32) and inside the Financials lean-in.",
+     "confidence": 3,
+     "signals": {
+      "rsi2": 3.2,
+      "pct_vs_sma200": 3.8,
+      "pct_vs_sma5": -3.1
+     },
+     "sector": "Financials",
+     "last": 443.06
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 21,
+   "closed": 22,
    "wins": 13,
    "peak": 1029.08,
-   "max_dd": 0.0474,
+   "max_dd": 0.055,
    "notes": [
-    {
-     "date": "2026-11-16",
-     "note": "No candidate clears my 1:1 stop-to-target floor at live prices (best is ICLR at about 0.63:1; HALO ~0.2, CCL ~0.48, MRNA ~0.53, WAT ~0.48, GM ~0.44). Keep the $880 settled cash and wait for a washout that clears 1:1."
-    },
     {
      "date": "2026-11-16",
      "note": "No candidate clears my 1:1 stop-to-target floor at live prices (HALO 0.28, ICLR 0.59, MRNA 0.51, ETR 0.46, GM 0.52, CCL 0.50). Hold the $880 settled cash and wait for a washout that clears 1:1."
@@ -1500,6 +1496,10 @@
     {
      "date": "2026-11-19",
      "note": "Only SAP clears the floor at live prices: SPGI is about 0.72:1, TRV 0.57:1, and MCO/NVS/AMGN/ACN are already held. Technology is on the avoid list and SAP is a software name, so keep this small and exit at the stop."
+    },
+    {
+     "date": "2026-11-19",
+     "note": "Took the SPGI game-plan trigger as a starter at the $90 cap. Five positions are now open, so no more adds; MRK has no live candidate price, so it stays unplaced until it appears in the scan."
     }
    ],
    "last_exits": {
@@ -1522,7 +1522,8 @@
     "PM": "2026-11-11",
     "ALC": "2026-11-13",
     "HALO": "2026-11-16",
-    "SAP": "2026-11-18"
+    "SAP": "2026-11-18",
+    "HZN": "2026-11-19"
    },
    "plan": {
     "for_day": "2026-11-19",
@@ -1667,7 +1668,13 @@
     "settled_cash_at_plan": 369.51,
     "budgets_clamped": 0
    },
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 192.58,
+     "settles": "2026-11-20",
+     "note": "sold HZN"
+    }
+   ],
    "focus": {
     "lean_in": [
      "Financials"
@@ -2801,7 +2808,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 739.285
+     "last": 737.23
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2817,7 +2824,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 739.285
+     "last": 737.23
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2833,7 +2840,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 739.285
+     "last": 737.23
     }
    },
    "status": "active",
@@ -2866,7 +2873,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 56.0
+     "last": 55.69
     },
     "pos-83bf9288a4": {
      "kind": "stock",
@@ -2883,7 +2890,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 116.915
+     "last": 117.17
     }
    },
    "status": "active",
@@ -2934,7 +2941,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.47,
+     "mark": 1.16,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2954,7 +2961,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.815,
+     "exit_half_spread": 2.11,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2979,7 +2986,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.97,
+     "mark": 0.86,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2999,7 +3006,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.135,
+     "exit_half_spread": 2.94,
      "peak_mark": 1.09
     }
    },
@@ -3562,19 +3569,19 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-19",
-    "made_at": "2026-11-19T09:38-05:00",
+    "made_at": "2026-11-19T10:08-05:00",
     "watch": [
-     "NVDA",
-     "AMD",
      "MU",
+     "INTC",
+     "SMH",
      "TSM",
-     "AVGO",
-     "QQQ",
+     "MSFT",
      "SPY",
-     "IWM"
+     "QQQ",
+     "NVDA"
     ],
-    "aggression": "normal",
-    "why": "Liquid semis and mega-caps are trending up above VWAP on solid volume, and the crash radar is calm, so normal sizing fits. SPY and QQQ are flat, so I'm keeping the set tight and using a modest target with a tight stop to limit chop damage.",
+    "aggression": "defensive",
+    "why": "Most of the tape is below VWAP and trending down on the 1-minute, with SPY and QQQ flat, so I'm dropping to defensive to limit breakout chases. MU and INTC are the strongest names above their opening range, and TSM, MSFT, and SMH are holding above VWAP, so they're the best VWAP-bounce candidates at ",
     "slices": 4,
     "target_pct": 0.6,
     "stop_pct": 0.3,
@@ -3586,7 +3593,8 @@
     "low_volume_skips": [
      "MU",
      "AVGO",
-     "QQQ"
+     "QQQ",
+     "TSM"
     ]
    },
    "plan": {

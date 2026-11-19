@@ -22631,5 +22631,61 @@
   ],
   "aggression": "normal",
   "why": "Liquid semis and mega-caps are trending up above VWAP on solid volume, and the crash radar is calm, so normal sizing fits. SPY and QQQ are flat, so I'm keeping the set tight and using a modest target with a tight stop to limit chop damage."
+ },
+ {
+  "time": "2026-11-19T10:05:30-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-dc107bcf5c",
+  "symbol": "HZN",
+  "underlying": "HZN",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "entry": 82.05,
+  "exit": 79.11,
+  "pnl": -7.15,
+  "return_pct": -3.6,
+  "opened": "2026-11-17T12:38:25-05:00",
+  "why_entered": "HZN RSI(2) 2.7 washout 10.7% above its 200-day in a calm regime (crash radar 28, SPY above its 200-day); live target 85.75 vs stop 79.38 is about 1.45:1, clearing my 1:1 floor, with a tight 3.2% risk on the position.",
+  "why_exited": "stop loss (underlying)"
+ },
+ {
+  "time": "2026-11-19T10:08:32-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-369b4d65ca",
+  "symbol": "SPGI",
+  "underlying": "SPGI",
+  "sector": "Financials",
+  "instrument": "stock",
+  "qty": 0.2031,
+  "price": 443.182,
+  "cost": 90.01,
+  "stop": 426.68,
+  "why": "SPGI RSI(2) 3.2 washout 3.8% above its 200-day, now at 443.06 and through the 446.31 game-plan trigger; stop 426.68 to target 457.39 is about 0.88:1, clearing the 0.8:1 floor in a calm radar regime (32) and inside the Financials lean-in.",
+  "confidence": 3,
+  "signals": {
+   "rsi2": 3.2,
+   "pct_vs_sma200": 3.8,
+   "pct_vs_sma5": -3.1
+  },
+  "from_plan": true
+ },
+ {
+  "time": "2026-11-19T10:08:36-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "MU",
+   "INTC",
+   "SMH",
+   "TSM",
+   "MSFT",
+   "SPY",
+   "QQQ",
+   "NVDA"
+  ],
+  "aggression": "defensive",
+  "why": "Most of the tape is below VWAP and trending down on the 1-minute, with SPY and QQQ flat, so I'm dropping to defensive to limit breakout chases. MU and INTC are the strongest names above their opening range, and TSM, MSFT, and SMH are holding above VWAP, so they're the best VWAP-bounce candidates at "
  }
 ]
