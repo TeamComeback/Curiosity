@@ -1,61 +1,5 @@
 [
  {
-  "time": "2026-11-06T09:36:42-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "DJTU261218P00002000",
-  "note": "option target (+498%)"
- },
- {
-  "time": "2026-11-06T09:36:42-05:00",
-  "type": "close",
-  "agent": "meanrev",
-  "symbol": "TWLO",
-  "qty": 0.7524,
-  "entry": 199.378,
-  "exit": 201.368,
-  "pnl": 1.5,
-  "note": "time stop",
-  "opened": "2026-10-30T10:06:59-04:00",
-  "confidence": 2,
-  "thesis": "TWLO RSI(2) 1.0 washout 5.8% above its 200-day in a calm regime; live target 242.85 vs stop 162.55 is about 1.18:1, clearing my 1:1 floor where the stale plan's 0.45 no longer applies, so I'm taking a small starter given the 17.9% five-day drop."
- },
- {
-  "time": "2026-11-06T09:37:03-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.88)"
- },
- {
-  "time": "2026-11-06T09:37:11-05:00",
-  "type": "close",
-  "agent": "trend",
-  "symbol": "XLV",
-  "qty": 0.5845,
-  "entry": 188.296,
-  "exit": 182.918,
-  "pnl": -3.14,
-  "note": "agent: Breakout failed: XLV closed at 184.99, below the 187.98 breakout level. Exit per game plan at the open.",
-  "opened": "2026-11-04T11:36:43-05:00",
-  "confidence": 3,
-  "thesis": "XLV is trading at 188.19, just above its 55-day breakout at 187.98, on 2.9x relative volume with roc20 +10.1% and 18.4% above its 200-day SMA. The 181.99 stop limits risk to about 3.3%, and Health Care is a lean-in sector with the cleanest breakout that doesn't depend on the unconfirmed EXEL/EW triggers."
- },
- {
-  "time": "2026-11-06T09:37:11-05:00",
-  "type": "close",
-  "agent": "trend",
-  "symbol": "ALL",
-  "qty": 0.5536,
-  "entry": 271.034,
-  "exit": 260.95,
-  "pnl": -5.58,
-  "note": "agent: Breakout failed: ALL closed at 266.89, below the 270.62 breakout level. Exit per game plan at the open.",
-  "opened": "2026-11-05T14:38:19-05:00",
-  "confidence": 3,
-  "thesis": "ALL cleared its 55-day high at 270.62 on 2.2x relative volume with roc20 +20% and 18% above its 200-day SMA; the 259.51 stop caps risk near 4% of the position, and a stock entry avoids the option-fit problems that blocked the puts."
- },
- {
   "time": "2026-11-06T09:37:29-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6178,5 +6122,53 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. The IWM VWAP-pullback setup still holds: Industrials is the only lean-in sector with positive evidence in the scan, and crash radar is calm at 37. I'm revising two things: the watchlist max_dollars was recorded as 0.07, which conflicts with the stated $250 slice, so I'm correcting it to 250; and Consumer Staples comes off the lean-in list because no staples name is tradable in tomorrow's scan (AAP",
   "symbol": "IWM"
+ },
+ {
+  "time": "2026-11-19T09:36:31-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-86%) (tried 0.42, 0.28, 0.15, 0.01; mark 0.47, natural -2.35)"
+ },
+ {
+  "time": "2026-11-19T09:37:56-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-77%) (tried 0.92, 0.61, 0.31, 0.01; mark 0.97, natural -2.17)"
+ },
+ {
+  "time": "2026-11-19T09:38:02-05:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "TGT",
+  "qty": 0.4685,
+  "entry": 168.362,
+  "exit": 165.414,
+  "pnl": -1.38,
+  "note": "agent: Breakout at 167.45 failed and TGT trades at 166.59, below entry, in an avoided sector. Exiting per the game plan at the ",
+  "opened": "2026-11-18T12:08:20-05:00",
+  "confidence": 3,
+  "thesis": "TGT cleared its 40-day breakout at 167.45 on 3.3x relative volume with ROC20 +3.5% and 23% above its 200-day SMA; the 158.63 stop (2 ATR) risks about $10 on one share, roughly 1.5% of equity, so I'm taking this clean trend setup despite my Consumer Staples caution."
+ },
+ {
+  "time": "2026-11-19T09:38:10-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "SAP",
+  "instrument": "stock",
+  "qty": 0.2419,
+  "price": 206.29,
+  "cost": 49.9,
+  "stop": 197.36,
+  "thesis": "SAP RSI(2) 0.6 washout 7.5% above its 200-day, a new-day re-entry under the game-plan trigger (at or below 210.61); live reward-to-risk is about 1.6:1 (206.69 to 221.71 target vs 197.36 stop), so this is a starter size.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-11-19T09:38:14-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "NVDA, AMD, MU, TSM, AVGO",
+  "note": "normal: Liquid semis and mega-caps are trending up above VWAP on solid volume, and the crash radar is calm, so normal sizing fits. SPY and QQQ are flat, so I'm keeping the set tight and using a modest target with a tight stop to limit chop damage."
  }
 ]

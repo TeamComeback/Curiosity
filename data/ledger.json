@@ -22575,5 +22575,61 @@
   ],
   "why": "Industrials is +$1.90 over 10 trades at a 50% win rate, and today's IWM win supports it. Consumer Staples (+$1.03 over 7) has no tradable names in the current scan, so it is not leaned into. Technology (-$1.35 over 53), Consumer Discretionary (-$0.72 over 11), and Communication Services (42% win rat",
   "expires": "2026-12-03"
+ },
+ {
+  "time": "2026-11-19T09:38:02-05:00",
+  "type": "trade_closed",
+  "agent": "trend",
+  "position_id": "pos-6e673a5286",
+  "symbol": "TGT",
+  "underlying": "TGT",
+  "sector": "Consumer Staples",
+  "instrument": "stock",
+  "entry": 168.362,
+  "exit": 165.414,
+  "pnl": -1.38,
+  "return_pct": -1.7,
+  "opened": "2026-11-18T12:08:20-05:00",
+  "why_entered": "TGT cleared its 40-day breakout at 167.45 on 3.3x relative volume with ROC20 +3.5% and 23% above its 200-day SMA; the 158.63 stop (2 ATR) risks about $10 on one share, roughly 1.5% of equity, so I'm taking this clean trend setup despite my Consumer Staples caution.",
+  "why_exited": "agent: Breakout at 167.45 failed and TGT trades at 166.59, below entry, in an avoided sector. Exiting per the game plan at the "
+ },
+ {
+  "time": "2026-11-19T09:38:10-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-a2d196d244",
+  "symbol": "SAP",
+  "underlying": "SAP",
+  "sector": "Consumer Staples",
+  "instrument": "stock",
+  "qty": 0.2419,
+  "price": 206.29,
+  "cost": 49.9,
+  "stop": 197.36,
+  "why": "SAP RSI(2) 0.6 washout 7.5% above its 200-day, a new-day re-entry under the game-plan trigger (at or below 210.61); live reward-to-risk is about 1.6:1 (206.69 to 221.71 target vs 197.36 stop), so this is a starter size.",
+  "confidence": 2,
+  "signals": {
+   "rsi2": 0.6,
+   "pct_vs_sma200": 7.5,
+   "pct_vs_sma5": -6.8
+  },
+  "from_plan": true
+ },
+ {
+  "time": "2026-11-19T09:38:14-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "NVDA",
+   "AMD",
+   "MU",
+   "TSM",
+   "AVGO",
+   "QQQ",
+   "SPY",
+   "IWM"
+  ],
+  "aggression": "normal",
+  "why": "Liquid semis and mega-caps are trending up above VWAP on solid volume, and the crash radar is calm, so normal sizing fits. SPY and QQQ are flat, so I'm keeping the set tight and using a modest target with a tight stop to limit chop damage."
  }
 ]

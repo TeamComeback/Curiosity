@@ -9,17 +9,14 @@
   "start_balance": 1000.0
  },
  "entries": {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "counts": {
-   "monkey": 2,
-   "meanrev": 3,
-   "scalper": 4,
-   "trend": 1
+   "meanrev": 1
   }
  },
  "agents": {
   "trend": {
-   "cash": 583.52,
+   "cash": 661.02,
    "reserved": 0.0,
    "positions": {
     "pos-3dac13e0ef": {
@@ -29,7 +26,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.9,
-     "mark": 0.43,
+     "mark": 1.41,
      "expiry": "2026-12-18",
      "strike": 2.0,
      "delta": -0.34,
@@ -48,43 +45,17 @@
      },
      "sector": "Broad market / other",
      "low_water": 2.01,
-     "exit_half_spread": 0.435
-    },
-    "pos-6e673a5286": {
-     "kind": "stock",
-     "symbol": "TGT",
-     "qty": 0.4685,
-     "entry": 168.362,
-     "cost": 78.88,
-     "direction": "long",
-     "stop": 158.63,
-     "atr": 5.192,
-     "opened": "2026-11-18T12:08:20-05:00",
-     "thesis": "TGT cleared its 40-day breakout at 167.45 on 3.3x relative volume with ROC20 +3.5% and 23% above its 200-day SMA; the 158.63 stop (2 ATR) risks about $10 on one share, roughly 1.5% of equity, so I'm taking this clean trend setup despite my Consumer Staples caution.",
-     "confidence": 3,
-     "signals": {
-      "rel_volume": 3.34,
-      "roc20_pct": 3.5,
-      "pct_vs_sma50": 8.2,
-      "pct_vs_sma200": 23.1
-     },
-     "sector": "Consumer Staples",
-     "last": 166.49,
-     "high_water": 171.145
+     "exit_half_spread": 1.41
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 25,
+   "closed": 26,
    "wins": 4,
    "peak": 1340.54,
    "max_dd": 0.4754,
    "notes": [
-    {
-     "date": "2026-11-16",
-     "note": "VALE put (3.9x breakdown) and SLV put both skipped: a ~$35 option budget (5% cap) can't buy a 40-60 DTE put on a $10-42 stock, and SLV is in the -$59.74 Consumer Discretionary bucket. Stay in cash for a Health Care close above trigger on 2.5x+ volume; CLSX holds to its 2.98 stop."
-    },
     {
      "date": "2026-11-16",
      "note": "No trade today: VALE put doesn't fit the ~$35 option budget, SLV is in the losing Consumer Discretionary bucket, and no Health Care trigger has closed on 2.5x+ volume. Keep settled cash and hold CLSX to its 2.98 underlying stop."
@@ -240,6 +211,10 @@
     {
      "date": "2026-11-18",
      "note": "No entries today: FNGR is a sub-$0.30 collapse in an avoid-listed sector, COPX is in the avoid-listed Technology sector, and no game-plan trigger (IBN, EW, NFLX, SE) has fired. Holding TGT to its 158.63 stop and CLSX to its 2.98 underlying stop, with cash settled for triggers."
+    },
+    {
+     "date": "2026-11-19",
+     "note": "No live candidates today and no IBN/DIS/NFLX/SE triggers have fired, so keep cash settled. CLSX stays on its 2.98 underlying stop, which is already set."
     }
    ],
    "last_exits": {
@@ -267,7 +242,8 @@
     "DJTU": "2026-11-11",
     "TLS": "2026-11-13",
     "GLD": "2026-11-16",
-    "DIS": "2026-11-17"
+    "DIS": "2026-11-17",
+    "TGT": "2026-11-19"
    },
    "plan": {
     "for_day": "2026-11-19",
@@ -427,7 +403,13 @@
     "settled_cash_at_plan": 583.52,
     "budgets_clamped": 0
    },
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 77.5,
+     "settles": "2026-11-20",
+     "note": "sold TGT"
+    }
+   ],
    "focus": {
     "lean_in": [
      "Communication Services"
@@ -1227,7 +1209,7 @@
    ]
   },
   "meanrev": {
-   "cash": 369.51,
+   "cash": 319.61,
    "reserved": 0.0,
    "positions": {
     "pos-dc107bcf5c": {
@@ -1248,7 +1230,7 @@
       "pct_vs_sma5": -4.4
      },
      "sector": "Broad market / other",
-     "last": 81.385
+     "last": 80.065
     },
     "pos-87ffe95b10": {
      "kind": "stock",
@@ -1268,7 +1250,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 481.56
+     "last": 479.89
     },
     "pos-caba0983a7": {
      "kind": "stock",
@@ -1288,7 +1270,7 @@
       "pct_vs_sma5": -2.9
      },
      "sector": "Health Care",
-     "last": 444.435
+     "last": 442.95
     },
     "pos-c4618673be": {
      "kind": "stock",
@@ -1308,7 +1290,7 @@
       "pct_vs_sma5": -5.1
      },
      "sector": "Consumer Staples",
-     "last": 230.12
+     "last": 229.0
     },
     "pos-7c659f7cde": {
      "kind": "stock",
@@ -1328,7 +1310,27 @@
       "pct_vs_sma5": -2.5
      },
      "sector": "Health Care",
-     "last": 155.45
+     "last": 153.03
+    },
+    "pos-a2d196d244": {
+     "kind": "stock",
+     "symbol": "SAP",
+     "qty": 0.2419,
+     "entry": 206.29,
+     "cost": 49.9,
+     "direction": "long",
+     "stop": 197.36,
+     "atr": 6.221,
+     "opened": "2026-11-19T09:38:10-05:00",
+     "thesis": "SAP RSI(2) 0.6 washout 7.5% above its 200-day, a new-day re-entry under the game-plan trigger (at or below 210.61); live reward-to-risk is about 1.6:1 (206.69 to 221.71 target vs 197.36 stop), so this is a starter size.",
+     "confidence": 2,
+     "signals": {
+      "rsi2": 0.6,
+      "pct_vs_sma200": 7.5,
+      "pct_vs_sma5": -6.8
+     },
+     "sector": "Consumer Staples",
+     "last": 206.69
     }
    },
    "status": "active",
@@ -1337,12 +1339,8 @@
    "closed": 21,
    "wins": 13,
    "peak": 1029.08,
-   "max_dd": 0.0426,
+   "max_dd": 0.0474,
    "notes": [
-    {
-     "date": "2026-11-16",
-     "note": "No candidate clears the 1:1 stop-to-target floor at live prices (ROST ~0.94, ICLR ~0.69, WAT/MRNA ~0.58, GM ~0.48, HALO ~0.2). Keep the $880 settled cash and wait for a washout that clears 1:1."
-    },
     {
      "date": "2026-11-16",
      "note": "No candidate clears my 1:1 stop-to-target floor at live prices (best is ICLR at about 0.63:1; HALO ~0.2, CCL ~0.48, MRNA ~0.53, WAT ~0.48, GM ~0.44). Keep the $880 settled cash and wait for a washout that clears 1:1."
@@ -1498,6 +1496,10 @@
     {
      "date": "2026-11-18",
      "note": "15:38: no entries. Every live candidate either fails the 0.8:1 floor (TEAM 0.71, MRNA 0.44), duplicates a held name (ACN, AMGN, NVS), or is a same-day SAP re-entry after its stop-out. Game-plan triggers (EMR, DE, NDAQ, IBB, IR) are not in today's candidate list, so there is no live order to place. H"
+    },
+    {
+     "date": "2026-11-19",
+     "note": "Only SAP clears the floor at live prices: SPGI is about 0.72:1, TRV 0.57:1, and MCO/NVS/AMGN/ACN are already held. Technology is on the avoid list and SAP is a software name, so keep this small and exit at the stop."
     }
    ],
    "last_exits": {
@@ -2799,7 +2801,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 730.17
+     "last": 739.285
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2815,7 +2817,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 730.17
+     "last": 739.285
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2831,7 +2833,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 730.17
+     "last": 739.285
     }
    },
    "status": "active",
@@ -2864,7 +2866,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 52.2
+     "last": 56.0
     },
     "pos-83bf9288a4": {
      "kind": "stock",
@@ -2881,7 +2883,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 114.44
+     "last": 116.915
     }
    },
    "status": "active",
@@ -2932,7 +2934,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.28,
+     "mark": 0.47,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2952,7 +2954,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 3.335,
+     "exit_half_spread": 2.815,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2977,7 +2979,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.67,
+     "mark": 0.97,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -2997,7 +2999,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 1.005,
+     "exit_half_spread": 3.135,
      "peak_mark": 1.09
     }
    },
@@ -3559,17 +3561,22 @@
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [],
    "playbook": {
-    "date": "2026-11-18",
-    "made_at": "2026-11-18T15:38-05:00",
+    "date": "2026-11-19",
+    "made_at": "2026-11-19T09:38-05:00",
     "watch": [
+     "NVDA",
      "AMD",
-     "AMZN",
-     "AVGO"
+     "MU",
+     "TSM",
+     "AVGO",
+     "QQQ",
+     "SPY",
+     "IWM"
     ],
-    "aggression": "defensive",
-    "why": "Settled cash is nearly zero, so this only sets up tomorrow. AMD and AMZN are above their opening ranges with rising 1-minute trends, but SPY is below its 200-day average with a -4.8% 20-day rate of change, so I'm keeping size at half with VWAP bounces only.",
-    "slices": 2,
-    "target_pct": 0.5,
+    "aggression": "normal",
+    "why": "Liquid semis and mega-caps are trending up above VWAP on solid volume, and the crash radar is calm, so normal sizing fits. SPY and QQQ are flat, so I'm keeping the set tight and using a modest target with a tight stop to limit chop damage.",
+    "slices": 4,
+    "target_pct": 0.6,
     "stop_pct": 0.3,
     "max_hold_min": 45
    },
