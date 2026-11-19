@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-11-06T12:38:15-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "qty": 0.3388,
-  "entry": 740.064,
-  "exit": 735.78,
-  "pnl": -1.45,
-  "note": "stop (-0.58%)",
-  "opened": "2026-11-06T11:53:09-05:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on SPY: 1.89x volume, +0.15% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-11-06T12:38:41-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, GOOGL",
-  "note": "stand_down: Crash radar is at 42 and most of the AI and semis complex is breaking lower, with 1-minute trends down in nearly every large name. The SPY scalp already hit its stop, and the only setup on the board (LQD) has too little range to hit a 0.5% target. I'm standing down and keeping SPY and GOOGL on watch"
- },
- {
-  "time": "2026-11-06T13:06:40-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.25)"
- },
- {
-  "time": "2026-11-06T13:07:08-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AAPL, MSFT, XLP, GOOGL, SPY",
-  "note": "defensive: Semis and AI are breaking lower, but AAPL, MSFT, and XLP are holding above their opening ranges with rising 1-minute trends, so rotation favors defensive names. I'm allowing only half-size VWAP bounces on those names with one slice and a shorter 30-minute limit, since the crash radar is at 42."
- },
- {
-  "time": "2026-11-06T13:36:33-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.25)"
- },
- {
   "time": "2026-11-06T13:36:59-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6176,5 +6134,45 @@
   "agent": "scalper",
   "symbol": "XLE",
   "note": "VWAP pullback bounce skipped: 1.47x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-19T12:05:05-05:00",
+  "type": "radar",
+  "agent": "blackswan",
+  "note": "Crash Radar moved from calm to WARNING (42/100). Biggest signals: SPY trend 75, Breadth 70"
+ },
+ {
+  "time": "2026-11-19T12:06:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-65%) (tried 1.11, 0.74, 0.37, 0.01; mark 1.16, natural -0.95)"
+ },
+ {
+  "time": "2026-11-19T12:07:55-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-76%) (tried 0.93, 0.62, 0.31, 0.01; mark 0.98, natural -1.67)"
+ },
+ {
+  "time": "2026-11-19T12:08:09-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "RSP",
+  "instrument": "stock",
+  "qty": 0.2831,
+  "price": 211.966,
+  "cost": 60.01,
+  "stop": 207.6,
+  "thesis": "RSP RSI(2) 1.5 washout 1.3% above its 200-day; at the live 211.89 price, the 207.60 stop to the 216.66 target is about 1.11:1, clearing the 0.8:1 floor. The stale 0.74 in my notes doesn't apply. Equal-weight Financials is a lean-in sector, sized as a starter with SPY below its 200-day and crash radar at 42.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-11-19T12:08:16-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, IWM",
+  "note": "stand_down: SPY is down 2.4% and 1.4% below VWAP on a 1-minute downtrend, with most candidates (NVDA, AMD, MSFT, SOXL, TQQQ) breaking down and crash radar at 42. Defensive VWAP bounces are unreliable in a broad selloff like this, so I'm standing down and keeping SPY, QQQ and IWM on watch for a stabilization."
  }
 ]
