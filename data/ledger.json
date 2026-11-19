@@ -22724,5 +22724,59 @@
   ],
   "aggression": "defensive",
   "why": "Most of the tape is below VWAP and trending down, with SPY -1.4% on the day, so I'm keeping only defensive half-size VWAP bounces. XLP and LQD are the only names holding above VWAP on the 1-minute, and their tight ranges call for a smaller target and a shorter hold."
+ },
+ {
+  "time": "2026-11-19T11:05:07-05:00",
+  "type": "trade_closed",
+  "agent": "trend",
+  "position_id": "pos-3dac13e0ef",
+  "symbol": "CLSX261218P00002000",
+  "underlying": "CLSX",
+  "sector": "Broad market / other",
+  "instrument": "option",
+  "entry": 0.9,
+  "exit": 0.05,
+  "pnl": -164.0,
+  "return_pct": -126.6,
+  "opened": "2026-11-05T12:37:03-05:00",
+  "why_entered": "CLSX closed below its 55-day low at 2.98 on 3.2x relative volume, trading at 2.01 and 87% below its 200-day SMA, so the breakdown is confirmed; the 3.63 underlying stop sits above the breakdown level and caps the premium at risk.",
+  "why_exited": "option stop (-53%)"
+ },
+ {
+  "time": "2026-11-19T11:08:10-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-e446ae5f43",
+  "symbol": "TRV",
+  "underlying": "TRV",
+  "sector": "Financials",
+  "instrument": "stock",
+  "qty": 0.1551,
+  "price": 387.114,
+  "cost": 60.04,
+  "stop": 375.15,
+  "why": "TRV RSI(2) 1.8 washout 14.5% above its 200-day in a calm regime (radar 39); live reward-to-risk is about 0.83:1 (386.77 to 396.39 target vs 375.15 stop), clearing my 0.8:1 floor, so the stale 0.57 and 0.68 figures in the notes don't apply; Financials is the lean-in sector, sized as a starter.",
+  "confidence": 2,
+  "signals": {
+   "rsi2": 1.8,
+   "pct_vs_sma200": 14.5,
+   "pct_vs_sma5": -2.4
+  },
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-19T11:09:01-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "XLP",
+   "AAPL",
+   "IWM",
+   "SPY",
+   "QQQ",
+   "AMZN"
+  ],
+  "aggression": "defensive",
+  "why": "SPY is down 1.3% and below VWAP with a weak 20-day trend, so I'm keeping half-size VWAP bounces only. XLP, AAPL, IWM and AMZN are hovering near or just below VWAP on uptrending 1-minute bars, so they're the cleanest bounce candidates, and the small target and short hold suit the choppy tape."
  }
 ]
