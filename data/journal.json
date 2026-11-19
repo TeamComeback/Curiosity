@@ -1,40 +1,5 @@
 [
  {
-  "time": "2026-11-06T10:37:14-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "XLP, XLV, AAPL, MSFT, LLY",
-  "note": "defensive: SPY and most AI/semis are trending down and the crash radar is at 42, so I'm keeping size small and favoring defensive rotation. XLP and XLV are trending up above their opening ranges, AAPL and MSFT are up with volume, and LLY is up 2.3% on the day but has slipped to a 1-minute downtrend, so it need"
- },
- {
-  "time": "2026-11-06T10:39:18-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "LLY",
-  "note": "VWAP pullback bounce skipped: 0.9x volume < 1.5x"
- },
- {
-  "time": "2026-11-06T11:06:55-05:00",
-  "type": "exit_unfilled",
-  "agent": "volsell",
-  "symbol": "TLT",
-  "note": "profit target (50% of credit)"
- },
- {
-  "time": "2026-11-06T11:07:16-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.91)"
- },
- {
-  "time": "2026-11-06T11:08:04-05:00",
-  "type": "exit_unfilled",
-  "agent": "volsell",
-  "symbol": "TLT",
-  "note": "agent: Mark is 0.07 against a 0.21 entry, so about 67% of the credit is captured and the 50% target is already met. Buying back"
- },
- {
   "time": "2026-11-06T11:08:18-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6177,5 +6142,46 @@
   "agent": "scalper",
   "symbol": "MU, INTC, SMH, TSM, MSFT",
   "note": "defensive: Most of the tape is below VWAP and trending down on the 1-minute, with SPY and QQQ flat, so I'm dropping to defensive to limit breakout chases. MU and INTC are the strongest names above their opening range, and TSM, MSFT, and SMH are holding above VWAP, so they're the best VWAP-bounce candidates at "
+ },
+ {
+  "time": "2026-11-19T10:35:25-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "CLSX261218P00002000",
+  "note": "option stop (-57%)"
+ },
+ {
+  "time": "2026-11-19T10:36:51-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-65%) (tried 1.11, 0.74, 0.37, 0.01; mark 1.16, natural -0.95)"
+ },
+ {
+  "time": "2026-11-19T10:38:16-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-78%) (tried 0.86, 0.57, 0.29, 0.01; mark 0.91, natural -1.87)"
+ },
+ {
+  "time": "2026-11-19T10:38:30-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "DE",
+  "instrument": "stock",
+  "qty": 0.1199,
+  "price": 625.052,
+  "cost": 74.94,
+  "stop": 598.3,
+  "thesis": "DE RSI(2) 0.6 washout 1.8% above its 200-day with a 598.30 stop and 649.31 target, about 0.88:1, clearing the 0.8:1 floor in a calm radar regime (39); a starter size because SPY is below its 200-day and the book already has six open positions.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-11-19T10:38:40-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "XLP, LQD, SPY, QQQ, IWM",
+  "note": "defensive: Most of the tape is below VWAP and trending down, with SPY -1.4% on the day, so I'm keeping only defensive half-size VWAP bounces. XLP and LQD are the only names holding above VWAP on the 1-minute, and their tight ranges call for a smaller target and a shorter hold."
  }
 ]
