@@ -1,48 +1,5 @@
 [
  {
-  "time": "2026-11-06T16:41:58-05:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "After-close review: revise. Both of today's VWAP-pullback trades lost (SPY stopped at -0.58%, MSFT timed out at -0.12%), and Technology remains 46 trades at -$2.17. The 0.3% stop is tight against roughly 0.34% slippage and a 3-4% ATR in the names being traded, so I'm narrowing the plan to one manually verified setup rather than keeping the broader scan.",
-  "symbol": "GOOGL"
- },
- {
-  "time": "2026-11-06T17:30:09-05:00",
-  "type": "param_change",
-  "agent": "trend",
-  "note": "min_rel_volume: 2.0 -> 2.5 (Confidence-4 trades with extreme volume averaged +63.7, while confidence-3 trades at about 2-3x volume averaged -9.48 and were mostly failed breakouts. Raising the volume bar should cut marginal entri)"
- },
- {
-  "time": "2026-11-06T17:30:19-05:00",
-  "type": "param_change",
-  "agent": "meanrev",
-  "note": "stop_atr: 2.0 -> 1.5 (Cuts the size of each loss by about 25% to narrow the gap between the -21 average loss and the +3 average win. The stops I've been taking are very wide (DT, TWLO), and one stop-out shouldn't erase a w)"
- },
- {
-  "time": "2026-11-06T17:30:19-05:00",
-  "type": "param_change",
-  "agent": "meanrev",
-  "note": "max_hold_days: 7 -> 5 (Frees capital sooner so cash isn't stuck in stale positions. Washouts that haven't snapped back within about a week are losing their edge, and faster recycling helps compounding. The time-stop exit st)"
- },
- {
-  "time": "2026-11-06T17:30:29-05:00",
-  "type": "param_change",
-  "agent": "volsell",
-  "note": "take_profit: 0.5 -> 0.65 (Closing at 50% of a $15-23 credit nets too little after fees and slippage, so 'winners' book as losses. Holding to 70% lets gross profit clear friction, while theta is still fast with 21+ DTE and the )"
- },
- {
-  "time": "2026-11-06T17:30:29-05:00",
-  "type": "param_change",
-  "agent": "volsell",
-  "note": "short_delta: 0.25 -> 0.3 (Credits at 0.25 delta were near the 0.15 floor. A 0.30 delta short collects more premium per contract, improving the credit-to-friction ratio. Keeping width at 1 holds max loss near $80-100, about 10%)"
- },
- {
-  "time": "2026-11-08T21:44:28-05:00",
-  "type": "focus",
-  "agent": "trend",
-  "note": "Leaning into Broad market / other; avoiding Energy, Consumer Staples, Technology. Broad market is the only clearly profitable sector (+$91 over 7 trades). Health Care has no live scan setups and a small, mixed record, so I'm dropping it from the lean-in list."
- },
- {
   "time": "2026-11-08T21:44:28-05:00",
   "type": "plan",
   "agent": "trend",
@@ -6167,5 +6124,49 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-75%) (tried 1.00, 0.66, 0.34, 0.01; mark 1.05, natural -1.82)"
+ },
+ {
+  "time": "2026-11-19T16:40:16-05:00",
+  "type": "recap",
+  "note": "A red day with no winners: 3 trades closed, all losses, for -$172.53 realized, while the crash radar sits at 42 (warning). Trend Co. took almost all of the damage, and SPY fell 1.83%."
+ },
+ {
+  "time": "2026-11-19T16:40:16-05:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 3 of 4 picks moved the planned way, avg +1.10%"
+ },
+ {
+  "time": "2026-11-19T16:40:31-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: revise. TGT and CLSX are both closed, so there is nothing to manage. The fresh scan moved the SE breakdown level to 68.55 (from 69.11), and DIS's level is now 123.34 (from 122.71), so the triggers need updating. Communication Services is still the only sector with live setups.",
+  "symbol": "IBN, DIS, NFLX, SE"
+ },
+ {
+  "time": "2026-11-19T16:40:31-05:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 0 of 3 picks moved the planned way, avg -2.66%"
+ },
+ {
+  "time": "2026-11-19T16:41:05-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: revise. TRV's live reward-to-risk is about 0.36:1 at 390.78, not the 0.83:1 in my notes, and SPGI and SAP are already filled. MRK is now in the scan at 132.74, below my trigger.",
+  "symbol": "MRK, BNY"
+ },
+ {
+  "time": "2026-11-19T16:41:05-05:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -2.20%"
+ },
+ {
+  "time": "2026-11-19T16:41:16-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's scan was a broad selloff: 17 of 19 names were down, IWM fell 2.2%, breadth is weak (35.9% of stocks above their 50-day), and crash radar is at 42 (warning). The pre-market trigger requires no broad selloff, so IWM needs a stricter entry filter and lower conviction.",
+  "symbol": "IWM"
  }
 ]
