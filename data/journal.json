@@ -1,60 +1,5 @@
 [
  {
-  "time": "2026-11-09T09:38:42-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "GOOGL, META, AAPL, SPY, AVGO",
-  "note": "defensive: Crash radar is at warning (41) and the AI-hardware names are weakening, so I'm keeping size small with half-size VWAP bounces only. I'm watching the liquid, trending names that held above VWAP, and I'll verify the 1.5x relative-volume impulse manually because the filter may not apply to pullbacks."
- },
- {
-  "time": "2026-11-09T09:50:56-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "AAPL",
-  "note": "VWAP pullback bounce skipped: 0.77x volume < 1.5x"
- },
- {
-  "time": "2026-11-09T09:50:56-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "note": "VWAP pullback bounce skipped: 1.0x volume < 1.5x"
- },
- {
-  "time": "2026-11-09T09:52:57-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "META",
-  "note": "VWAP pullback bounce skipped: 0.5x volume < 1.5x"
- },
- {
-  "time": "2026-11-09T10:05:59-05:00",
-  "type": "radar",
-  "agent": "blackswan",
-  "note": "Crash Radar moved from warning to CALM (40/100). Biggest signals: Credit stress 91, Flight to safety 81"
- },
- {
-  "time": "2026-11-09T10:06:19-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "VALE261218P00012000",
-  "note": "trailing stop on underlying"
- },
- {
-  "time": "2026-11-09T10:06:23-05:00",
-  "type": "close",
-  "agent": "meanrev",
-  "symbol": "DT",
-  "qty": 1.5364,
-  "entry": 47.267885,
-  "exit": 43.37,
-  "pnl": -10.55,
-  "note": "time stop",
-  "opened": "2026-11-03T10:06:43-05:00",
-  "confidence": 3,
-  "thesis": "DT is a fresh RSI(2) 0.1 washout still 6% above its 200-day, with target 56.80 vs stop 42.87 at about 2.1:1 on the scan price; this is a new setup after yesterday's stop-out, not a re-run of the old trade."
- },
- {
   "time": "2026-11-09T10:07:46-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6134,5 +6079,60 @@
   "agent": "scalper",
   "symbol": "IWM, LQD",
   "note": "stand_down: Regime is still bearish (SPY 3.1% below its 200-day SMA, crash radar 41) and most of the scan is red, with SPY and IWM both below VWAP. IWM hasn't pulled back to VWAP and held, so the overnight trigger isn't met; LQD is the only clean uptrend and I'm watching it for a defensive bounce, but I'm not t"
+ },
+ {
+  "time": "2026-11-20T11:06:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-67%) (tried 1.03, 0.68, 0.35, 0.01; mark 1.08, natural -0.66)"
+ },
+ {
+  "time": "2026-11-20T11:07:53-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-94%) (tried 0.21, 0.14, 0.08, 0.01; mark 0.26, natural -2.45)"
+ },
+ {
+  "time": "2026-11-20T11:07:59-05:00",
+  "type": "sizing",
+  "agent": "trend",
+  "symbol": "SE",
+  "note": "$150.00 -> $62.65: capped at 20% of the firm; half size while win rate 4/27 is under 30%"
+ },
+ {
+  "time": "2026-11-20T11:08:00-05:00",
+  "type": "rule_block",
+  "agent": "trend",
+  "symbol": "SE",
+  "note": "no put affordable within $62.65"
+ },
+ {
+  "time": "2026-11-20T11:08:06-05:00",
+  "type": "open",
+  "agent": "meanrev",
+  "symbol": "UTHR",
+  "instrument": "stock",
+  "qty": 0.1628,
+  "price": 554.12,
+  "cost": 90.21,
+  "stop": 529.38,
+  "thesis": "UTHR RSI(2) 0.7 washout 2.4% above its 200-day, now at 552.55 and under the game-plan trigger of 562; stop 529.38 to target 572.17 is about 0.85:1, clearing the 0.8:1 floor. The stop is 4.2% away, so risk is about $3.80 on a $90 starter.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-11-20T11:08:54-05:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "SLV",
+  "note": "credit not filled at 0.18, 0.16 (mid 0.18, natural 0.11, floor 0.15)"
+ },
+ {
+  "time": "2026-11-20T11:08:57-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "IWM, SPY",
+  "note": "stand_down: Most of the scan is red, SPY is down about 1% and below VWAP, and the regime is still bearish with crash radar at 42, so the overnight IWM trigger (SPY no worse than about -0.5% and most names not red) isn't met. Staying flat and watching IWM for a VWAP hold with volume."
  }
 ]

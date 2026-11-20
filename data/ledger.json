@@ -23163,5 +23163,38 @@
   ],
   "aggression": "stand_down",
   "why": "Regime is still bearish (SPY 3.1% below its 200-day SMA, crash radar 41) and most of the scan is red, with SPY and IWM both below VWAP. IWM hasn't pulled back to VWAP and held, so the overnight trigger isn't met; LQD is the only clean uptrend and I'm watching it for a defensive bounce, but I'm not t"
+ },
+ {
+  "time": "2026-11-20T11:08:06-05:00",
+  "type": "trade_opened",
+  "agent": "meanrev",
+  "position_id": "pos-af5c8c31d9",
+  "symbol": "UTHR",
+  "underlying": "UTHR",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "qty": 0.1628,
+  "price": 554.12,
+  "cost": 90.21,
+  "stop": 529.38,
+  "why": "UTHR RSI(2) 0.7 washout 2.4% above its 200-day, now at 552.55 and under the game-plan trigger of 562; stop 529.38 to target 572.17 is about 0.85:1, clearing the 0.8:1 floor. The stop is 4.2% away, so risk is about $3.80 on a $90 starter.",
+  "confidence": 2,
+  "signals": {
+   "rsi2": 0.7,
+   "pct_vs_sma200": 2.4,
+   "pct_vs_sma5": -3.4
+  },
+  "from_plan": true
+ },
+ {
+  "time": "2026-11-20T11:08:57-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "IWM",
+   "SPY"
+  ],
+  "aggression": "stand_down",
+  "why": "Most of the scan is red, SPY is down about 1% and below VWAP, and the regime is still bearish with crash radar at 42, so the overnight IWM trigger (SPY no worse than about -0.5% and most names not red) isn't met. Staying flat and watching IWM for a VWAP hold with volume."
  }
 ]
