@@ -23125,5 +23125,32 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-20T09:35:08-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-e446ae5f43",
+  "symbol": "TRV",
+  "underlying": "TRV",
+  "sector": "Financials",
+  "instrument": "stock",
+  "entry": 387.114,
+  "exit": 396.316,
+  "pnl": 1.43,
+  "return_pct": 2.4,
+  "opened": "2026-11-19T11:08:10-05:00",
+  "why_entered": "TRV RSI(2) 1.8 washout 14.5% above its 200-day in a calm regime (radar 39); live reward-to-risk is about 0.83:1 (386.77 to 396.39 target vs 375.15 stop), clearing my 0.8:1 floor, so the stale 0.57 and 0.68 figures in the notes don't apply; Financials is the lean-in sector, sized as a starter.",
+  "why_exited": "snap-back (RSI2 69)"
+ },
+ {
+  "time": "2026-11-20T09:37:51-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "IWM"
+  ],
+  "aggression": "stand_down",
+  "why": "Most of the scan is red, SPY is below its 200-day SMA with a crash radar warning at 41, and IWM is above VWAP rather than pulling back to it, so the overnight plan's entry conditions aren't met. Watching IWM only for a VWAP pullback that holds on at least 1.5x relative volume."
  }
 ]

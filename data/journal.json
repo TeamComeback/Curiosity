@@ -1,32 +1,5 @@
 [
  {
-  "time": "2026-11-09T07:40:54-05:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "Pre-market call: revise. Cash is now $194.35 settled, and XLE's live price of 61.64 sits just under the 62 trigger, so a small entry clears 1:1 for the first time. The other scan names are either already held or fail the 1:1 floor.",
-  "symbol": "XLE"
- },
- {
-  "time": "2026-11-09T07:41:07-05:00",
-  "type": "focus",
-  "agent": "volsell",
-  "note": "Leaning into Broad market / other; avoiding Technology, Energy, Materials, Financials, Industrials. Broad market / other is the only sector where my open trades (IWM, TLT) and the fresh scan (EEM, IV/RV 1.25) show a working setup. Financials (-16.5) and Industrials (-10.5) have lost money in my results, and Technology and Energy carry gap or headline risk. The sample is small, so I'm keeping the f"
- },
- {
-  "time": "2026-11-09T07:41:07-05:00",
-  "type": "plan",
-  "agent": "volsell",
-  "note": "Pre-market call: revise. The fresh scan now shows EEM at 1.25 IV/RV, up from 1.11 in my plan, with a bear-call trend side, so the setup is stronger than when I wrote it. My record is still weak (25% hit rate, Financials and Industrials losses), so I'm keeping the size at $85 and the 0.15 credit floor.",
-  "symbol": "EEM"
- },
- {
-  "time": "2026-11-09T07:41:15-05:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "Pre-market call: keep. Today's scan shows strong gains in AI-hardware names (AMD +10.9%, INTC +7.9%), but those moves are chase-prone and event-driven, and my Technology record is -$2.17 over 46 trades. The Nasdaq rebound and the 42 crash-radar reading (warning tier) don't justify changing the stand-aside default, so the GOOGL-only conditional plan still holds.",
-  "symbol": "GOOGL"
- },
- {
   "time": "2026-11-09T09:36:11-05:00",
   "type": "exit_unfilled",
   "agent": "trend",
@@ -6169,5 +6142,40 @@
   "agent": "scalper",
   "note": "Pre-market call: keep. Today's scan is broadly red (about 17 of 19 names down, including IWM at -2.2%), breadth is weak (35.9% above the 50-day), and crash radar is at 42, so the plan's own no-trade filter is likely to block the IWM setup. Nothing in the new data justifies changing the stand-aside stance.",
   "symbol": "IWM"
+ },
+ {
+  "time": "2026-11-20T09:35:08-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "TRV",
+  "qty": 0.1551,
+  "entry": 387.114,
+  "exit": 396.316,
+  "pnl": 1.43,
+  "note": "snap-back (RSI2 69)",
+  "opened": "2026-11-19T11:08:10-05:00",
+  "confidence": 2,
+  "thesis": "TRV RSI(2) 1.8 washout 14.5% above its 200-day in a calm regime (radar 39); live reward-to-risk is about 0.83:1 (386.77 to 396.39 target vs 375.15 stop), clearing my 0.8:1 floor, so the stale 0.57 and 0.68 figures in the notes don't apply; Financials is the lean-in sector, sized as a starter."
+ },
+ {
+  "time": "2026-11-20T09:36:33-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-77%) (tried 0.72, 0.48, 0.24, 0.01; mark 0.77, natural -0.3)"
+ },
+ {
+  "time": "2026-11-20T09:37:35-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.03, 0.02, 0.01; mark 0.08, natural -2.56)"
+ },
+ {
+  "time": "2026-11-20T09:37:51-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "IWM",
+  "note": "stand_down: Most of the scan is red, SPY is below its 200-day SMA with a crash radar warning at 41, and IWM is above VWAP rather than pulling back to it, so the overnight plan's entry conditions aren't met. Watching IWM only for a VWAP pullback that holds on at least 1.5x relative volume."
  }
 ]
