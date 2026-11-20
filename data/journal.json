@@ -1,36 +1,5 @@
 [
  {
-  "time": "2026-11-09T09:36:11-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "VALE261218P00012000",
-  "note": "trailing stop on underlying"
- },
- {
-  "time": "2026-11-09T09:36:11-05:00",
-  "type": "close",
-  "agent": "meanrev",
-  "symbol": "ILMN",
-  "qty": 0.6522,
-  "entry": 233.008,
-  "exit": 214.468,
-  "pnl": -12.09,
-  "note": "time stop",
-  "opened": "2026-11-02T09:37:04-05:00",
-  "confidence": 2,
-  "thesis": "ILMN RSI(2) 5.8 washout 30.6% above its 200-day in a calm regime (crash radar 25, SPY above its 200-day); target 264.77 vs stop 196.33 is about 1.03:1, the only candidate clearing my 1:1 floor, sized at the $150 plan cap as a low-conviction starter."
- },
- {
-  "time": "2026-11-09T09:36:32-05:00",
-  "type": "trim",
-  "agent": "meanrev",
-  "symbol": "DT",
-  "qty": 1.0,
-  "exit": 42.71,
-  "pnl": -4.56,
-  "note": "time stop"
- },
- {
   "time": "2026-11-09T09:36:32-05:00",
   "type": "close",
   "agent": "meanrev",
@@ -6177,5 +6146,26 @@
   "agent": "scalper",
   "symbol": "IWM",
   "note": "stand_down: Most of the scan is red, SPY is below its 200-day SMA with a crash radar warning at 41, and IWM is above VWAP rather than pulling back to it, so the overnight plan's entry conditions aren't met. Watching IWM only for a VWAP pullback that holds on at least 1.5x relative volume."
+ },
+ {
+  "time": "2026-11-20T10:06:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-69%) (tried 0.97, 0.64, 0.33, 0.01; mark 1.02, natural -0.74)"
+ },
+ {
+  "time": "2026-11-20T10:07:54-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-97%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -2.54)"
+ },
+ {
+  "time": "2026-11-20T10:08:54-05:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "SLV",
+  "note": "credit not filled at 0.16, 0.15 (mid 0.16, natural 0.12, floor 0.15)"
  }
 ]
