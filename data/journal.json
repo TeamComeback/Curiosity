@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-09T13:38:46-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-85%) (tried 0.57, 0.38, 0.19, 0.01; mark 0.62, natural -2.2)"
- },
- {
-  "time": "2026-11-09T13:38:55-05:00",
-  "type": "rule_block",
-  "agent": "trend",
-  "symbol": "CVRX",
-  "note": "no put affordable within $60.00"
- },
- {
-  "time": "2026-11-09T13:39:14-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "SPY, QQQ, SMH, SOXX, AMD",
-  "note": "defensive: Keeping defensive: SPY, QQQ, SMH, SOXX, AMD and MU are above VWAP on 1-minute uptrends and above their opening ranges, with the crash radar calm at 39. NVDA and AVGO have rolled to 1-minute downtrends, so I dropped them, and the midday tape is quiet, so half-size VWAP bounces with the current tight "
- },
- {
-  "time": "2026-11-09T14:06:03-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
   "time": "2026-11-09T14:07:28-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6108,5 +6080,29 @@
   "agent": "scalper",
   "note": "After-close review: revise. Today's scan was broadly red, Tech-led, and SPY is 9.3% below its 50-day with crash radar at 46 (warning). That makes the IWM setup more likely to fail on a selloff open, so I'm tightening the gate: no trade unless the open itself is not a selloff. The rel-volume filter looks enforced now, but the sample is still too small to tune.",
   "symbol": "IWM"
+ },
+ {
+  "time": "2026-11-20T17:30:06-05:00",
+  "type": "param_change",
+  "agent": "trend",
+  "note": "opt_delta: 0.637 -> 0.5 (A 0.637 delta put costs more premium per contract, so one failed trade takes a big share of a ~$600 account (CLSX lost 53% of premium, $164). A lower delta cuts the dollar risk per trade and leaves ro)"
+ },
+ {
+  "time": "2026-11-20T17:30:06-05:00",
+  "type": "param_change",
+  "agent": "trend",
+  "note": "min_rel_volume: 2.5 -> 3.0 (All five losers were breakouts or breakdowns that failed quickly, even with 3x+ volume. Tightening to the upper bound filters for stronger conviction and cuts marginal signals in a choppy tape. It als)"
+ },
+ {
+  "time": "2026-11-20T17:30:15-05:00",
+  "type": "param_change",
+  "agent": "meanrev",
+  "note": "stop_atr: 1.5 -> 2.0 (Stops at 1.5 ATR are cutting off washouts before they revert. Widening to 2.0 should raise the win rate toward what mean-reversion needs, given the roughly 0.3:1 win/loss ratio. It is a modest step, a)"
+ },
+ {
+  "time": "2026-11-20T17:30:15-05:00",
+  "type": "param_change",
+  "agent": "meanrev",
+  "note": "max_hold_days: 5 -> 7 (Five days may be too short for slower reversions, especially with wider stops. Seven days gives trades time to reach the RSI exit instead of leaving as stop-outs or time exits, and it is still a short)"
  }
 ]

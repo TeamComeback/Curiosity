@@ -1468,6 +1468,243 @@
  ],
  "reviews": [
   {
+   "date": "2026-11-20",
+   "agents": {
+    "trend": {
+     "summary": "This week went 0-for-5 with a -$213.78 P&L and a 53% max drawdown. Most of the damage came from two long puts on breakdowns (CLSX at -$164, GLD at -$44.50), while the stock breakouts were only small scratches (TLS, DIS, TGT). The failures look like false-breakout whipsaws in a choppy, down-trending tape. The put losses were outsized because the option premium stops are wide relative to the tiny account.",
+     "applied": [
+      {
+       "agent": "trend",
+       "param": "opt_delta",
+       "old": 0.637,
+       "new": 0.5,
+       "reason": "A 0.637 delta put costs more premium per contract, so one failed trade takes a big share of a ~$600 account (CLSX lost 53% of premium, $164). A lower delta cuts the dollar risk per trade and leaves ro"
+      },
+      {
+       "agent": "trend",
+       "param": "min_rel_volume",
+       "old": 2.5,
+       "new": 3.0,
+       "reason": "All five losers were breakouts or breakdowns that failed quickly, even with 3x+ volume. Tightening to the upper bound filters for stronger conviction and cuts marginal signals in a choppy tape. It als"
+      }
+     ],
+     "stats": {
+      "equity_now": 626.52,
+      "equity_week_ago": 715.52,
+      "closed_trades": 7,
+      "closed_this_week": 5,
+      "week_pnl": -213.78,
+      "win_rate": 0.0,
+      "avg_win": null,
+      "avg_loss": -50.15,
+      "max_drawdown_pct": 53.3,
+      "avg_pnl_by_confidence": {
+       "3": -45.18,
+       "4": -62.56
+      },
+      "this_week_trades": [
+       {
+        "symbol": "TLS",
+        "pnl": -0.78,
+        "note": "trailing stop on underlying",
+        "thesis": "TLS trades at 7.375, about 2.6% above its 55-day breakout at 7.19, on 3.49x relative volume, so the 2.5x confirmation is met; the 6.53 stop (2 ATR) risks about $14 on roughly 17 shares.",
+        "confidence": 3
+       },
+       {
+        "symbol": "GLD261218P00310000",
+        "pnl": -44.5,
+        "note": "agent: GLD is back above the 354.69 breakdown level, so the put thesis is invalidated. Exiting at the open per the game plan ra",
+        "thesis": "GLD closed below its 55-day low at 354.69 on 3.5x relative volume and sits 13.6% below its 200-day SMA, so the breakdown is confirmed; the 367.07 underlying stop caps risk, and a put limits the loss to the premium paid.",
+        "confidence": 3
+       },
+       {
+        "symbol": "DIS",
+        "pnl": -3.12,
+        "note": "trailing stop on underlying",
+        "thesis": "DIS cleared its 40-day breakout at 120.72 on 5.3x relative volume with ROC20 +8.4% and 16.8% above its 200-day SMA, in a calm tape (crash radar 27) and in the lean-in Communication Services sector; the 116.69 stop (2 ATR) risks about 3.8% of the entry, roughly $9 on this size.",
+        "confidence": 4
+       },
+       {
+        "symbol": "TGT",
+        "pnl": -1.38,
+        "note": "agent: Breakout at 167.45 failed and TGT trades at 166.59, below entry, in an avoided sector. Exiting per the game plan at the ",
+        "thesis": "TGT cleared its 40-day breakout at 167.45 on 3.3x relative volume with ROC20 +3.5% and 23% above its 200-day SMA; the 158.63 stop (2 ATR) risks about $10 on one share, roughly 1.5% of equity, so I'm taking this clean trend setup despite my Consumer Staples caution.",
+        "confidence": 3
+       },
+       {
+        "symbol": "CLSX261218P00002000",
+        "pnl": -164.0,
+        "note": "option stop (-53%)",
+        "thesis": "CLSX closed below its 55-day low at 2.98 on 3.2x relative volume, trading at 2.01 and 87% below its 200-day SMA, so the breakdown is confirmed; the 3.63 underlying stop sits above the breakdown level and caps the premium at risk.",
+        "confidence": 3
+       }
+      ]
+     }
+    },
+    "meanrev": {
+     "summary": "Equity fell from 997 to 964 this week, with a 37.5% win rate and an average win of $1.60 against an average loss of $4.78. The winners are small RSI-exit snap-backs, while the two largest losses (SAP, HZN) were stop-outs on RSI(2) of 2.5 and 2.7 washouts in calm regimes. A 1.5 ATR stop looks too tight for a mean-reversion setup, which needs room to wiggle before it snaps back. The sample is only 8 trades, so I'm making two modest tweaks rather than a rebuild.",
+     "applied": [
+      {
+       "agent": "meanrev",
+       "param": "stop_atr",
+       "old": 1.5,
+       "new": 2.0,
+       "reason": "Stops at 1.5 ATR are cutting off washouts before they revert. Widening to 2.0 should raise the win rate toward what mean-reversion needs, given the roughly 0.3:1 win/loss ratio. It is a modest step, a"
+      },
+      {
+       "agent": "meanrev",
+       "param": "max_hold_days",
+       "old": 5,
+       "new": 7,
+       "reason": "Five days may be too short for slower reversions, especially with wider stops. Seven days gives trades time to reach the RSI exit instead of leaving as stop-outs or time exits, and it is still a short"
+      }
+     ],
+     "stats": {
+      "equity_now": 963.93,
+      "equity_week_ago": 997.44,
+      "closed_trades": 8,
+      "closed_this_week": 5,
+      "week_pnl": -13.82,
+      "win_rate": 37.5,
+      "avg_win": 1.6,
+      "avg_loss": -4.78,
+      "max_drawdown_pct": 6.3,
+      "avg_pnl_by_confidence": {
+       "2": 0.1,
+       "3": -6.53
+      },
+      "this_week_trades": [
+       {
+        "symbol": "ALC",
+        "pnl": 3.26,
+        "note": "snap-back (RSI2 69)",
+        "thesis": "ALC RSI(2) 7.1 washout at about 1.0:1 (71.77 to 74.52 target vs 69.04 stop), the only candidate clearing the 1:1 floor at live prices; sized small because it sits right at the 200-day average.",
+        "confidence": 2
+       },
+       {
+        "symbol": "HALO",
+        "pnl": -2.78,
+        "note": "snap-back (RSI2 57)",
+        "thesis": "HALO is an RSI(2) 6.7 washout 21.8% above its 200-day, with live reward-to-risk about 1.4:1 (103.31 to 112.66 target vs 96.66 stop), and Health Care is a lean-in sector; the 103 trigger is within 0.3% of the live price, so I'm taking the planned $120 starter.",
+        "confidence": 2
+       },
+       {
+        "symbol": "SAP",
+        "pnl": -8.58,
+        "note": "stop loss (underlying)",
+        "thesis": "SAP RSI(2) 2.5 washout 16% above its 200-day in a calm regime (crash radar 27); live stop 214.83 to target 231.99 is about 1.11:1 on current prices, clearing my 1:1 floor, so I'm taking a starter size.",
+        "confidence": 3
+       },
+       {
+        "symbol": "HZN",
+        "pnl": -7.15,
+        "note": "stop loss (underlying)",
+        "thesis": "HZN RSI(2) 2.7 washout 10.7% above its 200-day in a calm regime (crash radar 28, SPY above its 200-day); live target 85.75 vs stop 79.38 is about 1.45:1, clearing my 1:1 floor, with a tight 3.2% risk on the position.",
+        "confidence": 3
+       },
+       {
+        "symbol": "TRV",
+        "pnl": 1.43,
+        "note": "snap-back (RSI2 69)",
+        "thesis": "TRV RSI(2) 1.8 washout 14.5% above its 200-day in a calm regime (radar 39); live reward-to-risk is about 0.83:1 (386.77 to 396.39 target vs 375.15 stop), clearing my 0.8:1 floor, so the stale 0.57 and 0.68 figures in the notes don't apply; Financials is the lean-in sector, sized as a starter.",
+        "confidence": 2
+       }
+      ]
+     }
+    },
+    "scalper": {
+     "summary": "Week P&L was -$0.54 on 10 trades (equity 1001.30 vs 1001.97), with drawdown at 0.7%. Win rate is 42.9% and avg win/avg loss is 0.70/0.49, so the expectancy is about +$0.09 per trade. That is thin and not statistically distinguishable from zero at 21 trades. The data doesn't support a specific retune yet, and changes would only add noise.",
+     "applied": [],
+     "stats": {
+      "equity_now": 1001.3,
+      "equity_week_ago": 1001.97,
+      "closed_trades": 21,
+      "closed_this_week": 10,
+      "week_pnl": -0.54,
+      "win_rate": 42.9,
+      "avg_win": 0.7,
+      "avg_loss": -0.49,
+      "max_drawdown_pct": 0.7,
+      "avg_pnl_by_confidence": {
+       "3": 0.02
+      },
+      "this_week_trades": [
+       {
+        "symbol": "META",
+        "pnl": -0.11,
+        "note": "gave back a +0.33% gain: out at breakeven",
+        "thesis": "VWAP pullback bounce on META: 1.7x volume, +0.30% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "QQQ",
+        "pnl": 0.24,
+        "note": "time limit, 47 min (+0.09%)",
+        "thesis": "VWAP pullback bounce on QQQ: 1.53x volume, +0.11% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SPY",
+        "pnl": 0.0,
+        "note": "time limit, 46 min (-0.00%)",
+        "thesis": "VWAP pullback bounce on SPY: 2.86x volume, +0.17% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SPCX",
+        "pnl": -0.7,
+        "note": "stop (-0.38%)",
+        "thesis": "VWAP pullback bounce on SPCX: 1.5x volume, +0.69% vs VWAP; target +0.5%, stop -0.25%",
+        "confidence": 3
+       },
+       {
+        "symbol": "AMZN",
+        "pnl": -0.88,
+        "note": "stop (-0.33%)",
+        "thesis": "VWAP pullback bounce on AMZN: 2.83x volume, +0.28% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "META",
+        "pnl": -0.83,
+        "note": "stop (-0.32%)",
+        "thesis": "VWAP pullback bounce on META: 1.58x volume, +0.52% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "XLP",
+        "pnl": 0.68,
+        "note": "time limit, 46 min (+0.27%)",
+        "thesis": "VWAP pullback bounce on XLP: 1.66x volume, +0.16% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "IWM",
+        "pnl": 1.46,
+        "note": "target hit (+0.59%)",
+        "thesis": "VWAP pullback bounce on IWM: 3.55x volume, +0.29% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "SPY",
+        "pnl": 0.04,
+        "note": "gave back a +0.39% gain: out at breakeven",
+        "thesis": "VWAP pullback bounce on SPY: 1.59x volume, +0.06% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       },
+       {
+        "symbol": "AAPL",
+        "pnl": -0.44,
+        "note": "time limit, 46 min (-0.18%)",
+        "thesis": "VWAP pullback bounce on AAPL: 1.51x volume, +0.02% vs VWAP; target +0.5%, stop -0.3%",
+        "confidence": 3
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
    "date": "2026-11-13",
    "agents": {
     "trend": {
@@ -3223,16 +3460,16 @@
    "breakout_lookback": 40,
    "stop_atr": 2.0,
    "trail_atr": 3.0,
-   "min_rel_volume": 2.5,
+   "min_rel_volume": 3.0,
    "opt_min_dte": 30,
    "opt_max_dte": 60,
-   "opt_delta": 0.637
+   "opt_delta": 0.5
   },
   "meanrev": {
    "rsi_entry": 10,
    "rsi_exit": 70,
-   "stop_atr": 1.5,
-   "max_hold_days": 5,
+   "stop_atr": 2.0,
+   "max_hold_days": 7,
    "opt_min_dte": 14,
    "opt_max_dte": 45,
    "opt_delta": 0.5
