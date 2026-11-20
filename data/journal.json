@@ -1,40 +1,5 @@
 [
  {
-  "time": "2026-11-09T10:13:54-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "eliminated (tried 0.29, 0.19, 0.10, 0.01; mark 0.34, natural -2.3)"
- },
- {
-  "time": "2026-11-09T10:13:56-05:00",
-  "type": "close",
-  "agent": "blackswan",
-  "symbol": "PSQ",
-  "qty": 1.0,
-  "entry": 27.94,
-  "exit": 27.18,
-  "pnl": -0.76,
-  "note": "eliminated",
-  "opened": "2026-11-06T10:37:06-05:00",
-  "confidence": 2,
-  "thesis": "Radar is in warning at 42 with QQQ weakening (ROC20 -5.2% on SPY), so one share of PSQ as a small inverse hedge fits the $28.03 per-trade cap and has a tight stop at 26.83."
- },
- {
-  "time": "2026-11-09T10:15:19-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "eliminated (tried 0.25, 0.17, 0.09, 0.01; mark 0.30, natural -3.67)"
- },
- {
-  "time": "2026-11-09T10:36:04-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "VALE261218P00012000",
-  "note": "trailing stop on underlying"
- },
- {
   "time": "2026-11-09T10:36:24-05:00",
   "type": "exit_unfilled",
   "agent": "trend",
@@ -6132,6 +6097,34 @@
  },
  {
   "time": "2026-11-20T12:08:05-05:00",
+  "type": "rule_block",
+  "agent": "trend",
+  "symbol": "SE",
+  "note": "no put affordable within $62.65"
+ },
+ {
+  "time": "2026-11-20T12:36:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-68%) (tried 0.99, 0.66, 0.33, 0.01; mark 1.04, natural -0.75)"
+ },
+ {
+  "time": "2026-11-20T12:37:54-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-93%) (tried 0.26, 0.17, 0.09, 0.01; mark 0.31, natural -2.37)"
+ },
+ {
+  "time": "2026-11-20T12:38:00-05:00",
+  "type": "sizing",
+  "agent": "trend",
+  "symbol": "SE",
+  "note": "$150.00 -> $62.65: capped at 20% of the firm; half size while win rate 4/27 is under 30%"
+ },
+ {
+  "time": "2026-11-20T12:38:01-05:00",
   "type": "rule_block",
   "agent": "trend",
   "symbol": "SE",
