@@ -1,45 +1,5 @@
 [
  {
-  "time": "2026-11-09T10:09:19-05:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "ABNB",
-  "instrument": "stock",
-  "qty": 1.2867,
-  "price": 193.21,
-  "cost": 248.6,
-  "stop": 182.51,
-  "thesis": "ABNB closed above its 55-day breakout at 193.41 on 2.61x relative volume (above the 2.5x minimum), 31.5% above its 200-day SMA, so the uptrend is intact; the 182.51 stop limits risk to about $15 (roughly 1.7% of equity).",
-  "confidence": 3
- },
- {
-  "time": "2026-11-09T10:09:46-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "NVDA, AMD, MU, AVGO, SPY",
-  "note": "normal: SPY is above its 200-day and the crash radar reads calm at 40, so I'm moving from defensive to normal. The AI-hardware leaders (NVDA, AMD, MU, AVGO, SMH) are above VWAP and their opening ranges with volume, so they are the best candidates for VWAP pullbacks and breakouts; I'm dropping GOOGL because "
- },
- {
-  "time": "2026-11-09T10:09:46-05:00",
-  "type": "eliminated",
-  "agent": "blackswan",
-  "note": "equity $-202.19 fell below $10"
- },
- {
-  "time": "2026-11-09T10:11:09-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ASTS",
-  "note": "eliminated (tried 1.44, 1.15, 0.88, 0.60; mark 1.49, natural 0.6)"
- },
- {
-  "time": "2026-11-09T10:12:31-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "APLD",
-  "note": "eliminated (tried 1.06, 1.03, 0.99, 0.96; mark 1.11, natural 0.96)"
- },
- {
   "time": "2026-11-09T10:13:54-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6134,5 +6094,47 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-93%) (tried 0.23, 0.16, 0.08, 0.01; mark 0.28, natural -2.32)"
+ },
+ {
+  "time": "2026-11-20T12:05:11-05:00",
+  "type": "close",
+  "agent": "monkey",
+  "symbol": "TQQQ",
+  "qty": 9.6104,
+  "entry": 51.78,
+  "exit": 43.26,
+  "pnl": -81.88,
+  "note": "stop loss",
+  "opened": "2026-11-18T09:38:37-05:00",
+  "confidence": 0,
+  "thesis": "Dart landed on TQQQ"
+ },
+ {
+  "time": "2026-11-20T12:06:34-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-68%) (tried 1.01, 0.67, 0.34, 0.01; mark 1.06, natural -0.74)"
+ },
+ {
+  "time": "2026-11-20T12:07:57-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-93%) (tried 0.26, 0.17, 0.09, 0.01; mark 0.31, natural -2.33)"
+ },
+ {
+  "time": "2026-11-20T12:08:05-05:00",
+  "type": "sizing",
+  "agent": "trend",
+  "symbol": "SE",
+  "note": "$150.00 -> $62.65: capped at 20% of the firm; half size while win rate 4/27 is under 30%"
+ },
+ {
+  "time": "2026-11-20T12:08:05-05:00",
+  "type": "rule_block",
+  "agent": "trend",
+  "symbol": "SE",
+  "note": "no put affordable within $62.65"
  }
 ]
