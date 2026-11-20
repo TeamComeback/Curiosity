@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-09T12:05:59-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
-  "time": "2026-11-09T12:07:22-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-91%) (tried 0.26, 0.17, 0.09, 0.01; mark 0.31, natural -2.34)"
- },
- {
-  "time": "2026-11-09T12:08:45-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-95%) (tried 0.17, 0.12, 0.06, 0.01; mark 0.22, natural -2.84)"
- },
- {
-  "time": "2026-11-09T12:09:05-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AMD, MU, AVGO, SMH, NVDA",
-  "note": "defensive: Leaders AMD, MU, AVGO, SMH and NVDA are still above VWAP and their opening ranges with 1-minute trends up, and SPY is still above its 200-day, so I'm keeping the playbook on the AI-hardware leaders plus index ETFs. Midday has been quiet, so defensive half-size VWAP bounces stay the cap, and I've dro"
- },
- {
   "time": "2026-11-09T12:36:04-05:00",
   "type": "exit_unfilled",
   "agent": "trend",
@@ -6113,5 +6085,33 @@
   "agent": "scalper",
   "symbol": "SQQQ, SOXS",
   "note": "defensive: Broad market is red with the regime in a downtrend, but SQQQ and SOXS are the only trending names above VWAP and their opening ranges, so I'll take only half-size VWAP bounces in them. SOXS is extended (+16.5%), so I'm keeping the size small, the stop tight, and the hold short."
+ },
+ {
+  "time": "2026-11-20T14:36:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-68%) (tried 0.99, 0.66, 0.33, 0.01; mark 1.04, natural -0.75)"
+ },
+ {
+  "time": "2026-11-20T14:37:53-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-90%) (tried 0.37, 0.25, 0.13, 0.01; mark 0.42, natural -2.11)"
+ },
+ {
+  "time": "2026-11-20T14:38:52-05:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "SPY",
+  "note": "credit not filled at 0.27, 0.18 (mid 0.27, natural 0.01, floor 0.15)"
+ },
+ {
+  "time": "2026-11-20T14:38:56-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SQQQ",
+  "note": "defensive: SPY is down 2.5% and nearly every name is red with a downtrend regime, so I'm keeping only SQQQ, the one trending-up name still above VWAP and its opening range, at half size. SOXS is up 20% and extended, so I'm dropping it, and with about 70 minutes until the flat time I'm using one slice."
  }
 ]
