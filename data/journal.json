@@ -1,54 +1,5 @@
 [
  {
-  "time": "2026-11-09T12:43:05-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-84%) (tried 0.62, 0.41, 0.21, 0.01; mark 0.67, natural -2.14)"
- },
- {
-  "time": "2026-11-09T12:43:23-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "NVDA, AMD, AVGO, SMH, SPY",
-  "note": "defensive: NVDA, AMD, AVGO and SMH are still above VWAP and their opening ranges on 1-minute uptrends, with SPY and QQQ supporting them. MU dropped to a 1-minute downtrend, so I removed it, and midday is quiet, so half-size VWAP bounces with the current tight stop and target stay the cap."
- },
- {
-  "time": "2026-11-09T13:06:09-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
-  "time": "2026-11-09T13:07:35-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-89%) (tried 0.31, 0.21, 0.11, 0.01; mark 0.36, natural -2.25)"
- },
- {
-  "time": "2026-11-09T13:09:00-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-85%) (tried 0.57, 0.38, 0.19, 0.01; mark 0.62, natural -2.3)"
- },
- {
-  "time": "2026-11-09T13:35:56-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
-  "time": "2026-11-09T13:37:21-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-91%) (tried 0.26, 0.17, 0.09, 0.01; mark 0.31, natural -2.35)"
- },
- {
   "time": "2026-11-09T13:38:46-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6113,5 +6064,49 @@
   "agent": "scalper",
   "symbol": "SPY, QQQ, IWM",
   "note": "stand_down: It's 3:38 PM with about 12 minutes before the 3:50 flat time, which is too short for a new round trip to develop and finish. SQQQ is no longer in the candidate list, and the tape is heavily red with SOXS the only strong outlier, so I'm standing down for the rest of the day."
+ },
+ {
+  "time": "2026-11-20T16:40:16-05:00",
+  "type": "recap",
+  "note": "A rough tape: the SPY baseline fell 3.71%, and the day's two closed trades netted -$80.45 (one win, one loss). The risk radar sits at 46, in 'warning'."
+ },
+ {
+  "time": "2026-11-20T16:40:16-05:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 3 of 4 picks moved the planned way, avg +1.91%"
+ },
+ {
+  "time": "2026-11-20T16:40:30-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: revise. The fresh scan moved the levels (NFLX now 58.19, SE now 65.89, IBN now 35.20), so the old triggers are stale. SE is already about 5% below its level, which makes a new put an extended chase, so I'm dropping it. Cash is down to $626.52 after $373 of realized losses, and crash radar is at 46 with SPY below its 50- and 200-day averages, so I'm keeping size small.",
+  "symbol": "IBN, DIS, NFLX"
+ },
+ {
+  "time": "2026-11-20T16:40:30-05:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 1 of 2 picks moved the planned way, avg -0.10%"
+ },
+ {
+  "time": "2026-11-20T16:41:03-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: revise. MRK is absent from today's scan, so its 134 trigger rests on stale pre-market data; I'm dropping it. The fresh scan supports two non-Financials names that clear 0.8:1 on today's ATR math.",
+  "symbol": "PM, SCHD"
+ },
+ {
+  "time": "2026-11-20T16:41:03-05:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -2.83%"
+ },
+ {
+  "time": "2026-11-20T16:41:12-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Today's scan was broadly red, Tech-led, and SPY is 9.3% below its 50-day with crash radar at 46 (warning). That makes the IWM setup more likely to fail on a selloff open, so I'm tightening the gate: no trade unless the open itself is not a selloff. The rel-volume filter looks enforced now, but the sample is still too small to tune.",
+  "symbol": "IWM"
  }
 ]
