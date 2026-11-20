@@ -1,80 +1,5 @@
 [
  {
-  "time": "2026-11-09T09:36:32-05:00",
-  "type": "close",
-  "agent": "meanrev",
-  "symbol": "ZBRA",
-  "qty": 0.3152,
-  "entry": 318.36,
-  "exit": 326.148,
-  "pnl": 2.45,
-  "note": "snap-back (RSI2 52)",
-  "opened": "2026-11-03T10:06:43-05:00",
-  "confidence": 3,
-  "thesis": "ZBRA is an RSI(2) 0.4 washout 13% above its 200-day, with target 360.24 vs stop 294.68 at about 1.9:1 on the scan price, clearing my 1:1 floor comfortably."
- },
- {
-  "time": "2026-11-09T09:36:40-05:00",
-  "type": "close",
-  "agent": "meanrev",
-  "symbol": "SWKS",
-  "qty": 1.572,
-  "entry": 75.79,
-  "exit": 81.87,
-  "pnl": 9.56,
-  "note": "time stop",
-  "opened": "2026-11-04T09:37:46-05:00",
-  "confidence": 3,
-  "thesis": "SWKS RSI(2) 2.6 washout 12.4% above its 200-day in a calm regime (crash radar 29, SPY above its 200-day); target 84.73 vs stop 69.76 is about 1.28:1 on the scan price, the only unheld candidate clearing my 1:1 floor, so I'm committing most of the $133 settled cash."
- },
- {
-  "time": "2026-11-09T09:36:40-05:00",
-  "type": "close",
-  "agent": "meanrev",
-  "symbol": "URI",
-  "qty": 0.1906,
-  "entry": 1051.87,
-  "exit": 1088.8,
-  "pnl": 7.04,
-  "note": "snap-back (RSI2 65)",
-  "opened": "2026-11-05T12:37:13-05:00",
-  "confidence": 2,
-  "thesis": "URI RSI(2) 2.1 washout 7.7% above its 200-day in a calm regime; live scan target 1138.49 vs stop 970.31 is about 1.13:1, clearing my 1:1 floor on current prices even though the stale game-plan avoid listed it at 0.56:1."
- },
- {
-  "time": "2026-11-09T09:38:03-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-86%) (tried 0.42, 0.28, 0.15, 0.01; mark 0.47, natural -2.14)"
- },
- {
-  "time": "2026-11-09T09:38:26-05:00",
-  "type": "open",
-  "agent": "monkey",
-  "symbol": "NVT",
-  "instrument": "stock",
-  "qty": 2.3861,
-  "price": 110.74,
-  "cost": 264.24,
-  "stop": 91.66,
-  "thesis": "Dart landed on NVT",
-  "confidence": 0
- },
- {
-  "time": "2026-11-09T09:38:36-05:00",
-  "type": "open",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "instrument": "debit_spread",
-  "qty": 2,
-  "price": 4.15,
-  "cost": 850.0,
-  "stop": 175.6,
-  "thesis": "ALNY is in a confirmed downtrend, down 33% over 20 days and 45% below its 200-day, and is testing its 20-day low at 154.75, so a bear put spread capped at the $61.91 per-trade limit targets the breakdown; it is not a Technology or Communication Services name, so it does not add to the heavy Technology short.",
-  "confidence": 3
- },
- {
   "time": "2026-11-09T09:38:42-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6167,5 +6092,47 @@
   "agent": "volsell",
   "symbol": "SLV",
   "note": "credit not filled at 0.16, 0.15 (mid 0.16, natural 0.12, floor 0.15)"
+ },
+ {
+  "time": "2026-11-20T10:36:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-68%) (tried 1.01, 0.67, 0.34, 0.01; mark 1.06, natural -0.74)"
+ },
+ {
+  "time": "2026-11-20T10:37:53-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-96%) (tried 0.12, 0.08, 0.05, 0.01; mark 0.17, natural -2.44)"
+ },
+ {
+  "time": "2026-11-20T10:38:01-05:00",
+  "type": "sizing",
+  "agent": "trend",
+  "symbol": "SE",
+  "note": "$150.00 -> $62.65: capped at 20% of the firm; half size while win rate 4/27 is under 30%"
+ },
+ {
+  "time": "2026-11-20T10:38:01-05:00",
+  "type": "rule_block",
+  "agent": "trend",
+  "symbol": "SE",
+  "note": "no put affordable within $62.65"
+ },
+ {
+  "time": "2026-11-20T10:39:34-05:00",
+  "type": "unfilled",
+  "agent": "volsell",
+  "symbol": "SLV",
+  "note": "credit not filled at 0.19, 0.18, 0.16, 0.15 (mid 0.19, natural 0.15, floor 0.15)"
+ },
+ {
+  "time": "2026-11-20T10:39:38-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "IWM, LQD",
+  "note": "stand_down: Regime is still bearish (SPY 3.1% below its 200-day SMA, crash radar 41) and most of the scan is red, with SPY and IWM both below VWAP. IWM hasn't pulled back to VWAP and held, so the overnight trigger isn't met; LQD is the only clean uptrend and I'm watching it for a defensive bounce, but I'm not t"
  }
 ]

@@ -27,10 +27,6 @@
    "notes": [
     {
      "date": "2026-11-17",
-     "note": "No live candidates in today's scan, so no entries. Holding CLSX put to its 2.98 underlying stop and DIS to its 116.69 stop. Keeping settled cash for EW, NFLX, or SE if their triggers appear in a future scan."
-    },
-    {
-     "date": "2026-11-17",
      "note": "Passed on CNTY put: sub-$0.30 name in the avoid-listed Broad market bucket, where my record is 2 wins in 10 trades (-57.2). Holding CLSX to its 2.98 stop and DIS to its 116.69 stop; keeping cash for EW, NFLX, or SE triggers."
     },
     {
@@ -184,6 +180,10 @@
     {
      "date": "2026-11-20",
      "note": "Passed on GEV (Industrials) and MS (Financials): both are outside the Communication Services lean-in and on the avoid list in today's game plan. Keep settled cash for IBN, DIS, NFLX, or SE triggers."
+    },
+    {
+     "date": "2026-11-20",
+     "note": "Only SE qualifies: it's in the lean-in sector and the game plan's put trigger (confirming close below 68.55, 2.5x+ volume) is met. GEV, MS, C, IWM and IJH are outside the lean-in, so they're passed. If the 30-60 DTE put ask exceeds the $150 budget, the system will skip, which is acceptable."
     }
    ],
    "last_exits": {
@@ -1214,7 +1214,7 @@
       "pct_vs_sma5": -3.9
      },
      "sector": "Financials",
-     "last": 479.22
+     "last": 477.46
     },
     "pos-caba0983a7": {
      "kind": "stock",
@@ -1234,7 +1234,7 @@
       "pct_vs_sma5": -2.9
      },
      "sector": "Health Care",
-     "last": 443.87
+     "last": 440.81
     },
     "pos-c4618673be": {
      "kind": "stock",
@@ -1254,7 +1254,7 @@
       "pct_vs_sma5": -5.1
      },
      "sector": "Consumer Staples",
-     "last": 227.745
+     "last": 227.46
     },
     "pos-7c659f7cde": {
      "kind": "stock",
@@ -1274,7 +1274,7 @@
       "pct_vs_sma5": -2.5
      },
      "sector": "Health Care",
-     "last": 152.08
+     "last": 151.93
     },
     "pos-a2d196d244": {
      "kind": "stock",
@@ -1294,7 +1294,7 @@
       "pct_vs_sma5": -6.8
      },
      "sector": "Consumer Staples",
-     "last": 203.31
+     "last": 202.27
     },
     "pos-369b4d65ca": {
      "kind": "stock",
@@ -1314,7 +1314,7 @@
       "pct_vs_sma5": -3.1
      },
      "sector": "Financials",
-     "last": 452.385
+     "last": 450.9
     },
     "pos-876eb38526": {
      "kind": "stock",
@@ -1334,7 +1334,7 @@
       "pct_vs_sma5": -3.7
      },
      "sector": "Materials",
-     "last": 617.545
+     "last": 616.1
     },
     "pos-e09ea2fc79": {
      "kind": "stock",
@@ -1354,7 +1354,7 @@
       "pct_vs_sma5": -2.2
      },
      "sector": "Financials",
-     "last": 213.32
+     "last": 212.2
     }
    },
    "status": "active",
@@ -1365,10 +1365,6 @@
    "peak": 1029.08,
    "max_dd": 0.0594,
    "notes": [
-    {
-     "date": "2026-11-17",
-     "note": "Passing: every live candidate is below the 1:1 stop-to-target floor (VRTX ~0.32, IQV ~0.56, MRNA ~0.53, CCL ~0.55, TEAM ~0.56), and the DE/IBB/EMR/AMZN triggers haven't hit. Keep the SAP starter on its 214.83 stop and $797.68 settled cash."
-    },
     {
      "date": "2026-11-17",
      "note": "Passing again: all six live candidates fail my 1:1 floor (VRTX ~0.32, IQV ~0.61, MRNA ~0.59, CCL ~0.57, TEAM ~0.61). Keep the SAP starter on its 214.83 stop and $797.68 settled cash for a washout that clears 1:1."
@@ -1524,6 +1520,10 @@
     {
      "date": "2026-11-20",
      "note": "Pass: PYPL is the only candidate at or above 0.8:1 (about 0.94:1 on scan numbers), but it's Financials, which is over-concentrated and not on the game-plan watchlist. BLK, BNY, GWW and DE are under 0.8:1, and SAP is already held with no adds. MRK and UTHR aren't in today's candidates, so they can't "
+    },
+    {
+     "date": "2026-11-20",
+     "note": "Pass: the only candidates clearing 0.8:1 (PYPL, XYZ) are Financials, which the sector plan bars from new adds. BLK and BNY are under the floor or overlap, DE and SAP are already held, and MRK and UTHR aren't in today's candidate list. Hold the eight open stocks to their stops and targets; TRV alread"
     }
    ],
    "last_exits": {
@@ -2206,7 +2206,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.18,
-     "mark": 0.14,
+     "mark": 0.12,
      "entry": 0.18,
      "width": 1.0,
      "short_strike": 78.0,
@@ -2228,7 +2228,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.025
     }
    },
    "status": "active",
@@ -2239,10 +2239,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-11",
-     "note": "Passed: the only candidate is TLT, a rate proxy in Real Estate, which my 0-for-5 record and the avoid list rule out. Waiting for the EEM bear call setup (IV/RV above 0.95, credit near 1/3 of width) or another non-rate underlying; cash stays settled."
-    },
     {
      "date": "2026-11-11",
      "note": "Passing the TLT bull put: rate proxies and Real Estate are on my avoid list after 0-for-5, and the 10-year near 5% with hawkish Fed talk makes this the same setup that just stopped out twice. Waiting for the EEM bear call (IV/RV above 0.95, credit near 1/3 of width) or another non-rate underlying; c"
@@ -2398,6 +2394,10 @@
     {
      "date": "2026-11-20",
      "note": "Premium House has no trades yet, so I'm taking the one rich-vol setup that clears the 1.15 IV/RV floor at minimum size. The Technology avoid rule is from another firm's notes, not a Premium House rule. Next, watch crash radar and manage this spread against the default 2x stop and 65% take-profit."
+    },
+    {
+     "date": "2026-11-20",
+     "note": "Taking one minimum-size rich-vol spread: the self-imposed sector avoid list has produced zero wins, so I'm testing a non-Real-Estate underlying with the default 2x stop and 65% take-profit, and I'll reassess the sector list at its 12/01 expiry."
     }
    ],
    "last_exits": {
@@ -2433,7 +2433,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 81.0,
+   "min_trade_seen": 80.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2895,7 +2895,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 716.41
+     "last": 710.0
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2911,7 +2911,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 716.41
+     "last": 710.0
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2927,7 +2927,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 716.41
+     "last": 710.0
     }
    },
    "status": "active",
@@ -2936,7 +2936,7 @@
    "closed": 0,
    "wins": 0,
    "peak": 1001.41,
-   "max_dd": 0.0793,
+   "max_dd": 0.0827,
    "notes": [],
    "last_exits": {},
    "unsettled": []
@@ -2960,7 +2960,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 47.79
+     "last": 45.745
     },
     "pos-83bf9288a4": {
      "kind": "stock",
@@ -2977,7 +2977,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 108.45
+     "last": 105.5
     }
    },
    "status": "active",
@@ -2986,7 +2986,7 @@
    "closed": 9,
    "wins": 4,
    "peak": 1000.67,
-   "max_dd": 0.1422,
+   "max_dd": 0.1544,
    "notes": [],
    "last_exits": {
     "HUM": "2026-10-20",
@@ -3028,7 +3028,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 1.02,
+     "mark": 1.06,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -3048,7 +3048,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.76,
+     "exit_half_spread": 1.795,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -3073,7 +3073,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.13,
+     "mark": 0.17,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3093,7 +3093,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 2.67,
+     "exit_half_spread": 2.605,
      "peak_mark": 1.09
     }
    },
@@ -3656,12 +3656,13 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-20",
-    "made_at": "2026-11-20T10:08-05:00",
+    "made_at": "2026-11-20T10:39-05:00",
     "watch": [
-     "IWM"
+     "IWM",
+     "LQD"
     ],
     "aggression": "stand_down",
-    "why": "The regime is still bearish (SPY below its 200-day SMA, crash radar at 40), and about half the scan is red with the semis selling off. IWM is trading above VWAP and hasn't pulled back to it yet, so the overnight trigger isn't met; I'm keeping it on watch for a VWAP pullback that holds on at least 1.",
+    "why": "Regime is still bearish (SPY 3.1% below its 200-day SMA, crash radar 41) and most of the scan is red, with SPY and IWM both below VWAP. IWM hasn't pulled back to VWAP and held, so the overnight trigger isn't met; LQD is the only clean uptrend and I'm watching it for a defensive bounce, but I'm not t",
     "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,
