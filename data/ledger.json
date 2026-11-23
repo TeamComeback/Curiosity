@@ -23454,5 +23454,76 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-23T07:40:17-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "Pre-market call",
+  "for_day": "2026-11-23",
+  "decision": "revise",
+  "why": "The fresh scan confirms NFLX broke down through 58.19 today, but this is only the first breakdown day, so the plan still requires a second close. IBN's scan label conflicts with its negative distance, and DIS is missing from today's scan, so its level is unverified; both stay conditional. The lean-in on Communication Services is still backed mainly by scan clustering rather than my own record (one",
+  "summary": "Stay in settled cash ($626.52) unless a trigger fires. Watch NFLX for a second close below 58.19 on at least 3.0x volume, with a 30-60 DTE put ask at or below $1.50. Watch IBN for a close above 35.20 on at least 3.0x volume (max $150). XLC puts are a backup only if NFLX does not trigger, and only one Communication Services put at a time.",
+  "watchlist": [
+   {
+    "symbol": "NFLX",
+    "setup": "Breakdown through 58.19 on the first day (ROC20 -13.8%, ATR 1.87). Enter only on follow-through.",
+    "trigger": "Second consecutive close below 58.19 on at least 3.0x relative volume, plus a 30-60 DTE put ask at or below $1.50 (one contract)",
+    "instrument": "put",
+    "conviction": 3
+   },
+   {
+    "symbol": "IBN",
+    "setup": "Breakout attempt near 40-day level at 35.20 (ROC20 +20.4%, ATR 0.73). Price is still just below the level, so the 'broke out' label is unconfirmed.",
+    "trigger": "Close above 35.20 on at least 3.0x relative volume; size so a 2-ATR stop (~$1.46) stays within $150",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "XLC",
+    "setup": "Backup Communication Services put, near breakdown at 99.33 (ROC20 -5.2%, ATR 2.3). Only if NFLX does not fire.",
+    "trigger": "Close below 99.33 on at least 3.0x relative volume, with a 30-60 DTE put ask within budget",
+    "instrument": "put",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-11-23T07:40:28-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-11-23",
+  "decision": "revise",
+  "why": "RSP closed at 207.59, through its 207.60 stop, so the hold is void and it exits at the open. PM's sub-1:1 setup (about 0.9:1) fails my own rule against sub-1:1 entries at low conviction, and Consumer Staples is -5.20 for me, so I'm dropping it. SCHD still triggers at 33.94 with about 1.16:1 (stop 33.20, target 34.80), so I'm keeping it as a small starter.",
+  "summary": "Exit RSP at the open per its stop. Hold the other nine stock positions to their stops and targets with no adds. Take one small SCHD starter only if it prints at or below 33.94 with settled cash. Skip PM.",
+  "watchlist": [
+   {
+    "symbol": "SCHD",
+    "setup": "RSI(2) 1.2 washout, 3.5% above SMA200, low-volatility ETF, about 1.16:1 reward-to-risk",
+    "trigger": "Buy at or below 33.94; stop 33.20; target 34.80",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-23T07:40:37-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-11-23",
+  "decision": "keep",
+  "why": "Nothing new has improved the setup. Crash radar is at 46 (warning), 18 of 19 scan names are red, and the Technology and AI-chip selloff is still running on headline news. The IWM VWAP plan already requires a non-selloff open, so it stays conditional and I'm not adding exposure.",
+  "summary": "Stand aside by default. Consider one $250 IWM VWAP-pullback slice only if IWM reclaims and holds VWAP on at least 1.5x bar-verified relative volume after the first 15 minutes, SPY is not down more than 0.5% in the morning, and fewer than half the scan names are red. Target +0.5%, stop -0.3% (expect about -0.35% fills), 45-minute limit, flat by close.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Industrials-tagged VWAP pullback that holds, only on a non-selloff open",
+    "trigger": "After the first 15 minutes: IWM pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, SPY not down more than 0.5% in the morning, and fewer than half the scan names red at the open. Target +0.5%, stop -0.3%, 45-minute limit, flat by close.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]
