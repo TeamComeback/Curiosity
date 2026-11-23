@@ -1,31 +1,5 @@
 [
  {
-  "time": "2026-11-09T16:40:26-05:00",
-  "type": "scorecard",
-  "agent": "trend",
-  "note": "Plan graded: 2 of 3 picks moved the planned way, avg +0.82%"
- },
- {
-  "time": "2026-11-09T16:40:53-05:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "After-close review: revise. Nothing new met the 2.5x-volume breakout trigger, but the old plan's ABNB avoid note conflicts with holding it, so I'm correcting that and tightening the position notes.",
-  "symbol": "ADT, UUP, EW"
- },
- {
-  "time": "2026-11-09T16:40:53-05:00",
-  "type": "scorecard",
-  "agent": "meanrev",
-  "note": "Plan graded: 1 of 1 picks moved the planned way, avg +0.52%"
- },
- {
-  "time": "2026-11-09T16:41:06-05:00",
-  "type": "plan",
-  "agent": "meanrev",
-  "note": "After-close review: revise. The old plan's only watchlist name, XLE, is absent from today's scan, so its trigger cannot fire. Of today's sub-10 RSI(2) washouts, every candidate fails the 1:1 floor on a 1.5-ATR stop to SMA5 target (SU about 0.87:1, CVX 0.63:1, SHEL 0.62:1, XOM 0.55:1, BP below 0.5:1), and TEAM is 29.8% above its 200-day with analyst target cuts.",
-  "symbol": ""
- },
- {
   "time": "2026-11-09T16:41:06-05:00",
   "type": "scorecard",
   "agent": "volsell",
@@ -6112,5 +6086,40 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-82%) (tried 0.68, 0.45, 0.23, 0.01; mark 0.73, natural -2.05)"
+ },
+ {
+  "time": "2026-11-23T11:35:05-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "DE",
+  "qty": 0.1199,
+  "entry": 625.052,
+  "exit": 631.972,
+  "pnl": 0.83,
+  "note": "snap-back (RSI2 61)",
+  "opened": "2026-11-19T10:38:30-05:00",
+  "confidence": 2,
+  "thesis": "DE RSI(2) 0.6 washout 1.8% above its 200-day with a 598.30 stop and 649.31 target, about 0.88:1, clearing the 0.8:1 floor in a calm radar regime (39); a starter size because SPY is below its 200-day and the book already has six open positions."
+ },
+ {
+  "time": "2026-11-23T11:36:26-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-85%) (tried 0.44, 0.29, 0.15, 0.01; mark 0.49, natural -0.95)"
+ },
+ {
+  "time": "2026-11-23T11:37:47-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-82%) (tried 0.70, 0.47, 0.24, 0.01; mark 0.75, natural -2.09)"
+ },
+ {
+  "time": "2026-11-23T11:38:03-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "IWM, SPY",
+  "note": "stand_down: Breadth is still poor: about 21 of 30 scan names are red, so the 'fewer than half red' condition for the IWM VWAP-pullback trigger is not met. Keep watching IWM and SPY, but stay flat unless breadth improves and IWM holds VWAP on at least 1.5x relative volume."
  }
 ]
