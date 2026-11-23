@@ -23572,5 +23572,34 @@
   ],
   "aggression": "stand_down",
   "why": "Market is broadly red: SPY is down 0.84% with a down 1-minute trend, about 24 of 30 scan names are negative, and the crash radar is at warning (48). The overnight IWM trigger fails on its SPY-down-no-more-than-0.5% condition and the breadth condition, so no new trades until conditions change."
+ },
+ {
+  "time": "2026-11-23T10:05:05-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-87ffe95b10",
+  "symbol": "MCO",
+  "underlying": "MCO",
+  "sector": "Financials",
+  "instrument": "stock",
+  "entry": 485.082,
+  "exit": 480.142,
+  "pnl": -1.22,
+  "return_pct": -1.0,
+  "opened": "2026-11-17T13:08:26-05:00",
+  "why_entered": "MCO RSI(2) 2.8 washout only 3.9% above its 200-day in a calm regime (crash radar 34); live reward-to-risk is about 1.01:1 (484.04 to 503.94 target vs 464.40 stop), just clearing my 1:1 floor, so I'm taking a small starter.",
+  "why_exited": "snap-back (RSI2 66)"
+ },
+ {
+  "time": "2026-11-23T10:08:01-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "MU",
+   "SPY",
+   "IWM"
+  ],
+  "aggression": "stand_down",
+  "why": "About 23 of 30 scan names are red, the crash radar is at warning (47), and SPY is below its 200-day average with negative 20-day momentum. The IWM trigger fails on breadth and IWM is still below VWAP, so no new trades until breadth improves and IWM reclaims VWAP on volume."
  }
 ]
