@@ -23525,5 +23525,52 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-23T09:35:07-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-caba0983a7",
+  "symbol": "AMGN",
+  "underlying": "AMGN",
+  "sector": "Health Care",
+  "instrument": "stock",
+  "entry": 446.93,
+  "exit": 443.458,
+  "pnl": -0.77,
+  "return_pct": -0.8,
+  "opened": "2026-11-18T11:38:27-05:00",
+  "why_entered": "AMGN RSI(2) 1.1 washout 16.9% above its 200-day in a calm regime (crash radar 38); live reward-to-risk is 0.80:1 (446.70 to 459.90 target vs 430.25 stop), exactly at my 0.8:1 floor, so I'm taking a small starter.",
+  "why_exited": "snap-back (RSI2 63)"
+ },
+ {
+  "time": "2026-11-23T09:35:07-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-369b4d65ca",
+  "symbol": "SPGI",
+  "underlying": "SPGI",
+  "sector": "Financials",
+  "instrument": "stock",
+  "entry": 443.182,
+  "exit": 447.204,
+  "pnl": 0.82,
+  "return_pct": 0.9,
+  "opened": "2026-11-19T10:08:32-05:00",
+  "why_entered": "SPGI RSI(2) 3.2 washout 3.8% above its 200-day, now at 443.06 and through the 446.31 game-plan trigger; stop 426.68 to target 457.39 is about 0.88:1, clearing the 0.8:1 floor in a calm radar regime (32) and inside the Financials lean-in.",
+  "why_exited": "snap-back (RSI2 63)"
+ },
+ {
+  "time": "2026-11-23T09:38:04-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "IWM",
+   "TSLA",
+   "MU"
+  ],
+  "aggression": "stand_down",
+  "why": "Market is broadly red: SPY is down 0.84% with a down 1-minute trend, about 24 of 30 scan names are negative, and the crash radar is at warning (48). The overnight IWM trigger fails on its SPY-down-no-more-than-0.5% condition and the breadth condition, so no new trades until conditions change."
  }
 ]
