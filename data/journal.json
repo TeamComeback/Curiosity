@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-11-09T14:07:28-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-96%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -2.35)"
- },
- {
-  "time": "2026-11-09T14:08:54-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-87%) (tried 0.49, 0.33, 0.17, 0.01; mark 0.54, natural -2.35)"
- },
- {
-  "time": "2026-11-09T14:09:22-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AAPL, TSLA, IWM, LLY, INTC",
-  "note": "defensive: Most of the prior leaders have rolled to 1-minute downtrends, so I'm keeping defensive and shifting to the names still trending up and above their opening ranges: AAPL, TSLA, IWM, LLY, INTC and XLP. Tape is quiet midday, so VWAP bounces only at half size, with a slightly shorter hold."
- },
- {
-  "time": "2026-11-09T14:36:03-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-52%)"
- },
- {
-  "time": "2026-11-09T14:36:05-05:00",
-  "type": "close",
-  "agent": "blackswan",
-  "symbol": "APLD",
-  "qty": 1,
-  "entry": 0.86,
-  "exit": 0.95,
-  "pnl": -6.5,
-  "note": "locked in gains: down 30% from the peak after +71%",
-  "opened": "2026-10-15T13:07:01-04:00",
-  "confidence": 2,
-  "thesis": "APLD closed through its 20.02 breakdown level at 19.21, down 16.7% over 20 days and 40% below its 200-day, so a smaller $90 bear put spread keeps Technology exposure sized down while the radar is calm."
- },
- {
   "time": "2026-11-09T14:37:30-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6104,5 +6062,38 @@
   "type": "param_change",
   "agent": "meanrev",
   "note": "max_hold_days: 5 -> 7 (Five days may be too short for slower reversions, especially with wider stops. Seven days gives trades time to reach the RSI exit instead of leaving as stop-outs or time exits, and it is still a short)"
+ },
+ {
+  "time": "2026-11-22T22:46:40-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Communication Services; avoiding Financials, Industrials, Broad market / other, Energy, Consumer Discretionary, Consumer Staples, Technology. Communication Services has the scan's clearest cluster of setups that fit the ATR and budget limits, but my record there is one losing trade (-$3.12), so sizing stays small. Financials and Industrials have many scan breakdowns but ATR too large for the budget and negative or untested results. The ot"
+ },
+ {
+  "time": "2026-11-22T22:46:40-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "Evening check-in: revise. The plan's triggers still hold, but the strategy params now require 3.0x relative volume while the plan says 2.5x, and my scorecard (44% hit rate, -0.23% average pick move) doesn't support loosening the bar. SPY is below its 50- and 200-day averages with crash radar at 46, so I'm tightening confirmation to 3.0x and keeping the Communication Services lean-in small. The fresh scan also no longer sho",
+  "symbol": "IBN, NFLX, DIS"
+ },
+ {
+  "time": "2026-11-22T22:47:08-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "note": "Leaning into no sector; avoiding Technology. Financials is 2-for-2 for +8.21 on a tiny sample, but it now makes up 4 of 10 positions, so lean-in is dropped until the book diversifies; Technology stays avoided at 1-for-3 for -14.20."
+ },
+ {
+  "time": "2026-11-22T22:47:08-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Evening check-in: revise. RSP closed at 207.59, below its 207.60 stop, and the book is 4 of 10 Financials with the sector lean-in now adding concentration risk.",
+  "symbol": "SCHD, PM"
+ },
+ {
+  "time": "2026-11-22T22:47:16-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Evening check-in: keep. Nothing new changes the thesis. Tech and AI-chip names sold off hard on Friday, but the only fresh news is unconfirmed (Broadcom) or minor (NVIDIA product launch), and crash radar is still in the warning tier at 46. The IWM setup is small, conditional, and only fires on a non-selloff open, so it's the right size for an unproven edge.",
+  "symbol": "IWM"
  }
 ]

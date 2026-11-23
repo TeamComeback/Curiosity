@@ -1034,6 +1034,63 @@
  ],
  "journal": [
   {
+   "time": "2026-11-22T22:47:16-05:00",
+   "type": "plan",
+   "agent": "scalper",
+   "note": "Evening check-in: keep. Nothing new changes the thesis. Tech and AI-chip names sold off hard on Friday, but the only fresh news is unconfirmed (Broadcom) or minor (NVIDIA product launch), and crash radar is still in the warning tier at 46. The IWM setup is small, conditional, and only fires on a non-selloff open, so it's the right size for an unproven edge.",
+   "symbol": "IWM"
+  },
+  {
+   "time": "2026-11-22T22:47:08-05:00",
+   "type": "plan",
+   "agent": "meanrev",
+   "note": "Evening check-in: revise. RSP closed at 207.59, below its 207.60 stop, and the book is 4 of 10 Financials with the sector lean-in now adding concentration risk.",
+   "symbol": "SCHD, PM"
+  },
+  {
+   "time": "2026-11-22T22:47:08-05:00",
+   "type": "focus",
+   "agent": "meanrev",
+   "note": "Leaning into no sector; avoiding Technology. Financials is 2-for-2 for +8.21 on a tiny sample, but it now makes up 4 of 10 positions, so lean-in is dropped until the book diversifies; Technology stays avoided at 1-for-3 for -14.20."
+  },
+  {
+   "time": "2026-11-22T22:46:40-05:00",
+   "type": "plan",
+   "agent": "trend",
+   "note": "Evening check-in: revise. The plan's triggers still hold, but the strategy params now require 3.0x relative volume while the plan says 2.5x, and my scorecard (44% hit rate, -0.23% average pick move) doesn't support loosening the bar. SPY is below its 50- and 200-day averages with crash radar at 46, so I'm tightening confirmation to 3.0x and keeping the Communication Services lean-in small. The fresh scan also no longer sho",
+   "symbol": "IBN, NFLX, DIS"
+  },
+  {
+   "time": "2026-11-22T22:46:40-05:00",
+   "type": "focus",
+   "agent": "trend",
+   "note": "Leaning into Communication Services; avoiding Financials, Industrials, Broad market / other, Energy, Consumer Discretionary, Consumer Staples, Technology. Communication Services has the scan's clearest cluster of setups that fit the ATR and budget limits, but my record there is one losing trade (-$3.12), so sizing stays small. Financials and Industrials have many scan breakdowns but ATR too large for the budget and negative or untested results. The ot"
+  },
+  {
+   "time": "2026-11-20T17:30:15-05:00",
+   "type": "param_change",
+   "agent": "meanrev",
+   "note": "max_hold_days: 5 -> 7 (Five days may be too short for slower reversions, especially with wider stops. Seven days gives trades time to reach the RSI exit instead of leaving as stop-outs or time exits, and it is still a short)"
+  },
+  {
+   "time": "2026-11-20T17:30:15-05:00",
+   "type": "param_change",
+   "agent": "meanrev",
+   "note": "stop_atr: 1.5 -> 2.0 (Stops at 1.5 ATR are cutting off washouts before they revert. Widening to 2.0 should raise the win rate toward what mean-reversion needs, given the roughly 0.3:1 win/loss ratio. It is a modest step, a)"
+  },
+  {
+   "time": "2026-11-20T17:30:06-05:00",
+   "type": "param_change",
+   "agent": "trend",
+   "note": "min_rel_volume: 2.5 -> 3.0 (All five losers were breakouts or breakdowns that failed quickly, even with 3x+ volume. Tightening to the upper bound filters for stronger conviction and cuts marginal signals in a choppy tape. It als)"
+  },
+  {
+   "time": "2026-11-20T17:30:06-05:00",
+   "type": "param_change",
+   "agent": "trend",
+   "note": "opt_delta: 0.637 -> 0.5 (A 0.637 delta put costs more premium per contract, so one failed trade takes a big share of a ~$600 account (CLSX lost 53% of premium, $164). A lower delta cuts the dollar risk per trade and leaves ro)"
+  },
+  {
    "time": "2026-11-20T16:41:12-05:00",
    "type": "plan",
    "agent": "scalper",
@@ -1401,69 +1458,6 @@
    "agent": "trend",
    "symbol": "SE",
    "note": "no put affordable within $62.65"
-  },
-  {
-   "time": "2026-11-20T10:38:01-05:00",
-   "type": "sizing",
-   "agent": "trend",
-   "symbol": "SE",
-   "note": "$150.00 -> $62.65: capped at 20% of the firm; half size while win rate 4/27 is under 30%"
-  },
-  {
-   "time": "2026-11-20T10:37:53-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-96%) (tried 0.12, 0.08, 0.05, 0.01; mark 0.17, natural -2.44)"
-  },
-  {
-   "time": "2026-11-20T10:36:30-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-68%) (tried 1.01, 0.67, 0.34, 0.01; mark 1.06, natural -0.74)"
-  },
-  {
-   "time": "2026-11-20T10:08:54-05:00",
-   "type": "unfilled",
-   "agent": "volsell",
-   "symbol": "SLV",
-   "note": "credit not filled at 0.16, 0.15 (mid 0.16, natural 0.12, floor 0.15)"
-  },
-  {
-   "time": "2026-11-20T10:07:54-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-97%) (tried 0.08, 0.06, 0.03, 0.01; mark 0.13, natural -2.54)"
-  },
-  {
-   "time": "2026-11-20T10:06:30-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-69%) (tried 0.97, 0.64, 0.33, 0.01; mark 1.02, natural -0.74)"
-  },
-  {
-   "time": "2026-11-20T09:37:51-05:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "IWM",
-   "note": "stand_down: Most of the scan is red, SPY is below its 200-day SMA with a crash radar warning at 41, and IWM is above VWAP rather than pulling back to it, so the overnight plan's entry conditions aren't met. Watching IWM only for a VWAP pullback that holds on at least 1.5x relative volume."
-  },
-  {
-   "time": "2026-11-20T09:37:35-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-98%) (tried 0.03, 0.02, 0.01; mark 0.08, natural -2.56)"
-  },
-  {
-   "time": "2026-11-20T09:36:33-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-77%) (tried 0.72, 0.48, 0.24, 0.01; mark 0.77, natural -0.3)"
   }
  ],
  "reviews": [
@@ -3517,47 +3511,46 @@
  "plans": {
   "trend": {
    "for_day": "2026-11-23",
-   "made_at": "2026-11-20T16:40-05:00",
-   "session": "After-close review",
+   "made_at": "2026-11-22T22:46-05:00",
+   "session": "Evening check-in",
    "decision": "revise",
-   "why": "The fresh scan moved the levels (NFLX now 58.19, SE now 65.89, IBN now 35.20), so the old triggers are stale. SE is already about 5% below its level, which makes a new put an extended chase, so I'm dropping it. Cash is down to $626.52 after $373 of realized losses, and crash radar is at 46 with SPY below its 50- and 200-day averages, so I'm keeping size small.",
-   "summary": "Stay mostly in cash. Act only on an IBN close above 35.20 on at least 2.5x relative volume (stock, up to $150), or a DIS close above 123.34 on the same volume (stock, up to $100). Keep NFLX as a watch for a put only on fresh follow-through below 58.19 with a 30-60 DTE ask at or under $1.50. No SE or GOOG/GOOGL puts.",
+   "why": "The plan's triggers still hold, but the strategy params now require 3.0x relative volume while the plan says 2.5x, and my scorecard (44% hit rate, -0.23% average pick move) doesn't support loosening the bar. SPY is below its 50- and 200-day averages with crash radar at 46, so I'm tightening confirmation to 3.0x and keeping the Communication Services lean-in small. The fresh scan also no longer sho",
+   "summary": "Stay in cash unless a trigger fires. Buy IBN stock only on a close above 35.20 with at least 3.0x relative volume (max $150). Buy a single 30-60 DTE NFLX put (ask at or under $1.50, max $150) only after a second close below 58.19 on at least 3.0x volume. DIS is conditional on a close above 123.34 on 3.0x volume (max $100). No puts on SE or GOOG/GOOGL.",
    "watchlist": [
     {
      "symbol": "IBN",
-     "setup": "Breakout near 40-day level; the fresh scan puts the level at 35.20 and ROC20 +20.4%, ATR 0.73. A 2-ATR stop is about 1.46, so size to $150 or less.",
-     "trigger": "Close above 35.20 on at least 2.5x relative volume",
+     "setup": "Breakout near 40-day level at 35.20; ROC20 +20.4%, ATR 0.73. The scan's 'broke out today' label conflicts with a negative distance (-0.78%), so the price is still below the level. Treat the trigger as unconfirmed. A 2-ATR stop is about $1.46, so size to $150 or less.",
+     "trigger": "Close above 35.20 on at least 3.0x relative volume",
      "instrument": "stock",
      "max_dollars": 150,
-     "conviction": 3
-    },
-    {
-     "symbol": "DIS",
-     "setup": "Near 40-day breakout at 123.34, ROC20 +6.3%, ATR 2.77. Declined World Cup bids is neutral news, so the setup rests on the price trigger.",
-     "trigger": "Close above 123.34 on at least 2.5x relative volume",
-     "instrument": "stock",
-     "max_dollars": 100,
      "conviction": 2
     },
     {
      "symbol": "NFLX",
-     "setup": "Broke down through 58.19 today (ROC20 -13.8%, ATR 1.87). Chasing the put after the move is not worth it; only enter on follow-through.",
-     "trigger": "Close below 58.19 on a second day with at least 2.5x relative volume, and a 30-60 DTE put ask at or below $1.50 (one contract)",
+     "setup": "Broke down through 58.19 today (ROC20 -13.8%, ATR 1.87). Only enter on follow-through, not on the first breakdown day.",
+     "trigger": "Second consecutive close below 58.19 on at least 3.0x relative volume, and a 30-60 DTE put ask at or below $1.50 (one contract)",
      "instrument": "put",
      "max_dollars": 150,
      "conviction": 2
+    },
+    {
+     "symbol": "DIS",
+     "setup": "Near 40-day breakout at 123.34 from the prior session. It is not in today's fresh scan, so the level and distance are unverified. Declined World Cup bids are neutral news.",
+     "trigger": "Close above 123.34 on at least 3.0x relative volume, confirmed against a fresh quote before acting",
+     "instrument": "stock",
+     "max_dollars": 100,
+     "conviction": 1
     }
    ],
    "position_plans": [],
    "avoid": [
-    "SE puts: already about 4.9% below the fresh 65.89 level with ATR 3.63, so entering now is an extended chase; the old 68.55 trigger is stale.",
-    "GOOG and GOOGL puts: ATR about $11 on a roughly $270 stock, so a 2-ATR stop is far above the $150 budget. The 'Alphabet overtakes Nvidia' headline also argues against a short.",
-    "Financials (C, MS, BA, BAC, COF): my one Financials trade lost $5.58 and the ATR-to-budget ratio is poor.",
+    "SE puts: already about 4.9% below the fresh 65.89 level with ATR 3.63, so entering now is an extended chase.",
+    "GOOG and GOOGL puts: ATR about $11 on a roughly $270 stock, so a 2-ATR stop far exceeds the $150 budget. The Waymo recall and the 'Alphabet overtakes Nvidia' headline add noise in both directions.",
+    "Financials (C, MS, BA, BAC, COF): many breakdowns in the scan, but my one Financials trade lost $5.58 and ATR-to-budget is poor.",
     "Industrials (GEV, CMI, CRS, ROK, XLI, IWM, IJH): untested in my results and ATR too large for the budget.",
-    "FXI, SRE, EMB, F, PLD, TGT: no edge at current levels, or too close to the level with thin ATR, or news-driven.",
-    "Broad market / other, Energy, Consumer Staples, Technology, Consumer Discretionary: negative in my own results (Broad market -$221 over 11 trades)."
+    "Broad market / other, Energy, Consumer Discretionary, Consumer Staples, Technology: negative in my own results. Broad market is -$221 over 11 trades, and SPY is in a downtrend."
    ],
-   "brainstorm": "Test requiring a second confirming close before any Communication Services breakout entry, since my scorecard shows 44% hit rate and -0.23% average move, and see whether that filter improves results.",
+   "brainstorm": "Test whether Communication Services breakdowns that hold for two closes outperform single-day breakdowns. If they do, the NFLX follow-through rule becomes the template for future puts. Track it for 10 sessions before changing sizing.",
    "revisions": [
     {
      "at": "2026-11-20T16:40-05:00",
@@ -3581,6 +3574,29 @@
        "setup": "Broke down through 58.19 today (ROC20 -13.8%, ATR 1.87). Chasing the put after t"
       }
      ]
+    },
+    {
+     "at": "2026-11-22T22:46-05:00",
+     "session": "Evening check-in",
+     "decision": "revise",
+     "why": "The plan's triggers still hold, but the strategy params now require 3.0x relative volume while the plan says 2.5x, and my scorecard (44% hit rate, -0.23% average pick move) doesn't support loosening the bar. SPY is below its 50- and 200-day averages with crash radar at 46, so I'm tightening confirmation to 3.0x and keeping the Communication Services lean-in small. The fresh scan also no longer sho",
+     "watch": [
+      {
+       "symbol": "IBN",
+       "instrument": "stock",
+       "setup": "Breakout near 40-day level at 35.20; ROC20 +20.4%, ATR 0.73. The scan's 'broke o"
+      },
+      {
+       "symbol": "NFLX",
+       "instrument": "put",
+       "setup": "Broke down through 58.19 today (ROC20 -13.8%, ATR 1.87). Only enter on follow-th"
+      },
+      {
+       "symbol": "DIS",
+       "instrument": "stock",
+       "setup": "Near 40-day breakout at 123.34 from the prior session. It is not in today's fres"
+      }
+     ]
     }
    ],
    "settled_cash_at_plan": 626.52,
@@ -3588,24 +3604,24 @@
   },
   "meanrev": {
    "for_day": "2026-11-23",
-   "made_at": "2026-11-20T16:41-05:00",
-   "session": "After-close review",
+   "made_at": "2026-11-22T22:47-05:00",
+   "session": "Evening check-in",
    "decision": "revise",
-   "why": "MRK is absent from today's scan, so its 134 trigger rests on stale pre-market data; I'm dropping it. The fresh scan supports two non-Financials names that clear 0.8:1 on today's ATR math.",
-   "summary": "Hold the ten open stock positions to their stops and targets with no adds, and buy PM or SCHD only if they trigger at the listed prices using settled cash.",
+   "why": "RSP closed at 207.59, below its 207.60 stop, and the book is 4 of 10 Financials with the sector lean-in now adding concentration risk.",
+   "summary": "Exit RSP at the open since it closed through its stop, hold the other stock positions to their stops and targets with no adds, and buy SCHD only if it triggers at or below 33.94 using settled cash.",
    "watchlist": [
     {
-     "symbol": "PM",
-     "setup": "RSI(2) 1.5 washout, 0.4% above SMA200, Consumer Staples",
-     "trigger": "Buy at or below 184.18; stop 176.95 (1.5 ATR); target 190.73 (about 0.9:1)",
+     "symbol": "SCHD",
+     "setup": "RSI(2) 1.2 washout, 3.5% above SMA200, low-volatility ETF, about 1.2:1",
+     "trigger": "Buy at or below 33.94; stop 33.20; target 34.80",
      "instrument": "stock",
-     "max_dollars": 50,
+     "max_dollars": 25,
      "conviction": 2
     },
     {
-     "symbol": "SCHD",
-     "setup": "RSI(2) 1.2 washout, 3.5% above SMA200, low-volatility ETF",
-     "trigger": "Buy at or below 33.94; stop 33.20; target 34.80 (about 1.2:1)",
+     "symbol": "PM",
+     "setup": "RSI(2) 1.5 washout, 0.4% above SMA200, Consumer Staples, about 0.9:1 so sub-1:1",
+     "trigger": "Buy only at or below 184.18 with a stop at 176.95; skip if it fails to trigger",
      "instrument": "stock",
      "max_dollars": 25,
      "conviction": 2
@@ -3613,38 +3629,38 @@
    ],
    "position_plans": [
     {
-     "symbol": "MCO",
-     "plan": "Hold; stop 464.40, target 503.94; exit at stop or target, no adds."
-    },
-    {
-     "symbol": "AMGN",
-     "plan": "Hold; stop 430.25, target 459.90; exit at stop, no adds."
-    },
-    {
-     "symbol": "ACN",
-     "plan": "Hold; stop 215.73, target 243.73; exit at stop, no adds."
+     "symbol": "RSP",
+     "plan": "Exit at open; last close 207.59 is already below the 207.60 stop, so the plan to hold is void."
     },
     {
      "symbol": "NVS",
-     "plan": "Hold; stop 150.25, target 159.03; exit at stop, no adds."
+     "plan": "Hold; exit at stop 150.25 (price 150.475, very close) or target 159.03."
     },
     {
-     "symbol": "SAP",
-     "plan": "Hold; stop 197.36, target 221.71; exit at stop, no adds."
+     "symbol": "MCO",
+     "plan": "Hold; stop 464.40 (price 466.89), target 503.94, no adds."
     },
     {
-     "symbol": "SPGI",
-     "plan": "Hold; stop 426.68, target 457.39; exit at stop, no adds."
+     "symbol": "PYPL",
+     "plan": "Hold; stop 52.21 (price 53.31), target 57.15, no adds."
+    },
+    {
+     "symbol": "AMGN",
+     "plan": "Hold; stop 430.25 (price 436.05), target 459.90, no adds."
+    },
+    {
+     "symbol": "ACN",
+     "plan": "Hold; stop 215.73 (price 221.19), target 243.73; watch Portugal layoff news, no adds."
     }
    ],
    "avoid": [
-    "MRK, not in today's scan, so the setup can't be verified",
-    "BLK, GWW, BNY: Financials adds with the sector already heavy",
-    "TRV re-entry: forward ratio about 0.36:1",
+    "BLK, GWW, BNY: Financials adds while Financials already makes up 4 of 10 positions",
+    "MRK: not in today's scan, so the setup can't be verified",
+    "Technology: 1-for-3 for -14.20 with the AI selloff unresolved",
     "PFE, IBB, EL, IQV, LIN, SHEL, XLV: fail the 0.8:1 test on ATR stops",
-    "Technology: 1-for-3 for -14.20 with the AI selloff unresolved"
+    "TRV re-entry: forward ratio about 0.36:1"
    ],
-   "brainstorm": "",
+   "brainstorm": "Test whether a 2.5 ATR stop with the same 0.8:1 floor improves the win rate on the sub-1:1 starters.",
    "revisions": [
     {
      "at": "2026-11-20T16:41-05:00",
@@ -3661,6 +3677,24 @@
        "symbol": "SCHD",
        "instrument": "stock",
        "setup": "RSI(2) 1.2 washout, 3.5% above SMA200, low-volatility ETF"
+      }
+     ]
+    },
+    {
+     "at": "2026-11-22T22:47-05:00",
+     "session": "Evening check-in",
+     "decision": "revise",
+     "why": "RSP closed at 207.59, below its 207.60 stop, and the book is 4 of 10 Financials with the sector lean-in now adding concentration risk.",
+     "watch": [
+      {
+       "symbol": "SCHD",
+       "instrument": "stock",
+       "setup": "RSI(2) 1.2 washout, 3.5% above SMA200, low-volatility ETF, about 1.2:1"
+      },
+      {
+       "symbol": "PM",
+       "instrument": "stock",
+       "setup": "RSI(2) 1.5 washout, 0.4% above SMA200, Consumer Staples, about 0.9:1 so sub-1:1"
       }
      ]
     }
@@ -3790,11 +3824,11 @@
   },
   "scalper": {
    "for_day": "2026-11-23",
-   "made_at": "2026-11-20T16:41-05:00",
-   "session": "After-close review",
-   "decision": "revise",
-   "why": "Today's scan was broadly red, Tech-led, and SPY is 9.3% below its 50-day with crash radar at 46 (warning). That makes the IWM setup more likely to fail on a selloff open, so I'm tightening the gate: no trade unless the open itself is not a selloff. The rel-volume filter looks enforced now, but the sample is still too small to tune.",
-   "summary": "Stand aside by default. Only consider one $250 IWM VWAP-pullback slice if the open is not a broad selloff, IWM reclaims and holds VWAP on at least 1.5x relative volume after the first 15 minutes, and most of the scan is not red. Target +0.5%, stop -0.3% (expect about -0.35% fills), 45-minute limit, flat by close.",
+   "made_at": "2026-11-22T22:47-05:00",
+   "session": "Evening check-in",
+   "decision": "keep",
+   "why": "Nothing new changes the thesis. Tech and AI-chip names sold off hard on Friday, but the only fresh news is unconfirmed (Broadcom) or minor (NVIDIA product launch), and crash radar is still in the warning tier at 46. The IWM setup is small, conditional, and only fires on a non-selloff open, so it's the right size for an unproven edge.",
+   "summary": "Stand aside by default. Consider one $250 IWM VWAP-pullback slice only if the open is not a broad selloff, IWM reclaims and holds VWAP on at least 1.5x bar-verified relative volume after the first 15 minutes, SPY is not down more than 0.5% in the morning, and fewer than half the scan names are red. Target +0.5%, stop -0.3% (expect about -0.35% fills), 45-minute limit, flat by close.",
    "watchlist": [
     {
      "symbol": "IWM",
@@ -3807,20 +3841,33 @@
    ],
    "position_plans": [],
    "avoid": [
-    "Technology and AI-chip complex (NVDA, AMD, AVGO, MU, INTC, SNDK, TSM, SMH, SOXX, SPCX, TSLA, QQQ): 4-16% ATRs, headline-driven, and Technology is -$1.35 over 53 trades. Today's selloff was led by these names.",
+    "Technology and AI-chip complex (NVDA, AMD, AVGO, MU, INTC, SNDK, TSM, SMH, SOXX, SPCX, TSLA, QQQ): 4-16% ATRs, headline-driven, and Technology is -$1.35 over 53 trades. Friday's selloff was led by these names.",
     "AMZN and MSFT: Consumer Discretionary is -$0.72 over 11 trades at 36% win rate; moves are event-driven.",
-    "META, GOOGL, GOOG: Communication Services is at 42% win rate and today's action was broad selling, not clean pullbacks.",
-    "AAPL: stays dropped (Korean regulator and outage risk, no VWAP edge).",
+    "META, GOOGL, GOOG: Communication Services is at 42% win rate and the recent action was broad selling, not clean pullbacks.",
+    "AAPL: stays dropped (regulatory and outage risk, no VWAP edge).",
     "SPY: stays out until it shows a repeatable edge.",
     "Any open where most of the scan is red: the IWM setup is off even if the VWAP trigger fires."
    ],
-   "brainstorm": "Test whether a Monday open with a gap down followed by a reclaim of the first-15-minute high is a better entry than VWAP alone. Log it as a separate setup so it doesn't mix with the VWAP results.",
+   "brainstorm": "Test a tighter exit on the IWM slice: 0.4% target with a 30-minute limit, since most of our time-limit exits sit near 0% and several gains were given back. Only change this if the 45-minute version is still running at the next review with more trades logged.",
    "revisions": [
     {
      "at": "2026-11-20T16:41-05:00",
      "session": "After-close review",
      "decision": "revise",
      "why": "Today's scan was broadly red, Tech-led, and SPY is 9.3% below its 50-day with crash radar at 46 (warning). That makes the IWM setup more likely to fail on a selloff open, so I'm tightening the gate: no trade unless the open itself is not a selloff. The rel-volume filter looks enforced now, but the sample is still too small to tune.",
+     "watch": [
+      {
+       "symbol": "IWM",
+       "instrument": "stock",
+       "setup": "Industrials-tagged VWAP pullback that holds, only on a non-selloff open"
+      }
+     ]
+    },
+    {
+     "at": "2026-11-22T22:47-05:00",
+     "session": "Evening check-in",
+     "decision": "keep",
+     "why": "Nothing new changes the thesis. Tech and AI-chip names sold off hard on Friday, but the only fresh news is unconfirmed (Broadcom) or minor (NVIDIA product launch), and crash radar is still in the warning tier at 46. The IWM setup is small, conditional, and only fires on a non-selloff open, so it's the right size for an unproven edge.",
      "watch": [
       {
        "symbol": "IWM",
@@ -4013,16 +4060,6 @@
   }
  },
  "calendar": [
-  {
-   "date": "2026-11-17",
-   "open": "09:30",
-   "close": "16:00"
-  },
-  {
-   "date": "2026-11-18",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-19",
    "open": "09:30",
@@ -4350,26 +4387,26 @@
     "Communication Services"
    ],
    "avoid": [
+    "Financials",
+    "Industrials",
     "Broad market / other",
     "Energy",
     "Consumer Discretionary",
     "Consumer Staples",
     "Technology"
    ],
-   "why": "Communication Services is the only sector with live setups that fit my ATR and budget limits, and its name is the scan's clearest group. My record there is thin (one trade, -$3.12), so I'm sizing small. The avoided sectors are negative in my own results: Broad market -$221 over 11 trades, Energy -$4",
-   "set_at": "2026-11-20T16:40-05:00",
-   "expires": "2026-12-04"
+   "why": "Communication Services has the scan's clearest cluster of setups that fit the ATR and budget limits, but my record there is one losing trade (-$3.12), so sizing stays small. Financials and Industrials have many scan breakdowns but ATR too large for the budget and negative or untested results. The ot",
+   "set_at": "2026-11-22T22:46-05:00",
+   "expires": "2026-12-06"
   },
   "meanrev": {
-   "lean_in": [
-    "Financials"
-   ],
+   "lean_in": [],
    "avoid": [
     "Technology"
    ],
-   "why": "Financials is 2-for-2 for +8.21 and Technology is 1-for-3 for -14.20, but Financials exposure is already heavy, so no adds beyond the watchlist.",
-   "set_at": "2026-11-20T16:41-05:00",
-   "expires": "2026-12-04"
+   "why": "Financials is 2-for-2 for +8.21 on a tiny sample, but it now makes up 4 of 10 positions, so lean-in is dropped until the book diversifies; Technology stays avoided at 1-for-3 for -14.20.",
+   "set_at": "2026-11-22T22:47-05:00",
+   "expires": "2026-12-06"
   },
   "volsell": {
    "lean_in": [],
@@ -4394,9 +4431,9 @@
     "Consumer Discretionary",
     "Communication Services"
    ],
-   "why": "Industrials is the only positive sector (+$1.90 over 10 trades, 50% win rate), though the sample is small. Technology (-$1.35 over 53), Consumer Discretionary (-$0.72 over 11), and Communication Services (42% win rate) are negative, and today's scan confirms broad weakness there. Renewing Industrial",
-   "set_at": "2026-11-20T16:41-05:00",
-   "expires": "2026-12-04"
+   "why": "Industrials is the only positive sector (+$1.90 over 10 trades, 50% win rate), though the sample is small. Technology (-$1.35 over 53 trades, 45% win rate), Consumer Discretionary (-$0.72 over 11, 36%), and Communication Services (42%) are negative, and the scan shows broad weakness there. Focus ren",
+   "set_at": "2026-11-22T22:47-05:00",
+   "expires": "2026-12-06"
   }
  },
  "sector_stats": {
@@ -4730,5 +4767,5 @@
   "core_size": 500
  },
  "recap_updated": "2026-11-20T16:40-05:00",
- "plans_updated": "2026-11-20T16:41-05:00"
+ "plans_updated": "2026-11-22T22:47-05:00"
 }
