@@ -1,93 +1,5 @@
 [
  {
-  "time": "2026-11-10T09:39:45-05:00",
-  "type": "open",
-  "agent": "monkey",
-  "symbol": "ORCL",
-  "instrument": "stock",
-  "qty": 3.0918,
-  "price": 119.14,
-  "cost": 368.36,
-  "stop": 102.19,
-  "thesis": "Dart landed on ORCL",
-  "confidence": 0
- },
- {
-  "time": "2026-11-10T09:39:51-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "META, AMZN, AVGO, GEV, MSFT",
-  "note": "defensive: No setup is live yet and SPY's 0.28% range is too quiet for full-size trades. Defensive mode keeps the META breakout and the other above-opening-range names on watch, with VWAP bounces at half size. The 0.5% target and 0.3% stop match the overnight plan's one-scalp limit."
- },
- {
-  "time": "2026-11-10T09:52:08-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "META",
-  "note": "VWAP pullback bounce skipped: 0.95x volume < 1.5x"
- },
- {
-  "time": "2026-11-10T09:56:11-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "AMZN",
-  "note": "VWAP pullback bounce skipped: 0.57x volume < 1.5x"
- },
- {
-  "time": "2026-11-10T09:56:11-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "SPY",
-  "note": "VWAP pullback bounce skipped: 0.97x volume < 1.5x"
- },
- {
-  "time": "2026-11-10T09:56:11-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "instrument": "stock",
-  "qty": 0.4323,
-  "price": 289.692,
-  "cost": 125.23,
-  "stop": 288.82,
-  "thesis": "VWAP pullback bounce on GOOGL: 1.97x volume, +0.26% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-11-10T09:58:13-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "GEV",
-  "note": "VWAP pullback bounce skipped: 0.35x volume < 1.5x"
- },
- {
-  "time": "2026-11-10T10:02:20-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "qty": 0.4323,
-  "entry": 289.692,
-  "exit": 291.548,
-  "pnl": 0.81,
-  "note": "target hit (+0.62%)",
-  "opened": "2026-11-10T09:56:11-05:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on GOOGL: 1.97x volume, +0.26% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-11-10T10:02:21-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "MSFT",
-  "instrument": "stock",
-  "qty": 0.2306,
-  "price": 543.156,
-  "cost": 125.25,
-  "stop": 541.32,
-  "thesis": "VWAP pullback bounce on MSFT: 1.76x volume, +0.21% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-11-10T10:06:18-05:00",
   "type": "exit_unfilled",
   "agent": "trend",
@@ -6111,5 +6023,61 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-97%) (tried 0.06, 0.04, 0.03, 0.01; mark 0.11, natural -3.73)"
+ },
+ {
+  "time": "2026-11-23T16:40:16-05:00",
+  "type": "recap",
+  "note": "Snapback Partners cleared out its five-trade book on RSI snap-backs for a net realized loss of $0.05 (3 wins, 2 losses), and the firm gained $15.16 (+1.57%) on the day. The Index Booth (SPY) rose 4.87%, so the race leader lagged a strong tape, and the crash radar is at 47 (warning)."
+ },
+ {
+  "time": "2026-11-23T16:40:17-05:00",
+  "type": "scorecard",
+  "agent": "trend",
+  "note": "Plan graded: 0 of 3 picks moved the planned way, avg -1.98%"
+ },
+ {
+  "time": "2026-11-23T16:40:30-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "note": "Leaning into Communication Services; avoiding Financials, Industrials, Broad market / other, Energy, Consumer Discretionary, Consumer Staples, Technology, Real Estate, Utilities. Communication Services still has the scan's clearest breakouts and breakdowns that fit the ATR and budget limits (IBN, DIS, NFLX). My own record there is thin: one losing trade, -$3.12. I'm keeping the focus at small size and will drop it if the next few triggers lose. Other sectors are negative or "
+ },
+ {
+  "time": "2026-11-23T16:40:30-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "note": "After-close review: revise. The fresh scan moved the levels: IBN's breakout line is now 36.17 (not 35.20), NFLX's breakdown line is 56.56 (not 58.19), and DIS is back in the scan at 123.34. Both NFLX and IBN are still about 2-3% from their levels, so no trigger has fired.",
+  "symbol": "IBN, DIS, NFLX, XLC"
+ },
+ {
+  "time": "2026-11-23T16:40:30-05:00",
+  "type": "scorecard",
+  "agent": "meanrev",
+  "note": "Plan graded: 1 of 1 picks moved the planned way, avg +1.27%"
+ },
+ {
+  "time": "2026-11-23T16:40:56-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "note": "Leaning into Financials; avoiding Technology. Financials is 4-for-5 for +8.10 in my results, but I'm holding new Financials entries until a setup clears 0.8:1; Technology is 1-for-3 for -14.20."
+ },
+ {
+  "time": "2026-11-23T16:40:56-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "After-close review: revise. Today's closes (RSP, AMGN, MCO, SPGI, DE) mean the pre-market plan's holds are stale, and every fresh-scan candidate still fails the 0.8:1 floor (e.g., MPC ~0.40:1, EOG ~0.49:1).",
+  "symbol": ""
+ },
+ {
+  "time": "2026-11-23T16:40:56-05:00",
+  "type": "scorecard",
+  "agent": "scalper",
+  "note": "Plan graded: 1 of 1 picks moved the planned way, avg +3.52%"
+ },
+ {
+  "time": "2026-11-23T16:41:04-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "After-close review: revise. Our scorecard is still thin (44% hit rate, 21 to 23 closed trades, stops slipping past 0.3%), and the notes say the 0.5% target is too far for a 45-minute hold. Tightening the target to 0.4% is the only change I'm making. Today's tech melt-up doesn't change our record, so Technology stays off the list.",
+  "symbol": "IWM"
  }
 ]

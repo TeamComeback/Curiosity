@@ -23646,5 +23646,109 @@
   ],
   "aggression": "stand_down",
   "why": "Breadth is still poor: about 21 of 30 scan names are red, so the 'fewer than half red' condition for the IWM VWAP-pullback trigger is not met. Keep watching IWM and SPY, but stay flat unless breadth improves and IWM holds VWAP on at least 1.5x relative volume."
+ },
+ {
+  "time": "2026-11-23T16:40:30-05:00",
+  "type": "plan",
+  "agent": "trend",
+  "session": "After-close review",
+  "for_day": "2026-11-24",
+  "decision": "revise",
+  "why": "The fresh scan moved the levels: IBN's breakout line is now 36.17 (not 35.20), NFLX's breakdown line is 56.56 (not 58.19), and DIS is back in the scan at 123.34. Both NFLX and IBN are still about 2-3% from their levels, so no trigger has fired.",
+  "summary": "Stay in settled cash ($626.52) with no open positions. Act only on a 3.0x-volume close through a fresh level: IBN above 36.17, DIS above 123.34, or NFLX below 56.56 on a second close with a 30-60 DTE put ask at or below $1.50. Keep each entry to $150 or less, given crash radar 48 and SPY below its 50-day average.",
+  "watchlist": [
+   {
+    "symbol": "IBN",
+    "setup": "Near 40-day breakout at 36.17 (ROC20 +21.1%, ATR 0.76). Price is about 2% below the level, so it is unconfirmed.",
+    "trigger": "Close above 36.17 on at least 3.0x relative volume. Size so a 2-ATR stop (~$1.52) stays within $150.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "DIS",
+    "setup": "Near breakout at 123.34 (ROC20 +9.0%, ATR 2.92). Downgrade to Accumulate and the IMAX/Super Bowl news are neutral-to-mixed.",
+    "trigger": "Close above 123.34 on at least 3.0x relative volume. Stock only, 2-ATR stop (~$5.84) must fit the $150 budget.",
+    "instrument": "stock",
+    "conviction": 2
+   },
+   {
+    "symbol": "NFLX",
+    "setup": "Near 40-day breakdown at 56.56 (ROC20 -9.1%, ATR 1.81). Price is about 2.7% above the level.",
+    "trigger": "Second consecutive close below 56.56 on at least 3.0x relative volume, plus a 30-60 DTE put ask at or below $1.50 (one contract).",
+    "instrument": "put",
+    "conviction": 3
+   },
+   {
+    "symbol": "XLC",
+    "setup": "Backup Communication Services put, only if NFLX does not fire. Its breakdown level was 99.33 in the prior plan and is unverified in today's scan.",
+    "trigger": "Close below 99.33 on at least 3.0x relative volume, with a 30-60 DTE put ask within budget. Re-check the level before acting.",
+    "instrument": "put",
+    "conviction": 1
+   }
+  ]
+ },
+ {
+  "time": "2026-11-23T16:40:30-05:00",
+  "type": "focus",
+  "agent": "trend",
+  "lean_in": [
+   "Communication Services"
+  ],
+  "avoid": [
+   "Financials",
+   "Industrials",
+   "Broad market / other",
+   "Energy",
+   "Consumer Discretionary",
+   "Consumer Staples",
+   "Technology",
+   "Real Estate",
+   "Utilities"
+  ],
+  "why": "Communication Services still has the scan's clearest breakouts and breakdowns that fit the ATR and budget limits (IBN, DIS, NFLX). My own record there is thin: one losing trade, -$3.12. I'm keeping the focus at small size and will drop it if the next few triggers lose. Other sectors are negative or ",
+  "expires": "2026-12-07"
+ },
+ {
+  "time": "2026-11-23T16:40:56-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "After-close review",
+  "for_day": "2026-11-24",
+  "decision": "revise",
+  "why": "Today's closes (RSP, AMGN, MCO, SPGI, DE) mean the pre-market plan's holds are stale, and every fresh-scan candidate still fails the 0.8:1 floor (e.g., MPC ~0.40:1, EOG ~0.49:1).",
+  "summary": "No new buys tomorrow. Hold ACN, NVS, SAP, UTHR and PYPL to their stops and targets, and keep the $138 settled cash until a candidate clears 0.8:1.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-23T16:40:56-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "lean_in": [
+   "Financials"
+  ],
+  "avoid": [
+   "Technology"
+  ],
+  "why": "Financials is 4-for-5 for +8.10 in my results, but I'm holding new Financials entries until a setup clears 0.8:1; Technology is 1-for-3 for -14.20.",
+  "expires": "2026-12-07"
+ },
+ {
+  "time": "2026-11-23T16:41:04-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "After-close review",
+  "for_day": "2026-11-24",
+  "decision": "revise",
+  "why": "Our scorecard is still thin (44% hit rate, 21 to 23 closed trades, stops slipping past 0.3%), and the notes say the 0.5% target is too far for a 45-minute hold. Tightening the target to 0.4% is the only change I'm making. Today's tech melt-up doesn't change our record, so Technology stays off the list.",
+  "summary": "Stand aside unless IWM pulls back to VWAP and holds above it after the first 15 minutes on at least 1.5x bar-verified relative volume, with SPY not down more than 0.5% in the morning and fewer than half the scan names red at the open. If triggered, buy one $250 slice: target +0.4%, stop -0.3% (expect about -0.35% fills), 45-minute limit, flat by close.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Industrials-tagged VWAP pullback that holds, only on a non-selloff open",
+    "trigger": "After the first 15 minutes: IWM pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, SPY not down more than 0.5% in the morning, and fewer than half the scan names red at the open. Target +0.4%, stop -0.3%, 45-minute limit, flat by close.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]
