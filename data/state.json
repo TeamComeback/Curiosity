@@ -1225,7 +1225,7 @@
       "pct_vs_sma5": -5.1
      },
      "sector": "Consumer Staples",
-     "last": 223.13
+     "last": 222.64
     },
     "pos-7c659f7cde": {
      "kind": "stock",
@@ -1245,7 +1245,7 @@
       "pct_vs_sma5": -2.5
      },
      "sector": "Health Care",
-     "last": 152.245
+     "last": 152.015
     },
     "pos-a2d196d244": {
      "kind": "stock",
@@ -1265,7 +1265,7 @@
       "pct_vs_sma5": -6.8
      },
      "sector": "Consumer Staples",
-     "last": 203.94
+     "last": 203.865
     },
     "pos-af5c8c31d9": {
      "kind": "stock",
@@ -1285,7 +1285,7 @@
       "pct_vs_sma5": -3.4
      },
      "sector": "Broad market / other",
-     "last": 558.505
+     "last": 560.285
     },
     "pos-3bd114fbff": {
      "kind": "stock",
@@ -1305,7 +1305,7 @@
       "pct_vs_sma5": -4.5
      },
      "sector": "Financials",
-     "last": 55.085
+     "last": 55.17
     }
    },
    "status": "active",
@@ -1316,10 +1316,6 @@
    "peak": 1029.08,
    "max_dd": 0.0633,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "Six positions are open, not five; hold the existing stops and targets, skip same-day re-entries, and keep new adds at starter size while SPY trends below its 200-day."
-    },
     {
      "date": "2026-11-19",
      "note": "Recheck stale avoid-list ratios against live prices each scan; I hold seven stock positions, so no further adds beyond starters."
@@ -1475,6 +1471,10 @@
     {
      "date": "2026-11-23",
      "note": "15:07: all six candidates fail the 0.8:1 floor (best is EOG at about 0.43:1), SCHD is not a candidate so its 33.94 trigger can't be verified, and RSP is already closed. Hold the nine open stock positions to their stops and targets and keep the $138 settled cash."
+    },
+    {
+     "date": "2026-11-23",
+     "note": "All six live candidates fail the 0.8:1 reward-to-risk floor (best is EOG at about 0.49:1 on the hints). SCHD is not a candidate, so its 33.94 trigger can't be verified. Hold the nine open stock positions to their stops and targets and keep the $138 settled cash."
     }
    ],
    "last_exits": {
@@ -2202,7 +2202,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.18,
-     "mark": 0.08,
+     "mark": 0.07,
      "entry": 0.18,
      "width": 1.0,
      "short_strike": 78.0,
@@ -2224,7 +2224,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.05
     }
    },
    "status": "active",
@@ -2235,10 +2235,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-18",
-     "note": "Pass TLT 78/77 bull put again: IV/RV 1.27 clears the floor, but it is a rate proxy in my avoid sector, TLT has stopped out three times, and SPY trend is down. XLF fails the 1.15 IV/RV floor. Keep $889 settled for a non-rate setup at IV/RV 1.15+."
-    },
     {
      "date": "2026-11-19",
      "note": "Passed TLT 78/77 bull put again (IV/RV 1.23, 0.19 credit). It is a rate proxy in Real Estate, which is on my avoid list after 0-for-6, and SPY is trending down. Keep $889 settled and wait for a non-avoided, non-rate setup at IV/RV 1.15+."
@@ -2394,6 +2390,10 @@
     {
      "date": "2026-11-23",
      "note": "Passed on the TLT 79.5/78.5 duplicate. It would double the open TLT 78/77 at the same expiry (about $164 combined max loss, roughly 18% of equity) while SPY trends down and crash radar sits at 47. Holding the existing spread under default exits (take-profit near 0.065 mark, stop at 2x credit). Next "
+    },
+    {
+     "date": "2026-11-23",
+     "note": "Passed on the TLT 79.5/78.5 duplicate: it would stack a second same-expiry TLT bull put on the open 78/77 (about $164 combined max loss, roughly 18% of equity) while SPY trends down and crash radar is 47. Hold the existing spread under default exits and wait for a non-duplicate rich-vol setup with c"
     }
    ],
    "last_exits": {
@@ -2429,7 +2429,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 82.0,
+   "min_trade_seen": 85.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2891,7 +2891,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 722.455
+     "last": 723.815
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2907,7 +2907,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 722.455
+     "last": 723.815
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2923,7 +2923,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 722.455
+     "last": 723.815
     }
    },
    "status": "active",
@@ -2956,7 +2956,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 113.41
+     "last": 113.88
     }
    },
    "status": "active",
@@ -3008,7 +3008,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.52,
+     "mark": 0.51,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -3028,7 +3028,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.465,
+     "exit_half_spread": 1.41,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -3053,7 +3053,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.07,
+     "mark": 0.11,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3073,7 +3073,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 4.02,
+     "exit_half_spread": 3.835,
      "peak_mark": 1.09
     }
    },
@@ -3640,13 +3640,13 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-23",
-    "made_at": "2026-11-23T15:07-05:00",
+    "made_at": "2026-11-23T15:38-05:00",
     "watch": [
      "IWM",
      "SPY"
     ],
     "aggression": "stand_down",
-    "why": "It's 3:07 PM with no open scalps and no trades today. Breadth is still weak, SPY is down, and the crash radar is at 47, so new entries are unlikely to finish cleanly before the 3:50 flatten. Keep IWM and SPY on watch for the next session under the overnight IWM VWAP-reclaim conditions.",
+    "why": "With flatten at 3:50 and only about 12 minutes left, a new scalp can't play out within the time limit, so I'm standing down. SPY is still down on the regime, and crash radar is at 47, so I'm keeping IWM and SPY on watch only for the next session under the overnight VWAP-reclaim conditions.",
     "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,
