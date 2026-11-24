@@ -202,6 +202,8 @@ const STATUS = {active:"Active", winner:"🏆 Winner", failed:"✕ Failed", elim
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money = n => n==null ? "–" : "$" + Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const wlSide = x => x ? `${x.usd < 0 ? "-" : "+"}$${Math.abs(x.usd).toFixed(2)}${x.pct == null ? "" : ` (${x.pct > 0 ? "+" : ""}${x.pct}%)`}` : "–";
+const wlHTML = a => { const w = a.win_loss || {}; return `<span title="Average winning and losing closed trade">Avg win <b>${wlSide(w.win)}</b></span><span>Avg loss <b>${wlSide(w.loss)}</b></span><span title="Average win divided by average loss">Win/loss size <b>${w.ratio == null ? "–" : w.ratio + ":1"}</b></span>`; };
 const money0 = n => "$" + Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
 const signed$ = n => (n<0?"-":"+") + "$" + Math.abs(Number(n)).toFixed(2);
 const cls = n => n>0 ? "pos" : n<0 ? "neg" : "";
@@ -384,7 +386,7 @@ function standRow(a, rank){
     ${a.competing || a.exhibition ? `<div class="bar" role="progressbar" aria-label="Progress to ${money0(GOAL)}" aria-valuenow="${a.equity}"><i style="width:${logPct(a.equity)}%;background:${COLOR[a.id]}"></i></div>` : ""}
     <div class="more-info" hidden>
       <div class="stats"><span>Cash <b>${money(a.available)}</b>${a.settling ? ` (+${money(a.settling)} settling)` : ""}</span><span>Open <b>${a.open}</b></span><span>Closed <b>${a.closed}</b></span>
-        <span>Win rate <b>${a.win_rate==null?"–":a.win_rate+"%"}</b></span><span>Max DD <b>${a.max_dd_pct}%</b></span></div>
+        <span>Win rate <b>${a.win_rate==null?"–":a.win_rate+"%"}</b></span><span>Max DD <b>${a.max_dd_pct}%</b></span>${wlHTML(a)}</div>
       ${a.status_reason && st!=="active" ? `<div class="reason ${st}">${esc(a.status_reason)}</div>` : ""}
       ${scoreLine(a.id)}
       ${a.notes && a.notes.length ? `<div class="note">“${esc(a.notes[0].note)}”</div>` : ""}
@@ -458,7 +460,7 @@ function agentCard(a, rank, ticks){
     ${a.competing || a.exhibition ? `<div class="track" role="progressbar" aria-valuenow="${a.equity}" aria-valuemax="${GOAL}" aria-label="Progress to goal">
       <div class="fill" style="width:${logPct(a.equity)}%;background:${COLOR[a.id]}"></div></div><div class="ticks">${ticks}</div>` : ""}
     <div class="stats"><span>Cash <b>${money(a.available)}</b>${a.settling ? ` <span title="Sale proceeds settle the next trading day">(+${money(a.settling)} settling)</span>` : ""}</span><span>Open <b>${a.open}</b></span><span>Closed <b>${a.closed}</b></span>
-      <span>Win rate <b>${a.win_rate==null?"–":a.win_rate+"%"}</b></span><span>Max DD <b>${a.max_dd_pct}%</b></span>
+      <span>Win rate <b>${a.win_rate==null?"–":a.win_rate+"%"}</b></span><span>Max DD <b>${a.max_dd_pct}%</b></span>${wlHTML(a)}
       <span title="Return divided by max drawdown">Risk-adj <b>${a.risk_adj}</b></span></div>
     ${a.status_reason && st!=="active" ? `<div class="reason ${st}">${esc(a.status_reason)}</div>` : ""}
     ${scoreLine(a.id)}

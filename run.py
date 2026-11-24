@@ -506,6 +506,28 @@ def thesis_reviews(curve):
     return out
 
 
+def win_loss_sizes(ledger):
+    """Per firm: average winning and losing trade in dollars and percent, from fully closed trades.
+    A side with no trades is None (the dashboard shows a dash)."""
+    rows = {}
+    for t in ledger:
+        if t.get("type") == "trade_closed" and not t.get("partial") and t.get("pnl") is not None:
+            rows.setdefault(t["agent"], []).append(t)
+    out = {}
+    for aid, ts in rows.items():
+        def side(sel):
+            xs = [t for t in ts if sel(t["pnl"])]
+            if not xs:
+                return None
+            pcts = [t["return_pct"] for t in xs if t.get("return_pct") is not None]
+            return {"n": len(xs), "usd": round(sum(t["pnl"] for t in xs) / len(xs), 2),
+                    "pct": round(sum(pcts) / len(pcts), 1) if pcts else None}
+        w, l = side(lambda p: p > 0), side(lambda p: p <= 0)
+        out[aid] = {"win": w, "loss": l,
+                    "ratio": round(w["usd"] / abs(l["usd"]), 2) if w and l and l["usd"] else None}
+    return out
+
+
 def write_dashboard(state, regime, equities):
     curve = store.load("equity.json", [])
     stamp = store.now_et().strftime("%Y-%m-%d")
@@ -513,6 +535,7 @@ def write_dashboard(state, regime, equities):
     store.save("equity.json", curve)
     agents = []
     review = thesis_reviews(curve)
+    sizes = win_loss_sizes(store.load("ledger.json", []))
     for aid, a in state["agents"].items():
         eq = equities.get(aid, a["cash"])
         a["peak"] = max(a.get("peak", eq), eq)
@@ -528,6 +551,7 @@ def write_dashboard(state, regime, equities):
                        "open": len(a["positions"]), "closed": a["closed"],
                        "win_rate": round(100 * a["wins"] / a["closed"], 1) if a["closed"] else None,
                        "max_dd_pct": round(a["max_dd"] * 100, 1),
+                       "win_loss": sizes.get(aid),
                        "risk_adj": round(ret / max(a["max_dd"], 0.05), 2),
                        "notes": a["notes"][-3:][::-1],
                        "thesis_review": review.get(aid)})
@@ -608,6 +632,7 @@ def main(force=False, broker=None):
         return
     state = store.load_state() or store.init_state()
     store.add_missing_agents(state)
+    store.apply_rejoin(state)
     if state["race"]["status"] == "running":
         sync_race_settings(state)
     if state["race"]["status"] != "running":

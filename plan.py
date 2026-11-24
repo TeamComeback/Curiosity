@@ -388,6 +388,7 @@ def main(session=None, force=False, only=None):
         print("Market is open; planning sessions only run while it's closed.")
         return
     state = store.load_state()
+    store.apply_rejoin(state or {})
     if not state or state["race"]["status"] != "running":
         print("No running race.")
         return

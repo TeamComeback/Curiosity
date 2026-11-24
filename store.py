@@ -67,6 +67,23 @@ def add_missing_agents(state):
                                     "joined": now_et().isoformat(timespec="seconds")}
 
 
+def apply_rejoin(state):
+    """An exhibition firm with a rejoin_win_rate goes back to racing once its closed-trade win rate tops it.
+    The decision is kept in state (agent["rejoined"]) so every entry point sees it; config is changed in memory."""
+    for aid, cfg in config.AGENTS.items():
+        a = state.get("agents", {}).get(aid)
+        if not a or not cfg.get("rejoin_win_rate"):
+            continue
+        if not a.get("rejoined"):
+            closed = a.get("closed") or 0
+            if not (closed >= cfg.get("rejoin_min_closed", 10) and (a.get("wins") or 0) / closed > cfg["rejoin_win_rate"]):
+                continue
+            a["rejoined"] = today()
+            journal({"type": "rejoin", "agent": aid, "note": f"{cfg['name']} rejoins the race: win rate "
+                     f"{a['wins']}/{closed} is above {cfg['rejoin_win_rate']:.0%}"})
+        cfg["competing"], cfg["exhibition"], cfg["paused_reason"] = True, False, None
+
+
 def load_params():
     p = load("params.json", {})
     merged = copy.deepcopy(config.DEFAULT_PARAMS)

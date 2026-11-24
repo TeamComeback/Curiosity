@@ -38,7 +38,13 @@ RACE = {
 
 # Competing agents (each keeps its specialty) + a non-competing benchmark.
 AGENTS = {
-    "trend":   {"name": "Trend Co.", "competing": True, "max_open_positions": 6,
+    # Nov 24 2026 (owner-approved in HQ): moved to exhibition after a 16% win rate over 25 closed trades and a 47.5%
+    # max drawdown. It keeps trading on paper but stays out of the race pool, leaderboard and SPY comparison.
+    # It rejoins the race on its own once its closed-trade win rate tops REJOIN_WIN_RATE (checked every run).
+    "trend":   {"name": "Trend Co.", "competing": False, "exhibition": True,
+                "rejoin_win_rate": 0.30, "rejoin_min_closed": 10,
+                "paused_reason": "Exhibition since Nov 24: 16% win rate over 25 closed trades. Rejoins the race once its closed-trade win rate tops 30%.",
+                "max_open_positions": 6,
                 "max_entry_pct": 0.20,                 # one entry never uses more than 20% of the firm, so cash stays for the next breakout
                 "risk_cut": {"below_win_rate": 0.30, "min_closed": 10, "mult": 0.5},   # half size until it wins 30%+
                 "instruments": ["stock", "call", "put"],
