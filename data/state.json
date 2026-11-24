@@ -29,7 +29,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.59,
-     "mark": 0.55,
+     "mark": 0.56,
      "expiry": "2026-12-24",
      "strike": 9.5,
      "delta": -0.5,
@@ -47,8 +47,8 @@
       "pct_vs_sma200": -36.9
      },
      "sector": "Materials",
-     "low_water": 9.375,
-     "exit_half_spread": 0.015
+     "low_water": 9.35,
+     "exit_half_spread": 0.03
     }
    },
    "status": "active",
@@ -59,10 +59,6 @@
    "peak": 1340.54,
    "max_dd": 0.542,
    "notes": [
-    {
-     "date": "2026-11-18",
-     "note": "No new entries: FNGR and COPX are avoid-listed sectors or sub-$0.30 collapses, TGT is already held, and no IBN/EW/NFLX/SE trigger has fired. Hold TGT to its 158.63 stop and CLSX to its 2.98 underlying stop; keep settled cash for game-plan triggers."
-    },
     {
      "date": "2026-11-18",
      "note": "No entries today: FNGR is a sub-$0.30 collapse in an avoid-listed sector, COPX is in the avoid-listed Technology sector, and no game-plan trigger (IBN, EW, NFLX, SE) has fired. Holding TGT to its 158.63 stop and CLSX to its 2.98 underlying stop, with cash settled for triggers."
@@ -218,6 +214,10 @@
     {
      "date": "2026-11-24",
      "note": "No trade: the only candidate, FNGR, has a 0.05 stop against a 0.0215 price (too wide to size) and sits in an avoided sector. Holding the VALE put under its 10.12 underlying stop and keeping $563 settled cash for the Communication Services triggers (IBN >36.17, DIS >123.34, NFLX second close <56.56 a"
+    },
+    {
+     "date": "2026-11-24",
+     "note": "No trade: the only candidate, FNGR, has a 0.05 stop against a 0.022 price (about 127% away), which can't be sized within budget, and it sits in an avoided sector. Holding the VALE put under its 10.12 underlying stop and keeping $563 settled cash for a Communication Services trigger (IBN >36.17, DIS "
     }
    ],
    "last_exits": {
@@ -1254,10 +1254,6 @@
    "notes": [
     {
      "date": "2026-11-20",
-     "note": "Pass: PYPL is the only candidate at or above 0.8:1 (about 0.94:1 on scan numbers), but it's Financials, which is over-concentrated and not on the game-plan watchlist. BLK, BNY, GWW and DE are under 0.8:1, and SAP is already held with no adds. MRK and UTHR aren't in today's candidates, so they can't "
-    },
-    {
-     "date": "2026-11-20",
      "note": "Pass: the only candidates clearing 0.8:1 (PYPL, XYZ) are Financials, which the sector plan bars from new adds. BLK and BNY are under the floor or overlap, DE and SAP are already held, and MRK and UTHR aren't in today's candidate list. Hold the eight open stocks to their stops and targets; TRV alread"
     },
     {
@@ -1411,6 +1407,10 @@
     {
      "date": "2026-11-24",
      "note": "MDT fails the 0.8:1 floor at about 0.62:1 (96.86 to the 99.79 target vs the 92.10 stop). BJ isn't a live candidate, so its game-plan trigger can't be verified. No positions are open, so the stale holds are void. Keep the cash and wait for a candidate that clears the floor."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "MDT's reward-to-risk is about 0.72:1 (3.44 to the 99.66 target vs 4.76 to the 91.47 stop), below the 0.8:1 floor. BJ isn't a live candidate, so its game-plan trigger can't be checked. Positions are empty, so the stale holds are void. Keep the cash."
     }
    ],
    "last_exits": {
@@ -2141,7 +2141,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.2,
-     "mark": 0.24,
+     "mark": 0.29,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 80.0,
@@ -2163,7 +2163,7 @@
       "dte": 30
      },
      "sector": "Consumer Staples",
-     "exit_half_spread": 0.01
+     "exit_half_spread": 0.015
     }
    },
    "status": "active",
@@ -2174,10 +2174,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-20",
-     "note": "Premium House has no trades yet, so I'm taking the one rich-vol setup that clears the 1.15 IV/RV floor at minimum size. The Technology avoid rule is from another firm's notes, not a Premium House rule. Next, watch crash radar and manage this spread against the default 2x stop and 65% take-profit."
-    },
     {
      "date": "2026-11-20",
      "note": "Taking one minimum-size rich-vol spread: the self-imposed sector avoid list has produced zero wins, so I'm testing a non-Real-Estate underlying with the default 2x stop and 65% take-profit, and I'll reassess the sector list at its 12/01 expiry."
@@ -2333,6 +2329,10 @@
     {
      "date": "2026-11-24",
      "note": "Passed on the TLT 79.5/78.5 bull put: a second same-expiry TLT spread would double exposure to one name while crash radar is 48 and SPY is below its 200-day. Wait for a non-duplicate rich-vol setup on another underlying."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "Passing on the second same-expiry TLT bull put: it would double exposure to one name while the open spread is already under water (mark 0.29 vs 0.20 entry) and crash radar is 48 with SPY below its 200-day. Revisit when a non-duplicate rich-vol setup appears or crash radar falls below 40."
     }
    ],
    "last_exits": {
@@ -2368,7 +2368,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 81.0,
+   "min_trade_seen": 78.0,
    "unsettled": [
     {
      "amount": 19.0,
@@ -2836,7 +2836,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 715.81
+     "last": 715.91
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2852,7 +2852,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 715.81
+     "last": 715.91
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2868,7 +2868,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 715.81
+     "last": 715.91
     }
    },
    "status": "active",
@@ -2901,7 +2901,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 108.86
+     "last": 108.53
     },
     "pos-e7834830d1": {
      "kind": "stock",
@@ -2918,7 +2918,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 58.635
+     "last": 58.73
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2935,7 +2935,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 154.07
+     "last": 155.215
     },
     "pos-c426d20c19": {
      "kind": "stock",
@@ -2952,7 +2952,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 89.56
+     "last": 89.48
     }
    },
    "status": "active",
@@ -3004,7 +3004,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.67,
+     "mark": 0.66,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -3024,7 +3024,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 0.725,
+     "exit_half_spread": 0.705,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -3049,7 +3049,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.08,
+     "mark": 0.09,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3069,7 +3069,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.91,
+     "exit_half_spread": 3.915,
      "peak_mark": 1.09
     }
    },
@@ -3642,14 +3642,14 @@
    ],
    "playbook": {
     "date": "2026-11-24",
-    "made_at": "2026-11-24T15:07-05:00",
+    "made_at": "2026-11-24T15:38-05:00",
     "watch": [
-     "IWM",
      "XLV",
-     "XLP"
+     "XLP",
+     "IWM"
     ],
     "aggression": "stand_down",
-    "why": "Regime is still bearish (SPY 2.3% below its 200-day, crash radar at 48 warning) and most scan names are red with under 45 minutes to the 3:50 flat time, so the overnight IWM trigger's breadth condition fails. I'm standing down and watching the few green defensive names (XLV, XLP, IWM) for a breadth ",
+    "why": "Regime is still bearish (SPY 2.3% below its 200-day, crash radar 48) and most scan names are red with only 12 minutes until the 3:50 flat time, so no new trade can develop. I'm keeping the stand-down and watching the green defensives for a breadth flip at tomorrow's open.",
     "slices": 4,
     "target_pct": 0.4,
     "stop_pct": 0.3,
