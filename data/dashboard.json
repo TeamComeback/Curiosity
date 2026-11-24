@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T13:08-05:00",
+ "updated": "2026-11-24T13:37-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -39,14 +39,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": "Exhibition since Nov 24: 16% win rate over 25 closed trades. Rejoins the race once its closed-trade win rate tops 30%.",
-   "equity": 615.02,
+   "equity": 620.02,
    "cash": 563.02,
    "available": 563.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.62,
-   "progress_pct": 6.15,
+   "progress_pct": 6.2,
    "open": 1,
    "closed": 27,
    "win_rate": 14.8,
@@ -64,8 +64,12 @@
     },
     "ratio": 2.12
    },
-   "risk_adj": -0.71,
+   "risk_adj": -0.7,
    "notes": [
+    {
+     "date": "2026-11-24",
+     "note": "No new trade: the only candidate (VALE) duplicates the open put, and no Communication Services trigger (IBN >36.17, DIS >123.34, NFLX second close <56.56) has fired. Holding the VALE put under its 10.12 underlying stop and keeping $563 settled cash."
+    },
     {
      "date": "2026-11-24",
      "note": "No new trade: the only candidate is VALE, which duplicates the open VALE put. Holding that put under its 10.12 stop and keeping $563 settled cash for a Communication Services trigger (IBN >36.17, DIS >123.34, NFLX second close <56.56) at 3x volume."
@@ -73,10 +77,6 @@
     {
      "date": "2026-11-24",
      "note": "Passing on the VALE put candidate because the same breakdown is already held as pos-3f3300706c. Keep the existing put under its 10.12 stop and wait for the Communication Services triggers (IBN >36.17, DIS >123.34, NFLX second close <56.56) with settled cash."
-    },
-    {
-     "date": "2026-11-24",
-     "note": "Retry VALE as a put at a $150 premium budget after the earlier blocked $ order; Materials is not on the avoid list, and I'm sizing to premium only with a hard exit if VALE closes back above 10.12."
     }
    ],
    "thesis_review": null
@@ -117,15 +117,15 @@
    "notes": [
     {
      "date": "2026-11-24",
+     "note": "No trade: MDT's reward-to-risk is about 0.75:1 (3.55 to the 99.63 target vs 4.76 to the 91.32 stop), below the 0.8:1 floor. BJ is not a live candidate, so its game-plan trigger can't be verified. Keep the cash."
+    },
+    {
+     "date": "2026-11-24",
      "note": "No trade: MDT's reward-to-risk is about 0.60:1 (96.93 to the 99.80 target vs the 92.17 stop), below the 0.8:1 floor. BJ is not a live candidate, so its trigger can't be verified. Keep the cash."
     },
     {
      "date": "2026-11-24",
      "note": "No trade: MPC, VLO and PSX are Energy, a sector I avoid, and all fail the 0.8:1 reward-to-risk floor (about 0.29, 0.26 and 0.19 on the 2x-ATR stops). BJ is not a live candidate, so its trigger can't be verified. Positions are empty, so the game plan's holds are stale. Keep the cash."
-    },
-    {
-     "date": "2026-11-24",
-     "note": "No trade: MPC, VLO and PSX are Energy, my weakest sector, and fail the 0.8:1 reward-to-risk floor (about 0.26, 0.23 and 0.16 on the 2x-ATR stops). BJ is not a live candidate, so its trigger can't be verified. Positions are empty, so the stale game-plan holds are void. Keep the cash."
     }
    ],
    "thesis_review": null
@@ -137,14 +137,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 891.5,
+   "equity": 885.5,
    "cash": 913.5,
    "available": 794.5,
    "settling": 19.0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.89,
-   "progress_pct": 8.91,
+   "progress_pct": 8.86,
    "open": 1,
    "closed": 7,
    "win_rate": 14.3,
@@ -162,8 +162,12 @@
     },
     "ratio": 0.3
    },
-   "risk_adj": -0.93,
+   "risk_adj": -0.98,
    "notes": [
+    {
+     "date": "2026-11-24",
+     "note": "Passed on the TLT 79.5/78.5 bull put: it duplicates the open TLT 80/79 at the same expiry, and crash radar is 47 (warning) with SPY below its 200-day. Hold the existing spread under default exits and wait for a non-duplicate rich-vol setup on another underlying, or crash radar below 40."
+    },
     {
      "date": "2026-11-24",
      "note": "Passed on the TLT 79.5/78.5 bull put again: it duplicates the open TLT spread at the same expiry, crash radar is 47 (warning) with SPY below its 200-day. Hold the current position under default exits and look for a non-duplicate rich-vol setup on another underlying once crash radar is below 40."
@@ -171,10 +175,6 @@
     {
      "date": "2026-11-24",
      "note": "Passing on the TLT 79.5/78.5 bull put: it would stack a second same-expiry TLT spread on the open 80/79, crash radar is 47 with SPY below its 200-day, and I'm holding a single contract under the 80.0 underlying stop and default exits."
-    },
-    {
-     "date": "2026-11-24",
-     "note": "Passed on the TLT 80/79 bull put: it duplicates the open 80/79 spread at the same expiry, and crash radar is 48 (warning) with SPY below its 200-day. Hold the existing position under default exits and look for a non-duplicate rich-vol setup on another underlying once crash radar drops below 40."
     }
    ],
    "thesis_review": null
@@ -186,7 +186,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 929.91,
+   "equity": 930.18,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
@@ -199,7 +199,7 @@
    "win_rate": null,
    "max_dd_pct": 10.8,
    "win_loss": null,
-   "risk_adj": -0.65,
+   "risk_adj": -0.64,
    "notes": [],
    "thesis_review": null
   },
@@ -210,7 +210,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 827.9,
+   "equity": 828.05,
    "cash": 164.38,
    "available": 164.38,
    "settling": 0,
@@ -246,14 +246,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": -293.26,
+   "equity": -301.26,
    "cash": -411.26,
    "available": -411.26,
    "settling": 0,
    "status": "eliminated",
    "status_reason": "equity $-202.19 fell below $10",
-   "multiple": -0.29,
-   "progress_pct": -2.93,
+   "multiple": -0.3,
+   "progress_pct": -3.01,
    "open": 2,
    "closed": 5,
    "win_rate": 20.0,
@@ -763,12 +763,12 @@
   {
    "date": "2026-11-24",
    "agents": {
-    "trend": 615.02,
+    "trend": 620.02,
     "meanrev": 983.82,
-    "volsell": 891.5,
-    "baseline": 929.91,
-    "monkey": 827.9,
-    "blackswan": -293.26,
+    "volsell": 885.5,
+    "baseline": 930.18,
+    "monkey": 828.05,
+    "blackswan": -301.26,
     "scalper": 1001.35,
     "hyper": 999.71
    }
@@ -786,7 +786,7 @@
    "qty": 1,
    "entry": 0.59,
    "last": null,
-   "mark": 0.52,
+   "mark": 0.57,
    "stop": 10.12,
    "expiry": "2026-12-24",
    "opened": "2026-11-24T12:06:58-05:00",
@@ -808,7 +808,7 @@
    "qty": 1,
    "entry": 0.2,
    "last": null,
-   "mark": 0.22,
+   "mark": 0.28,
    "stop": 0,
    "expiry": "2026-12-24",
    "opened": "2026-11-24T11:37:51-05:00",
@@ -829,7 +829,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 718.81,
+   "last": 719.02,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -851,7 +851,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 718.81,
+   "last": 719.02,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -873,7 +873,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 718.81,
+   "last": 719.02,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -895,7 +895,7 @@
    "opt_type": null,
    "qty": 1.0272,
    "entry": 115.79,
-   "last": 109.845,
+   "last": 110.08,
    "mark": null,
    "stop": 99.13,
    "expiry": null,
@@ -917,7 +917,7 @@
    "opt_type": null,
    "qty": 3.3815,
    "entry": 57.98,
-   "last": 58.475,
+   "last": 58.315,
    "mark": null,
    "stop": 52.7,
    "expiry": null,
@@ -939,7 +939,7 @@
    "opt_type": null,
    "qty": 1.9214,
    "entry": 155.0,
-   "last": 156.11,
+   "last": 155.85,
    "mark": null,
    "stop": 142.41,
    "expiry": null,
@@ -961,7 +961,7 @@
    "opt_type": null,
    "qty": 0.5991,
    "entry": 92.816,
-   "last": 88.47,
+   "last": 90.05,
    "mark": null,
    "stop": 70.81,
    "expiry": null,
@@ -984,7 +984,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 0.98,
+   "mark": 0.96,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -1006,7 +1006,7 @@
    "qty": 2,
    "entry": 4.15,
    "last": null,
-   "mark": 0.1,
+   "mark": 0.07,
    "stop": 175.6,
    "expiry": "2027-01-15",
    "opened": "2026-11-09T09:38:36-05:00",
@@ -1019,6 +1019,20 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-24T13:37:12-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "ALNY",
+   "note": "spread stop (-98%) (tried 0.02, 0.01; mark 0.07, natural -3.78)"
+  },
+  {
+   "time": "2026-11-24T13:36:30-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-71%) (tried 0.91, 0.60, 0.31, 0.01; mark 0.96, natural -1.42)"
+  },
   {
    "time": "2026-11-24T13:08:08-05:00",
    "type": "playbook",
@@ -1499,20 +1513,6 @@
    "time": "2026-11-23T16:40:16-05:00",
    "type": "recap",
    "note": "Snapback Partners cleared out its five-trade book on RSI snap-backs for a net realized loss of $0.05 (3 wins, 2 losses), and the firm gained $15.16 (+1.57%) on the day. The Index Booth (SPY) rose 4.87%, so the race leader lagged a strong tape, and the crash radar is at 47 (warning)."
-  },
-  {
-   "time": "2026-11-23T15:37:51-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-97%) (tried 0.06, 0.04, 0.03, 0.01; mark 0.11, natural -3.73)"
-  },
-  {
-   "time": "2026-11-23T15:36:29-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-85%) (tried 0.46, 0.31, 0.16, 0.01; mark 0.51, natural -0.9)"
   }
  ],
  "reviews": [
@@ -4179,20 +4179,20 @@
    "economy_score": 12,
    "parts": {
     "trend": 75,
-    "drawdown": 54,
+    "drawdown": 53,
     "volatility": 84,
-    "breadth": 64,
+    "breadth": 63,
     "credit": 61,
     "safety": 10,
     "economy": 12
    },
    "facts": {
-    "spy_vs_sma50_pct": -5.4,
+    "spy_vs_sma50_pct": -5.3,
     "spy_vs_sma200_pct": -1.9,
     "spy_off_high_pct": 8.0,
-    "spy_iv_pct": 21.0,
+    "spy_iv_pct": 21.1,
     "spy_realized_vol_pct": 31.4,
-    "pct_above_50d": 39.3,
+    "pct_above_50d": 39.7,
     "breadth_sample": 509,
     "junk_vs_treasuries_20d_pct": -1.45,
     "havens_vs_spy_20d_pct": 0.8
@@ -4206,7 +4206,7 @@
     "junk_bond_spread_pct": 3.76,
     "sahm_indicator": 0.0
    },
-   "at": "2026-11-24T13:05-05:00"
+   "at": "2026-11-24T13:35-05:00"
   },
   "history": [
    {
@@ -4383,14 +4383,14 @@
  "playbooks": {
   "scalper": {
    "date": "2026-11-24",
-   "made_at": "2026-11-24T13:08-05:00",
+   "made_at": "2026-11-24T13:37-05:00",
    "watch": [
     "IWM",
     "XLV",
     "XLP"
    ],
    "aggression": "stand_down",
-   "why": "Crash radar is at warning (47), SPY is down on the 1-minute trend and 1.9% below its 200-day, and most scan names are red, which fails the overnight IWM breadth condition, so no new trades. IWM, XLV and XLP are kept on watch in case breadth improves later.",
+   "why": "Breadth still fails the overnight IWM condition: about 19 of 30 scan names are red, not fewer than half, and SPY is below its 200-day with the crash radar at warning (47). Keep IWM, XLV and XLP on watch, but no new trades until breadth turns.",
    "slices": 4,
    "target_pct": 0.4,
    "stop_pct": 0.3,
