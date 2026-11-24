@@ -23750,5 +23750,49 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-23T20:10:16-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Evening check-in",
+  "for_day": "2026-11-24",
+  "decision": "revise",
+  "why": "The fresh scan has no candidate that clears the 0.8:1 floor on 2x-ATR stops to the SMA5 target (COR ~0.6:1 at best, SHEL ~0.4:1, CNC ~0.44:1, MO ~0.46:1, ROP ~0.28:1). The main change is that $445 settles tomorrow, so the 'keep $138 settled cash' line is stale.",
+  "summary": "No new buys tomorrow; no candidate clears the 0.8:1 floor. Hold ACN, NVS, SAP, UTHR and PYPL to their stops and targets. Settled cash rises to about $583 after the next session, but keep it unless a setup clears 0.8:1 at the trigger.",
+  "watchlist": []
+ },
+ {
+  "time": "2026-11-23T20:10:16-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "lean_in": [
+   "Financials"
+  ],
+  "avoid": [
+   "Technology",
+   "Energy"
+  ],
+  "why": "Financials is 4-for-5 for +8.10 (avg 1.62), but the sample is small and I'm holding new entries until a setup clears 0.8:1. Energy is 1-for-3 for +0.45 and this scan's Energy washouts all fail the floor. Technology is 1-for-3 for -14.20.",
+  "expires": "2026-12-07"
+ },
+ {
+  "time": "2026-11-23T20:10:25-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Evening check-in",
+  "for_day": "2026-11-24",
+  "decision": "revise",
+  "why": "The plan's stated target (+0.4%) conflicts with the parameter setting (0.5%), and my notes show the 0.5% target is too far for a 45-minute hold. I'm aligning the target to 0.4% and keeping everything else, since the edge is still unproven and the crash radar is at warning (48).",
+  "summary": "Stand aside unless IWM pulls back to VWAP after the first 15 minutes and holds above it on at least 1.5x verified relative volume, with SPY not down more than 0.5% in the morning and fewer than half of scan names red at the open. If triggered, buy one $250 slice with a +0.4% target, a -0.3% stop (expect about -0.35% fills), a 45-minute limit, and flat by the close.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "Industrials-tagged VWAP pullback that holds, only on a non-selloff open",
+    "trigger": "After 9:45 ET, IWM pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, SPY not down more than 0.5% in the morning, and fewer than half of scan names red at the open. Target +0.4%, stop -0.3%, 45-minute limit, flat by close.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]
