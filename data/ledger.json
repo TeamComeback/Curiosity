@@ -23794,5 +23794,58 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-24T07:40:44-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "session": "Pre-market call",
+  "for_day": "2026-11-24",
+  "decision": "revise",
+  "why": "Today's scan adds one setup that clears 0.8:1: BJ at about 1.2:1 on a 2x-ATR stop, so I'm adding a small starter. The other candidates still fail the floor.",
+  "summary": "Hold ACN, NVS, SAP, UTHR and PYPL to their stops and targets with no adds. Buy only a small BJ starter if it opens near 101 and holds the trigger; otherwise no new entries.",
+  "watchlist": [
+   {
+    "symbol": "BJ",
+    "setup": "Consumer Staples washout, RSI(2) 0.8, 6% above its 200-day, about 1.2:1 to SMA5 on a 2x-ATR stop",
+    "trigger": "Buy only if it trades around 101 or lower and holds above 99; stop about 96.2, target about 107.85",
+    "instrument": "stock",
+    "conviction": 2
+   }
+  ]
+ },
+ {
+  "time": "2026-11-24T07:40:44-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "lean_in": [
+   "Financials"
+  ],
+  "avoid": [
+   "Technology",
+   "Energy",
+   "Health Care"
+  ],
+  "why": "Financials is 4-for-5 for +8.10. Technology is -14.20, Energy has a 0.15 average, and Health Care is 0-for-2 for -3.55. Consumer Staples is -5.20 but BJ still clears the floor, so I'm not avoiding it outright.",
+  "expires": "2026-12-08"
+ },
+ {
+  "time": "2026-11-24T07:40:54-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "session": "Pre-market call",
+  "for_day": "2026-11-24",
+  "decision": "revise",
+  "why": "The fresh scan has no Industrials names, and IWM is tagged Consumer Discretionary here, which is a negative sector for us, so the Industrials-based setup no longer matches the data. The day's leaders are Technology headline spikes (NVDA +31%, MU +19%) that our record says we shouldn't chase, and the crash radar is in warning at 48 with breadth at 39% above the 50-day. I'm keeping the plan small an",
+  "summary": "Stand aside by default. Only one trade is allowed: one $250 IWM slice if it pulls back to VWAP after 9:45, holds above it on at least 1.5x bar-verified relative volume, SPY is not down more than 0.5% in the morning, and fewer than half of scan names are red at the open. Target +0.4%, stop -0.3% (expect about -0.35% fills), 45-minute limit, flat by the close. No Technology or headline-driven names.",
+  "watchlist": [
+   {
+    "symbol": "IWM",
+    "setup": "VWAP pullback that holds on a non-selloff open. Trade it only as a Consumer Discretionary-tagged name under the existing sector rules, so treat it as a low-conviction exception rather than an Industrials play.",
+    "trigger": "After 9:45 ET, IWM pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, SPY not down more than 0.5% in the morning, and fewer than half of scan names red at the open. Target +0.4%, stop -0.3%, 45-minute limit, flat by close.",
+    "instrument": "stock",
+    "conviction": 1
+   }
+  ]
  }
 ]

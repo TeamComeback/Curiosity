@@ -937,6 +937,26 @@
  ],
  "journal": [
   {
+   "time": "2026-11-24T07:40:54-05:00",
+   "type": "plan",
+   "agent": "scalper",
+   "note": "Pre-market call: revise. The fresh scan has no Industrials names, and IWM is tagged Consumer Discretionary here, which is a negative sector for us, so the Industrials-based setup no longer matches the data. The day's leaders are Technology headline spikes (NVDA +31%, MU +19%) that our record says we shouldn't chase, and the crash radar is in warning at 48 with breadth at 39% above the 50-day. I'm keeping the plan small an",
+   "symbol": "IWM"
+  },
+  {
+   "time": "2026-11-24T07:40:44-05:00",
+   "type": "plan",
+   "agent": "meanrev",
+   "note": "Pre-market call: revise. Today's scan adds one setup that clears 0.8:1: BJ at about 1.2:1 on a 2x-ATR stop, so I'm adding a small starter. The other candidates still fail the floor.",
+   "symbol": "BJ"
+  },
+  {
+   "time": "2026-11-24T07:40:44-05:00",
+   "type": "focus",
+   "agent": "meanrev",
+   "note": "Leaning into Financials; avoiding Technology, Energy, Health Care. Financials is 4-for-5 for +8.10. Technology is -14.20, Energy has a 0.15 average, and Health Care is 0-for-2 for -3.55. Consumer Staples is -5.20 but BJ still clears the floor, so I'm not avoiding it outright."
+  },
+  {
    "time": "2026-11-23T20:10:25-05:00",
    "type": "plan",
    "agent": "scalper",
@@ -1359,24 +1379,6 @@
    "type": "focus",
    "agent": "trend",
    "note": "Leaning into Communication Services; avoiding Financials, Industrials, Broad market / other, Energy, Consumer Discretionary, Consumer Staples, Technology. Communication Services has the scan's clearest cluster of setups that fit the ATR and budget limits, but my record there is one losing trade (-$3.12), so sizing stays small. Financials and Industrials have many scan breakdowns but ATR too large for the budget and negative or untested results. The ot"
-  },
-  {
-   "time": "2026-11-20T17:30:15-05:00",
-   "type": "param_change",
-   "agent": "meanrev",
-   "note": "max_hold_days: 5 -> 7 (Five days may be too short for slower reversions, especially with wider stops. Seven days gives trades time to reach the RSI exit instead of leaving as stop-outs or time exits, and it is still a short)"
-  },
-  {
-   "time": "2026-11-20T17:30:15-05:00",
-   "type": "param_change",
-   "agent": "meanrev",
-   "note": "stop_atr: 1.5 -> 2.0 (Stops at 1.5 ATR are cutting off washouts before they revert. Widening to 2.0 should raise the win rate toward what mean-reversion needs, given the roughly 0.3:1 win/loss ratio. It is a modest step, a)"
-  },
-  {
-   "time": "2026-11-20T17:30:06-05:00",
-   "type": "param_change",
-   "agent": "trend",
-   "note": "min_rel_volume: 2.5 -> 3.0 (All five losers were breakouts or breakdowns that failed quickly, even with 3x+ volume. Tightening to the upper bound filters for stronger conviction and cuts marginal signals in a choppy tape. It als)"
   }
  ],
  "reviews": [
@@ -3514,20 +3516,29 @@
   },
   "meanrev": {
    "for_day": "2026-11-24",
-   "made_at": "2026-11-23T20:10-05:00",
-   "session": "Evening check-in",
+   "made_at": "2026-11-24T07:40-05:00",
+   "session": "Pre-market call",
    "decision": "revise",
-   "why": "The fresh scan has no candidate that clears the 0.8:1 floor on 2x-ATR stops to the SMA5 target (COR ~0.6:1 at best, SHEL ~0.4:1, CNC ~0.44:1, MO ~0.46:1, ROP ~0.28:1). The main change is that $445 settles tomorrow, so the 'keep $138 settled cash' line is stale.",
-   "summary": "No new buys tomorrow; no candidate clears the 0.8:1 floor. Hold ACN, NVS, SAP, UTHR and PYPL to their stops and targets. Settled cash rises to about $583 after the next session, but keep it unless a setup clears 0.8:1 at the trigger.",
-   "watchlist": [],
+   "why": "Today's scan adds one setup that clears 0.8:1: BJ at about 1.2:1 on a 2x-ATR stop, so I'm adding a small starter. The other candidates still fail the floor.",
+   "summary": "Hold ACN, NVS, SAP, UTHR and PYPL to their stops and targets with no adds. Buy only a small BJ starter if it opens near 101 and holds the trigger; otherwise no new entries.",
+   "watchlist": [
+    {
+     "symbol": "BJ",
+     "setup": "Consumer Staples washout, RSI(2) 0.8, 6% above its 200-day, about 1.2:1 to SMA5 on a 2x-ATR stop",
+     "trigger": "Buy only if it trades around 101 or lower and holds above 99; stop about 96.2, target about 107.85",
+     "instrument": "stock",
+     "max_dollars": 60,
+     "conviction": 2
+    }
+   ],
    "position_plans": [
     {
      "symbol": "ACN",
-     "plan": "Hold; stop 215.73, target 243.73. Exit early if Dragos or layoff news breaks the stop."
+     "plan": "Hold; stop 215.73, target 243.73. No adds."
     },
     {
      "symbol": "NVS",
-     "plan": "Hold; exit at stop 150.25 or target 159.03. No adds."
+     "plan": "Hold; exit at stop 150.25 or target 159.03. Price is 151.97, so the stop is close."
     },
     {
      "symbol": "SAP",
@@ -3539,17 +3550,16 @@
     },
     {
      "symbol": "PYPL",
-     "plan": "Hold; stop 52.21, target 57.15. No adds, since Financials exposure is already concentrated."
+     "plan": "Hold; stop 52.21, target 57.15. No adds."
     }
    ],
    "avoid": [
-    "Energy washouts (SHEL, MPC, PSX, EOG, XLE, VLO, TRGP, XOM): fail the 0.8:1 test on 2x-ATR stops and Energy is 0.15 avg for me.",
-    "COR: washout at RSI 3.4, but a 2x-ATR stop (about 17.6) against roughly 5.6 of room to the SMA5 gives about 0.3:1 on that stop.",
-    "CNC, PFE, MO, ROP, CBOE, ELV, TSCO, MCK, CLX, CAH, ALL: no verifiable 0.8:1 setup in today's scan.",
-    "Technology: 1-for-3 for -14.20 with the AI selloff unresolved.",
-    "PM: sub-1:1 setup, and Consumer Staples is -5.20 for me."
+    "COR: RSI 3.4 but about 0.3:1 on a 2x-ATR stop.",
+    "PFE, MO, ROP, ELV, CAH, TSCO, CRWD, MCK, KR, CME, AJG, ALL, CB, ABT, KO, HUM: all fail 0.8:1 on the 2x-ATR stop.",
+    "Energy washouts: 0.15 average for me and no candidates pass the floor.",
+    "Technology: -14.20 across 3 trades with the AI selloff unresolved."
    ],
-   "brainstorm": "Test whether the 0.8:1 floor is too strict: if the 2x-ATR stop is measured against the SMA5 rather than the entry, a few washouts like COR may pass. Track it paper-only before loosening the floor.",
+   "brainstorm": "Test whether a 1.5x-ATR stop turns the near-miss names (ELV, CRWD, MCK) into valid setups, but only as a paper test.",
    "revisions": [
     {
      "at": "2026-11-23T16:40-05:00",
@@ -3564,9 +3574,22 @@
      "decision": "revise",
      "why": "The fresh scan has no candidate that clears the 0.8:1 floor on 2x-ATR stops to the SMA5 target (COR ~0.6:1 at best, SHEL ~0.4:1, CNC ~0.44:1, MO ~0.46:1, ROP ~0.28:1). The main change is that $445 settles tomorrow, so the 'keep $138 settled cash' line is stale.",
      "watch": []
+    },
+    {
+     "at": "2026-11-24T07:40-05:00",
+     "session": "Pre-market call",
+     "decision": "revise",
+     "why": "Today's scan adds one setup that clears 0.8:1: BJ at about 1.2:1 on a 2x-ATR stop, so I'm adding a small starter. The other candidates still fail the floor.",
+     "watch": [
+      {
+       "symbol": "BJ",
+       "instrument": "stock",
+       "setup": "Consumer Staples washout, RSI(2) 0.8, 6% above its 200-day, about 1.2:1 to SMA5 "
+      }
+     ]
     }
    ],
-   "settled_cash_at_plan": 138.41,
+   "settled_cash_at_plan": 583.59,
    "budgets_clamped": 0
   },
   "volsell": {
@@ -3691,15 +3714,15 @@
   },
   "scalper": {
    "for_day": "2026-11-24",
-   "made_at": "2026-11-23T20:10-05:00",
-   "session": "Evening check-in",
+   "made_at": "2026-11-24T07:40-05:00",
+   "session": "Pre-market call",
    "decision": "revise",
-   "why": "The plan's stated target (+0.4%) conflicts with the parameter setting (0.5%), and my notes show the 0.5% target is too far for a 45-minute hold. I'm aligning the target to 0.4% and keeping everything else, since the edge is still unproven and the crash radar is at warning (48).",
-   "summary": "Stand aside unless IWM pulls back to VWAP after the first 15 minutes and holds above it on at least 1.5x verified relative volume, with SPY not down more than 0.5% in the morning and fewer than half of scan names red at the open. If triggered, buy one $250 slice with a +0.4% target, a -0.3% stop (expect about -0.35% fills), a 45-minute limit, and flat by the close.",
+   "why": "The fresh scan has no Industrials names, and IWM is tagged Consumer Discretionary here, which is a negative sector for us, so the Industrials-based setup no longer matches the data. The day's leaders are Technology headline spikes (NVDA +31%, MU +19%) that our record says we shouldn't chase, and the crash radar is in warning at 48 with breadth at 39% above the 50-day. I'm keeping the plan small an",
+   "summary": "Stand aside by default. Only one trade is allowed: one $250 IWM slice if it pulls back to VWAP after 9:45, holds above it on at least 1.5x bar-verified relative volume, SPY is not down more than 0.5% in the morning, and fewer than half of scan names are red at the open. Target +0.4%, stop -0.3% (expect about -0.35% fills), 45-minute limit, flat by the close. No Technology or headline-driven names.",
    "watchlist": [
     {
      "symbol": "IWM",
-     "setup": "Industrials-tagged VWAP pullback that holds, only on a non-selloff open",
+     "setup": "VWAP pullback that holds on a non-selloff open. Trade it only as a Consumer Discretionary-tagged name under the existing sector rules, so treat it as a low-conviction exception rather than an Industrials play.",
      "trigger": "After 9:45 ET, IWM pulls back to VWAP and holds above it on at least 1.5x bar-verified relative volume, SPY not down more than 0.5% in the morning, and fewer than half of scan names red at the open. Target +0.4%, stop -0.3%, 45-minute limit, flat by close.",
      "instrument": "stock",
      "max_dollars": 250,
@@ -3708,14 +3731,14 @@
    ],
    "position_plans": [],
    "avoid": [
-    "Technology and AI-chip complex (NVDA, AMD, AVGO, MU, INTC, SNDK, TSM, SMH, SOXX, SPCX, TSLA, QQQ): 4-16% ATRs and headline-driven. Technology is -$1.35 over 53 trades at a 45% win rate. Today's +31% NVDA and +19% MU moves are chases we shouldn't take.",
+    "Technology and AI-chip complex (NVDA, AMD, AVGO, MU, INTC, SNDK, TSM, SMH, SOXX, SPCX, TSLA, QQQ): Technology is -$1.35 over 53 trades, 4-31% daily moves, and headline-driven. Today's NVDA and MU spikes are chases.",
     "AMZN and MSFT: Consumer Discretionary is -$0.72 over 11 trades at a 36% win rate, and moves are event-driven.",
-    "META, GOOGL, GOOG: Communication Services is at a 42% win rate, and recent action is broad selling, not clean pullbacks.",
+    "META, GOOGL, GOOG: Communication Services is at a 42% win rate, with broad selling rather than clean pullbacks.",
     "AAPL: stays dropped (regulatory and outage risk, no VWAP edge).",
     "SPY: stays out until it shows a repeatable edge.",
     "Any open where most of the scan is red: the IWM setup is off even if the VWAP trigger fires."
    ],
-   "brainstorm": "Test whether a 0.4% target with a 30-minute limit improves the net result on Industrials pullbacks, since most exits are time limits near 0%. Log every entry's bar-verified relative volume so the 1.5x filter can be checked against outcomes.",
+   "brainstorm": "Test a 0.4% target with a 30-minute limit against the current 0.5% / 45-minute setup, but only after the sample reaches about 40 trades. Don't retune before then.",
    "revisions": [
     {
      "at": "2026-11-23T16:41-05:00",
@@ -3740,6 +3763,19 @@
        "symbol": "IWM",
        "instrument": "stock",
        "setup": "Industrials-tagged VWAP pullback that holds, only on a non-selloff open"
+      }
+     ]
+    },
+    {
+     "at": "2026-11-24T07:40-05:00",
+     "session": "Pre-market call",
+     "decision": "revise",
+     "why": "The fresh scan has no Industrials names, and IWM is tagged Consumer Discretionary here, which is a negative sector for us, so the Industrials-based setup no longer matches the data. The day's leaders are Technology headline spikes (NVDA +31%, MU +19%) that our record says we shouldn't chase, and the crash radar is in warning at 48 with breadth at 39% above the 50-day. I'm keeping the plan small an",
+     "watch": [
+      {
+       "symbol": "IWM",
+       "instrument": "stock",
+       "setup": "VWAP pullback that holds on a non-selloff open. Trade it only as a Consumer Disc"
       }
      ]
     }
@@ -3921,11 +3957,6 @@
  },
  "calendar": [
   {
-   "date": "2026-11-20",
-   "open": "09:30",
-   "close": "16:00"
-  },
-  {
    "date": "2026-11-23",
    "open": "09:30",
    "close": "16:00"
@@ -3997,6 +4028,11 @@
   },
   {
    "date": "2026-12-14",
+   "open": "09:30",
+   "close": "16:00"
+  },
+  {
+   "date": "2026-12-15",
    "open": "09:30",
    "close": "16:00"
   }
@@ -4271,11 +4307,12 @@
    ],
    "avoid": [
     "Technology",
-    "Energy"
+    "Energy",
+    "Health Care"
    ],
-   "why": "Financials is 4-for-5 for +8.10 (avg 1.62), but the sample is small and I'm holding new entries until a setup clears 0.8:1. Energy is 1-for-3 for +0.45 and this scan's Energy washouts all fail the floor. Technology is 1-for-3 for -14.20.",
-   "set_at": "2026-11-23T20:10-05:00",
-   "expires": "2026-12-07"
+   "why": "Financials is 4-for-5 for +8.10. Technology is -14.20, Energy has a 0.15 average, and Health Care is 0-for-2 for -3.55. Consumer Staples is -5.20 but BJ still clears the floor, so I'm not avoiding it outright.",
+   "set_at": "2026-11-24T07:40-05:00",
+   "expires": "2026-12-08"
   },
   "volsell": {
    "lean_in": [],
@@ -4300,9 +4337,9 @@
     "Consumer Discretionary",
     "Communication Services"
    ],
-   "why": "Industrials is the only clearly positive sector (+$1.90 over 10 trades, 50% win rate), though the sample is small. Technology (-$1.35 over 53 trades), Consumer Discretionary (-$0.72 over 11), and Communication Services (42% win rate) are all negative. Keep the focus until it expires on Dec 7 and rev",
-   "set_at": "2026-11-23T20:10-05:00",
-   "expires": "2026-12-07"
+   "why": "Industrials is still the only positive sector (+$1.90 over 10 trades, 50% win rate), though the sample is small and there are no Industrials names in today's scan. Technology (-$1.35 over 53), Consumer Discretionary (-$0.72 over 11), and Communication Services (42% win rate) are negative. Keep the f",
+   "set_at": "2026-11-24T07:40-05:00",
+   "expires": "2026-12-08"
   }
  },
  "sector_stats": {
@@ -4643,5 +4680,5 @@
   "core_size": 500
  },
  "recap_updated": "2026-11-23T16:40-05:00",
- "plans_updated": "2026-11-23T20:10-05:00"
+ "plans_updated": "2026-11-24T07:40-05:00"
 }

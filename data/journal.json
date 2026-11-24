@@ -1,32 +1,5 @@
 [
  {
-  "time": "2026-11-10T10:09:30-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "AVGO, MU, AMD, META, GOOGL",
-  "note": "normal: Tech/semis are leading with volume and most names sit above their opening range, so normal size makes sense while SPY's quiet range keeps stops tight. AMD and MU are already 2.4% or more above VWAP, so the extension cap will filter chase entries; MSFT's open scalp keeps its original stop."
- },
- {
-  "time": "2026-11-10T10:13:35-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "note": "VWAP pullback bounce skipped: 0.4x volume < 1.5x"
- },
- {
-  "time": "2026-11-10T10:21:45-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "instrument": "stock",
-  "qty": 0.8595,
-  "price": 291.384,
-  "cost": 250.44,
-  "stop": 290.58,
-  "thesis": "opening-range breakout on GOOGL: 1.56x volume, +0.62% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
   "time": "2026-11-10T10:29:50-05:00",
   "type": "close",
   "agent": "scalper",
@@ -6077,6 +6050,26 @@
   "type": "plan",
   "agent": "scalper",
   "note": "Evening check-in: revise. The plan's stated target (+0.4%) conflicts with the parameter setting (0.5%), and my notes show the 0.5% target is too far for a 45-minute hold. I'm aligning the target to 0.4% and keeping everything else, since the edge is still unproven and the crash radar is at warning (48).",
+  "symbol": "IWM"
+ },
+ {
+  "time": "2026-11-24T07:40:44-05:00",
+  "type": "focus",
+  "agent": "meanrev",
+  "note": "Leaning into Financials; avoiding Technology, Energy, Health Care. Financials is 4-for-5 for +8.10. Technology is -14.20, Energy has a 0.15 average, and Health Care is 0-for-2 for -3.55. Consumer Staples is -5.20 but BJ still clears the floor, so I'm not avoiding it outright."
+ },
+ {
+  "time": "2026-11-24T07:40:44-05:00",
+  "type": "plan",
+  "agent": "meanrev",
+  "note": "Pre-market call: revise. Today's scan adds one setup that clears 0.8:1: BJ at about 1.2:1 on a 2x-ATR stop, so I'm adding a small starter. The other candidates still fail the floor.",
+  "symbol": "BJ"
+ },
+ {
+  "time": "2026-11-24T07:40:54-05:00",
+  "type": "plan",
+  "agent": "scalper",
+  "note": "Pre-market call: revise. The fresh scan has no Industrials names, and IWM is tagged Consumer Discretionary here, which is a negative sector for us, so the Industrials-based setup no longer matches the data. The day's leaders are Technology headline spikes (NVDA +31%, MU +19%) that our record says we shouldn't chase, and the crash radar is in warning at 48 with breadth at 39% above the 50-day. I'm keeping the plan small an",
   "symbol": "IWM"
  }
 ]
