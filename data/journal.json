@@ -1,54 +1,5 @@
 [
  {
-  "time": "2026-11-10T10:48:46-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "MSFT",
-  "qty": 0.2306,
-  "entry": 543.156,
-  "exit": 542.612,
-  "pnl": -0.12,
-  "note": "time limit, 46 min (-0.10%)",
-  "opened": "2026-11-10T10:02:21-05:00",
-  "confidence": 3,
-  "thesis": "VWAP pullback bounce on MSFT: 1.76x volume, +0.21% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-11-10T11:06:22-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
-  "time": "2026-11-10T11:07:47-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-91%) (tried 0.24, 0.16, 0.09, 0.01; mark 0.29, natural -0.75)"
- },
- {
-  "time": "2026-11-10T11:08:09-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.65)"
- },
- {
-  "time": "2026-11-10T11:08:30-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "META",
-  "note": "stand_down: SPY is slightly below its open (-0.01%) and the tech complex is mixed (NVDA and MU weak, AMD and AVGO strong), so the overnight plan's SPY-above-open gate isn't met and relative volume isn't verified. Four round trips are already used today, so I'm standing down and keeping META on watch only in cas"
- },
- {
-  "time": "2026-11-10T11:36:24-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
   "time": "2026-11-10T11:37:49-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6072,5 +6023,60 @@
   "agent": "scalper",
   "symbol": "IWM, SPY, XLF",
   "note": "stand_down: Most scan names are red (about 20 of 30) with SPY down 2.6% vs its 200-day SMA, a 20-day ROC of -5.6%, and crash radar at 49 (warning). The overnight IWM trigger requires fewer than half the names red, so it fails and no new trades should be taken. I'm keeping IWM, SPY, and XLF on watch in case brea"
+ },
+ {
+  "time": "2026-11-24T10:05:10-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "PYPL",
+  "qty": 1.0995,
+  "entry": 54.61,
+  "exit": 56.56,
+  "pnl": 2.15,
+  "note": "snap-back (RSI2 69)",
+  "opened": "2026-11-20T13:38:28-05:00",
+  "confidence": 2,
+  "thesis": "PYPL RSI(2) 1.4 washout 8.4% above its 200-day in a 43 crash-radar warning regime; stop 52.21 to target 57.15 is about 1.09:1 at the live 54.57 price, clearing the 0.8:1 floor, taken as a small Financials starter since the lean-in sector focus supports it."
+ },
+ {
+  "time": "2026-11-24T10:05:40-05:00",
+  "type": "exit_unfilled",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "note": "profit target (65% of credit)"
+ },
+ {
+  "time": "2026-11-24T10:07:02-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-68%) (tried 0.99, 0.66, 0.33, 0.01; mark 1.04, natural -1.38)"
+ },
+ {
+  "time": "2026-11-24T10:08:25-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.05, 0.04, 0.02, 0.01; mark 0.10, natural -3.82)"
+ },
+ {
+  "time": "2026-11-24T10:09:10-05:00",
+  "type": "exit_unfilled",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "note": "agent: Captured about 78% of the 0.18 credit (mark 0.04), past the 65% take-profit. Closing locks in roughly +$9.50 and removes"
+ },
+ {
+  "time": "2026-11-24T10:09:12-05:00",
+  "type": "open",
+  "agent": "monkey",
+  "symbol": "DLTR",
+  "instrument": "stock",
+  "qty": 1.9214,
+  "price": 155.0,
+  "cost": 297.82,
+  "stop": 142.41,
+  "thesis": "Dart landed on DLTR",
+  "confidence": 0
  }
 ]

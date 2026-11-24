@@ -11,7 +11,7 @@
  "entries": {
   "date": "2026-11-24",
   "counts": {
-   "monkey": 1
+   "monkey": 2
   }
  },
  "agents": {
@@ -27,10 +27,6 @@
    "peak": 1340.54,
    "max_dd": 0.5326,
    "notes": [
-    {
-     "date": "2026-11-18",
-     "note": "No candidates today and no game-plan triggers have fired (IBN, EW, NFLX, SE all need a confirmed close on 2.5x+ volume). Holding CLSX put to its 2.98 underlying stop and keeping $662 settled cash for triggers."
-    },
     {
      "date": "2026-11-18",
      "note": "No trades today: all six scan candidates are puts in avoid-listed sectors (Technology, Broad market, Consumer Discretionary) or sub-$0.30 collapses, and no IBN, EW, NFLX or SE trigger has fired. Holding CLSX put to its 2.98 underlying stop and keeping $662 settled cash for game-plan triggers."
@@ -186,6 +182,10 @@
     {
      "date": "2026-11-23",
      "note": "Passed on BOXX: it is Broad market/other (my worst sector at -$221 over 11 trades, and on the avoid list), and its 0.06 stop is too tight to be a real 2-ATR trend setup. Staying in settled cash for the NFLX, IBN, or XLC triggers."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "No trade: FNGR is a sub-penny short in the broad-market sector, DLTR and A fall in sectors on our avoid list, and no Communication Services trigger (IBN >36.17, DIS >123.34, NFLX <56.56 second close) has fired. Crash radar is 47 with SPY in a downtrend, so keep cash for the lean-in triggers."
     }
    ],
    "last_exits": {
@@ -1209,35 +1209,14 @@
    ]
   },
   "meanrev": {
-   "cash": 921.63,
+   "cash": 983.82,
    "reserved": 0.0,
-   "positions": {
-    "pos-3bd114fbff": {
-     "kind": "stock",
-     "symbol": "PYPL",
-     "qty": 1.0995,
-     "entry": 54.61,
-     "cost": 60.04,
-     "direction": "long",
-     "stop": 52.21,
-     "atr": 1.571,
-     "opened": "2026-11-20T13:38:28-05:00",
-     "thesis": "PYPL RSI(2) 1.4 washout 8.4% above its 200-day in a 43 crash-radar warning regime; stop 52.21 to target 57.15 is about 1.09:1 at the live 54.57 price, clearing the 0.8:1 floor, taken as a small Financials starter since the lean-in sector focus supports it.",
-     "confidence": 2,
-     "signals": {
-      "rsi2": 1.4,
-      "pct_vs_sma200": 8.4,
-      "pct_vs_sma5": -4.5
-     },
-     "sector": "Financials",
-     "last": 55.72
-    }
-   },
+   "positions": {},
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 32,
-   "wins": 18,
+   "closed": 33,
+   "wins": 19,
    "peak": 1029.08,
    "max_dd": 0.0633,
    "notes": [
@@ -1432,7 +1411,8 @@
     "DE": "2026-11-23",
     "ACN": "2026-11-24",
     "NVS": "2026-11-24",
-    "UTHR": "2026-11-24"
+    "UTHR": "2026-11-24",
+    "PYPL": "2026-11-24"
    },
    "plan": {
     "for_day": "2026-11-24",
@@ -1532,6 +1512,11 @@
      "amount": 92.02,
      "settles": "2026-11-25",
      "note": "sold UTHR"
+    },
+    {
+     "amount": 62.19,
+     "settles": "2026-11-25",
+     "note": "sold PYPL"
     }
    ],
    "focus": {
@@ -2124,7 +2109,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.18,
-     "mark": 0.07,
+     "mark": 0.04,
      "entry": 0.18,
      "width": 1.0,
      "short_strike": 78.0,
@@ -2157,10 +2142,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "Passing on rich-vol setups purely for sector labels leaves the firm at zero trades. Take a small, defined-risk trade at the 1.15 IV/RV floor and manage it tightly rather than waiting for a perfect setup."
-    },
     {
      "date": "2026-11-19",
      "note": "Test one defined-risk trade at the 1.15 IV/RV floor and manage it tightly. If it stops out, reassess the sector avoid rule rather than letting it block all trades."
@@ -2316,6 +2297,10 @@
     {
      "date": "2026-11-24",
      "note": "Passed on the TLT 79.5/78.5 duplicate again: it stacks a second same-expiry TLT bull put on the open 78/77, SPY is trending down, and crash radar is 49 (warning). Holding the existing spread under default exits; wait for a non-duplicate rich-vol setup with crash radar below 40."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "Passing on the TLT 79.5/78.5 duplicate kept risk low, but the firm still has zero realized wins. Next, look for a rich-vol setup on a different underlying once crash radar is below 40."
     }
    ],
    "last_exits": {
@@ -2351,7 +2336,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 82.0,
+   "min_trade_seen": 81.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2813,7 +2798,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 713.94
+     "last": 719.65
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2829,7 +2814,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 713.94
+     "last": 719.65
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2845,7 +2830,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 713.94
+     "last": 719.65
     }
    },
    "status": "active",
@@ -2860,7 +2845,7 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 517.81,
+   "cash": 219.99,
    "reserved": 0.0,
    "positions": {
     "pos-83bf9288a4": {
@@ -2878,7 +2863,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 111.07
+     "last": 111.62
     },
     "pos-e7834830d1": {
      "kind": "stock",
@@ -2895,7 +2880,24 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 57.435
+     "last": 58.27
+    },
+    "pos-6d974b93d5": {
+     "kind": "stock",
+     "symbol": "DLTR",
+     "qty": 1.9214,
+     "entry": 155.0,
+     "cost": 297.82,
+     "hold_days": 6,
+     "direction": "long",
+     "stop": 142.41,
+     "atr": 5.34,
+     "opened": "2026-11-24T10:09:12-05:00",
+     "thesis": "Dart landed on DLTR",
+     "confidence": 0,
+     "signals": {},
+     "sector": "Consumer Staples",
+     "last": 153.09
     }
    },
    "status": "active",
@@ -2947,7 +2949,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.97,
+     "mark": 1.04,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2967,7 +2969,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.385,
+     "exit_half_spread": 2.415,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2992,7 +2994,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.15,
+     "mark": 0.1,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3012,7 +3014,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.9,
+     "exit_half_spread": 3.92,
      "peak_mark": 1.09
     }
    },
@@ -3579,14 +3581,14 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-24",
-    "made_at": "2026-11-24T09:38-05:00",
+    "made_at": "2026-11-24T10:09-05:00",
     "watch": [
-     "IWM",
      "SPY",
+     "IWM",
      "XLF"
     ],
     "aggression": "stand_down",
-    "why": "Most scan names are red (about 20 of 30) with SPY down 2.6% vs its 200-day SMA, a 20-day ROC of -5.6%, and crash radar at 49 (warning). The overnight IWM trigger requires fewer than half the names red, so it fails and no new trades should be taken. I'm keeping IWM, SPY, and XLF on watch in case brea",
+    "why": "About 18 of the 31 candidates are red and SPY sits 1.8% below its 200-day SMA with crash radar at 47, so the breadth condition for the IWM trigger still fails. Keeping SPY, IWM, and XLF on watch in case breadth improves, but taking no new trades for now.",
     "slices": 4,
     "target_pct": 0.4,
     "stop_pct": 0.3,
