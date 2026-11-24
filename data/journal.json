@@ -1,19 +1,5 @@
 [
  {
-  "time": "2026-11-10T14:07:31-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-91%) (tried 0.26, 0.17, 0.09, 0.01; mark 0.31, natural -0.97)"
- },
- {
-  "time": "2026-11-10T14:07:51-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.2)"
- },
- {
   "time": "2026-11-10T14:09:07-05:00",
   "type": "unfilled",
   "agent": "volsell",
@@ -6102,5 +6088,25 @@
   "agent": "scalper",
   "symbol": "XLV, XLP, IWM, SPY",
   "note": "defensive: Regime is still a warning (crash radar 48, SPY below its 200-day, breadth mostly red), so I'm moving from stand_down to defensive: VWAP bounces only, at half size, in the clean uptrends. XLV, XLP and IWM are above their opening ranges and VWAP; I'm excluding AAPL because the overnight plan bars Tech"
+ },
+ {
+  "time": "2026-11-24T12:09:14-05:00",
+  "type": "skip",
+  "agent": "scalper",
+  "symbol": "SPY",
+  "note": "VWAP pullback bounce skipped: 1.24x volume < 1.5x"
+ },
+ {
+  "time": "2026-11-24T12:11:15-05:00",
+  "type": "open",
+  "agent": "scalper",
+  "symbol": "SPY",
+  "instrument": "stock",
+  "qty": 0.1742,
+  "price": 718.202,
+  "cost": 125.11,
+  "stop": 716.0,
+  "thesis": "VWAP pullback bounce on SPY: 1.88x volume, +0.31% vs VWAP; target +0.4%, stop -0.3%",
+  "confidence": 3
  }
 ]

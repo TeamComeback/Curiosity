@@ -13,7 +13,8 @@
   "counts": {
    "monkey": 3,
    "volsell": 1,
-   "trend": 1
+   "trend": 1,
+   "scalper": 1
   }
  },
  "agents": {
@@ -2833,7 +2834,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 714.76
+     "last": 718.19
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2849,7 +2850,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 714.76
+     "last": 718.19
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2865,7 +2866,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 714.76
+     "last": 718.19
     }
    },
    "status": "active",
@@ -2898,7 +2899,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 108.82
+     "last": 109.98
     },
     "pos-e7834830d1": {
      "kind": "stock",
@@ -2915,7 +2916,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 58.025
+     "last": 58.14
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2932,7 +2933,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 155.335
+     "last": 155.895
     },
     "pos-c426d20c19": {
      "kind": "stock",
@@ -2949,7 +2950,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 87.21
+     "last": 88.38
     }
    },
    "status": "active",
@@ -3576,9 +3577,32 @@
    ]
   },
   "scalper": {
-   "cash": 1001.3,
+   "cash": 876.19,
    "reserved": 0.0,
-   "positions": {},
+   "positions": {
+    "pos-e5445de4a3": {
+     "kind": "stock",
+     "symbol": "SPY",
+     "qty": 0.1742,
+     "entry": 718.202,
+     "cost": 125.11,
+     "play": "scalp",
+     "direction": "long",
+     "stop": 716.0,
+     "atr": 0,
+     "opened": "2026-11-24T12:11:15-05:00",
+     "thesis": "VWAP pullback bounce on SPY: 1.88x volume, +0.31% vs VWAP; target +0.4%, stop -0.3%",
+     "confidence": 3,
+     "signals": {},
+     "sector": "Technology",
+     "setup": "VWAP pullback bounce",
+     "target_pct": 0.4,
+     "stop_pct": 0.3,
+     "max_hold_min": 45,
+     "last": 717.46,
+     "peak_gain": 0.021999381789528094
+    }
+   },
    "status": "active",
    "status_reason": "",
    "status_at": null,
@@ -3649,7 +3673,10 @@
    },
    "scalp_day": {
     "date": "2026-11-24",
-    "equity": 1001.3
+    "equity": 1001.3,
+    "low_volume_skips": [
+     "SPY"
+    ]
    },
    "plan": {
     "for_day": "2026-11-24",
