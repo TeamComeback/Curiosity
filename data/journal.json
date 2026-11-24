@@ -1,40 +1,5 @@
 [
  {
-  "time": "2026-11-10T13:36:11-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
-  "time": "2026-11-10T13:37:36-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-90%) (tried 0.28, 0.19, 0.10, 0.01; mark 0.33, natural -0.93)"
- },
- {
-  "time": "2026-11-10T13:37:58-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.26)"
- },
- {
-  "time": "2026-11-10T13:39:41-05:00",
-  "type": "unfilled",
-  "agent": "volsell",
-  "symbol": "TLT",
-  "note": "credit not filled at 0.29, 0.28, 0.26, 0.25 (mid 0.29, natural 0.25, floor 0.15)"
- },
- {
-  "time": "2026-11-10T14:06:09-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
   "time": "2026-11-10T14:07:31-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6096,5 +6061,46 @@
   "agent": "scalper",
   "symbol": "XLV, IWM, SPY",
   "note": "stand_down: Breadth is still heavily red, with SPY and QQQ below VWAP in downtrends and the crash radar at 48 (warning). IWM is still below VWAP, so the overnight pullback-and-hold trigger isn't met; XLV is the only clean uptrend and stays on watch."
+ },
+ {
+  "time": "2026-11-24T12:06:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-70%) (tried 0.95, 0.63, 0.32, 0.01; mark 1.00, natural -1.42)"
+ },
+ {
+  "time": "2026-11-24T12:06:51-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-99%) (tried 0.01; mark 0.04, natural -3.73)"
+ },
+ {
+  "time": "2026-11-24T12:06:58-05:00",
+  "type": "sizing",
+  "agent": "trend",
+  "symbol": "VALE",
+  "note": "$150.00 -> $62.65: capped at 20% of the firm; half size while win rate 4/27 is under 30%"
+ },
+ {
+  "time": "2026-11-24T12:06:58-05:00",
+  "type": "open",
+  "agent": "trend",
+  "symbol": "VALE261224P00009500",
+  "instrument": "put",
+  "qty": 1,
+  "price": 0.59,
+  "cost": 63.5,
+  "stop": 10.12,
+  "thesis": "VALE broke below its 40-day low at 9.46 on 3.9x relative volume, 36.9% under its 200-day SMA, so the trend-breakdown rule is met; the 10.12 underlying stop (2 ATR) caps the thesis, and the put limits the loss to premium.",
+  "confidence": 3
+ },
+ {
+  "time": "2026-11-24T12:07:10-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "XLV, XLP, IWM, SPY",
+  "note": "defensive: Regime is still a warning (crash radar 48, SPY below its 200-day, breadth mostly red), so I'm moving from stand_down to defensive: VWAP bounces only, at half size, in the clean uptrends. XLV, XLP and IWM are above their opening ranges and VWAP; I'm excluding AAPL because the overnight plan bars Tech"
  }
 ]
