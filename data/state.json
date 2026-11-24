@@ -29,10 +29,6 @@
    "notes": [
     {
      "date": "2026-11-18",
-     "note": "No trades: all six candidates are puts in avoid-listed sectors (Technology, Consumer Discretionary, Broad market) or sub-$0.30 collapses, and no IBN, EW, NFLX or SE trigger has fired. Holding CLSX put to its 2.98 underlying stop and keeping $662 settled cash."
-    },
-    {
-     "date": "2026-11-18",
      "note": "No trade today: the TGT breakout is the only long candidate and Consumer Staples is on my avoid list, and the puts are in avoid-listed sectors or sub-$0.30 collapses. Keep CLSX to its 2.98 stop and hold settled cash for IBN, EW, NFLX, or SE triggers."
     },
     {
@@ -186,6 +182,10 @@
     {
      "date": "2026-11-24",
      "note": "Pass on DLTR (Consumer Staples) and A (Technology): both are on the avoid list, where my record is negative, and SPY is in a downtrend with crash radar at 47. FNGR is a sub-penny short that can't be sized sensibly. Staying in settled cash for the IBN, DIS, or NFLX triggers in Communication Services."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "No trade at 10:36: FNGR is a sub-penny short in the broad-market sector, DLTR and A are on the avoid list, and no Communication Services trigger (IBN >36.17, DIS >123.34, NFLX <56.56 second close) has fired. SPY is in a downtrend with crash radar at 48, so I'm keeping the $626.52 in settled cash."
     }
    ],
    "last_exits": {
@@ -1222,10 +1222,6 @@
    "notes": [
     {
      "date": "2026-11-19",
-     "note": "Recheck candidate ratios against the live price in each scan; my notes had RSP at 0.74:1, but the live 211.89 price gives about 1.11:1. Still avoid stacking more single-name starters while SPY is below its 200-day."
-    },
-    {
-     "date": "2026-11-19",
      "note": "Passing today: nine stock positions are open, available cash is only $34.61, SPY is below its 200-day, and BNY (about 0.92:1 at 145.67) would only add a tiny overlapping Financials starter. Re-check candidates once settled cash rebuilds, and keep existing stops and targets."
     },
     {
@@ -1379,6 +1375,10 @@
     {
      "date": "2026-11-24",
      "note": "No trade: MPC, PSX and VLO are Energy, my weakest sector, and fail the 0.8:1 floor (about 0.29, 0.19 and 0.18). BJ isn't in today's candidate list, so its trigger can't be checked. The positions list is empty, so the game plan's holds are stale. Keep the cash."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "No trade: MPC, VLO and PSX are Energy, my weakest sector, and fail the 0.8:1 floor (about 0.25, 0.18 and 0.16 on the 2x-ATR stops). BJ isn't in today's candidate list, so its trigger can't be checked. Positions are empty, so the stale hold plans are void. Keep the cash."
     }
    ],
    "last_exits": {
@@ -2109,7 +2109,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.18,
-     "mark": 0.1,
+     "mark": 0.07,
      "entry": 0.18,
      "width": 1.0,
      "short_strike": 78.0,
@@ -2131,7 +2131,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.035
+     "exit_half_spread": 0.01
     }
    },
    "status": "active",
@@ -2142,10 +2142,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "Hold the existing TLT 78/77 bull put (entry 0.18, mark 0.14). Skip the duplicate candidate: it's the same TLT spread, so adding it would double risk on an underlying that has stopped out three times, with SPY trend down and crash radar at 42. Revisit only a different underlying at IV/RV of 1.15 or h"
-    },
     {
      "date": "2026-11-19",
      "note": "Holding the TLT 78/77 bull put (entry 0.18, mark 0.19) and skipping the duplicate candidate to avoid doubling TLT risk. Next trade must be a different underlying at IV/RV of 1.15 or higher, with the rate-proxy concern weighed against crash radar."
@@ -2301,6 +2297,10 @@
     {
      "date": "2026-11-24",
      "note": "Passing on the TLT 79.5/78.5 bull put again: it stacks a second same-expiry TLT spread on the open 78/77, SPY is in a downtrend, and crash radar is 47 (warning). Wait for a non-duplicate rich-vol setup on a different underlying, or for crash radar below 40."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "Passed on the TLT 79.5/78.5 bull put: it duplicates the open TLT 78/77 at the same expiry, crash radar is 48 (warning, above my 40 threshold), and SPY is trending down. Holding the existing spread under default exits; look for a non-duplicate rich-vol setup on another underlying once crash radar is "
     }
    ],
    "last_exits": {
@@ -2336,7 +2336,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 81.0,
+   "min_trade_seen": 83.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2798,7 +2798,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 718.95
+     "last": 716.52
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2814,7 +2814,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 718.95
+     "last": 716.52
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2830,7 +2830,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 718.95
+     "last": 716.52
     }
    },
    "status": "active",
@@ -2863,7 +2863,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 111.01
+     "last": 110.37
     },
     "pos-e7834830d1": {
      "kind": "stock",
@@ -2880,7 +2880,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 58.3
+     "last": 57.96
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2897,7 +2897,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 154.985
+     "last": 154.695
     },
     "pos-c426d20c19": {
      "kind": "stock",
@@ -2914,7 +2914,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 93.53
+     "last": 92.17
     }
    },
    "status": "active",
@@ -2966,7 +2966,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.98,
+     "mark": 0.97,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2986,7 +2986,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.4,
+     "exit_half_spread": 2.405,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -3011,7 +3011,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.06,
+     "mark": 0.01,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3031,7 +3031,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.885,
+     "exit_half_spread": 3.835,
      "peak_mark": 1.09
     }
    },
@@ -3598,14 +3598,14 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-24",
-    "made_at": "2026-11-24T10:11-05:00",
+    "made_at": "2026-11-24T10:37-05:00",
     "watch": [
      "SPY",
      "IWM",
      "XLF"
     ],
     "aggression": "stand_down",
-    "why": "Breadth is weak: well over half of the scan names are red, SPY is 1.9% below its 200-day SMA, and the crash radar is in warning at 47. The IWM trigger needs fewer than half the names red, which fails, so I'm standing down and keeping SPY, IWM, and XLF on watch in case breadth turns.",
+    "why": "Breadth is still weak: most scan names are red, SPY trend is down and 2.2% below its 200-day SMA, and the crash radar is in warning at 48. IWM is below VWAP and not holding above it, so the open-breadth condition for its trigger fails and I'm keeping the stand-down.",
     "slices": 4,
     "target_pct": 0.4,
     "stop_pct": 0.3,
