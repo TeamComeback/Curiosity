@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T10:37-05:00",
+ "updated": "2026-11-24T11:08-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,9 +10,9 @@
  },
  "regime": {
   "spy_trend": "down",
-  "spy_vs_sma200_pct": -2.2,
+  "spy_vs_sma200_pct": -2.7,
   "spy_roc20_pct": -5.6,
-  "crash_radar": 48
+  "crash_radar": 49
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -68,15 +68,15 @@
    "notes": [
     {
      "date": "2026-11-24",
+     "note": "Pass 11:07: FNGR is a sub-penny short in the avoid-listed broad-market sector, and DLTR is in Consumer Staples, also avoided, and already 5% past its 148.28 level. SPY is in a downtrend with crash radar at 49, so I'm keeping $626.52 in settled cash for the Communication Services triggers (IBN >36.17"
+    },
+    {
+     "date": "2026-11-24",
      "note": "No trade at 10:36: FNGR is a sub-penny short in the broad-market sector, DLTR and A are on the avoid list, and no Communication Services trigger (IBN >36.17, DIS >123.34, NFLX <56.56 second close) has fired. SPY is in a downtrend with crash radar at 48, so I'm keeping the $626.52 in settled cash."
     },
     {
      "date": "2026-11-24",
      "note": "Pass on DLTR (Consumer Staples) and A (Technology): both are on the avoid list, where my record is negative, and SPY is in a downtrend with crash radar at 47. FNGR is a sub-penny short that can't be sized sensibly. Staying in settled cash for the IBN, DIS, or NFLX triggers in Communication Services."
-    },
-    {
-     "date": "2026-11-24",
-     "note": "No trade: FNGR is a sub-penny short in the broad-market sector, DLTR and A fall in sectors on our avoid list, and no Communication Services trigger (IBN >36.17, DIS >123.34, NFLX <56.56 second close) has fired. Crash radar is 47 with SPY in a downtrend, so keep cash for the lean-in triggers."
     }
    ],
    "thesis_review": null
@@ -117,15 +117,15 @@
    "notes": [
     {
      "date": "2026-11-24",
+     "note": "No trade: MPC, PSX and VLO are Energy, my weakest sector, and fail the 0.8:1 reward-to-risk floor (about 0.25, 0.17 and 0.18 on the 2x-ATR stops). BJ isn't in today's candidates, so its trigger can't be checked. Positions are empty, so the game plan's holds are stale. Keep the cash."
+    },
+    {
+     "date": "2026-11-24",
      "note": "No trade: MPC, VLO and PSX are Energy, my weakest sector, and fail the 0.8:1 floor (about 0.25, 0.18 and 0.16 on the 2x-ATR stops). BJ isn't in today's candidate list, so its trigger can't be checked. Positions are empty, so the stale hold plans are void. Keep the cash."
     },
     {
      "date": "2026-11-24",
      "note": "No trade: MPC, PSX and VLO are Energy, my weakest sector, and fail the 0.8:1 floor (about 0.29, 0.19 and 0.18). BJ isn't in today's candidate list, so its trigger can't be checked. The positions list is empty, so the game plan's holds are stale. Keep the cash."
-    },
-    {
-     "date": "2026-11-24",
-     "note": "No trade: all six live candidates fail the 0.8:1 reward-to-risk floor (COR ~0.18, ROP ~0.16, CAH ~0.26, MDT ~0.69, ABT ~0.15, COST ~0.44). BJ isn't in today's candidate list, so its trigger can't be verified. Hold the five stock positions to their stops and targets."
     }
    ],
    "thesis_review": null
@@ -137,29 +137,37 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 895.5,
-   "cash": 902.5,
-   "available": 802.5,
+   "equity": 894.5,
+   "cash": 894.5,
+   "available": 894.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.9,
-   "progress_pct": 8.96,
-   "open": 1,
-   "closed": 6,
-   "win_rate": 0.0,
+   "multiple": 0.89,
+   "progress_pct": 8.95,
+   "open": 0,
+   "closed": 7,
+   "win_rate": 14.3,
    "max_dd_pct": 11.7,
    "win_loss": {
-    "win": null,
+    "win": {
+     "n": 1,
+     "usd": 5.5,
+     "pct": 40.7
+    },
     "loss": {
      "n": 6,
      "usd": -18.5,
      "pct": -177.8
     },
-    "ratio": null
+    "ratio": 0.3
    },
-   "risk_adj": -0.9,
+   "risk_adj": -0.91,
    "notes": [
+    {
+     "date": "2026-11-24",
+     "note": "Passing on the TLT 80/79 bull put: the IV/RV edge (1.36) is real, but crash radar is 49 (warning), SPY is below its 200-day, and my own filter requires radar under 40. Revisit on a calmer tape or a non-TLT rich-vol setup."
+    },
     {
      "date": "2026-11-24",
      "note": "Passed on the TLT 79.5/78.5 bull put: it duplicates the open TLT 78/77 at the same expiry, crash radar is 48 (warning, above my 40 threshold), and SPY is trending down. Holding the existing spread under default exits; look for a non-duplicate rich-vol setup on another underlying once crash radar is "
@@ -167,10 +175,6 @@
     {
      "date": "2026-11-24",
      "note": "Passing on the TLT 79.5/78.5 bull put again: it stacks a second same-expiry TLT spread on the open 78/77, SPY is in a downtrend, and crash radar is 47 (warning). Wait for a non-duplicate rich-vol setup on a different underlying, or for crash radar below 40."
-    },
-    {
-     "date": "2026-11-24",
-     "note": "Passing on the TLT 79.5/78.5 duplicate kept risk low, but the firm still has zero realized wins. Next, look for a rich-vol setup on a different underlying once crash radar is below 40."
     }
    ],
    "thesis_review": null
@@ -182,20 +186,20 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 926.97,
+   "equity": 922.89,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.93,
-   "progress_pct": 9.27,
+   "multiple": 0.92,
+   "progress_pct": 9.23,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 10.8,
    "win_loss": null,
-   "risk_adj": -0.67,
+   "risk_adj": -0.71,
    "notes": [],
    "thesis_review": null
   },
@@ -206,7 +210,7 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 826.19,
+   "equity": 825.66,
    "cash": 164.38,
    "available": 164.38,
    "settling": 0,
@@ -242,14 +246,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": -312.26,
+   "equity": -281.26,
    "cash": -411.26,
    "available": -411.26,
    "settling": 0,
    "status": "eliminated",
    "status_reason": "equity $-202.19 fell below $10",
-   "multiple": -0.31,
-   "progress_pct": -3.12,
+   "multiple": -0.28,
+   "progress_pct": -2.81,
    "open": 2,
    "closed": 5,
    "win_rate": 20.0,
@@ -267,7 +271,7 @@
     },
     "ratio": 0.02
    },
-   "risk_adj": -0.93,
+   "risk_adj": -0.91,
    "notes": [
     {
      "date": "2026-11-09",
@@ -761,38 +765,16 @@
    "agents": {
     "trend": 626.52,
     "meanrev": 983.82,
-    "volsell": 895.5,
-    "baseline": 926.97,
-    "monkey": 826.19,
-    "blackswan": -312.26,
+    "volsell": 894.5,
+    "baseline": 922.89,
+    "monkey": 825.66,
+    "blackswan": -281.26,
     "scalper": 1001.3,
     "hyper": 999.71
    }
   }
  ],
  "positions": [
-  {
-   "agent": "volsell",
-   "position_id": "pos-7d4ce9e3f1",
-   "kind": "spread",
-   "symbol": "TLT",
-   "underlying": "TLT",
-   "structure": "bull put spread",
-   "opt_type": null,
-   "qty": 1,
-   "entry": 0.18,
-   "last": null,
-   "mark": 0.07,
-   "stop": 0,
-   "expiry": "2026-12-24",
-   "opened": "2026-11-19T11:38:13-05:00",
-   "thesis": "TLT 78/77 bull put at 0.18 credit with IV/RV 1.23 and crash radar calm at 40; one contract risks $82 max loss, and I'm overriding my self-imposed Real Estate avoid list for a small test because passing on sector labels has left the firm with zero trades.",
-   "confidence": 2,
-   "cost": -13.5,
-   "realized": null,
-   "play": "rich_vol",
-   "width": 1.0
-  },
   {
    "agent": "baseline",
    "position_id": "pos-fe0738abd6",
@@ -803,7 +785,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 716.52,
+   "last": 713.35,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -825,7 +807,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 716.52,
+   "last": 713.35,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -847,7 +829,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 716.52,
+   "last": 713.35,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -869,7 +851,7 @@
    "opt_type": null,
    "qty": 1.0272,
    "entry": 115.79,
-   "last": 110.37,
+   "last": 108.85,
    "mark": null,
    "stop": 99.13,
    "expiry": null,
@@ -891,7 +873,7 @@
    "opt_type": null,
    "qty": 3.3815,
    "entry": 57.98,
-   "last": 57.96,
+   "last": 57.97,
    "mark": null,
    "stop": 52.7,
    "expiry": null,
@@ -913,7 +895,7 @@
    "opt_type": null,
    "qty": 1.9214,
    "entry": 155.0,
-   "last": 154.695,
+   "last": 156.08,
    "mark": null,
    "stop": 142.41,
    "expiry": null,
@@ -935,7 +917,7 @@
    "opt_type": null,
    "qty": 0.5991,
    "entry": 92.816,
-   "last": 92.17,
+   "last": 89.395,
    "mark": null,
    "stop": 70.81,
    "expiry": null,
@@ -958,7 +940,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 0.97,
+   "mark": 1.0,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -980,7 +962,7 @@
    "qty": 2,
    "entry": 4.15,
    "last": null,
-   "mark": 0.01,
+   "mark": 0.15,
    "stop": 175.6,
    "expiry": "2027-01-15",
    "opened": "2026-11-09T09:38:36-05:00",
@@ -993,6 +975,41 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-24T11:08:11-05:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "SPY, IWM, XLV, XLP",
+   "note": "stand_down: Breadth is still poor, with most scan names red and SPY, QQQ, and IWM all below VWAP and in down trends. The crash radar is at 49 (warning), and IWM hasn't pulled back to VWAP and held, so the overnight trigger isn't met. XLV and XLP are the only clean uptrends, so I'm keeping them on watch in case "
+  },
+  {
+   "time": "2026-11-24T11:07:55-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "ALNY",
+   "note": "spread stop (-96%) (tried 0.10, 0.07, 0.04, 0.01; mark 0.15, natural -3.73)"
+  },
+  {
+   "time": "2026-11-24T11:06:32-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-70%) (tried 0.95, 0.63, 0.32, 0.01; mark 1.00, natural -1.42)"
+  },
+  {
+   "time": "2026-11-24T11:05:08-05:00",
+   "type": "close",
+   "agent": "volsell",
+   "symbol": "TLT",
+   "qty": 1,
+   "entry": 0.18,
+   "exit": 0.07,
+   "pnl": 5.5,
+   "note": "profit target (65% of credit)",
+   "opened": "2026-11-19T11:38:13-05:00",
+   "confidence": 2,
+   "thesis": "TLT 78/77 bull put at 0.18 credit with IV/RV 1.23 and crash radar calm at 40; one contract risks $82 max loss, and I'm overriding my self-imposed Real Estate avoid list for a small test because passing on sector labels has left the firm with zero trades."
+  },
   {
    "time": "2026-11-24T10:36:51-05:00",
    "type": "exit_unfilled",
@@ -1428,41 +1445,6 @@
    "agent": "blackswan",
    "symbol": "ALNY",
    "note": "spread stop (-82%) (tried 0.70, 0.47, 0.24, 0.01; mark 0.75, natural -2.09)"
-  },
-  {
-   "time": "2026-11-23T11:36:26-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-85%) (tried 0.44, 0.29, 0.15, 0.01; mark 0.49, natural -0.95)"
-  },
-  {
-   "time": "2026-11-23T11:35:05-05:00",
-   "type": "close",
-   "agent": "meanrev",
-   "symbol": "DE",
-   "qty": 0.1199,
-   "entry": 625.052,
-   "exit": 631.972,
-   "pnl": 0.83,
-   "note": "snap-back (RSI2 61)",
-   "opened": "2026-11-19T10:38:30-05:00",
-   "confidence": 2,
-   "thesis": "DE RSI(2) 0.6 washout 1.8% above its 200-day with a 598.30 stop and 649.31 target, about 0.88:1, clearing the 0.8:1 floor in a calm radar regime (39); a starter size because SPY is below its 200-day and the book already has six open positions."
-  },
-  {
-   "time": "2026-11-23T11:07:48-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-82%) (tried 0.68, 0.45, 0.23, 0.01; mark 0.73, natural -2.05)"
-  },
-  {
-   "time": "2026-11-23T11:06:26-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-83%) (tried 0.52, 0.35, 0.18, 0.01; mark 0.57, natural -0.79)"
   }
  ],
  "reviews": [
@@ -4123,26 +4105,26 @@
  ],
  "radar": {
   "now": {
-   "score": 48,
+   "score": 49,
    "tier": "warning",
-   "market_score": 60,
+   "market_score": 61,
    "economy_score": 12,
    "parts": {
     "trend": 75,
-    "drawdown": 56,
+    "drawdown": 58,
     "volatility": 84,
-    "breadth": 67,
+    "breadth": 70,
     "credit": 61,
     "safety": 10,
     "economy": 12
    },
    "facts": {
-    "spy_vs_sma50_pct": -5.7,
-    "spy_vs_sma200_pct": -2.2,
-    "spy_off_high_pct": 8.3,
+    "spy_vs_sma50_pct": -6.1,
+    "spy_vs_sma200_pct": -2.7,
+    "spy_off_high_pct": 8.7,
     "spy_iv_pct": 22.1,
     "spy_realized_vol_pct": 31.4,
-    "pct_above_50d": 38.3,
+    "pct_above_50d": 36.9,
     "breadth_sample": 509,
     "junk_vs_treasuries_20d_pct": -1.45,
     "havens_vs_spy_20d_pct": 0.8
@@ -4156,7 +4138,7 @@
     "junk_bond_spread_pct": 3.76,
     "sahm_indicator": 0.0
    },
-   "at": "2026-11-24T10:35-05:00"
+   "at": "2026-11-24T11:05-05:00"
   },
   "history": [
    {
@@ -4311,7 +4293,7 @@
    },
    {
     "date": "2026-11-24",
-    "score": 48,
+    "score": 49,
     "tier": "warning"
    }
   ],
@@ -4333,14 +4315,15 @@
  "playbooks": {
   "scalper": {
    "date": "2026-11-24",
-   "made_at": "2026-11-24T10:37-05:00",
+   "made_at": "2026-11-24T11:08-05:00",
    "watch": [
     "SPY",
     "IWM",
-    "XLF"
+    "XLV",
+    "XLP"
    ],
    "aggression": "stand_down",
-   "why": "Breadth is still weak: most scan names are red, SPY trend is down and 2.2% below its 200-day SMA, and the crash radar is in warning at 48. IWM is below VWAP and not holding above it, so the open-breadth condition for its trigger fails and I'm keeping the stand-down.",
+   "why": "Breadth is still poor, with most scan names red and SPY, QQQ, and IWM all below VWAP and in down trends. The crash radar is at 49 (warning), and IWM hasn't pulled back to VWAP and held, so the overnight trigger isn't met. XLV and XLP are the only clean uptrends, so I'm keeping them on watch in case ",
    "slices": 4,
    "target_pct": 0.4,
    "stop_pct": 0.3,
@@ -4579,11 +4562,11 @@
     "avg_pnl": -16.5
    },
    "Real Estate": {
-    "trades": 3,
-    "wins": 0,
-    "pnl": -34.5,
-    "win_rate_pct": 0,
-    "avg_pnl": -11.5
+    "trades": 4,
+    "wins": 1,
+    "pnl": -29.0,
+    "win_rate_pct": 25,
+    "avg_pnl": -7.25
    },
    "Industrials": {
     "trades": 2,

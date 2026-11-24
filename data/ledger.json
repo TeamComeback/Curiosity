@@ -23998,5 +23998,35 @@
   "confidence": 0,
   "signals": {},
   "from_plan": false
+ },
+ {
+  "time": "2026-11-24T11:05:08-05:00",
+  "type": "trade_closed",
+  "agent": "volsell",
+  "position_id": "pos-7d4ce9e3f1",
+  "symbol": "TLT",
+  "underlying": "TLT",
+  "sector": "Real Estate",
+  "instrument": "spread",
+  "entry": 0.18,
+  "exit": 0.07,
+  "pnl": 5.5,
+  "return_pct": 40.7,
+  "opened": "2026-11-19T11:38:13-05:00",
+  "why_entered": "TLT 78/77 bull put at 0.18 credit with IV/RV 1.23 and crash radar calm at 40; one contract risks $82 max loss, and I'm overriding my self-imposed Real Estate avoid list for a small test because passing on sector labels has left the firm with zero trades.",
+  "why_exited": "profit target (65% of credit)"
+ },
+ {
+  "time": "2026-11-24T11:08:11-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "SPY",
+   "IWM",
+   "XLV",
+   "XLP"
+  ],
+  "aggression": "stand_down",
+  "why": "Breadth is still poor, with most scan names red and SPY, QQQ, and IWM all below VWAP and in down trends. The crash radar is at 49 (warning), and IWM hasn't pulled back to VWAP and held, so the overnight trigger isn't met. XLV and XLP are the only clean uptrends, so I'm keeping them on watch in case "
  }
 ]

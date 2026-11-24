@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-10T12:36:13-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
-  "time": "2026-11-10T12:37:38-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-90%) (tried 0.28, 0.19, 0.10, 0.01; mark 0.33, natural -0.93)"
- },
- {
-  "time": "2026-11-10T12:38:00-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.15)"
- },
- {
-  "time": "2026-11-10T12:39:36-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
   "time": "2026-11-10T12:40:58-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6084,5 +6056,40 @@
   "agent": "blackswan",
   "symbol": "ALNY",
   "note": "spread stop (-100%) (tried 0.01; mark 0.01, natural -3.83)"
+ },
+ {
+  "time": "2026-11-24T11:05:08-05:00",
+  "type": "close",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "qty": 1,
+  "entry": 0.18,
+  "exit": 0.07,
+  "pnl": 5.5,
+  "note": "profit target (65% of credit)",
+  "opened": "2026-11-19T11:38:13-05:00",
+  "confidence": 2,
+  "thesis": "TLT 78/77 bull put at 0.18 credit with IV/RV 1.23 and crash radar calm at 40; one contract risks $82 max loss, and I'm overriding my self-imposed Real Estate avoid list for a small test because passing on sector labels has left the firm with zero trades."
+ },
+ {
+  "time": "2026-11-24T11:06:32-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-70%) (tried 0.95, 0.63, 0.32, 0.01; mark 1.00, natural -1.42)"
+ },
+ {
+  "time": "2026-11-24T11:07:55-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-96%) (tried 0.10, 0.07, 0.04, 0.01; mark 0.15, natural -3.73)"
+ },
+ {
+  "time": "2026-11-24T11:08:11-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, IWM, XLV, XLP",
+  "note": "stand_down: Breadth is still poor, with most scan names red and SPY, QQQ, and IWM all below VWAP and in down trends. The crash radar is at 49 (warning), and IWM hasn't pulled back to VWAP and held, so the overnight trigger isn't met. XLV and XLP are the only clean uptrends, so I'm keeping them on watch in case "
  }
 ]
