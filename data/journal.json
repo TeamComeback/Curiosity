@@ -1,47 +1,5 @@
 [
  {
-  "time": "2026-11-10T12:40:58-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-90%) (tried 0.27, 0.18, 0.10, 0.01; mark 0.32, natural -0.93)"
- },
- {
-  "time": "2026-11-10T12:41:18-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.29)"
- },
- {
-  "time": "2026-11-10T13:06:10-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
-  "time": "2026-11-10T13:07:31-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-90%) (tried 0.28, 0.19, 0.10, 0.01; mark 0.33, natural -0.97)"
- },
- {
-  "time": "2026-11-10T13:07:52-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.23)"
- },
- {
-  "time": "2026-11-10T13:08:11-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "META, GOOGL",
-  "note": "stand_down: All four slices are already used today, so no new round trip is possible even if META or GOOGL sets up. Standing down keeps the playbook consistent, and I'm keeping META and GOOGL on watch so tomorrow's plan is ready."
- },
- {
   "time": "2026-11-10T13:36:11-05:00",
   "type": "exit_unfilled",
   "agent": "trend",
@@ -6091,5 +6049,52 @@
   "agent": "scalper",
   "symbol": "SPY, IWM, XLV, XLP",
   "note": "stand_down: Breadth is still poor, with most scan names red and SPY, QQQ, and IWM all below VWAP and in down trends. The crash radar is at 49 (warning), and IWM hasn't pulled back to VWAP and held, so the overnight trigger isn't met. XLV and XLP are the only clean uptrends, so I'm keeping them on watch in case "
+ },
+ {
+  "time": "2026-11-24T11:36:29-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-70%) (tried 0.95, 0.63, 0.32, 0.01; mark 1.00, natural -1.38)"
+ },
+ {
+  "time": "2026-11-24T11:36:50-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.01, natural -3.82)"
+ },
+ {
+  "time": "2026-11-24T11:36:57-05:00",
+  "type": "sizing",
+  "agent": "trend",
+  "symbol": "VALE",
+  "note": "$125.00 -> $62.50: half size while win rate 4/27 is under 30%"
+ },
+ {
+  "time": "2026-11-24T11:37:18-05:00",
+  "type": "unfilled",
+  "agent": "trend",
+  "symbol": "VALE261224P00009500"
+ },
+ {
+  "time": "2026-11-24T11:37:51-05:00",
+  "type": "open",
+  "agent": "volsell",
+  "symbol": "TLT",
+  "instrument": "spread",
+  "qty": 1,
+  "price": 0.2,
+  "cost": -19.0,
+  "stop": 0,
+  "thesis": "TLT IV is 1.37x realized (15.3% vs 11.1%), so selling the 80/79 bull put for about 0.21 credit with 30 DTE and one contract risking $79 is a defined-risk bet on rich vol; crash radar is 48 with SPY in a downtrend, so I'm keeping size to one contract and taking the 0.15 credit floor.",
+  "confidence": 2
+ },
+ {
+  "time": "2026-11-24T11:37:54-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "XLV, IWM, SPY",
+  "note": "stand_down: Breadth is still heavily red, with SPY and QQQ below VWAP in downtrends and the crash radar at 48 (warning). IWM is still below VWAP, so the overnight pullback-and-hold trigger isn't met; XLV is the only clean uptrend and stays on watch."
  }
 ]
