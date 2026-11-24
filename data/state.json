@@ -9,8 +9,10 @@
   "start_balance": 1000.0
  },
  "entries": {
-  "date": "2026-11-23",
-  "counts": {}
+  "date": "2026-11-24",
+  "counts": {
+   "monkey": 1
+  }
  },
  "agents": {
   "trend": {
@@ -1207,89 +1209,9 @@
    ]
   },
   "meanrev": {
-   "cash": 583.59,
+   "cash": 921.63,
    "reserved": 0.0,
    "positions": {
-    "pos-c4618673be": {
-     "kind": "stock",
-     "symbol": "ACN",
-     "qty": 0.4325,
-     "entry": 230.9,
-     "cost": 99.86,
-     "direction": "long",
-     "stop": 215.73,
-     "atr": 10.313,
-     "opened": "2026-11-18T13:08:32-05:00",
-     "thesis": "ACN RSI(2) 1.0 washout 21.6% above its 200-day in a calm regime (crash radar 37); live reward-to-risk is 0.81:1 (231.20 to 243.73 target vs 215.73 stop), just clearing my 0.8:1 floor, so I'm taking a small starter.",
-     "confidence": 2,
-     "signals": {
-      "rsi2": 1.0,
-      "pct_vs_sma200": 21.6,
-      "pct_vs_sma5": -5.1
-     },
-     "sector": "Consumer Staples",
-     "last": 222.64
-    },
-    "pos-7c659f7cde": {
-     "kind": "stock",
-     "symbol": "NVS",
-     "qty": 0.6448,
-     "entry": 154.94,
-     "cost": 99.91,
-     "direction": "long",
-     "stop": 150.25,
-     "atr": 3.212,
-     "opened": "2026-11-18T14:38:29-05:00",
-     "thesis": "NVS RSI(2) 1.1 washout only 1.6% above its 200-day; live target 159.03 vs stop 150.25 from 155.07 is about 0.82:1, just clearing my 0.8:1 floor, so I'm taking a starter size.",
-     "confidence": 2,
-     "signals": {
-      "rsi2": 1.1,
-      "pct_vs_sma200": 1.6,
-      "pct_vs_sma5": -2.5
-     },
-     "sector": "Health Care",
-     "last": 152.015
-    },
-    "pos-a2d196d244": {
-     "kind": "stock",
-     "symbol": "SAP",
-     "qty": 0.2419,
-     "entry": 206.29,
-     "cost": 49.9,
-     "direction": "long",
-     "stop": 197.36,
-     "atr": 6.221,
-     "opened": "2026-11-19T09:38:10-05:00",
-     "thesis": "SAP RSI(2) 0.6 washout 7.5% above its 200-day, a new-day re-entry under the game-plan trigger (at or below 210.61); live reward-to-risk is about 1.6:1 (206.69 to 221.71 target vs 197.36 stop), so this is a starter size.",
-     "confidence": 2,
-     "signals": {
-      "rsi2": 0.6,
-      "pct_vs_sma200": 7.5,
-      "pct_vs_sma5": -6.8
-     },
-     "sector": "Consumer Staples",
-     "last": 203.865
-    },
-    "pos-af5c8c31d9": {
-     "kind": "stock",
-     "symbol": "UTHR",
-     "qty": 0.1628,
-     "entry": 554.12,
-     "cost": 90.21,
-     "direction": "long",
-     "stop": 529.38,
-     "atr": 15.449,
-     "opened": "2026-11-20T11:08:06-05:00",
-     "thesis": "UTHR RSI(2) 0.7 washout 2.4% above its 200-day, now at 552.55 and under the game-plan trigger of 562; stop 529.38 to target 572.17 is about 0.85:1, clearing the 0.8:1 floor. The stop is 4.2% away, so risk is about $3.80 on a $90 starter.",
-     "confidence": 2,
-     "signals": {
-      "rsi2": 0.7,
-      "pct_vs_sma200": 2.4,
-      "pct_vs_sma5": -3.4
-     },
-     "sector": "Broad market / other",
-     "last": 560.285
-    },
     "pos-3bd114fbff": {
      "kind": "stock",
      "symbol": "PYPL",
@@ -1308,21 +1230,17 @@
       "pct_vs_sma5": -4.5
      },
      "sector": "Financials",
-     "last": 55.17
+     "last": 55.72
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 28,
-   "wins": 17,
+   "closed": 32,
+   "wins": 18,
    "peak": 1029.08,
    "max_dd": 0.0633,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "Recheck stale avoid-list ratios against live prices each scan; I hold seven stock positions, so no further adds beyond starters."
-    },
     {
      "date": "2026-11-19",
      "note": "No new entries: RSP (0.74:1) and BNY (0.68:1) miss the 0.8:1 floor, and SAP, MCO, TRV, ACN, AMGN, NVS, SPGI and DE are already held. Hold existing stops and targets; add nothing while SPY is below its 200-day and eight positions are open."
@@ -1478,6 +1396,10 @@
     {
      "date": "2026-11-23",
      "note": "All six live candidates fail the 0.8:1 reward-to-risk floor (best is EOG at about 0.49:1 on the hints). SCHD is not a candidate, so its 33.94 trigger can't be verified. Hold the nine open stock positions to their stops and targets and keep the $138 settled cash."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "No trade: all six live candidates fail the 0.8:1 reward-to-risk floor (COR ~0.18, ROP ~0.16, CAH ~0.26, MDT ~0.69, ABT ~0.15, COST ~0.44). BJ isn't in today's candidate list, so its trigger can't be verified. Hold the five stock positions to their stops and targets."
     }
    ],
    "last_exits": {
@@ -1500,14 +1422,17 @@
     "PM": "2026-11-11",
     "ALC": "2026-11-13",
     "HALO": "2026-11-16",
-    "SAP": "2026-11-18",
+    "SAP": "2026-11-24",
     "HZN": "2026-11-19",
     "TRV": "2026-11-20",
     "AMGN": "2026-11-23",
     "SPGI": "2026-11-23",
     "MCO": "2026-11-23",
     "RSP": "2026-11-23",
-    "DE": "2026-11-23"
+    "DE": "2026-11-23",
+    "ACN": "2026-11-24",
+    "NVS": "2026-11-24",
+    "UTHR": "2026-11-24"
    },
    "plan": {
     "for_day": "2026-11-24",
@@ -1587,7 +1512,28 @@
     "settled_cash_at_plan": 583.59,
     "budgets_clamped": 0
    },
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 97.5,
+     "settles": "2026-11-25",
+     "note": "sold ACN"
+    },
+    {
+     "amount": 98.83,
+     "settles": "2026-11-25",
+     "note": "sold NVS"
+    },
+    {
+     "amount": 49.69,
+     "settles": "2026-11-25",
+     "note": "sold SAP"
+    },
+    {
+     "amount": 92.02,
+     "settles": "2026-11-25",
+     "note": "sold UTHR"
+    }
+   ],
    "focus": {
     "lean_in": [
      "Financials"
@@ -2200,7 +2146,7 @@
       "dte": 35
      },
      "sector": "Real Estate",
-     "exit_half_spread": 0.05
+     "exit_half_spread": 0.01
     }
    },
    "status": "active",
@@ -2211,10 +2157,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "Passed TLT 78/77 bull put again (IV/RV 1.23, 0.19 credit). It is a rate proxy in Real Estate, which is on my avoid list after 0-for-6, and SPY is trending down. Keep $889 settled and wait for a non-avoided, non-rate setup at IV/RV 1.15+."
-    },
     {
      "date": "2026-11-19",
      "note": "Passing on rich-vol setups purely for sector labels leaves the firm at zero trades. Take a small, defined-risk trade at the 1.15 IV/RV floor and manage it tightly rather than waiting for a perfect setup."
@@ -2370,6 +2312,10 @@
     {
      "date": "2026-11-23",
      "note": "Passed on the TLT 79.5/78.5 duplicate: it would stack a second same-expiry TLT bull put on the open 78/77 (about $164 combined max loss, roughly 18% of equity) while SPY trends down and crash radar is 47. Hold the existing spread under default exits and wait for a non-duplicate rich-vol setup with c"
+    },
+    {
+     "date": "2026-11-24",
+     "note": "Passed on the TLT 79.5/78.5 duplicate again: it stacks a second same-expiry TLT bull put on the open 78/77, SPY is trending down, and crash radar is 49 (warning). Holding the existing spread under default exits; wait for a non-duplicate rich-vol setup with crash radar below 40."
     }
    ],
    "last_exits": {
@@ -2405,7 +2351,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 85.0,
+   "min_trade_seen": 82.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2867,7 +2813,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 723.815
+     "last": 713.94
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2883,7 +2829,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 723.815
+     "last": 713.94
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2899,7 +2845,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 723.815
+     "last": 713.94
     }
    },
    "status": "active",
@@ -2914,7 +2860,7 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 713.87,
+   "cash": 517.81,
    "reserved": 0.0,
    "positions": {
     "pos-83bf9288a4": {
@@ -2932,7 +2878,24 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 113.88
+     "last": 111.07
+    },
+    "pos-e7834830d1": {
+     "kind": "stock",
+     "symbol": "FISV",
+     "qty": 3.3815,
+     "entry": 57.98,
+     "cost": 196.06,
+     "hold_days": 2,
+     "direction": "long",
+     "stop": 52.7,
+     "atr": 2.369,
+     "opened": "2026-11-24T09:38:25-05:00",
+     "thesis": "Dart landed on FISV",
+     "confidence": 0,
+     "signals": {},
+     "sector": "Financials",
+     "last": 57.435
     }
    },
    "status": "active",
@@ -2984,7 +2947,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.51,
+     "mark": 0.97,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -3004,7 +2967,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.41,
+     "exit_half_spread": 2.385,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -3029,7 +2992,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.11,
+     "mark": 0.15,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3049,7 +3012,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.835,
+     "exit_half_spread": 3.9,
      "peak_mark": 1.09
     }
    },
@@ -3615,16 +3578,17 @@
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [],
    "playbook": {
-    "date": "2026-11-23",
-    "made_at": "2026-11-23T15:38-05:00",
+    "date": "2026-11-24",
+    "made_at": "2026-11-24T09:38-05:00",
     "watch": [
      "IWM",
-     "SPY"
+     "SPY",
+     "XLF"
     ],
     "aggression": "stand_down",
-    "why": "With flatten at 3:50 and only about 12 minutes left, a new scalp can't play out within the time limit, so I'm standing down. SPY is still down on the regime, and crash radar is at 47, so I'm keeping IWM and SPY on watch only for the next session under the overnight VWAP-reclaim conditions.",
-    "slices": 1,
-    "target_pct": 0.5,
+    "why": "Most scan names are red (about 20 of 30) with SPY down 2.6% vs its 200-day SMA, a 20-day ROC of -5.6%, and crash radar at 49 (warning). The overnight IWM trigger requires fewer than half the names red, so it fails and no new trades should be taken. I'm keeping IWM, SPY, and XLF on watch in case brea",
+    "slices": 4,
+    "target_pct": 0.4,
     "stop_pct": 0.3,
     "max_hold_min": 45
    },

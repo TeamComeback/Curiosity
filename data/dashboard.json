@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T15:38-05:00",
+ "updated": "2026-11-24T09:38-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,9 +10,9 @@
  },
  "regime": {
   "spy_trend": "down",
-  "spy_vs_sma200_pct": -1.2,
-  "spy_roc20_pct": -9.1,
-  "crash_radar": 47
+  "spy_vs_sma200_pct": -2.6,
+  "spy_roc20_pct": -5.6,
+  "crash_radar": 49
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -35,10 +35,10 @@
   {
    "id": "trend",
    "name": "Trend Co.",
-   "competing": true,
-   "exhibition": false,
+   "competing": false,
+   "exhibition": true,
    "reached_goal": null,
-   "paused_reason": null,
+   "paused_reason": "Exhibition since Nov 24: 16% win rate over 25 closed trades. Rejoins the race once its closed-trade win rate tops 30%.",
    "equity": 626.52,
    "cash": 626.52,
    "available": 626.52,
@@ -51,6 +51,19 @@
    "closed": 27,
    "win_rate": 14.8,
    "max_dd_pct": 53.3,
+   "win_loss": {
+    "win": {
+     "n": 4,
+     "usd": 54.42,
+     "pct": 43.6
+    },
+    "loss": {
+     "n": 23,
+     "usd": -25.7,
+     "pct": -22.1
+    },
+    "ratio": 2.12
+   },
    "risk_adj": -0.7,
    "notes": [
     {
@@ -75,20 +88,37 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 979.09,
-   "cash": 583.59,
-   "available": 138.41,
-   "settling": 445.18,
+   "equity": 982.89,
+   "cash": 921.63,
+   "available": 583.59,
+   "settling": 338.04,
    "status": "active",
    "status_reason": "",
    "multiple": 0.98,
-   "progress_pct": 9.79,
-   "open": 5,
-   "closed": 28,
-   "win_rate": 60.7,
+   "progress_pct": 9.83,
+   "open": 1,
+   "closed": 32,
+   "win_rate": 56.2,
    "max_dd_pct": 6.3,
-   "risk_adj": -0.33,
+   "win_loss": {
+    "win": {
+     "n": 18,
+     "usd": 3.41,
+     "pct": 2.5
+    },
+    "loss": {
+     "n": 14,
+     "usd": -5.69,
+     "pct": -4.5
+    },
+    "ratio": 0.6
+   },
+   "risk_adj": -0.27,
    "notes": [
+    {
+     "date": "2026-11-24",
+     "note": "No trade: all six live candidates fail the 0.8:1 reward-to-risk floor (COR ~0.18, ROP ~0.16, CAH ~0.26, MDT ~0.69, ABT ~0.15, COST ~0.44). BJ isn't in today's candidate list, so its trigger can't be verified. Hold the five stock positions to their stops and targets."
+    },
     {
      "date": "2026-11-23",
      "note": "All six live candidates fail the 0.8:1 reward-to-risk floor (best is EOG at about 0.49:1 on the hints). SCHD is not a candidate, so its 33.94 trigger can't be verified. Hold the nine open stock positions to their stops and targets and keep the $138 settled cash."
@@ -96,10 +126,6 @@
     {
      "date": "2026-11-23",
      "note": "15:07: all six candidates fail the 0.8:1 floor (best is EOG at about 0.43:1), SCHD is not a candidate so its 33.94 trigger can't be verified, and RSP is already closed. Hold the nine open stock positions to their stops and targets and keep the $138 settled cash."
-    },
-    {
-     "date": "2026-11-23",
-     "note": "14:37: all six candidates fail the 0.8:1 reward-to-risk floor (best is EOG at about 0.42:1), SCHD isn't a candidate so its 33.94 trigger can't be verified, and RSP already closed earlier. Hold the five open stock positions to their stops and targets and keep the $138 settled cash."
     }
    ],
    "thesis_review": null
@@ -123,8 +149,21 @@
    "closed": 6,
    "win_rate": 0.0,
    "max_dd_pct": 11.7,
+   "win_loss": {
+    "win": null,
+    "loss": {
+     "n": 6,
+     "usd": -18.5,
+     "pct": -177.8
+    },
+    "ratio": null
+   },
    "risk_adj": -0.9,
    "notes": [
+    {
+     "date": "2026-11-24",
+     "note": "Passed on the TLT 79.5/78.5 duplicate again: it stacks a second same-expiry TLT bull put on the open 78/77, SPY is trending down, and crash radar is 49 (warning). Holding the existing spread under default exits; wait for a non-duplicate rich-vol setup with crash radar below 40."
+    },
     {
      "date": "2026-11-23",
      "note": "Passed on the TLT 79.5/78.5 duplicate: it would stack a second same-expiry TLT bull put on the open 78/77 (about $164 combined max loss, roughly 18% of equity) while SPY trends down and crash radar is 47. Hold the existing spread under default exits and wait for a non-duplicate rich-vol setup with c"
@@ -132,10 +171,6 @@
     {
      "date": "2026-11-23",
      "note": "Passed on the TLT 79.5/78.5 duplicate. It would double the open TLT 78/77 at the same expiry (about $164 combined max loss, roughly 18% of equity) while SPY trends down and crash radar sits at 47. Holding the existing spread under default exits (take-profit near 0.065 mark, stop at 2x credit). Next "
-    },
-    {
-     "date": "2026-11-23",
-     "note": "Pass again on the TLT 79.5/78.5 duplicate: it doubles the open 78/77 TLT spread at the same expiry, Real Estate is on my avoid list, SPY is trending down, and crash radar is 47. Hold the existing spread under default exits and wait for a non-duplicate rich-vol setup with crash radar below 40."
     }
    ],
    "thesis_review": null
@@ -147,19 +182,20 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 936.35,
+   "equity": 923.65,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.94,
-   "progress_pct": 9.36,
+   "multiple": 0.92,
+   "progress_pct": 9.24,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 10.8,
-   "risk_adj": -0.59,
+   "win_loss": null,
+   "risk_adj": -0.7,
    "notes": [],
    "thesis_review": null
   },
@@ -170,19 +206,32 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 830.85,
-   "cash": 713.87,
-   "available": 713.87,
+   "equity": 826.12,
+   "cash": 517.81,
+   "available": 517.81,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.83,
-   "progress_pct": 8.31,
-   "open": 1,
+   "progress_pct": 8.26,
+   "open": 2,
    "closed": 10,
    "win_rate": 40.0,
    "max_dd_pct": 18.3,
-   "risk_adj": -0.93,
+   "win_loss": {
+    "win": {
+     "n": 4,
+     "usd": 6.28,
+     "pct": 2.3
+    },
+    "loss": {
+     "n": 6,
+     "usd": -32.05,
+     "pct": -8.7
+    },
+    "ratio": 0.2
+   },
+   "risk_adj": -0.95,
    "notes": [],
    "thesis_review": null
   },
@@ -193,19 +242,32 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": -338.26,
+   "equity": -284.26,
    "cash": -411.26,
    "available": -411.26,
    "settling": 0,
    "status": "eliminated",
    "status_reason": "equity $-202.19 fell below $10",
-   "multiple": -0.34,
-   "progress_pct": -3.38,
+   "multiple": -0.28,
+   "progress_pct": -2.84,
    "open": 2,
    "closed": 5,
    "win_rate": 20.0,
    "max_dd_pct": 141.1,
-   "risk_adj": -0.95,
+   "win_loss": {
+    "win": {
+     "n": 1,
+     "usd": 1.0,
+     "pct": 0.8
+    },
+    "loss": {
+     "n": 4,
+     "usd": -55.56,
+     "pct": -38.2
+    },
+    "ratio": 0.02
+   },
+   "risk_adj": -0.91,
    "notes": [
     {
      "date": "2026-11-09",
@@ -241,6 +303,19 @@
    "closed": 98,
    "win_rate": 44.9,
    "max_dd_pct": 0.7,
+   "win_loss": {
+    "win": {
+     "n": 44,
+     "usd": 0.67,
+     "pct": 0.4
+    },
+    "loss": {
+     "n": 54,
+     "usd": -0.52,
+     "pct": -0.3
+    },
+    "ratio": 1.29
+   },
    "risk_adj": 0.03,
    "notes": [
     {
@@ -277,6 +352,19 @@
    "closed": 90,
    "win_rate": 43.3,
    "max_dd_pct": 1.1,
+   "win_loss": {
+    "win": {
+     "n": 39,
+     "usd": 0.51,
+     "pct": 0.6
+    },
+    "loss": {
+     "n": 51,
+     "usd": -0.39,
+     "pct": -0.5
+    },
+    "ratio": 1.31
+   },
    "risk_adj": -0.01,
    "notes": [],
    "thesis_review": null
@@ -667,97 +755,22 @@
     "scalper": 1001.3,
     "hyper": 999.71
    }
+  },
+  {
+   "date": "2026-11-24",
+   "agents": {
+    "trend": 626.52,
+    "meanrev": 982.89,
+    "volsell": 895.5,
+    "baseline": 923.65,
+    "monkey": 826.12,
+    "blackswan": -284.26,
+    "scalper": 1001.3,
+    "hyper": 999.71
+   }
   }
  ],
  "positions": [
-  {
-   "agent": "meanrev",
-   "position_id": "pos-c4618673be",
-   "kind": "stock",
-   "symbol": "ACN",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 0.4325,
-   "entry": 230.9,
-   "last": 222.64,
-   "mark": null,
-   "stop": 215.73,
-   "expiry": null,
-   "opened": "2026-11-18T13:08:32-05:00",
-   "thesis": "ACN RSI(2) 1.0 washout 21.6% above its 200-day in a calm regime (crash radar 37); live reward-to-risk is 0.81:1 (231.20 to 243.73 target vs 215.73 stop), just clearing my 0.8:1 floor, so I'm taking a small starter.",
-   "confidence": 2,
-   "cost": 99.86,
-   "realized": null,
-   "play": null,
-   "width": null
-  },
-  {
-   "agent": "meanrev",
-   "position_id": "pos-7c659f7cde",
-   "kind": "stock",
-   "symbol": "NVS",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 0.6448,
-   "entry": 154.94,
-   "last": 152.015,
-   "mark": null,
-   "stop": 150.25,
-   "expiry": null,
-   "opened": "2026-11-18T14:38:29-05:00",
-   "thesis": "NVS RSI(2) 1.1 washout only 1.6% above its 200-day; live target 159.03 vs stop 150.25 from 155.07 is about 0.82:1, just clearing my 0.8:1 floor, so I'm taking a starter size.",
-   "confidence": 2,
-   "cost": 99.91,
-   "realized": null,
-   "play": null,
-   "width": null
-  },
-  {
-   "agent": "meanrev",
-   "position_id": "pos-a2d196d244",
-   "kind": "stock",
-   "symbol": "SAP",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 0.2419,
-   "entry": 206.29,
-   "last": 203.865,
-   "mark": null,
-   "stop": 197.36,
-   "expiry": null,
-   "opened": "2026-11-19T09:38:10-05:00",
-   "thesis": "SAP RSI(2) 0.6 washout 7.5% above its 200-day, a new-day re-entry under the game-plan trigger (at or below 210.61); live reward-to-risk is about 1.6:1 (206.69 to 221.71 target vs 197.36 stop), so this is a starter size.",
-   "confidence": 2,
-   "cost": 49.9,
-   "realized": null,
-   "play": null,
-   "width": null
-  },
-  {
-   "agent": "meanrev",
-   "position_id": "pos-af5c8c31d9",
-   "kind": "stock",
-   "symbol": "UTHR",
-   "underlying": null,
-   "structure": null,
-   "opt_type": null,
-   "qty": 0.1628,
-   "entry": 554.12,
-   "last": 560.285,
-   "mark": null,
-   "stop": 529.38,
-   "expiry": null,
-   "opened": "2026-11-20T11:08:06-05:00",
-   "thesis": "UTHR RSI(2) 0.7 washout 2.4% above its 200-day, now at 552.55 and under the game-plan trigger of 562; stop 529.38 to target 572.17 is about 0.85:1, clearing the 0.8:1 floor. The stop is 4.2% away, so risk is about $3.80 on a $90 starter.",
-   "confidence": 2,
-   "cost": 90.21,
-   "realized": null,
-   "play": null,
-   "width": null
-  },
   {
    "agent": "meanrev",
    "position_id": "pos-3bd114fbff",
@@ -768,7 +781,7 @@
    "opt_type": null,
    "qty": 1.0995,
    "entry": 54.61,
-   "last": 55.17,
+   "last": 55.72,
    "mark": null,
    "stop": 52.21,
    "expiry": null,
@@ -812,7 +825,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 723.815,
+   "last": 713.94,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -834,7 +847,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 723.815,
+   "last": 713.94,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -856,7 +869,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 723.815,
+   "last": 713.94,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -878,7 +891,7 @@
    "opt_type": null,
    "qty": 1.0272,
    "entry": 115.79,
-   "last": 113.88,
+   "last": 111.07,
    "mark": null,
    "stop": 99.13,
    "expiry": null,
@@ -886,6 +899,28 @@
    "thesis": "Dart landed on ORCL",
    "confidence": 0,
    "cost": 118.94,
+   "realized": null,
+   "play": null,
+   "width": null
+  },
+  {
+   "agent": "monkey",
+   "position_id": "pos-e7834830d1",
+   "kind": "stock",
+   "symbol": "FISV",
+   "underlying": null,
+   "structure": null,
+   "opt_type": null,
+   "qty": 3.3815,
+   "entry": 57.98,
+   "last": 57.435,
+   "mark": null,
+   "stop": 52.7,
+   "expiry": null,
+   "opened": "2026-11-24T09:38:25-05:00",
+   "thesis": "Dart landed on FISV",
+   "confidence": 0,
+   "cost": 196.06,
    "realized": null,
    "play": null,
    "width": null
@@ -901,7 +936,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 0.51,
+   "mark": 0.97,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -923,7 +958,7 @@
    "qty": 2,
    "entry": 4.15,
    "last": null,
-   "mark": 0.11,
+   "mark": 0.15,
    "stop": 175.6,
    "expiry": "2027-01-15",
    "opened": "2026-11-09T09:38:36-05:00",
@@ -936,6 +971,103 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-24T09:38:28-05:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "IWM, SPY, XLF",
+   "note": "stand_down: Most scan names are red (about 20 of 30) with SPY down 2.6% vs its 200-day SMA, a 20-day ROC of -5.6%, and crash radar at 49 (warning). The overnight IWM trigger requires fewer than half the names red, so it fails and no new trades should be taken. I'm keeping IWM, SPY, and XLF on watch in case brea"
+  },
+  {
+   "time": "2026-11-24T09:38:25-05:00",
+   "type": "open",
+   "agent": "monkey",
+   "symbol": "FISV",
+   "instrument": "stock",
+   "qty": 3.3815,
+   "price": 57.98,
+   "cost": 196.06,
+   "stop": 52.7,
+   "thesis": "Dart landed on FISV",
+   "confidence": 0
+  },
+  {
+   "time": "2026-11-24T09:38:15-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "ALNY",
+   "note": "spread stop (-96%) (tried 0.10, 0.07, 0.04, 0.01; mark 0.15, natural -3.75)"
+  },
+  {
+   "time": "2026-11-24T09:36:53-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-71%) (tried 0.92, 0.61, 0.31, 0.01; mark 0.97, natural -1.42)"
+  },
+  {
+   "time": "2026-11-24T09:35:30-05:00",
+   "type": "exit_unfilled",
+   "agent": "meanrev",
+   "symbol": "PYPL",
+   "note": "snap-back (RSI2 59)"
+  },
+  {
+   "time": "2026-11-24T09:35:09-05:00",
+   "type": "close",
+   "agent": "meanrev",
+   "symbol": "UTHR",
+   "qty": 0.1628,
+   "entry": 554.12,
+   "exit": 565.258,
+   "pnl": 1.81,
+   "note": "snap-back (RSI2 77)",
+   "opened": "2026-11-20T11:08:06-05:00",
+   "confidence": 2,
+   "thesis": "UTHR RSI(2) 0.7 washout 2.4% above its 200-day, now at 552.55 and under the game-plan trigger of 562; stop 529.38 to target 572.17 is about 0.85:1, clearing the 0.8:1 floor. The stop is 4.2% away, so risk is about $3.80 on a $90 starter."
+  },
+  {
+   "time": "2026-11-24T09:35:09-05:00",
+   "type": "close",
+   "agent": "meanrev",
+   "symbol": "SAP",
+   "qty": 0.2419,
+   "entry": 206.29,
+   "exit": 205.42,
+   "pnl": -0.21,
+   "note": "snap-back (RSI2 58)",
+   "opened": "2026-11-19T09:38:10-05:00",
+   "confidence": 2,
+   "thesis": "SAP RSI(2) 0.6 washout 7.5% above its 200-day, a new-day re-entry under the game-plan trigger (at or below 210.61); live reward-to-risk is about 1.6:1 (206.69 to 221.71 target vs 197.36 stop), so this is a starter size."
+  },
+  {
+   "time": "2026-11-24T09:35:08-05:00",
+   "type": "close",
+   "agent": "meanrev",
+   "symbol": "NVS",
+   "qty": 0.6448,
+   "entry": 154.94,
+   "exit": 153.266,
+   "pnl": -1.08,
+   "note": "snap-back (RSI2 66)",
+   "opened": "2026-11-18T14:38:29-05:00",
+   "confidence": 2,
+   "thesis": "NVS RSI(2) 1.1 washout only 1.6% above its 200-day; live target 159.03 vs stop 150.25 from 155.07 is about 0.82:1, just clearing my 0.8:1 floor, so I'm taking a starter size."
+  },
+  {
+   "time": "2026-11-24T09:35:08-05:00",
+   "type": "close",
+   "agent": "meanrev",
+   "symbol": "ACN",
+   "qty": 0.4325,
+   "entry": 230.9,
+   "exit": 225.434,
+   "pnl": -2.36,
+   "note": "snap-back (RSI2 69)",
+   "opened": "2026-11-18T13:08:32-05:00",
+   "confidence": 2,
+   "thesis": "ACN RSI(2) 1.0 washout 21.6% above its 200-day in a calm regime (crash radar 37); live reward-to-risk is 0.81:1 (231.20 to 243.73 target vs 215.73 stop), just clearing my 0.8:1 floor, so I'm taking a small starter."
+  },
   {
    "time": "2026-11-24T07:40:54-05:00",
    "type": "plan",
@@ -1311,74 +1443,6 @@
    "opened": "2026-11-19T10:08:32-05:00",
    "confidence": 3,
    "thesis": "SPGI RSI(2) 3.2 washout 3.8% above its 200-day, now at 443.06 and through the 446.31 game-plan trigger; stop 426.68 to target 457.39 is about 0.88:1, clearing the 0.8:1 floor in a calm radar regime (32) and inside the Financials lean-in."
-  },
-  {
-   "time": "2026-11-23T09:35:07-05:00",
-   "type": "close",
-   "agent": "meanrev",
-   "symbol": "AMGN",
-   "qty": 0.2238,
-   "entry": 446.93,
-   "exit": 443.458,
-   "pnl": -0.77,
-   "note": "snap-back (RSI2 63)",
-   "opened": "2026-11-18T11:38:27-05:00",
-   "confidence": 2,
-   "thesis": "AMGN RSI(2) 1.1 washout 16.9% above its 200-day in a calm regime (crash radar 38); live reward-to-risk is 0.80:1 (446.70 to 459.90 target vs 430.25 stop), exactly at my 0.8:1 floor, so I'm taking a small starter."
-  },
-  {
-   "time": "2026-11-23T07:40:37-05:00",
-   "type": "plan",
-   "agent": "scalper",
-   "note": "Pre-market call: keep. Nothing new has improved the setup. Crash radar is at 46 (warning), 18 of 19 scan names are red, and the Technology and AI-chip selloff is still running on headline news. The IWM VWAP plan already requires a non-selloff open, so it stays conditional and I'm not adding exposure.",
-   "symbol": "IWM"
-  },
-  {
-   "time": "2026-11-23T07:40:28-05:00",
-   "type": "plan",
-   "agent": "meanrev",
-   "note": "Pre-market call: revise. RSP closed at 207.59, through its 207.60 stop, so the hold is void and it exits at the open. PM's sub-1:1 setup (about 0.9:1) fails my own rule against sub-1:1 entries at low conviction, and Consumer Staples is -5.20 for me, so I'm dropping it. SCHD still triggers at 33.94 with about 1.16:1 (stop 33.20, target 34.80), so I'm keeping it as a small starter.",
-   "symbol": "SCHD"
-  },
-  {
-   "time": "2026-11-23T07:40:17-05:00",
-   "type": "plan",
-   "agent": "trend",
-   "note": "Pre-market call: revise. The fresh scan confirms NFLX broke down through 58.19 today, but this is only the first breakdown day, so the plan still requires a second close. IBN's scan label conflicts with its negative distance, and DIS is missing from today's scan, so its level is unverified; both stay conditional. The lean-in on Communication Services is still backed mainly by scan clustering rather than my own record (one",
-   "symbol": "NFLX, IBN, XLC"
-  },
-  {
-   "time": "2026-11-22T22:47:16-05:00",
-   "type": "plan",
-   "agent": "scalper",
-   "note": "Evening check-in: keep. Nothing new changes the thesis. Tech and AI-chip names sold off hard on Friday, but the only fresh news is unconfirmed (Broadcom) or minor (NVIDIA product launch), and crash radar is still in the warning tier at 46. The IWM setup is small, conditional, and only fires on a non-selloff open, so it's the right size for an unproven edge.",
-   "symbol": "IWM"
-  },
-  {
-   "time": "2026-11-22T22:47:08-05:00",
-   "type": "plan",
-   "agent": "meanrev",
-   "note": "Evening check-in: revise. RSP closed at 207.59, below its 207.60 stop, and the book is 4 of 10 Financials with the sector lean-in now adding concentration risk.",
-   "symbol": "SCHD, PM"
-  },
-  {
-   "time": "2026-11-22T22:47:08-05:00",
-   "type": "focus",
-   "agent": "meanrev",
-   "note": "Leaning into no sector; avoiding Technology. Financials is 2-for-2 for +8.21 on a tiny sample, but it now makes up 4 of 10 positions, so lean-in is dropped until the book diversifies; Technology stays avoided at 1-for-3 for -14.20."
-  },
-  {
-   "time": "2026-11-22T22:46:40-05:00",
-   "type": "plan",
-   "agent": "trend",
-   "note": "Evening check-in: revise. The plan's triggers still hold, but the strategy params now require 3.0x relative volume while the plan says 2.5x, and my scorecard (44% hit rate, -0.23% average pick move) doesn't support loosening the bar. SPY is below its 50- and 200-day averages with crash radar at 46, so I'm tightening confirmation to 3.0x and keeping the Communication Services lean-in small. The fresh scan also no longer sho",
-   "symbol": "IBN, NFLX, DIS"
-  },
-  {
-   "time": "2026-11-22T22:46:40-05:00",
-   "type": "focus",
-   "agent": "trend",
-   "note": "Leaning into Communication Services; avoiding Financials, Industrials, Broad market / other, Energy, Consumer Discretionary, Consumer Staples, Technology. Communication Services has the scan's clearest cluster of setups that fit the ATR and budget limits, but my record there is one losing trade (-$3.12), so sizing stays small. Financials and Industrials have many scan breakdowns but ATR too large for the budget and negative or untested results. The ot"
   }
  ],
  "reviews": [
@@ -4039,40 +4103,40 @@
  ],
  "radar": {
   "now": {
-   "score": 47,
+   "score": 49,
    "tier": "warning",
-   "market_score": 60,
-   "economy_score": 10,
+   "market_score": 61,
+   "economy_score": 12,
    "parts": {
     "trend": 75,
-    "drawdown": 49,
-    "volatility": 62,
-    "breadth": 63,
-    "credit": 63,
-    "safety": 40,
-    "economy": 10
+    "drawdown": 58,
+    "volatility": 84,
+    "breadth": 70,
+    "credit": 61,
+    "safety": 10,
+    "economy": 12
    },
    "facts": {
-    "spy_vs_sma50_pct": -4.8,
-    "spy_vs_sma200_pct": -1.2,
-    "spy_off_high_pct": 7.4,
-    "spy_iv_pct": 21.9,
-    "spy_realized_vol_pct": 26.2,
-    "pct_above_50d": 40.0,
-    "breadth_sample": 503,
-    "junk_vs_treasuries_20d_pct": -1.52,
-    "havens_vs_spy_20d_pct": 3.2
+    "spy_vs_sma50_pct": -6.0,
+    "spy_vs_sma200_pct": -2.6,
+    "spy_off_high_pct": 8.7,
+    "spy_iv_pct": 21.6,
+    "spy_realized_vol_pct": 31.4,
+    "pct_above_50d": 37.2,
+    "breadth_sample": 511,
+    "junk_vs_treasuries_20d_pct": -1.45,
+    "havens_vs_spy_20d_pct": 0.8
    },
    "economy": {
     "status": "on",
-    "as_of": "2026-11-23",
+    "as_of": "2026-11-24",
     "yield_curve_10y_2y": 0.29,
     "jobless_claims_4wk": 197750,
     "claims_vs_1yr_low_pct": 1.3,
-    "junk_bond_spread_pct": 3.52,
+    "junk_bond_spread_pct": 3.76,
     "sahm_indicator": 0.0
    },
-   "at": "2026-11-23T15:35-05:00"
+   "at": "2026-11-24T09:35-05:00"
   },
   "history": [
    {
@@ -4222,7 +4286,12 @@
    },
    {
     "date": "2026-11-23",
-    "score": 47,
+    "score": 48,
+    "tier": "warning"
+   },
+   {
+    "date": "2026-11-24",
+    "score": 49,
     "tier": "warning"
    }
   ],
@@ -4237,22 +4306,23 @@
   }
  },
  "compliance_today": {
-  "approved": 0,
-  "denied": 1,
-  "last_denied": "already holding TLT"
+  "approved": 1,
+  "denied": 0,
+  "last_denied": null
  },
  "playbooks": {
   "scalper": {
-   "date": "2026-11-23",
-   "made_at": "2026-11-23T15:38-05:00",
+   "date": "2026-11-24",
+   "made_at": "2026-11-24T09:38-05:00",
    "watch": [
     "IWM",
-    "SPY"
+    "SPY",
+    "XLF"
    ],
    "aggression": "stand_down",
-   "why": "With flatten at 3:50 and only about 12 minutes left, a new scalp can't play out within the time limit, so I'm standing down. SPY is still down on the regime, and crash radar is at 47, so I'm keeping IWM and SPY on watch only for the next session under the overnight VWAP-reclaim conditions.",
-   "slices": 1,
-   "target_pct": 0.5,
+   "why": "Most scan names are red (about 20 of 30) with SPY down 2.6% vs its 200-day SMA, a 20-day ROC of -5.6%, and crash radar at 49 (warning). The overnight IWM trigger requires fewer than half the names red, so it fails and no new trades should be taken. I'm keeping IWM, SPY, and XLF on watch in case brea",
+   "slices": 4,
+   "target_pct": 0.4,
    "stop_pct": 0.3,
    "max_hold_min": 45
   },
@@ -4452,18 +4522,25 @@
     "avg_pnl": 0.15
    },
    "Health Care": {
-    "trades": 2,
+    "trades": 3,
     "wins": 0,
-    "pnl": -3.55,
+    "pnl": -4.63,
     "win_rate_pct": 0,
-    "avg_pnl": -1.77
+    "avg_pnl": -1.54
    },
    "Consumer Staples": {
-    "trades": 3,
+    "trades": 5,
     "wins": 2,
-    "pnl": -5.2,
+    "pnl": -7.77,
+    "win_rate_pct": 40,
+    "avg_pnl": -1.55
+   },
+   "Broad market / other": {
+    "trades": 9,
+    "wins": 6,
+    "pnl": -13.44,
     "win_rate_pct": 67,
-    "avg_pnl": -1.73
+    "avg_pnl": -1.49
    },
    "Technology": {
     "trades": 3,
@@ -4471,13 +4548,6 @@
     "pnl": -14.2,
     "win_rate_pct": 33,
     "avg_pnl": -4.73
-   },
-   "Broad market / other": {
-    "trades": 8,
-    "wins": 5,
-    "pnl": -15.25,
-    "win_rate_pct": 62,
-    "avg_pnl": -1.91
    }
   },
   "volsell": {
@@ -4675,10 +4745,8 @@
   }
  },
  "universe": {
-  "built": "2026-11-17T07:40-05:00",
-  "pool_size": 7399,
+  "built": "2026-11-24T07:40-05:00",
+  "pool_size": 7405,
   "core_size": 500
- },
- "recap_updated": "2026-11-23T16:40-05:00",
- "plans_updated": "2026-11-24T07:40-05:00"
+ }
 }

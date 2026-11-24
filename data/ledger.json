@@ -23847,5 +23847,103 @@
     "conviction": 1
    }
   ]
+ },
+ {
+  "time": "2026-11-24T09:35:08-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-c4618673be",
+  "symbol": "ACN",
+  "underlying": "ACN",
+  "sector": "Consumer Staples",
+  "instrument": "stock",
+  "entry": 230.9,
+  "exit": 225.434,
+  "pnl": -2.36,
+  "return_pct": -2.4,
+  "opened": "2026-11-18T13:08:32-05:00",
+  "why_entered": "ACN RSI(2) 1.0 washout 21.6% above its 200-day in a calm regime (crash radar 37); live reward-to-risk is 0.81:1 (231.20 to 243.73 target vs 215.73 stop), just clearing my 0.8:1 floor, so I'm taking a small starter.",
+  "why_exited": "snap-back (RSI2 69)"
+ },
+ {
+  "time": "2026-11-24T09:35:08-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-7c659f7cde",
+  "symbol": "NVS",
+  "underlying": "NVS",
+  "sector": "Health Care",
+  "instrument": "stock",
+  "entry": 154.94,
+  "exit": 153.266,
+  "pnl": -1.08,
+  "return_pct": -1.1,
+  "opened": "2026-11-18T14:38:29-05:00",
+  "why_entered": "NVS RSI(2) 1.1 washout only 1.6% above its 200-day; live target 159.03 vs stop 150.25 from 155.07 is about 0.82:1, just clearing my 0.8:1 floor, so I'm taking a starter size.",
+  "why_exited": "snap-back (RSI2 66)"
+ },
+ {
+  "time": "2026-11-24T09:35:09-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-a2d196d244",
+  "symbol": "SAP",
+  "underlying": "SAP",
+  "sector": "Consumer Staples",
+  "instrument": "stock",
+  "entry": 206.29,
+  "exit": 205.42,
+  "pnl": -0.21,
+  "return_pct": -0.4,
+  "opened": "2026-11-19T09:38:10-05:00",
+  "why_entered": "SAP RSI(2) 0.6 washout 7.5% above its 200-day, a new-day re-entry under the game-plan trigger (at or below 210.61); live reward-to-risk is about 1.6:1 (206.69 to 221.71 target vs 197.36 stop), so this is a starter size.",
+  "why_exited": "snap-back (RSI2 58)"
+ },
+ {
+  "time": "2026-11-24T09:35:09-05:00",
+  "type": "trade_closed",
+  "agent": "meanrev",
+  "position_id": "pos-af5c8c31d9",
+  "symbol": "UTHR",
+  "underlying": "UTHR",
+  "sector": "Broad market / other",
+  "instrument": "stock",
+  "entry": 554.12,
+  "exit": 565.258,
+  "pnl": 1.81,
+  "return_pct": 2.0,
+  "opened": "2026-11-20T11:08:06-05:00",
+  "why_entered": "UTHR RSI(2) 0.7 washout 2.4% above its 200-day, now at 552.55 and under the game-plan trigger of 562; stop 529.38 to target 572.17 is about 0.85:1, clearing the 0.8:1 floor. The stop is 4.2% away, so risk is about $3.80 on a $90 starter.",
+  "why_exited": "snap-back (RSI2 77)"
+ },
+ {
+  "time": "2026-11-24T09:38:25-05:00",
+  "type": "trade_opened",
+  "agent": "monkey",
+  "position_id": "pos-e7834830d1",
+  "symbol": "FISV",
+  "underlying": "FISV",
+  "sector": "Financials",
+  "instrument": "stock",
+  "qty": 3.3815,
+  "price": 57.98,
+  "cost": 196.06,
+  "stop": 52.7,
+  "why": "Dart landed on FISV",
+  "confidence": 0,
+  "signals": {},
+  "from_plan": false
+ },
+ {
+  "time": "2026-11-24T09:38:28-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "watch": [
+   "IWM",
+   "SPY",
+   "XLF"
+  ],
+  "aggression": "stand_down",
+  "why": "Most scan names are red (about 20 of 30) with SPY down 2.6% vs its 200-day SMA, a 20-day ROC of -5.6%, and crash radar at 49 (warning). The overnight IWM trigger requires fewer than half the names red, so it fails and no new trades should be taken. I'm keeping IWM, SPY, and XLF on watch in case brea"
  }
 ]

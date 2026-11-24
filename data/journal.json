@@ -1,101 +1,5 @@
 [
  {
-  "time": "2026-11-10T10:29:50-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "GOOGL",
-  "qty": 0.8595,
-  "entry": 291.384,
-  "exit": 290.106,
-  "pnl": -1.09,
-  "note": "stop (-0.45%)",
-  "opened": "2026-11-10T10:21:45-05:00",
-  "confidence": 3,
-  "thesis": "opening-range breakout on GOOGL: 1.56x volume, +0.62% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
-  "time": "2026-11-10T10:31:53-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "META",
-  "instrument": "stock",
-  "qty": 0.3888,
-  "price": 644.26,
-  "cost": 250.49,
-  "stop": 642.23,
-  "thesis": "opening-range breakout on META: 1.72x volume, +0.24% vs VWAP; target +0.5%, stop -0.3%",
-  "confidence": 3
- },
- {
-  "time": "2026-11-10T10:36:17-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-54%)"
- },
- {
-  "time": "2026-11-10T10:37:42-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-91%) (tried 0.24, 0.16, 0.09, 0.01; mark 0.29, natural -0.75)"
- },
- {
-  "time": "2026-11-10T10:38:03-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.46)"
- },
- {
-  "time": "2026-11-10T10:38:16-05:00",
-  "type": "open",
-  "agent": "trend",
-  "symbol": "TLS",
-  "instrument": "stock",
-  "qty": 16.2711,
-  "price": 7.36,
-  "cost": 119.76,
-  "stop": 6.53,
-  "thesis": "TLS trades at 7.375, about 2.6% above its 55-day breakout at 7.19, on 3.49x relative volume, so the 2.5x confirmation is met; the 6.53 stop (2 ATR) risks about $14 on roughly 17 shares.",
-  "confidence": 3
- },
- {
-  "time": "2026-11-10T10:38:29-05:00",
-  "type": "close",
-  "agent": "volsell",
-  "symbol": "TLT",
-  "qty": 1,
-  "entry": 0.16,
-  "exit": 0.32,
-  "pnl": -21.5,
-  "note": "agent: Mark 0.35 is above the 0.32 stop (2x the 0.16 credit). The Fed-hawkish rate risk the game plan flagged is playing out, s",
-  "opened": "2026-11-06T12:06:53-05:00",
-  "confidence": 3,
-  "thesis": "TLT IV 13.8% vs realized 10.8% (1.27x) with SPY trend up and crash radar at 42 (warning but not stress); the 80/79 bull put collects 0.16 against $84 max loss over 35 DTE, and TLT is no longer open after the 12:06 close, so this is a fresh signal rather than a duplicate."
- },
- {
-  "time": "2026-11-10T10:38:37-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "META, MSFT, GOOGL, AVGO, SPY",
-  "note": "defensive: Most tech names are trading below VWAP with down 1-minute trends, so I'm cutting to defensive size and keeping only the cleanest names. META and MSFT have open scalps, and the 1.5x relative-volume and SPY-above-open gates from the overnight plan still apply."
- },
- {
-  "time": "2026-11-10T10:44:43-05:00",
-  "type": "close",
-  "agent": "scalper",
-  "symbol": "META",
-  "qty": 0.3888,
-  "entry": 644.26,
-  "exit": 641.972,
-  "pnl": -0.89,
-  "note": "stop (-0.33%)",
-  "opened": "2026-11-10T10:31:53-05:00",
-  "confidence": 3,
-  "thesis": "opening-range breakout on META: 1.72x volume, +0.24% vs VWAP; target +0.5%, stop -0.3%"
- },
- {
   "time": "2026-11-10T10:48:46-05:00",
   "type": "close",
   "agent": "scalper",
@@ -6071,5 +5975,102 @@
   "agent": "scalper",
   "note": "Pre-market call: revise. The fresh scan has no Industrials names, and IWM is tagged Consumer Discretionary here, which is a negative sector for us, so the Industrials-based setup no longer matches the data. The day's leaders are Technology headline spikes (NVDA +31%, MU +19%) that our record says we shouldn't chase, and the crash radar is in warning at 48 with breadth at 39% above the 50-day. I'm keeping the plan small an",
   "symbol": "IWM"
+ },
+ {
+  "time": "2026-11-24T09:35:08-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "ACN",
+  "qty": 0.4325,
+  "entry": 230.9,
+  "exit": 225.434,
+  "pnl": -2.36,
+  "note": "snap-back (RSI2 69)",
+  "opened": "2026-11-18T13:08:32-05:00",
+  "confidence": 2,
+  "thesis": "ACN RSI(2) 1.0 washout 21.6% above its 200-day in a calm regime (crash radar 37); live reward-to-risk is 0.81:1 (231.20 to 243.73 target vs 215.73 stop), just clearing my 0.8:1 floor, so I'm taking a small starter."
+ },
+ {
+  "time": "2026-11-24T09:35:08-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "NVS",
+  "qty": 0.6448,
+  "entry": 154.94,
+  "exit": 153.266,
+  "pnl": -1.08,
+  "note": "snap-back (RSI2 66)",
+  "opened": "2026-11-18T14:38:29-05:00",
+  "confidence": 2,
+  "thesis": "NVS RSI(2) 1.1 washout only 1.6% above its 200-day; live target 159.03 vs stop 150.25 from 155.07 is about 0.82:1, just clearing my 0.8:1 floor, so I'm taking a starter size."
+ },
+ {
+  "time": "2026-11-24T09:35:09-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "SAP",
+  "qty": 0.2419,
+  "entry": 206.29,
+  "exit": 205.42,
+  "pnl": -0.21,
+  "note": "snap-back (RSI2 58)",
+  "opened": "2026-11-19T09:38:10-05:00",
+  "confidence": 2,
+  "thesis": "SAP RSI(2) 0.6 washout 7.5% above its 200-day, a new-day re-entry under the game-plan trigger (at or below 210.61); live reward-to-risk is about 1.6:1 (206.69 to 221.71 target vs 197.36 stop), so this is a starter size."
+ },
+ {
+  "time": "2026-11-24T09:35:09-05:00",
+  "type": "close",
+  "agent": "meanrev",
+  "symbol": "UTHR",
+  "qty": 0.1628,
+  "entry": 554.12,
+  "exit": 565.258,
+  "pnl": 1.81,
+  "note": "snap-back (RSI2 77)",
+  "opened": "2026-11-20T11:08:06-05:00",
+  "confidence": 2,
+  "thesis": "UTHR RSI(2) 0.7 washout 2.4% above its 200-day, now at 552.55 and under the game-plan trigger of 562; stop 529.38 to target 572.17 is about 0.85:1, clearing the 0.8:1 floor. The stop is 4.2% away, so risk is about $3.80 on a $90 starter."
+ },
+ {
+  "time": "2026-11-24T09:35:30-05:00",
+  "type": "exit_unfilled",
+  "agent": "meanrev",
+  "symbol": "PYPL",
+  "note": "snap-back (RSI2 59)"
+ },
+ {
+  "time": "2026-11-24T09:36:53-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-71%) (tried 0.92, 0.61, 0.31, 0.01; mark 0.97, natural -1.42)"
+ },
+ {
+  "time": "2026-11-24T09:38:15-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-96%) (tried 0.10, 0.07, 0.04, 0.01; mark 0.15, natural -3.75)"
+ },
+ {
+  "time": "2026-11-24T09:38:25-05:00",
+  "type": "open",
+  "agent": "monkey",
+  "symbol": "FISV",
+  "instrument": "stock",
+  "qty": 3.3815,
+  "price": 57.98,
+  "cost": 196.06,
+  "stop": 52.7,
+  "thesis": "Dart landed on FISV",
+  "confidence": 0
+ },
+ {
+  "time": "2026-11-24T09:38:28-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "IWM, SPY, XLF",
+  "note": "stand_down: Most scan names are red (about 20 of 30) with SPY down 2.6% vs its 200-day SMA, a 20-day ROC of -5.6%, and crash radar at 49 (warning). The overnight IWM trigger requires fewer than half the names red, so it fails and no new trades should be taken. I'm keeping IWM, SPY, and XLF on watch in case brea"
  }
 ]
