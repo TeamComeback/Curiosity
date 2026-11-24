@@ -29,7 +29,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.59,
-     "mark": 0.53,
+     "mark": 0.51,
      "expiry": "2026-12-24",
      "strike": 9.5,
      "delta": -0.5,
@@ -48,7 +48,7 @@
      },
      "sector": "Materials",
      "low_water": 9.375,
-     "exit_half_spread": 0.055
+     "exit_half_spread": 0.03
     }
    },
    "status": "active",
@@ -57,12 +57,8 @@
    "closed": 27,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.5412,
+   "max_dd": 0.542,
    "notes": [
-    {
-     "date": "2026-11-18",
-     "note": "No entries: all four candidates are puts in avoid-listed sectors (Technology, Consumer Discretionary, Broad market) or a sub-$0.30 collapse, and no IBN/EW/NFLX/SE trigger has fired. Hold TGT to its 158.63 stop and CLSX to its 2.98 underlying stop; keep settled cash for game-plan closes."
-    },
     {
      "date": "2026-11-18",
      "note": "No new entries: FNGR is a sub-$0.30 collapse in an avoid-listed sector, COPX is Technology (avoid), and no game-plan trigger (IBN, EW, NFLX, SE) has fired. Hold TGT to its 158.63 stop and CLSX to its 2.98 underlying stop, and keep cash settled for triggers."
@@ -218,6 +214,10 @@
     {
      "date": "2026-11-24",
      "note": "Holding the VALE put (pos-3f3300706c) under its 10.12 underlying stop. The only candidate duplicates it, so I'm keeping $563 settled cash for a Communication Services trigger: IBN close above 36.17, DIS above 123.34, or NFLX second close below 56.56, each at 3x volume."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "No trade: the only candidate is FNGR, a sub-penny short in the avoided broad-market sector with a stop at 0.05 against a 0.0213 price, which is too wide to size. Holding the VALE put under its 10.12 underlying stop and keeping $563 settled cash for a Trend Co. breakout or breakdown in an uptrending "
     }
    ],
    "last_exits": {
@@ -1253,10 +1253,6 @@
    "max_dd": 0.0633,
    "notes": [
     {
-     "date": "2026-11-19",
-     "note": "Pass: $34.61 settled cash across nine open starters, SPY below its 200-day, crash radar 42. BLK (about 0.96:1 live) and BNY (about 0.95:1) clear the 0.8:1 floor, but a $30 add would overlap existing Financials exposure (MCO, RSP, TRV, SPGI) and barely move equity. Hold all stops and targets, and re-"
-    },
-    {
      "date": "2026-11-20",
      "note": "Pass: PYPL (1.2:1) is the only clean candidate, but it is Financials, and the sector plan bars new Financials adds beyond the game-plan watchlist. XYZ, GWW and SHEL fail the 0.8:1 floor, and SAP is already held. MRK and UTHR aren't in today's candidate list, so they can't be entered. Hold existing s"
     },
@@ -1411,6 +1407,10 @@
     {
      "date": "2026-11-24",
      "note": "No trade: MDT's reward-to-risk is about 0.63:1 (3.02 to the 99.77 target vs 4.76 to the 91.99 stop), below the 0.8:1 floor. BJ is not a live candidate, so its trigger can't be verified. Positions are empty, so the stale game-plan holds are void. Keep the cash."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "No trade: MDT's reward-to-risk is about 0.76:1 (3.63 to the 99.62 target vs 4.76 to the 91.24 stop), below the 0.8:1 floor. BJ is not in today's candidates, so its game-plan trigger can't be verified. Positions are empty, so the stale holds are void. Keep the cash."
     }
    ],
    "last_exits": {
@@ -2141,7 +2141,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.2,
-     "mark": 0.24,
+     "mark": 0.21,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 80.0,
@@ -2163,7 +2163,7 @@
       "dte": 30
      },
      "sector": "Consumer Staples",
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.01
     }
    },
    "status": "active",
@@ -2174,10 +2174,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "Passing on the only candidate: it duplicates the open TLT 78/77 bull put, which has stopped out repeatedly. Next trade must be a different underlying with IV/RV at or above 1.15, a stop defined before entry, and crash radar below 40."
-    },
     {
      "date": "2026-11-20",
      "note": "Passing on TLT 78.5/77.5 again: it duplicates the open TLT 78/77 bull put, TLT has stopped out repeatedly, and Real Estate is on my avoid list. Next trade needs a different underlying with IV/RV of at least 1.15, a stop set before entry, and crash radar below 40."
@@ -2333,6 +2329,10 @@
     {
      "date": "2026-11-24",
      "note": "Passing on TLT 79.5/78.5 again: it stacks a second same-expiry TLT bull put on the open position, and crash radar is 48 (warning) with SPY below its 200-day. Hold the open spread under default exits and wait for a non-duplicate rich-vol setup or crash radar below 40."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "Passing on the TLT 79.5/78.5 bull put: it would stack a second same-expiry TLT spread on the open 78/77 position, which is the same directional bet on one name. Crash radar is 47 with SPY below its 200-day. Wait for a non-duplicate rich-vol setup on a different underlying."
     }
    ],
    "last_exits": {
@@ -2836,7 +2836,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 717.22
+     "last": 717.89
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2852,7 +2852,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 717.22
+     "last": 717.89
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2868,7 +2868,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 717.22
+     "last": 717.89
     }
    },
    "status": "active",
@@ -2901,7 +2901,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 109.25
+     "last": 109.145
     },
     "pos-e7834830d1": {
      "kind": "stock",
@@ -2918,7 +2918,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 58.01
+     "last": 58.415
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2935,7 +2935,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 155.875
+     "last": 154.225
     },
     "pos-c426d20c19": {
      "kind": "stock",
@@ -2952,7 +2952,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 90.16
+     "last": 90.33
     }
    },
    "status": "active",
@@ -3004,7 +3004,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 0.91,
+     "mark": 0.92,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -3024,7 +3024,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.325,
+     "exit_half_spread": 2.355,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -3049,7 +3049,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.03,
+     "mark": 0.12,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3069,7 +3069,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.885,
+     "exit_half_spread": 3.86,
      "peak_mark": 1.09
     }
    },
@@ -3642,14 +3642,14 @@
    ],
    "playbook": {
     "date": "2026-11-24",
-    "made_at": "2026-11-24T14:07-05:00",
+    "made_at": "2026-11-24T14:38-05:00",
     "watch": [
      "IWM",
      "XLV",
      "XLP"
     ],
     "aggression": "stand_down",
-    "why": "Breadth is still weak: 19 of 30 scan names are red, so the IWM exception's fewer-than-half-red condition isn't met. SPY is below its 200-day and the crash radar is at warning (48), so I'm keeping no new trades and watching IWM, XLV and XLP for a breadth turn.",
+    "why": "Regime is still bearish: SPY is 2% below its 200-day, 20-day rate of change is -5.6%, and the crash radar is at warning (47). Most scan names are red with about 70 minutes left, so I'm keeping no new trades and watching IWM, XLV and XLP for a breadth turn.",
     "slices": 4,
     "target_pct": 0.4,
     "stop_pct": 0.3,
