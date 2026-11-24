@@ -1,32 +1,5 @@
 [
  {
-  "time": "2026-11-10T14:39:18-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-91%) (tried 0.26, 0.17, 0.09, 0.01; mark 0.31, natural -0.97)"
- },
- {
-  "time": "2026-11-10T14:39:40-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.17)"
- },
- {
-  "time": "2026-11-10T14:40:41-05:00",
-  "type": "open",
-  "agent": "volsell",
-  "symbol": "TLT",
-  "instrument": "spread",
-  "qty": 1,
-  "price": 0.22,
-  "cost": -20.0,
-  "stop": 0,
-  "thesis": "TLT IV/RV is 1.26 with SPY trend up and crash radar calm at 38, so the 79.5/78.5 bull put is a rich-vol setup; one contract at the 0.15 credit floor limits risk to $76 while I test the edge at small size despite hawkish-Fed rate risk.",
-  "confidence": 2
- },
- {
   "time": "2026-11-10T15:06:12-05:00",
   "type": "exit_unfilled",
   "agent": "trend",
@@ -6115,5 +6088,26 @@
   "opened": "2026-11-24T12:11:15-05:00",
   "confidence": 3,
   "thesis": "VWAP pullback bounce on SPY: 1.88x volume, +0.31% vs VWAP; target +0.4%, stop -0.3%"
+ },
+ {
+  "time": "2026-11-24T13:06:29-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-70%) (tried 0.93, 0.62, 0.31, 0.01; mark 0.98, natural -1.42)"
+ },
+ {
+  "time": "2026-11-24T13:07:53-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.05, 0.04, 0.02, 0.01; mark 0.10, natural -3.78)"
+ },
+ {
+  "time": "2026-11-24T13:08:08-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "IWM, XLV, XLP",
+  "note": "stand_down: Crash radar is at warning (47), SPY is down on the 1-minute trend and 1.9% below its 200-day, and most scan names are red, which fails the overnight IWM breadth condition, so no new trades. IWM, XLV and XLP are kept on watch in case breadth improves later."
  }
 ]

@@ -29,7 +29,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.59,
-     "mark": 0.55,
+     "mark": 0.52,
      "expiry": "2026-12-24",
      "strike": 9.5,
      "delta": -0.5,
@@ -48,7 +48,7 @@
      },
      "sector": "Materials",
      "low_water": 9.42,
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.055
     }
    },
    "status": "active",
@@ -57,12 +57,8 @@
    "closed": 27,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.539,
+   "max_dd": 0.5412,
    "notes": [
-    {
-     "date": "2026-11-18",
-     "note": "No new entries: all short candidates are in avoid-listed sectors or are sub-$0.30 collapses, and the game-plan triggers (IBN, EW, NFLX, SE) haven't fired. Keep TGT to its 158.63 stop and CLSX to its 2.98 underlying stop, and hold settled cash for triggers."
-    },
     {
      "date": "2026-11-18",
      "note": "No entries: scan candidates are avoid-listed sectors (Technology, Consumer Discretionary, Broad market) or sub-$0.30 collapses, and no game-plan trigger has fired. Hold TGT to its 158.63 stop and CLSX to its 2.98 underlying stop; keep cash settled for IBN/EW/NFLX/SE triggers."
@@ -218,6 +214,10 @@
     {
      "date": "2026-11-24",
      "note": "Passing on the VALE put candidate because the same breakdown is already held as pos-3f3300706c. Keep the existing put under its 10.12 stop and wait for the Communication Services triggers (IBN >36.17, DIS >123.34, NFLX second close <56.56) with settled cash."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "No new trade: the only candidate is VALE, which duplicates the open VALE put. Holding that put under its 10.12 stop and keeping $563 settled cash for a Communication Services trigger (IBN >36.17, DIS >123.34, NFLX second close <56.56) at 3x volume."
     }
    ],
    "last_exits": {
@@ -1254,10 +1254,6 @@
    "notes": [
     {
      "date": "2026-11-19",
-     "note": "Pass: $34.61 settled cash across nine open starters, SPY below its 200-day, crash radar 41. BNY's live ratio is about 0.91:1 (145.71 to 149.67 target vs 141.35 stop), so the 0.80 in my notes is stale, but a $30 add would overlap Financials and barely move equity. Hold existing stops and targets, and"
-    },
-    {
-     "date": "2026-11-19",
      "note": "Pass: $34.61 settled cash across nine open starters, SPY below its 200-day, crash radar 41. BNY (about 0.84:1 live) and BLK (about 0.83:1) clear the 0.8:1 floor only barely, and a $30 add would overlap Financials and barely move equity. MRK is not in today's candidate list, so it can't be entered. H"
     },
     {
@@ -1411,6 +1407,10 @@
     {
      "date": "2026-11-24",
      "note": "No trade: MPC, VLO and PSX are Energy, a sector I avoid, and all fail the 0.8:1 reward-to-risk floor (about 0.29, 0.26 and 0.19 on the 2x-ATR stops). BJ is not a live candidate, so its trigger can't be verified. Positions are empty, so the game plan's holds are stale. Keep the cash."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "No trade: MDT's reward-to-risk is about 0.60:1 (96.93 to the 99.80 target vs the 92.17 stop), below the 0.8:1 floor. BJ is not a live candidate, so its trigger can't be verified. Keep the cash."
     }
    ],
    "last_exits": {
@@ -2141,7 +2141,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.2,
-     "mark": 0.26,
+     "mark": 0.22,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 80.0,
@@ -2163,7 +2163,7 @@
       "dte": 30
      },
      "sector": "Consumer Staples",
-     "exit_half_spread": 0.03
+     "exit_half_spread": 0.04
     }
    },
    "status": "active",
@@ -2174,10 +2174,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "Holding the TLT 78/77 bull put and skipping the duplicate TLT candidate to avoid doubling risk on an underlying that has stopped out repeatedly. Next trade must be a different underlying with IV/RV at or above 1.15, a defined stop set before entry, and crash radar below 40."
-    },
     {
      "date": "2026-11-19",
      "note": "Passed on the only candidate because it duplicates the open TLT 78/77 bull put, which has stopped out repeatedly with crash radar at 41. Next trade needs a different underlying at IV/RV of at least 1.15 with a stop defined before entry."
@@ -2333,6 +2329,10 @@
     {
      "date": "2026-11-24",
      "note": "Passing on the TLT 79.5/78.5 bull put: it would stack a second same-expiry TLT spread on the open 80/79, crash radar is 47 with SPY below its 200-day, and I'm holding a single contract under the 80.0 underlying stop and default exits."
+    },
+    {
+     "date": "2026-11-24",
+     "note": "Passed on the TLT 79.5/78.5 bull put again: it duplicates the open TLT spread at the same expiry, crash radar is 47 (warning) with SPY below its 200-day. Hold the current position under default exits and look for a non-duplicate rich-vol setup on another underlying once crash radar is below 40."
     }
    ],
    "last_exits": {
@@ -2836,7 +2836,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 718.49
+     "last": 718.81
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2852,7 +2852,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 718.49
+     "last": 718.81
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2868,7 +2868,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 718.49
+     "last": 718.81
     }
    },
    "status": "active",
@@ -2901,7 +2901,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 109.75
+     "last": 109.845
     },
     "pos-e7834830d1": {
      "kind": "stock",
@@ -2918,7 +2918,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 58.5
+     "last": 58.475
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2935,7 +2935,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 156.075
+     "last": 156.11
     },
     "pos-c426d20c19": {
      "kind": "stock",
@@ -2952,7 +2952,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 89.06
+     "last": 88.47
     }
    },
    "status": "active",
@@ -3049,7 +3049,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.03,
+     "mark": 0.1,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3642,15 +3642,14 @@
    ],
    "playbook": {
     "date": "2026-11-24",
-    "made_at": "2026-11-24T12:37-05:00",
+    "made_at": "2026-11-24T13:08-05:00",
     "watch": [
-     "XLV",
-     "XLP",
      "IWM",
-     "SPY"
+     "XLV",
+     "XLP"
     ],
-    "aggression": "defensive",
-    "why": "Regime is still a warning (crash radar 47, SPY 1.8% below its 200-day, breadth mixed), so I'm keeping defensive: VWAP bounces only at half size in names holding above their opening ranges and VWAP. The open SPY scalp stays under its existing stop and target, and the tech-heavy names are excluded per",
+    "aggression": "stand_down",
+    "why": "Crash radar is at warning (47), SPY is down on the 1-minute trend and 1.9% below its 200-day, and most scan names are red, which fails the overnight IWM breadth condition, so no new trades. IWM, XLV and XLP are kept on watch in case breadth improves later.",
     "slices": 4,
     "target_pct": 0.4,
     "stop_pct": 0.3,
