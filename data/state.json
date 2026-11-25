@@ -24,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.59,
-     "mark": 1.28,
+     "mark": 1.24,
      "expiry": "2026-12-24",
      "strike": 9.5,
      "delta": -0.5,
@@ -43,7 +43,7 @@
      },
      "sector": "Materials",
      "low_water": 9.275,
-     "exit_half_spread": 1.28
+     "exit_half_spread": 1.24
     }
    },
    "status": "active",
@@ -54,10 +54,6 @@
    "peak": 1340.54,
    "max_dd": 0.542,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "No entries: the three scan candidates (JMIA, IREN, COPX) are in avoid-listed sectors with stops 25-35% away, and no Communication Services trigger (IBN, DIS, NFLX, SE) has fired. Keep settled cash for those triggers."
-    },
     {
      "date": "2026-11-19",
      "note": "No entries: JMIA and IREN are in avoid-listed sectors with stops 30%+ away, and no Communication Services trigger (IBN, DIS, NFLX, SE) has fired. Keep settled cash for those triggers."
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-25",
      "note": "Passed on all six breakdowns again. GLDM and IAU are the only clean tight-stop setups, but they are gold ETFs and my gold put lost on a rebound. Keep the VALE put under its 10.12 stop and wait for a Communication Services breakout at 3x+ volume."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "Passed on all four breakdowns: SOXL, LOOP, SNXX, and GLDM sit in avoid-list sectors or have stops too wide to size. GLDM's breakdown is marginal (69.265 vs. 69.28 level) and our last gold put lost. Holding the VALE put under its 10.12 underlying stop and waiting for a Communication Services trigger "
     }
    ],
    "last_exits": {
@@ -1249,10 +1249,6 @@
    "notes": [
     {
      "date": "2026-11-20",
-     "note": "Pass at 14:08: BLK and BNY clear 0.8:1 (about 0.96 and 0.94) but are Financials adds off the watchlist in an over-concentrated sector, and MRK isn't a candidate today. Hold the ten stock positions to stops and targets and keep the $76.94 settled cash for a clean setup."
-    },
-    {
-     "date": "2026-11-20",
      "note": "Pass at 14:37: BLK and BNY clear 0.8:1 but are Financials adds off the watchlist in an over-concentrated sector, and MRK isn't a candidate today. Hold the ten stock positions to their stops and targets and keep $76.94 settled cash for a clean setup."
     },
     {
@@ -1406,6 +1402,10 @@
     {
      "date": "2026-11-25",
      "note": "No trade. Live reward-to-risk fails the 0.8:1 floor for all six candidates (MPC 0.39, PSX 0.21, VLO 0.29, MDT 0.50, WST 0.73, CRWD 0.61), and none are in Financials. Stay in cash for a Financials RSI(2)<=10 setup that clears 0.8:1. Current balance shows 983.82 available with 0 settling, so use the l"
+    },
+    {
+     "date": "2026-11-25",
+     "note": "No trade. All six candidates fail the 0.8:1 reward-to-risk floor (MPC ~0.38, PSX ~0.21, VLO ~0.29, MDT ~0.49, WST ~0.68, CRWD ~0.60), and none are Financials. Stay in cash for a Financials RSI(2)<=10 setup that clears 0.8:1. Reconcile the settled-cash figures (983.82 available vs. the 583.59/400.23 "
     }
    ],
    "last_exits": {
@@ -2130,10 +2130,6 @@
    "notes": [
     {
      "date": "2026-11-20",
-     "note": "Pass this cycle. SLV failed to fill at my 0.15 floor on three attempts, Technology is on my avoid list, and crash radar is 43, above my below-40 rule. TLT 79/78 duplicates the open TLT 78/77 and is in an avoid sector. Hold the TLT 78/77 under its default exits (2x stop, 65% take-profit, 10-DTE exit)"
-    },
-    {
-     "date": "2026-11-20",
      "note": "Premium House has no trades yet, so I'm taking a single small rich-vol spread at the 0.15 credit floor, not passing on a 0.27 credit. Keep the TLT 78/77 under default exits (2x stop, 65% take-profit, 10-DTE exit)."
     },
     {
@@ -2287,6 +2283,10 @@
     {
      "date": "2026-11-25",
      "note": "I've passed on TLT for five sessions, which is becoming avoidance rather than discipline. Take a single-contract, defined-risk trade when the setup is rich and the risk is capped, and reserve passes for setups that are actually weak."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "Passing on the TLT 80/79 bull put again: the system already blocks a second TLT order today, and doubling a single underlying would put $168 at risk in one name while crash radar is 48 (warning) with SPY below its 200-day. Next entry: a rich-vol setup on a different underlying, or crash radar below "
     }
    ],
    "last_exits": {
@@ -2322,7 +2322,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 83.0,
+   "min_trade_seen": 84.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2784,7 +2784,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 708.02
+     "last": 708.96
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2800,7 +2800,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 708.02
+     "last": 708.96
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2816,7 +2816,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 708.02
+     "last": 708.96
     }
    },
    "status": "active",
@@ -2849,7 +2849,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 59.7
+     "last": 59.83
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2866,7 +2866,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 152.98
+     "last": 153.55
     },
     "pos-c426d20c19": {
      "kind": "stock",
@@ -2883,7 +2883,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 86.15
+     "last": 86.26
     }
    },
    "status": "active",
@@ -2941,7 +2941,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 1.17,
+     "mark": 1.13,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2961,7 +2961,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.115,
+     "exit_half_spread": 2.08,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2986,7 +2986,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.05,
+     "mark": 0.02,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3006,7 +3006,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.875,
+     "exit_half_spread": 3.895,
      "peak_mark": 1.09
     }
    },
@@ -3573,14 +3573,13 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-25",
-    "made_at": "2026-11-25T12:07-05:00",
+    "made_at": "2026-11-25T12:40-05:00",
     "watch": [
      "SPY",
-     "QQQ",
-     "NVDA"
+     "QQQ"
     ],
-    "aggression": "defensive",
-    "why": "SPY and QQQ are now above their opening ranges with steady uptrends, so the tape has firmed a bit, but the regime is still bearish (SPY 4% below its 200-day SMA, crash radar at 50), so I'm allowing only half-size VWAP bounces in the most liquid names. ANT is 4.3% above VWAP and too extended to chase",
+    "aggression": "stand_down",
+    "why": "SPY is in a downtrend (3.3% below its 200-day SMA, 20-day rate of change -6.6%) and the crash radar is at warning (48), so long-only scalps have poor odds. Most of the strong movers, like ANT and SOXL, are already extended far above VWAP, and the one-day bounce in SPY and QQQ is not enough to overri",
     "slices": 4,
     "target_pct": 0.5,
     "stop_pct": 0.3,
