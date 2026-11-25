@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T15:41-05:00",
+ "updated": "2026-11-25T09:37-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,9 +10,9 @@
  },
  "regime": {
   "spy_trend": "down",
-  "spy_vs_sma200_pct": -2.3,
-  "spy_roc20_pct": -5.6,
-  "crash_radar": 48
+  "spy_vs_sma200_pct": -4.5,
+  "spy_roc20_pct": -6.6,
+  "crash_radar": 51
  },
  "start_balance": 1000.0,
  "brain": "AI (claude-haiku-5-5)",
@@ -39,14 +39,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": "Exhibition since Nov 24: 16% win rate over 25 closed trades. Rejoins the race once its closed-trade win rate tops 30%.",
-   "equity": 621.02,
+   "equity": 675.02,
    "cash": 563.02,
    "available": 563.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.62,
-   "progress_pct": 6.21,
+   "multiple": 0.68,
+   "progress_pct": 6.75,
    "open": 1,
    "closed": 27,
    "win_rate": 14.8,
@@ -64,8 +64,12 @@
     },
     "ratio": 2.12
    },
-   "risk_adj": -0.7,
+   "risk_adj": -0.6,
    "notes": [
+    {
+     "date": "2026-11-25",
+     "note": "No candidates today and the VALE put is already held under its 10.12 underlying stop. Keep the $563 settled cash and wait for a Communication Services trigger at 3x volume; crash radar 51 argues against sizing up."
+    },
     {
      "date": "2026-11-24",
      "note": "No trade: the only candidate, FNGR, has a 0.05 stop against a 0.022 price, too wide to size, and sits in an avoided sector. No Communication Services trigger (IBN >36.17, DIS >123.34, NFLX second close <56.56) has fired. Holding the VALE put under its 10.12 underlying stop and keeping settled cash."
@@ -73,10 +77,6 @@
     {
      "date": "2026-11-24",
      "note": "No trade: the only candidate, FNGR, has a 0.05 stop against a 0.022 price (about 127% away), which can't be sized within budget, and it sits in an avoided sector. Holding the VALE put under its 10.12 underlying stop and keeping $563 settled cash for a Communication Services trigger (IBN >36.17, DIS "
-    },
-    {
-     "date": "2026-11-24",
-     "note": "No trade: the only candidate, FNGR, has a 0.05 stop against a 0.0215 price (too wide to size) and sits in an avoided sector. Holding the VALE put under its 10.12 underlying stop and keeping $563 settled cash for the Communication Services triggers (IBN >36.17, DIS >123.34, NFLX second close <56.56 a"
     }
    ],
    "thesis_review": null
@@ -90,8 +90,8 @@
    "paused_reason": null,
    "equity": 983.82,
    "cash": 983.82,
-   "available": 583.59,
-   "settling": 400.23,
+   "available": 983.82,
+   "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.98,
@@ -116,16 +116,16 @@
    "risk_adj": -0.26,
    "notes": [
     {
+     "date": "2026-11-25",
+     "note": "No trade. All four candidates fail the 0.8:1 reward-to-risk floor (MPC ~0.42, PSX ~0.31, VLO ~0.39, MDT ~0.68), and Energy and Consumer Staples are on my avoid list. Keep cash until a Financials setup with RSI(2) at or below 10 clears the floor."
+    },
+    {
      "date": "2026-11-24",
      "note": "MDT is 0.72:1 (3.41 to the 99.67 target vs 4.76 to the 91.51 stop), below the 0.8:1 floor. BJ is not a live candidate, so its trigger can't be checked. Keep the cash until a candidate clears the floor."
     },
     {
      "date": "2026-11-24",
      "note": "MDT's reward-to-risk is about 0.72:1 (3.44 to the 99.66 target vs 4.76 to the 91.47 stop), below the 0.8:1 floor. BJ isn't a live candidate, so its game-plan trigger can't be checked. Positions are empty, so the stale holds are void. Keep the cash."
-    },
-    {
-     "date": "2026-11-24",
-     "note": "MDT fails the 0.8:1 floor at about 0.62:1 (96.86 to the 99.79 target vs the 92.10 stop). BJ isn't a live candidate, so its game-plan trigger can't be verified. No positions are open, so the stale holds are void. Keep the cash and wait for a candidate that clears the floor."
     }
    ],
    "thesis_review": null
@@ -137,14 +137,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 885.5,
+   "equity": 894.5,
    "cash": 913.5,
-   "available": 794.5,
-   "settling": 19.0,
+   "available": 813.5,
+   "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.89,
-   "progress_pct": 8.86,
+   "progress_pct": 8.95,
    "open": 1,
    "closed": 7,
    "win_rate": 14.3,
@@ -162,8 +162,12 @@
     },
     "ratio": 0.3
    },
-   "risk_adj": -0.98,
+   "risk_adj": -0.91,
    "notes": [
+    {
+     "date": "2026-11-25",
+     "note": "Passing on the TLT 80/79 bull put (12-31): it duplicates the open TLT bull put on the same underlying while crash radar is 51 with SPY below its 200-day. Wait for a non-duplicate rich-vol setup on another underlying, or crash radar below 40."
+    },
     {
      "date": "2026-11-24",
      "note": "Passing again on the TLT 79.5/78.5 bull put: it stacks a same-expiry TLT spread on the open position, which is already under water, with crash radar at 48. Next time a rich-vol setup on a different underlying appears with settled cash available, take it."
@@ -171,10 +175,6 @@
     {
      "date": "2026-11-24",
      "note": "Passing on the second same-expiry TLT bull put: it would double exposure to one name while the open spread is already under water (mark 0.29 vs 0.20 entry) and crash radar is 48 with SPY below its 200-day. Revisit when a non-duplicate rich-vol setup appears or crash radar falls below 40."
-    },
-    {
-     "date": "2026-11-24",
-     "note": "Passed on the TLT 79.5/78.5 bull put: a second same-expiry TLT spread would double exposure to one name while crash radar is 48 and SPY is below its 200-day. Wait for a non-duplicate rich-vol setup on another underlying."
     }
    ],
    "thesis_review": null
@@ -186,20 +186,20 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 925.9,
+   "equity": 905.68,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.93,
-   "progress_pct": 9.26,
+   "multiple": 0.91,
+   "progress_pct": 9.06,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 10.8,
    "win_loss": null,
-   "risk_adj": -0.68,
+   "risk_adj": -0.87,
    "notes": [],
    "thesis_review": null
   },
@@ -210,18 +210,18 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 826.91,
+   "equity": 813.99,
    "cash": 164.38,
    "available": 164.38,
    "settling": 0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.83,
-   "progress_pct": 8.27,
+   "multiple": 0.81,
+   "progress_pct": 8.14,
    "open": 4,
    "closed": 10,
    "win_rate": 40.0,
-   "max_dd_pct": 18.3,
+   "max_dd_pct": 18.7,
    "win_loss": {
     "win": {
      "n": 4,
@@ -235,7 +235,7 @@
     },
     "ratio": 0.2
    },
-   "risk_adj": -0.95,
+   "risk_adj": -1.0,
    "notes": [],
    "thesis_review": null
   },
@@ -246,14 +246,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": -324.26,
+   "equity": -294.26,
    "cash": -411.26,
    "available": -411.26,
    "settling": 0,
    "status": "eliminated",
    "status_reason": "equity $-202.19 fell below $10",
-   "multiple": -0.32,
-   "progress_pct": -3.24,
+   "multiple": -0.29,
+   "progress_pct": -2.94,
    "open": 2,
    "closed": 5,
    "win_rate": 20.0,
@@ -271,7 +271,7 @@
     },
     "ratio": 0.02
    },
-   "risk_adj": -0.94,
+   "risk_adj": -0.92,
    "notes": [
     {
      "date": "2026-11-09",
@@ -297,8 +297,8 @@
    "paused_reason": null,
    "equity": 1001.35,
    "cash": 1001.35,
-   "available": 876.19,
-   "settling": 125.16,
+   "available": 1001.35,
+   "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 1.0,
@@ -772,6 +772,19 @@
     "scalper": 1001.35,
     "hyper": 999.71
    }
+  },
+  {
+   "date": "2026-11-25",
+   "agents": {
+    "trend": 675.02,
+    "meanrev": 983.82,
+    "volsell": 894.5,
+    "baseline": 905.68,
+    "monkey": 813.99,
+    "blackswan": -294.26,
+    "scalper": 1001.35,
+    "hyper": 999.71
+   }
   }
  ],
  "positions": [
@@ -786,7 +799,7 @@
    "qty": 1,
    "entry": 0.59,
    "last": null,
-   "mark": 0.58,
+   "mark": 1.12,
    "stop": 10.12,
    "expiry": "2026-12-24",
    "opened": "2026-11-24T12:06:58-05:00",
@@ -808,7 +821,7 @@
    "qty": 1,
    "entry": 0.2,
    "last": null,
-   "mark": 0.28,
+   "mark": 0.19,
    "stop": 0,
    "expiry": "2026-12-24",
    "opened": "2026-11-24T11:37:51-05:00",
@@ -829,7 +842,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 715.69,
+   "last": 699.98,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -851,7 +864,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 715.69,
+   "last": 699.98,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -873,7 +886,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 715.69,
+   "last": 699.98,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -895,7 +908,7 @@
    "opt_type": null,
    "qty": 1.0272,
    "entry": 115.79,
-   "last": 108.425,
+   "last": 101.425,
    "mark": null,
    "stop": 99.13,
    "expiry": null,
@@ -917,7 +930,7 @@
    "opt_type": null,
    "qty": 3.3815,
    "entry": 57.98,
-   "last": 58.7,
+   "last": 58.25,
    "mark": null,
    "stop": 52.7,
    "expiry": null,
@@ -939,7 +952,7 @@
    "opt_type": null,
    "qty": 1.9214,
    "entry": 155.0,
-   "last": 155.62,
+   "last": 155.75,
    "mark": null,
    "stop": 142.41,
    "expiry": null,
@@ -961,7 +974,7 @@
    "opt_type": null,
    "qty": 0.5991,
    "entry": 92.816,
-   "last": 89.55,
+   "last": 82.11,
    "mark": null,
    "stop": 70.81,
    "expiry": null,
@@ -984,7 +997,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 0.65,
+   "mark": 1.13,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -1006,7 +1019,7 @@
    "qty": 2,
    "entry": 4.15,
    "last": null,
-   "mark": 0.11,
+   "mark": 0.02,
    "stop": 175.6,
    "expiry": "2027-01-15",
    "opened": "2026-11-09T09:38:36-05:00",
@@ -1019,6 +1032,41 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-25T09:37:29-05:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "SPY, QQQ, IWM",
+   "note": "stand_down: SPY is 4.5% below its 200-day SMA with a -6.6% 20-day rate of change, the crash radar is in warning at 51, and nearly every candidate is trending down below VWAP. No candidate shows a clean uptrend or a setup, and the overnight plan says to stand aside unless an Industrials name qualifies, so I'm st"
+  },
+  {
+   "time": "2026-11-25T09:37:27-05:00",
+   "type": "rule_block",
+   "agent": "monkey",
+   "symbol": "ORCL",
+   "note": "already holding ORCL"
+  },
+  {
+   "time": "2026-11-25T09:37:15-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "ALNY",
+   "note": "spread stop (-100%) (tried 0.01; mark 0.02, natural -3.78)"
+  },
+  {
+   "time": "2026-11-25T09:36:54-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-66%) (tried 1.08, 0.72, 0.36, 0.01; mark 1.13, natural -0.91)"
+  },
+  {
+   "time": "2026-11-25T09:35:29-05:00",
+   "type": "exit_unfilled",
+   "agent": "monkey",
+   "symbol": "ORCL",
+   "note": "random holding period over (7 days)"
+  },
   {
    "time": "2026-11-25T07:40:21-05:00",
    "type": "plan",
@@ -1440,54 +1488,6 @@
    "agent": "blackswan",
    "symbol": "AGCO",
    "note": "spread stop (-68%) (tried 0.99, 0.66, 0.33, 0.01; mark 1.04, natural -1.38)"
-  },
-  {
-   "time": "2026-11-24T10:05:40-05:00",
-   "type": "exit_unfilled",
-   "agent": "volsell",
-   "symbol": "TLT",
-   "note": "profit target (65% of credit)"
-  },
-  {
-   "time": "2026-11-24T10:05:10-05:00",
-   "type": "close",
-   "agent": "meanrev",
-   "symbol": "PYPL",
-   "qty": 1.0995,
-   "entry": 54.61,
-   "exit": 56.56,
-   "pnl": 2.15,
-   "note": "snap-back (RSI2 69)",
-   "opened": "2026-11-20T13:38:28-05:00",
-   "confidence": 2,
-   "thesis": "PYPL RSI(2) 1.4 washout 8.4% above its 200-day in a 43 crash-radar warning regime; stop 52.21 to target 57.15 is about 1.09:1 at the live 54.57 price, clearing the 0.8:1 floor, taken as a small Financials starter since the lean-in sector focus supports it."
-  },
-  {
-   "time": "2026-11-24T09:38:28-05:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "IWM, SPY, XLF",
-   "note": "stand_down: Most scan names are red (about 20 of 30) with SPY down 2.6% vs its 200-day SMA, a 20-day ROC of -5.6%, and crash radar at 49 (warning). The overnight IWM trigger requires fewer than half the names red, so it fails and no new trades should be taken. I'm keeping IWM, SPY, and XLF on watch in case brea"
-  },
-  {
-   "time": "2026-11-24T09:38:25-05:00",
-   "type": "open",
-   "agent": "monkey",
-   "symbol": "FISV",
-   "instrument": "stock",
-   "qty": 3.3815,
-   "price": 57.98,
-   "cost": 196.06,
-   "stop": 52.7,
-   "thesis": "Dart landed on FISV",
-   "confidence": 0
-  },
-  {
-   "time": "2026-11-24T09:38:15-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-96%) (tried 0.10, 0.07, 0.04, 0.01; mark 0.15, natural -3.75)"
   }
  ],
  "reviews": [
@@ -4086,40 +4086,40 @@
  ],
  "radar": {
   "now": {
-   "score": 48,
+   "score": 51,
    "tier": "warning",
-   "market_score": 60,
-   "economy_score": 12,
+   "market_score": 64,
+   "economy_score": 10,
    "parts": {
     "trend": 75,
-    "drawdown": 56,
+    "drawdown": 70,
     "volatility": 84,
-    "breadth": 66,
-    "credit": 61,
-    "safety": 10,
-    "economy": 12
+    "breadth": 71,
+    "credit": 77,
+    "safety": 3,
+    "economy": 10
    },
    "facts": {
-    "spy_vs_sma50_pct": -5.8,
-    "spy_vs_sma200_pct": -2.3,
-    "spy_off_high_pct": 8.4,
-    "spy_iv_pct": 21.7,
-    "spy_realized_vol_pct": 31.4,
-    "pct_above_50d": 38.5,
-    "breadth_sample": 509,
-    "junk_vs_treasuries_20d_pct": -1.45,
-    "havens_vs_spy_20d_pct": 0.8
+    "spy_vs_sma50_pct": -7.7,
+    "spy_vs_sma200_pct": -4.5,
+    "spy_off_high_pct": 10.4,
+    "spy_iv_pct": 21.8,
+    "spy_realized_vol_pct": 31.3,
+    "pct_above_50d": 36.5,
+    "breadth_sample": 512,
+    "junk_vs_treasuries_20d_pct": -2.09,
+    "havens_vs_spy_20d_pct": 0.2
    },
    "economy": {
     "status": "on",
-    "as_of": "2026-11-24",
-    "yield_curve_10y_2y": 0.29,
-    "jobless_claims_4wk": 197750,
-    "claims_vs_1yr_low_pct": 1.3,
-    "junk_bond_spread_pct": 3.76,
+    "as_of": "2026-11-25",
+    "yield_curve_10y_2y": 0.28,
+    "jobless_claims_4wk": 196000,
+    "claims_vs_1yr_low_pct": 0.4,
+    "junk_bond_spread_pct": 3.63,
     "sahm_indicator": 0.0
    },
-   "at": "2026-11-24T15:38-05:00"
+   "at": "2026-11-25T09:35-05:00"
   },
   "history": [
    {
@@ -4276,6 +4276,11 @@
     "date": "2026-11-24",
     "score": 48,
     "tier": "warning"
+   },
+   {
+    "date": "2026-11-25",
+    "score": 51,
+    "tier": "warning"
    }
   ],
   "labels": {
@@ -4289,25 +4294,25 @@
   }
  },
  "compliance_today": {
-  "approved": 7,
-  "denied": 0,
-  "last_denied": null
+  "approved": 0,
+  "denied": 1,
+  "last_denied": "already holding ORCL"
  },
  "playbooks": {
   "scalper": {
-   "date": "2026-11-24",
-   "made_at": "2026-11-24T15:41-05:00",
+   "date": "2026-11-25",
+   "made_at": "2026-11-25T09:37-05:00",
    "watch": [
-    "XLV",
-    "XLP",
+    "SPY",
+    "QQQ",
     "IWM"
    ],
    "aggression": "stand_down",
-   "why": "With about 9 minutes until the 3:50 PM flat time, no new trade can develop. The regime is still bearish (SPY 2.3% below its 200-day, crash radar 48), and most scan names are red, so I'm holding the stand-down and watching the green defensives for a breadth flip at tomorrow's open.",
+   "why": "SPY is 4.5% below its 200-day SMA with a -6.6% 20-day rate of change, the crash radar is in warning at 51, and nearly every candidate is trending down below VWAP. No candidate shows a clean uptrend or a setup, and the overnight plan says to stand aside unless an Industrials name qualifies, so I'm st",
    "slices": 4,
-   "target_pct": 0.4,
+   "target_pct": 0.5,
    "stop_pct": 0.3,
-   "max_hold_min": 30
+   "max_hold_min": 45
   },
   "hyper": {
    "date": "2026-10-29",
@@ -4733,7 +4738,5 @@
   "built": "2026-11-24T07:40-05:00",
   "pool_size": 7405,
   "core_size": 500
- },
- "recap_updated": "2026-11-24T16:40-05:00",
- "plans_updated": "2026-11-25T07:40-05:00"
+ }
 }
