@@ -1442,42 +1442,26 @@
     "PYPL": "2026-11-24"
    },
    "plan": {
-    "for_day": "2026-11-25",
-    "made_at": "2026-11-25T07:40-05:00",
-    "session": "Pre-market call",
+    "for_day": "2026-11-27",
+    "made_at": "2026-11-25T16:40-05:00",
+    "session": "After-close review",
     "decision": "keep",
-    "why": "The fresh scan has no Financials candidate, and the only name in it (EBAY, RSI(2) 19.6) is well above the 10 entry threshold in a non-lean-in sector. Crash radar is in the warning zone at 48, so there is no reason to loosen the rules. Note that the current balance shows 983.82 settled with nothing settling, which doesn't match the 583.59 settled / 400.23 settling split in the plan summary; the liv",
-    "summary": "No entries tomorrow. Keep all cash settled and wait for a Financials stock with RSI(2) at or below 10, price above its 200-day average, and at least 0.8:1 reward-to-risk to SMA5 on a 2x-ATR stop.",
+    "why": "Today's fresh scan, news, and open positions are all empty, so there is no new evidence to change the plan. The Financials focus is still the strongest result (5-for-6, +10.25), and cash reconciles at 983.82 settled with nothing settling.",
+    "summary": "No entries tomorrow. Stay in cash and act only on a Financials stock with RSI(2) at or below 10, price above its 200-day average, and at least 0.8:1 reward-to-risk to SMA5 on a 2x-ATR stop. Crash radar is 47 (warning), so size conservatively if a setup appears.",
     "watchlist": [],
     "position_plans": [],
     "avoid": [
-     "EBAY: RSI(2) 19.6 is nowhere near the 10 threshold, and Materials is not a lean-in sector.",
-     "MDT and BJ: not in today's scan, and MDT's reward-to-risk has repeatedly failed the 0.8:1 floor.",
-     "CRWD: RSI(2) 20.7, not at threshold, and Broad market/other is on the avoid list.",
-     "COST: RSI(2) about 20 and Consumer Staples is on the avoid list.",
-     "Any setup in Technology, Energy, Health Care, or Consumer Staples until results turn positive."
+     "Any Technology, Energy, Health Care, Consumer Staples, or Broad market/other setup until results turn positive. Recent Energy, Technology, and Health Care trades were negative or weak.",
+     "MPC, PSX, VLO: reward-to-risk has repeatedly been well below 0.8:1 (roughly 0.1 to 0.4), and Energy is on the avoid list.",
+     "MDT, WST, CRWD, COST, EBAY: each has failed the RSI(2) threshold or the reward-to-risk floor, or sits in an avoid-list sector."
     ],
-    "brainstorm": "Test whether a Financials washout with RSI(2) at or below 10 and a close under SMA5 still clears the 0.8:1 floor when the stop is placed at the prior day's low instead of 2x ATR. Only test this on paper; do not change live rules yet.",
+    "brainstorm": "Log each rejected candidate's reward-to-risk alongside its sector so I can test whether the 0.8:1 floor is blocking viable Financials trades. Don't loosen the floor without evidence.",
     "revisions": [
      {
-      "at": "2026-11-24T16:40-05:00",
+      "at": "2026-11-25T16:40-05:00",
       "session": "After-close review",
-      "decision": "revise",
-      "why": "All five positions closed today and the book is flat, so the holds and stops in the pre-market plan no longer apply. BJ isn't in today's scan, so its trigger can't be verified. The only fresh candidate with RSI(2) under my 10 entry, MDT, fails the 0.8:1 floor at about 0.65:1 on the 2x-ATR stop, and Consumer Staples is now -7.77 across 5 trades.",
-      "watch": []
-     },
-     {
-      "at": "2026-11-24T20:10-05:00",
-      "session": "Evening check-in",
       "decision": "keep",
-      "why": "The fresh scan has no Financials candidate, and EBAY (RSI(2) 19.6) and CRWD (RSI(2) 20.7) are nowhere near the 10 entry threshold. Crash radar is 48 (warning), so no new entries.",
-      "watch": []
-     },
-     {
-      "at": "2026-11-25T07:40-05:00",
-      "session": "Pre-market call",
-      "decision": "keep",
-      "why": "The fresh scan has no Financials candidate, and the only name in it (EBAY, RSI(2) 19.6) is well above the 10 entry threshold in a non-lean-in sector. Crash radar is in the warning zone at 48, so there is no reason to loosen the rules. Note that the current balance shows 983.82 settled with nothing settling, which doesn't match the 583.59 settled / 400.23 settling split in the plan summary; the liv",
+      "why": "Today's fresh scan, news, and open positions are all empty, so there is no new evidence to change the plan. The Financials focus is still the strongest result (5-for-6, +10.25), and cash reconciles at 983.82 settled with nothing settling.",
       "watch": []
      }
     ],
@@ -1496,8 +1480,8 @@
      "Consumer Staples",
      "Broad market / other"
     ],
-    "why": "Financials is 5-for-6 for +10.25, the strongest evidence I have. Technology, Health Care, and Consumer Staples are negative, and Broad market/other is -13.44 over 9 trades despite a 67% win rate. Materials (1-for-1) is too small a sample to lean into. Keeping the Financials focus, which expires 2026",
-    "set_at": "2026-11-25T07:40-05:00",
+    "why": "Financials is 5-for-6 for +10.25 with an 83% win rate, the strongest evidence I have. Technology (-14.20), Health Care (-4.63), and Consumer Staples (-7.77) are negative, and Broad market/other is -13.44 over 9 trades despite a 67% win rate. Materials (1-for-1) is too small a sample to lean into. Th",
+    "set_at": "2026-11-25T16:40-05:00",
     "expires": "2026-12-09"
    },
    "scorecard": [
@@ -2066,6 +2050,18 @@
      "dropped_avg_move_pct": null,
      "mind_change_value": null,
      "changed_mind": true
+    },
+    {
+     "day": "2026-11-25",
+     "picks": [],
+     "acted": [],
+     "avg_move_pct": null,
+     "right_way": 0,
+     "scored": 0,
+     "dropped": [],
+     "dropped_avg_move_pct": null,
+     "mind_change_value": null,
+     "changed_mind": false
     }
    ]
   },
@@ -3594,43 +3590,29 @@
     ]
    },
    "plan": {
-    "for_day": "2026-11-25",
-    "made_at": "2026-11-25T07:40-05:00",
-    "session": "Pre-market call",
+    "for_day": "2026-11-27",
+    "made_at": "2026-11-25T16:40-05:00",
+    "session": "After-close review",
     "decision": "keep",
-    "why": "Nothing in today's scan qualifies. The scan has no Industrials names, the only lean-in sector with a real positive record. The Technology names are down 4-11% on headlines, and my Technology record is negative (-$1.30 over 54 trades). Crash radar is at 48 (warning), and the edge is too thin to justify chasing volatility.",
-    "summary": "Stand aside again. Watchlist stays empty unless an Industrials name appears with a VWAP pullback or opening-range breakout at rel volume of at least 1.5 and a clear trigger. Do not trade Technology, Consumer Discretionary, or Communication Services.",
+    "why": "Today's scan has no Industrials or Consumer Staples names, so the plan's only entry condition cannot be met. The 4-11% Technology moves on headlines and the crash radar at 47 (warning) support standing aside.",
+    "summary": "Stand aside again. Watch for an Industrials or Consumer Staples name with a VWAP pullback or opening-range breakout at rel volume of at least 1.5 and a clear trigger. No Technology, Consumer Discretionary, or Communication Services trades.",
     "watchlist": [],
     "position_plans": [],
     "avoid": [
-     "Technology and AI-chip complex (NVDA, AMD, AVGO, MU, INTC, SNDK, TSM, SMH, SOXX, SPCX, TSLA, QQQ): negative sector record and 4-11% daily moves on headlines (NVDA CEO news, EU delay on Tesla FSD, SanDisk insider sale)",
-     "AMZN, MSFT, IWM: Consumer Discretionary is negative (-$0.72 over 11 trades)",
+     "Technology and AI-chip complex (NVDA, AMD, AVGO, MU, INTC, SNDK, TSM, SMH, SOXX, SPCX, TSLA, QQQ): negative sector record (-$1.30 over 54 trades) and headline-driven 4-11% daily swings",
+     "AMZN, MSFT: Consumer Discretionary is negative (-$0.72 over 11 trades)",
      "META, GOOGL, GOOG: Communication Services has a 42% win rate",
      "AAPL: scan tags it Financials, which looks like a data mismatch, and there is no VWAP edge in the record",
      "XLE: Energy has no trade record yet",
      "SPY: no repeatable edge"
     ],
-    "brainstorm": "Test whether the 0.5% target is too far for the 45-minute hold. My notes show many time-limit exits near 0% and stop slippage of about 0.35% against a 0.30% setting. A 0.35% target with a wider stop is one tweak to paper-test on Industrials only once a qualifying setup appears.",
+    "brainstorm": "Once Staples or Industrials names show up, paper-test a 0.35% target with a 30-minute hold against the current 0.5%/45-minute setup. Notes show many time exits near 0% and gave-back gains, but don't retune until about 40 trades.",
     "revisions": [
      {
-      "at": "2026-11-24T16:40-05:00",
+      "at": "2026-11-25T16:40-05:00",
       "session": "After-close review",
-      "decision": "revise",
-      "why": "The IWM trigger sits in Consumer Discretionary, which my current sector focus says to avoid, and that sector is -$0.72 over 11 trades. Technology is still in a stress-level selloff with crash radar at 48, and today's only trade was a breakeven SPY scratch. With no Industrials names in the scan, there is nothing to trade.",
-      "watch": []
-     },
-     {
-      "at": "2026-11-24T20:10-05:00",
-      "session": "Evening check-in",
       "decision": "keep",
-      "why": "The scan still has no Industrials names, so the only lean-in sector has nothing to trade. The tradable names are the Technology/AI-chip group, which is -$1.30 over 54 trades and moving 4-18% on headlines, and crash radar sits in the warning tier at 48. The edge is unproven, so standing aside still holds.",
-      "watch": []
-     },
-     {
-      "at": "2026-11-25T07:40-05:00",
-      "session": "Pre-market call",
-      "decision": "keep",
-      "why": "Nothing in today's scan qualifies. The scan has no Industrials names, the only lean-in sector with a real positive record. The Technology names are down 4-11% on headlines, and my Technology record is negative (-$1.30 over 54 trades). Crash radar is at 48 (warning), and the edge is too thin to justify chasing volatility.",
+      "why": "Today's scan has no Industrials or Consumer Staples names, so the plan's only entry condition cannot be met. The 4-11% Technology moves on headlines and the crash radar at 47 (warning) support standing aside.",
       "watch": []
      }
     ],
@@ -3639,15 +3621,16 @@
    },
    "focus": {
     "lean_in": [
-     "Industrials"
+     "Industrials",
+     "Consumer Staples"
     ],
     "avoid": [
      "Technology",
      "Consumer Discretionary",
      "Communication Services"
     ],
-    "why": "Industrials is the only clearly positive sector (+$1.90 over 10 trades, 50% win rate), though the sample is small. There are still no Industrials names in today's scan, so the focus is kept without new evidence. Consumer Staples (+$1.03 over 7 trades) is also positive but has no names in the scan. T",
-    "set_at": "2026-11-25T07:40-05:00",
+    "why": "Industrials is positive (+$1.90 over 10 trades, 50% win rate) and Consumer Staples is positive (+$1.03 over 7 trades, 57% win rate). Both samples are small, so the staples lean-in is a weak signal. Technology, Consumer Discretionary, and Communication Services are all negative or near zero over mean",
+    "set_at": "2026-11-25T16:40-05:00",
     "expires": "2026-12-09"
    },
    "scorecard": [
@@ -4325,6 +4308,18 @@
      "dropped_avg_move_pct": null,
      "mind_change_value": null,
      "changed_mind": true
+    },
+    {
+     "day": "2026-11-25",
+     "picks": [],
+     "acted": [],
+     "avg_move_pct": null,
+     "right_way": 0,
+     "scored": 0,
+     "dropped": [],
+     "dropped_avg_move_pct": null,
+     "mind_change_value": null,
+     "changed_mind": false
     }
    ]
   },
