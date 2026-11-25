@@ -1,46 +1,5 @@
 [
  {
-  "time": "2026-11-11T10:06:25-05:00",
-  "type": "close",
-  "agent": "trend",
-  "symbol": "DJTU261218P00002000",
-  "qty": 1,
-  "entry": 0.85,
-  "exit": 0.1,
-  "pnl": -122.0,
-  "note": "option stop (-61%)",
-  "opened": "2026-11-05T12:41:06-05:00",
-  "confidence": 4,
-  "thesis": "DJTU broke below its 55-day low at 2.29 on 13x relative volume and trades at 2.015, 87% below its 200-day SMA, so a put with the 3.03 underlying stop caps the risk."
- },
- {
-  "time": "2026-11-11T10:07:48-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-92%) (tried 0.22, 0.15, 0.08, 0.01; mark 0.27, natural -0.94)"
- },
- {
-  "time": "2026-11-11T10:09:10-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "ALNY",
-  "note": "spread stop (-94%) (tried 0.20, 0.14, 0.07, 0.01; mark 0.25, natural -4.05)"
- },
- {
-  "time": "2026-11-11T10:09:23-05:00",
-  "type": "open",
-  "agent": "monkey",
-  "symbol": "TXN",
-  "instrument": "stock",
-  "qty": 0.291,
-  "price": 305.686,
-  "cost": 88.95,
-  "stop": 280.37,
-  "thesis": "Dart landed on TXN",
-  "confidence": 0
- },
- {
   "time": "2026-11-11T10:09:31-05:00",
   "type": "playbook",
   "agent": "scalper",
@@ -6088,5 +6047,33 @@
   "agent": "scalper",
   "symbol": "ANT, SPY",
   "note": "stand_down: SPY is 4.7% below its 200-day SMA, the crash radar is at warning (51), and most liquid names are trading below VWAP on down trends, so I'm keeping the stand-down. ANT is the only clean up-trend with an opening-range breakout and is worth reassessing if the market firms."
+ },
+ {
+  "time": "2026-11-25T12:05:26-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "VALE261224P00009500",
+  "note": "option target (+120%)"
+ },
+ {
+  "time": "2026-11-25T12:06:52-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-67%) (tried 1.05, 0.70, 0.35, 0.01; mark 1.10, natural -0.99)"
+ },
+ {
+  "time": "2026-11-25T12:07:13-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.02, natural -3.93)"
+ },
+ {
+  "time": "2026-11-25T12:07:34-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "SPY, QQQ, NVDA",
+  "note": "defensive: SPY and QQQ are now above their opening ranges with steady uptrends, so the tape has firmed a bit, but the regime is still bearish (SPY 4% below its 200-day SMA, crash radar at 50), so I'm allowing only half-size VWAP bounces in the most liquid names. ANT is 4.3% above VWAP and too extended to chase"
  }
 ]
