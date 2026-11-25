@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T13:08-05:00",
+ "updated": "2026-11-25T13:37-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,7 +10,7 @@
  },
  "regime": {
   "spy_trend": "down",
-  "spy_vs_sma200_pct": -2.9,
+  "spy_vs_sma200_pct": -2.6,
   "spy_roc20_pct": -6.6,
   "crash_radar": 48
  },
@@ -39,14 +39,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": "Exhibition since Nov 24: 16% win rate over 25 closed trades. Rejoins the race once its closed-trade win rate tops 30%.",
-   "equity": 687.02,
+   "equity": 690.02,
    "cash": 563.02,
    "available": 563.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.69,
-   "progress_pct": 6.87,
+   "progress_pct": 6.9,
    "open": 1,
    "closed": 27,
    "win_rate": 14.8,
@@ -64,8 +64,12 @@
     },
     "ratio": 2.12
    },
-   "risk_adj": -0.58,
+   "risk_adj": -0.57,
    "notes": [
+    {
+     "date": "2026-11-25",
+     "note": "Passed on both breakdowns: LOOP and SNXX are in the avoided Broad market/other sector, and their stops sit 27% to 150% from price, too wide to size on $563. Holding the VALE put under its 10.12 underlying stop and waiting for a Communication Services breakout or breakdown at 3x+ volume."
+    },
     {
      "date": "2026-11-25",
      "note": "Passed on all three breakdowns: LOOP, SNXX, and SOXL have stops 27% to 87% away from price, too wide to size with a $563 budget, and SOXL and SNXX are in avoid-list sectors. Holding the VALE put under its 10.12 stop and waiting for a Communication Services breakdown or breakout at 3x+ volume."
@@ -73,10 +77,6 @@
     {
      "date": "2026-11-25",
      "note": "Passed on all four breakdowns: SOXL, LOOP, SNXX, and GLDM sit in avoid-list sectors or have stops too wide to size. GLDM's breakdown is marginal (69.265 vs. 69.28 level) and our last gold put lost. Holding the VALE put under its 10.12 underlying stop and waiting for a Communication Services trigger "
-    },
-    {
-     "date": "2026-11-25",
-     "note": "Passed on all six breakdowns again. GLDM and IAU are the only clean tight-stop setups, but they are gold ETFs and my gold put lost on a rebound. Keep the VALE put under its 10.12 stop and wait for a Communication Services breakout at 3x+ volume."
     }
    ],
    "thesis_review": null
@@ -117,15 +117,15 @@
    "notes": [
     {
      "date": "2026-11-25",
+     "note": "No trade: every candidate fails the 0.8:1 reward-to-risk floor (MPC ~0.32, VLO ~0.20, PSX ~0.12, WST ~0.70), and none are Financials. Stay in cash for a Financials RSI(2)<=10 setup that clears 0.8:1 while crash radar is in the warning zone."
+    },
+    {
+     "date": "2026-11-25",
      "note": "No trade. All six candidates fail the 0.8:1 reward-to-risk floor (MPC 0.38, PSX 0.19, VLO 0.27, MDT 0.48, WST 0.68, CRWD 0.61), and none are Financials. Stay in cash for a Financials RSI(2)<=10 setup that clears 0.8:1."
     },
     {
      "date": "2026-11-25",
      "note": "No trade. All six candidates fail the 0.8:1 reward-to-risk floor (MPC ~0.38, PSX ~0.21, VLO ~0.29, MDT ~0.49, WST ~0.68, CRWD ~0.60), and none are Financials. Stay in cash for a Financials RSI(2)<=10 setup that clears 0.8:1. Reconcile the settled-cash figures (983.82 available vs. the 583.59/400.23 "
-    },
-    {
-     "date": "2026-11-25",
-     "note": "No trade. Live reward-to-risk fails the 0.8:1 floor for all six candidates (MPC 0.39, PSX 0.21, VLO 0.29, MDT 0.50, WST 0.73, CRWD 0.61), and none are in Financials. Stay in cash for a Financials RSI(2)<=10 setup that clears 0.8:1. Current balance shows 983.82 available with 0 settling, so use the l"
     }
    ],
    "thesis_review": null
@@ -137,14 +137,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 895.5,
+   "equity": 899.5,
    "cash": 913.5,
    "available": 813.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.9,
-   "progress_pct": 8.96,
+   "progress_pct": 9.0,
    "open": 1,
    "closed": 7,
    "win_rate": 14.3,
@@ -162,8 +162,12 @@
     },
     "ratio": 0.3
    },
-   "risk_adj": -0.9,
+   "risk_adj": -0.86,
    "notes": [
+    {
+     "date": "2026-11-25",
+     "note": "Holding the TLT 80/79 bull put under default exits. The only candidate duplicates that underlying, the system blocks a second TLT order, and crash radar is 48 (warning). Next entry needs a rich-vol setup on a different underlying or crash radar below 40."
+    },
     {
      "date": "2026-11-25",
      "note": "Holding the TLT 80/79 bull put under default exits (0.18 mark vs 0.20 entry). The only candidate is a second TLT spread, which is blocked and would double single-name exposure at crash radar 48. Next entry needs a rich-vol setup on a different underlying or crash radar below 40."
@@ -171,10 +175,6 @@
     {
      "date": "2026-11-25",
      "note": "Passing on the TLT 80/79 bull put again: the system already blocks a second TLT order today, and doubling a single underlying would put $168 at risk in one name while crash radar is 48 (warning) with SPY below its 200-day. Next entry: a rich-vol setup on a different underlying, or crash radar below "
-    },
-    {
-     "date": "2026-11-25",
-     "note": "I've passed on TLT for five sessions, which is becoming avoidance rather than discipline. Take a single-contract, defined-risk trade when the setup is rich and the risk is capped, and reserve passes for setups that are actually weak."
     }
    ],
    "thesis_review": null
@@ -186,20 +186,20 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 920.58,
+   "equity": 923.41,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.92,
-   "progress_pct": 9.21,
+   "progress_pct": 9.23,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 10.8,
    "win_loss": null,
-   "risk_adj": -0.73,
+   "risk_adj": -0.71,
    "notes": [],
    "thesis_review": null
   },
@@ -210,14 +210,14 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 817.66,
+   "equity": 816.95,
    "cash": 269.11,
    "available": 164.38,
    "settling": 104.73,
    "status": "active",
    "status_reason": "",
    "multiple": 0.82,
-   "progress_pct": 8.18,
+   "progress_pct": 8.17,
    "open": 3,
    "closed": 11,
    "win_rate": 36.4,
@@ -235,7 +235,7 @@
     },
     "ratio": 0.21
    },
-   "risk_adj": -0.94,
+   "risk_adj": -0.95,
    "notes": [],
    "thesis_review": null
   },
@@ -246,14 +246,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": -274.26,
+   "equity": -296.26,
    "cash": -411.26,
    "available": -411.26,
    "settling": 0,
    "status": "eliminated",
    "status_reason": "equity $-202.19 fell below $10",
-   "multiple": -0.27,
-   "progress_pct": -2.74,
+   "multiple": -0.3,
+   "progress_pct": -2.96,
    "open": 2,
    "closed": 5,
    "win_rate": 20.0,
@@ -271,7 +271,7 @@
     },
     "ratio": 0.02
    },
-   "risk_adj": -0.9,
+   "risk_adj": -0.92,
    "notes": [
     {
      "date": "2026-11-09",
@@ -776,12 +776,12 @@
   {
    "date": "2026-11-25",
    "agents": {
-    "trend": 687.02,
+    "trend": 690.02,
     "meanrev": 983.82,
-    "volsell": 895.5,
-    "baseline": 920.58,
-    "monkey": 817.66,
-    "blackswan": -274.26,
+    "volsell": 899.5,
+    "baseline": 923.41,
+    "monkey": 816.95,
+    "blackswan": -296.26,
     "scalper": 1001.35,
     "hyper": 999.71
    }
@@ -799,7 +799,7 @@
    "qty": 1,
    "entry": 0.59,
    "last": null,
-   "mark": 1.24,
+   "mark": 1.27,
    "stop": 10.12,
    "expiry": "2026-12-24",
    "opened": "2026-11-24T12:06:58-05:00",
@@ -821,7 +821,7 @@
    "qty": 1,
    "entry": 0.2,
    "last": null,
-   "mark": 0.18,
+   "mark": 0.14,
    "stop": 0,
    "expiry": "2026-12-24",
    "opened": "2026-11-24T11:37:51-05:00",
@@ -842,7 +842,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 711.56,
+   "last": 713.755,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -864,7 +864,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 711.56,
+   "last": 713.755,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -886,7 +886,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 711.56,
+   "last": 713.755,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -908,7 +908,7 @@
    "opt_type": null,
    "qty": 3.3815,
    "entry": 57.98,
-   "last": 59.875,
+   "last": 59.83,
    "mark": null,
    "stop": 52.7,
    "expiry": null,
@@ -930,7 +930,7 @@
    "opt_type": null,
    "qty": 1.9214,
    "entry": 155.0,
-   "last": 152.92,
+   "last": 152.29,
    "mark": null,
    "stop": 142.41,
    "expiry": null,
@@ -952,7 +952,7 @@
    "opt_type": null,
    "qty": 0.5991,
    "entry": 92.816,
-   "last": 87.24,
+   "last": 88.33,
    "mark": null,
    "stop": 70.81,
    "expiry": null,
@@ -975,7 +975,7 @@
    "qty": 1,
    "entry": 3.3,
    "last": null,
-   "mark": 1.17,
+   "mark": 1.15,
    "stop": 111.61,
    "expiry": "2026-12-18",
    "opened": "2026-10-16T13:06:53-04:00",
@@ -997,7 +997,7 @@
    "qty": 2,
    "entry": 4.15,
    "last": null,
-   "mark": 0.1,
+   "mark": 0,
    "stop": 175.6,
    "expiry": "2027-01-15",
    "opened": "2026-11-09T09:38:36-05:00",
@@ -1010,6 +1010,34 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-25T13:37:30-05:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "SPY, QQQ, NVDA, MSFT, AAPL",
+   "note": "defensive: Broad names are holding above VWAP with 1-minute uptrends, but the regime is still weak (SPY 2.6% below its 200-day, crash radar at 48), so I'm keeping VWAP bounces at half size on the most liquid names. Targets and holds stay tight, and I'm dropping the volatile single-stock runners that look more "
+  },
+  {
+   "time": "2026-11-25T13:37:13-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "ALNY",
+   "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -3.87)"
+  },
+  {
+   "time": "2026-11-25T13:36:52-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-65%) (tried 1.10, 0.73, 0.37, 0.01; mark 1.15, natural -0.99)"
+  },
+  {
+   "time": "2026-11-25T13:35:27-05:00",
+   "type": "exit_unfilled",
+   "agent": "trend",
+   "symbol": "VALE261224P00009500",
+   "note": "option target (+115%)"
+  },
   {
    "time": "2026-11-25T13:08:31-05:00",
    "type": "playbook",
@@ -1402,34 +1430,6 @@
    "agent": "blackswan",
    "symbol": "AGCO",
    "note": "spread stop (-72%) (tried 0.86, 0.57, 0.29, 0.01; mark 0.91, natural -1.42)"
-  },
-  {
-   "time": "2026-11-24T13:37:12-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-98%) (tried 0.02, 0.01; mark 0.07, natural -3.78)"
-  },
-  {
-   "time": "2026-11-24T13:36:30-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-71%) (tried 0.91, 0.60, 0.31, 0.01; mark 0.96, natural -1.42)"
-  },
-  {
-   "time": "2026-11-24T13:08:08-05:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "IWM, XLV, XLP",
-   "note": "stand_down: Crash radar is at warning (47), SPY is down on the 1-minute trend and 1.9% below its 200-day, and most scan names are red, which fails the overnight IWM breadth condition, so no new trades. IWM, XLV and XLP are kept on watch in case breadth improves later."
-  },
-  {
-   "time": "2026-11-24T13:07:53-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-98%) (tried 0.05, 0.04, 0.02, 0.01; mark 0.10, natural -3.78)"
   }
  ],
  "reviews": [
@@ -4030,24 +4030,24 @@
   "now": {
    "score": 48,
    "tier": "warning",
-   "market_score": 61,
+   "market_score": 60,
    "economy_score": 10,
    "parts": {
     "trend": 75,
-    "drawdown": 60,
+    "drawdown": 58,
     "volatility": 84,
-    "breadth": 60,
+    "breadth": 59,
     "credit": 77,
     "safety": 3,
     "economy": 10
    },
    "facts": {
-    "spy_vs_sma50_pct": -6.2,
-    "spy_vs_sma200_pct": -2.9,
-    "spy_off_high_pct": 9.0,
-    "spy_iv_pct": 23.2,
+    "spy_vs_sma50_pct": -5.9,
+    "spy_vs_sma200_pct": -2.6,
+    "spy_off_high_pct": 8.7,
+    "spy_iv_pct": 22.5,
     "spy_realized_vol_pct": 31.3,
-    "pct_above_50d": 41.0,
+    "pct_above_50d": 41.2,
     "breadth_sample": 512,
     "junk_vs_treasuries_20d_pct": -2.09,
     "havens_vs_spy_20d_pct": 0.2
@@ -4061,7 +4061,7 @@
     "junk_bond_spread_pct": 3.63,
     "sahm_indicator": 0.0
    },
-   "at": "2026-11-25T13:05-05:00"
+   "at": "2026-11-25T13:35-05:00"
   },
   "history": [
    {
@@ -4243,13 +4243,16 @@
  "playbooks": {
   "scalper": {
    "date": "2026-11-25",
-   "made_at": "2026-11-25T13:08-05:00",
+   "made_at": "2026-11-25T13:37-05:00",
    "watch": [
     "SPY",
-    "QQQ"
+    "QQQ",
+    "NVDA",
+    "MSFT",
+    "AAPL"
    ],
    "aggression": "defensive",
-   "why": "SPY and QQQ have both rallied into the afternoon and sit above VWAP with up 1-minute trends, so a VWAP bounce at half size is reasonable. The crash radar is still at warning and SPY is below its 200-day, so I'm keeping size small, targets tight, and holds short.",
+   "why": "Broad names are holding above VWAP with 1-minute uptrends, but the regime is still weak (SPY 2.6% below its 200-day, crash radar at 48), so I'm keeping VWAP bounces at half size on the most liquid names. Targets and holds stay tight, and I'm dropping the volatile single-stock runners that look more ",
    "slices": 4,
    "target_pct": 0.4,
    "stop_pct": 0.25,
