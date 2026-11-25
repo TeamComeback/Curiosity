@@ -24,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.59,
-     "mark": 0.4,
+     "mark": 0.35,
      "expiry": "2026-12-24",
      "strike": 9.5,
      "delta": -0.5,
@@ -43,7 +43,7 @@
      },
      "sector": "Materials",
      "low_water": 9.275,
-     "exit_half_spread": 0.04
+     "exit_half_spread": 0.05
     }
    },
    "status": "active",
@@ -54,10 +54,6 @@
    "peak": 1340.54,
    "max_dd": 0.5546,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "No entries: JMIA is in an avoid-listed sector (Broad market/other, 11 trades, -$221) and its 3.27 stop is about 30% away. None of the Communication Services triggers (IBN, DIS, NFLX, SE) has fired, so I keep settled cash. TGT and CLSX are already closed, so there's nothing left to manage."
-    },
     {
      "date": "2026-11-20",
      "note": "Passed on GEV (Industrials) and MS (Financials): both are outside the Communication Services lean-in and on the avoid list in today's game plan. Keep settled cash for IBN, DIS, NFLX, or SE triggers."
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-25",
      "note": "Passed on SNXX: the 3.51 underlying stop is about 144% above the 1.44 price, too wide to size on $563, and Broad market/other is on the avoid list. Holding the VALE put under its 10.12 stop and waiting for a Communication Services trigger at 3x+ volume."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "Passed on SNXX: the 3.47 underlying stop is about 149% above the 1.395 price, too wide to size on $563, and Broad market/other is on the avoid list. Holding the VALE put under its 10.12 stop and waiting for a Communication Services setup at 3x+ volume."
     }
    ],
    "last_exits": {
@@ -1249,10 +1249,6 @@
    "notes": [
     {
      "date": "2026-11-23",
-     "note": "No entries 2026-11-23 10:07: all six candidates fail the 0.8:1 floor at live prices (ABT ~0.21, MPC ~0.30, SHEL ~0.26, ROP ~0.32, D ~0.24, MDT ~0.22). SCHD isn't in today's candidates, so its trigger can't be verified. RSP is at 211.91, above its 207.60 stop, so the overnight exit plan is stale and "
-    },
-    {
-     "date": "2026-11-23",
      "note": "No entries 2026-11-23 10:37: all six candidates fail the 0.8:1 floor (PM ~0.46, SHEL ~0.35, MPC ~0.33, ROP ~0.31, PSX ~0.27, EOG ~0.28). SCHD isn't a candidate, so its 33.94 trigger can't be verified. RSP already closed at 10:35, so there is no overnight exit to run. Hold the nine remaining stock po"
     },
     {
@@ -1406,6 +1402,10 @@
     {
      "date": "2026-11-25",
      "note": "No trade at 15:07. All five candidates fail the 0.8:1 reward-to-risk floor (MPC ~0.31, VLO ~0.18, PSX ~0.10, MDT ~0.48, WST ~0.67), and none are Financials. Crash radar is 47 (warning), so stay in cash for a Financials RSI(2)<=10 setup that clears 0.8:1."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "No trade. All five candidates fail the 0.8:1 reward-to-risk floor (MPC ~0.37, VLO ~0.22, PSX ~0.14, MDT ~0.57, WST ~0.71), none are Financials, and crash radar is 48 (warning). Stay in cash for a Financials RSI(2)<=10 setup that clears 0.8:1. Reconcile the settled-cash split (983.82 available, 0 set"
     }
    ],
    "last_exits": {
@@ -2095,7 +2095,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.2,
-     "mark": 0.16,
+     "mark": 0.15,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 80.0,
@@ -2128,10 +2128,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-23",
-     "note": "Pass on the TLT 79/78 duplicate: it adds to the open TLT 78/77 in an avoid sector, SPY is in a downtrend (ROC20 -9.1%), and crash radar is 46 vs my below-40 rule. Hold the existing TLT spread under default exits and wait for a non-avoid underlying with IV/RV at least 1.15 and crash radar below 40."
-    },
     {
      "date": "2026-11-23",
      "note": "Passed on TLT 79/78 bull put: it doubles the open TLT 78/77 exposure, SPY is in a downtrend (ROC20 -9.1%), and crash radar is 47 (warning). Wait for a non-duplicate rich-vol setup with crash radar below 40."
@@ -2287,6 +2283,10 @@
     {
      "date": "2026-11-25",
      "note": "No candidates today and the only open position is a TLT bull put spread (0.16 mark vs 0.20 entry). Holding under default exits. Next entry needs a rich-vol setup on a different underlying, with crash radar below 40 or a clean setup that isn't a duplicate."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "Holding the TLT 80/79 bull put under default exits (take profit near 0.07 mark, stop at 2x credit). The only candidate is a second TLT spread, which is blocked while TLT is held, so I'm passing. Next entry needs a rich-vol setup on a different underlying, or crash radar below 40."
     }
    ],
    "last_exits": {
@@ -2322,7 +2322,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 85.0,
+   "min_trade_seen": 78.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2784,7 +2784,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 716.34
+     "last": 714.15
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2800,7 +2800,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 716.34
+     "last": 714.15
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2816,7 +2816,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 716.34
+     "last": 714.15
     }
    },
    "status": "active",
@@ -2849,7 +2849,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 60.0
+     "last": 59.735
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2866,7 +2866,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 151.88
+     "last": 151.21
     },
     "pos-c426d20c19": {
      "kind": "stock",
@@ -2883,7 +2883,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 88.6
+     "last": 87.69
     }
    },
    "status": "active",
@@ -2941,7 +2941,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 1.15,
+     "mark": 1.12,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2961,7 +2961,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.095,
+     "exit_half_spread": 2.075,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2986,7 +2986,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.07,
+     "mark": 0.13,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3006,7 +3006,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.815,
+     "exit_half_spread": 3.9,
      "peak_mark": 1.09
     }
    },
@@ -3573,20 +3573,18 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-25",
-    "made_at": "2026-11-25T15:07-05:00",
+    "made_at": "2026-11-25T15:38-05:00",
     "watch": [
-     "SMH",
-     "AVGO",
-     "MU",
-     "TSM",
-     "META"
+     "SPY",
+     "QQQ",
+     "IWM"
     ],
-    "aggression": "defensive",
-    "why": "Only 43 minutes remain before the 3:50 flat, so I'm cutting to 2 slices and a 20-minute hold. The regime is weak (SPY below its 200-day, crash radar 47), so I'm limiting to semiconductor and megacap names in 1-minute uptrends above VWAP, with VWAP bounces at half size.",
-    "slices": 2,
+    "aggression": "stand_down",
+    "why": "Only about 12 minutes remain before the 3:50 PM flat, which is too little time for a new setup to develop and exit safely. SPY is below its 200-day and the crash radar is at 48, so I'm standing down with no new trades.",
+    "slices": 1,
     "target_pct": 0.4,
     "stop_pct": 0.25,
-    "max_hold_min": 20
+    "max_hold_min": 15
    },
    "scalp_day": {
     "date": "2026-11-25",
