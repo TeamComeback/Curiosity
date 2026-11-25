@@ -24,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.59,
-     "mark": 1.26,
+     "mark": 1.28,
      "expiry": "2026-12-24",
      "strike": 9.5,
      "delta": -0.5,
@@ -43,7 +43,7 @@
      },
      "sector": "Materials",
      "low_water": 9.275,
-     "exit_half_spread": 1.265
+     "exit_half_spread": 1.28
     }
    },
    "status": "active",
@@ -54,10 +54,6 @@
    "peak": 1340.54,
    "max_dd": 0.542,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "No entries: JMIA is a Broad market/other short (avoid-listed) and already well below its 2.70 breakdown, so the stop is too wide to chase. IBN, DIS, NFLX and SE triggers have not fired, and there are no open positions. Keep cash settled and wait for a 2.5x-volume close through a Communication Servic"
-    },
     {
      "date": "2026-11-19",
      "note": "Passing on JMIA: it's an avoid-listed Broad market short, already well past its 2.70 breakdown, and the 3.25 stop is about 32% above price, too wide for this account. No game-plan triggers (IBN, DIS, NFLX, SE) have fired, so I'm holding settled cash for them."
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-25",
      "note": "Passed on all six breakdown candidates: every one sits in a sector my notes flag as avoided (Technology, Broad market/other, Consumer Discretionary), and the sub-$2 SNXX has a stop too far above price to size. Holding the VALE put (+112%) under its 10.12 underlying stop and keeping $563 settled cash"
+    },
+    {
+     "date": "2026-11-25",
+     "note": "Passed on all six breakdown candidates. Each sits in a sector on my avoid list or has a stop too far from price to size (SOXL, SNXX, LOOP). GLDM and IAU are gold ETFs mislabeled as Consumer Discretionary, and the stop is only about 3% away, so they are not a clean trend setup. Holding the VALE put u"
     }
    ],
    "last_exits": {
@@ -1249,10 +1249,6 @@
    "notes": [
     {
      "date": "2026-11-20",
-     "note": "No new entries at 12:38: the only candidates clearing the 0.8:1 floor (PYPL, BLK, BNY) are Financials, which is over-concentrated and off the game-plan watchlist. PFE is under the floor, and MRK isn't in today's candidates. Hold the nine stock positions to their stops and targets and keep the $137 s"
-    },
-    {
-     "date": "2026-11-20",
      "note": "No new entries at 12:41: the only candidates clearing the 0.8:1 floor (PYPL, BLK, BNY) are Financials, which is over-concentrated and off the watchlist. MRK isn't in today's candidates. Holding nine stock positions to their stops and targets and keeping $137 settled cash for a clean setup."
     },
     {
@@ -1406,6 +1402,10 @@
     {
      "date": "2026-11-25",
      "note": "No trade. Every candidate fails the 0.8:1 reward-to-risk floor (MPC ~0.39, PSX ~0.27, VLO ~0.36, MDT ~0.65, CRWD ~0.66, WST ~0.68), and most sit in avoid-list sectors. Keep cash until a Financials RSI(2)<=10 setup clears 0.8:1. Still need to reconcile the settled-cash figures (983.82 available vs. t"
+    },
+    {
+     "date": "2026-11-25",
+     "note": "No trade. All six candidates fail the 0.8:1 reward-to-risk floor on live numbers (MPC 0.44, VLO 0.39, PSX 0.26, MDT 0.58, CRWD 0.65, WST 0.73), and most sit in avoid-list sectors. Stay in cash and wait for a Financials RSI(2)<=10 setup that clears 0.8:1."
     }
    ],
    "last_exits": {
@@ -2095,7 +2095,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.2,
-     "mark": 0.15,
+     "mark": 0.16,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 80.0,
@@ -2117,7 +2117,7 @@
       "dte": 30
      },
      "sector": "Consumer Staples",
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.04
     }
    },
    "status": "active",
@@ -2128,10 +2128,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-20",
-     "note": "Passing on TLT 79/78 again: it doubles up the open TLT 78/77 bull put, TLT has stopped out three times, and crash radar is 43, above my below-40 rule. Next entry needs a different underlying with IV/RV of at least 1.15, a stop set before entry, and crash radar below 40. Keep the existing spread unde"
-    },
     {
      "date": "2026-11-20",
      "note": "Passed on SLV 42.5/43.5 bear call: crash radar is 44, above my own below-40 rule, and Technology is on my avoid list. Keep the TLT 78/77 bull put under its default exits and wait for a non-avoid underlying with IV/RV of at least 1.15 and crash radar below 40."
@@ -2287,6 +2283,10 @@
     {
      "date": "2026-11-25",
      "note": "Passed on the TLT 80/79 bull put (12-31): it duplicates the open TLT spread, crash radar is 51 (warning) with SPY below its 200-day. Hold the open TLT spread under default exits; take the next rich-vol setup on a different underlying, or once crash radar is below 40."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "No candidates today and the open TLT bull put is at 0.16 vs 0.20 entry with default exits in place, so hold; next trade needs a rich-vol setup on a non-TLT underlying or crash radar below 40."
     }
    ],
    "last_exits": {
@@ -2784,7 +2784,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 701.42
+     "last": 699.27
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2800,7 +2800,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 701.42
+     "last": 699.27
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2816,7 +2816,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 701.42
+     "last": 699.27
     }
    },
    "status": "active",
@@ -2849,7 +2849,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 58.46
+     "last": 58.53
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2866,7 +2866,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 152.47
+     "last": 151.265
     },
     "pos-c426d20c19": {
      "kind": "stock",
@@ -2883,7 +2883,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 83.3
+     "last": 82.77
     }
    },
    "status": "active",
@@ -2892,7 +2892,7 @@
    "closed": 11,
    "wins": 4,
    "peak": 1000.67,
-   "max_dd": 0.1909,
+   "max_dd": 0.1933,
    "notes": [],
    "last_exits": {
     "HUM": "2026-10-20",
@@ -2941,7 +2941,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 1.15,
+     "mark": 1.17,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2961,7 +2961,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.1,
+     "exit_half_spread": 2.08,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2986,7 +2986,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.13,
+     "mark": 0.08,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3006,7 +3006,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.96,
+     "exit_half_spread": 4.025,
      "peak_mark": 1.09
     }
    },
@@ -3573,14 +3573,14 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-25",
-    "made_at": "2026-11-25T10:38-05:00",
+    "made_at": "2026-11-25T11:08-05:00",
     "watch": [
      "SPY",
      "QQQ",
      "IWM"
     ],
     "aggression": "stand_down",
-    "why": "SPY is still about 4.3% below its 200-day SMA with a falling 20-day rate of change, and the crash radar is in warning at 51, so I'm keeping the stand-down. IWM's opening-range breakout and SMH's momentum burst are tempting, but this regime makes them likely to fail, and no candidate meets the Indust",
+    "why": "SPY is 4.6% below its 200-day SMA with a -6.6% 20-day rate of change, and the crash radar is at warning (51). Most candidates are trending down below VWAP, and the only up-trending names (SOXS, XLP, HYG, LQD, IBIT) either are inverse or defensive ETFs or lack a clean setup, so I'm keeping the stand-",
     "slices": 4,
     "target_pct": 0.5,
     "stop_pct": 0.3,
