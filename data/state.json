@@ -24,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.59,
-     "mark": 1.12,
+     "mark": 0.97,
      "expiry": "2026-12-24",
      "strike": 9.5,
      "delta": -0.5,
@@ -43,7 +43,7 @@
      },
      "sector": "Materials",
      "low_water": 9.275,
-     "exit_half_spread": 1.12
+     "exit_half_spread": 0.725
     }
    },
    "status": "active",
@@ -54,10 +54,6 @@
    "peak": 1340.54,
    "max_dd": 0.542,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "Pass on JMIA: it is a Broad market/other short (avoid-listed) and already 13% below its 2.70 breakdown level with a 3.13 stop, so the risk is too wide to chase. CLSX put stays on its 2.98 underlying stop; TGT is already closed; wait for IBN/DIS/NFLX/SE triggers with settled cash."
-    },
     {
      "date": "2026-11-19",
      "note": "No entries today: the only scan candidates are in avoid-listed sectors (JMIA and KWEB are Broad market/other, SLV is Technology), and no IBN/DIS/NFLX/SE trigger has fired. Keep settled cash for those triggers; CLSX stays on its 2.98 underlying stop and TGT is already closed."
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-25",
      "note": "No candidates today and the VALE put is already held under its 10.12 underlying stop. Keep the $563 settled cash and wait for a Communication Services trigger at 3x volume; crash radar 51 argues against sizing up."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "Passed on all six breakdown candidates: five sit in sectors I've been avoiding (Technology and Broad market/other, where I'm -$236 combined), and the sub-$2 names (SNXX, LOOP) have stops too wide to size. Holding the VALE put under its 10.12 stop and keeping $563 settled cash for a Communication Ser"
     }
    ],
    "last_exits": {
@@ -1249,10 +1249,6 @@
    "notes": [
     {
      "date": "2026-11-20",
-     "note": "Pass: TRV already exited, and UTHR and SAP are held, so no adds. MRK isn't a candidate today. The only setups clearing 0.8:1 (PYPL, BLK, BNY) are Financials, which is over-concentrated and off the watchlist. Hold the nine stock positions to their stops and targets and keep the $137 settled cash for "
-    },
-    {
-     "date": "2026-11-20",
      "note": "No new entries: the only candidates that clear 0.8:1 (PYPL, BLK, BNY) are Financials, which is over-concentrated and off the watchlist. MRK isn't in today's candidates. Hold the nine stock positions to their stops and targets and keep the $137 settled cash for a clean setup."
     },
     {
@@ -1406,6 +1402,10 @@
     {
      "date": "2026-11-25",
      "note": "No trade. All four candidates fail the 0.8:1 reward-to-risk floor (MPC ~0.42, PSX ~0.31, VLO ~0.39, MDT ~0.68), and Energy and Consumer Staples are on my avoid list. Keep cash until a Financials setup with RSI(2) at or below 10 clears the floor."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "No trade: all four candidates fail the 0.8:1 floor (MPC ~0.32, PSX ~0.22, VLO ~0.27, MDT ~0.66), MDT's RSI(2) of 5.9 is above the 10 threshold, and there are no Financials setups. Keep cash until a Financials RSI(2)<=10 setup clears 0.8:1. Verify the settled-cash discrepancy (983.82 available vs the"
     }
    ],
    "last_exits": {
@@ -2095,7 +2095,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.2,
-     "mark": 0.19,
+     "mark": 0.17,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 80.0,
@@ -2117,7 +2117,7 @@
       "dte": 30
      },
      "sector": "Consumer Staples",
-     "exit_half_spread": 0.04
+     "exit_half_spread": 0.01
     }
    },
    "status": "active",
@@ -2128,10 +2128,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-20",
-     "note": "Pass: the only candidate is a second TLT bull put on an underlying that has stopped out repeatedly, in Real Estate, which is on my avoid list, with crash radar at 42. Keep the existing TLT 78/77 under its default exits and wait for a different underlying with IV/RV of at least 1.15, a predefined sto"
-    },
     {
      "date": "2026-11-20",
      "note": "Passing on TLT 79/78 again: it duplicates the open TLT 78/77 bull put, and crash radar is 43, above my own below-40 rule. Keep the existing spread under its default exits and look for a different underlying with IV/RV at or above 1.15."
@@ -2287,6 +2283,10 @@
     {
      "date": "2026-11-25",
      "note": "Passing on the TLT 80/79 bull put (12-31): it duplicates the open TLT bull put on the same underlying while crash radar is 51 with SPY below its 200-day. Wait for a non-duplicate rich-vol setup on another underlying, or crash radar below 40."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "Passed on the TLT 80/79 bull put (12-31) again: it doubles our TLT exposure while crash radar is 50 (warning) and SPY is in a downtrend. Next: take a rich-vol spread on a different underlying once crash radar drops below 40."
     }
    ],
    "last_exits": {
@@ -2322,7 +2322,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 77.0,
+   "min_trade_seen": 80.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2784,7 +2784,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 699.98
+     "last": 704.06
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2800,7 +2800,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 699.98
+     "last": 704.06
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2816,7 +2816,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 699.98
+     "last": 704.06
     }
    },
    "status": "active",
@@ -2831,26 +2831,9 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 164.38,
+   "cash": 269.11,
    "reserved": 0.0,
    "positions": {
-    "pos-83bf9288a4": {
-     "kind": "stock",
-     "symbol": "ORCL",
-     "qty": 1.0272,
-     "entry": 115.79,
-     "cost": 118.94,
-     "hold_days": 7,
-     "direction": "long",
-     "stop": 99.13,
-     "atr": 8.233,
-     "opened": "2026-11-18T10:08:25-05:00",
-     "thesis": "Dart landed on ORCL",
-     "confidence": 0,
-     "signals": {},
-     "sector": "Technology",
-     "last": 101.425
-    },
     "pos-e7834830d1": {
      "kind": "stock",
      "symbol": "FISV",
@@ -2866,7 +2849,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 58.25
+     "last": 58.535
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2883,7 +2866,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 155.75
+     "last": 152.85
     },
     "pos-c426d20c19": {
      "kind": "stock",
@@ -2900,16 +2883,16 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 82.11
+     "last": 86.59
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 10,
+   "closed": 11,
    "wins": 4,
    "peak": 1000.67,
-   "max_dd": 0.1866,
+   "max_dd": 0.1879,
    "notes": [],
    "last_exits": {
     "HUM": "2026-10-20",
@@ -2917,14 +2900,20 @@
     "CSCO": "2026-11-04",
     "ABBV": "2026-11-05",
     "WDC": "2026-11-05",
-    "ORCL": "2026-11-12",
+    "ORCL": "2026-11-25",
     "TXN": "2026-11-13",
     "NVT": "2026-11-16",
     "PLTR": "2026-11-17",
     "TQQQ": "2026-11-20"
    },
    "joined": "2026-10-13T19:21:59-04:00",
-   "unsettled": []
+   "unsettled": [
+    {
+     "amount": 104.73,
+     "settles": "2026-11-27",
+     "note": "sold ORCL"
+    }
+   ]
   },
   "blackswan": {
    "cash": -411.26,
@@ -2952,7 +2941,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 1.13,
+     "mark": 1.11,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2972,7 +2961,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.045,
+     "exit_half_spread": 2.06,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2997,7 +2986,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.02,
+     "mark": 0.04,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3017,7 +3006,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.8,
+     "exit_half_spread": 3.9,
      "peak_mark": 1.09
     }
    },
@@ -3584,14 +3573,14 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-25",
-    "made_at": "2026-11-25T09:37-05:00",
+    "made_at": "2026-11-25T10:07-05:00",
     "watch": [
      "SPY",
      "QQQ",
      "IWM"
     ],
     "aggression": "stand_down",
-    "why": "SPY is 4.5% below its 200-day SMA with a -6.6% 20-day rate of change, the crash radar is in warning at 51, and nearly every candidate is trending down below VWAP. No candidate shows a clean uptrend or a setup, and the overnight plan says to stand aside unless an Industrials name qualifies, so I'm st",
+    "why": "SPY is still below its 200-day SMA with a down trend and the crash radar in warning at 50, and there's no Industrials candidate to meet the overnight rule. The LQD VWAP bounce is a bond ETF with only a 0.1% range, too tight for a 0.3% stop to work.",
     "slices": 4,
     "target_pct": 0.5,
     "stop_pct": 0.3,
