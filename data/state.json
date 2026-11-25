@@ -24,7 +24,7 @@
      "opt_type": "put",
      "qty": 1,
      "entry": 0.59,
-     "mark": 0.34,
+     "mark": 0.37,
      "expiry": "2026-12-24",
      "strike": 9.5,
      "delta": -0.5,
@@ -43,7 +43,7 @@
      },
      "sector": "Materials",
      "low_water": 9.275,
-     "exit_half_spread": 0.09
+     "exit_half_spread": 0.02
     }
    },
    "status": "active",
@@ -54,10 +54,6 @@
    "peak": 1340.54,
    "max_dd": 0.5546,
    "notes": [
-    {
-     "date": "2026-11-19",
-     "note": "No entries: JMIA and IREN are extended breakdowns in avoid-listed sectors with stops 30%+ away, and no Communication Services trigger (IBN, DIS, NFLX, SE) has fired. Keep settled cash for those triggers."
-    },
     {
      "date": "2026-11-19",
      "note": "No entries at 15:07: JMIA and IREN are extended breakdowns in avoid-listed sectors with stops 30%+ away, and no Communication Services trigger (IBN, DIS, NFLX, SE) has fired. Keep settled cash for those triggers."
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-25",
      "note": "Passed on SNXX: its 3.49 stop is about 147% above the 1.415 price, too wide to size on $563, and Broad market/other is on the avoid list. Holding the VALE put under its 10.12 underlying stop and keeping settled cash for a Communication Services breakout at 3x+ volume."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "Passed on SNXX: the 3.50 stop is about 145% above the 1.43 price, too wide to size on $563, and Broad market/other is on the avoid list. Holding the VALE put under its 10.12 underlying stop and waiting for a Communication Services trigger at 3x+ volume."
     }
    ],
    "last_exits": {
@@ -1248,10 +1248,6 @@
    "max_dd": 0.0633,
    "notes": [
     {
-     "date": "2026-11-20",
-     "note": "[weekly] Small wins (~$1.6) against large stop losses (~$4.8) mean the stop is too tight for mean-reversion. Reward-to-risk floors of 0.8-1:1 can't make up for a sub-50% win rate. Don't take sub-1:1 setups at confidence 3 just to deploy cash. Re-evaluate after about 10 more trades before changing anything el"
-    },
-    {
      "date": "2026-11-23",
      "note": "No entries at 09:37. Every candidate fails the 0.8:1 floor at live prices (UTHR is already held; SHEL, MPC, VLO and ROP are all well under 0.5:1). SCHD is not in today's candidates, so its 33.94 trigger can't be verified. RSP is held: its 211.41 mark is above the 207.60 stop, so the overnight exit p"
     },
@@ -1406,6 +1402,10 @@
     {
      "date": "2026-11-25",
      "note": "No trade. MPC's live reward-to-risk is about 0.28:1 (9.86 to the 359.54 target vs a 35.26 stop), far below the 0.8:1 floor, and Energy is on the avoid list. Stay in cash for a Financials RSI(2)<=10 setup that clears 0.8:1. Settled cash still reads 983.82 with nothing settling, so reconcile that agai"
+    },
+    {
+     "date": "2026-11-25",
+     "note": "No trade at 14:36. MPC reward-to-risk is about 0.28:1, PSX about 0.09:1, and WST about 0.65:1, all below the 0.8:1 floor. WST and PSX are also in avoid-list sectors. Stay in cash for a Financials RSI(2)<=10 setup that clears 0.8:1. The balance shows 983.82 available with 0 settling, so the 583.59/40"
     }
    ],
    "last_exits": {
@@ -2095,7 +2095,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.2,
-     "mark": 0.18,
+     "mark": 0.1,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 80.0,
@@ -2117,7 +2117,7 @@
       "dte": 30
      },
      "sector": "Consumer Staples",
-     "exit_half_spread": 0.015
+     "exit_half_spread": 0.01
     }
    },
    "status": "active",
@@ -2128,10 +2128,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-23",
-     "note": "Pass on TLT 79/78 again: it duplicates the open TLT 78/77 in an avoid sector, and crash radar is 48, above my below-40 rule. Hold the existing TLT spread under default exits and wait for a non-avoid underlying with IV/RV of at least 1.15 and crash radar below 40."
-    },
     {
      "date": "2026-11-23",
      "note": "Passing on the TLT 79/78 duplicate: it adds to the open TLT position in an avoid sector while crash radar is 47, and the Real Estate record is 0 for 3. Hold the existing TLT 78/77 under default exits and wait for a non-avoid underlying with IV/RV at least 1.15 and crash radar below 40."
@@ -2287,6 +2283,10 @@
     {
      "date": "2026-11-25",
      "note": "Holding the TLT 80/79 bull put under default exits. The only candidate is a second TLT spread, which the system blocks and which would double single-name exposure at crash radar 47. Next entry needs a rich-vol setup on a different underlying, or crash radar below 40."
+    },
+    {
+     "date": "2026-11-25",
+     "note": "Holding the TLT 80/79 bull put under default exits. The only candidate is a second TLT spread, which the system blocks while we hold TLT. Next entry needs a rich-vol setup on a different underlying, or crash radar below 40."
     }
    ],
    "last_exits": {
@@ -2322,7 +2322,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 80.0,
+   "min_trade_seen": 85.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2784,7 +2784,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 717.37
+     "last": 716.76
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2800,7 +2800,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 717.37
+     "last": 716.76
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2816,7 +2816,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 717.37
+     "last": 716.76
     }
    },
    "status": "active",
@@ -2849,7 +2849,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 60.01
+     "last": 59.78
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2866,7 +2866,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 151.75
+     "last": 151.6
     },
     "pos-c426d20c19": {
      "kind": "stock",
@@ -2883,7 +2883,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Technology",
-     "last": 89.365
+     "last": 89.405
     }
    },
    "status": "active",
@@ -3006,7 +3006,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.89,
+     "exit_half_spread": 3.85,
      "peak_mark": 1.09
     }
    },
