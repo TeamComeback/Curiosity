@@ -1985,5 +1985,158 @@
     }
    }
   }
+ },
+ {
+  "date": "2026-11-27",
+  "agents": {
+   "meanrev": {
+    "summary": "Equity rose from 963.93 to 983.82 this week, but the edge is thin. Win rate is 46.7% with an average win of 1.51 against an average loss of -3.02, so expectancy is negative and the week was carried by small wins. The 3-confidence trade is the only one with a large negative average, but that is a single trade and too small a sample to act on. I'll tighten the loss side and recycle capital faster, with only 2 changes.",
+    "applied": [
+     {
+      "agent": "meanrev",
+      "param": "stop_atr",
+      "old": 2.0,
+      "new": 1.5,
+      "reason": "Average loss is twice the average win, and entries sit at about 0.8:1 reward-to-risk. A 1.5 ATR stop cuts loss size and lifts the reward-to-risk ratio on the same targets. The cost is some extra stop-"
+     },
+     {
+      "agent": "meanrev",
+      "param": "max_hold_days",
+      "old": 7,
+      "new": 5,
+      "reason": "RSI(2) snap-backs usually resolve within 2-4 days. Trades that drift longer tend to be failed setups, so exiting at 5 days frees capital for fresh washouts and compounds faster."
+     }
+    ],
+    "stats": {
+     "equity_now": 983.82,
+     "equity_week_ago": 963.93,
+     "closed_trades": 15,
+     "closed_this_week": 11,
+     "week_pnl": 1.69,
+     "win_rate": 46.7,
+     "avg_win": 1.51,
+     "avg_loss": -3.02,
+     "max_drawdown_pct": 6.3,
+     "avg_pnl_by_confidence": {
+      "2": 0.11,
+      "3": -4.97
+     },
+     "this_week_trades": [
+      {
+       "symbol": "TRV",
+       "pnl": 1.43,
+       "note": "snap-back (RSI2 69)",
+       "thesis": "TRV RSI(2) 1.8 washout 14.5% above its 200-day in a calm regime (radar 39); live reward-to-risk is about 0.83:1 (386.77 to 396.39 target vs 375.15 stop), clearing my 0.8:1 floor, so the stale 0.57 and 0.68 figures in the notes don't apply; Financials is the lean-in sector, sized as a starter.",
+       "confidence": 2
+      },
+      {
+       "symbol": "AMGN",
+       "pnl": -0.77,
+       "note": "snap-back (RSI2 63)",
+       "thesis": "AMGN RSI(2) 1.1 washout 16.9% above its 200-day in a calm regime (crash radar 38); live reward-to-risk is 0.80:1 (446.70 to 459.90 target vs 430.25 stop), exactly at my 0.8:1 floor, so I'm taking a small starter.",
+       "confidence": 2
+      },
+      {
+       "symbol": "SPGI",
+       "pnl": 0.82,
+       "note": "snap-back (RSI2 63)",
+       "thesis": "SPGI RSI(2) 3.2 washout 3.8% above its 200-day, now at 443.06 and through the 446.31 game-plan trigger; stop 426.68 to target 457.39 is about 0.88:1, clearing the 0.8:1 floor in a calm radar regime (32) and inside the Financials lean-in.",
+       "confidence": 3
+      },
+      {
+       "symbol": "MCO",
+       "pnl": -1.22,
+       "note": "snap-back (RSI2 66)",
+       "thesis": "MCO RSI(2) 2.8 washout only 3.9% above its 200-day in a calm regime (crash radar 34); live reward-to-risk is about 1.01:1 (484.04 to 503.94 target vs 464.40 stop), just clearing my 1:1 floor, so I'm taking a small starter.",
+       "confidence": 2
+      },
+      {
+       "symbol": "RSP",
+       "pnl": 0.29,
+       "note": "snap-back (RSI2 62)",
+       "thesis": "RSP RSI(2) 1.5 washout 1.3% above its 200-day; at the live 211.89 price, the 207.60 stop to the 216.66 target is about 1.11:1, clearing the 0.8:1 floor. The stale 0.74 in my notes doesn't apply. Equal-weight Financials is a lean-in sector, sized as a starter with SPY below its 200-day and crash radar at 42.",
+       "confidence": 2
+      },
+      {
+       "symbol": "DE",
+       "pnl": 0.83,
+       "note": "snap-back (RSI2 61)",
+       "thesis": "DE RSI(2) 0.6 washout 1.8% above its 200-day with a 598.30 stop and 649.31 target, about 0.88:1, clearing the 0.8:1 floor in a calm radar regime (39); a starter size because SPY is below its 200-day and the book already has six open positions.",
+       "confidence": 2
+      },
+      {
+       "symbol": "ACN",
+       "pnl": -2.36,
+       "note": "snap-back (RSI2 69)",
+       "thesis": "ACN RSI(2) 1.0 washout 21.6% above its 200-day in a calm regime (crash radar 37); live reward-to-risk is 0.81:1 (231.20 to 243.73 target vs 215.73 stop), just clearing my 0.8:1 floor, so I'm taking a small starter.",
+       "confidence": 2
+      },
+      {
+       "symbol": "NVS",
+       "pnl": -1.08,
+       "note": "snap-back (RSI2 66)",
+       "thesis": "NVS RSI(2) 1.1 washout only 1.6% above its 200-day; live target 159.03 vs stop 150.25 from 155.07 is about 0.82:1, just clearing my 0.8:1 floor, so I'm taking a starter size.",
+       "confidence": 2
+      },
+      {
+       "symbol": "SAP",
+       "pnl": -0.21,
+       "note": "snap-back (RSI2 58)",
+       "thesis": "SAP RSI(2) 0.6 washout 7.5% above its 200-day, a new-day re-entry under the game-plan trigger (at or below 210.61); live reward-to-risk is about 1.6:1 (206.69 to 221.71 target vs 197.36 stop), so this is a starter size.",
+       "confidence": 2
+      },
+      {
+       "symbol": "UTHR",
+       "pnl": 1.81,
+       "note": "snap-back (RSI2 77)",
+       "thesis": "UTHR RSI(2) 0.7 washout 2.4% above its 200-day, now at 552.55 and under the game-plan trigger of 562; stop 529.38 to target 572.17 is about 0.85:1, clearing the 0.8:1 floor. The stop is 4.2% away, so risk is about $3.80 on a $90 starter.",
+       "confidence": 2
+      },
+      {
+       "symbol": "PYPL",
+       "pnl": 2.15,
+       "note": "snap-back (RSI2 69)",
+       "thesis": "PYPL RSI(2) 1.4 washout 8.4% above its 200-day in a 43 crash-radar warning regime; stop 52.21 to target 57.15 is about 1.09:1 at the live 54.57 price, clearing the 0.8:1 floor, taken as a small Financials starter since the lean-in sector focus supports it.",
+       "confidence": 2
+      }
+     ]
+    }
+   },
+   "scalper": {
+    "summary": "Equity is flat at $1001.35, with only 1 closed trade this week (+$0.05) and 15 closed overall. Win rate is 46.7% with avg win 0.61 vs avg loss -0.46, so expectancy is about +$0.04 per trade, which is thin and statistically unproven. The one trade this week reached +0.33% but never hit the 0.5% target and was given back to breakeven, which fits earlier notes that the target is too far for the hold time.",
+    "applied": [
+     {
+      "agent": "scalper",
+      "param": "target_pct",
+      "old": 0.5,
+      "new": 0.4,
+      "reason": "Gains are peaking around 0.3-0.35% before reversing, and several time-limit exits sit near 0%. A 0.4% target against a 0.3% stop still gives a ~1.33 reward-to-risk, which breaks even at ~43% win rate,"
+     }
+    ],
+    "stats": {
+     "equity_now": 1001.35,
+     "equity_week_ago": 1001.3,
+     "closed_trades": 15,
+     "closed_this_week": 1,
+     "week_pnl": 0.05,
+     "win_rate": 46.7,
+     "avg_win": 0.61,
+     "avg_loss": -0.46,
+     "max_drawdown_pct": 0.7,
+     "avg_pnl_by_confidence": {
+      "3": 0.04
+     },
+     "this_week_trades": [
+      {
+       "symbol": "SPY",
+       "pnl": 0.05,
+       "note": "gave back a +0.33% gain: out at breakeven",
+       "thesis": "VWAP pullback bounce on SPY: 1.88x volume, +0.31% vs VWAP; target +0.4%, stop -0.3%",
+       "confidence": 3
+      }
+     ]
+    }
+   }
+  }
  }
 ]

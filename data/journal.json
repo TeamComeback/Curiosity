@@ -1,33 +1,5 @@
 [
  {
-  "time": "2026-11-12T09:36:27-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option target (+177%)"
- },
- {
-  "time": "2026-11-12T09:36:34-05:00",
-  "type": "close",
-  "agent": "monkey",
-  "symbol": "ORCL",
-  "qty": 3.0918,
-  "entry": 119.14,
-  "exit": 125.119438,
-  "pnl": 18.48,
-  "note": "random holding period over (2 days)",
-  "opened": "2026-11-10T09:39:45-05:00",
-  "confidence": 0,
-  "thesis": "Dart landed on ORCL"
- },
- {
-  "time": "2026-11-12T09:36:55-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -2.11)"
- },
- {
   "time": "2026-11-12T09:38:18-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6064,5 +6036,23 @@
   "agent": "scalper",
   "note": "After-close review: keep. The fresh scan's top names are almost all Technology, the sector with a negative record (-$1.30 over 54 trades), and the news is tech-heavy with NVDA export controls and TSLA headlines. No Industrials or Consumer Staples name shows up in the scan, and crash radar is at 49 (warning), so the stand-aside plan still holds.",
   "symbol": ""
+ },
+ {
+  "time": "2026-11-27T17:30:08-05:00",
+  "type": "param_change",
+  "agent": "meanrev",
+  "note": "stop_atr: 2.0 -> 1.5 (Average loss is twice the average win, and entries sit at about 0.8:1 reward-to-risk. A 1.5 ATR stop cuts loss size and lifts the reward-to-risk ratio on the same targets. The cost is some extra stop-)"
+ },
+ {
+  "time": "2026-11-27T17:30:08-05:00",
+  "type": "param_change",
+  "agent": "meanrev",
+  "note": "max_hold_days: 7 -> 5 (RSI(2) snap-backs usually resolve within 2-4 days. Trades that drift longer tend to be failed setups, so exiting at 5 days frees capital for fresh washouts and compounds faster.)"
+ },
+ {
+  "time": "2026-11-27T17:30:15-05:00",
+  "type": "param_change",
+  "agent": "scalper",
+  "note": "target_pct: 0.5 -> 0.4 (Gains are peaking around 0.3-0.35% before reversing, and several time-limit exits sit near 0%. A 0.4% target against a 0.3% stop still gives a ~1.33 reward-to-risk, which breaks even at ~43% win rate,)"
  }
 ]
