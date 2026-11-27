@@ -9,7 +9,7 @@
   "start_balance": 1000.0
  },
  "entries": {
-  "date": "2026-11-25",
+  "date": "2026-11-27",
   "counts": {}
  },
  "agents": {
@@ -54,10 +54,6 @@
    "peak": 1340.54,
    "max_dd": 0.5546,
    "notes": [
-    {
-     "date": "2026-11-20",
-     "note": "Passed on GEV (Industrials) and MS (Financials): both are outside the Communication Services lean-in and on the avoid list in today's game plan. Keep settled cash for IBN, DIS, NFLX, or SE triggers."
-    },
     {
      "date": "2026-11-20",
      "note": "Only SE qualifies: it's in the lean-in sector and the game plan's put trigger (confirming close below 68.55, 2.5x+ volume) is met. GEV, MS, C, IWM and IJH are outside the lean-in, so they're passed. If the 30-60 DTE put ask exceeds the $150 budget, the system will skip, which is acceptable."
@@ -213,6 +209,10 @@
     {
      "date": "2026-11-25",
      "note": "Passed on SNXX: the 3.47 underlying stop is about 149% above the 1.395 price, too wide to size on $563, and Broad market/other is on the avoid list. Holding the VALE put under its 10.12 stop and waiting for a Communication Services setup at 3x+ volume."
+    },
+    {
+     "date": "2026-11-27",
+     "note": "No candidates today and no game plan. Hold the VALE put under its 10.12 underlying stop, keep the $563 cash settled for a Communication Services breakout at 3x+ volume, and pass on wide-stop setups that can't be sized."
     }
    ],
    "last_exits": {
@@ -2105,7 +2105,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.2,
-     "mark": 0.15,
+     "mark": 0.23,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 80.0,
@@ -2127,7 +2127,7 @@
       "dte": 30
      },
      "sector": "Consumer Staples",
-     "exit_half_spread": 0.01
+     "exit_half_spread": 0.035
     }
    },
    "status": "active",
@@ -2138,10 +2138,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-23",
-     "note": "Passed on TLT 79/78 bull put: it doubles the open TLT 78/77 exposure, SPY is in a downtrend (ROC20 -9.1%), and crash radar is 47 (warning). Wait for a non-duplicate rich-vol setup with crash radar below 40."
-    },
     {
      "date": "2026-11-23",
      "note": "Passed on the TLT 79.5/78.5 bull put. It would double the open TLT exposure with the same expiry, SPY is in a downtrend (ROC20 -9.1%), crash radar is 47 (warning), and TLT has lost on both prior tries. Hold the existing 78/77 under default exits and wait for a non-duplicate rich-vol setup in a calme"
@@ -2297,6 +2293,10 @@
     {
      "date": "2026-11-25",
      "note": "Holding the TLT 80/79 bull put under default exits (take profit near 0.07 mark, stop at 2x credit). The only candidate is a second TLT spread, which is blocked while TLT is held, so I'm passing. Next entry needs a rich-vol setup on a different underlying, or crash radar below 40."
+    },
+    {
+     "date": "2026-11-27",
+     "note": "Passing on the second TLT 80/79 bull put: we already hold TLT, the system blocks duplicate underlyings, and crash radar is 50 (warning) with SPY below its 200-day. Holding the existing TLT spread under default exits (mark 0.23 vs 0.20 entry, -$4). Next entry needs a rich-vol setup on a different und"
     }
    ],
    "last_exits": {
@@ -2332,7 +2332,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 78.0,
+   "min_trade_seen": 77.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2794,7 +2794,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 714.15
+     "last": 723.03
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2810,7 +2810,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 714.15
+     "last": 723.03
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2826,7 +2826,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 714.15
+     "last": 723.03
     }
    },
    "status": "active",
@@ -2841,7 +2841,7 @@
    "unsettled": []
   },
   "monkey": {
-   "cash": 269.11,
+   "cash": 325.0,
    "reserved": 0.0,
    "positions": {
     "pos-e7834830d1": {
@@ -2859,7 +2859,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Financials",
-     "last": 59.735
+     "last": 60.56
     },
     "pos-6d974b93d5": {
      "kind": "stock",
@@ -2876,31 +2876,14 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 151.21
-    },
-    "pos-c426d20c19": {
-     "kind": "stock",
-     "symbol": "CBRS",
-     "qty": 0.5991,
-     "entry": 92.816,
-     "cost": 55.61,
-     "hold_days": 3,
-     "direction": "long",
-     "stop": 70.81,
-     "atr": 11.359,
-     "opened": "2026-11-24T10:11:54-05:00",
-     "thesis": "Dart landed on CBRS",
-     "confidence": 0,
-     "signals": {},
-     "sector": "Technology",
-     "last": 87.69
+     "last": 152.53
     }
    },
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 11,
-   "wins": 4,
+   "closed": 12,
+   "wins": 5,
    "peak": 1000.67,
    "max_dd": 0.1933,
    "notes": [],
@@ -2914,14 +2897,15 @@
     "TXN": "2026-11-13",
     "NVT": "2026-11-16",
     "PLTR": "2026-11-17",
-    "TQQQ": "2026-11-20"
+    "TQQQ": "2026-11-20",
+    "CBRS": "2026-11-27"
    },
    "joined": "2026-10-13T19:21:59-04:00",
    "unsettled": [
     {
-     "amount": 104.73,
-     "settles": "2026-11-27",
-     "note": "sold ORCL"
+     "amount": 55.89,
+     "settles": "2026-11-30",
+     "note": "sold CBRS"
     }
    ]
   },
@@ -2951,7 +2935,7 @@
      "structure": "bear put spread",
      "expiry": "2026-12-18",
      "entry": 3.3,
-     "mark": 1.12,
+     "mark": 0.02,
      "width": 5.0,
      "long_strike": 95.0,
      "short_strike": 90.0,
@@ -2971,7 +2955,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 2.075,
+     "exit_half_spread": 1.365,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2996,7 +2980,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.13,
+     "mark": 0.1,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3016,7 +3000,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.9,
+     "exit_half_spread": 3.77,
      "peak_mark": 1.09
     }
    },
@@ -3582,19 +3566,18 @@
    "joined": "2026-10-14T12:09:57-04:00",
    "unsettled": [],
    "playbook": {
-    "date": "2026-11-25",
-    "made_at": "2026-11-25T15:38-05:00",
+    "date": "2026-11-27",
+    "made_at": "2026-11-27T09:37-05:00",
     "watch": [
-     "SPY",
-     "QQQ",
-     "IWM"
+     "ANT",
+     "XLP"
     ],
     "aggression": "stand_down",
-    "why": "Only about 12 minutes remain before the 3:50 PM flat, which is too little time for a new setup to develop and exit safely. SPY is below its 200-day and the crash radar is at 48, so I'm standing down with no new trades.",
+    "why": "SPY is below its 200-day average with a 20-day rate of change of -7.2% and crash radar at 50, and most candidates are sliding below VWAP on weak 1-minute trends. Overnight plan says stand aside, so no new trades; ANT and XLP are the only names showing any relative strength worth watching.",
     "slices": 1,
-    "target_pct": 0.4,
-    "stop_pct": 0.25,
-    "max_hold_min": 15
+    "target_pct": 0.5,
+    "stop_pct": 0.3,
+    "max_hold_min": 30
    },
    "scalp_day": {
     "date": "2026-11-25",
