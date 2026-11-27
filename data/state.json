@@ -16,45 +16,16 @@
  },
  "agents": {
   "trend": {
-   "cash": 563.02,
+   "cash": 569.02,
    "reserved": 0.0,
-   "positions": {
-    "pos-3f3300706c": {
-     "kind": "option",
-     "symbol": "VALE261224P00009500",
-     "underlying": "VALE",
-     "opt_type": "put",
-     "qty": 1,
-     "entry": 0.59,
-     "mark": 0.35,
-     "expiry": "2026-12-24",
-     "strike": 9.5,
-     "delta": -0.5,
-     "cost": 63.5,
-     "direction": "short",
-     "stop": 10.12,
-     "atr": 0.377,
-     "opened": "2026-11-24T12:06:58-05:00",
-     "thesis": "VALE broke below its 40-day low at 9.46 on 3.9x relative volume, 36.9% under its 200-day SMA, so the trend-breakdown rule is met; the 10.12 underlying stop (2 ATR) caps the thesis, and the put limits the loss to premium.",
-     "confidence": 3,
-     "signals": {
-      "rel_volume": 3.86,
-      "roc20_pct": -18.1,
-      "pct_vs_sma50": -25.1,
-      "pct_vs_sma200": -36.9
-     },
-     "sector": "Materials",
-     "low_water": 9.275,
-     "exit_half_spread": 0.05
-    }
-   },
+   "positions": {},
    "status": "active",
    "status_reason": "",
    "status_at": null,
-   "closed": 27,
+   "closed": 28,
    "wins": 4,
    "peak": 1340.54,
-   "max_dd": 0.5546,
+   "max_dd": 0.5755,
    "notes": [
     {
      "date": "2026-11-20",
@@ -237,7 +208,7 @@
     "MMM": "2026-11-05",
     "XLV": "2026-11-06",
     "ALL": "2026-11-06",
-    "VALE": "2026-11-09",
+    "VALE": "2026-11-27",
     "ABNB": "2026-11-11",
     "DJTU": "2026-11-11",
     "TLS": "2026-11-13",
@@ -330,7 +301,13 @@
     "settled_cash_at_plan": 626.52,
     "budgets_clamped": 0
    },
-   "unsettled": [],
+   "unsettled": [
+    {
+     "amount": 6.0,
+     "settles": "2026-11-30",
+     "note": "sold VALE261224P00009500"
+    }
+   ],
    "focus": {
     "lean_in": [
      "Communication Services"
@@ -1251,10 +1228,6 @@
    "notes": [
     {
      "date": "2026-11-23",
-     "note": "12:41: all six candidates fail the 0.8:1 reward-to-risk floor (EOG best at about 0.38:1). SCHD isn't a candidate, so its 33.94 trigger can't be checked. Hold the five open stock positions to their stops and targets and keep the $138 settled cash."
-    },
-    {
-     "date": "2026-11-23",
      "note": "13:07: all six candidates fail the 0.8:1 reward-to-risk floor (best is EOG at about 0.41:1 on the stop and target hints). SCHD isn't a candidate, so its 33.94 trigger can't be verified. Hold the five open stock positions to their stops and targets and keep the $138 settled cash."
     },
     {
@@ -1408,6 +1381,10 @@
     {
      "date": "2026-11-27",
      "note": "No trade. WST is about 0.67:1 (15.95 reward vs 23.94 risk) and MDT about 0.38:1 (2.03 vs 5.34). Both fail the 0.8:1 floor and sit in avoid-list sectors. Wait for a Financials RSI(2)<=10 setup above the 200-day that clears 0.8:1."
+    },
+    {
+     "date": "2026-11-27",
+     "note": "No trade: MDT (about 0.39:1, 2.09 reward vs 5.35 risk) and WST (about 0.67:1, 16.15 vs 23.94) both fail the 0.8:1 floor and sit in avoid-list sectors. Stay in cash for a Financials RSI(2)<=10 setup above the 200-day that clears 0.8:1."
     }
    ],
    "last_exits": {
@@ -2107,7 +2084,7 @@
      "structure": "bull put spread",
      "expiry": "2026-12-24",
      "credit": 0.2,
-     "mark": 0.27,
+     "mark": 0.28,
      "entry": 0.2,
      "width": 1.0,
      "short_strike": 80.0,
@@ -2129,7 +2106,7 @@
       "dte": 30
      },
      "sector": "Consumer Staples",
-     "exit_half_spread": 0.035
+     "exit_half_spread": 0.06
     }
    },
    "status": "active",
@@ -2140,10 +2117,6 @@
    "peak": 1000.0,
    "max_dd": 0.1195,
    "notes": [
-    {
-     "date": "2026-11-23",
-     "note": "Pass on the TLT 79.5/78.5 duplicate: it doubles the open TLT 78/77 at the same expiry, Real Estate is on the avoid list, SPY is in a downtrend, and crash radar is 47. Hold the existing spread under default exits and wait for a non-duplicate rich-vol setup with crash radar below 40."
-    },
     {
      "date": "2026-11-23",
      "note": "Passed on the TLT 79.5/78.5 duplicate again: it doubles the open TLT 78/77 at the same expiry, Real Estate is on my avoid list, SPY is trending down, and crash radar is 47. Hold the existing spread under default exits and wait for a non-duplicate rich-vol setup with crash radar below 40."
@@ -2299,6 +2272,10 @@
     {
      "date": "2026-11-27",
      "note": "Passing on the duplicate TLT bull put: we already hold TLT and the system blocks a second position in the same underlying. Crash radar is 49 (warning) with SPY below its 200-day. Holding the TLT spread under default exits. Next entry needs a rich-vol setup on a non-duplicate underlying, ideally with"
+    },
+    {
+     "date": "2026-11-27",
+     "note": "Passing on the duplicate TLT bull put: the system blocks a second position in the same underlying, and crash radar is 49 (warning) with SPY below its 200-day. Holding the open TLT spread under default exits (mark 0.28 vs 0.20 entry). Next entry needs a rich-vol setup on a non-duplicate underlying."
     }
    ],
    "last_exits": {
@@ -2334,7 +2311,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 85.0,
+   "min_trade_seen": 80.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2796,7 +2773,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 726.03
+     "last": 727.04
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2812,7 +2789,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 726.03
+     "last": 727.04
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2828,7 +2805,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 726.03
+     "last": 727.04
     }
    },
    "status": "active",
@@ -2861,7 +2838,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 147.6
+     "last": 147.98
     },
     "pos-463e1dc2f8": {
      "kind": "stock",
@@ -2878,7 +2855,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Health Care",
-     "last": 473.63
+     "last": 473.94
     }
    },
    "status": "active",
@@ -2963,7 +2940,7 @@
       "downtrend": true
      },
      "sector": "Materials",
-     "exit_half_spread": 1.405,
+     "exit_half_spread": 1.365,
      "peak_mark": 1.9
     },
     "pos-edc983385d": {
@@ -2988,7 +2965,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.13,
+     "mark": 0.1,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3008,7 +2985,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.77,
+     "exit_half_spread": 3.75,
      "peak_mark": 1.09
     }
    },
@@ -3575,13 +3552,12 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-27",
-    "made_at": "2026-11-27T12:07-05:00",
+    "made_at": "2026-11-27T12:37-05:00",
     "watch": [
-     "ANT",
-     "SNDK"
+     "XLP"
     ],
     "aggression": "stand_down",
-    "why": "The crash radar is at warning (49), SPY is below its 200-day with a -7.2% 20-day rate of change, and most candidates are trending down, so I'm standing aside per the overnight plan. ANT and SNDK are the only strong uptrends, but both are extended well beyond the 0.875% max-extension limit, so I'm ju",
+    "why": "The crash radar is at warning (49), SPY is below its 200-day with a -7.2% 20-day rate of change, and no candidate has a live setup. XLP is the only staples name in an uptrend above its opening range, so I'm watching it in case a clean pullback forms, but I'm staying flat until the regime improves.",
     "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,

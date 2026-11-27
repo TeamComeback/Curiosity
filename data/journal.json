@@ -1,31 +1,5 @@
 [
  {
-  "time": "2026-11-11T16:41:38-05:00",
-  "type": "scorecard",
-  "agent": "scalper",
-  "note": "Plan graded: 0 of 1 picks moved the planned way, avg -1.91%"
- },
- {
-  "time": "2026-11-11T16:41:49-05:00",
-  "type": "focus",
-  "agent": "scalper",
-  "note": "Leaning into Communication Services, Consumer Staples; avoiding Technology, Consumer Discretionary, Materials. Communication Services is +$1.53 over 10 trades (50% win rate), though the edge is weakening. Consumer Staples is +$0.97 over 4 trades (75% win rate), a small sample but the only other positive sector. Technology is -$2.17 over 46 trades. Consumer Discretionary is roughly flat, and Materials lost on"
- },
- {
-  "time": "2026-11-11T16:41:49-05:00",
-  "type": "plan",
-  "agent": "scalper",
-  "note": "After-close review: revise. Today's two VWAP bounces went nowhere (XLP +0.12% on a time exit, IWM -0.06% on a time exit), and META, the only pick, fell 1.91%. The pre-market call's 1.5x relative-volume gate has never been enforced, so the META trigger is only usable if it is checked against bar data. Consumer Staples is the one other sector with positive results, so I'm leaning into it alongside Communication Services.",
-  "symbol": "META, AAPL"
- },
- {
-  "time": "2026-11-11T20:10:44-05:00",
-  "type": "plan",
-  "agent": "trend",
-  "note": "Evening check-in: keep. The fresh scan still shows a Health Care breakout cluster (VTRS, EW, RPRX broke out today) with supportive news (Lilly data, UBS raises on WELL and AHR), so the thesis holds. The scan has no relative-volume data, so the 2.5x confirmation stays the gate and nothing changes until a close qualifies.",
-  "symbol": "VTRS, EW, RPRX, AHR"
- },
- {
   "time": "2026-11-11T20:10:57-05:00",
   "type": "focus",
   "agent": "meanrev",
@@ -6058,5 +6032,40 @@
   "agent": "scalper",
   "symbol": "ANT, SNDK",
   "note": "stand_down: The crash radar is at warning (49), SPY is below its 200-day with a -7.2% 20-day rate of change, and most candidates are trending down, so I'm standing aside per the overnight plan. ANT and SNDK are the only strong uptrends, but both are extended well beyond the 0.875% max-extension limit, so I'm ju"
+ },
+ {
+  "time": "2026-11-27T12:35:06-05:00",
+  "type": "close",
+  "agent": "trend",
+  "symbol": "VALE261224P00009500",
+  "qty": 1,
+  "entry": 0.59,
+  "exit": 0.12,
+  "pnl": -57.5,
+  "note": "trailing stop on underlying",
+  "opened": "2026-11-24T12:06:58-05:00",
+  "confidence": 3,
+  "thesis": "VALE broke below its 40-day low at 9.46 on 3.9x relative volume, 36.9% under its 200-day SMA, so the trend-breakdown rule is met; the 10.12 underlying stop (2 ATR) caps the thesis, and the put limits the loss to premium."
+ },
+ {
+  "time": "2026-11-27T12:35:27-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-99%) (tried 0.01; mark 0.02, natural -1.35)"
+ },
+ {
+  "time": "2026-11-27T12:36:50-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-98%) (tried 0.05, 0.04, 0.02, 0.01; mark 0.10, natural -3.65)"
+ },
+ {
+  "time": "2026-11-27T12:37:01-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "XLP",
+  "note": "stand_down: The crash radar is at warning (49), SPY is below its 200-day with a -7.2% 20-day rate of change, and no candidate has a live setup. XLP is the only staples name in an uptrend above its opening range, so I'm watching it in case a clean pullback forms, but I'm staying flat until the regime improves."
  }
 ]

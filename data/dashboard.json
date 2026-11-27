@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T12:07-05:00",
+ "updated": "2026-11-27T12:37-05:00",
  "race": {
   "status": "running",
   "goal": 10000.0,
@@ -10,7 +10,7 @@
  },
  "regime": {
   "spy_trend": "down",
-  "spy_vs_sma200_pct": -1.0,
+  "spy_vs_sma200_pct": -0.8,
   "spy_roc20_pct": -7.2,
   "crash_radar": 49
  },
@@ -39,18 +39,18 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": "Exhibition since Nov 24: 16% win rate over 25 closed trades. Rejoins the race once its closed-trade win rate tops 30%.",
-   "equity": 598.02,
-   "cash": 563.02,
+   "equity": 569.02,
+   "cash": 569.02,
    "available": 563.02,
-   "settling": 0,
+   "settling": 6.0,
    "status": "active",
    "status_reason": "",
-   "multiple": 0.6,
-   "progress_pct": 5.98,
-   "open": 1,
-   "closed": 27,
-   "win_rate": 14.8,
-   "max_dd_pct": 55.5,
+   "multiple": 0.57,
+   "progress_pct": 5.69,
+   "open": 0,
+   "closed": 28,
+   "win_rate": 14.3,
+   "max_dd_pct": 57.6,
    "win_loss": {
     "win": {
      "n": 4,
@@ -58,13 +58,13 @@
      "pct": 43.6
     },
     "loss": {
-     "n": 23,
-     "usd": -25.7,
-     "pct": -22.1
+     "n": 24,
+     "usd": -27.03,
+     "pct": -25.0
     },
-    "ratio": 2.12
+    "ratio": 2.01
    },
-   "risk_adj": -0.72,
+   "risk_adj": -0.75,
    "notes": [
     {
      "date": "2026-11-27",
@@ -117,15 +117,15 @@
    "notes": [
     {
      "date": "2026-11-27",
+     "note": "No trade: MDT (about 0.39:1, 2.09 reward vs 5.35 risk) and WST (about 0.67:1, 16.15 vs 23.94) both fail the 0.8:1 floor and sit in avoid-list sectors. Stay in cash for a Financials RSI(2)<=10 setup above the 200-day that clears 0.8:1."
+    },
+    {
+     "date": "2026-11-27",
      "note": "No trade. WST is about 0.67:1 (15.95 reward vs 23.94 risk) and MDT about 0.38:1 (2.03 vs 5.34). Both fail the 0.8:1 floor and sit in avoid-list sectors. Wait for a Financials RSI(2)<=10 setup above the 200-day that clears 0.8:1."
     },
     {
      "date": "2026-11-27",
      "note": "No trade: MDT is about 0.39:1 (2.06 reward vs 5.34 risk) and WST about 0.66:1 (15.75 vs 23.94), both below the 0.8:1 floor and in avoid-list sectors. Wait for a Financials RSI(2)<=10 setup above the 200-day that clears 0.8:1."
-    },
-    {
-     "date": "2026-11-27",
-     "note": "No trade: MDT is about 0.41:1 (2.21 reward vs 5.35 risk) and WST about 0.67:1, both below the 0.8:1 floor and in avoid-list sectors. Stay in cash for a Financials RSI(2)<=10 setup above the 200-day that clears 0.8:1."
     }
    ],
    "thesis_review": null
@@ -137,14 +137,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 886.5,
+   "equity": 885.5,
    "cash": 913.5,
    "available": 813.5,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.89,
-   "progress_pct": 8.87,
+   "progress_pct": 8.86,
    "open": 1,
    "closed": 7,
    "win_rate": 14.3,
@@ -162,8 +162,12 @@
     },
     "ratio": 0.3
    },
-   "risk_adj": -0.95,
+   "risk_adj": -0.96,
    "notes": [
+    {
+     "date": "2026-11-27",
+     "note": "Passing on the duplicate TLT bull put: the system blocks a second position in the same underlying, and crash radar is 49 (warning) with SPY below its 200-day. Holding the open TLT spread under default exits (mark 0.28 vs 0.20 entry). Next entry needs a rich-vol setup on a non-duplicate underlying."
+    },
     {
      "date": "2026-11-27",
      "note": "Passing on the duplicate TLT bull put: we already hold TLT and the system blocks a second position in the same underlying. Crash radar is 49 (warning) with SPY below its 200-day. Holding the TLT spread under default exits. Next entry needs a rich-vol setup on a non-duplicate underlying, ideally with"
@@ -171,10 +175,6 @@
     {
      "date": "2026-11-27",
      "note": "No candidates this cycle. Holding the TLT bull put under default exits (mark 0.33 vs 0.20 entry, stop near 2x credit). Next entry needs a rich-vol setup on a non-duplicate underlying with crash radar under 40."
-    },
-    {
-     "date": "2026-11-27",
-     "note": "Passing on the duplicate TLT bull put: we already hold TLT, the system blocks a second position in the same underlying, and crash radar is 50 (warning). Next entry needs a rich-vol setup on a different underlying."
     }
    ],
    "thesis_review": null
@@ -186,20 +186,20 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 939.2,
+   "equity": 940.5,
    "cash": 5.02,
    "available": 5.02,
    "settling": 0,
    "status": "active",
    "status_reason": "",
    "multiple": 0.94,
-   "progress_pct": 9.39,
+   "progress_pct": 9.4,
    "open": 3,
    "closed": 0,
    "win_rate": null,
    "max_dd_pct": 10.8,
    "win_loss": null,
-   "risk_adj": -0.56,
+   "risk_adj": -0.55,
    "notes": [],
    "thesis_review": null
   },
@@ -210,14 +210,14 @@
    "exhibition": false,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": 815.18,
+   "equity": 815.97,
    "cash": 447.28,
    "available": 185.29,
    "settling": 261.99,
    "status": "active",
    "status_reason": "",
    "multiple": 0.82,
-   "progress_pct": 8.15,
+   "progress_pct": 8.16,
    "open": 2,
    "closed": 13,
    "win_rate": 46.2,
@@ -235,7 +235,7 @@
     },
     "ratio": 0.2
    },
-   "risk_adj": -0.96,
+   "risk_adj": -0.95,
    "notes": [],
    "thesis_review": null
   },
@@ -246,14 +246,14 @@
    "exhibition": true,
    "reached_goal": null,
    "paused_reason": null,
-   "equity": -383.26,
+   "equity": -389.26,
    "cash": -411.26,
    "available": -411.26,
    "settling": 0,
    "status": "eliminated",
    "status_reason": "equity $-202.19 fell below $10",
-   "multiple": -0.38,
-   "progress_pct": -3.83,
+   "multiple": -0.39,
+   "progress_pct": -3.89,
    "open": 2,
    "closed": 5,
    "win_rate": 20.0,
@@ -789,40 +789,18 @@
   {
    "date": "2026-11-27",
    "agents": {
-    "trend": 598.02,
+    "trend": 569.02,
     "meanrev": 983.82,
-    "volsell": 886.5,
-    "baseline": 939.2,
-    "monkey": 815.18,
-    "blackswan": -383.26,
+    "volsell": 885.5,
+    "baseline": 940.5,
+    "monkey": 815.97,
+    "blackswan": -389.26,
     "scalper": 1001.35,
     "hyper": 999.71
    }
   }
  ],
  "positions": [
-  {
-   "agent": "trend",
-   "position_id": "pos-3f3300706c",
-   "kind": "option",
-   "symbol": "VALE261224P00009500",
-   "underlying": "VALE",
-   "structure": null,
-   "opt_type": "put",
-   "qty": 1,
-   "entry": 0.59,
-   "last": null,
-   "mark": 0.35,
-   "stop": 10.12,
-   "expiry": "2026-12-24",
-   "opened": "2026-11-24T12:06:58-05:00",
-   "thesis": "VALE broke below its 40-day low at 9.46 on 3.9x relative volume, 36.9% under its 200-day SMA, so the trend-breakdown rule is met; the 10.12 underlying stop (2 ATR) caps the thesis, and the put limits the loss to premium.",
-   "confidence": 3,
-   "cost": 63.5,
-   "realized": null,
-   "play": null,
-   "width": null
-  },
   {
    "agent": "volsell",
    "position_id": "pos-fc6fdcb7f0",
@@ -834,7 +812,7 @@
    "qty": 1,
    "entry": 0.2,
    "last": null,
-   "mark": 0.27,
+   "mark": 0.28,
    "stop": 0,
    "expiry": "2026-12-24",
    "opened": "2026-11-24T11:37:51-05:00",
@@ -855,7 +833,7 @@
    "opt_type": null,
    "qty": 0.1271,
    "entry": 778.436,
-   "last": 726.03,
+   "last": 727.04,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -877,7 +855,7 @@
    "opt_type": null,
    "qty": 0.5132,
    "entry": 773.586,
-   "last": 726.03,
+   "last": 727.04,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -899,7 +877,7 @@
    "opt_type": null,
    "qty": 0.6464,
    "entry": 772.036,
-   "last": 726.03,
+   "last": 727.04,
    "mark": null,
    "stop": 0,
    "expiry": null,
@@ -921,7 +899,7 @@
    "opt_type": null,
    "qty": 1.9214,
    "entry": 155.0,
-   "last": 147.6,
+   "last": 147.98,
    "mark": null,
    "stop": 142.41,
    "expiry": null,
@@ -943,7 +921,7 @@
    "opt_type": null,
    "qty": 0.178,
    "entry": 470.904,
-   "last": 473.63,
+   "last": 473.94,
    "mark": null,
    "stop": 446.35,
    "expiry": null,
@@ -988,7 +966,7 @@
    "qty": 2,
    "entry": 4.15,
    "last": null,
-   "mark": 0.13,
+   "mark": 0.1,
    "stop": 175.6,
    "expiry": "2027-01-15",
    "opened": "2026-11-09T09:38:36-05:00",
@@ -1001,6 +979,41 @@
   }
  ],
  "journal": [
+  {
+   "time": "2026-11-27T12:37:01-05:00",
+   "type": "playbook",
+   "agent": "scalper",
+   "symbol": "XLP",
+   "note": "stand_down: The crash radar is at warning (49), SPY is below its 200-day with a -7.2% 20-day rate of change, and no candidate has a live setup. XLP is the only staples name in an uptrend above its opening range, so I'm watching it in case a clean pullback forms, but I'm staying flat until the regime improves."
+  },
+  {
+   "time": "2026-11-27T12:36:50-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "ALNY",
+   "note": "spread stop (-98%) (tried 0.05, 0.04, 0.02, 0.01; mark 0.10, natural -3.65)"
+  },
+  {
+   "time": "2026-11-27T12:35:27-05:00",
+   "type": "exit_unfilled",
+   "agent": "blackswan",
+   "symbol": "AGCO",
+   "note": "spread stop (-99%) (tried 0.01; mark 0.02, natural -1.35)"
+  },
+  {
+   "time": "2026-11-27T12:35:06-05:00",
+   "type": "close",
+   "agent": "trend",
+   "symbol": "VALE261224P00009500",
+   "qty": 1,
+   "entry": 0.59,
+   "exit": 0.12,
+   "pnl": -57.5,
+   "note": "trailing stop on underlying",
+   "opened": "2026-11-24T12:06:58-05:00",
+   "confidence": 3,
+   "thesis": "VALE broke below its 40-day low at 9.46 on 3.9x relative volume, 36.9% under its 200-day SMA, so the trend-breakdown rule is met; the 10.12 underlying stop (2 ATR) caps the thesis, and the put limits the loss to premium."
+  },
   {
    "time": "2026-11-27T12:07:22-05:00",
    "type": "playbook",
@@ -1403,34 +1416,6 @@
   },
   {
    "time": "2026-11-25T13:05:26-05:00",
-   "type": "exit_unfilled",
-   "agent": "trend",
-   "symbol": "VALE261224P00009500",
-   "note": "option target (+110%)"
-  },
-  {
-   "time": "2026-11-25T12:40:27-05:00",
-   "type": "playbook",
-   "agent": "scalper",
-   "symbol": "SPY, QQQ",
-   "note": "stand_down: SPY is in a downtrend (3.3% below its 200-day SMA, 20-day rate of change -6.6%) and the crash radar is at warning (48), so long-only scalps have poor odds. Most of the strong movers, like ANT and SOXL, are already extended far above VWAP, and the one-day bounce in SPY and QQQ is not enough to overri"
-  },
-  {
-   "time": "2026-11-25T12:40:07-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "ALNY",
-   "note": "spread stop (-100%) (tried 0.01; mark 0.02, natural -3.88)"
-  },
-  {
-   "time": "2026-11-25T12:39:45-05:00",
-   "type": "exit_unfilled",
-   "agent": "blackswan",
-   "symbol": "AGCO",
-   "note": "spread stop (-66%) (tried 1.08, 0.72, 0.36, 0.01; mark 1.13, natural -0.95)"
-  },
-  {
-   "time": "2026-11-25T12:38:20-05:00",
    "type": "exit_unfilled",
    "agent": "trend",
    "symbol": "VALE261224P00009500",
@@ -4032,18 +4017,18 @@
     "trend": 75,
     "drawdown": 47,
     "volatility": 83,
-    "breadth": 49,
+    "breadth": 50,
     "credit": 92,
     "safety": 22,
     "economy": 12
    },
    "facts": {
-    "spy_vs_sma50_pct": -4.2,
-    "spy_vs_sma200_pct": -1.0,
-    "spy_off_high_pct": 7.1,
+    "spy_vs_sma50_pct": -4.1,
+    "spy_vs_sma200_pct": -0.8,
+    "spy_off_high_pct": 7.0,
     "spy_iv_pct": 19.0,
     "spy_realized_vol_pct": 31.2,
-    "pct_above_50d": 45.2,
+    "pct_above_50d": 45.0,
     "breadth_sample": 504,
     "junk_vs_treasuries_20d_pct": -2.69,
     "havens_vs_spy_20d_pct": 1.8
@@ -4057,7 +4042,7 @@
     "junk_bond_spread_pct": 3.72,
     "sahm_indicator": 0.0
    },
-   "at": "2026-11-27T12:05-05:00"
+   "at": "2026-11-27T12:35-05:00"
   },
   "history": [
    {
@@ -4244,13 +4229,12 @@
  "playbooks": {
   "scalper": {
    "date": "2026-11-27",
-   "made_at": "2026-11-27T12:07-05:00",
+   "made_at": "2026-11-27T12:37-05:00",
    "watch": [
-    "ANT",
-    "SNDK"
+    "XLP"
    ],
    "aggression": "stand_down",
-   "why": "The crash radar is at warning (49), SPY is below its 200-day with a -7.2% 20-day rate of change, and most candidates are trending down, so I'm standing aside per the overnight plan. ANT and SNDK are the only strong uptrends, but both are extended well beyond the 0.875% max-extension limit, so I'm ju",
+   "why": "The crash radar is at warning (49), SPY is below its 200-day with a -7.2% 20-day rate of change, and no candidate has a live setup. XLP is the only staples name in an uptrend above its opening range, so I'm watching it in case a clean pullback forms, but I'm staying flat until the regime improves.",
    "slices": 1,
    "target_pct": 0.5,
    "stop_pct": 0.3,
@@ -4347,13 +4331,6 @@
  },
  "sector_stats": {
   "trend": {
-   "Materials": {
-    "trades": 1,
-    "wins": 0,
-    "pnl": -0.59,
-    "win_rate_pct": 0,
-    "avg_pnl": -0.59
-   },
    "Health Care": {
     "trades": 2,
     "wins": 1,
@@ -4395,6 +4372,13 @@
     "pnl": -47.0,
     "win_rate_pct": 0,
     "avg_pnl": -11.75
+   },
+   "Materials": {
+    "trades": 2,
+    "wins": 0,
+    "pnl": -58.09,
+    "win_rate_pct": 0,
+    "avg_pnl": -29.05
    },
    "Consumer Discretionary": {
     "trades": 2,
