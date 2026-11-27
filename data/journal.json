@@ -1,53 +1,5 @@
 [
  {
-  "time": "2026-11-11T14:37:16-05:00",
-  "type": "playbook",
-  "agent": "scalper",
-  "symbol": "LLY, XLP, AAPL, INTC, IWM",
-  "note": "defensive: Only a handful of names are in 1-minute uptrends, and most leaders are below VWAP in downtrends, so this is choppy. I'm keeping defensive sizing on the cleanest trending names with a short hold, since the 3:50 flat rule leaves about 70 minutes. META is dropped because it is below its opening range a"
- },
- {
-  "time": "2026-11-11T14:47:27-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "INTC",
-  "note": "VWAP pullback bounce skipped: 0.37x volume < 1.5x"
- },
- {
-  "time": "2026-11-11T14:49:30-05:00",
-  "type": "skip",
-  "agent": "scalper",
-  "symbol": "IWM",
-  "note": "VWAP pullback bounce skipped: 0.87x volume < 1.5x"
- },
- {
-  "time": "2026-11-11T14:53:33-05:00",
-  "type": "open",
-  "agent": "scalper",
-  "symbol": "IWM",
-  "instrument": "stock",
-  "qty": 0.5892,
-  "price": 283.058,
-  "cost": 166.78,
-  "stop": 282.35,
-  "thesis": "VWAP pullback bounce on IWM: 1.6x volume, +0.14% vs VWAP; target +0.4%, stop -0.25%",
-  "confidence": 3
- },
- {
-  "time": "2026-11-11T15:06:28-05:00",
-  "type": "exit_unfilled",
-  "agent": "trend",
-  "symbol": "CLSX261218P00002000",
-  "note": "option stop (-59%)"
- },
- {
-  "time": "2026-11-11T15:06:49-05:00",
-  "type": "exit_unfilled",
-  "agent": "blackswan",
-  "symbol": "AGCO",
-  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -0.85)"
- },
- {
   "time": "2026-11-11T15:07:10-05:00",
   "type": "exit_unfilled",
   "agent": "blackswan",
@@ -6051,5 +6003,60 @@
   "agent": "scalper",
   "symbol": "ANT, XLP",
   "note": "stand_down: SPY is below its 200-day average with a 20-day rate of change of -7.2% and crash radar at 50, and most candidates are sliding below VWAP on weak 1-minute trends. Overnight plan says stand aside, so no new trades; ANT and XLP are the only names showing any relative strength worth watching."
+ },
+ {
+  "time": "2026-11-27T10:05:27-05:00",
+  "type": "exit_unfilled",
+  "agent": "trend",
+  "symbol": "VALE261224P00009500",
+  "note": "trailing stop on underlying"
+ },
+ {
+  "time": "2026-11-27T10:05:29-05:00",
+  "type": "close",
+  "agent": "monkey",
+  "symbol": "FISV",
+  "qty": 3.3815,
+  "entry": 57.98,
+  "exit": 60.95,
+  "pnl": 10.04,
+  "note": "random holding period over (3 days)",
+  "opened": "2026-11-24T09:38:25-05:00",
+  "confidence": 0,
+  "thesis": "Dart landed on FISV"
+ },
+ {
+  "time": "2026-11-27T10:05:50-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "AGCO",
+  "note": "spread stop (-100%) (tried 0.01; mark 0.00, natural -1.39)"
+ },
+ {
+  "time": "2026-11-27T10:07:12-05:00",
+  "type": "exit_unfilled",
+  "agent": "blackswan",
+  "symbol": "ALNY",
+  "note": "spread stop (-95%) (tried 0.14, 0.10, 0.05, 0.01; mark 0.19, natural -3.67)"
+ },
+ {
+  "time": "2026-11-27T10:07:22-05:00",
+  "type": "open",
+  "agent": "monkey",
+  "symbol": "AMGN",
+  "instrument": "stock",
+  "qty": 0.178,
+  "price": 470.904,
+  "cost": 83.82,
+  "stop": 446.35,
+  "thesis": "Dart landed on AMGN",
+  "confidence": 0
+ },
+ {
+  "time": "2026-11-27T10:07:25-05:00",
+  "type": "playbook",
+  "agent": "scalper",
+  "symbol": "XLP",
+  "note": "defensive: SPY is below its 200-day average with crash radar at 51, so risk stays small. XLP is the only consumer-staples name trending up and above its opening range, so I'm allowing one slice at half size, and the code should still require relative volume of at least 1.5 before entering."
  }
 ]
