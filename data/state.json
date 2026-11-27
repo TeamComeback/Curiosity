@@ -58,10 +58,6 @@
    "notes": [
     {
      "date": "2026-11-20",
-     "note": "Trend-follow discipline: one Communication Services put at a time, premium capped at $150. NFLX stays on watch for a later follow-through entry, and I'm keeping settled cash for IBN or DIS triggers."
-    },
-    {
-     "date": "2026-11-20",
      "note": "Take one Communication Services put at a time with a $150 cap; NFLX stays on watch for follow-through, and I'm keeping settled cash for IBN or DIS triggers."
     },
     {
@@ -211,6 +207,10 @@
     {
      "date": "2026-11-27",
      "note": "Passed on LOOP: it is in the avoided Broad market/other sector, its 0.14 stop is about 27% above the 0.11 price (too wide to size on $563), and that sector is 2-for-11 with -$221. Holding the VALE put under its 10.12 stop and waiting for a Communication Services trigger at 3x+ volume."
+    },
+    {
+     "date": "2026-11-27",
+     "note": "No candidates or game plan today. Holding the VALE put under its 10.12 underlying stop and keeping cash settled for a Communication Services trigger at 3x+ volume."
     },
     {
      "date": "2026-11-27",
@@ -1251,10 +1251,6 @@
    "notes": [
     {
      "date": "2026-11-23",
-     "note": "11:37: all six candidates fail the 0.8:1 floor at live prices (SHEL ~0.33, PM ~0.44, MPC ~0.30, ROP ~0.29, PSX ~0.26, XLE ~0.26). SCHD isn't a candidate, so its trigger can't be verified. Hold the nine stock positions to their stops and targets and keep the $138 settled cash."
-    },
-    {
-     "date": "2026-11-23",
      "note": "No entries at 12:07: all six candidates fail the 0.8:1 floor at live prices (ABT ~0.13, PSX ~0.26, SHEL ~0.35, EOG ~0.34, MPC ~0.31, PM ~0.45). SCHD is not a candidate, so its 33.94 trigger can't be verified. Hold the five open stock positions to their stops and targets and keep the $138 settled cas"
     },
     {
@@ -1408,6 +1404,10 @@
     {
      "date": "2026-11-27",
      "note": "No trade: MDT (about 0.46:1) and WST (about 0.70:1) both fail the 0.8:1 reward-to-risk floor, and both are in avoid-list sectors. Stay in cash for a Financials RSI(2)<=10 setup above the 200-day that clears 0.8:1."
+    },
+    {
+     "date": "2026-11-27",
+     "note": "No trade: MDT is about 0.41:1 (2.21 reward vs 5.35 risk) and WST about 0.67:1, both below the 0.8:1 floor and in avoid-list sectors. Stay in cash for a Financials RSI(2)<=10 setup above the 200-day that clears 0.8:1."
     }
    ],
    "last_exits": {
@@ -2129,7 +2129,7 @@
       "dte": 30
      },
      "sector": "Consumer Staples",
-     "exit_half_spread": 0.02
+     "exit_half_spread": 0.015
     }
    },
    "status": "active",
@@ -2140,10 +2140,6 @@
    "peak": 1000.0,
    "max_dd": 0.1165,
    "notes": [
-    {
-     "date": "2026-11-23",
-     "note": "Passed on TLT 79.5/78.5: it would double my open TLT 78/77 exposure at the same expiry while crash radar is 47 (warning) and SPY is in a downtrend. Wait for a non-duplicate rich-vol setup with crash radar under 40."
-    },
     {
      "date": "2026-11-23",
      "note": "Passed on TLT 79.5/78.5: it doubles the open TLT 78/77 exposure at the same expiry (about $160 combined max loss, roughly 18% of equity) while SPY trends down and crash radar is 47. Keep the existing spread under default exits and look for a non-duplicate rich-vol setup on a different underlying."
@@ -2299,6 +2295,10 @@
     {
      "date": "2026-11-27",
      "note": "Passing on the second TLT bull put: it duplicates the open TLT spread while crash radar is 50 (warning) and SPY is below its 200-day. Next entry needs a rich-vol setup on a different underlying."
+    },
+    {
+     "date": "2026-11-27",
+     "note": "Passing on the duplicate TLT bull put: we already hold TLT, the system blocks a second position in the same underlying, and crash radar is 50 (warning). Next entry needs a rich-vol setup on a different underlying."
     }
    ],
    "last_exits": {
@@ -2334,7 +2334,7 @@
     "settled_cash_at_plan": 889.0,
     "budgets_clamped": 0
    },
-   "min_trade_seen": 81.0,
+   "min_trade_seen": 85.0,
    "unsettled": [],
    "focus": {
     "lean_in": [],
@@ -2796,7 +2796,7 @@
      "thesis": "Benchmark: buy and hold SPY",
      "confidence": 3,
      "signals": {},
-     "last": 723.33
+     "last": 725.5
     },
     "pos-aa166577d2": {
      "kind": "stock",
@@ -2812,7 +2812,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 723.33
+     "last": 725.5
     },
     "pos-d99c404220": {
      "kind": "stock",
@@ -2828,7 +2828,7 @@
      "confidence": 3,
      "signals": {},
      "sector": "Technology",
-     "last": 723.33
+     "last": 725.5
     }
    },
    "status": "active",
@@ -2861,7 +2861,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Consumer Staples",
-     "last": 147.42
+     "last": 147.755
     },
     "pos-463e1dc2f8": {
      "kind": "stock",
@@ -2878,7 +2878,7 @@
      "confidence": 0,
      "signals": {},
      "sector": "Health Care",
-     "last": 471.15
+     "last": 471.025
     }
    },
    "status": "active",
@@ -2988,7 +2988,7 @@
      "structure": "bear put spread",
      "expiry": "2027-01-15",
      "entry": 4.15,
-     "mark": 0.12,
+     "mark": 0.13,
      "width": 5.0,
      "long_strike": 120.0,
      "short_strike": 115.0,
@@ -3008,7 +3008,7 @@
       "downtrend": true
      },
      "sector": "Broad market / other",
-     "exit_half_spread": 3.79,
+     "exit_half_spread": 3.855,
      "peak_mark": 1.09
     }
    },
@@ -3575,12 +3575,12 @@
    "unsettled": [],
    "playbook": {
     "date": "2026-11-27",
-    "made_at": "2026-11-27T10:07-05:00",
+    "made_at": "2026-11-27T11:07-05:00",
     "watch": [
      "XLP"
     ],
-    "aggression": "defensive",
-    "why": "SPY is below its 200-day average with crash radar at 51, so risk stays small. XLP is the only consumer-staples name trending up and above its opening range, so I'm allowing one slice at half size, and the code should still require relative volume of at least 1.5 before entering.",
+    "aggression": "stand_down",
+    "why": "SPY is below its 200-day average with a warning-level crash radar of 50, and XLP has lost its uptrend and sits at VWAP without a breakout, so the only setup we had is gone. Standing down until a staples or industrials name shows a clean VWAP pullback or opening-range breakout on at least 1.5x relati",
     "slices": 1,
     "target_pct": 0.5,
     "stop_pct": 0.3,
